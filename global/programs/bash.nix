@@ -22,7 +22,7 @@
         function git-push()  {
             git add .
             git commit -m "$1"
-            git push origin head
+            git push origin HEAD
         }
 
         function git-pull() {

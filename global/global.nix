@@ -15,6 +15,6 @@ in {
             PORT = PUBLIC_FOLDERS_PORT;
         };
         ALLOWED_UDP_PORTS = ALLOWED_UDP_PORTS ++ [ 53 ];
-        ALLOWED_TCP_PORTS = ALLOWED_TCP_PORTS ++ [ 22 80 ];
+        ALLOWED_TCP_PORTS = ALLOWED_TCP_PORTS ++ [ 22 80 443 ];
     };
 }
