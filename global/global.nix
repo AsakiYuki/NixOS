@@ -1,0 +1,20 @@
+{ ... }: let
+    HOME_DIRECTORY = "/home/asakiyuki";
+    SECRET = "${HOME_DIRECTORY}/.secret";
+
+    PUBLIC_FOLDERS_PORT = 6996;
+
+    ALLOWED_UDP_PORTS = [];
+    ALLOWED_TCP_PORTS = [ PUBLIC_FOLDERS_PORT ];
+in {
+    CLOUDFLARE_TOKEN_KEY = "${SECRET}/CLOUDFLARE_TOKEN_KEY";
+    AUTHORIZED_KEYS = "${SECRET}/AUTHORIZED_KEYS";
+    SERVER = {
+        PUBLIC_FOLDERS = {
+            PATH = "${HOME_DIRECTORY}/PUBLIC";
+            PORT = PUBLIC_FOLDERS_PORT;
+        };
+        ALLOWED_UDP_PORTS = ALLOWED_UDP_PORTS ++ [ 53 ];
+        ALLOWED_TCP_PORTS = ALLOWED_TCP_PORTS ++ [ 22 80 ];
+    };
+}

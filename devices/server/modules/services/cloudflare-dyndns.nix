@@ -1,0 +1,13 @@
+{ ... }: let 
+    GLOBAL = import ../../../../global/global.nix {};
+in {
+    enable = true;
+
+    apiTokenFile = GLOBAL.CLOUDFLARE_TOKEN_KEY;
+    frequency = "*:0/5";
+    proxied = true;
+    ipv6 = false;
+    ipv4 = true;
+    deleteMissing = false;
+    domains = [ "ddns.asakiyuki.com" ];
+}
