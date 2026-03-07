@@ -8,5 +8,6 @@ in {
         };
 
         shellOptions = defaultBash.shellOptions;
+        initExtra = defaultBash.initExtra;
     };
 }
