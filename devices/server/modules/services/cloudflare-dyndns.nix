@@ -1,5 +1,5 @@
 { ... }: let 
-    GLOBAL = import ../../../../global/global.nix {};
+    GLOBAL = import ../../../../global/global.nix;
 in {
     enable = true;
 

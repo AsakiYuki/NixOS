@@ -1,4 +1,4 @@
-{ ... }: let
+let
     HOME_DIRECTORY = "/home/asakiyuki";
     SECRET = "${HOME_DIRECTORY}/.secret";
 

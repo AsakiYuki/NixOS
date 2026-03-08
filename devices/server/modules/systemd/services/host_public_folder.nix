@@ -1,5 +1,5 @@
 { pkgs, ... }: let 
-    GLOBAL = import ../../../../../global/global.nix {};
+    GLOBAL = import ../../../../../global/global.nix;
 in {
     enable = true;
     description = "Open Public folder to internet!";
