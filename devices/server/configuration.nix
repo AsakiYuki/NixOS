@@ -3,6 +3,7 @@
     imports = [
         ./hardware-configuration.nix
         ./home-manager.nix
+        ./users/users.nix
 
         ./modules/networking.nix
         ./modules/packages.nix
@@ -18,11 +19,6 @@
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
     nixpkgs.config.allowUnfree = true;
     time.timeZone = "Asia/Ho_Chi_Minh";
-
-    users.users.asakiyuki = {
-        isNormalUser = true;
-        extraGroups = [ "wheel" "docker" ];
-    };
 
     system.stateVersion = "25.11";
 }
