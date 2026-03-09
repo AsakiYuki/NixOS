@@ -1,0 +1,5 @@
+{ ... }: {
+    nix-ld = {
+        enable = true;
+    }
+}
