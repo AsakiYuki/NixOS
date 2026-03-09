@@ -12,7 +12,7 @@ in {
     ADMIN_EMAIL = "vantrong2007vn@gmail.com";
     SERVER = {
         PUBLIC_FOLDERS = {
-            PATH = "${HOME_DIRECTORY}/PUBLIC";
+            PATH = "/home/PUBLIC";
             PORT = PUBLIC_FOLDERS_PORT;
         };
         ALLOWED_UDP_PORTS = ALLOWED_UDP_PORTS ++ [ 53 ];

@@ -1,8 +1,6 @@
 { ... }: let 
-    GLOBAL = import ../../../../global/global.nix {};
+    GLOBAL = import ../../../../global/global.nix;
 in {
-    httpd = {
-        enable = true;
-        adminAddr = GLOBAL.ADMIN_EMAIL;
-    };
+    enable = true;
+    adminAddr = GLOBAL.ADMIN_EMAIL;
 }
