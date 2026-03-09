@@ -5,5 +5,6 @@
         p7zip
         python3
         nodejs
+        unzip
     ];
 }
