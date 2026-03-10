@@ -9,7 +9,6 @@ in {
         };
         initExtra = ''
             ${defaultBash.initExtra}
-            export PATH="$HOME/.bun/bin:$PATH"
         '';
     };
 }
