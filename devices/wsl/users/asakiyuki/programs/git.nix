@@ -4,6 +4,6 @@ in {
     programs.git = {
         enable = true;
         lfs.enable = true;
-        extraConfig = defaultGit.config;
+        settings = defaultGit.config;
     };
 }
