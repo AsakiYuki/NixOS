@@ -1,5 +1,5 @@
 { ... }: let 
-    GLOBAL = import ../../../global/global.nix;
+    GLOBAL = import ../../../common/global.nix;
 in {
     networking = {
         useDHCP = false;

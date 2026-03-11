@@ -1,8 +1,8 @@
 let 
-    GLOBAL = import ../../../../global/global.nix;
+    GLOBAL = import ../../../../common/global.nix;
 in {
     rules = [
         "d ${GLOBAL.SERVER.PUBLIC_FOLDERS.PATH} 0755 asakiyuki static - -"
-        "L+ ${GLOBAL.HOME_DIRECTORY}/PUBLIC - - - - ${GLOBAL.SERVER.PUBLIC_FOLDERS.PATH}"
+        "L+ /home/asakiyuki/PUBLIC - - - - ${GLOBAL.SERVER.PUBLIC_FOLDERS.PATH}"
     ];
 }

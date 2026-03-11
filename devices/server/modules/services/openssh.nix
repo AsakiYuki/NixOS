@@ -1,14 +1,17 @@
 { ... }: let 
-    GLOBAL = import ../../../../global/global.nix;
+    GLOBAL = import ../../../../common/global.nix;
 in {
     enable = true;
-    authorizedKeysFiles = [ 
-        "/home/asakiyuki/.secret/AUTHORIZED_KEYS"
-     ];
     ports = [ GLOBAL.SSH_PORT ];
+    authorizedKeysInHomedir = true;
+    authorizedKeysFiles = [ ".secret/AUTHORIZED_KEYS" ".ssh/authorized_keys" ];
     settings = {
+        AllowUsers = [ "asakiyuki" ];
         PasswordAuthentication = false;
-        PermitRootLogin = "no";
         KbdInteractiveAuthentication = false;
+        AllowAgentForwarding = false;
+        AllowStreamLocalForwarding = false;
+        X11Forwarding = false;
+        PermitRootLogin = "no";
     };
 }

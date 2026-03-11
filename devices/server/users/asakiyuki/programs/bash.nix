@@ -1,5 +1,5 @@
 { ... }: let
-    defaultBash = import ../../../../../global/programs/bash.nix {};
+    defaultBash = import ../../../../../common/programs/bash.nix {};
 in {
     programs.bash =  {
         enable = true;
