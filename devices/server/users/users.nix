@@ -1,4 +1,6 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }: let 
+    GLOBAL = import ../../../global/global.nix;
+in {
     users = {
         users = {
             asakiyuki = {

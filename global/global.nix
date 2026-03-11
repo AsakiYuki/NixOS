@@ -1,7 +1,4 @@
 let
-    HOME_DIRECTORY = "/home/asakiyuki";
-    SECRET = "${HOME_DIRECTORY}/.secret";
-
     PUBLIC_FOLDERS_PORT = 37284;
     SSH_PORT = 15523;
 
@@ -10,10 +7,7 @@ let
 
     NGINX_PROXY_MANAGER_PORTS = [ 80 18581 443 ];
 in {
-    inherit HOME_DIRECTORY SSH_PORT;
-
-    CLOUDFLARE_TOKEN_KEY = "${SECRET}/CLOUDFLARE_TOKEN_KEY";
-    AUTHORIZED_KEYS = "${SECRET}/AUTHORIZED_KEYS";
+    inherit SSH_PORT;
     ADMIN_EMAIL = "vantrong2007vn@gmail.com";
     SERVER = {
         PUBLIC_FOLDERS = {
