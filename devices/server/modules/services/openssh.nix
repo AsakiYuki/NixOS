@@ -1,12 +1,12 @@
 { ... }: let 
-    GLOBAL = import ../../../../common/global.nix;
+    GLOBAL = import ../../_global.nix;
 in {
     enable = true;
     ports = [ GLOBAL.SSH_PORT ];
     authorizedKeysInHomedir = true;
     authorizedKeysFiles = [ ".secret/AUTHORIZED_KEYS" ".ssh/authorized_keys" ];
     settings = {
-        AllowUsers = [ "asakiyuki" ];
+        AllowUsers = GLOBAL.ALLOWED_SSH_USERS;
         PasswordAuthentication = false;
         KbdInteractiveAuthentication = false;
         AllowAgentForwarding = false;

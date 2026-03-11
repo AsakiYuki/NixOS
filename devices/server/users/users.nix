@@ -1,5 +1,5 @@
 { pkgs, lib, ... }: let 
-    GLOBAL = import ../../../common/global.nix;
+    GLOBAL = import ../_global.nix;
 in {
     users = {
         users = {

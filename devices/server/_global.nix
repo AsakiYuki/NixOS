@@ -1,14 +1,15 @@
 let
-    PUBLIC_FOLDERS_PORT = 37284;
+    ADMIN_EMAIL = "vantrong2007vn@gmail.com";
+    ALLOWED_SSH_USERS = [ "asakiyuki" ];
     SSH_PORT = 15523;
+
+    PUBLIC_FOLDERS_PORT = 37284;
+    NGINX_PROXY_MANAGER_PORTS = [ 80 18581 443 ];
 
     ALLOWED_UDP_PORTS = [];
     ALLOWED_TCP_PORTS = [ PUBLIC_FOLDERS_PORT 23841 ];
-
-    NGINX_PROXY_MANAGER_PORTS = [ 80 18581 443 ];
 in {
-    inherit SSH_PORT;
-    ADMIN_EMAIL = "vantrong2007vn@gmail.com";
+    inherit SSH_PORT ALLOWED_SSH_USERS ADMIN_EMAIL;
     SERVER = {
         PUBLIC_FOLDERS = {
             PATH = "/home/PUBLIC";

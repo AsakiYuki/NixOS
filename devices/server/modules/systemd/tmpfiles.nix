@@ -1,5 +1,5 @@
 let 
-    GLOBAL = import ../../../../common/global.nix;
+    GLOBAL = import ../../_global.nix;
 in {
     rules = [
         "d ${GLOBAL.SERVER.PUBLIC_FOLDERS.PATH} 0755 asakiyuki static - -"
