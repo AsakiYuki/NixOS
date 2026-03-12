@@ -8,5 +8,6 @@ in {
             nrs = "sudo nixos-rebuild switch --flake /etc/nixos#server";
             flake-upgrade = "nix flake update";
         };
+        initExtra = defaultBash.initExtra;
     };
 }
