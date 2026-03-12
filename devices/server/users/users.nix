@@ -8,6 +8,10 @@ in {
                 shell = pkgs.bash;
                 extraGroups = [ "wheel" "docker" ];
             };
+            junko = {
+                isNormalUser = true;
+                shell = pkgs.bash;
+            };
             static = {
                 isSystemUser = true;
                 group = "system";
