@@ -33,6 +33,11 @@ in {
                 _module.args = { inherit inputs pkgs; };
                 imports = [ ./asakiyuki/configuration.nix ];
             };
+
+            junko = {
+                _module.args = { inherit inputs pkgs; };
+                imports = [ ./junko/configuration.nix ];
+            };
         };
     };
 }
