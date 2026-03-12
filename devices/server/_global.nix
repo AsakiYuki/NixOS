@@ -2,7 +2,7 @@ let
     ADMIN_EMAIL = "vantrong2007vn@gmail.com";
     ALLOWED_SSH_USERS = [ "asakiyuki" ];
     SSH_PORT = 15523;
-    SQL_SERVER_PORT = 3306;
+    SQL_SERVER_PORT = 37241;
 
     PUBLIC_FOLDERS_PORT = 37284;
     NGINX_PROXY_MANAGER_PORTS = [ 80 18581 443 ];

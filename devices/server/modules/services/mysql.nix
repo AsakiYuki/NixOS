@@ -1,5 +1,9 @@
-{ ... }: let 
+{ pkgs, ... }: let 
     GLOBAL = import ../../_global.nix;
 in {
-    enable = false;
+    enable = true;
+    package = pkgs.mariadb;
+    replication = {
+        masterPort = GLOBAL.SQL_SERVER_PORT;
+    };
 }

@@ -12,10 +12,6 @@ in {
                 isSystemUser = true;
                 group = "system";
             };
-            mysql = {
-                isSystemUser = true;
-                group = "system";
-            };
         };
 
         groups = {
