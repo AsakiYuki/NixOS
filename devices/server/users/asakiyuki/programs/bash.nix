@@ -6,6 +6,7 @@ in {
         shellOptions = defaultBash.shellOptions;
         shellAliases = defaultBash.shellAliases // {
             nrs = "sudo nixos-rebuild switch --flake /etc/nixos#server";
+            flake-upgrade = "nix flake update";
         };
     };
 }

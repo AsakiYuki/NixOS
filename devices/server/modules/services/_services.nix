@@ -4,6 +4,7 @@
         cloudflare-dyndns = import ./cloudflare-dyndns.nix {};
         httpd = import ./httpd.nix {};
         mysql = import ./mysql.nix { inherit pkgs; };
-        fail2ban.enable = true;
+        logrotate = import ./logrotate.nix;
+        fail2ban = import ./fail2ban.nix;
     };
 }
