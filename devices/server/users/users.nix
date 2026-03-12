@@ -10,18 +10,16 @@ in {
             };
             static = {
                 isSystemUser = true;
-                extraGroups = [ "system" ];
+                group = "system";
             };
             mysql = {
                 isSystemUser = true;
-                extraGroups = [ "system" ];
+                group = "system";
             };
         };
 
         groups = {
-            system = {
-                members = [ "static" ];
-            };
+            system = {};
         };
     };
 
