@@ -1,5 +1,5 @@
 { pkgs, ... }: let 
-    # bun-baseline = {}; 
+    bun-x64-linue-baseline = import ../../../packages/bun.nix;
 in {
     environment.systemPackages = with pkgs; [
         wget
@@ -8,5 +8,7 @@ in {
         python3
         nodejs
         unzip
+
+        bun-x64-linue-baseline
     ];
 }

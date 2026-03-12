@@ -7,9 +7,5 @@ in {
         shellAliases = defaultBash.shellAliases // {
             nrs = "sudo nixos-rebuild switch --flake /etc/nixos#server";
         };
-        initExtra = ''
-            ${defaultBash.initExtra}
-            export PATH=$HOME/.bun/bin:$PATH
-        '';
     };
 }
