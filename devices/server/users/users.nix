@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }: let 
+{ inputs, pkgs, lib, ... }: let 
     GLOBAL = import ../_global.nix;
 in {
     users = {
@@ -27,7 +27,7 @@ in {
         users = {
             asakiyuki = {
                 _module.args = { inherit inputs pkgs; };
-                imports = [ ./users/asakiyuki/configuration.nix ];
+                imports = [ ./asakiyuki/configuration.nix ];
             };
         };
     };
