@@ -8,14 +8,14 @@ in {
                 shell = pkgs.bash;
                 extraGroups = [ "wheel" "docker" ];
             };
-            static = {
-                isSystemUser = true;
-                group = "static";
-            };
+            static.isSystemUser = true;
+            mysql.isSystemUser = true;
         };
 
         groups = {
-            static = {};
+            system = {
+                members = [ "static" ];
+            };
         };
     };
 
