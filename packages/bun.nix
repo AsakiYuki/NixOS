@@ -1,25 +1,25 @@
-{ pkgs, ... }: with pkgs;
-stdenv.mkDerivation rec {
+{ pkgs }:
+
+pkgs.stdenv.mkDerivation rec {
     pname = "bun";
     version = "1.3.10";
-    src =  pkgs.fetchzip {
-        url = "https://github.com/oven-sh/bun/releases/download/bun-v1.3.10/bun-linux-x64-baseline.zip";
-        sha256 = "sha256-##################################################";
+
+    src = pkgs.fetchzip {
+        url = "https://github.com/oven-sh/bun/releases/download/bun-v${version}/bun-linux-x64-baseline.zip";
+        hash = "sha256-ZWTs4ApH0BsATxrE1DSuqCETIrNZZxdG8xtN0NinNBw=";
     };
 
     dontBuild = true;
-    nativeBuildInputs = [ p7zip ];
-
-    unpackPhase = "7z x $src -obun";
 
     installPhase = ''
         mkdir -p $out/bin
-        cp -r bin/* $out/bin
+        cp bun $out/bin/
+        chmod +x $out/bin/bun
     '';
 
     meta = with pkgs.lib; {
-    	description = "Incredibly fast JavaScript runtime, bundler, transpiler and package manager – all in one";
-    	homepage = "https://bun.sh";
-    	license = with lib.licenses; [ mit lgpl21Only ];
+        description = "Incredibly fast JavaScript runtime, bundler, transpiler and package manager – all in one";
+        homepage = "https://bun.sh";
+        license = with licenses; [ mit lgpl21Only ];
     };
 }
