@@ -2,7 +2,6 @@
     # Import Modules
     imports = [
         ./hardware-configuration.nix
-        ./home-manager.nix
         ./users/users.nix
 
         ./modules/networking.nix
