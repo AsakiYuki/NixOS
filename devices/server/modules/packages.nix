@@ -8,6 +8,7 @@ in {
         python3
         nodejs
         unzip
+        vim
 
         bun-x64-linue-baseline
     ];
