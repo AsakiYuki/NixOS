@@ -1,5 +1,5 @@
 { pkgs, ... }: let 
-    bun-x64-linue-baseline = import ../../../packages/bun.nix;
+    bun-x64-linue-baseline = import ../../../packages/bun.nix { inherit pkgs; };
 in {
     environment.systemPackages = with pkgs; [
         wget
