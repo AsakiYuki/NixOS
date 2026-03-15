@@ -4,7 +4,7 @@
      ];
 
      home = {
-          username = "junko";
+          username = "hoacaclord";
           stateVersion = "25.11";
      };
 }
