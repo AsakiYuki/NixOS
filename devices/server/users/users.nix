@@ -13,6 +13,11 @@ in {
                 shell = pkgs.bash;
                 extraGroups = [ "public" ];
             };
+            hoacaclord = {
+                isNormalUser = true;
+                shell = pkgs.zsh;
+                extraGroups = [  ];
+            };
             static = {
                 isSystemUser = true;
                 group = "system";
@@ -35,6 +40,11 @@ in {
             asakiyuki = {
                 _module.args = { inherit inputs pkgs; };
                 imports = [ ./asakiyuki/configuration.nix ];
+            };
+
+            hoacaclord = {
+                _module.args = { inherit inputs pkgs; };
+                imports = [ ./hoacaclord/configuration.nix ];
             };
 
             junko = {
