@@ -16,7 +16,7 @@ in {
             hoacaclord = {
                 isNormalUser = true;
                 shell = pkgs.zsh;
-                extraGroups = [ "wheel" ];
+                extraGroups = [  ];
             };
             static = {
                 isSystemUser = true;
