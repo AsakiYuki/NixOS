@@ -16,6 +16,7 @@ in {
             static = {
                 isSystemUser = true;
                 group = "system";
+                extraGroups = [ "public" ];
             };
         };
 
