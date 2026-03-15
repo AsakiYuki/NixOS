@@ -6,11 +6,12 @@ in {
             asakiyuki = {
                 isNormalUser = true;
                 shell = pkgs.bash;
-                extraGroups = [ "wheel" "docker" ];
+                extraGroups = [ "public" "wheel" "docker" ];
             };
             junko = {
                 isNormalUser = true;
                 shell = pkgs.bash;
+                extraGroups = [ "public" ];
             };
             static = {
                 isSystemUser = true;
@@ -20,6 +21,7 @@ in {
 
         groups = {
             system = {};
+            public = {};
         };
     };
 
