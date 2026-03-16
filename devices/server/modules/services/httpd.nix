@@ -5,7 +5,7 @@ in {
     adminAddr = GLOBAL.ADMIN_EMAIL;
 
     user = "static";
-    group = "static";
+    group = "public";
 
     virtualHosts = {
         localhost = {

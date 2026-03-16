@@ -20,13 +20,11 @@ in {
             };
             static = {
                 isSystemUser = true;
-                group = "system";
-                extraGroups = [ "public" ];
+                group = "public";
             };
         };
 
         groups = {
-            system = {};
             public = {};
         };
     };
