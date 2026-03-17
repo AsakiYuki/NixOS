@@ -9,6 +9,7 @@ in {
         nodejs
         unzip
         vim
+        tigervnc
 
         bun-x64-linue-baseline
     ];

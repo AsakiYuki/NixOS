@@ -6,5 +6,8 @@
         mysql = import ./mysql.nix { inherit pkgs; };
         logrotate = import ./logrotate.nix;
         fail2ban = import ./fail2ban.nix;
+
+        xserver.enable = true;
+        desktopManager.plasma6.enable = true;
     };
 }

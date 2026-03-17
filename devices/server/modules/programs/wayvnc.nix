@@ -1,5 +1,0 @@
-{ pkgs }: {
-    wayvnc = {
-        enable = true;
-    };
-}
