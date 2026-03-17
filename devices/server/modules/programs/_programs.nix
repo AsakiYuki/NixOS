@@ -1,7 +1,7 @@
-{ pkgs, ... }: let 
-    NIXDL = import ./nix-ld.nix { inherit pkgs; };
-in {
-    programs = NIXDL // {
+{ pkgs, ... }: {
+    programs = 
+        import ./nix-ld.nix { inherit pkgs; }; //
+        import ./wayvnc.nix { inherit pkgs; }; // {
         zsh.enable = true;
     };
 }

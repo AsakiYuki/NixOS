@@ -6,7 +6,7 @@ in {
     wantedBy = [ "multi-user.target" ];
     after = [ "network.target" ];
     serviceConfig = {
-        ExecStart = "${pkgs.nodejs}/bin/npm run start";
+        ExecStart = "${pkgs.nix}/bin/nix develop -c node dist/app.js";
         WorkingDirectory = "/home/asakiyuki/HOST/musixmatch-db";
         Restart = "always";
         User = "asakiyuki";
