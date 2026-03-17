@@ -8,6 +8,8 @@
         fail2ban = import ./fail2ban.nix;
 
         xserver.enable = true;
+        pulseaudio.enable = false;
+        pipewire.enable = false;
         desktopManager.plasma6.enable = true;
     };
 }

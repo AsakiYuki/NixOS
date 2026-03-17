@@ -9,7 +9,15 @@ in {
         nodejs
         unzip
         vim
+
+        firefox
+        screen
+
         tigervnc
+        xorg.xinit
+        kdePackages.plasma-workspace
+        kdePackages.kglobalaccel
+        kdePackages.kded
 
         bun-x64-linue-baseline
     ];
