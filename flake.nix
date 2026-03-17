@@ -21,7 +21,7 @@
                 system = "x86_64-linux";
                 specialArgs = { inherit inputs; };
                 modules = [
-                    inputs.home-manager.nixosModules.default
+                    # inputs.home-manager.nixosModules.default
                     ./devices/laptop/configuration.nix
                 ];
             };
