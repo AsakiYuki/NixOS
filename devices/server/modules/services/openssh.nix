@@ -7,7 +7,7 @@ in {
     authorizedKeysFiles = [ "/home/asakiyuki/.ssh/authorized_keys" ];
     settings = {
         AllowUsers = GLOBAL.ALLOWED_SSH_USERS;
-        PasswordAuthentication = false;
+        PasswordAuthentication = true;
         KbdInteractiveAuthentication = false;
         AllowAgentForwarding = false;
         AllowStreamLocalForwarding = false;
