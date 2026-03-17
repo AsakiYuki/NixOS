@@ -17,6 +17,15 @@
 
     outputs = inputs@{ self, nixpkgs, ... }: {
         nixosConfigurations = {
+            laptop = nixpkgs.lib.nixosSystem {
+                system = "x86_64-linux";
+                specialArgs = { inherit inputs; };
+                modules = [
+                    inputs.home-manager.nixosModules.default
+                    ./devices/laptop/configuration.nix
+                ];
+            };
+
             server = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
                 specialArgs = { inherit inputs; };
