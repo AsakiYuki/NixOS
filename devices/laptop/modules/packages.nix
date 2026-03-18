@@ -8,6 +8,11 @@
         nodejs
         bun
         mesa
+        dav1d
+        ffmpeg-full
+        libva
+        libva-utils
+        libva-vdpau-driver
 
         easyeffects
         protonup-qt
@@ -21,6 +26,7 @@
         wine64
         winetricks
         protontricks
+        php
 
         fcitx5-material-color
     ]) ++ (with unstable; [
@@ -28,7 +34,7 @@
         proton-authenticator
         prismlauncher
     ]) ++ (with inputs; [
-        hytale-launcher.packages.x86_64-linux.default
+        hytale-launcher.packages.${pkgs.system}.default
     ]) ++ [
         (pkgs.catppuccin-kde.override {
             flavour = [ "mocha" ];

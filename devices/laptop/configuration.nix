@@ -10,6 +10,7 @@
         ./modules/programs/_programs.nix
         ./modules/systemd/_systemd.nix
 
+        ./modules/virtualisation.nix
         ./modules/hardware.nix
         ./modules/networking.nix
         ./modules/boot.nix
