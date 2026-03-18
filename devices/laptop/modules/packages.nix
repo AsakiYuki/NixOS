@@ -5,6 +5,7 @@
         git
         alsa-utils 
         alsa-ucm-conf
+        easyeffects
         nodejs
         bun
 
@@ -24,4 +25,4 @@
             flavour = [ "mocha" ];
         })
     ];
-}
+} 
