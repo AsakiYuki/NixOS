@@ -1,4 +1,7 @@
-{ inputs, pkgs, ... }: {
+{ inputs, pkgs, ... }: let
+  background = ../../../common/grub/background.png;
+  baseTheme = inputs.honkai-railway-grub-theme.packages.${pkgs.system}.cyrene-grub-theme;
+in {
     boot = {
         kernelPackages = pkgs.linuxPackages_latest;
         kernelParams = [
@@ -23,8 +26,13 @@
                 efiSupport = true;
                 useOSProber = true;
 
-                theme = inputs.honkai-railway-grub-theme.packages.${pkgs.system}.cyrene-grub-theme;
-                splashImage = "/etc/nixos/common/grub/background.png";
+                splashImage = background;
+                theme = pkgs.runCommand "my-grub-theme" {} ''
+                    mkdir -p $out
+                    cp -r ${baseTheme}/* $out/
+                    chmod -R u+w $out
+                    cp ${background} $out/background.png
+                '';
             };
         };
     };
