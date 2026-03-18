@@ -1,5 +1,9 @@
 { inputs, pkgs, ... }: {
-    services = import ./_general.nix // {
+    imports = [
+        ./_general.nix
+    ];
+
+    services = {
         pipewire = import ./pipewire.nix;
         xserver.videoDrivers = [
             "modesetting"

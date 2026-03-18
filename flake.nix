@@ -5,6 +5,7 @@
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
         unstablepkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
         hytale-launcher.url = "github:JPyke3/hytale-launcher-nix";
+        honkai-railway-grub-theme.url = "github:voidlhf/StarRailGrubThemes";
         
         home-manager = {
             url = "github:nix-community/home-manager/release-25.11";
@@ -17,7 +18,7 @@
         };
     };
 
-    outputs = inputs@{ self, nixpkgs, hytale-launcher, unstablepkgs, ... }: let 
+    outputs = inputs@{ self, nixpkgs, hytale-launcher, honkai-railway-grub-theme, unstablepkgs, ... }: let 
         unstable = import unstablepkgs {
             system = "x86_64-linux";
             config.allowUnfree = true;
