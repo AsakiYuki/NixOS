@@ -13,6 +13,7 @@
         ./modules/networking.nix
         ./modules/boot.nix
         ./modules/packages.nix
+        ./modules/fonts.nix
     ];
 
     nixpkgs.config.allowUnfree = true;

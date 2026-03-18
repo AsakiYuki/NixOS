@@ -6,6 +6,6 @@
         ./git.nix
         ./ghostty.nix
         ./kitty.nix
-        ./termux.nix
+        ./tmux.nix
     ];
 }
