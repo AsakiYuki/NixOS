@@ -8,6 +8,7 @@
         ./modules/services/_services.nix
         ./modules/security/_security.nix
         ./modules/programs/_programs.nix
+        ./modules/systemd/_systemd.nix
 
         ./modules/hardware.nix
         ./modules/networking.nix
