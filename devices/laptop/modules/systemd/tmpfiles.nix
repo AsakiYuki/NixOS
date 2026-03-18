@@ -1,5 +1,5 @@
 {
     rules = [
-        "L+ /home/asakiyuki/.local/share/plasma/plasmoids - - - - /home/asakiyuki/Development/KDE-Widget"
+        "L+ /home/asakiyuki/Development/KDE-Widget - - - - /home/asakiyuki/.local/share/plasma/plasmoids"
     ];
 }

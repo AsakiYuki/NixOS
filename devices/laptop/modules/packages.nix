@@ -17,6 +17,7 @@
         fcitx5-material-color
     ]) ++ (with unstable; [
         proton-pass
+        proton-authenticator
         prismlauncher
     ]) ++ [
         (pkgs.catppuccin-kde.override {
