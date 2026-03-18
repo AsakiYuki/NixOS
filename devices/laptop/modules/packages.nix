@@ -11,6 +11,8 @@
         alsa-utils 
         alsa-ucm-conf
 
+        fcitx5-material-color
+
         (pkgs.catppuccin-kde.override {
             flavour = [ "mocha" ];
         })
