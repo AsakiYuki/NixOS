@@ -14,8 +14,8 @@
         libva-utils
         libva-vdpau-driver
         docker-compose
+        ntfs3g
 
-        winboat
         easyeffects
         protonup-qt
         vesktop
