@@ -9,8 +9,8 @@
         ./modules/security/_security.nix
         ./modules/programs/_programs.nix
         ./modules/systemd/_systemd.nix
+        ./modules/virtualisation/_virtualisation.nix
 
-        ./modules/virtualisation.nix
         ./modules/hardware.nix
         ./modules/networking.nix
         ./modules/boot.nix
