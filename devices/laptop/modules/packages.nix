@@ -23,6 +23,7 @@
         obs-studio
         pavucontrol
         vlc
+        vicinae
 
         wine
         wine64
