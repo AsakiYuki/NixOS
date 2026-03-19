@@ -46,6 +46,7 @@ in
         enable = true;
         keyMode = "vi";
         disableConfirmationPrompt = true;
+        prefix = "c-a";
 
         extraConfig = TOP_PANEL + OPTIONS + BINDS; 
 

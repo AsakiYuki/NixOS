@@ -11,6 +11,12 @@ in {
             "snd_sof_amd_acp63_enable=1"
         ];
 
+        kernel.sysctl = {
+            "net.ipv4.ip_forward" = 1;
+            "net.ipv4.conf.all.forwarding" = 1;
+            "net.ipv6.conf.all.forwarding" = 1;
+        };
+
         extraModprobeConfig = ''
             options snd-hda-intel dmic_detect=0
         '';
