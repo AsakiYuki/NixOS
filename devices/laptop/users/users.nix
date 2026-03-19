@@ -12,7 +12,10 @@
 
         users.asakiyuki = {
             _module.args = { inherit inputs pkgs; };
-            imports = [ ./asakiyuki/configuration.nix ];
+            imports = [ 
+                inputs.nixvim.homeModules.nixvim
+                ./asakiyuki/configuration.nix
+            ];
         };
     };
 }

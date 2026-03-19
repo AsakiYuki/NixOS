@@ -1,4 +1,6 @@
 {
     enable = true;
-    window.width = 35;
+    settings = {
+        window.width = 35;
+    };
 }

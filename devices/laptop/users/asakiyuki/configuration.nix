@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }: {
+{ inputs, pkgs, lib, ... }: {
     imports = [
         ./programs/_programs.nix
     ];

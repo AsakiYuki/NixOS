@@ -1,8 +1,8 @@
 { pkgs, ... }:
 let
     EXTRA_PLUGINS = [
-        ./extra/neocord.nix
-        ./extra/mini-icons.nix
+        ./extras/neocord.nix
+        ./extras/mini-icons.nix
     ];
 
     LUA = [
