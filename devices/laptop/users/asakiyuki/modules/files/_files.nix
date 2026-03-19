@@ -1,6 +1,6 @@
 { pkgs, lib, ... }: let 
     SERVICE_MENUS = [
-        "open-with-code"
+        "openwithcode"
     ];
 in {
     home.file = builtins.listToAttrs (map (name: {
