@@ -1,8 +1,4 @@
 { ... }: {
-    imports = [
-        ./easyeffects.nix
-        # ./vicinae.nix
-    ];
-
+    imports = [];
     systemd.services = {};
 }
