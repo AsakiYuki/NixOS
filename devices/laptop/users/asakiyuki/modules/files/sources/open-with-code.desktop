@@ -2,10 +2,9 @@
 Type=Service
 ServiceTypes=KonqPopupMenu/Plugin
 MimeType=inode/directory
-Actions=RunGhosttyDir
+Actions=RunCodeDir
 
-[Desktop Action RunGhosttyDir]
-Name=Open With Code
+[Desktop Action RunCodeDir]
+Name=Open with Code
 Icon=vscode
 Exec=code %F
-
