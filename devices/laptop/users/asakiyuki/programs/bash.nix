@@ -5,6 +5,7 @@ in {
         enable = true;
         shellAliases = defaultBash.shellAliases // {
             nrs = "sudo nixos-rebuild switch --flake /etc/nixos#laptop";
+            wss = "waydroid session stop; exit;";
             flake-upgrade = "nix flake update";
         };
 
