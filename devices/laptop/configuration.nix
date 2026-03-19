@@ -16,6 +16,7 @@
         ./modules/boot.nix
         ./modules/packages.nix
         ./modules/fonts.nix
+        ./modules/udev.nix
     ];
 
     nixpkgs.config.allowUnfree = true;

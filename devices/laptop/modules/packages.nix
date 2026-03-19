@@ -28,6 +28,7 @@
         obs-studio
         pavucontrol
         antigravity
+        chromium
         vlc
 
         wine
