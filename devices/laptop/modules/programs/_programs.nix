@@ -7,5 +7,6 @@
     programs = {
         firefox.enable = true;
         chromium.enable = true;
+        fuse.userAllowOther = true;
     };
 }

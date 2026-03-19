@@ -20,6 +20,7 @@
         sass
         ruby
         rPackages.gems
+        bindfs
 
         easyeffects
         protonup-qt

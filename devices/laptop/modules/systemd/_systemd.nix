@@ -1,8 +1,6 @@
 { ... }: {
     imports = [ 
         ./services/_services.nix
-        
-        ./mounts.nix
     ];
 
     systemd = {
