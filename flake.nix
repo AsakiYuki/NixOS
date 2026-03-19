@@ -4,7 +4,7 @@
     inputs = {
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
         unstablepkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-        hytale-launcher.url = "github:JPyke3/hytale-launcher-nix";
+        hytale-launcher.url = "github:zarilion/hytale-launcher-nix";
         honkai-railway-grub-theme.url = "github:voidlhf/StarRailGrubThemes";
         
         home-manager = {

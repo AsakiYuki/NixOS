@@ -118,15 +118,15 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1773073154,
-        "narHash": "sha256-x0BcLaOmcwM6kZP0RIjXQJkeivz5qo/uCNePo8/NexA=",
-        "owner": "JPyke3",
+        "lastModified": 1773525309,
+        "narHash": "sha256-DwswsQFirIvoouSbrUb3y5fUlx4OrEYJduoDfmNJZ2U=",
+        "owner": "zarilion",
         "repo": "hytale-launcher-nix",
-        "rev": "7fecb1b70f75f9f9d7b89ebb6c9511db1ef58725",
+        "rev": "d05ff5b1ceed4048a1af6d315ca5cdb1c3b67875",
         "type": "github"
       },
       "original": {
-        "owner": "JPyke3",
+        "owner": "zarilion",
         "repo": "hytale-launcher-nix",
         "type": "github"
       }

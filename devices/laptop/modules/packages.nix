@@ -16,6 +16,7 @@
         docker-compose
         ntfs3g
         btop
+        neovide
 
         easyeffects
         protonup-qt
