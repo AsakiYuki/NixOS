@@ -3,7 +3,7 @@
         description = "Auto start EasyEffects";
         wantedBy = [ "default.target" ];
         serviceConfig = {
-            ExecStart = "${pkgs.easyeffects}/bin/easyeffects -w";
+            ExecStart = "${pkgs.easyeffects}/bin/easyeffects --service-mode";
             Restart = "on-failure";
         };
     };
