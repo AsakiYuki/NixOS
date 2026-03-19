@@ -17,6 +17,9 @@
         ntfs3g
         btop
         neovide
+        sass
+        ruby
+        rPackages.gems
 
         easyeffects
         protonup-qt
@@ -24,6 +27,7 @@
         vscode
         obs-studio
         pavucontrol
+        antigravity
         vlc
 
         wine
