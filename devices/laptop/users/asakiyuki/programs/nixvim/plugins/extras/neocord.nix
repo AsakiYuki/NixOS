@@ -1,0 +1,4 @@
+{ plugins, ... }:
+{
+    plugin = plugins.neocord;
+}

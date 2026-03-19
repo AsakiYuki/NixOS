@@ -1,5 +1,7 @@
 { ... }: {
     imports = [
+        ./nixvim/_nixvim.nix
+
         ./bash.nix
         ./starship.nix
         ./fastfetch.nix
