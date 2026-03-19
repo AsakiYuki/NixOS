@@ -1,14 +1,10 @@
 { pkgs, ... }: {
-    systemd.services.easyeffects = {
-        enable = true;
+    systemd.user.services.easyeffects = {
         description = "Auto start EasyEffects";
-        wantedBy = [ "graphical.target" ];
-        after = [ "graphical.target" ];
+        wantedBy = [ "default.target" ];
         serviceConfig = {
-            ExecStart = "${pkgs.easyeffects}/bin/nix";
+            ExecStart = "${pkgs.easyeffects}/bin/easyeffects -w";
             Restart = "on-failure";
-            User = "asakiyuki";
-            Environment = "DISPLAY=:0";
         };
     };
 }
