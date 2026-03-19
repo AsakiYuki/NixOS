@@ -45,7 +45,7 @@
         proton-authenticator
         prismlauncher
     ]) ++ (with inputs; [
-        hytale-launcher.packages.${pkgs.system}.default
+        hytale-launcher.packages.${pkgs.stdenv.hostPlatform.system}.default
     ]) ++ [
         (pkgs.catppuccin-kde.override {
             flavour = [ "mocha" ];
