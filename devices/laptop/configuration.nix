@@ -17,6 +17,7 @@
         ./modules/packages.nix
         ./modules/fonts.nix
         ./modules/udev.nix
+        ./modules/fileSystems.nix
     ];
 
     nixpkgs.config.allowUnfree = true;

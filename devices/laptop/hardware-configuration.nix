@@ -30,16 +30,6 @@
     options = [ "rw" "uid=1000" "gid=100" "umask=022" ];
   };
 
-  fileSystems."/mnt/waydroid" = {
-    device = "/home/asakiyuki/.local/share/waydroid/data/media/0";
-    fsType = "fuse.bindfs";
-    options = [
-      "mirror=1000"
-      "xattr-none"
-      "chmod-ignore"
-    ];
-  };
-
   swapDevices =
     [ { device = "/dev/disk/by-uuid/51cd0349-f54a-4faf-a5a2-c0372d530b3d"; }
     ];
