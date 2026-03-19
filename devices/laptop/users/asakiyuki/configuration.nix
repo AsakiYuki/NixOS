@@ -1,6 +1,7 @@
 { inputs, pkgs, lib, ... }: {
     imports = [
         ./programs/_programs.nix
+        ./modules/files/_files.nix
     ];
 
     home = {
