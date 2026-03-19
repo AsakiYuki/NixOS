@@ -15,6 +15,7 @@
         libva-vdpau-driver
         docker-compose
         ntfs3g
+        btop
 
         easyeffects
         protonup-qt
