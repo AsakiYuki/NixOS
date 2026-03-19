@@ -29,6 +29,7 @@
         pavucontrol
         antigravity
         chromium
+        waydroid-helper
         vlc
 
         wine

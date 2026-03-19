@@ -1,5 +1,9 @@
 { ... }: {
-    imports = [ ./services/_services.nix ];
+    imports = [ 
+        ./services/_services.nix
+        
+        ./mounts.nix
+    ];
 
     systemd = {
         tmpfiles = import ./tmpfiles.nix;
