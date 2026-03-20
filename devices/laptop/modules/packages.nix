@@ -24,7 +24,6 @@
 
         easyeffects
         protonup-qt
-        vesktop
         obs-studio
         pavucontrol
         antigravity
@@ -49,6 +48,7 @@
         vscode
         proton-authenticator
         prismlauncher
+        vesktop
     ]) ++ (with inputs; [
         hytale-launcher.packages.${pkgs.stdenv.hostPlatform.system}.default
     ]) ++ [
