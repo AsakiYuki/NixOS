@@ -25,7 +25,6 @@
         easyeffects
         protonup-qt
         vesktop
-        vscode
         obs-studio
         pavucontrol
         antigravity
@@ -33,6 +32,8 @@
         cider-2
         gimp
         waydroid-helper
+        winboat
+        osu-lazer
         vlc
 
         wine
@@ -44,6 +45,7 @@
         fcitx5-material-color
     ]) ++ (with unstable; [
         proton-pass
+        vscode
         proton-authenticator
         prismlauncher
     ]) ++ (with inputs; [
