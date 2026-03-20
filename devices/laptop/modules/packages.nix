@@ -33,6 +33,7 @@
         waydroid-helper
         osu-lazer
         waydroid-nftables
+        qbittorrent
         vlc
 
         wine
@@ -48,6 +49,8 @@
         proton-authenticator
         prismlauncher
         vesktop
+        winboat
+        freerdp
     ]) ++ (with inputs; [
         hytale-launcher.packages.${pkgs.stdenv.hostPlatform.system}.default
     ]) ++ [
@@ -55,4 +58,4 @@
             flavour = [ "mocha" ];
         })
     ];
-} 
+}   
