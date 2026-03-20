@@ -34,6 +34,7 @@
         waydroid-helper
         winboat
         osu-lazer
+        waydroid-nftables
         vlc
 
         wine
