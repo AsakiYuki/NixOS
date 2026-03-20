@@ -31,7 +31,6 @@
         cider-2
         gimp
         waydroid-helper
-        winboat
         osu-lazer
         waydroid-nftables
         vlc
