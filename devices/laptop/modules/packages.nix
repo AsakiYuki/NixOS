@@ -30,6 +30,8 @@
         pavucontrol
         antigravity
         chromium
+        cider-2
+        gimp
         waydroid-helper
         vlc
 
