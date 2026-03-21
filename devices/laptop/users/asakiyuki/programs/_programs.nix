@@ -3,7 +3,7 @@
         ./nixvim/_nixvim.nix
         
         ./_general.nix
-        ./discord.nix
+        ./nixcord.nix
         ./bash.nix
         ./starship.nix
         ./fastfetch.nix

@@ -4,6 +4,8 @@
     inputs = {
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
         unstablepkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+        nixcord.url = "github:FlameFlag/nixcord";
         hytale-launcher.url = "github:zarilion/hytale-launcher-nix";
         honkai-railway-grub-theme.url = "github:voidlhf/StarRailGrubThemes";
         
@@ -23,7 +25,7 @@
         };
     };
 
-    outputs = inputs@{ self, nixpkgs, hytale-launcher, honkai-railway-grub-theme, unstablepkgs, ... }: let 
+    outputs = inputs@{ self, nixpkgs, hytale-launcher, honkai-railway-grub-theme, unstablepkgs, nixcord, ... }: let 
         unstable = import unstablepkgs {
             system = "x86_64-linux";
             config.allowUnfree = true;

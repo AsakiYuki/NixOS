@@ -14,6 +14,8 @@
             _module.args = { inherit inputs pkgs; };
             imports = [ 
                 inputs.nixvim.homeModules.nixvim
+                inputs.nixcord.homeModules.nixcord
+                
                 ./asakiyuki/configuration.nix
             ];
         };
