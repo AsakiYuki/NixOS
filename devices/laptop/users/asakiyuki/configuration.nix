@@ -7,5 +7,6 @@
     home = {
         username = "asakiyuki";
         stateVersion = "25.11";
+        pointerCursor = import ./packages/castorice-cursor.nix { inherit pkgs; };
     };
 }
