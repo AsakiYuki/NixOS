@@ -4,11 +4,19 @@
 in {
     boot = {
         kernelPackages = pkgs.linuxPackages_latest;
+        extraModulePackages = [ pkgs.linuxPackages_latest.zenpower ];
+
         kernelParams = [
             "snd_hda_intel.model=lenovo" 
             "snd_acp_config.dmic_acpi_check=1"
             "snd_acp_config.dmic_detect=1"
             "snd_sof_amd_acp63_enable=1"
+            "amd_pstate=active"
+        ];
+
+        kernelModules = [ 
+            "k10temp" 
+            "ideapad_laptop"
         ];
 
         kernel.sysctl = {
