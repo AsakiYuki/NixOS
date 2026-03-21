@@ -43,6 +43,7 @@
         php
 
         fcitx5-material-color
+        kdePackages.kde-gtk-config
     ]) ++ (with unstable; [
         proton-pass
         vscode
@@ -51,11 +52,18 @@
         vesktop
         winboat
         freerdp
+        lutris
     ]) ++ (with inputs; [
         hytale-launcher.packages.${pkgs.stdenv.hostPlatform.system}.default
     ]) ++ [
         (pkgs.catppuccin-kde.override {
             flavour = [ "mocha" ];
+            accents = [ "sapphire" ];
+        })
+
+        (pkgs.catppuccin-gtk.override {
+            variant = "mocha";
+            accents = [ "sapphire" ];
         })
     ];
 }   
