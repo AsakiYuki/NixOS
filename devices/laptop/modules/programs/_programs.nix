@@ -2,6 +2,7 @@
     imports = [
         ./steam.nix
         ./ssh.nix
+        ./nix-dl.nix
     ];
 
     programs = {
