@@ -58,6 +58,7 @@
         qt5compat
         kirigami
         ksvg
+        qtbase
         plasma5support
     ]) ++ (with inputs; [
         hytale-launcher.packages.${pkgs.stdenv.hostPlatform.system}.default
