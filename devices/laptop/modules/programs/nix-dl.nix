@@ -4,6 +4,12 @@
         libraries = with pkgs; [
             stdenv.cc.cc
             zlib
+            
+            brotli
+            unixODBC
+            zstd
+            glib
+            stdenv.cc.cc.lib
         ];
     };
 }
