@@ -53,11 +53,12 @@
         winboat
         freerdp
         lutris
-
-        kdePackages.qtdeclarative
-        kdePackages.qt5compat
-        kdePackages.kirigami
-        kdePackages.ksvg
+    ]) ++ (with unstable.kdePackages;[
+        qtdeclarative
+        qt5compat
+        kirigami
+        ksvg
+        plasma5support
     ]) ++ (with inputs; [
         hytale-launcher.packages.${pkgs.stdenv.hostPlatform.system}.default
     ]) ++ [
