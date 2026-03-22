@@ -56,6 +56,8 @@
 
         kdePackages.qtdeclarative
         kdePackages.qt5compat
+        kdePackages.kirigami
+        kdePackages.ksvg
     ]) ++ (with inputs; [
         hytale-launcher.packages.${pkgs.stdenv.hostPlatform.system}.default
     ]) ++ [
