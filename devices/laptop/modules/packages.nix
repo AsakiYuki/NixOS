@@ -53,6 +53,8 @@
         winboat
         freerdp
         lutris
+
+        kdePackages.qtdeclarative
     ]) ++ (with inputs; [
         hytale-launcher.packages.${pkgs.stdenv.hostPlatform.system}.default
     ]) ++ [
