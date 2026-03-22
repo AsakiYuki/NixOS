@@ -55,6 +55,7 @@
         lutris
 
         kdePackages.qtdeclarative
+        kdePackages.qt5compat
     ]) ++ (with inputs; [
         hytale-launcher.packages.${pkgs.stdenv.hostPlatform.system}.default
     ]) ++ [
