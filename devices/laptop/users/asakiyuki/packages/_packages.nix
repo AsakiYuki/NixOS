@@ -58,5 +58,5 @@
         })
     ];
 in  {
-    home.packages = PKGS ++ UNSTABLE_PKGS ++ INPUTS_PKGS ++ CUSTOM_PKGS;
+    home.packages = PKGS ++ UNSTABLE_PKGS ++ INPUTS_PKGS ++ CUSTOM_PKGS ++ THEMES;
 }
