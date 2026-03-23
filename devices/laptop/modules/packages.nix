@@ -53,7 +53,7 @@
         winboat
         freerdp
         lutris
-    ]) ++ (with unstable.kdePackages;[
+    ]) ++ (with pkgs.kdePackages;[
         qtdeclarative
         qt5compat
         kirigami
