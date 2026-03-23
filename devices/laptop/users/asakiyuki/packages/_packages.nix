@@ -8,7 +8,6 @@
         ruby
         rPackages.gems
 
-
         easyeffects
         protonup-qt
         obs-studio
@@ -23,8 +22,7 @@
         qbittorrent
         vlc
 
-        wine
-        wine64
+        wineWowPackages.stable
         winetricks
         protontricks
         php
