@@ -3,5 +3,8 @@
         ./docker.nix
     ];
 
-    virtualisation = {};
+    virtualisation = {
+        waydroid.enable = true;
+        waydroid.package = pkgs.waydroid-nftables;
+    };
 }

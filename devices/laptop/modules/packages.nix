@@ -17,8 +17,6 @@
         bindfs
         tree
         superfile
-        waydroid-helper
-        waydroid-nftables
 
         fcitx5-material-color
     ]) ++ (with pkgs.kdePackages;[

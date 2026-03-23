@@ -8,6 +8,7 @@
         ruby
         rPackages.gems
 
+        waydroid-helper
         easyeffects
         protonup-qt
         obs-studio
