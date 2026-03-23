@@ -1,6 +1,4 @@
 { ... }: {
-    imports = [
-        ./cage_xtmapper.nix
-    ];
+    imports = [];
     systemd.services = {};
 }
