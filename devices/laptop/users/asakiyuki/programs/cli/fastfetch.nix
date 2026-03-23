@@ -1,5 +1,5 @@
 { ... }: let
-    starship = import ../../../../../common/programs/fastfetch.nix {};
+    starship = import ../../../../../../common/programs/fastfetch.nix {};
 in {
     programs.fastfetch = {
 		enable = true;
