@@ -1,11 +1,15 @@
 { pkgs }:
+let 
+    RELEASE_VERSION = "20260208";
+    PACKAGE_VERSION = "0.2.0";
+in 
 pkgs.stdenv.mkDerivation rec {
     pname = "cage-xtmapper";
-    version = "0.2.0";
+    version = PACKAGE_VERSION;
 
     src = pkgs.fetchurl {
-        url = "https://github.com/Xtr126/cage-xtmapper/releases/download/v${version}/cage-xtmapper-v${version}.tar";
-        hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+        url = "https://github.com/Xtr126/cage-xtmapper/releases/download/v${RELEASE_VERSION}/cage-xtmapper-v${PACKAGE_VERSION}.tar";
+        hash = "sha256-F1C3KnTzTO1vEouixqO1xnsGmufRyAk+BiRlypNq4kQ==";
     };
 
     dontBuild = true;

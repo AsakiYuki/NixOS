@@ -39,7 +39,7 @@
     ];
 
     CUSTOM_PKGS = [
-        ../../../../../packages/cage-xtmapper.nix { inherit pkgs; };
+        (pkgs.callPackage ../../../../../packages/cage-xtmapper.nix { })
     ];
 
     INPUTS_PKGS = with inputs; [
@@ -58,5 +58,5 @@
         })
     ];
 in  {
-    home.packages = PKGS ++ UNSTABLE_PKGS ++ INPUTS_PKGS;
+    home.packages = PKGS ++ UNSTABLE_PKGS ++ INPUTS_PKGS ++ CUSTOM_PKGS;
 }
