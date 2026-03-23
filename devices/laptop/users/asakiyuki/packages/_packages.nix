@@ -38,6 +38,10 @@
         lutris
     ];
 
+    CUSTOM_PKGS = [
+        ../../../../../packages/cage-xtmapper.nix { inherit pkgs; };
+    ];
+
     INPUTS_PKGS = with inputs; [
         hytale-launcher.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
