@@ -1,5 +1,10 @@
 { inputs, pkgs, unstable, ... }: {
     environment.systemPackages = (with pkgs; [
+        gcc
+        cmake
+        gdb
+        pkg-config
+
         vim
         wget
         git
