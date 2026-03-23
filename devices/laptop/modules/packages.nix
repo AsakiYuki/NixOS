@@ -27,6 +27,7 @@
         rPackages.gems
         bindfs
         tree
+        superfile
 
         easyeffects
         protonup-qt
