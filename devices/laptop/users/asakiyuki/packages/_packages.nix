@@ -16,9 +16,7 @@
         chromium
         cider-2
         gimp
-        waydroid-helper
         osu-lazer
-        waydroid-nftables
         qbittorrent
         vlc
 
