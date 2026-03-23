@@ -65,6 +65,7 @@
         ksvg
         qtbase
         plasma5support
+        qttools
     ]) ++ (with inputs; [
         hytale-launcher.packages.${pkgs.stdenv.hostPlatform.system}.default
     ]) ++ [
