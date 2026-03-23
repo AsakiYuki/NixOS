@@ -1,4 +1,4 @@
-{ inputs, pkgs, lib, ... }: {
+{ inputs, pkgs, unstable, lib, ... }: {
     imports = [
         ./programs/_programs.nix
         ./packages/_packages.nix

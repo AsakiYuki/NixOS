@@ -1,4 +1,4 @@
-{ inputs, pkgs, lib, ... }: {
+{ inputs, pkgs, unstable, lib, ... }: {
     users.users.asakiyuki = {
         isNormalUser = true;
         shell = pkgs.bash;
@@ -11,7 +11,7 @@
         backupFileExtension = "bak";
 
         users.asakiyuki = {
-            _module.args = { inherit inputs pkgs; };
+            _module.args = { inherit inputs unstable pkgs; };
             imports = [ 
                 inputs.nixvim.homeModules.nixvim
                 inputs.nixcord.homeModules.nixcord

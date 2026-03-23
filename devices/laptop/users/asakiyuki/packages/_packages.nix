@@ -1,4 +1,4 @@
-{ inputs, pkgs, unstable ... }: let 
+{ inputs, pkgs, unstable, ... }: let 
     PKGS = with pkgs; [
         nodejs
         bun
