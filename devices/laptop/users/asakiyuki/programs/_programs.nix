@@ -1,15 +1,9 @@
 { ... }: {
     imports = [
         ./nixvim/_nixvim.nix
+        ./cli/_cli.nix
+        ./gui/_gui.nix
         
         ./_general.nix
-        ./nixcord.nix
-        ./bash.nix
-        ./starship.nix
-        ./fastfetch.nix
-        ./git.nix
-        ./ghostty.nix
-        ./kitty.nix
-        ./tmux.nix
     ];
 }
