@@ -26,6 +26,7 @@
         ruby
         rPackages.gems
         bindfs
+        tree
 
         easyeffects
         protonup-qt
