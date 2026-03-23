@@ -12,16 +12,28 @@ pkgs.stdenv.mkDerivation rec {
         hash = "sha256-F1C3KnTzTO1vEouixqO1xnsGmufRyAk+BiRlypNq4kQ==";
     };
 
+    nativeBuildInputs = [ pkgs.autoPatchelfHook ];
+
+    buildInputs = with pkgs; [
+        wayland
+        libxkbcommon
+        pixman
+        libdrm 
+        libGL 
+        mesa 
+        vulkan-loader 
+        udev 
+        seatd 
+        libxcb-render-util
+    ];
+
     dontBuild = true;
 
     installPhase = ''
         mkdir -p $out/bin
-
         tar xvf $src
-
         cp usr/local/bin/cage_xtmapper $out/bin/
         cp usr/local/bin/cage_xtmapper.sh $out/bin/
-
         chmod +x $out/bin/cage_xtmapper
         chmod +x $out/bin/cage_xtmapper.sh
     '';
