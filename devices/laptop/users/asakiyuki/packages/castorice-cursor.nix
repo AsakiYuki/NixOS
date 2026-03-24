@@ -14,6 +14,6 @@ let
             '';
         };
     in getFrom 
-        "https://www.asakiyuki.com/linux/theme/cursors/castorice.tar.gz"
+        "https://static.asakiyuki.com/nixos/castorice-cursors.tar.gz"
         "sha256-nqAC+Itr+TXLGG8zYDBoBve+MeRckds5BM23DrsCTMM="
         "castorice-cursors"
