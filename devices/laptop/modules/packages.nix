@@ -19,7 +19,7 @@
         superfile
 
         fcitx5-material-color
-    ]) ++ (with pkgs.kdePackages;[
+    ]) ++ (with pkgs.kdePackages; [
         kde-gtk-config
         qtdeclarative
         qt5compat
