@@ -34,7 +34,7 @@
         prismlauncher
         vesktop
         freerdp
-        lutris
+        bottles
     ];
 
     CUSTOM_PKGS = [
