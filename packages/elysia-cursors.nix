@@ -15,5 +15,5 @@ let
         };
     in getFrom 
         "https://static.asakiyuki.com/nixos/elysia-cursors.tar.gz"
-        "sha256-nqAC+Itr+TXLGG8zYDBoBve+MeRckds5BM23DrsCTMM="
+        "sha256-mjDHklWrX5Pp/vejRQiMk0VA6afY04HXGyGD0PcopdI="
         "elysia-cursors"
