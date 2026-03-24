@@ -38,7 +38,7 @@
     ];
 
     CUSTOM_PKGS = [
-        (pkgs.callPackage ../../../../../packages/cage-xtmapper.nix { })
+        (pkgs.callPackage ../../../../../packages/cage-xtmapper-0.2.0.nix { })
     ];
 
     INPUTS_PKGS = with inputs; [
