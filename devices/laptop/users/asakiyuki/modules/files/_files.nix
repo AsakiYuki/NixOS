@@ -8,5 +8,6 @@ in {
         value.source = ./sources/servicemenus/${name}.desktop;
     }) SERVICE_MENUS) // {
         ".config/obs-studio/themes".source = pkgs.callPackage ../../../../../../packages/catppuccin-obs.nix {};
+        ".mozilla/firefox/default/search.json.mozlz4".force = lib.mkForce true;
     };
 }
