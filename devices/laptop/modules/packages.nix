@@ -17,7 +17,7 @@
         bindfs
         tree
         superfile
-        p7zips
+        p7zip
 
         fcitx5-material-color
     ]) ++ (with pkgs.kdePackages; [
