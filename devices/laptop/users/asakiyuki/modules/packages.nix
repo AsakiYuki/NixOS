@@ -34,8 +34,6 @@
         prismlauncher
         vesktop
         freerdp
-        
-        (bottles.override { removeWarningPopup = true; })
     ];
 
     CUSTOM_PKGS = [
