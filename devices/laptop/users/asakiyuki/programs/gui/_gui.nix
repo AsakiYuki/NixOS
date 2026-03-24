@@ -1,7 +1,6 @@
 { ... }: {
     imports = [
-        ./ghostty.nix
-        ./kitty.nix
+        ./terminals.nix
         ./nixcord.nix
         ./obs-studio.nix
         ./browser.nix
