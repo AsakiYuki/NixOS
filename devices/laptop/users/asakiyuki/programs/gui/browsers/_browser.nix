@@ -3,10 +3,10 @@
         firefox = {
             enable = true;
             profiles.default = {
-                search = {
-
+                settings = {
+                    "browser.startup.homepage" = "https://google.com";
                 };
-                userChrome = {};
+                userChrome = '''';
             };
         };
         
