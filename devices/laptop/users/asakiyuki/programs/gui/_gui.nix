@@ -2,6 +2,7 @@
     imports = [
         ./ghostty.nix
         ./kitty.nix
-        ./nixcord.nix  
+        ./nixcord.nix
+        ./obs-studio.nix
     ];
 }

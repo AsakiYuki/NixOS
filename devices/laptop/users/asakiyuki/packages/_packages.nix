@@ -11,7 +11,6 @@
         waydroid-helper
         easyeffects
         protonup-qt
-        obs-studio
         pavucontrol
         antigravity
         chromium
