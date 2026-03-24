@@ -5,11 +5,11 @@ pkgs.stdenv.mkDerivation {
 
     src = pkgs.fetchzip {
         url = "https://github.com/catppuccin/obs/archive/refs/heads/main.zip";
-        sha256 = "0000000000000000000000000000000000000000000000000000";
+        sha256 = "sha256-Uk4a0HKaeyQilgBiPsuAWQubk1yZdyirNcfhYJEL+lQ=";
     };
 
     buildCommand = ''
         mkdir -p $out
-        cp -r $src/obs-main/* $out/
+        cp -r $src/themes/* $out/
     '';
 }
