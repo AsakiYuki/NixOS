@@ -9,7 +9,7 @@ pkgs.stdenv.mkDerivation rec {
 
     src = pkgs.fetchurl {
         url = "https://github.com/Xtr126/cage-xtmapper/releases/download/v${RELEASE_VERSION}/cage-xtmapper-v${PACKAGE_VERSION}.tar";
-        hash = "sha256-000";
+        hash = "sha256-ZmdltOQInGbCBpf/e8D2sB9Rjt4wqd8wwuSFvryHfFA=";
     };
 
     nativeBuildInputs = [ pkgs.autoPatchelfHook ];
