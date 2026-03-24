@@ -1,13 +1,14 @@
 { inputs, pkgs, unstable, lib, ... }: {
     imports = [
         ./programs/_programs.nix
-        ./packages/_packages.nix
+        
         ./modules/files/_files.nix
+        ./modules/packages.nix
     ];
 
     home = {
         username = "asakiyuki";
         stateVersion = "25.11";
-        pointerCursor = import ./packages/castorice-cursor.nix { inherit pkgs; };
+        pointerCursor = import ./../../../../packages/elysia-cursors.nix { inherit pkgs; };
     };
 }
