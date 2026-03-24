@@ -9,8 +9,8 @@
             font-size = 10;
             font-family = "SauceCodePro NFP Bold";
             
-            window-width = 160;
-            window-height = 45;
+            window-width = 229;
+            window-height = 70;
 
             window-padding-x = 5;
             window-padding-y = 0;

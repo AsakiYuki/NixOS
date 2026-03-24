@@ -11,7 +11,7 @@
         libva
         libva-utils
         libva-vdpau-driver
-        docker-composer
+        docker-compose
         ntfs3g
         btop
         bindfs
