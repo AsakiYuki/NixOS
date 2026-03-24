@@ -8,7 +8,7 @@
     home-manager = {
         useUserPackages = true;
         useGlobalPkgs = true;
-        backupFileExtension = "bak";
+        backupFileExtension = "backup";
 
         users.asakiyuki = {
             _module.args = { inherit inputs unstable pkgs; };
