@@ -22,6 +22,7 @@
         vlc
 
         wineWowPackages.stable
+        winboat
         winetricks
         protontricks
         php
@@ -33,7 +34,6 @@
         proton-authenticator
         prismlauncher
         vesktop
-        winboat
         freerdp
         lutris
     ];
