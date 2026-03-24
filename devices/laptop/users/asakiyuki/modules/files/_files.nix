@@ -6,5 +6,7 @@ in {
     home.file = builtins.listToAttrs (map (name: {
         name = ".local/share/kio/servicemenus/${name}.desktop";
         value.source = ./sources/servicemenus/${name}.desktop;
-    }) SERVICE_MENUS);
+    }) SERVICE_MENUS) // {
+        ".config/obs-studio/plugins/catppuccin".source = pkgs.callPackage ../../../../packages/catppuccin-obs.nix {};
+    };
 }

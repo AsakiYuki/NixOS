@@ -5,7 +5,7 @@ pkgs.stdenv.mkDerivation {
 
     src = pkgs.fetchzip {
         url = "https://github.com/catppuccin/obs/archive/refs/heads/main.zip";
-        sha256 = lib.fakeSha256;
+        sha256 = "0000000000000000000000000000000000000000000000000000";
     };
 
     buildCommand = ''
