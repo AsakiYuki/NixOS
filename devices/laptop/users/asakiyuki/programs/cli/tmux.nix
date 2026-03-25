@@ -40,6 +40,11 @@ let
         set -ogq @asa-module-icon "#[bg=#{E:@thm_sapphire},fg=#{E:@thm_surface_0}]"
         set -ogq @asa-module-text "#[bg=#{E:@thm_surface_0},fg=#{E:@thm_fg}]"
     '';
+
+    YANK = ''
+        set -g @yank_selection 'primary'
+        set -g @yank_selection_mouse 'primary'
+    '';
 in
 {
     programs.tmux = {
@@ -51,6 +56,10 @@ in
         extraConfig = TOP_PANEL + OPTIONS + BINDS; 
 
         plugins = with pkgs.tmuxPlugins; [
+            {
+                plugin = yank;
+                extraConfig = YANK;
+            }
             {
                 plugin = catppuccin;
                 extraConfig = CATPPUCCIN;
