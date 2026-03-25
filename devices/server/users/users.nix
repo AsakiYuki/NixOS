@@ -18,6 +18,11 @@ in {
                 shell = pkgs.zsh;
                 extraGroups = [  ];
             };
+            kvvl = {
+                isNormalUser = true;
+                shell = pkgs.bash;
+                extraGroups = [  ];
+            };
             static = {
                 isSystemUser = true;
                 group = "public";
@@ -43,6 +48,11 @@ in {
             hoacaclord = {
                 _module.args = { inherit inputs pkgs; };
                 imports = [ ./hoacaclord/configuration.nix ];
+            };
+
+            kvvl = {
+                _module.args = { inherit inputs pkgs; };
+                imports = [ ./kvvl/configuration.nix ];
             };
 
             junko = {
