@@ -19,6 +19,7 @@
         gimp
         osu-lazer
         qbittorrent
+        davinci-resolve
         vlc
 
         wineWowPackages.stable
