@@ -7,10 +7,7 @@ in {
         extraModulePackages = [ pkgs.linuxPackages_latest.zenpower ];
 
         kernelParams = [
-            "snd_hda_intel.model=lenovo" 
-            "snd_acp_config.dmic_acpi_check=1"
-            "snd_acp_config.dmic_detect=1"
-            "snd_sof_amd_acp63_enable=1"
+            "snd_hda_intel.model=lenovo"
             "amd_pstate=active"
         ];
 
@@ -27,6 +24,7 @@ in {
 
         extraModprobeConfig = ''
             options snd-hda-intel dmic_detect=0
+            options snd_acp_pci drv_bitmask=0x40
         '';
 
         loader = {
