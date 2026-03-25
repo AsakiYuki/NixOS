@@ -1,5 +1,9 @@
-{ inputs, pkgs, unstable, lib, ... }: {
-    users.users.asakiyuki = {
+{ inputs, pkgs, unstable, lib, config, ... }:
+let 
+    user = "asakiyuki";
+    home = "/home/${user}";
+in {
+    users.users."${user}" = {
         isNormalUser = true;
         shell = pkgs.bash;
         extraGroups = [ "public" "wheel" "docker" ];
@@ -10,13 +14,13 @@
         useGlobalPkgs = true;
         backupFileExtension = "backup";
 
-        users.asakiyuki = {
-            _module.args = { inherit inputs unstable pkgs; };
+        users."${user}" = {
+            _module.args = { inherit inputs config unstable pkgs home; };
             imports = [ 
                 inputs.nixvim.homeModules.nixvim
                 inputs.nixcord.homeModules.nixcord
                 
-                ./asakiyuki/configuration.nix
+                ./${user}/configuration.nix
             ];
         };
     };

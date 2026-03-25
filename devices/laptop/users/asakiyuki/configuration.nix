@@ -1,8 +1,8 @@
 { inputs, pkgs, unstable, lib, ... }: {
     imports = [
         ./programs/_programs.nix
-        
         ./modules/files/_files.nix
+        ./modules/activation.nix
         ./modules/packages.nix
     ];
 
