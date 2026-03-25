@@ -4,7 +4,7 @@
      ];
 
      home = {
-          username = "kvvl";
+          username = "lovetinasha";
           stateVersion = "25.11";
      };
 }

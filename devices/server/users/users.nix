@@ -18,7 +18,7 @@ in {
                 shell = pkgs.zsh;
                 extraGroups = [  ];
             };
-            kvvl = {
+            lovetinasha = {
                 isNormalUser = true;
                 shell = pkgs.bash;
                 extraGroups = [  ];
@@ -50,9 +50,9 @@ in {
                 imports = [ ./hoacaclord/configuration.nix ];
             };
 
-            kvvl = {
+            lovetinasha = {
                 _module.args = { inherit inputs pkgs; };
-                imports = [ ./kvvl/configuration.nix ];
+                imports = [ ./lovetinasha/configuration.nix ];
             };
 
             junko = {
