@@ -29,5 +29,6 @@
         qtbase
         plasma5support
         qttools
+        plasma-sdk
     ]);
 }   

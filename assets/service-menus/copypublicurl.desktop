@@ -2,8 +2,9 @@
 Type=Service
 ServiceTypes=KonqPopupMenu/Plugin
 MimeType=all/allfiles;
+Actions=CopyPublicURL
 
 [Desktop Action CopyPublicURL]
-Name=Copy as URL
-Icon=vscode
-Exec=%F >> %F/test.txt
+Name=Copy Location as URL
+Icon=org.kde.plasma.clipboard
+Exec=/etc/nixos/assets/scripts/copy-as-public-url.sh "%F"
