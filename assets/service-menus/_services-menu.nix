@@ -1,3 +1,4 @@
 [
     "openwithcode"
+    "copypublicurl"
 ]

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/allfiles;
+
+[Desktop Action CopyPublicURL]
+Name=Copy as URL
+Icon=vscode
+Exec=%F >> %F/test.txt

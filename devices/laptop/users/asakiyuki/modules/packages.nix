@@ -7,6 +7,7 @@
         sass
         ruby
         rPackages.gems
+        wl-clipboard-rs
 
         waydroid-helper
         easyeffects
