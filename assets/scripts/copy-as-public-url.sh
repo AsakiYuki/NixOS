@@ -8,5 +8,5 @@ prefix_index=${#prefix}
 if [ $(expr length "$str_path") -gt $prefix_index ]; then
     prefix_index=$(($prefix_index + $(expr length $search)))
     output=${str_path:prefix_index}
-    wl-copy "https://static.asakiyuki.com/${output// /"20%"}"
+    wl-copy "https://static.asakiyuki.com/${output// /"%20"}"
 fi
