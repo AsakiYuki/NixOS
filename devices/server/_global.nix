@@ -1,6 +1,6 @@
 let
     ADMIN_EMAIL = "vantrong2007vn@gmail.com";
-    ALLOWED_SSH_USERS = [ "asakiyuki" "junko" "hoacaclord" ];
+    ALLOWED_SSH_USERS = [ "asakiyuki" "junko" "hoacaclord" "kvvl" ];
     
     SSH_PORT = 15523;
     SQL_SERVER_PORT = 37241;
