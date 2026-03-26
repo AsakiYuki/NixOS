@@ -37,7 +37,7 @@
                 specialArgs = { inherit inputs unstable; };
                 modules = [
                     inputs.home-manager.nixosModules.default
-                    ./devices/laptop/configuration.nix
+                    ./host/laptop/configuration.nix
                 ];
             };
 
@@ -46,7 +46,7 @@
                 specialArgs = { inherit inputs; };
                 modules = [
                     inputs.home-manager.nixosModules.default
-                    ./devices/server/configuration.nix
+                    ./host/server/configuration.nix
                 ];
             };
 
@@ -56,7 +56,7 @@
                 modules = [
                     inputs.nixos-wsl.nixosModules.default
                     inputs.home-manager.nixosModules.default
-                    ./devices/wsl/configuration.nix
+                    ./host/wsl/configuration.nix
                 ];
             };
         };
