@@ -5,6 +5,6 @@ MimeType=all/allfiles;
 Actions=CopyPublicURL
 
 [Desktop Action CopyPublicURL]
-Name=Copy Location as URL
+Name=Copy location as URL
 Icon=org.kde.plasma.clipboard
 Exec=/etc/nixos/assets/scripts/copy-as-public-url.sh "%F"
