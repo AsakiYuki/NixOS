@@ -9,6 +9,11 @@
         hytale-launcher.url = "github:zarilion/hytale-launcher-nix";
         honkai-railway-grub-theme.url = "github:voidlhf/StarRailGrubThemes";
         
+        nix-index-database = {
+            url = "github:nix-community/nix-index-database";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+        
         home-manager = {
             url = "github:nix-community/home-manager/release-25.11";
             inputs.nixpkgs.follows = "nixpkgs";
@@ -25,7 +30,7 @@
         };
     };
 
-    outputs = inputs@{ self, nixpkgs, hytale-launcher, honkai-railway-grub-theme, unstablepkgs, nixcord, ... }: let 
+    outputs = inputs@{ self, nixpkgs, hytale-launcher, honkai-railway-grub-theme, unstablepkgs, nix-index-database, nixcord, ... }: let 
         unstable = import unstablepkgs {
             system = "x86_64-linux";
             config.allowUnfree = true;
@@ -37,6 +42,7 @@
                 specialArgs = { inherit inputs unstable; };
                 modules = [
                     inputs.home-manager.nixosModules.default
+                    nix-index-database.nixosModules.default
                     ./host/laptop/configuration.nix
                 ];
             };
