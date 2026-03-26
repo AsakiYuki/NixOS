@@ -18,11 +18,6 @@ in {
                 shell = pkgs.zsh;
                 extraGroups = [  ];
             };
-            lovetinasha = {
-                isNormalUser = true;
-                shell = pkgs.bash;
-                extraGroups = [  ];
-            };
             static = {
                 isSystemUser = true;
                 group = "public";
