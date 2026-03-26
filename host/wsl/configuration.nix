@@ -1,7 +1,7 @@
 { inputs, pkgs, nixos-wsl, ... }: {
     # Import Modules
     imports = [
-        ./home-manager.nix
+        ../../nixos-modules/wsl/default.nix
     ];
 
     # NixOS Config
