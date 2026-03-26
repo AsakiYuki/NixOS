@@ -13,7 +13,7 @@ in {
         shellOptions = defaultBash.shellOptions;
         initExtra = ''
             ${defaultBash.initExtra}
-            ${builtins.readFile ../../../../../../assets/scripts/laptop-initExtra.sh}
+            ${builtins.readFile ../../../../../../assets/scripts/desktop-init-extra.sh}
 
             allowed_terms=("xterm-kitty" "xterm-ghostty")
 

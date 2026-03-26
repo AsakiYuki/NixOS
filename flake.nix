@@ -37,13 +37,13 @@
         };
     in {
         nixosConfigurations = {
-            laptop = nixpkgs.lib.nixosSystem {
+            lenovo-ideapad = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
                 specialArgs = { inherit inputs unstable; };
                 modules = [
                     inputs.home-manager.nixosModules.default
                     nix-index-database.nixosModules.default
-                    ./host/laptop/configuration.nix
+                    ./host/lenovo-ideapad/configuration.nix
                 ];
             };
 
@@ -52,7 +52,7 @@
                 specialArgs = { inherit inputs; };
                 modules = [
                     inputs.home-manager.nixosModules.default
-                    ./host/server/configuration.nix
+                    ./host/home/configuration.nix
                 ];
             };
 

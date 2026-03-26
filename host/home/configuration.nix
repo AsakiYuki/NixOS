@@ -2,7 +2,7 @@
     # Import Modules
     imports = [
         ./hardware-configuration.nix
-        ../../nixos-modules/desktop/default.nix
+        ../../nixos-modules/server/default.nix
     ];
 
     system.stateVersion = "25.11";
