@@ -53,11 +53,6 @@ in {
                 imports = [ ./hoacaclord/configuration.nix ];
             };
 
-            lovetinasha = {
-                _module.args = { inherit inputs pkgs; };
-                imports = [ ./lovetinasha/configuration.nix ];
-            };
-
             junko = {
                 _module.args = { inherit inputs pkgs; };
                 imports = [ ./junko/configuration.nix ];
