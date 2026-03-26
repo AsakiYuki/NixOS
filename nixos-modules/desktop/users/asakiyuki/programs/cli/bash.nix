@@ -1,10 +1,11 @@
-{ ... }: let
+{ config, ... }: let
     defaultBash = import ../../../../../../common/programs/bash.nix {};
+    flake-name = config.flake-name;
 in {
     programs.bash =  {
         enable = true;
         shellAliases = defaultBash.shellAliases // {
-            nrs = "sudo nixos-rebuild switch --flake /etc/nixos#laptop";
+            nrs = "sudo nixos-rebuild switch --flake /etc/nixos#${flake-name}";
             wss = "waydroid session stop; exit;";
             spf = "superfile";
             flake-upgrade = "nix flake update";
