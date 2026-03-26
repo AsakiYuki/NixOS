@@ -2,7 +2,7 @@
     # Import Modules
     imports = [
         ./hardware-configuration.nix
-        ../../nixos-modules/laptop/default.nix
+        ../../nixos-modules/desktop/default.nix
     ];
 
     nixpkgs.config.allowUnfree = true;
