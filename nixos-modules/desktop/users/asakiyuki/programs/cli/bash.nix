@@ -1,6 +1,6 @@
-{ config, ... }: let
+{ osconfig, ... }: let
     defaultBash = import ../../../../../../common/programs/bash.nix {};
-    flake-name = config.flake-name;
+    flake-name = osconfig.flake-name;
 in {
     programs.bash =  {
         enable = true;
