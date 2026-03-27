@@ -32,11 +32,11 @@
     };
 
     outputs = inputs@{ self, nixpkgs, unstablepkgs, ... }: let 
+        libs = import ./libs/_lib.nix inputs;
         unstable = import unstablepkgs {
             system = "x86_64-linux";
             config.allowUnfree = true;
         };
-        libs = import ./libs/_lib.nix;
     in {
         nixosConfigurations = {
             lenovo-ideapad = nixpkgs.lib.nixosSystem {
