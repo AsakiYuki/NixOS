@@ -1,5 +1,4 @@
-{ inputs, pkgs, lib, libs, config, ... }: let 
-    GLOBAL = import ../_global.nix;
+{ inputs, pkgs, lib, libs, config, ... }: let ;
     osconfig = config;
 in {
     users = {
@@ -37,7 +36,7 @@ in {
 
         users = {
             asakiyuki = {
-                _module.args = { inherit inputs osconfig libs; };
+                _module.args = { inherit inputs pkgs osconfig libs; };
                 imports = [ 
                     inputs.nixvim.homeModules.nixvim
                     ./asakiyuki/configuration.nix
@@ -45,12 +44,12 @@ in {
             };
 
             hoacaclord = {
-                _module.args = { inherit inputs osconfig libs; };
+                _module.args = { inherit inputs pkgs osconfig libs; };
                 imports = [ ./hoacaclord/configuration.nix ];
             };
 
             junko = {
-                _module.args = { inherit inputs osconfig libs; };
+                _module.args = { inherit inputs pkgs osconfig libs; };
                 imports = [ ./junko/configuration.nix ];
             };
         };
