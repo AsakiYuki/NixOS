@@ -1,4 +1,4 @@
-{ config, lib, ... }: let 
+{ config, helper, lib, ... }: let 
     cfg = config.device;
     cfg_s = cfg.services;
 in {
@@ -28,7 +28,7 @@ in {
                     (lib.mkIf cfg_s.lyrics-server.enable cfg_s.lyrics-server.port)
                     (lib.mkIf cfg_s.public-server.enable cfg_s.public-server.port)
                 ]
-                ++ (if cfg_s.nginx-proxy-manager.enable then cfg_s.nginx-proxy-manager.ports else []);
+                ++ (helper.mkIfElse cfg_s.nginx-proxy-manager.enable cfg_s.nginx-proxy-manager.ports []);
         };
     };
 }
