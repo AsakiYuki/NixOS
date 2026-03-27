@@ -32,7 +32,7 @@
     };
 
     outputs = inputs@{ self, nixpkgs, unstablepkgs, ... }: let 
-        libs = import ./libs/_lib.nix inputs;
+        libs = import ./libs/_lib.nix;
         unstable = import unstablepkgs {
             system = "x86_64-linux";
             config.allowUnfree = true;

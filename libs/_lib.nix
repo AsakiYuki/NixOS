@@ -1,3 +1,3 @@
-{ ... }@inputs: (import ./mkFuncs.nix inputs) // {
+(import ./mkFuncs.nix) // {
     root = path: ../. + path;
 }
