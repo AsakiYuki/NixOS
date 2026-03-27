@@ -36,12 +36,12 @@
             system = "x86_64-linux";
             config.allowUnfree = true;
         };
-        helper = ./libs/helper.nix inputs;
+        libs = ./libs/_lib.nix inputs;
     in {
         nixosConfigurations = {
             lenovo-ideapad = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
-                specialArgs = { inherit helper inputs unstable; };
+                specialArgs = { inherit libs inputs unstable; };
                 modules = [
                     ./host/lenovo-ideapad/configuration.nix
                     inputs.home-manager.nixosModules.default
@@ -51,7 +51,7 @@
 
             server = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
-                specialArgs = { inherit helper inputs; };
+                specialArgs = { inherit libs inputs; };
                 modules = [
                     ./host/home/configuration.nix
                     inputs.home-manager.nixosModules.default
@@ -61,7 +61,7 @@
 
             wsl = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
-                specialArgs = { inherit helper inputs; };
+                specialArgs = { inherit libs inputs; };
                 modules = [
                     ./host/wsl/configuration.nix
                     inputs.nixos-wsl.nixosModules.default

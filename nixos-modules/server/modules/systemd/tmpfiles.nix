@@ -1,4 +1,4 @@
-{ config, ... }: let 
+{ config, libs, ... }: let 
     cfg = config.device;
 in  {
     systemd.tmpfiles = {
@@ -8,12 +8,7 @@ in  {
             "L+ /home/junko/MEDIA_FILES - - - - /home/MEDIA_FILES"
         ]
         ++ (
-            if cfg.services.public-server.enable
-            then [
-                "d ${cfg.services.public-server.path} 2775 asakiyuki public - -"
-                "L+ /home/asakiyuki/PUBLIC - - - - ${cfg.services.public-server.path}"
-                "L+ /home/junko/PUBLIC - - - - ${cfg.services.public-server.path}"
-            ] else []
+            libs.helper.mkIfElse cfg.services.public-server.enable [ "d ${cfg.services.public-server.path} 2775 asakiyuki public - -" "L+ /home/asakiyuki/PUBLIC - - - - ${cfg.services.public-server.path}" "L+ /home/junko/PUBLIC - - - - ${cfg.services.public-server.path}" ] []
         );
     };
 }
