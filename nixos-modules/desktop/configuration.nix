@@ -1,7 +1,7 @@
 { pkgs, ... }: {
     imports = [
         ./users/users.nix
-        ./options/_options.nix.nix
+        ./options/_options.nix
 
         ./modules/services/_services.nix
         ./modules/security/_security.nix

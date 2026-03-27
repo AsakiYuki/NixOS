@@ -5,7 +5,13 @@
         ../../nixos-modules/desktop/configuration.nix
     ];
     
-    device.flake-name = "lenovo-ideapad";
+    device = {
+        flake-name = "lenovo-ideapad";
+
+        services = {
+            steam = true;
+        };
+    };
     
     system.stateVersion = "25.11";
 }

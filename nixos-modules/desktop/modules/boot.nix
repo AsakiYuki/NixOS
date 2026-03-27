@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }: let
-  background = ../../../assets/grub/background.png;
-  baseTheme = inputs.honkai-railway-grub-theme.packages.${pkgs.stdenv.hostPlatform.system}.cyrene-grub-theme;
+    background = ../../../assets/grub/background.png;
+    baseTheme = inputs.honkai-railway-grub-theme.packages.${pkgs.stdenv.hostPlatform.system}.cyrene-grub-theme;
 in {
     boot = {
         kernelPackages = pkgs.linuxPackages_latest;
