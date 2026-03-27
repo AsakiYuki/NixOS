@@ -1,4 +1,4 @@
-{ inputs, pkgs, unstable, lib, ... }: {
+{ inputs, pkgs, unstable, lib, asa-lib, ... }: {
     imports = [
         ./programs/_programs.nix
         ./modules/files/_files.nix
@@ -9,6 +9,6 @@
     home = {
         username = "asakiyuki";
         stateVersion = "25.11";
-        pointerCursor = import ./../../../../packages/elysia-cursors.nix { inherit pkgs; };
+        pointerCursor = import (asa-lib.root "/packages/elysia-cursors.nix") { inherit pkgs; };
     };
 }
