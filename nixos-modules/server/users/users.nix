@@ -1,4 +1,4 @@
-{ inputs, pkgs, lib, libs, config, ... }: let ;
+{ inputs, pkgs, lib, libs, config, ... }: let
     osconfig = config;
 in {
     users = {
