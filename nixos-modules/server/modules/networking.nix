@@ -27,7 +27,6 @@ in {
                     (lib.mkIf cfg_s.sql-server.enable cfg_s.sql-server.port)
                     (lib.mkIf cfg_s.lyrics-server.enable cfg_s.lyrics-server.port)
                     (lib.mkIf cfg_s.public-server.enable cfg_s.public-server.port)
-                    (lib.mkIf cfg_s.minecraft-server.enable cfg_s.minecraft-server.port)
                 ]
                 ++ (lib.optionals cfg_s.nginx-proxy-manager.enable cfg_s.nginx-proxy-manager.ports);
         };
