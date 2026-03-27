@@ -1,7 +1,5 @@
 { ... }: {
-    imports = [
-        ../../../../../common/programs/nixvim/_nixvim.nix
-        
+    imports = [        
         ./cli/_cli.nix
         ./gui/_gui.nix
         
