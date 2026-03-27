@@ -8,6 +8,8 @@
         nixcord.url = "github:FlameFlag/nixcord";
         hytale-launcher.url = "github:zarilion/hytale-launcher-nix";
         honkai-railway-grub-theme.url = "github:voidlhf/StarRailGrubThemes";
+
+        nix-minecraft.url = "github:Infinidoge/nix-minecraft";
         
         nix-index-database = {
             url = "github:nix-community/nix-index-database";
@@ -30,7 +32,7 @@
         };
     };
 
-    outputs = inputs@{ self, nixpkgs, hytale-launcher, honkai-railway-grub-theme, unstablepkgs, nix-index-database, nixcord, ... }: let 
+    outputs = inputs@{ self, nixpkgs, unstablepkgs,, ... }: let 
         unstable = import unstablepkgs {
             system = "x86_64-linux";
             config.allowUnfree = true;
@@ -42,7 +44,7 @@
                 specialArgs = { inherit inputs unstable; };
                 modules = [
                     inputs.home-manager.nixosModules.default
-                    nix-index-database.nixosModules.default
+                    inputs.nix-index-database.nixosModules.default
                     ./host/lenovo-ideapad/configuration.nix
                 ];
             };
