@@ -36,7 +36,7 @@
             system = "x86_64-linux";
             config.allowUnfree = true;
         };
-        libs = import ./libs/_lib.nix inputs;
+        libs = import ./libs/_lib.nix;
     in {
         nixosConfigurations = {
             lenovo-ideapad = nixpkgs.lib.nixosSystem {
