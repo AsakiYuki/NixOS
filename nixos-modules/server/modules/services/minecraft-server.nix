@@ -1,4 +1,5 @@
 { pkgs, ... }: {
+    nixpkgs.overlays = [ inputs.nix-minecraft.overlay ];
     services.minecraft-servers = {
         enable = true;
         eula = true;

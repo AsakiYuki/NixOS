@@ -31,7 +31,7 @@
         };
     };
 
-    outputs = inputs@{ self, nixpkgs, unstablepkgs, nix-minecraft, ... }: let 
+    outputs = inputs@{ self, nixpkgs, unstablepkgs, ... }: let 
         unstable = import unstablepkgs {
             system = "x86_64-linux";
             config.allowUnfree = true;
@@ -54,8 +54,7 @@
                 modules = [
                     ./host/home/configuration.nix
                     inputs.home-manager.nixosModules.default
-                    nix-minecraft.nixosModules.minecraft-servers
-                    { nixpkgs.overlays = [ inputs.nix-minecraft.overlay ]; }
+                    inputs.nix-minecraft.nixosModules.minecraft-servers
                 ];
             };
 
