@@ -1,9 +1,9 @@
-{ pkgs, lib, config, home, ... }: {
+{ pkgs, lib, libs, config, home, ... }: {
     home.file = builtins.listToAttrs (map (name: {
         name = ".local/share/kio/servicemenus/${name}.desktop";
-        value.source = ../../../../../../assets/service-menus/${name}.desktop;
-    }) (import ../../../../../../assets/service-menus/_services-menu.nix)) // {
-        ".config/obs-studio/themes".source = pkgs.callPackage ../../../../../../packages/catppuccin-obs.nix {};
+        value.source = (libs.root "/assets/service-menus/${name}.desktop");
+    }) (import (libs.root "/assets/service-menus/_services-menu.nix"))) // {
+        ".config/obs-studio/themes".source = pkgs.callPackage (libs.root "/packages/catppuccin-obs.nix") {};
         ".mozilla/firefox/default/search.json.mozlz4".force = lib.mkForce true;
 
         "SteamApps".source = config.lib.file.mkOutOfStoreSymlink "${home}/.local/share/Steam/steamapps";

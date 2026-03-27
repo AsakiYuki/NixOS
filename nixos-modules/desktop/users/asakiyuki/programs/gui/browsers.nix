@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, libs, ... }: {
     programs = {
         firefox = {
             enable = true;
@@ -110,8 +110,8 @@
                     };
                 };
 
-                userChrome = builtins.readFile ../../../../../../assets/firefox/userChrome.css;
-                userContent = builtins.readFile ../../../../../../assets/firefox/userContent.css;
+                userChrome = builtins.readFile (libs.root "/assets/firefox/userChrome.css");
+                userContent = builtins.readFile (libs.root "/assets/firefox/userContent.css");
             };
         };
         

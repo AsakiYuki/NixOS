@@ -1,5 +1,5 @@
 { ... }: let
-  defaultStarship = import ../../../../../common/programs/starship.nix {};
+  defaultStarship = import (libs.root "/common/programs/starship.nix") {};
 in {
   programs.starship = {
     enable = true;

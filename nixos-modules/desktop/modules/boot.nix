@@ -1,5 +1,5 @@
-{ inputs, pkgs, ... }: let
-    background = ../../../assets/grub/background.png;
+{ inputs, pkgs, libs, ... }: let
+    background = libs.root "/assets/grub/background.png";
     baseTheme = inputs.honkai-railway-grub-theme.packages.${pkgs.stdenv.hostPlatform.system}.cyrene-grub-theme;
 in {
     boot = {

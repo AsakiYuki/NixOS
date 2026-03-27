@@ -1,6 +1,6 @@
-{ pkgs, ... }: {
+{ pkgs, libs, ... }: {
     imports = [
-        ../../../../../common/programs/nixvim/_nixvim.nix
+        (libs.root "/common/programs/nixvim/_nixvim.nix")
 
         ./bash.nix
         ./starship.nix

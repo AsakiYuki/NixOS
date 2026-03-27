@@ -1,5 +1,5 @@
-{ ... }: let
-	defaultGit = import ../../../../../../common/programs/git.nix {};
+{ libs, ... }: let
+	defaultGit = import (libs.root "/common/programs/git.nix") {};
 in {
     programs.git = {
         enable = true;
