@@ -6,7 +6,7 @@ in {
             asakiyuki = {
                 isNormalUser = true;
                 shell = pkgs.bash;
-                extraGroups = [ "public" "wheel" "docker" ];
+                extraGroups = [ "public" "wheel" "docker" "minecraft" ];
             };
             junko = {
                 isNormalUser = true;
@@ -22,10 +22,15 @@ in {
                 isSystemUser = true;
                 group = "public";
             };
+            minecraft = {
+                isSystemUser = true;
+                group = "minecraft";
+            };
         };
 
         groups = {
             public = {};
+            minecraft = {};
         };
     };
 
