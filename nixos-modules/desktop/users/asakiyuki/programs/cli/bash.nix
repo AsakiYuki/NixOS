@@ -1,5 +1,5 @@
 { osconfig, asa-lib, ... }: let
-    defaultBash = import (asa-lib.root "/common/programs/bash.nix") {};
+    defaultBash = import (asa-lib.root "/common/programs/bash.nix");
 in {
     programs.bash =  {
         enable = true;

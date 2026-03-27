@@ -1,5 +1,5 @@
 { asa-lib, ... }: let
-  defaultStarship = import (asa-lib.root "/common/programs/starship.nix") {};
+  defaultStarship = import (asa-lib.root "/common/programs/starship.nix");
 in {
     programs.starship = {
         enable = true;

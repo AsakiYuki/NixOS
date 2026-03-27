@@ -1,5 +1,5 @@
 { asa-lib, ... }: let
-    starship = import (asa-lib.root "/common/programs/fastfetch.nix") {};
+    starship = import (asa-lib.root "/common/programs/fastfetch.nix");
 in {
     programs.fastfetch = {
 		enable = true;
