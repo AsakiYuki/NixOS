@@ -6,7 +6,6 @@
         ./logrotate.nix
         ./mysql.nix
         ./openssh.nix
-        ./pihole.nix
     ];
 
     services = {
