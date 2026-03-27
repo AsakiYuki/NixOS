@@ -22,7 +22,7 @@
             lyrics-server.enable = true;
             lyrics-server.port = 28734;
 
-            public-server.enable = true;
+            public-server.enable = false;
             public-server.port = 37284;
             public-server.path = "/home/PUBLIC";
 
