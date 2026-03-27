@@ -5,7 +5,7 @@
         backupFileExtension = "bak";
 
         users.asakiyuki = {
-            _module.args = { inherit inputs libs pkgs; };
+            _module.args = { inherit inputs asa-lib pkgs; };
 
             imports = [
                 ./users/asakiyuki/configuration.nix

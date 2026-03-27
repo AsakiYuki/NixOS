@@ -1,4 +1,4 @@
-{ pkgs, libs, ... }: {
+{ pkgs, asa-lib, ... }: {
     programs = {
         firefox = {
             enable = true;
@@ -110,8 +110,8 @@
                     };
                 };
 
-                userChrome = builtins.readFile (libs.root "/assets/firefox/userChrome.css");
-                userContent = builtins.readFile (libs.root "/assets/firefox/userContent.css");
+                userChrome = builtins.readFile (asa-lib.root "/assets/firefox/userChrome.css");
+                userContent = builtins.readFile (asa-lib.root "/assets/firefox/userContent.css");
             };
         };
         

@@ -31,7 +31,7 @@
     };
 
     outputs = inputs@{ self, nixpkgs, unstablepkgs, ... }: let 
-        libs = import ./libs/_lib.nix inputs;
+        asa-lib = import ./libs/_lib.nix;
         unstable = import unstablepkgs {
             system = "x86_64-linux";
             config.allowUnfree = true;
@@ -40,7 +40,7 @@
         nixosConfigurations = {
             lenovo-ideapad = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
-                specialArgs = { inherit libs inputs unstable; };
+                specialArgs = { inherit asa-lib inputs unstable; };
                 modules = [
                     ./host/lenovo-ideapad/configuration.nix
                     inputs.home-manager.nixosModules.default
@@ -50,7 +50,7 @@
 
             server = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
-                specialArgs = { inherit libs inputs; };
+                specialArgs = { inherit asa-lib inputs; };
                 modules = [
                     ./host/home/configuration.nix
                     inputs.home-manager.nixosModules.default
@@ -59,7 +59,7 @@
 
             wsl = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
-                specialArgs = { inherit libs inputs; };
+                specialArgs = { inherit asa-lib inputs; };
                 modules = [
                     ./host/wsl/configuration.nix
                     inputs.nixos-wsl.nixosModules.default

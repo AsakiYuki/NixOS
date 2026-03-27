@@ -1,7 +1,7 @@
-{ inputs, pkgs, nixos-wsl, root, libs, ... }: {
+{ inputs, pkgs, nixos-wsl, root, asa-lib, ... }: {
     # Import Modules
     imports = [
-        (libs.root "/nixos-modules/desktop/configuration.nix")
+        (asa-lib.root "/nixos-modules/desktop/configuration.nix")
     ];
 
     # NixOS Config

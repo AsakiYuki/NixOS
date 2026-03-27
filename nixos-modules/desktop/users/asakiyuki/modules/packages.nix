@@ -1,4 +1,4 @@
-{ inputs, pkgs, unstable, libs, ... }: let 
+{ inputs, pkgs, unstable, asa-lib, ... }: let 
     PKGS = with pkgs; [
         nodejs
         bun
@@ -39,7 +39,7 @@
     ];
 
     CUSTOM_PKGS = [
-        (pkgs.callPackage (libs.root "/packages/cage-xtmapper-0.2.0.nix") { })
+        (pkgs.callPackage (asa-lib.root "/packages/cage-xtmapper-0.2.0.nix") { })
     ];
 
     INPUTS_PKGS = with inputs; [

@@ -1,4 +1,4 @@
-{ pkgs, libs, ... }: {
+{ pkgs, asa-lib, ... }: {
     imports = [
         ../../../../../common/programs/nixvim/_nixvim.nix
         

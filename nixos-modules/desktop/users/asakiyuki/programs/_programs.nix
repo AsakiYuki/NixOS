@@ -1,6 +1,8 @@
-{ libs, ... }: {
+{ ... }: let 
+    asa-lib = import ../../../../../libs/_lib.nix;
+in  {
     imports = [
-        ../../../../../common/programs/nixvim/_nixvim.nix
+        (asa-lib.root "/common/programs/nixvim/_nixvim.nix")
         
         ./cli/_cli.nix
         ./gui/_gui.nix

@@ -1,4 +1,4 @@
-{ inputs, pkgs, unstable, lib, libs, config, ... }:
+{ inputs, pkgs, unstable, lib, asa-lib, config, ... }:
 let 
     user = "asakiyuki";
     home = "/home/${user}";
@@ -16,7 +16,7 @@ in {
         backupFileExtension = "bak";
 
         users."${user}" = {
-            _module.args = { inherit inputs libs osconfig unstable pkgs home; };
+            _module.args = { inherit inputs asa-lib osconfig unstable pkgs home; };
             imports = [ 
                 inputs.nixvim.homeModules.nixvim
                 inputs.nixcord.homeModules.nixcord

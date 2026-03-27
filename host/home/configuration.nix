@@ -1,8 +1,8 @@
-{ inputs, pkgs, root, libs, ... }: {
+{ inputs, pkgs, root, asa-lib, ... }: {
     # Import Modules
     imports = [
         ./hardware-configuration.nix
-        (libs.root "/nixos-modules/server/configuration.nix")
+        (asa-lib.root "/nixos-modules/server/configuration.nix")
     ];
 
     device = {

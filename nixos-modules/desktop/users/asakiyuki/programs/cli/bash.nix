@@ -1,5 +1,5 @@
-{ osconfig, libs, ... }: let
-    defaultBash = import (libs.root "/common/programs/bash.nix") {};
+{ osconfig, asa-lib, ... }: let
+    defaultBash = import (asa-lib.root "/common/programs/bash.nix") {};
 in {
     programs.bash =  {
         enable = true;
@@ -13,7 +13,7 @@ in {
         shellOptions = defaultBash.shellOptions;
         initExtra = ''
             ${defaultBash.initExtra}
-            ${builtins.readFile (libs.root "/assets/scripts/desktop-init-extra.sh")}
+            ${builtins.readFile (asa-lib.root "/assets/scripts/desktop-init-extra.sh")}
 
             allowed_terms=("xterm-kitty" "xterm-ghostty")
 
