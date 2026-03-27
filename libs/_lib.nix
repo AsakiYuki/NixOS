@@ -1,3 +1,3 @@
-{ ... }@inputs: {
-    helper = import ./helper.nix inputs; 
+{ ... }@inputs: (import ./mkFuncs.nix inputs) // {
+     
 }

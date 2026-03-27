@@ -28,7 +28,7 @@ in {
                     (lib.mkIf cfg_s.lyrics-server.enable cfg_s.lyrics-server.port)
                     (lib.mkIf cfg_s.public-server.enable cfg_s.public-server.port)
                 ]
-                ++ (libs.helper.mkIfElse cfg_s.nginx-proxy-manager.enable cfg_s.nginx-proxy-manager.ports []);
+                ++ (libs.mkIfElse cfg_s.nginx-proxy-manager.enable cfg_s.nginx-proxy-manager.ports []);
         };
     };
 }
