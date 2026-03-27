@@ -32,7 +32,7 @@
         };
     };
 
-    outputs = inputs@{ self, nixpkgs, unstablepkgs,, ... }: let 
+    outputs = inputs@{ self, nixpkgs, unstablepkgs, ... }: let 
         unstable = import unstablepkgs {
             system = "x86_64-linux";
             config.allowUnfree = true;
