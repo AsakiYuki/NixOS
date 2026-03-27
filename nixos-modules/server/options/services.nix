@@ -1,5 +1,5 @@
 { lib, pkgs, ... }: {
-    options.services = {
+    options.device.services = {
         ssh = {
             enable = lib.mkEnableOption "ssh";
             port = lib.mkOption {
