@@ -13,6 +13,8 @@
             ssh.port = 15523;
             ssh.allowed-users = [ "asakiyuki" "junko" "hoacaclord" ];
 
+            minecraft-server.enable = true;
+
             sql-server.enable = true;
             sql-server.port = 37241;
 
