@@ -17,10 +17,7 @@
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 
-    nixpkgs = {
-        overlays = [ inputs.nix-minecraft.overlay ];
-        config.allowUnfree = true;
-    };
+    nixpkgs.config.allowUnfree = true;
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
     time.timeZone = "Asia/Ho_Chi_Minh";

@@ -55,6 +55,7 @@
                     inputs.home-manager.nixosModules.default
                     inputs.nix-minecraft.nixosModules.minecraft-servers
                     ./host/home/configuration.nix
+                    { nixpkgs.overlays = [ inputs.nix-minecraft.overlay ]; }
                 ];
             };
 
