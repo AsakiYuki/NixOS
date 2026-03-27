@@ -31,7 +31,7 @@
         };
     };
 
-    outputs = inputs@{ self, nixpkgs, unstablepkgs, ... }: let 
+    outputs = inputs@{ self, nixpkgs, unstablepkgs, nix-minecraft, ... }: let 
         unstable = import unstablepkgs {
             system = "x86_64-linux";
             config.allowUnfree = true;
@@ -42,9 +42,9 @@
                 system = "x86_64-linux";
                 specialArgs = { inherit inputs unstable; };
                 modules = [
+                    ./host/lenovo-ideapad/configuration.nix
                     inputs.home-manager.nixosModules.default
                     inputs.nix-index-database.nixosModules.default
-                    ./host/lenovo-ideapad/configuration.nix
                 ];
             };
 
@@ -52,9 +52,9 @@
                 system = "x86_64-linux";
                 specialArgs = { inherit inputs; };
                 modules = [
-                    inputs.home-manager.nixosModules.default
-                    inputs.nix-minecraft.nixosModules.minecraft-servers
                     ./host/home/configuration.nix
+                    inputs.home-manager.nixosModules.default
+                    nix-minecraft.nixosModules.minecraft-servers
                     { nixpkgs.overlays = [ inputs.nix-minecraft.overlay ]; }
                 ];
             };
@@ -63,9 +63,9 @@
                 system = "x86_64-linux";
                 specialArgs = { inherit inputs; };
                 modules = [
+                    ./host/wsl/configuration.nix
                     inputs.nixos-wsl.nixosModules.default
                     inputs.home-manager.nixosModules.default
-                    ./host/wsl/configuration.nix
                 ];
             };
         };
