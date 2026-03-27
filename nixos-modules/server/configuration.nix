@@ -6,7 +6,6 @@
 
         ./modules/networking.nix
         ./modules/packages.nix
-        ./modules/services/minecraft-server.nix
         
         ./modules/services/_services.nix
         ./modules/systemd/_systemd.nix

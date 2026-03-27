@@ -6,6 +6,7 @@
         ./mysql.nix
         ./logrotate.nix
         ./fail2ban.nix
+        ./minecraft-server.nix
     ];
 
     services = {
