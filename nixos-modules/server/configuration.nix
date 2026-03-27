@@ -2,6 +2,8 @@
     imports = [
         ./users/users.nix
 
+        ./options/_options.nix
+
         ./modules/networking.nix
         ./modules/packages.nix
         
