@@ -1,5 +1,11 @@
 { lib, pkgs, ... }: {
     options.device.services = {
+        vnc-port = lib.mkOption {
+            type = lib.types.port;
+            default = 45682;
+            description = "port of vnc-server";
+        };
+        
         ssh = {
             enable = lib.mkEnableOption "ssh";
             port = lib.mkOption {

@@ -23,6 +23,7 @@ in {
             allowedUDPPorts = cfg_s.ports.allowed.udp;
             allowedTCPPorts = cfg_s.ports.allowed.tcp
                 ++ [
+                    cfg_s.vnc-port
                     (lib.mkIf cfg_s.ssh.enable cfg_s.ssh.port)
                     (lib.mkIf cfg_s.sql-server.enable cfg_s.sql-server.port)
                     (lib.mkIf cfg_s.lyrics-server.enable cfg_s.lyrics-server.port)

@@ -9,6 +9,8 @@
         admin-email = "vantrong2007vn@gmail.com";
 
         services = {
+            vnc-port = 45682;
+
             ssh.enable = true;
             ssh.port = 15523;
             ssh.allowed-users = [ "asakiyuki" "junko" "hoacaclord" ];   
