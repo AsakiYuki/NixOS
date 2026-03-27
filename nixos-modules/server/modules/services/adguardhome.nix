@@ -1,7 +1,7 @@
 { ... }: {
     services.adguardhome = {
         enable = true;
-        port = 26789;
+        port = 34778;
         openFirewall = true;
     };
 }

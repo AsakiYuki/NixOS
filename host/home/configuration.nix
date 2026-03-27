@@ -27,7 +27,7 @@
             nginx-proxy-manager.ports = [ 80 18581 443 ];
 
             ports.allowed.udp = [ 53 3000 ];
-            ports.allowed.tcp = [ 53 ];
+            ports.allowed.tcp = [ 53 34778 ];
         };
     };
 
