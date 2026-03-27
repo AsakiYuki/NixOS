@@ -1,0 +1,2853 @@
+./libs/_lib.nix
+-----
+{ ... }: {
+    root = path: ../. + path;
+}./nixos-modules/desktop/users/users.nix
+-----
+{ inputs, pkgs, unstable, lib, libs, config, ... }:
+let 
+    user = "asakiyuki";
+    home = "/home/${user}";
+    osconfig = config;
+in {
+    users.users."${user}" = {
+        isNormalUser = true;
+        shell = pkgs.bash;
+        extraGroups = [ "public" "wheel" "docker" ];
+    };
+
+    home-manager = {
+        useUserPackages = true;
+        useGlobalPkgs = true;
+        backupFileExtension = "bak";
+
+        users."${user}" = {
+            _module.args = { inherit inputs libs osconfig unstable pkgs home; };
+            imports = [ 
+                inputs.nixvim.homeModules.nixvim
+                inputs.nixcord.homeModules.nixcord
+                
+                ./${user}/configuration.nix
+            ];
+        };
+    };
+}./nixos-modules/desktop/users/asakiyuki/configuration.nix
+-----
+{ inputs, pkgs, unstable, lib, ... }: {
+    imports = [
+        ./programs/_programs.nix
+        ./modules/files/_files.nix
+        ./modules/activation.nix
+        ./modules/packages.nix
+    ];
+
+    home = {
+        username = "asakiyuki";
+        stateVersion = "25.11";
+        pointerCursor = import ./../../../../packages/elysia-cursors.nix { inherit pkgs; };
+    };
+}./nixos-modules/desktop/users/asakiyuki/programs/cli/git.nix
+-----
+{ libs, ... }: let
+	defaultGit = import (libs.root "/common/programs/git.nix") {};
+in {
+    programs.git = {
+        enable = true;
+        lfs.enable = true;
+        settings = defaultGit.config;
+    };
+}./nixos-modules/desktop/users/asakiyuki/programs/cli/starship.nix
+-----
+{ libs, ... }: let
+  defaultStarship = import (libs.root "/common/programs/starship.nix") {};
+in {
+    programs.starship = {
+        enable = true;
+        settings = defaultStarship.settings;
+    };
+}./nixos-modules/desktop/users/asakiyuki/programs/cli/_cli.nix
+-----
+{ ... }: {
+    imports = [
+        ./bash.nix
+        ./fastfetch.nix
+        ./git.nix
+        ./starship.nix
+        ./tmux.nix
+    ];
+}./nixos-modules/desktop/users/asakiyuki/programs/cli/fastfetch.nix
+-----
+{ libs, ... }: let
+    starship = import (libs.root "/common/programs/fastfetch.nix") {};
+in {
+    programs.fastfetch = {
+		enable = true;
+		settings = {
+			logo = starship.settings.logo;
+			display = starship.settings.display;
+			modules = [
+				{
+					type = "title";
+					format = " {user-name}@{host-name}";
+					outputColor = "bright_yellow";
+				}
+
+				{
+					type = "separator";
+					string = "─";
+					length = 24;
+					outputColor = "white";
+				}
+
+				{
+					type = "os";
+					key = "╭─";
+					keyColor = "green";
+				}
+				{
+					type = "kernel";
+					key = "├─󰌽";
+					keyColor = "green";
+				}
+				{
+					type = "shell";
+					key = "├─";
+					keyColor = "green";
+				}
+				{
+					type = "packages";
+					key = "├─󰆧";
+					keyColor = "green";
+				}
+				{
+					type = "uptime";
+					key = "╰─󱑁";
+					keyColor = "green";
+				}
+
+				"break"
+
+				{
+					type = "host";
+					keyColor = "blue";
+					key = "╭─󰧨";
+				}
+				{
+					type = "cpu";
+					key = "├─";
+					keyColor = "blue";
+				}
+				{
+					type = "gpu";
+					key = "├─";
+					keyColor = "blue";
+				}
+				{
+					type = "sound";
+					key = "├─";
+					format = "{name}";
+					keyColor = "blue";
+				}
+				{
+					type = "memory";
+					format = "{percentage-bar} {used} / {total}";
+					key = "├─";
+					keyColor = "blue";
+				}
+				{
+					type = "disk";
+					format = "{size-percentage-bar} {name} ({mountpoint}) {size-used} / {size-total} - {filesystem}";
+					key = "├─󰋊";
+					keyColor = "blue";
+				}
+				{
+					type = "localip";
+					key = "╰─";
+					keyColor = "blue";
+				}
+
+				"break"
+
+				{
+					type = "terminal";
+					key = "╭─";
+					keyColor = "yellow";
+				}
+				{
+					type = "wm";
+					key = "╰─󰨇";
+					keyColor = "yellow";
+				}
+
+				"break"
+				"colors"
+			];
+		};
+	};
+}./nixos-modules/desktop/users/asakiyuki/programs/cli/bash.nix
+-----
+{ osconfig, libs, ... }: let
+    defaultBash = import (libs.root "/common/programs/bash.nix") {};
+in {
+    programs.bash =  {
+        enable = true;
+        shellAliases = defaultBash.shellAliases // {
+            nrs = "sudo nixos-rebuild switch --flake /etc/nixos#${osconfig.device.flake-name}";
+            wss = "waydroid session stop; exit;";
+            spf = "superfile";
+            flake-upgrade = "nix flake update";
+        };
+
+        shellOptions = defaultBash.shellOptions;
+        initExtra = ''
+            ${defaultBash.initExtra}
+            ${builtins.readFile (libs.root "/assets/scripts/desktop-init-extra.sh")}
+
+            allowed_terms=("xterm-kitty" "xterm-ghostty")
+
+            should_run_tmux=false
+            for term in "${"$" + "{allowed_terms[@]" + "}"}"; do
+            if [[ "$TERM" == "$term" ]]; then
+                should_run_tmux=true
+                break
+            fi
+            done
+
+            if [ -z "$TMUX" ] && [ "$should_run_tmux" = true ]; then
+                exec tmux
+            fi
+        '';
+    };
+}./nixos-modules/desktop/users/asakiyuki/programs/cli/tmux.nix
+-----
+{ pkgs, ... }:
+let
+    TOP_PANEL = ''
+        set -g pane-border-status top
+        set -g pane-border-lines single
+        set -g pane-border-indicators colour
+
+        set -g pane-border-format "#{E:@asa-module-icon} #{pane_index} #{E:@asa-module-text} #{pane_current_path} #[default]"
+    '';
+
+    OPTIONS = ''
+        set-option -g destroy-unattached on
+    '';
+
+    BINDS = ''
+        unbind r
+        bind r source-file ~/.config/tmux/tmux.conf;
+    '';
+
+    BOTTOM_PANEL = ''
+        set -g status-justify "centre"
+         
+        set -g window-status-format "#{E:@asa-module-icon} #I #{E:@asa-module-text} #W "
+        set -g window-status-current-format "#{E:@asa-module-icon} #I #{E:@asa-module-text} #W "
+
+        set -gg status-left "#{E:@asa-module-text} %A %d/%m/%Y #[default] "
+        set -ag status-left "#{E:@asa-module-text} %I:%M %p #[default] "
+        set -g status-left-length 100
+
+        set -g status-right "#{E:@asa-module-icon}  #{E:@asa-module-text} #S #[default] "
+        set -ag status-right "#{E:@asa-module-icon} CPU #{E:@asa-module-text} #{cpu_percentage} #[default] "
+        set -ag status-right "#{E:@asa-module-icon} RAM #{E:@asa-module-text} #{ram_percentage} "
+        set -g status-right-length 100
+
+        setw -g automatic-rename off
+    '';
+
+    CATPPUCCIN = ''
+        set -g @catppuccin_flavor 'mocha'
+        set -ogq @asa-module-icon "#[bg=#{E:@thm_sapphire},fg=#{E:@thm_surface_0}]"
+        set -ogq @asa-module-text "#[bg=#{E:@thm_surface_0},fg=#{E:@thm_fg}]"
+    '';
+
+    YANK = ''
+        set -g @yank_selection 'primary'
+        set -g @yank_selection_mouse 'primary'
+    '';
+in
+{
+    programs.tmux = {
+        enable = true;
+        keyMode = "vi";
+        disableConfirmationPrompt = true;
+        prefix = "c-a";
+
+        extraConfig = TOP_PANEL + OPTIONS + BINDS; 
+
+        plugins = with pkgs.tmuxPlugins; [
+            {
+                plugin = yank;
+                extraConfig = YANK;
+            }
+            {
+                plugin = catppuccin;
+                extraConfig = CATPPUCCIN;
+            }
+            {
+                plugin = cpu;
+                extraConfig = BOTTOM_PANEL;
+            }
+        ];
+    };
+}./nixos-modules/desktop/users/asakiyuki/programs/_programs.nix
+-----
+{ ... }: {
+    imports = [
+        ../../../../../common/programs/nixvim/_nixvim.nix
+
+        ./cli/_cli.nix
+        ./gui/_gui.nix
+        
+        ./_general.nix
+    ];
+}./nixos-modules/desktop/users/asakiyuki/programs/_general.nix
+-----
+{ ... }: {}./nixos-modules/desktop/users/asakiyuki/programs/gui/browsers.nix
+-----
+{ pkgs, libs, ... }: {
+    programs = {
+        firefox = {
+            enable = true;
+            profiles.default = {
+                settings = {
+                    "browser.startup.homepage" = "about:home";
+                };
+
+                search = {
+                    default = "google";
+                    engines = {    
+                        youtube = {
+                            name = "YouTube";
+                            definedAliases = [ "@yt" "@youtube" ];
+                            icon = "https://www.youtube.com/s/desktop/83c08b77/img/favicon.ico";
+                            urls = [
+                                {
+                                    template = "https://www.youtube.com/results";
+                                    params = [
+                                        { name = "search_query"; value = "{searchTerms}"; }
+                                    ];
+                                }
+                            ];
+                        };
+
+                        google = {
+                            name = "Google";
+                            definedAliases = [ "@g" "@google" ];
+                            icon = "https://www.gstatic.com/images/branding/searchlogo/ico/favicon.ico";
+                            urls = [
+                                {
+                                    template = "https://www.google.com/search";
+                                    params = [
+                                        { name = "q"; value = "{searchTerms}"; }
+                                    ];
+                                }
+                                {
+                                    template = "https://www.google.com/search";
+                                    params = [
+                                        { name = "udm"; value = "2"; }
+                                        { name = "q"; value = "{searchTerms}"; }
+                                    ];
+                                }
+                            ];
+                        };
+
+                        github = {
+                            name = "Github";
+                            definedAliases = [ "@gh" "@github" ];
+                            icon = "https://github.githubassets.com/favicons/favicon-dark.svg";
+                            urls = [
+                                {
+                                    template = "https://github.com/search";
+                                    params = [
+                                        { name = "type"; value = "repositories"; }
+                                        { name = "q"; value = "{searchTerms}"; }
+                                    ];
+                                }
+                            ];
+                        };
+
+                        reddit = {
+                            name = "Reddit";
+                            definedAliases = [ "@rd" "@reddit" ];
+                            icon = "https://www.redditstatic.com/shreddit/assets/favicon/192x192.png";
+                            urls = [
+                                {
+                                    template = "https://www.reddit.com/search";
+                                    params = [
+                                        { name = "q"; value = "{searchTerms}"; }
+                                    ];
+                                }
+                            ];
+                        };
+
+                        nix-packages = {
+                            name = "Nix Packages";
+                            definedAliases = [ "@np" "@nixpkgs" ];
+                            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+                            urls = [
+                                {
+                                    template = "https://search.nixos.org/packages";
+                                    params = [
+                                        { name = "type"; value = "packages"; }
+                                        { name = "query"; value = "{searchTerms}"; }
+                                    ];
+                                }
+                            ];
+                        };
+
+                        mynixos = {
+                            name = "My NixOS";
+                            definedAliases = [ "@mynixos" ];
+                            icon = "https://mynixos.com/favicon.ico";
+                            urls = [
+                                {
+                                    template = "https://mynixos.com/search";
+                                    params = [
+                                        { name = "q"; value = "{searchTerms}"; }
+                                    ];
+                                }
+                            ];
+                        };
+
+                        bing.metaData.hidden = true;
+                        ddg.metaData.hidden = true;
+                        perplexity.metaData.hidden = true;
+                        wikipedia.metaData.hidden = true;
+                    };
+                };
+
+                userChrome = builtins.readFile (libs.root "/assets/firefox/userChrome.css");
+                userContent = builtins.readFile (libs.root "/assets/firefox/userContent.css");
+            };
+        };
+        
+        chromium.enable = true;
+    };   
+}./nixos-modules/desktop/users/asakiyuki/programs/gui/nixcord.nix
+-----
+{ ... }: {
+    programs.nixcord = {
+        enable = true;
+        discord = {
+            enable = true;
+            vencord.enable = true; 
+        };
+
+        config = {
+            enableReactDevtools = true;
+            themeLinks = [ "https://catppuccin.github.io/discord/dist/catppuccin-mocha-blue.theme.css" ];
+
+            plugins = {
+                BlurNSFW.enable = true;
+                volumeBooster.enable  = true;
+                ClearURLs.enable = true;
+                copyEmojiMarkdown.enable = true;
+                youtubeAdblock.enable = true;
+                experiments.enable = true;
+                fixCodeblockGap.enable = true;
+                fixImagesQuality.enable  = true;
+                fixSpotifyEmbeds.enable = true;
+                fixYoutubeEmbeds.enable = true;
+                gameActivityToggle.enable = true;
+                imageZoom.enable  = true;
+                memberCount.enable = true;
+                mentionAvatars.enable = true;
+                noDevtoolsWarning.enable = true;
+                noF1.enable = true;
+                openInApp.enable = true;
+                voiceDownload.enable = true;
+                validUser.enable = true;
+                translate.enable = true;
+                whoReacted.enable  = true;
+
+                fakeNitro = {
+                    enable = true;
+                    enableEmojiBypass = false;
+                };
+            };
+        };
+    };
+}./nixos-modules/desktop/users/asakiyuki/programs/gui/terminals.nix
+-----
+{ ... }: {
+    programs = {
+        ghostty = {
+            enable = true;
+
+            settings = {
+                theme = "catppuccin-mocha";
+
+                font-size = 10;
+                font-family = "SauceCodePro NFP Bold";
+                
+                window-width = 229;
+                window-height = 70;
+
+                window-padding-x = 5;
+                window-padding-y = 0;
+
+                keybind = [
+                    "ctrl+c=copy_to_clipboard"
+                    "ctrl+v=paste_from_clipboard"
+                ];
+            };
+
+            themes = {
+                catppuccin-mocha = {
+                    background = "1e1e2e";
+                    cursor-color = "f5e0dc";
+                    foreground = "cdd6f4";
+                    palette = [
+                        "0=#45475a"
+                        "1=#f38ba8"
+                        "2=#a6e3a1"
+                        "3=#f9e2af"
+                        "4=#89b4fa"
+                        "5=#f5c2e7"
+                        "6=#94e2d5"
+                        "7=#bac2de"
+                        "8=#585b70"
+                        "9=#f38ba8"
+                        "10=#a6e3a1"
+                        "11=#f9e2af"
+                        "12=#89b4fa"
+                        "13=#f5c2e7"
+                        "14=#94e2d5"
+                        "15=#a6adc8"
+                    ];
+                    selection-background = "353749";
+                    selection-foreground = "cdd6f4";
+                };
+            };
+        };
+
+        kitty = {
+            enable = false;
+
+            keybindings = {
+                "ctrl+c" = "copy_to_clipboard";
+                "ctrl+v" = "paste_from_clipboard";
+            };
+
+            settings = {
+                window_padding_width = 2;
+                window_padding_height = 2;
+                
+                cursor_shape = "beam";
+                # background_opacity = 0.5;
+
+                font_family = "Tahoma";
+                font_size = 9;
+                
+                foreground = "#cdd6f4";
+                background = "#1e1e2e";
+                selection_foreground = "#1e1e2e";
+                selection_background = "#f5e0dc";
+
+                cursor = "#f5e0dc";
+                cursor_text_color = "#1e1e2e";
+
+                url_color = "#f5e0dc";
+
+                active_border_color = "#b4befe";
+                inactive_border_color = "#6c7086";
+                bell_border_color = "#f9e2af";
+
+                wayland_titlebar_color = "system";
+                macos_titlebar_color = "system";
+
+                active_tab_foreground = "#11111b";
+                active_tab_background = "#cba6f7";
+                inactive_tab_foreground = "#cdd6f4";
+                inactive_tab_background = "#181825";
+                tab_bar_background = "#11111b";
+
+                mark1_foreground = "#1e1e2e";
+                mark1_background = "#b4befe";
+                mark2_foreground = "#1e1e2e";
+                mark2_background = "#cba6f7";
+                mark3_foreground = "#1e1e2e";
+                mark3_background = "#74c7ec";
+
+                color0 = "#45475a";
+                color8 = "#585b70";
+
+                color1 = "#f38ba8";
+                color9 = "#f38ba8";
+
+                color2 = "#a6e3a1";
+                color10 = "#a6e3a1";
+
+                color3 = "#f9e2af";
+                color11 = "#f9e2af";
+
+                color4 = "#89b4fa";
+                color12 = "#89b4fa";
+
+                color5 = "#f5c2e7";
+                color13 = "#f5c2e7";
+
+                color6 = "#94e2d5";
+                color14 = "#94e2d5";
+
+                color7 = "#bac2de";
+                color15 = "#a6adc8";
+            };
+        };
+    };
+}./nixos-modules/desktop/users/asakiyuki/programs/gui/_gui.nix
+-----
+{ ... }: {
+    imports = [
+        ./browsers.nix
+        ./terminals.nix
+        ./nixcord.nix
+        ./obs-studio.nix
+    ];
+}./nixos-modules/desktop/users/asakiyuki/programs/gui/obs-studio.nix
+-----
+{ ... }: {
+    programs.obs-studio = {
+        enable = true;
+    };
+}./nixos-modules/desktop/users/asakiyuki/modules/activation.nix
+-----
+{ ... }: {
+    home.activation = {};
+}./nixos-modules/desktop/users/asakiyuki/modules/packages.nix
+-----
+{ inputs, pkgs, unstable, libs, ... }: let 
+    PKGS = with pkgs; [
+        nodejs
+        bun
+        ffmpeg-full
+        neovide
+        sass
+        ruby
+        rPackages.gems
+        wl-clipboard-rs
+
+        waydroid-helper
+        easyeffects
+        protonup-qt
+        pavucontrol
+        antigravity
+        chromium
+        cider-2
+        gimp
+        osu-lazer
+        qbittorrent
+        davinci-resolve
+        vlc
+
+        wineWowPackages.stable
+        winboat
+        winetricks
+        protontricks
+        php
+    ];
+    
+    UNSTABLE_PKGS = with unstable; [
+        proton-pass
+        vscode
+        proton-authenticator
+        prismlauncher
+        vesktop
+        freerdp
+    ];
+
+    CUSTOM_PKGS = [
+        (pkgs.callPackage (libs.root "/packages/cage-xtmapper-0.2.0.nix") { })
+    ];
+
+    INPUTS_PKGS = with inputs; [
+        hytale-launcher.packages.${pkgs.stdenv.hostPlatform.system}.default
+    ];
+
+    THEMES = [
+        (pkgs.catppuccin-kde.override {
+            flavour = [ "mocha" ];
+            accents = [ "sapphire" ];
+        })
+
+        (pkgs.catppuccin-gtk.override {
+            variant = "mocha";
+            accents = [ "sapphire" ];
+        })
+    ];
+in  {
+    home.packages = PKGS ++ UNSTABLE_PKGS ++ INPUTS_PKGS ++ CUSTOM_PKGS ++ THEMES;
+}./nixos-modules/desktop/users/asakiyuki/modules/files/_files.nix
+-----
+{ pkgs, lib, libs, config, home, ... }: {
+    home.file = builtins.listToAttrs (map (name: {
+        name = ".local/share/kio/servicemenus/${name}.desktop";
+        value.source = (libs.root "/assets/service-menus/${name}.desktop");
+    }) (import (libs.root "/assets/service-menus/_services-menu.nix"))) // {
+        ".config/obs-studio/themes".source = pkgs.callPackage (libs.root "/packages/catppuccin-obs.nix") {};
+        ".mozilla/firefox/default/search.json.mozlz4".force = lib.mkForce true;
+
+        "SteamApps".source = config.lib.file.mkOutOfStoreSymlink "${home}/.local/share/Steam/steamapps";
+        "Development/KDE-Widget".source = config.lib.file.mkOutOfStoreSymlink "${home}/.local/share/plasma/plasmoids";
+        "Development/SplashScreen".source = config.lib.file.mkOutOfStoreSymlink "${home}/.local/share/plasma/look-and-feel";
+        "Development/DesktopEffects".source = config.lib.file.mkOutOfStoreSymlink "${home}/.local/share/kwin/effects";
+    };
+}
+./nixos-modules/desktop/configuration.nix
+-----
+{ pkgs, ... }: {
+    imports = [
+        ./users/users.nix
+        ./options/_options.nix
+
+        ./modules/services/_services.nix
+        ./modules/security/_security.nix
+        ./modules/programs/_programs.nix
+        ./modules/systemd/_systemd.nix
+        ./modules/virtualisation/_virtualisation.nix
+
+        ./modules/hardware.nix
+        ./modules/networking.nix
+        ./modules/boot.nix
+        ./modules/packages.nix
+        ./modules/fonts.nix
+        ./modules/udev.nix
+        ./modules/fileSystems.nix
+    ];
+
+    nixpkgs.config.allowUnfree = true;
+
+    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+    time.timeZone = "Asia/Ho_Chi_Minh";
+
+    i18n.inputMethod = {
+        enable = true;
+        type = "fcitx5";
+
+        fcitx5.addons = with pkgs; [
+            fcitx5-bamboo
+        ];
+    };
+}./nixos-modules/desktop/modules/systemd/services/vicinae.nix
+-----
+{ pkgs, ... }: {
+    systemd.user.services.vicinae = {
+        description = "Auto start Vicinae";
+        wantedBy = [ "default.target" ];
+        after = [ "graphical-session.target" ];
+        serviceConfig = {
+            Type = "simple";
+            ExecStart = "${pkgs.vicinae}/bin/vicinae server";
+            Restart = "on-failure";
+        };
+    };
+}./nixos-modules/desktop/modules/systemd/services/easyeffects.nix
+-----
+{ pkgs, ... }: {
+    systemd.user.services.easyeffects = {
+        description = "Auto start EasyEffects";
+        wantedBy = [ "default.target" ];
+        serviceConfig = {
+            ExecStart = "${pkgs.easyeffects}/bin/easyeffects --gapplication-service";
+            Restart = "on-failure";
+        };
+    };
+}./nixos-modules/desktop/modules/systemd/services/_services.nix
+-----
+{ ... }: {
+    imports = [];
+    systemd.services = {};
+}./nixos-modules/desktop/modules/systemd/_systemd.nix
+-----
+{ ... }: {
+    imports = [ 
+        ./services/_services.nix
+    ];
+
+    systemd = {};
+}./nixos-modules/desktop/modules/security/_security.nix
+-----
+{ ... }: {
+    security = {
+        rtkit.enable = true;
+    };
+}./nixos-modules/desktop/modules/services/_general.nix
+-----
+{ inputs, pkgs, ... }: let 
+    custom-sddm-astronaut = pkgs.sddm-astronaut.override {
+        embeddedTheme = "hyprland_kath";
+    };
+in {
+    services = {
+        flatpak.enable = true;
+        power-profiles-daemon.enable = true;
+        desktopManager.plasma6.enable = true;
+        displayManager.sddm = {
+            enable = true;
+            wayland.enable = true; 
+            extraPackages = with pkgs; [
+                custom-sddm-astronaut
+            ];
+            theme = "sddm-astronaut-theme";
+            settings = {
+                Theme = {
+                    Current = "sddm-astronaut-theme";
+                };
+            };
+        };
+    };
+
+    environment.systemPackages = with pkgs; [
+        custom-sddm-astronaut
+        kdePackages.qtmultimedia
+    ];
+}./nixos-modules/desktop/modules/services/_services.nix
+-----
+{ inputs, pkgs, ... }: {
+    imports = [
+        ./_general.nix
+        ./pipewire.nix
+    ];
+
+    services = {
+        xserver.videoDrivers = [
+            "modesetting"
+            "fbdev"
+            "amdgpu"
+        ];
+    };
+}./nixos-modules/desktop/modules/services/pipewire.nix
+-----
+{ ... }: {
+    services.pipewire = {
+        enable = true;
+        alsa.enable = true;
+        alsa.support32Bit = true;  
+        pulse.enable = true;
+        wireplumber.enable = true;
+
+        extraConfig.pipewire."10-fix-sample-rate" = {
+            "context.properties" = {
+                "default.clock.rate" = 48000;
+                "default.clock.allowed-rates" = [ 44100 48000 ];
+            };
+        };
+    };
+}./nixos-modules/desktop/modules/virtualisation/_virtualisation.nix
+-----
+{ pkgs, ... }: {
+    imports = [
+        ./docker.nix
+    ];
+
+    virtualisation = {
+        waydroid.enable = true;
+        waydroid.package = pkgs.waydroid-nftables;
+    };
+}./nixos-modules/desktop/modules/virtualisation/docker.nix
+-----
+{ ... }: {
+    virtualisation.docker = {
+        enable = true;
+    };
+}./nixos-modules/desktop/modules/boot.nix
+-----
+{ inputs, pkgs, libs, ... }: let
+    background = libs.root "/assets/grub/background.png";
+    baseTheme = inputs.honkai-railway-grub-theme.packages.${pkgs.stdenv.hostPlatform.system}.cyrene-grub-theme;
+in {
+    boot = {
+        kernelPackages = pkgs.linuxPackages_latest;
+        extraModulePackages = [ pkgs.linuxPackages_latest.zenpower ];
+
+        kernelParams = [
+            "snd_hda_intel.model=lenovo"
+            "amd_pstate=active"
+        ];
+
+        kernelModules = [ 
+            "k10temp" 
+            "ideapad_laptop"
+        ];
+
+        kernel.sysctl = {
+            "net.ipv4.ip_forward" = 1;
+            "net.ipv4.conf.all.forwarding" = 1;
+            "net.ipv6.conf.all.forwarding" = 1;
+        };
+
+        extraModprobeConfig = ''
+            options snd-hda-intel dmic_detect=0
+            options snd_acp_pci drv_bitmask=0x40
+        '';
+
+        loader = {
+            systemd-boot.enable = false;
+            efi.canTouchEfiVariables = true;
+
+            grub = rec {
+                enable = true;
+                device = "nodev";
+                efiSupport = true;
+                useOSProber = true;
+
+                splashImage = background;
+                theme = pkgs.runCommand "my-grub-theme" {} ''
+                    mkdir -p $out
+                    cp -r ${baseTheme}/* $out/
+                    chmod -R u+w $out
+                    cp ${background} $out/background.png
+                '';
+            };
+        };
+    };
+}./nixos-modules/desktop/modules/programs/nix-dl.nix
+-----
+{ pkgs, ... }: {
+    programs.nix-ld = {
+        enable = true;
+        libraries = with pkgs; [
+            stdenv.cc.cc
+            zlib
+            
+            brotli
+            unixODBC
+            zstd
+            glib
+            stdenv.cc.cc.lib
+        ];
+    };
+}./nixos-modules/desktop/modules/programs/_programs.nix
+-----
+{ pkgs, ... }: {
+    imports = [
+        ./steam.nix
+        ./ssh.nix
+        ./nix-dl.nix
+    ];
+
+    programs = {
+        gamemode.enable = true;
+        fuse.userAllowOther = true;
+    };
+}./nixos-modules/desktop/modules/programs/steam.nix
+-----
+{ pkgs, lib, config, ... }: {
+    programs.steam = lib.mkIf config.device.services.steam {
+        enable = true;
+        extraCompatPackages = with pkgs; [
+            proton-ge-bin
+        ];
+    };
+}./nixos-modules/desktop/modules/programs/ssh.nix
+-----
+{ pkgs, ... }: {
+    programs.ssh = {
+        extraConfig = ''
+            Host asakiyuki
+                HostName server.asakiyuki.com
+                User asakiyuki
+                Port 15523
+
+            Host junko
+                HostName server.asakiyuki.com
+                User junko
+                Port 15523
+        '';
+    };
+}./nixos-modules/desktop/modules/networking.nix
+-----
+{ ... }: {
+    networking = {
+        hostName = "nixos";
+        networkmanager.enable = true;
+        nftables.enable = true;
+        firewall.trustedInterfaces = [ "waydroid0" ];
+    };
+}./nixos-modules/desktop/modules/packages.nix
+-----
+{ inputs, pkgs, ... }: {
+    environment.systemPackages = (with pkgs; [
+        vim
+        wget
+        git
+        alsa-utils
+        alsa-ucm-conf
+        
+        mesa
+        dav1d
+        libva
+        libva-utils
+        libva-vdpau-driver
+        docker-compose
+        ntfs3g
+        btop
+        bindfs
+        tree
+        superfile
+        p7zip
+
+        fcitx5-material-color
+    ]) ++ (with pkgs.kdePackages; [
+        kde-gtk-config
+        qtdeclarative
+        qt5compat
+        kirigami
+        ksvg
+        qtbase
+        plasma5support
+        qttools
+        plasma-sdk
+    ]);
+}   ./nixos-modules/desktop/modules/udev.nix
+-----
+{ ... }: {
+    services.udev = {
+        enable = true;
+        extraRules = '''';
+    };
+}./nixos-modules/desktop/modules/hardware.nix
+-----
+{ pkgs, ... }: {
+    hardware = {
+        enableRedistributableFirmware = true;
+        firmware = [ pkgs.sof-firmware ];
+        
+        bluetooth = {
+            enable = true;
+        };
+
+        graphics = {
+            enable = true;
+            enable32Bit = true;
+            extraPackages = with pkgs; [
+                libva-vdpau-driver
+                libvdpau-va-gl
+            ];
+        };
+    };
+}./nixos-modules/desktop/modules/fileSystems.nix
+-----
+{ ... }: {
+    fileSystems = {
+        "/mnt/waydroid" = {
+            device = "/home/asakiyuki/.local/share/waydroid/data/media/0";
+            fsType = "fuse.bindfs";
+            options = [
+                "mirror=1000"
+                "xattr-none"
+                "chmod-ignore"
+            ];
+        };
+    };
+}./nixos-modules/desktop/modules/fonts.nix
+-----
+{ pkgs, ... }: let
+fetch-fonts = {
+    segoe-ui = {
+        light = pkgs.fetchurl {
+            url = "https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.ttf";
+            sha256 = "1bqbvpxqflh4an5ciawrkl0bxy58vqhxiynspcvpx1zyryxcjlhm";
+        };
+
+        semilight = pkgs.fetchurl {
+            url = "https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.ttf";
+            sha256 = "1y6rfxdwwfq1bgk7fj4bvhck1di6whw5h0yby8gj7x6y1cv4ka1p";
+        };
+
+        normal = pkgs.fetchurl {
+            url = "https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.ttf";
+            sha256 = "0ac4hgmlxl6cgak7g39rvfk25gs3fm5wlnmc7mbpv38i7mkppiaf";
+        };
+
+        bold = pkgs.fetchurl {
+            url = "https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.ttf";
+            sha256 = "147mk64y2hihy6s29dlgimcrfi7ihi68qjcrfdzqk6cvk8kr3f0q";
+        };
+
+        semibold = pkgs.fetchurl {
+            url = "https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.ttf";
+            sha256 = "0whxgk9q4j9pd3k462m0dyr39q7vk2lxla5whcckyfrks983c4nj";
+        };
+    };
+};
+
+custom = {
+    tahoma = pkgs.stdenv.mkDerivation {
+        pname = "tahoma";
+        version = "1.0";
+        dontUnpack = true;
+
+        src = pkgs.fetchurl {
+            url = "https://www.asakiyuki.com/static/fonts/Tahoma.ttf";
+            sha256 = "129l1cprplci2xmxi0gnsjrvprr48xqp8kr5s9lrwcnaxvb4z4ni";
+        };
+
+        installPhase = ''
+            mkdir -p $out/share/fonts/truetype
+            cp $src $out/share/fonts/truetype/
+        '';
+    };
+
+    segoe-ui = pkgs.stdenv.mkDerivation {
+        pname = "segoe-ui";
+        version = "1.0";
+        dontUnpack = true;
+
+        installPhase = ''
+            mkdir -p $out/share/fonts/truetype
+
+            cp ${fetch-fonts.segoe-ui.light} $out/share/fonts/truetype
+            cp ${fetch-fonts.segoe-ui.semilight} $out/share/fonts/truetype
+            cp ${fetch-fonts.segoe-ui.normal} $out/share/fonts/truetype
+            cp ${fetch-fonts.segoe-ui.bold} $out/share/fonts/truetype
+            cp ${fetch-fonts.segoe-ui.semibold} $out/share/fonts/truetype
+        '';
+    };
+};
+in {
+    fonts.enableDefaultPackages = true;
+    fonts.packages = with pkgs; [
+        custom.tahoma
+        custom.segoe-ui
+        
+        # Nerd fonts
+        nerd-fonts.sauce-code-pro
+
+        # Unicode fonts
+        noto-fonts
+        noto-fonts-cjk-sans
+        noto-fonts-color-emoji
+        liberation_ttf
+        fira-code
+        fira-code-symbols
+        mplus-outline-fonts.githubRelease
+        dina-font
+        proggyfonts
+    ];
+}./nixos-modules/desktop/options/services.nix
+-----
+{ lib, ... }: {
+    options.device.services = {
+        steam = lib.mkEnableOption "steam";
+    };
+}./nixos-modules/desktop/options/_options.nix
+-----
+{ lib, ... }: {
+    imports = [ ./services.nix ];
+
+    options.device = {
+        flake-name = lib.mkOption {
+            type = lib.types.str;
+            default = "desktop";
+            description = "Flake name for quick rebuild";
+        };
+    };
+}./nixos-modules/desktop/options/programs.nix
+-----
+{ lib, ... }: {
+    options.device.programs = {
+
+    };
+}./nixos-modules/wsl/users/asakiyuki/configuration.nix
+-----
+{ pkgs, lib, ... }: {
+     imports = [
+          ./programs/_programs.nix
+     ];
+     
+     home = {
+          username = "asakiyuki";
+          stateVersion = "25.11";
+     };
+}
+./nixos-modules/wsl/users/asakiyuki/programs/_programs.nix
+-----
+{ pkgs, ... }: {
+    imports = [
+        ./bash.nix
+        ./starship.nix
+        ./fastfetch.nix
+        ./git.nix
+    ];
+}./nixos-modules/wsl/users/asakiyuki/programs/git.nix
+-----
+{ libs, ... }: let
+	defaultGit = import (libs.root "/common/programs/git.nix") {};
+in {
+    programs.git = {
+        enable = true;
+        lfs.enable = true;
+        settings = defaultGit.config;
+    };
+}./nixos-modules/wsl/users/asakiyuki/programs/starship.nix
+-----
+{ ... }: let
+  defaultStarship = import (libs.root "/common/programs/starship.nix") {};
+in {
+  programs.starship = {
+    enable = true;
+    settings = defaultStarship.settings;
+  };
+}./nixos-modules/wsl/users/asakiyuki/programs/fastfetch.nix
+-----
+{ libs, ... }: let
+    starship = import (libs.root "/common/programs/fastfetch.nix") {};
+in {
+    programs.fastfetch = {
+		enable = true;
+		settings = {
+			logo = starship.settings.logo;
+			display = starship.settings.display;
+			modules = [
+				{
+					type = "title";
+					format = " {user-name}@{host-name}";
+					outputColor = "bright_yellow";
+				}
+
+				{
+					type = "separator";
+					string = "─";
+					length = 24;
+					outputColor = "white";
+				}
+
+				{
+					type = "os";
+					key = "╭─";
+					keyColor = "green";
+				}
+				{
+					type = "kernel";
+					key = "├─󰌽";
+					keyColor = "green";
+				}
+				{
+					type = "shell";
+					key = "├─";
+					keyColor = "green";
+				}
+				{
+					type = "packages";
+					key = "├─󰆧";
+					keyColor = "green";
+				}
+				{
+					type = "uptime";
+					key = "╰─󱑁";
+					keyColor = "green";
+				}
+
+				"break"
+
+				{
+					type = "host";
+					keyColor = "blue";
+					key = "╭─󰧨";
+				}
+				{
+					type = "cpu";
+					key = "├─";
+					keyColor = "blue";
+				}
+				{
+					type = "gpu";
+					key = "├─";
+					keyColor = "blue";
+				}
+				{
+					type = "sound";
+					key = "├─";
+					format = "{name}";
+					keyColor = "blue";
+				}
+				{
+					type = "memory";
+					format = "{percentage-bar} {used} / {total}";
+					key = "├─";
+					keyColor = "blue";
+				}
+				{
+					type = "disk";
+					format = "{size-percentage-bar} {name} ({mountpoint}) {size-used} / {size-total} - {filesystem}";
+					key = "├─󰋊";
+					keyColor = "blue";
+				}
+				{
+					type = "localip";
+					key = "╰─";
+					keyColor = "blue";
+				}
+
+				"break"
+
+				{
+					type = "terminal";
+					key = "╭─";
+					keyColor = "yellow";
+				}
+				{
+					type = "wm";
+					key = "╰─󰨇";
+					keyColor = "yellow";
+				}
+
+				"break"
+				"colors"
+			];
+		};
+	};
+}./nixos-modules/wsl/users/asakiyuki/programs/bash.nix
+-----
+{ libs, ... }: let
+    defaultBash = import (libs.root "/common/programs/bash.nix") {};
+in {
+    programs.bash =  {
+        enable = true;
+        shellAliases = defaultBash.shellAliases // {
+            nrs = "sudo nixos-rebuild switch --flake /etc/nixos#wsl";
+        };
+
+        shellOptions = defaultBash.shellOptions;
+        initExtra = defaultBash.initExtra;
+    };
+}./nixos-modules/wsl/configuration.nix
+-----
+{ ... }: {
+    imports = [
+        ./home-manager.nix
+        ./options/_options.nix
+    ];
+}./nixos-modules/wsl/home-manager.nix
+-----
+{ inputs, pkgs, ... }: {
+    home-manager = {
+        useUserPackages = true;
+        useGlobalPkgs = true;
+        backupFileExtension = "bak";
+
+        users.asakiyuki = {
+            _module.args = { inherit inputs libs pkgs; };
+
+            imports = [
+                ./users/asakiyuki/configuration.nix
+            ];
+        };
+    };
+
+    users.users = {
+        asakiyuki = {
+            isNormalUser = true;
+            shell = pkgs.bash;
+        };
+    };
+}
+./nixos-modules/wsl/options/_options.nix
+-----
+{ ... }: {
+    options.device = {
+
+    };
+}./nixos-modules/server/users/users.nix
+-----
+{ inputs, pkgs, lib, libs, config, ... }: let
+    osconfig = config;
+in {
+    users = {
+        users = {
+            asakiyuki = {
+                isNormalUser = true;
+                shell = pkgs.bash;
+                extraGroups = [ "public" "wheel" "docker" ];
+            };
+            junko = {
+                isNormalUser = true;
+                shell = pkgs.bash;
+                extraGroups = [ "public" ];
+            };
+            hoacaclord = {
+                isNormalUser = true;
+                shell = pkgs.zsh;
+                extraGroups = [  ];
+            };
+            static = {
+                isSystemUser = true;
+                group = "public";
+            };
+        };
+
+        groups = {
+            public = {};
+        };
+    };
+
+    home-manager = {
+        useUserPackages = true;
+        useGlobalPkgs = true;
+        backupFileExtension = "bak";
+
+        users = {
+            asakiyuki = {
+                _module.args = { inherit inputs pkgs osconfig libs; };
+                imports = [ 
+                    inputs.nixvim.homeModules.nixvim
+                    ./asakiyuki/configuration.nix
+                ];
+            };
+
+            hoacaclord = {
+                _module.args = { inherit inputs pkgs osconfig libs; };
+                imports = [ ./hoacaclord/configuration.nix ];
+            };
+
+            junko = {
+                _module.args = { inherit inputs pkgs osconfig libs; };
+                imports = [ ./junko/configuration.nix ];
+            };
+        };
+    };
+}./nixos-modules/server/users/static/configuration.nix
+-----
+{ pkgs, lib, ... }: {
+     home = {
+          username = "public";
+          stateVersion = "25.11";
+     };
+}
+./nixos-modules/server/users/junko/configuration.nix
+-----
+{ pkgs, lib, ... }: {
+     imports = [
+          ./programs/_programs.nix
+     ];
+
+     home = {
+          username = "junko";
+          stateVersion = "25.11";
+     };
+}
+./nixos-modules/server/users/junko/programs/_programs.nix
+-----
+{ pkgs, ... }: {
+    imports = [
+        ./bash.nix
+    ];
+}./nixos-modules/server/users/junko/programs/bash.nix
+-----
+{ libs, ... }: let
+    defaultBash = import (libs.root "/common/programs/bash.nix") {};
+in {
+    programs.bash =  {
+        enable = true;
+        shellOptions = defaultBash.shellOptions;
+        shellAliases = defaultBash.shellAliases // {
+            nrs = "sudo nixos-rebuild switch --flake /etc/nixos#server";
+            flake-upgrade = "nix flake update";
+        };
+        initExtra = defaultBash.initExtra;
+    };
+}./nixos-modules/server/users/hoacaclord/configuration.nix
+-----
+{ pkgs, lib, ... }: {
+     imports = [
+          ./programs/_programs.nix
+     ];
+
+     home = {
+          username = "hoacaclord";
+          stateVersion = "25.11";
+     };
+}
+./nixos-modules/server/users/hoacaclord/programs/_programs.nix
+-----
+{ pkgs, ... }: {
+    imports = [];
+}./nixos-modules/server/users/asakiyuki/configuration.nix
+-----
+{ inputs, pkgs, lib, ... }: {
+     imports = [
+          ./programs/_programs.nix
+     ];
+     
+     home = {
+          username = "asakiyuki";
+          stateVersion = "25.11";
+     };
+}
+./nixos-modules/server/users/asakiyuki/programs/_programs.nix
+-----
+{ pkgs, libs, ... }: {
+    imports = [
+        (libs.root "/common/programs/nixvim/_nixvim.nix")
+
+        ./bash.nix
+        ./starship.nix
+        ./fastfetch.nix
+        ./git.nix
+    ];
+}./nixos-modules/server/users/asakiyuki/programs/git.nix
+-----
+{ libs, ... }: let
+	defaultGit = import (libs.root "/common/programs/git.nix") {};
+in {
+    programs.git = {
+        enable = true;
+        lfs.enable = true;
+        settings = defaultGit.config;
+    };
+}./nixos-modules/server/users/asakiyuki/programs/starship.nix
+-----
+{ libs, ... }: let
+  defaultStarship = import (libs.root "/common/programs/starship.nix") {};
+in {
+    programs.starship = {
+        enable = true;
+        settings = defaultStarship.settings;
+    };
+}./nixos-modules/server/users/asakiyuki/programs/fastfetch.nix
+-----
+{ libs, ... }: let
+    starship = import (libs.root "/common/programs/fastfetch.nix") {};
+in {
+    programs.fastfetch = {
+		enable = true;
+		settings = {
+			logo = starship.settings.logo;
+			display = starship.settings.display;
+			modules = [
+				{
+					type = "title";
+					format = " {user-name}@{host-name}";
+					outputColor = "bright_yellow";
+				}
+
+				{
+					type = "separator";
+					string = "─";
+					length = 24;
+					outputColor = "white";
+				}
+
+				{
+					type = "os";
+					key = "╭─";
+					keyColor = "green";
+				}
+				{
+					type = "kernel";
+					key = "├─󰌽";
+					keyColor = "green";
+				}
+				{
+					type = "shell";
+					key = "├─";
+					keyColor = "green";
+				}
+				{
+					type = "packages";
+					key = "├─󰆧";
+					keyColor = "green";
+				}
+				{
+					type = "uptime";
+					key = "╰─󱑁";
+					keyColor = "green";
+				}
+
+				"break"
+
+				{
+					type = "host";
+					keyColor = "blue";
+					key = "╭─󰧨";
+				}
+				{
+					type = "cpu";
+					key = "├─";
+					keyColor = "blue";
+				}
+				{
+					type = "gpu";
+					key = "├─";
+					keyColor = "blue";
+				}
+				{
+					type = "sound";
+					key = "├─";
+					format = "{name}";
+					keyColor = "blue";
+				}
+				{
+					type = "memory";
+					format = "{percentage-bar} {used} / {total}";
+					key = "├─";
+					keyColor = "blue";
+				}
+				{
+					type = "disk";
+					format = "{size-percentage-bar} {name} ({mountpoint}) {size-used} / {size-total} - {filesystem}";
+					key = "├─󰋊";
+					keyColor = "blue";
+				}
+				{
+					type = "localip";
+					key = "╰─";
+					keyColor = "blue";
+				}
+
+				"break"
+
+				{
+					type = "terminal";
+					key = "╭─";
+					keyColor = "yellow";
+				}
+				{
+					type = "wm";
+					key = "╰─󰨇";
+					keyColor = "yellow";
+				}
+
+				"break"
+				"colors"
+			];
+		};
+	};
+}./nixos-modules/server/users/asakiyuki/programs/bash.nix
+-----
+{ libs, ... }: let
+    defaultBash = import (libs.root "/common/programs/bash.nix") {};
+in {
+    programs.bash =  {
+        enable = true;
+        shellOptions = defaultBash.shellOptions;
+        shellAliases = defaultBash.shellAliases // {
+            nrs = "sudo nixos-rebuild switch --flake /etc/nixos#server";
+            flake-upgrade = "nix flake update";
+        };
+        initExtra = defaultBash.initExtra;
+    };
+}./nixos-modules/server/configuration.nix
+-----
+{ inputs, ... }: {
+    imports = [
+        ./users/users.nix
+
+        ./options/_options.nix
+
+        ./modules/networking.nix
+        ./modules/packages.nix
+        
+        ./modules/services/_services.nix
+        ./modules/systemd/_systemd.nix
+        ./modules/virtualisation/_virtualisation.nix
+        ./modules/programs/_programs.nix
+    ];
+
+    nixpkgs.config.allowUnfree = true;
+
+    boot.loader.systemd-boot.enable = true;
+    boot.loader.efi.canTouchEfiVariables = true;
+
+    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+    time.timeZone = "Asia/Ho_Chi_Minh";
+}./nixos-modules/server/modules/systemd/services/lyrics.nix
+-----
+{ pkgs, config, lib, ... }: {
+    systemd.services.lyrics = lib.mkIf config.device.services.lyrics-server.enable {
+        enable = true;
+        description = "A self-host musixmatch lyrics service";
+        wantedBy = [ "multi-user.target" ];
+        after = [ "network.target" ];
+        serviceConfig = {
+            ExecStart = "${pkgs.nix}/bin/nix develop -c node dist/app.js";
+            WorkingDirectory = "/home/asakiyuki/HOST/musixmatch-db";
+            Restart = "always";
+            User = "asakiyuki";
+        };
+    };
+}./nixos-modules/server/modules/systemd/services/_services.nix
+-----
+{ pkgs, ... }: {
+    imports = [
+        ./lyrics.nix
+    ];
+
+    systemd.services = {};
+}./nixos-modules/server/modules/systemd/tmpfiles.nix
+-----
+{ config, lib, ... }: let 
+    cfg = config.device;
+in  {
+    systemd.tmpfiles = {
+        rules = [
+            "d /home/MEDIA_FILES 2775 asakiyuki public - -"
+            "L+ /home/asakiyuki/MEDIA_FILES - - - - /home/MEDIA_FILES"
+            "L+ /home/junko/MEDIA_FILES - - - - /home/MEDIA_FILES"
+        ]
+        ++ (
+            lib.optionals cfg.services.public-server.enable [ "d ${cfg.services.public-server.path} 2775 asakiyuki public - -" "L+ /home/asakiyuki/PUBLIC - - - - ${cfg.services.public-server.path}" "L+ /home/junko/PUBLIC - - - - ${cfg.services.public-server.path}" ]
+        );
+    };
+}./nixos-modules/server/modules/systemd/_systemd.nix
+-----
+{ pkgs, ... }: {
+    imports = [
+        ./tmpfiles.nix
+        ./services/_services.nix
+    ];
+
+    systemd = {};
+}./nixos-modules/server/modules/services/httpd.nix
+-----
+{ config, lib, ... }: let 
+    cfg = config.device;
+in  {
+    services.httpd = lib.mkIf cfg.services.public-server.enable {
+        enable = true;
+        adminAddr = cfg.admin-email;
+
+        user = "static";
+        group = "public";
+
+        virtualHosts = {
+            localhost = {
+                documentRoot = cfg.services.public-server.path;
+
+                listen = [
+                    { ip = "0.0.0.0"; port = cfg.services.public-server.port; }
+                ];
+
+                extraConfig = ''
+                    <Directory "${cfg.services.public-server.path}">
+                        Options -Indexes +FollowSymLinks
+                        AllowOverride None
+                        Require all granted
+
+                        <LimitExcept GET HEAD OPTIONS>
+                            Require all denied
+                        </LimitExcept>
+                    </Directory>
+                '';
+            };
+        };
+    };
+}./nixos-modules/server/modules/services/logrotate.nix
+-----
+{ ... }: {
+    services.logrotate = {
+        enable = false;
+    };
+}./nixos-modules/server/modules/services/cloudflare-dyndns.nix
+-----
+{ ... }: {
+    services.cloudflare-dyndns = {
+        enable = true;
+        apiTokenFile = "/home/asakiyuki/.secret/CLOUDFLARE_TOKEN_KEY";
+        frequency = "*:0/5";
+        proxied = true;
+        ipv6 = false;
+        ipv4 = true;
+        deleteMissing = false;
+        domains = [ "ddns.asakiyuki.com" ];
+    };
+}
+./nixos-modules/server/modules/services/_services.nix
+-----
+{ pkgs, ... }: {
+    imports = [
+        ./cloudflare-dyndns.nix
+        ./fail2ban.nix
+        ./httpd.nix
+        ./logrotate.nix
+        ./minecraft-server.nix
+        ./mysql.nix
+        ./openssh.nix
+    ];
+
+    services = {
+        xserver.enable = true;
+        pulseaudio.enable = false;
+        pipewire.enable = false;
+        desktopManager.plasma6.enable = true;
+    };
+}./nixos-modules/server/modules/services/openssh.nix
+-----
+{ config, lib, ... }: let 
+    cfg = config.device;
+in  {
+    services.openssh = lib.mkIf cfg.services.ssh.enable {
+        enable = true;
+        ports = [ cfg.services.ssh.port ];
+        authorizedKeysInHomedir = true;
+        authorizedKeysFiles = [ "/home/asakiyuki/.ssh/authorized_keys" ];
+        settings = {
+            AllowUsers = cfg.services.ssh.allowed-users;
+            PasswordAuthentication = false;
+            KbdInteractiveAuthentication = false;
+            AllowAgentForwarding = false;
+            AllowStreamLocalForwarding = false;
+            X11Forwarding = false;
+            PermitRootLogin = "no";
+        };
+    };
+}./nixos-modules/server/modules/services/minecraft-server.nix
+-----
+{ inputs, pkgs, config, lib, ... }: let 
+    cfg = config.device.minecraft-server;
+in  {
+    nixpkgs.overlays = [ inputs.nix-minecraft.overlay ];
+    services.minecraft-servers = lib.mkIf cfg.enable {
+        enable = true;
+        eula = true;
+        openFirewall = true;
+        dataDir = cfg.data-dir;
+        servers.vanilla = {
+            enable = true;
+            autoStart = true;
+            enableReload = true;
+            jvmOpts = cfg.java-opts;
+            package = cfg.package;
+            
+            serverProperties = {
+                server-port = cfg.port;
+                difficulty = cfg.difficulty;
+                gamemode = cfg.gamemode;
+                max-players = cfg.max-players;
+                motd = cfg.server-welcome;
+            };
+        };
+    };
+}./nixos-modules/server/modules/services/mysql.nix
+-----
+{ pkgs, config, lib, ... }: let 
+    cfg = config.device;
+in  {
+    services.mysql = lib.mkIf cfg.services.sql-server.enable {
+        enable = true; 
+        package = pkgs.mariadb;
+        settings = {
+            mysqld = {
+                port = cfg.services.sql-server.port;
+                bind-address = "0.0.0.0";
+            };
+        };
+
+        ensureDatabases = [ "main_db" ];
+        ensureUsers = [
+            {
+                name = "admin";
+                ensurePermissions = { "*.*" = "ALL PRIVILEGES"; };
+            }
+        ];
+
+        replication = {
+            masterPort = cfg.services.sql-server.port;
+        };
+    };
+}./nixos-modules/server/modules/services/fail2ban.nix
+-----
+{ ... }: {
+    services.fail2ban = {
+        enable = true;
+        ignoreIP = [
+            "192.168.0.0/16"
+        ];
+    };
+}./nixos-modules/server/modules/virtualisation/_virtualisation.nix
+-----
+{ ... }: {
+    virtualisation = {
+        docker = import ./docker.nix {};
+    };
+}./nixos-modules/server/modules/virtualisation/docker.nix
+-----
+{ ... }: {
+    enable = true;
+}./nixos-modules/server/modules/programs/_programs.nix
+-----
+{ pkgs, ... }@inputs: {
+    programs = 
+        import ./nix-ld.nix inputs // {
+        zsh.enable = true;
+    };
+}./nixos-modules/server/modules/programs/nix-ld.nix
+-----
+{ pkgs, ... }: {
+    nix-ld = {
+        enable = true;
+        libraries = with pkgs; [
+            stdenv.cc.cc
+            openssl
+            zlib
+        ];
+    };
+}./nixos-modules/server/modules/networking.nix
+-----
+{ config, helper, lib, ... }: let 
+    cfg = config.device;
+    cfg_s = cfg.services;
+in {
+    networking = {
+        useDHCP = false;
+        networkmanager.enable = true;
+        defaultGateway = "192.168.1.1";
+        nameservers = ["8.8.8.8" "1.1.1.1"];
+        
+        interfaces = {
+            enp1s0 = {
+                useDHCP = false;
+                ipv4.addresses = [{
+                    address = "192.168.1.100";
+                    prefixLength = 24;
+                }];
+            };
+        };
+
+        firewall = {
+            enable = true;
+            allowedUDPPorts = cfg_s.ports.allowed.udp;
+            allowedTCPPorts = cfg_s.ports.allowed.tcp
+                ++ [
+                    (lib.mkIf cfg_s.ssh.enable cfg_s.ssh.port)
+                    (lib.mkIf cfg_s.sql-server.enable cfg_s.sql-server.port)
+                    (lib.mkIf cfg_s.lyrics-server.enable cfg_s.lyrics-server.port)
+                    (lib.mkIf cfg_s.public-server.enable cfg_s.public-server.port)
+                    (lib.mkIf cfg_s.minecraft-server.enable cfg_s.minecraft-server.port)
+                ]
+                ++ (lib.optionals cfg_s.nginx-proxy-manager.enable cfg_s.nginx-proxy-manager.ports);
+        };
+    };
+}./nixos-modules/server/modules/packages.nix
+-----
+{ pkgs, ... }: let 
+    bun-x64-linue-baseline = import ../../../packages/bun.nix { inherit pkgs; };
+in {
+    environment.systemPackages = with pkgs; [
+        wget
+        git
+        p7zip
+        python3
+        nodejs
+        unzip
+        vim
+
+        firefox
+        screen
+
+        tigervnc
+        xorg.xinit
+        kdePackages.plasma-workspace
+        kdePackages.kglobalaccel
+        kdePackages.kded
+
+        bun-x64-linue-baseline
+    ];
+}./nixos-modules/server/options/services.nix
+-----
+{ lib, pkgs, ... }: {
+    options.device.services = {
+        ssh = {
+            enable = lib.mkEnableOption "ssh";
+            port = lib.mkOption {
+                type = lib.types.port;
+                default = 22;
+                description = "openssh port";
+            };
+            allowed-users = lib.mkOption {
+                type = lib.types.listOf lib.types.str;
+                default = [ "asakiyuki" ];
+                description = "list of allowed ssh users";
+            };
+        };
+
+        minecraft-server = {
+            enable = lib.mkEnableOption "minecraft server";
+            server-welcome = lib.mkOption {
+                type = lib.types.str;
+                default = "The Asa's Craft!";
+                description = "minecraft server motd";
+            };
+            difficulty = lib.mkOption {
+                type = lib.types.str;
+                default = "normal";
+                description = "minecraft server motd";
+            };
+            gamemode = lib.mkOption {
+                type = lib.types.str;
+                default = "survival";
+                description = "minecraft server motd";
+            };
+            max-players = lib.mkOption {
+                type = lib.types.int;
+                default = 5;
+                description = "minecraft server max players";
+            };
+            package = lib.mkOption {
+                type = lib.types.package;
+                default = pkgs.vanillaServers.vanilla-26_1;
+                description = "minecraft server package";
+            };
+            data-dir = lib.mkOption {
+                type = lib.types.str;
+                default = "/home/asakiyuki/HOST/minecraft-servers";
+                description = "minecraft server data dir";
+            };
+            java-opts = lib.mkOption {
+                type = lib.types.str;
+                default = "-Xmx4G -Xms2G";
+                description = "java options";
+            };
+            port = lib.mkOption {
+                type = lib.types.port;
+                default = 25565;
+                description = "minecraft server port";
+            };
+        };
+
+        sql-server = {
+            enable = lib.mkEnableOption "sql server";
+            port = lib.mkOption {
+                type = lib.types.port;
+                default = 1433;
+                description = "sql server port";
+            };
+        };
+
+        lyrics-server = {
+            enable = lib.mkEnableOption "lyrics server";
+            port = lib.mkOption {
+                type = lib.types.port;
+                default = 28734;
+                description = "sql server port";
+            };
+        };
+
+        public-server = {
+            enable = lib.mkEnableOption "public server";
+            path = lib.mkOption {
+                type = lib.types.str;
+                default = "/home/PUBLIC";
+                description = "public path";
+            };
+            port = lib.mkOption {
+                type = lib.types.port;
+                default = 37284;
+                description = "public server";
+            };
+        };
+
+        nginx-proxy-manager = {
+            enable = lib.mkEnableOption "nginx proxy manager";
+            ports = lib.mkOption {
+                type = lib.types.listOf lib.types.port;
+                default = [ 80 81 443 ];
+                description = "nginx proxy manager";
+            };
+        };
+
+        ports = {
+            allowed = {
+                udp = lib.mkOption {
+                    type = lib.types.listOf lib.types.port;
+                    default = [];
+                    description = "allowed udp port";
+                };
+                tcp = lib.mkOption {
+                    type = lib.types.listOf lib.types.port;
+                    default = [];
+                    description = "allowed tcp port";
+                };
+            };
+        };
+    };
+}./nixos-modules/server/options/_options.nix
+-----
+{ lib, config, ... }: {
+    imports = [
+        ./services.nix
+    ];
+    
+    options.device = {
+        admin-email = lib.mkOption {
+            type = lib.types.str;
+            default = "vantrong2007vn@gmail.com";
+            description = "admin email for git";
+        };
+    };
+}./host/lenovo-ideapad/configuration.nix
+-----
+{ inputs, pkgs, root, libs, ... }: {
+    # Import Modules
+    imports = [
+        ./hardware-configuration.nix
+        (libs.root "/nixos-modules/desktop/configuration.nix")
+    ];
+    
+    device = {
+        flake-name = "lenovo-ideapad";
+
+        services = {
+            steam = true;
+        };
+    };
+    
+    system.stateVersion = "25.11";
+}./host/lenovo-ideapad/hardware-configuration.nix
+-----
+# Do not modify this file!  It was generated by ‘nixos-generate-config’
+# and may be overwritten by future invocations.  Please make changes
+# to /etc/nixos/configuration.nix instead.
+{ config, lib, pkgs, modulesPath, ... }:
+
+{
+  imports =
+    [ (modulesPath + "/installer/scan/not-detected.nix")
+    ];
+
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "usbhid" "usb_storage" "sd_mod" "sdhci_pci" ];
+  boot.initrd.kernelModules = [ ];
+  boot.kernelModules = [ "kvm-amd" ];
+  boot.extraModulePackages = [ ];
+
+  fileSystems."/" =
+    { device = "/dev/disk/by-uuid/fb43e44d-0d8f-4489-bc19-be832d0077de";
+      fsType = "ext4";
+    };
+
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/0FDA-6597";
+      fsType = "vfat";
+      options = [ "fmask=0022" "dmask=0022" ];
+    };
+
+  fileSystems."/mnt/windows" =
+  { device = "/dev/disk/by-uuid/0000294D000006E6";
+    fsType = "ntfs-3g";
+    options = [ "rw" "uid=1000" "gid=100" "umask=022" ];
+  };
+
+  swapDevices =
+    [ { device = "/dev/disk/by-uuid/51cd0349-f54a-4faf-a5a2-c0372d530b3d"; }
+    ];
+
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+}
+./host/home/configuration.nix
+-----
+{ inputs, pkgs, root, libs, ... }: {
+    # Import Modules
+    imports = [
+        ./hardware-configuration.nix
+        (libs.root "/nixos-modules/server/configuration.nix")
+    ];
+
+    device = {
+        admin-email = "vantrong2007vn@gmail.com";
+
+        services = {
+            ssh.enable = true;
+            ssh.port = 15523;
+            ssh.allowed-users = [ "asakiyuki" "junko" "hoacaclord" ];
+
+            minecraft-server.enable = true;
+
+            sql-server.enable = true;
+            sql-server.port = 37241;
+
+            lyrics-server.enable = true;
+            lyrics-server.port = 28734;
+
+            public-server.enable = true;
+            public-server.port = 37284;
+            public-server.path = "/home/PUBLIC";
+
+            nginx-proxy-manager.enable = true;
+            nginx-proxy-manager.ports = [ 80 18581 443 ];
+
+            ports.allowed.udp = [];
+            ports.allowed.tcp = [];
+        };
+    };
+
+    system.stateVersion = "25.11";
+}./host/home/hardware-configuration.nix
+-----
+# Do not modify this file!  It was generated by ‘nixos-generate-config’
+# and may be overwritten by future invocations.  Please make changes
+# to /etc/nixos/configuration.nix instead.
+{ config, lib, pkgs, modulesPath, ... }:
+
+{
+	imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
+
+	boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
+	boot.initrd.kernelModules = [ ];
+	boot.kernelModules = [ "kvm-intel" ];
+	boot.extraModulePackages = [ ];
+
+	fileSystems = {
+		"/" = {
+			device = "/dev/disk/by-uuid/16cfcdf6-15bb-4b63-835f-044867999510";
+			fsType = "ext4";
+		};
+		"/home/asakiyuki/HOST" = {
+			device = "/dev/disk/by-uuid/414e2a24-605f-47c3-a325-8db8a4934329";
+			fsType = "ext4";
+		};
+	};
+
+	swapDevices = [
+		{ device = "/dev/disk/by-uuid/cfa7f30f-f08a-4400-babe-41357586a6a0"; }
+	];
+
+	nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+	hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+}
+./host/wsl/configuration.nix
+-----
+{ inputs, pkgs, nixos-wsl, root, libs, ... }: {
+    # Import Modules
+    imports = [
+        (libs.root "/nixos-modules/desktop/configuration.nix")
+    ];
+
+    # NixOS Config
+    time.timeZone = "Asia/Ho_Chi_Minh";
+
+    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+    nixpkgs.config.allowUnfree = true;
+
+    wsl.enable = true;
+    wsl.defaultUser = "asakiyuki";
+
+    system.stateVersion = "25.05";    
+}
+
+./packages/catppuccin-obs.nix
+-----
+{ lib, pkgs, ... }: 
+pkgs.stdenv.mkDerivation {
+    pname = "catppuccin-obs";
+    version = "main";
+
+    src = pkgs.fetchzip {
+        url = "https://static.asakiyuki.com/nixos/catppuccin-obs.zip";
+        sha256 = "sha256-Uk4a0HKaeyQilgBiPsuAWQubk1yZdyirNcfhYJEL+lQ=";
+    };
+
+    buildCommand = ''
+        mkdir -p $out
+        cp -r $src/themes/* $out/
+    '';
+}./packages/cage-xtmapper-0.1.5.nix
+-----
+{ pkgs }:
+let 
+    RELEASE_VERSION = "20260208";
+    PACKAGE_VERSION = "0.1.5";
+in 
+pkgs.stdenv.mkDerivation rec {
+    pname = "cage-xtmapper";
+    version = PACKAGE_VERSION;
+
+    src = pkgs.fetchurl {
+        url = "https://github.com/Xtr126/cage-xtmapper/releases/download/v${RELEASE_VERSION}/cage-xtmapper-v${PACKAGE_VERSION}.tar";
+        hash = "sha256-ZmdltOQInGbCBpf/e8D2sB9Rjt4wqd8wwuSFvryHfFA=";
+    };
+
+    nativeBuildInputs = [ pkgs.autoPatchelfHook ];
+
+    buildInputs = with pkgs; [
+        wayland
+        libxkbcommon
+        pixman
+        libdrm 
+        libGL 
+        mesa 
+        vulkan-loader 
+        udev 
+        seatd 
+        libxcb-render-util
+    ];
+
+    dontBuild = true;
+
+    installPhase = ''
+        mkdir -p $out/bin
+        tar xvf $src
+        cp usr/local/bin/cage_xtmapper $out/bin/
+        cp usr/local/bin/cage_xtmapper.sh $out/bin/
+        chmod +x $out/bin/cage_xtmapper
+        chmod +x $out/bin/cage_xtmapper.sh
+    '';
+
+    meta = with pkgs.lib; {
+        description = "cage-xtmapper input mapping tool";
+        homepage = "https://github.com/Xtr126/cage-xtmapper";
+        license = licenses.mit; 
+        platforms = platforms.linux;
+    };
+}./packages/castorice-cursors.nix
+-----
+{ pkgs, ... }:
+let 
+    getFrom = url: hash: name: {
+        gtk.enable = true;
+        x11.enable = true;
+        name = name;
+        size = 48;
+        package = pkgs.runCommand "moveUp" {} ''
+                mkdir -p $out/share/icons
+                ln -s ${pkgs.fetchzip {
+                    url = url;
+                    hash = hash;
+                }} $out/share/icons/${name}
+            '';
+        };
+    in getFrom 
+        "https://static.asakiyuki.com/nixos/castorice-cursors.tar.gz"
+        "sha256-nqAC+Itr+TXLGG8zYDBoBve+MeRckds5BM23DrsCTMM="
+        "castorice-cursors"./packages/elysia-cursors.nix
+-----
+{ pkgs, ... }:
+let 
+    getFrom = url: hash: name: {
+        gtk.enable = true;
+        x11.enable = true;
+        name = name;
+        size = 48;
+        package = pkgs.runCommand "moveUp" {} ''
+                mkdir -p $out/share/icons
+                ln -s ${pkgs.fetchzip {
+                    url = url;
+                    hash = hash;
+                }} $out/share/icons/${name}
+            '';
+        };
+    in getFrom 
+        "https://static.asakiyuki.com/nixos/elysia-cursors.tar.gz"
+        "sha256-mjDHklWrX5Pp/vejRQiMk0VA6afY04HXGyGD0PcopdI="
+        "elysia-cursors"./packages/cage-xtmapper-0.2.0.nix
+-----
+{ pkgs }:
+let 
+    RELEASE_VERSION = "20260208";
+    PACKAGE_VERSION = "0.2.0";
+in 
+pkgs.stdenv.mkDerivation rec {
+    pname = "cage-xtmapper";
+    version = PACKAGE_VERSION;
+
+    src = pkgs.fetchurl {
+        url = "https://github.com/Xtr126/cage-xtmapper/releases/download/v${RELEASE_VERSION}/cage-xtmapper-v${PACKAGE_VERSION}.tar";
+        hash = "sha256-F1C3KnTzTO1vEouixqO1xnsGmufRyAk+BiRlypNq4kQ=";
+    };
+
+    nativeBuildInputs = [ pkgs.autoPatchelfHook ];
+
+    buildInputs = with pkgs; [
+        wayland
+        libxkbcommon
+        pixman
+        libdrm 
+        libGL 
+        mesa 
+        vulkan-loader 
+        udev 
+        seatd 
+        libxcb-render-util
+    ];
+
+    dontBuild = true;
+
+    installPhase = ''
+        mkdir -p $out/bin
+        tar xvf $src
+        cp usr/local/bin/cage_xtmapper $out/bin/
+        cp usr/local/bin/cage_xtmapper.sh $out/bin/
+        chmod +x $out/bin/cage_xtmapper
+        chmod +x $out/bin/cage_xtmapper.sh
+    '';
+
+    meta = with pkgs.lib; {
+        description = "cage-xtmapper input mapping tool";
+        homepage = "https://github.com/Xtr126/cage-xtmapper";
+        license = licenses.mit; 
+        platforms = platforms.linux;
+    };
+}./packages/bun.nix
+-----
+{ pkgs }: pkgs.stdenv.mkDerivation rec {
+    pname = "bun";
+    version = "1.3.10";
+
+    src = pkgs.fetchzip {
+        url = "https://github.com/oven-sh/bun/releases/download/bun-v${version}/bun-linux-x64-baseline.zip";
+        hash = "sha256-ZWTs4ApH0BsATxrE1DSuqCETIrNZZxdG8xtN0NinNBw=";
+    };
+
+    dontBuild = true;
+
+    installPhase = ''
+        mkdir -p $out/bin
+        cp bun $out/bin/
+        chmod +x $out/bin/bun
+    '';
+
+    meta = with pkgs.lib; {
+        description = "Incredibly fast JavaScript runtime, bundler, transpiler and package manager – all in one";
+        homepage = "https://bun.sh";
+        license = with licenses; [ mit lgpl21Only ];
+    };
+}./assets/service-menus/_services-menu.nix
+-----
+[
+    "openwithcode"
+    "copypublicurl"
+]./flake.nix
+-----
+{
+    description = "The Asa's nix configuration";
+
+    inputs = {
+        nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+        unstablepkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+        nixcord.url = "github:FlameFlag/nixcord";
+        nix-minecraft.url = "github:Infinidoge/nix-minecraft";
+        hytale-launcher.url = "github:zarilion/hytale-launcher-nix";
+        honkai-railway-grub-theme.url = "github:voidlhf/StarRailGrubThemes";
+        
+        nix-index-database = {
+            url = "github:nix-community/nix-index-database";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+        
+        home-manager = {
+            url = "github:nix-community/home-manager/release-25.11";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+
+        nixvim = {
+            url = "github:nix-community/nixvim/nixos-25.11";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+
+        nixos-wsl = {
+            url = "github:nix-community/NixOS-WSL";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+    };
+
+    outputs = inputs@{ self, nixpkgs, unstablepkgs, ... }: let 
+        libs = import ./libs/_lib.nix inputs;
+        unstable = import unstablepkgs {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+        };
+    in {
+        nixosConfigurations = {
+            lenovo-ideapad = nixpkgs.lib.nixosSystem {
+                system = "x86_64-linux";
+                specialArgs = { inherit libs inputs unstable; };
+                modules = [
+                    ./host/lenovo-ideapad/configuration.nix
+                    inputs.home-manager.nixosModules.default
+                    inputs.nix-index-database.nixosModules.default
+                ];
+            };
+
+            server = nixpkgs.lib.nixosSystem {
+                system = "x86_64-linux";
+                specialArgs = { inherit libs inputs; };
+                modules = [
+                    ./host/home/configuration.nix
+                    inputs.home-manager.nixosModules.default
+                    inputs.nix-minecraft.nixosModules.minecraft-servers
+                ];
+            };
+
+            wsl = nixpkgs.lib.nixosSystem {
+                system = "x86_64-linux";
+                specialArgs = { inherit libs inputs; };
+                modules = [
+                    ./host/wsl/configuration.nix
+                    inputs.nixos-wsl.nixosModules.default
+                    inputs.home-manager.nixosModules.default
+                ];
+            };
+        };
+    };
+}./common/programs/git.nix
+-----
+{ ... }: {
+    config = {
+        init = {
+            defaultBranch = "main";
+        };
+        alias = {};
+        safe = {
+            directory = "/etc/nixos";
+        };
+        user = {
+            email = "vantrong2007vn@gmail.com";
+            name = "Asaki Yuki";
+        };
+        url = {
+            "git@github.com:" = {
+                insteadOf = [
+                    "gh:"
+                    "github:"
+                ];
+            };
+        };
+    };
+}./common/programs/starship.nix
+-----
+{ ... }: {
+    settings = {
+        add_newline = true;
+        scan_timeout = 10;
+
+        format=''$os $shell $cmake$java$nodejs$git_branch$character
+$cmd_duration$sudo$directory > '';
+
+        sudo = {
+            format = "[$symbol]($style) ";
+            symbol = "";
+            disabled = false;
+        };
+
+        java = {
+            format = "[$symbol $version]($style) ";
+            symbol = "";
+        };
+
+        cmake = {
+            format = "[$symbol $version](bold blue) ";
+            symbol = "";
+        };
+
+        nodejs = {
+            format = "[$symbol $version](bold green) ";
+            symbol = "󰎙";
+        };
+
+        git_branch = {
+            format = "[$symbol $branch]($style) ";
+            symbol = "";
+        style = "red";
+        disabled = false;
+        };
+
+        directory = {
+            format = "[$read_only]($read_only_style)[$path]($style)";
+            style = "#2e8be8";
+            truncation_length = 2;
+            read_only = "󰌾 ";
+        };
+
+        character = {
+            success_symbol = "[](green)";
+            error_symbol = "[](red)";
+            disabled = false;
+        };
+
+        cmd_duration = {
+            min_time = 1;
+            format = "[\\[$duration\\]]($style) ";
+            style = "#C0C0C0";
+            show_milliseconds = true;
+        };
+
+        shell = {
+            disabled = false;
+            bash_indicator = "bash";
+            fish_indicator = "fish";
+            zsh_indicator = "zsh";
+            powershell_indicator = "pwsh";
+            format = "[$indicator]($style)";
+            style = "white";
+        };
+
+        os = {
+            format = "[$symbol]($style)";
+            disabled = false;
+            symbols = {
+                Arch = "[󰣇](bold blue)";
+                Windows = "[](bold blue)";
+                NixOS = "[](bold blue)";
+            };
+        };
+    };
+}./common/programs/fastfetch.nix
+-----
+{ ... }:
+{
+    settings = {
+        logo = {
+            padding.top = 1;
+            color = {
+                "1" = "#89b4fa";
+                "2" = "#cdd6f4";
+                "3" = "#89b4fa";
+                "4" = "#cdd6f4";
+                "5" = "#89b4fa";
+                "6" = "#cdd6f4";
+            };
+        };
+
+        display = {
+            color = {
+                title = "#cdd6f4";
+                output = "#cdd6f4";
+                separator = "black";
+            };
+
+            bar = {
+                width = 10;
+                charTotal = " ";
+                border.left = "[";
+                border.right = "]";
+                char.elapsed = "█";
+                color = {
+                    border = "green";
+                    elapsed = "green";
+                    total = "black";
+                };
+            };
+
+            percent = {
+                type = 3;
+                color = {
+                    green = "green";
+                    yellow = "yellow";
+                    red = "red";
+                };
+            };
+
+            separator = "  ";
+            brightColor = true;
+        };
+
+        modules = [
+            {
+                type = "title";
+                format = " {user-name}@{host-name}";
+                outputColor = "bright_yellow";
+            }
+
+            {
+                type = "separator";
+                string = "─";
+                length = 24;
+                outputColor = "white";
+            }
+
+            {
+                type = "os";
+                key = "╭─";
+                keyColor = "green";
+            }
+            {
+                type = "kernel";
+                key = "├─󰌽";
+                keyColor = "green";
+            }
+            {
+                type = "shell";
+                key = "├─";
+                keyColor = "green";
+            }
+            {
+                type = "packages";
+                key = "├─󰆧";
+                keyColor = "green";
+            }
+            {
+                type = "uptime";
+                key = "╰─󱑁";
+                keyColor = "green";
+            }
+
+            "break"
+
+            {
+                type = "host";
+                keyColor = "blue";
+                key = "╭─󰧨";
+            }
+            {
+                type = "cpu";
+                key = "├─";
+                keyColor = "blue";
+            }
+            {
+                type = "gpu";
+                key = "├─";
+                keyColor = "blue";
+            }
+            {
+                type = "sound";
+                key = "├─";
+                format = "{name}";
+                keyColor = "blue";
+            }
+            {
+                type = "memory";
+                format = "{percentage-bar} {used} / {total}";
+                key = "├─";
+                keyColor = "blue";
+            }
+            {
+                type = "disk";
+                format = "{size-percentage-bar} {name} ({mountpoint}) {size-used} / {size-total} - {filesystem}";
+                key = "├─󰋊";
+                keyColor = "blue";
+            }
+            {
+                type = "localip";
+                key = "╰─";
+                keyColor = "blue";
+            }
+
+            "break"
+
+            {
+                type = "terminal";
+                key = "╭─";
+                keyColor = "yellow";
+            }
+            {
+                type = "wm";
+                key = "├─󰨇";
+                keyColor = "yellow";
+            }
+            {
+                type = "bios";
+                key = "├─";
+                keyColor = "yellow";
+            }
+            {
+                type = "theme";
+                key = "├─󱓓";
+                keyColor = "yellow";
+            }
+            {
+                type = "icons";
+                key = "├─󱓓";
+                keyColor = "yellow";
+            }
+            {
+                type = "cursor";
+                key = "├─󱓓";
+                keyColor = "yellow";
+            }
+            {
+                type = "de";
+                key = "╰─󰨇";
+                keyColor = "yellow";
+            }
+
+            "break"
+            "colors"
+        ];
+    };
+}
+./common/programs/bash.nix
+-----
+{ ... }: {
+    shellAliases = {
+        cls = "clear";
+        cleanup = "sudo nix-collect-garbage -d";
+        cls-log = "sudo journalctl --vacuum-time=1s";
+    };
+
+    shellOptions = [
+        "histappend"
+        "checkwinsize"
+        "extglob"
+        "globstar"
+        "checkjobs"
+        "autocd"
+    ];
+
+    initExtra = builtins.readFile ../../assets/scripts/initextra.sh;
+}./common/programs/nixvim/_nixvim.nix
+-----
+{ pkgs, ... }:
+{
+    programs.nixvim = {
+        enable = true;
+        colorschemes.catppuccin.enable = true;
+    };
+    
+    imports = [
+        ./plugins/_plugins.nix
+        ./plugins/_extraPlugins.nix
+    ];
+}./common/programs/nixvim/plugins/_extraPlugins.nix
+-----
+{ pkgs, ... }:
+let
+    EXTRA_PLUGINS = [
+        ./extras/neocord.nix
+        ./extras/mini-icons.nix
+    ];
+
+    LUA = [
+        ./lua/neocord.lua
+    ];
+in
+{
+    programs.nixvim = {
+        extraPlugins = map (path: import path { plugins = pkgs.vimPlugins; }) EXTRA_PLUGINS;
+        extraConfigLua = builtins.concatStringsSep "\n" (map builtins.readFile LUA);
+    };
+}./common/programs/nixvim/plugins/_plugins.nix
+-----
+{ ... }:
+{
+    programs.nixvim.plugins = {
+        nvim-tree = import ./nvimtree.nix;
+        web-devicons.enable = true;
+        which-key.enable = true;
+        treesitter.enable = true;
+    };
+}./common/programs/nixvim/plugins/nvimtree.nix
+-----
+{
+    enable = true;
+    openOnSetupFile = true;
+    settings.auto_reload_on_write = true;
+}./common/programs/nixvim/plugins/extras/neocord.nix
+-----
+{ plugins, ... }:
+{
+    plugin = plugins.neocord;
+}./common/programs/nixvim/plugins/extras/mini-icons.nix
+-----
+{ plugins, ... }:
+{
+    plugin = plugins.mini-icons;
+}./common/packages/bun-linux-baseline.nix
+-----
+{ }: 
+stdenv.mkDerivation (attrs: {
+    pname = "bun";
+    version = "1.3.10";
+    src = with atts; {
+        url = "https://github.com/oven-sh/bun/releases/download/bun-v${version}/bun-linux-x64-baseline.zip";
+        hash = "sha256-###########################";
+    };
+})./common/packages/_packages.nix
+-----
+{
+    
+}
