@@ -11,16 +11,7 @@
         services = {
             ssh.enable = true;
             ssh.port = 15523;
-            ssh.allowed-users = [ "asakiyuki" "junko" "hoacaclord" ];
-
-            minecraft-server.enable = true;
-            minecraft-server.server-welcome = "The Asa's craft!";
-            minecraft-server.difficulty = "normal";
-            minecraft-server.gamemode = "survival";
-            minecraft-server.max-players = 10;
-            minecraft-server.package = pkgs.vanillaServers.vanilla-26_1;
-            minecraft-server.java-opts = "-Xmx4G -Xms2G";
-            minecraft-server.port = 25565;
+            ssh.allowed-users = [ "asakiyuki" "junko" "hoacaclord" ];   
 
             sql-server.enable = true;
             sql-server.port = 37241;

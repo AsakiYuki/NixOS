@@ -14,45 +14,6 @@
             };
         };
 
-        minecraft-server = {
-            enable = lib.mkEnableOption "minecraft server";
-            server-welcome = lib.mkOption {
-                type = lib.types.str;
-                default = "The Asa's Craft!";
-                description = "minecraft server motd";
-            };
-            difficulty = lib.mkOption {
-                type = lib.types.str;
-                default = "normal";
-                description = "minecraft server motd";
-            };
-            gamemode = lib.mkOption {
-                type = lib.types.str;
-                default = "survival";
-                description = "minecraft server motd";
-            };
-            max-players = lib.mkOption {
-                type = lib.types.int;
-                default = 5;
-                description = "minecraft server max players";
-            };
-            package = lib.mkOption {
-                type = lib.types.package;
-                default = pkgs.vanillaServers.vanilla-26_1;
-                description = "minecraft server package";
-            };
-            java-opts = lib.mkOption {
-                type = lib.types.str;
-                default = "-Xmx4G -Xms2G";
-                description = "java options";
-            };
-            port = lib.mkOption {
-                type = lib.types.port;
-                default = 25565;
-                description = "minecraft server port";
-            };
-        };
-
         sql-server = {
             enable = lib.mkEnableOption "sql server";
             port = lib.mkOption {

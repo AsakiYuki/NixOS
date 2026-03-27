@@ -6,7 +6,6 @@
         unstablepkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
         nixcord.url = "github:FlameFlag/nixcord";
-        nix-minecraft.url = "github:Infinidoge/nix-minecraft";
         hytale-launcher.url = "github:zarilion/hytale-launcher-nix";
         honkai-railway-grub-theme.url = "github:voidlhf/StarRailGrubThemes";
         
@@ -55,7 +54,6 @@
                 modules = [
                     ./host/home/configuration.nix
                     inputs.home-manager.nixosModules.default
-                    inputs.nix-minecraft.nixosModules.minecraft-servers
                 ];
             };
 
