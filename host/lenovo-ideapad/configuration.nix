@@ -4,6 +4,8 @@
         ./hardware-configuration.nix
         ../../nixos-modules/desktop/configuration.nix
     ];
-    flake-name = "lenovo-ideapad";
+    
+    device.flake-name = "lenovo-ideapad";
+    
     system.stateVersion = "25.11";
 }
