@@ -1,7 +1,5 @@
 { inputs, ... }: {
     imports = [
-        inputs.nix-minecraft.nixosModules.minecraft-servers
-
         ./users/users.nix
 
         ./options/_options.nix
