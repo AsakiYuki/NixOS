@@ -1,4 +1,4 @@
-{ config, helper, lib, libs, ... }: let 
+{ config, helper, lib, ... }: let 
     cfg = config.device;
     cfg_s = cfg.services;
 in {
@@ -29,7 +29,7 @@ in {
                     (lib.mkIf cfg_s.public-server.enable cfg_s.public-server.port)
                     (lib.mkIf cfg_s.minecraft-server.enable cfg_s.minecraft-server.port)
                 ]
-                ++ (libs.mkIfElse cfg_s.nginx-proxy-manager.enable cfg_s.nginx-proxy-manager.ports []);
+                ++ (lib.optionals cfg_s.nginx-proxy-manager.enable cfg_s.nginx-proxy-manager.ports);
         };
     };
 }
