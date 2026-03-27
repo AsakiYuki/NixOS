@@ -1,5 +1,7 @@
-{ inputs, pkgs, lib, ... }: let 
+{ inputs, pkgs, lib, libs, ... }: let 
     GLOBAL = import ../_global.nix;
+
+    moduleArgs = { inherit inputs pkgs libs; };
 in {
     users = {
         users = {
@@ -36,7 +38,7 @@ in {
 
         users = {
             asakiyuki = {
-                _module.args = { inherit inputs pkgs; };
+                _module.args = moduleArgs;
                 imports = [ 
                     inputs.nixvim.homeModules.nixvim
                     ./asakiyuki/configuration.nix
@@ -44,12 +46,12 @@ in {
             };
 
             hoacaclord = {
-                _module.args = { inherit inputs pkgs; };
+                _module.args = moduleArgs;
                 imports = [ ./hoacaclord/configuration.nix ];
             };
 
             junko = {
-                _module.args = { inherit inputs pkgs; };
+                _module.args = moduleArgs;
                 imports = [ ./junko/configuration.nix ];
             };
         };
