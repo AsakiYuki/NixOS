@@ -1,3 +1,3 @@
 { ... }@inputs: {
-    helper = ./helper.nix inputs; 
+    helper = import ./helper.nix inputs; 
 }
