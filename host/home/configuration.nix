@@ -13,8 +13,15 @@
             ssh.port = 15523;
             ssh.allowed-users = [ "asakiyuki" "junko" "hoacaclord" ];
 
-            minecraft-server.enable = false;
+            minecraft-server.enable = true;
             minecraft-server.server-welcome = "The Asa's craft!";
+            minecraft-server.difficulty = "normal";
+            minecraft-server.gamemode = "survival";
+            minecraft-server.max-players = 10;
+            minecraft-server.package = pkgs.vanillaServers.vanilla-26_1;
+            minecraft-server.data-dir = "/home/asakiyuki/HOST/minecraft-servers";
+            minecraft-server.java-opts = "-Xmx4G -Xms2G";
+            minecraft-server.port = 25565;
 
             sql-server.enable = true;
             sql-server.port = 37241;
@@ -22,7 +29,7 @@
             lyrics-server.enable = true;
             lyrics-server.port = 28734;
 
-            public-server.enable = false;
+            public-server.enable = true;
             public-server.port = 37284;
             public-server.path = "/home/PUBLIC";
 
