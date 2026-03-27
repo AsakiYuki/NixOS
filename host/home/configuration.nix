@@ -7,11 +7,11 @@
 
     device = {
         admin-email = "vantrong2007vn@gmail.com";
-        allow-ssh-users = [ "asakiyuki" "junko" "hoacaclord" ];
 
         services = {
             ssh.enable = true;
             ssh.port = 15523;
+            ssh.allowed-users = [ "asakiyuki" "junko" "hoacaclord" ];
 
             sql-server.enable = true;
             sql-server.port = 37241;

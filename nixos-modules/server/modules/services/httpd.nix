@@ -1,7 +1,7 @@
 { config, lib, ... }: let 
     cfg = config.device;
 in  {
-    services.httpd = lib.mkIf cfg.public-server.enable {
+    services.httpd = lib.mkIf cfg.services.public-server.enable {
         enable = true;
         adminAddr = cfg.admin-email;
 
@@ -10,14 +10,14 @@ in  {
 
         virtualHosts = {
             localhost = {
-                documentRoot = cfg.public-server.path;
+                documentRoot = cfg.services.public-server.path;
 
                 listen = [
-                    { ip = "0.0.0.0"; port = cfg.public-server.port; }
+                    { ip = "0.0.0.0"; port = cfg.services.public-server.port; }
                 ];
 
                 extraConfig = ''
-                    <Directory "${cfg.public-server.path}">
+                    <Directory "${cfg.services.public-server.path}">
                         Options -Indexes +FollowSymLinks
                         AllowOverride None
                         Require all granted
@@ -29,5 +29,5 @@ in  {
                 '';
             };
         };
-    }
+    };
 }

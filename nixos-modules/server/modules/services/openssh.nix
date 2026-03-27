@@ -1,13 +1,13 @@
 { config, lib, ... }: let 
     cfg = config.device;
 in  {
-    services.openssh = lib.mkIf cfg.ssh.enable {
+    services.openssh = lib.mkIf cfg.services.ssh.enable {
         enable = true;
-        ports = [ cfg.ssh.port ];
+        ports = [ cfg.services.ssh.port ];
         authorizedKeysInHomedir = true;
         authorizedKeysFiles = [ "/home/asakiyuki/.ssh/authorized_keys" ];
         settings = {
-            AllowUsers = cfg.ssh.allow-ssh-users;
+            AllowUsers = cfg.services.ssh.allowed-users;
             PasswordAuthentication = false;
             KbdInteractiveAuthentication = false;
             AllowAgentForwarding = false;
@@ -15,5 +15,5 @@ in  {
             X11Forwarding = false;
             PermitRootLogin = "no";
         };
-    }
+    };
 }

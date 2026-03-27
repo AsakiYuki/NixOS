@@ -1,3 +1,7 @@
 { pkgs, ... }: {
-    lyrics = import ./lyrics.nix { inherit pkgs; };
+    imports = [
+        ./lyrics.nix
+    ];
+
+    systemd.services = {};
 }

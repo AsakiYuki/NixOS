@@ -8,5 +8,5 @@
         ipv4 = true;
         deleteMissing = false;
         domains = [ "ddns.asakiyuki.com" ];
-    }
+    };
 }

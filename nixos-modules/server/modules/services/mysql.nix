@@ -1,12 +1,12 @@
 { pkgs, config, lib, ... }: let 
     cfg = config.device;
 in  {
-    services.mysql = lib.mkIf cfg.sql-server.enable {
+    services.mysql = lib.mkIf cfg.services.sql-server.enable {
         enable = true; 
         package = pkgs.mariadb;
         settings = {
             mysqld = {
-                port = cfg.sql-server.port;
+                port = cfg.services.sql-server.port;
                 bind-address = "0.0.0.0";
             };
         };
@@ -20,7 +20,7 @@ in  {
         ];
 
         replication = {
-            masterPort = cfg.sql-server.port;
+            masterPort = cfg.services.sql-server.port;
         };
-    }
+    };
 }

@@ -5,11 +5,6 @@
             default = "vantrong2007vn@gmail.com";
             description = "admin email for git";
         };
-        allow-ssh-users = lib.mkOption {
-            type = lib.types.listOf lib.types.str;
-            default = [ "asakiyuki" ];
-            description = "list of allowed ssh users";
-        };
         
         services = {
             ssh = {
@@ -18,6 +13,11 @@
                     type = lib.types.port;
                     default = 22;
                     description = "openssh port";
+                };
+                allowed-users = lib.mkOption {
+                    type = lib.types.listOf lib.types.str;
+                    default = [ "asakiyuki" ];
+                    description = "list of allowed ssh users";
                 };
             };
 

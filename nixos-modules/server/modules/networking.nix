@@ -20,15 +20,15 @@ in {
 
         firewall = {
             enable = true;
-            allowedUDPPorts = cfg.ports.allowed.udp;
-            allowedTCPPorts = cfg.ports.allowed.tcp
+            allowedUDPPorts = cfg_s.ports.allowed.udp;
+            allowedTCPPorts = cfg_s.ports.allowed.tcp
                 ++ [
                     (lib.mkIf cfg_s.ssh.enable cfg_s.ssh.port)
                     (lib.mkIf cfg_s.sql-server.enable cfg_s.sql-server.port)
                     (lib.mkIf cfg_s.lyrics-server.enable cfg_s.lyrics-server.port)
                     (lib.mkIf cfg_s.public-server.enable cfg_s.public-server.port)
                 ]
-                ++ (lib.mkIf cfg_s.nginx-proxy-manager.enable cfg_s.nginx-proxy-manager.port);
+                ++ (if cfg_s.nginx-proxy-manager.enable then cfg_s.nginx-proxy-manager.ports else []);
         };
     };
 }

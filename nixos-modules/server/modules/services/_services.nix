@@ -1,18 +1,15 @@
 { pkgs, ... }: {
     imports = [
-        ./openssh.nix
         ./cloudflare-dyndns.nix
-        ./httpd.nix
-        ./mysql.nix
-        ./logrotate.nix
         ./fail2ban.nix
+        ./httpd.nix
+        ./logrotate.nix
         ./minecraft-server.nix
+        ./mysql.nix
+        ./openssh.nix
     ];
 
     services = {
-        openssh = import ./openssh.nix {};
-        mysql = import ./mysql.nix { inherit pkgs; };
-
         xserver.enable = true;
         pulseaudio.enable = false;
         pipewire.enable = false;
