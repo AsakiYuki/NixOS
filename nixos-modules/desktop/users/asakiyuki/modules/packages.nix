@@ -20,6 +20,7 @@
         osu-lazer
         qbittorrent
         davinci-resolve
+        realvnc-vnc-viewer
         vlc
 
         wineWowPackages.stable
