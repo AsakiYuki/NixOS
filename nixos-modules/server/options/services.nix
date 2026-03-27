@@ -43,7 +43,7 @@
             };
             data-dir = lib.mkOption {
                 type = lib.types.str;
-                default = "/home/asakiyuki/HOST/minecraft-servers";
+                default = "/var/minecraft-servers";
                 description = "minecraft server data dir";
             };
             java-opts = lib.mkOption {

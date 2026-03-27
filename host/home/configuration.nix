@@ -19,7 +19,7 @@
             minecraft-server.gamemode = "survival";
             minecraft-server.max-players = 10;
             minecraft-server.package = pkgs.vanillaServers.vanilla-26_1;
-            minecraft-server.data-dir = "/home/minecraft-servers";
+            minecraft-server.data-dir = "/var/minecraft-servers";
             minecraft-server.java-opts = "-Xmx4G -Xms2G";
             minecraft-server.port = 25565;
 
