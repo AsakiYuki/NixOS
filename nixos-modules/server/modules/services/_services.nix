@@ -13,5 +13,10 @@
         pulseaudio.enable = false;
         pipewire.enable = false;
         desktopManager.plasma6.enable = true;
+
+        adguardhome = {
+            enable = true;
+            openFirewall = true;
+        };
     };
 }
