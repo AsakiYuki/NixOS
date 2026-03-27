@@ -1,5 +1,7 @@
 { inputs, ... }: {
     imports = [
+        inputs.nix-minecraft.nixosModules.minecraft-servers
+
         ./users/users.nix
 
         ./options/_options.nix
@@ -13,8 +15,6 @@
         ./modules/systemd/_systemd.nix
         ./modules/virtualisation/_virtualisation.nix
         ./modules/programs/_programs.nix
-
-        inputs.nix-minecraft.nixosModules.minecraft-servers
     ];
 
     boot.loader.systemd-boot.enable = true;
