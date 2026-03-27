@@ -1,5 +1,5 @@
 {
-    description = "Asa's Nix configuration (Server & WSL)";
+    description = "The Asa's nix configuration";
 
     inputs = {
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
