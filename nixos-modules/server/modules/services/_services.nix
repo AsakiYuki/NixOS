@@ -6,6 +6,7 @@
         ./logrotate.nix
         ./mysql.nix
         ./openssh.nix
+	./adguardhome.nix
     ];
 
     services = {
