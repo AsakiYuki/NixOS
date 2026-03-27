@@ -1,11 +1,16 @@
 { pkgs, ... }: {
+    imports = [
+        ./openssh.nix
+        ./cloudflare-dyndns.nix
+        ./httpd.nix
+        ./mysql.nix
+        ./logrotate.nix
+        ./fail2ban.nix
+    ];
+
     services = {
         openssh = import ./openssh.nix {};
-        cloudflare-dyndns = import ./cloudflare-dyndns.nix {};
-        httpd = import ./httpd.nix {};
         mysql = import ./mysql.nix { inherit pkgs; };
-        logrotate = import ./logrotate.nix;
-        fail2ban = import ./fail2ban.nix;
 
         xserver.enable = true;
         pulseaudio.enable = false;

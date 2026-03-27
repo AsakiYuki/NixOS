@@ -11,9 +11,9 @@
             description = "list of allowed ssh users";
         };
         
-        services = rec {
+        services = {
             ssh = {
-                enable = lib.mkEnableDefault "ssh";
+                enable = lib.mkEnableOption "ssh";
                 port = lib.mkOption {
                     type = lib.types.port;
                     default = 22;
@@ -22,7 +22,7 @@
             };
 
             sql-server = {
-                enable = lib.mkEnableDefault "sql server";
+                enable = lib.mkEnableOption "sql server";
                 port = lib.mkOption {
                     type = lib.types.port;
                     default = 1433;
@@ -31,7 +31,7 @@
             };
 
             lyrics-server = {
-                enable = lib.mkEnableDefault "lyrics server";
+                enable = lib.mkEnableOption "lyrics server";
                 port = lib.mkOption {
                     type = lib.types.port;
                     default = 28734;
@@ -40,7 +40,7 @@
             };
 
             public-server = {
-                enable = lib.mkEnableDefault "public server";
+                enable = lib.mkEnableOption "public server";
                 path = lib.mkOption {
                     type = lib.types.str;
                     default = "/home/PUBLIC";
@@ -54,10 +54,10 @@
             };
 
             nginx-proxy-manager = {
-                enable = lib.mkEnableDefault "nginx proxy manager";
+                enable = lib.mkEnableOption "nginx proxy manager";
                 ports = lib.mkOption {
                     type = lib.types.listOf lib.types.port;
-                    default = [ 80 18581 443 ];
+                    default = [ 80 81 443 ];
                     description = "nginx proxy manager";
                 };
             };

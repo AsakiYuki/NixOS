@@ -1,5 +1,6 @@
-{ config, ... }: let 
+{ config, lib, ... }: let 
     cfg = config.device;
+    cfg_s = cfg.services;
 in {
     networking = {
         useDHCP = false;
@@ -20,7 +21,14 @@ in {
         firewall = {
             enable = true;
             allowedUDPPorts = cfg.ports.allowed.udp;
-            allowedTCPPorts = cfg.ports.allowed.tcp;
+            allowedTCPPorts = cfg.ports.allowed.tcp
+                ++ [
+                    (lib.mkIf cfg_s.ssh.enable cfg_s.ssh.port)
+                    (lib.mkIf cfg_s.sql-server.enable cfg_s.sql-server.port)
+                    (lib.mkIf cfg_s.lyrics-server.enable cfg_s.lyrics-server.port)
+                    (lib.mkIf cfg_s.public-server.enable cfg_s.public-server.port)
+                ]
+                ++ (lib.mkIf cfg_s.nginx-proxy-manager.enable cfg_s.nginx-proxy-manager.port);
         };
     };
 }

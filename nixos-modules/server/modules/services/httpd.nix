@@ -1,31 +1,33 @@
-{ ... }: let
-    GLOBAL = import ../../_global.nix;
-in {
-    enable = true;
-    adminAddr = GLOBAL.ADMIN_EMAIL;
+{ config, lib, ... }: let 
+    cfg = config.device;
+in  {
+    services.httpd = lib.mkIf cfg.public-server.enable {
+        enable = true;
+        adminAddr = cfg.admin-email;
 
-    user = "static";
-    group = "public";
+        user = "static";
+        group = "public";
 
-    virtualHosts = {
-        localhost = {
-            documentRoot = GLOBAL.SERVER.PUBLIC_FOLDERS.PATH;
+        virtualHosts = {
+            localhost = {
+                documentRoot = cfg.public-server.path;
 
-            listen = [
-                { ip = "0.0.0.0"; port = GLOBAL.SERVER.PUBLIC_FOLDERS.PORT; }
-            ];
+                listen = [
+                    { ip = "0.0.0.0"; port = cfg.public-server.port; }
+                ];
 
-            extraConfig = ''
-                <Directory "${GLOBAL.SERVER.PUBLIC_FOLDERS.PATH}">
-                    Options -Indexes +FollowSymLinks
-                    AllowOverride None
-                    Require all granted
+                extraConfig = ''
+                    <Directory "${cfg.public-server.path}">
+                        Options -Indexes +FollowSymLinks
+                        AllowOverride None
+                        Require all granted
 
-                    <LimitExcept GET HEAD OPTIONS>
-                        Require all denied
-                    </LimitExcept>
-                </Directory>
-            '';
+                        <LimitExcept GET HEAD OPTIONS>
+                            Require all denied
+                        </LimitExcept>
+                    </Directory>
+                '';
+            };
         };
-    };
+    }
 }
