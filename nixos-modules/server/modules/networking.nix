@@ -1,5 +1,5 @@
-{ ... }: let 
-    GLOBAL = import ../_global.nix;
+{ config, ... }: let 
+    cfg = config.device;
 in {
     networking = {
         useDHCP = false;
@@ -19,8 +19,8 @@ in {
 
         firewall = {
             enable = true;
-            allowedUDPPorts = GLOBAL.SERVER.ALLOWED_UDP_PORTS;
-            allowedTCPPorts = GLOBAL.SERVER.ALLOWED_TCP_PORTS;
+            allowedUDPPorts = cfg.ports.allowed.udp;
+            allowedTCPPorts = cfg.ports.allowed.tcp;
         };
     };
 }

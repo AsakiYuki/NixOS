@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ inputs, pkgs, ... }: {
     nixpkgs.overlays = [ inputs.nix-minecraft.overlay ];
     services.minecraft-servers = {
         enable = true;
@@ -10,7 +10,7 @@
             autoStart = true;
             enableReload = true;
             jvmOpts = "-Xmx4G -Xms2G";
-            package = pkgs.minecraftServers.vanilla-server;
+            package = pkgs.vanillaServers.vanilla-26_1;
             
             serverProperties = {
                 server-port = 43000;
@@ -19,8 +19,6 @@
                 max-players = 10;
                 motd = "The Asa's Craft!";
                 white-list = true;
-                # enable-rcon = true;
-                # "rcon.password" = "hunter2";
             };
         };
     };

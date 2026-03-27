@@ -1,2 +1,5 @@
 { ... }: {
+    options.device = {
+
+    };
 }

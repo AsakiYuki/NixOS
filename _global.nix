@@ -1,0 +1,23 @@
+# let
+#     ADMIN_EMAIL = "vantrong2007vn@gmail.com";
+#     ALLOWED_SSH_USERS = [ "asakiyuki" "junko" "hoacaclord" ];
+    
+#     SSH_PORT = 15523;
+#     SQL_SERVER_PORT = 37241;
+#     LYRICS_SERVICE_PORT = 28734;
+#     PUBLIC_FOLDERS_PORT = 37284;
+#     NGINX_PROXY_MANAGER_PORTS = [ 80 18581 443 ];
+
+#     ALLOWED_UDP_PORTS = [];
+#     ALLOWED_TCP_PORTS = [ PUBLIC_FOLDERS_PORT LYRICS_SERVICE_PORT 23841 9825 ];
+# in {
+#     inherit SSH_PORT ALLOWED_SSH_USERS ADMIN_EMAIL SQL_SERVER_PORT;
+#     SERVER = {
+#         PUBLIC_FOLDERS = {
+#             PATH = "/home/PUBLIC";
+#             PORT = PUBLIC_FOLDERS_PORT;
+#         };
+#         ALLOWED_UDP_PORTS = ALLOWED_UDP_PORTS ++ [ ];
+#         ALLOWED_TCP_PORTS = ALLOWED_TCP_PORTS ++ NGINX_PROXY_MANAGER_PORTS ++ [ SSH_PORT ];
+#     };
+# }
