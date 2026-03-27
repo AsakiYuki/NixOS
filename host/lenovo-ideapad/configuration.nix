@@ -1,8 +1,8 @@
-{ inputs, pkgs, ... }: {
+{ inputs, pkgs, root, libs, ... }: {
     # Import Modules
     imports = [
         ./hardware-configuration.nix
-        ../../nixos-modules/desktop/configuration.nix
+        (libs.root "/nixos-modules/desktop/configuration.nix")
     ];
     
     device = {

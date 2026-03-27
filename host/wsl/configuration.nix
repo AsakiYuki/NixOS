@@ -1,7 +1,7 @@
-{ inputs, pkgs, nixos-wsl, ... }: {
+{ inputs, pkgs, nixos-wsl, root, libs, ... }: {
     # Import Modules
     imports = [
-        ../../nixos-modules/wsl/default.nix
+        (libs.root "/nixos-modules/desktop/configuration.nix")
     ];
 
     # NixOS Config
