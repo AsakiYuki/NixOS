@@ -4,10 +4,10 @@
 
         ./options/_options.nix
 
+        ./modules/nixpkgs.nix
         ./modules/networking.nix
         ./modules/packages.nix
         ./modules/services/minecraft-server.nix
-        ./modules/nixpkgs.nix
         
         ./modules/services/_services.nix
         ./modules/systemd/_systemd.nix
@@ -21,6 +21,5 @@
     boot.loader.efi.canTouchEfiVariables = true;
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
-    nixpkgs.config.allowUnfree = true;
     time.timeZone = "Asia/Ho_Chi_Minh";
 }
