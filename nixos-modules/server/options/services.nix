@@ -41,11 +41,6 @@
                 default = pkgs.vanillaServers.vanilla-26_1;
                 description = "minecraft server package";
             };
-            data-dir = lib.mkOption {
-                type = lib.types.str;
-                default = "/minecraft-servers";
-                description = "minecraft server data dir";
-            };
             java-opts = lib.mkOption {
                 type = lib.types.str;
                 default = "-Xmx4G -Xms2G";

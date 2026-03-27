@@ -6,7 +6,6 @@ in  {
         enable = true;
         eula = true;
         openFirewall = true;
-        dataDir = cfg.data-dir;
         servers.vanilla = {
             enable = true;
             autoStart = true;
