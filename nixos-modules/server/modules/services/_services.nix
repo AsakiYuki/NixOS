@@ -4,7 +4,6 @@
         ./fail2ban.nix
         ./httpd.nix
         ./logrotate.nix
-        ./minecraft-server.nix
         ./mysql.nix
         ./openssh.nix
     ];
