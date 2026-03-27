@@ -1,4 +1,4 @@
-{ ... }: {
+{
     shellAliases = {
         cls = "clear";
         cleanup = "sudo nix-collect-garbage -d";

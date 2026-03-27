@@ -1,4 +1,4 @@
-{ ... }: {
+{
     config = {
         init = {
             defaultBranch = "main";
