@@ -1,5 +1,5 @@
 { inputs, pkgs, config, lib, ... }: let 
-    cfg = config.services.device.minecraft-server;
+    cfg = config.device.services.minecraft-server;
 in  {
     nixpkgs.overlays = [ inputs.nix-minecraft.overlay ];
     services.minecraft-servers = lib.mkIf cfg.enable {
