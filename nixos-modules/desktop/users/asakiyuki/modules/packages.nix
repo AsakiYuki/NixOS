@@ -37,6 +37,7 @@
         vesktop
         freerdp
         osu-lazer
+        lsfg-vk
     ];
 
     CUSTOM_PKGS = [
