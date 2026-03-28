@@ -17,7 +17,6 @@
         chromium
         cider-2
         gimp
-        osu-lazer
         qbittorrent
         davinci-resolve
         tigervnc
@@ -37,6 +36,7 @@
         prismlauncher
         vesktop
         freerdp
+        osu-lazer
     ];
 
     CUSTOM_PKGS = [
