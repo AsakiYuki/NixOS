@@ -37,8 +37,7 @@
         vesktop
         freerdp
         osu-lazer
-        
-        lsfg-vk
+
         lsfg-vk-ui
     ];
 
