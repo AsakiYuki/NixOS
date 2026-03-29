@@ -28,6 +28,8 @@
     ];
     
     UNSTABLE_PKGS = with unstable; [
+        gamescope
+        
         proton-pass
         vscode
         proton-authenticator
@@ -37,10 +39,12 @@
         osu-lazer
         winetricks
         protontricks
-        gamescope
         lmstudio
-
+        
+        lsfg-vk
         lsfg-vk-ui
+
+        jetbrains.datagrip
     ];
 
     CUSTOM_PKGS = [
