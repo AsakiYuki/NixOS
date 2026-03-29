@@ -24,8 +24,6 @@
 
         wineWowPackages.stable
         winboat
-        winetricks
-        protontricks
         php
     ];
     
@@ -37,6 +35,10 @@
         vesktop
         freerdp
         osu-lazer
+        winetricks
+        protontricks
+        gamescope
+        lmstudio
 
         lsfg-vk-ui
     ];
