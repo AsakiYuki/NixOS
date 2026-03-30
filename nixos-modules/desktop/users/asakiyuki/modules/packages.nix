@@ -48,7 +48,6 @@
         jetbrains.datagrip
         jetbrains.idea
         jetbrains.rider
-        jetbrains.phpstorm
         jetbrains.clion
         jetbrains.rust-rover
         jetbrains.ruby-mine
