@@ -40,6 +40,7 @@
         winetricks
         protontricks
         lmstudio
+        blender
 
         lsfg-vk
         lsfg-vk-ui
