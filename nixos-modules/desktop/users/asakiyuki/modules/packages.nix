@@ -41,6 +41,7 @@
         winetricks
         protontricks
         lmstudio
+        lutris
 
         lsfg-vk
         lsfg-vk-ui
