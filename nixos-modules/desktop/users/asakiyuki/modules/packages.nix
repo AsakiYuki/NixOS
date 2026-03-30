@@ -10,6 +10,7 @@
         wl-clipboard-rs
 
         waydroid-helper
+        blender
         easyeffects
         protonup-qt
         pavucontrol
@@ -40,7 +41,6 @@
         winetricks
         protontricks
         lmstudio
-        blender
 
         lsfg-vk
         lsfg-vk-ui
