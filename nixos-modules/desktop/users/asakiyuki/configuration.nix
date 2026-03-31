@@ -9,6 +9,6 @@
     home = {
         username = "asakiyuki";
         stateVersion = "25.11";
-        pointerCursor = import (asa-lib.root "/packages/aemeath-cursors.nix.nix") { inherit pkgs; };
+        pointerCursor = import (asa-lib.root "/packages/aemeath-cursors.nix") { inherit pkgs; };
     };
 }

@@ -16,4 +16,4 @@ let
     in getFrom 
         "https://static.asakiyuki.com/nixos/aemeath-cusros.tar.gz"
         "sha256-0eEsUks5MwW4g5Xau24SgchX+LD9Ra3azAH0KL9JzQw="
-        "aemeath-cursors";
+        "aemeath-cursors"
