@@ -7,6 +7,7 @@
     
     device = {
         flake-name = "lenovo-ideapad";
+        cursors = "aemeath";
 
         services = {
             steam = true;
