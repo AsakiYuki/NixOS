@@ -1,4 +1,4 @@
-{ url, hash, name, size = 48, }: {
+{ url, hash, name, size ? 48 }: {
     cursors = { pkgs, ... }: {
         gtk.enable = true;
         x11.enable = true;
@@ -8,6 +8,5 @@
                 mkdir -p $out/share/icons
                 ln -s ${pkgs.fetchzip {inherit url hash;}} $out/share/icons/${name}
             '';
-        };
-    }
+    };
 }

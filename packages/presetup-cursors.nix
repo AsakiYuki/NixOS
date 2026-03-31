@@ -14,4 +14,4 @@
         url = "https://static.asakiyuki.com/nixos/elysia-cursors.tar.gz";
         hash = "sha256-mjDHklWrX5Pp/vejRQiMk0VA6afY04HXGyGD0PcopdI=";
     };
-},
+}
