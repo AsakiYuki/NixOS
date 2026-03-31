@@ -16,6 +16,11 @@
             "elysia"
             "https://static.asakiyuki.com/cursors/linux/elysia.tar.gz"
             "sha256-mjDHklWrX5Pp/vejRQiMk0VA6afY04HXGyGD0PcopdI=";
+
+        cartethyia = _b
+            "cartethyia"
+            "https://static.asakiyuki.com/cursors/linux/cartethyia.tar.gz"
+            "sha256-jYIDoX+rfUjw6LXrqE4y8j5IL0vByrrRkgRuz08Zy6U=";
     
     }).${cursors};
 in {
