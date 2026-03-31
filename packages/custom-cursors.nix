@@ -1,18 +1,18 @@
 { cursors ? "aemeath", size ? 48 }: let 
     cursors-data = ({
         castorice = {
-            name = "castorice-cursors";
-            url = "https://static.asakiyuki.com/nixos/castorice-cursors.tar.gz";
+            name = "castorice";
+            url = "https://static.asakiyuki.com/cursors/linux/castorice.tar.gz";
             hash = "sha256-nqAC+Itr+TXLGG8zYDBoBve+MeRckds5BM23DrsCTMM=";
         };
         aemeath = {
-            name = "aemeath-cursors";
-            url = "https://static.asakiyuki.com/nixos/aemeath-cursors.tar.gz";
+            name = "aemeath";
+            url = "https://static.asakiyuki.com/cursors/linux/aemeath.tar.gz";
             hash = "sha256-0eEsUks5MwW4g5Xau24SgchX+LD9Ra3azAH0KL9JzQw=";
         };
         elysia = {
-            name = "elysia-cursors";
-            url = "https://static.asakiyuki.com/nixos/elysia-cursors.tar.gz";
+            name = "elysia";
+            url = "https://static.asakiyuki.com/cursors/linux/elysia.tar.gz";
             hash = "sha256-mjDHklWrX5Pp/vejRQiMk0VA6afY04HXGyGD0PcopdI=";
         };
     }).${cursors};

@@ -9,6 +9,6 @@
     home = {
         username = "asakiyuki";
         stateVersion = "25.11";
-        pointerCursor = (import (asa-lib.root "/packages/custom-cursors.nix") { name = osconfig.device.cursors; }) { inherit pkgs; };
+        pointerCursor = (import (asa-lib.root "/packages/custom-cursors.nix") { cursors = osconfig.device.cursors; }).cursors { pkgs = pkgs; };
     };
 }
