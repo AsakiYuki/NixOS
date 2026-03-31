@@ -8,6 +8,7 @@
         ruby
         rPackages.gems
         wl-clipboard-rs
+        win2xcur
 
         waydroid-helper
         libreoffice-qt-fresh
