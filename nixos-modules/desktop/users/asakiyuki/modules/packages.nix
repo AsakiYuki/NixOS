@@ -10,6 +10,7 @@
         wl-clipboard-rs
 
         waydroid-helper
+        libreoffice-qt-fresh
         blender
         easyeffects
         protonup-qt
