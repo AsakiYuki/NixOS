@@ -19,6 +19,8 @@
         superfile
         p7zip
 
+        freetype
+
         fcitx5-material-color
     ]) ++ (with pkgs.kdePackages; [
         kde-gtk-config
