@@ -7,7 +7,7 @@
 
         nixcord.url = "github:FlameFlag/nixcord";
         hytale-launcher.url = "github:zarilion/hytale-launcher-nix";
-        honkai-railway-grub-theme.url = "github:voidlhf/StarRailGrubThemes";
+        honkai-railway-grub-theme.url = "github:voidlhf/StarRailGrubThemes/4a84e576bb544afbdfc76dbe40ffc50a5c2b16de";
         
         nix-index-database = {
             url = "github:nix-community/nix-index-database";
