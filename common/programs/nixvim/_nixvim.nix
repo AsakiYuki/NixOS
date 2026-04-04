@@ -6,6 +6,8 @@
     };
     
     imports = [
+        ./keymaps/_keymaps.nix
+
         ./plugins/_plugins.nix
         ./plugins/_extraPlugins.nix
     ];
