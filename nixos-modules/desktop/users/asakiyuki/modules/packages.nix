@@ -9,6 +9,7 @@
         rPackages.gems
         wl-clipboard-rs
         win2xcur
+	python315
 
         waydroid-helper
         libreoffice-qt-fresh
