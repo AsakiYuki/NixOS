@@ -1,4 +1,5 @@
 { ... }: {
     programs.nixvim.keymaps = []
-        ++ (import ./_default.nix);
+        ++ (import ./_default.nix)
+        ++ (import ./barbar.nix);
 }
