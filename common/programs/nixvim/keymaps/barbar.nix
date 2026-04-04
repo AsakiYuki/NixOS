@@ -23,6 +23,12 @@
         action = "<cmd>BufferMoveNext<CR>";
         options.silent = true;
     }
+    {
+        mode = "n";
+        key = "<A-c>";
+        action = "<Cmd>BufferClose<CR>";
+        options.silent = true;
+    }
 ] ++ (
     builtins.genList (i: {
         mode = "n";

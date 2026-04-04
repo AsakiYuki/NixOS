@@ -18,6 +18,8 @@
                 keybind = [
                     "ctrl+c=copy_to_clipboard"
                     "ctrl+v=paste_from_clipboard"
+                    "ctrl+shift+n=unbind"
+                    "ctrl+shift+i=unbind"
                 ];
             };
 

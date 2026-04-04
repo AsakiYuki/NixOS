@@ -16,7 +16,9 @@
         nvim-autopairs.enable = true;
         bufferline.enable = true;
         luasnip.enable = true;
+        friendly-snippets.enable = true;
         indent-blankline.enable = true;
         barbar.enable = true;
+        toggleterm.enable = true;
     };
 }
