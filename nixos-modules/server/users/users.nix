@@ -22,15 +22,10 @@ in {
                 isSystemUser = true;
                 group = "public";
             };
-            minecraft = {
-                isSystemUser = true;
-                group = "minecraft";
-            };
         };
 
         groups = {
             public = {};
-            minecraft = {};
         };
     };
 
