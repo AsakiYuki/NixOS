@@ -1,9 +1,10 @@
 { ... }@inputs:
 {
     programs.nixvim.plugins = {
-        nvim-tree = import ./nvimtree.nix;
+        nvim-tree = import ./nvimtree.nix inputs;
         cmp = import ./cmp.nix inputs;
-        lps = import ./lsp.nix inputs;
+        lsp = import ./lsp.nix inputs;
+        lspkind = import ./lspkind.nix inputs;
 
         web-devicons.enable = true;
         which-key.enable = true;
