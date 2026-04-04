@@ -20,5 +20,6 @@
         indent-blankline.enable = true;
         barbar.enable = true;
         toggleterm.enable = true;
+	auto-save.enable = true;
     };
 }
