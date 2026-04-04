@@ -10,6 +10,7 @@ let
 
     OPTIONS = ''
         set-option -g destroy-unattached on
+        set -g allow-passthrough on
     '';
 
     BINDS = ''
