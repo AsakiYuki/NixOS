@@ -6,6 +6,6 @@
         ts_ls.enable = true;
         html.enable = true;
         phpactor.enable = true;
-	cssls.enable = true;
+    	cssls.enable = true;
     };
 }

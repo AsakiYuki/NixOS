@@ -1,6 +1,6 @@
 { ... }@inputs:
 {
-    programs.nixvim.plugins = {
+    plugins = {
         nvim-tree = import ./nvimtree.nix inputs;
         cmp = import ./cmp.nix inputs;
         lsp = import ./lsp.nix inputs;

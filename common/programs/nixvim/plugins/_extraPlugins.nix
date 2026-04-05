@@ -10,8 +10,6 @@ let
     ];
 in
 {
-    programs.nixvim = {
-        extraPlugins = map (path: import path { plugins = pkgs.vimPlugins; }) EXTRA_PLUGINS;
-        extraConfigLua = builtins.concatStringsSep "\n" (map builtins.readFile LUA);
-    };
+    extraPlugins = map (path: import path { plugins = pkgs.vimPlugins; }) EXTRA_PLUGINS;
+    extraConfigLua = builtins.concatStringsSep "\n" (map builtins.readFile LUA);
 }

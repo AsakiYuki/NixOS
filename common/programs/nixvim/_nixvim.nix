@@ -1,23 +1,9 @@
-{ pkgs, ... }:
-{
-    programs.nixvim = {
-        enable = true;
-        colorschemes.catppuccin.enable = true;
+{ pkgs, config, ... }: let
+    helpers = config.lib.nixvim; 
+in {
+    programs.nixvim.imports = [
+        ./default.nix
 
-        opts = {
-            number = true;
-            relativenumber = true;
-	    
-	        tabstop = 4;
-	        shiftwidth = 4;
-	        expandtab = true;
-	        softtabstop = 4;
-
-            clipboard = "unnamedplus";
-        };
-    };
-    
-    imports = [
         ./keymaps/_keymaps.nix
 
         ./plugins/_plugins.nix
