@@ -5,6 +5,7 @@
         cmp = import ./cmp.nix inputs;
         lsp = import ./lsp.nix inputs;
         lspkind = import ./lspkind.nix inputs;
+        lazy = import ./lazy-nvim.nix inputs;
 
         web-devicons.enable = true;
         which-key.enable = true;
@@ -20,6 +21,6 @@
         indent-blankline.enable = true;
         barbar.enable = true;
         toggleterm.enable = true;
-	auto-save.enable = true;
+	    auto-save.enable = true;
     };
 }
