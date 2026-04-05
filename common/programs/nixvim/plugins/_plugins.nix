@@ -5,6 +5,7 @@
         cmp = import ./cmp.nix inputs;
         lsp = import ./lsp.nix inputs;
         lspkind = import ./lspkind.nix inputs;
+        conform-nvim = import ./conform-nvim.nix inputs;
 
         web-devicons.enable = true;
         lz-n.enable = true;
