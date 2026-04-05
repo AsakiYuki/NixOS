@@ -5,14 +5,13 @@
         cmp = import ./cmp.nix inputs;
         lsp = import ./lsp.nix inputs;
         lspkind = import ./lspkind.nix inputs;
-        lazy = import ./lazy-nvim.nix inputs;
 
         web-devicons.enable = true;
+        lz-n.enable = true;
         which-key.enable = true;
         treesitter.enable = true;
         lualine.enable = true;
         neoscroll.enable = true;
-        lz-n.enable = true;
         image.enable = true;
         nvim-autopairs.enable = true;
         bufferline.enable = true;
