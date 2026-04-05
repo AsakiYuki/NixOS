@@ -1,26 +1,27 @@
 { ... }@inputs:
 {
-    plugins = {
-        nvim-tree = import ./nvimtree.nix inputs;
-        cmp = import ./cmp.nix inputs;
-        lsp = import ./lsp.nix inputs;
-        lspkind = import ./lspkind.nix inputs;
-        conform-nvim = import ./conform-nvim.nix inputs;
+  plugins = {
+    nvim-tree = import ./nvimtree.nix inputs;
+    cmp = import ./cmp.nix inputs;
+    lsp = import ./lsp.nix inputs;
+    lspkind = import ./lspkind.nix inputs;
+    conform-nvim = import ./conform-nvim.nix inputs;
+    which-key = import ./which-key.nix inputs;
 
-        web-devicons.enable = true;
-        lz-n.enable = true;
-        which-key.enable = true;
-        treesitter.enable = true;
-        lualine.enable = true;
-        neoscroll.enable = true;
-        image.enable = true;
-        nvim-autopairs.enable = true;
-        bufferline.enable = true;
-        luasnip.enable = true;
-        friendly-snippets.enable = true;
-        indent-blankline.enable = true;
-        barbar.enable = true;
-        toggleterm.enable = true;
-	    auto-save.enable = true;
-    };
+    web-devicons.enable = true;
+    lz-n.enable = true;
+    treesitter.enable = true;
+    lualine.enable = true;
+    neoscroll.enable = true;
+    image.enable = true;
+    nvim-autopairs.enable = true;
+    bufferline.enable = true;
+    luasnip.enable = true;
+    friendly-snippets.enable = true;
+    indent-blankline.enable = true;
+    barbar.enable = true;
+    toggleterm.enable = true;
+    auto-save.enable = true;
+    visual-multi.enable = true;
+  };
 }

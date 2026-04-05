@@ -9,8 +9,9 @@
 	    
 	    tabstop = 4;
 	    shiftwidth = 4;
-	    expandtab = true;
 	    softtabstop = 4;
+        smartindent = true;
+	    expandtab = true;
 
         clipboard = "unnamedplus";
     };
