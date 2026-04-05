@@ -9,7 +9,8 @@
         rPackages.gems
         wl-clipboard-rs
         win2xcur
-	python315
+    	python315
+        rclone
 
         waydroid-helper
         libreoffice-qt-fresh

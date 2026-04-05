@@ -1,5 +1,0 @@
-{ ... }: {
-	programs.rclone = {
-		enable = true;
-	};
-}
