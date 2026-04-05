@@ -1,6 +1,8 @@
-{ ... }: {
-    services.udev = {
-        enable = true;
-        extraRules = '''';
-    };
+{ ... }:
+{
+  services.udev = {
+    enable = true;
+    extraRules = "";
+  };
 }
+

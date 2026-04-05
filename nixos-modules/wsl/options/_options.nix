@@ -1,5 +1,7 @@
-{ ... }: {
-    options.device = {
+{ ... }:
+{
+  options.device = {
 
-    };
+  };
 }
+

@@ -1,10 +1,11 @@
-{ pkgs, lib, ... }: {
-     imports = [
-          ./programs/_programs.nix
-     ];
+{ ... }:
+{
+  imports = [
+    ./programs/_programs.nix
+  ];
 
-     home = {
-          username = "hoacaclord";
-          stateVersion = "25.11";
-     };
+  home = {
+    username = "hoacaclord";
+    stateVersion = "25.11";
+  };
 }

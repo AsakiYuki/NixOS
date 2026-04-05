@@ -1,13 +1,14 @@
-{ pkgs, config, ... }: {
-    programs.nixvim.imports = [
-        ./default.nix
-        ./extra-packages.nix
+{ pkgs, config, ... }:
+{
+  programs.nixvim.imports = [
+    ./default.nix
+    ./extra-packages.nix
 
-        ./keymaps/_keymaps.nix
+    ./keymaps/_keymaps.nix
 
-        ./plugins/_plugins.nix
-        ./plugins/_extraPlugins.nix
+    ./plugins/_plugins.nix
+    ./plugins/_extraPlugins.nix
 
-        ./lua/_lua.nix
-    ];
+    ./lua/_lua.nix
+  ];
 }

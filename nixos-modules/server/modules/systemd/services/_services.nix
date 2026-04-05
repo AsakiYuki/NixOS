@@ -1,7 +1,9 @@
-{ pkgs, ... }: {
-    imports = [
-        ./lyrics.nix
-    ];
+{ pkgs, ... }:
+{
+  imports = [
+    ./lyrics.nix
+  ];
 
-    systemd.services = {};
+  systemd.services = { };
 }
+

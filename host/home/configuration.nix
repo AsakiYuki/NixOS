@@ -1,37 +1,59 @@
-{ inputs, pkgs, root, asa-lib, ... }: {
-    # Import Modules
-    imports = [
-        ./hardware-configuration.nix
-        (asa-lib.root "/nixos-modules/server/configuration.nix")
-    ];
+{
+  inputs,
+  pkgs,
+  root,
+  asa-lib,
+  ...
+}:
+{
+  # Import Modules
+  imports = [
+    ./hardware-configuration.nix
+    (asa-lib.root "/nixos-modules/server/configuration.nix")
+  ];
 
-    device = {
-        admin-email = "vantrong2007vn@gmail.com";
+  device = {
+    admin-email = "vantrong2007vn@gmail.com";
 
-        services = {
-            vnc-port = 45682;
+    services = {
+      vnc-port = 45682;
 
-            ssh.enable = true;
-            ssh.port = 15523;
-            ssh.allowed-users = [ "asakiyuki" "junko" "hoacaclord" ];   
+      ssh.enable = true;
+      ssh.port = 15523;
+      ssh.allowed-users = [
+        "asakiyuki"
+        "junko"
+        "hoacaclord"
+      ];
 
-            sql-server.enable = true;
-            sql-server.port = 37241;
+      sql-server.enable = true;
+      sql-server.port = 37241;
 
-            lyrics-server.enable = true;
-            lyrics-server.port = 28734;
+      lyrics-server.enable = true;
+      lyrics-server.port = 28734;
 
-            public-server.enable = true;
-            public-server.port = 37284;
-            public-server.path = "/home/PUBLIC";
+      public-server.enable = true;
+      public-server.port = 37284;
+      public-server.path = "/home/PUBLIC";
 
-            nginx-proxy-manager.enable = true;
-            nginx-proxy-manager.ports = [ 80 18581 443 ];
+      nginx-proxy-manager.enable = true;
+      nginx-proxy-manager.ports = [
+        80
+        18581
+        443
+      ];
 
-            ports.allowed.udp = [ 53 34778 ];
-            ports.allowed.tcp = [ 53 8443 583 ];
-        };
+      ports.allowed.udp = [
+        53
+        34778
+      ];
+      ports.allowed.tcp = [
+        53
+        8443
+        583
+      ];
     };
+  };
 
-    system.stateVersion = "25.11";
+  system.stateVersion = "25.11";
 }

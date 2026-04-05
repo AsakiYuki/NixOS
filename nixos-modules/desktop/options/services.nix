@@ -1,5 +1,7 @@
-{ lib, ... }: {
-    options.device.services = {
-        steam = lib.mkEnableOption "steam";
-    };
+{ lib, ... }:
+{
+  options.device.services = {
+    steam = lib.mkEnableOption "steam";
+  };
 }
+

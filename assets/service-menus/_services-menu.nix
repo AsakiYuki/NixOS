@@ -1,4 +1,5 @@
 [
-    "openwithcode"
-    "copypublicurl"
+  "openwithcode"
+  "copypublicurl"
 ]
+

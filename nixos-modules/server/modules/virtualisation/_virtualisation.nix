@@ -1,5 +1,7 @@
-{ ... }: {
-    virtualisation = {
-        docker = import ./docker.nix {};
-    };
+{ ... }:
+{
+  virtualisation = {
+    docker = import ./docker.nix { };
+  };
 }
+

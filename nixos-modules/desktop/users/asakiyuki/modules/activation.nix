@@ -1,3 +1,5 @@
-{ ... }: {
-    home.activation = {};
+{ ... }:
+{
+  home.activation = { };
 }
+

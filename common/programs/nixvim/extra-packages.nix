@@ -1,5 +1,7 @@
-{ pkgs, ... }: {
-    extraPackages = with pkgs; [
-        nodePackages.prettier
-    ];
+{ pkgs, ... }:
+{
+  extraPackages = with pkgs; [
+    nodePackages.prettier
+  ];
 }
+

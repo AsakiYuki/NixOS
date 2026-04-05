@@ -1,6 +1,7 @@
-{ pkgs, lib, ... }: {
-     home = {
-          username = "public";
-          stateVersion = "25.11";
-     };
+{ pkgs, lib, ... }:
+{
+  home = {
+    username = "public";
+    stateVersion = "25.11";
+  };
 }

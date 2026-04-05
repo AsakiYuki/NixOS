@@ -1,3 +1,5 @@
-{ pkgs, ... }: {
-    imports = [];
+{ pkgs, ... }:
+{
+  imports = [ ];
 }
+

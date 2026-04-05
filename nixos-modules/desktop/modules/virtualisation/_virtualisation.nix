@@ -1,10 +1,12 @@
-{ pkgs, ... }: {
-    imports = [
-        ./docker.nix
-    ];
+{ pkgs, ... }:
+{
+  imports = [
+    ./docker.nix
+  ];
 
-    virtualisation = {
-        waydroid.enable = true;
-        waydroid.package = pkgs.waydroid-nftables;
-    };
+  virtualisation = {
+    waydroid.enable = true;
+    waydroid.package = pkgs.waydroid-nftables;
+  };
 }
+

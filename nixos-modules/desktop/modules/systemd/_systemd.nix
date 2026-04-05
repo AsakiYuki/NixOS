@@ -1,7 +1,9 @@
-{ ... }: {
-    imports = [ 
-        ./services/_services.nix
-    ];
+{ ... }:
+{
+  imports = [
+    ./services/_services.nix
+  ];
 
-    systemd = {};
+  systemd = { };
 }
+

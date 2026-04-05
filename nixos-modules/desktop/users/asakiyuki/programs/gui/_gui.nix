@@ -1,8 +1,10 @@
-{ ... }: {
-    imports = [
-        ./browsers.nix
-        ./terminals.nix
-        ./nixcord.nix
-        ./obs-studio.nix
-    ];
+{ ... }:
+{
+  imports = [
+    ./browsers.nix
+    ./terminals.nix
+    ./nixcord.nix
+    ./obs-studio.nix
+  ];
 }
+

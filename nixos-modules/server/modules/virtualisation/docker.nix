@@ -1,3 +1,5 @@
-{ ... }: {
-    enable = true;
+{ ... }:
+{
+  enable = true;
 }
+

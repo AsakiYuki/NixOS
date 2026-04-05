@@ -1,12 +1,14 @@
-{ pkgs, ... }: {
-    imports = [
-        ./steam.nix
-        ./ssh.nix
-        ./nix-dl.nix
-    ];
+{ pkgs, ... }:
+{
+  imports = [
+    ./steam.nix
+    ./ssh.nix
+    ./nix-dl.nix
+  ];
 
-    programs = {
-        gamemode.enable = true;
-        fuse.userAllowOther = true;
-    };
+  programs = {
+    gamemode.enable = true;
+    fuse.userAllowOther = true;
+  };
 }
+

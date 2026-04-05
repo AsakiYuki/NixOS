@@ -1,5 +1,7 @@
-{ lib, ... }: {
-    options.device.programs = {
+{ lib, ... }:
+{
+  options.device.programs = {
 
-    };
+  };
 }
+

@@ -1,8 +1,10 @@
-{ pkgs, ... }: {
-    imports = [
-        ./tmpfiles.nix
-        ./services/_services.nix
-    ];
+{ pkgs, ... }:
+{
+  imports = [
+    ./tmpfiles.nix
+    ./services/_services.nix
+  ];
 
-    systemd = {};
+  systemd = { };
 }
+

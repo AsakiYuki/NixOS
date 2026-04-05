@@ -1,33 +1,36 @@
-{ osconfig, asa-lib, ... }: let
-    defaultBash = import (asa-lib.root "/common/programs/bash.nix");
-in {
-    programs.bash =  {
-        enable = true;
-        shellAliases = defaultBash.shellAliases // {
-            nrs = "sudo nixos-rebuild switch --flake /etc/nixos#${osconfig.device.flake-name}";
-            wss = "waydroid session stop; exit;";
-            spf = "superfile";
-            flake-upgrade = "nix flake update";
-        };
-
-        shellOptions = defaultBash.shellOptions;
-        initExtra = ''
-            ${defaultBash.initExtra}
-            ${builtins.readFile (asa-lib.root "/assets/scripts/desktop-init-extra.sh")}
-
-            allowed_terms=("xterm-kitty" "xterm-ghostty")
-
-            should_run_tmux=false
-            for term in "${"$" + "{allowed_terms[@]" + "}"}"; do
-            if [[ "$TERM" == "$term" ]]; then
-                should_run_tmux=true
-                break
-            fi
-            done
-
-            if [ -z "$TMUX" ] && [ "$should_run_tmux" = true ]; then
-                exec tmux
-            fi
-        '';
+{ osconfig, asa-lib, ... }:
+let
+  defaultBash = import (asa-lib.root "/common/programs/bash.nix");
+in
+{
+  programs.bash = {
+    enable = true;
+    shellAliases = defaultBash.shellAliases // {
+      nrs = "sudo nixos-rebuild switch --flake /etc/nixos#${osconfig.device.flake-name}";
+      wss = "waydroid session stop; exit;";
+      spf = "superfile";
+      flake-upgrade = "nix flake update";
     };
+
+    shellOptions = defaultBash.shellOptions;
+    initExtra = ''
+      ${defaultBash.initExtra}
+      ${builtins.readFile (asa-lib.root "/assets/scripts/desktop-init-extra.sh")}
+
+      allowed_terms=("xterm-kitty" "xterm-ghostty")
+
+      should_run_tmux=false
+      for term in "${"$" + "{allowed_terms[@]" + "}"}"; do
+      if [[ "$TERM" == "$term" ]]; then
+        should_run_tmux=true
+        break
+      fi
+      done
+
+      if [ -z "$TMUX" ] && [ "$should_run_tmux" = true ]; then
+        exec tmux
+      fi
+    '';
+  };
 }
+
