@@ -16,14 +16,6 @@
   }
 
   {
-    mode = "n";
-    key = "<leader>tf";
-    action = ":ToggleTerm direction=float<CR>";
-    options.silent = true;
-    options.noremap = true;
-  }
-
-  {
     mode = "t";
     key = "<C-l>";
     action = "<Cmd>wincmd l<CR>";
@@ -57,6 +49,13 @@
       mode = "n";
       key = "<leader>tv${toString (i + 1)}";
       action = ":${toString (i + 1)}ToggleTerm direction=vertical<CR>";
+      options.silent = true;
+      options.noremap = true;
+    }
+    {
+      mode = "n";
+      key = "<leader>tf${toString (i + 1)}";
+      action = ":${toString (i + 1)}ToggleTerm direction=float<CR>";
       options.silent = true;
       options.noremap = true;
     }
