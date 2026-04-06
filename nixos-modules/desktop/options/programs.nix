@@ -1,7 +1,0 @@
-{ lib, ... }:
-{
-  options.device.programs = {
-
-  };
-}
-

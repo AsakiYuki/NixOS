@@ -1,5 +1,0 @@
-[
-  "openwithcode"
-  "copypublicurl"
-]
-
