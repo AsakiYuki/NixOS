@@ -1,20 +1,22 @@
-interface LatestReleaseData {
+export interface Asset {
+	name: string
+	label: string
+	download_url: string
+	content_type: string
+	digest: string
+}
+
+export interface LatestReleaseData {
 	name: string
 	tag_name: string
-	assets: Array<{
-		name: string
-		label: string
-		download_url: string
-		content_type: string
-		digest: string
-	}>
+	assets: Asset[]
 }
 
 export async function getGithubRepoLatestRelease(
-	username: string,
+	author: string,
 	repository: string,
 ): Promise<LatestReleaseData | null> {
-	const response = await fetch(`https://api.github.com/repos/${username}/${repository}/releases/latest`)
+	const response = await fetch(`https://api.github.com/repos/${author}/${repository}/releases/latest`)
 
 	if (response.status !== 200) return null
 

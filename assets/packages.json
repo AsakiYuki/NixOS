@@ -12,13 +12,13 @@
         "version": "4.0.9.1",
         "hash": "sha256-MsA6lK3PsyOEx938FgJFx8l9oqwoM3FzIK5goF73lTs="
     },
-    "geode-cli": {
-        "version": "3.8.0",
-        "hash": "sha256-iktrrg+/OeIsicIeOsgLxZUW9/ZQdqH57D6zqK4kb6c="
-    },
     "lsfg-vk": {
         "version": "2.0.0",
         "dev-version": "28",
         "hash": "sha256-JiATwEz6NEVsab11O0HNmFzM3S3aANT0YLWqYAwJVk0="
+    },
+    "geode-cli": {
+        "version": "3.8.0",
+        "hash": "sha256-xJrY3j1ZR1wlE5pPrkx5cET8aMCbBOWZHJOQhlhbZ6Q="
     }
 }
