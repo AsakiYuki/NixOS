@@ -15,12 +15,15 @@ export interface LatestReleaseData {
 export async function getGithubRepoLatestRelease(
 	author: string,
 	repository: string,
+	preRelease: boolean = true,
 ): Promise<LatestReleaseData | null> {
-	const response = await fetch(`https://api.github.com/repos/${author}/${repository}/releases/latest`)
+	const response = await fetch(
+		`https://api.github.com/repos/${author}/${repository}/releases${preRelease ? "" : "/latest"}`,
+	)
 
 	if (response.status !== 200) return null
-
-	const { name, tag_name, assets } = await response.json()
+	const data = await response.json()
+	const { name, tag_name, assets } = preRelease ? data[0] : data
 
 	return {
 		name,

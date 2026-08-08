@@ -9,7 +9,8 @@ let packages: any = {}
 interface FetchLastPackageArgs {
 	author: string
 	repository: string
-	package_name: string
+	package_name?: string
+	pre_release?: boolean
 	cache_version?: (cached: any) => string
 	get_version?: (latestRelease: LatestReleaseData) => string
 	new_version_found: (cached: any, latestRelease: LatestReleaseData, version: string) => any
@@ -17,15 +18,25 @@ interface FetchLastPackageArgs {
 }
 
 async function fetchLastReleasePackage(options: FetchLastPackageArgs) {
-	const { author, repository, package_name, cache_version, get_version, new_version_found, debug } = options
+	const {
+		author,
+		repository,
+		package_name,
+		pre_release = true,
+		cache_version,
+		get_version,
+		new_version_found,
+		debug,
+	} = options
 
-	const cached = packages[package_name]
+	const pkgName = package_name ?? repository
+	const cached = packages[pkgName]
 
-	console.log(`[INFO] Checking latest release for ${package_name}...`)
+	console.log(`[INFO] Checking latest release for ${pkgName}...`)
 
-	const latestRelease = await getGithubRepoLatestRelease(author, repository)
+	const latestRelease = await getGithubRepoLatestRelease(author, repository, pre_release)
 	if (!latestRelease) {
-		console.warn(`[WARN] Could not fetch latest release for ${package_name}.`)
+		console.warn(`[WARN] Could not fetch latest release for ${pkgName}.`)
 		return false
 	}
 
@@ -35,15 +46,15 @@ async function fetchLastReleasePackage(options: FetchLastPackageArgs) {
 	const newVersion = get_version?.(latestRelease) ?? latestRelease.tag_name
 
 	if (cacheVersion === newVersion) {
-		console.info(`[SKIP] ${package_name} is already up to date (v${newVersion}).`)
+		console.info(`[SKIP] ${pkgName} is already up to date (v${newVersion}).`)
 		return false
 	}
 
-	console.info(`[UPDATE] New version found for ${package_name}: v${cacheVersion} -> v${newVersion}`)
+	console.info(`[UPDATE] New version found for ${pkgName}: v${cacheVersion} -> v${newVersion}`)
 	const ret = await new_version_found(cached, latestRelease, newVersion)
-	if (ret) packages[package_name] = ret
+	if (ret) packages[pkgName] = ret
 
-	console.info(`[SUCCESS] Updated ${package_name} to v${newVersion}`)
+	console.info(`[SUCCESS] Updated ${pkgName} to v${newVersion}`)
 	return true
 }
 
@@ -87,14 +98,45 @@ async function main() {
 				return { version, hash }
 			},
 		}),
+		fetchLastReleasePackage({
+			author: "PancakeTAS",
+			repository: "lsfg-vk",
+			cache_version: cached => `${cached.version}-dev${cached["dev-version"]}`,
+			get_version: latest => latest.name.slice(8),
+			new_version_found: async (cached, latest, version) => {
+				const [package_version, dev_version] = version.split("-dev")
+				const file = latest.assets[0]
+
+				console.info(`[INFO] Fetching zip hash from: ${file.download_url}`)
+				const hash = await fetchZipHash(file.download_url)
+
+				return { version: package_version, "dev-version": dev_version, hash }
+			},
+		}),
+		fetchLastReleasePackage({
+			author: "Xtr126",
+			repository: "cage-xtmapper",
+			cache_version: cached => cached.release,
+			get_version: latest => latest.tag_name.slice(1),
+			new_version_found: async (cached, latest, release) => {
+				const file1 = latest.assets[0]
+				const file2 = latest.assets[1]
+
+				console.info(`[INFO] Fetching zip hash from: ${file1.download_url}, ${file2.download_url}`)
+				const [hash1, hash2] = await Promise.all([fetchZipHash(file1.download_url), fetchZipHash(file2.download_url)])
+
+				return {
+					release,
+					"version-0.1.5": hash1,
+					"version-0.2.0": hash2,
+				}
+			},
+		}),
 	])
 
 	if (!status.some(v => v)) return
 
 	await fs.writeFile(path.join(__dirname, "../assets/packages.json"), JSON.stringify(packages, null, 4))
-	// if (!test) return
-	// console.log(test)
-	// fetchZipHash(test.assets[0].download_url).then(console.log)
 }
 
 main()
