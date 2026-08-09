@@ -5,8 +5,8 @@
     },
     "cage-xtmapper": {
         "release": "20260208",
-        "version-0.1.5": "sha256-EXCAJ3oLEqh/saU2wKC/gYBWThwWOk8lPAORL0Kn8P0=",
-        "version-0.2.0": "sha256-xg9hx+nsmzruOGrTWmmZD4+qGESYRCcqNfX++Ibnahg="
+        "version-0.1.5": "sha256-ZmdltOQInGbCBpf/e8D2sB9Rjt4wqd8wwuSFvryHfFA=",
+        "version-0.2.0": "sha256-F1C3KnTzTO1vEouixqO1xnsGmufRyAk+BiRlypNq4kQ="
     },
     "cider-2": {
         "version": "4.0.9.1",
@@ -19,6 +19,6 @@
     },
     "geode-cli": {
         "version": "3.8.0",
-        "hash": "sha256-xJrY3j1ZR1wlE5pPrkx5cET8aMCbBOWZHJOQhlhbZ6Q="
+        "hash": "sha256-iktrrg+/OeIsicIeOsgLxZUW9/ZQdqH57D6zqK4kb6c="
     }
 }

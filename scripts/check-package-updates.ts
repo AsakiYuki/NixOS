@@ -123,7 +123,10 @@ async function main() {
 				const file2 = latest.assets[1]
 
 				console.info(`[INFO] Fetching zip hash from: ${file1.download_url}, ${file2.download_url}`)
-				const [hash1, hash2] = await Promise.all([fetchZipHash(file1.download_url), fetchZipHash(file2.download_url)])
+				const [hash1, hash2] = await Promise.all([
+					fetchZipHash(file1.download_url, false),
+					fetchZipHash(file2.download_url, false),
+				])
 
 				return {
 					release,
