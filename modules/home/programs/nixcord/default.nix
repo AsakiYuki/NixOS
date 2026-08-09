@@ -1,4 +1,4 @@
-{lib, ...}: {
+{ lib, ... }: {
   programs.nixcord = {
     quickCss = lib.readRootFile "/assets/programs/discord/style.css";
     discord.vencord.enable = true;
@@ -6,7 +6,7 @@
     config = {
       useQuickCss = true;
       enableReactDevtools = true;
-      themeLinks = ["https://catppuccin.github.io/discord/dist/catppuccin-mocha-blue.theme.css"];
+      themeLinks = [ "https://catppuccin.github.io/discord/dist/catppuccin-mocha-blue.theme.css" ];
 
       plugins = {
         blurNsfw.enable = true;
@@ -30,6 +30,26 @@
         validUser.enable = true;
         translate.enable = true;
         whoReacted.enable = true;
+        alwaysTrust.enable = true;
+        betterFolders.enable = true;
+        callTimer.enable = true;
+        showMeYourName.enable = true;
+        showHiddenChannels.enable = true;
+        slientMessageToggle.enable = true;
+        serverInfo.enable = true;
+        platformIndicators.enable = true;
+        characterCounter.enable = true;
+
+        alwaysExpandRoles = {
+          enable = true;
+          hideArrow = true;
+        };
+
+        alwaysAnimate = {
+          enable = true;
+          icons = true;
+          nameplates = true;
+        };
 
         fakeNitro = {
           enable = true;

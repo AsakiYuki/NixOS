@@ -39,33 +39,44 @@
     cursors.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    ...
-  } @ inputs: let
-    state-version = "26.05";
-    lib = nixpkgs.lib;
-    root = path: ./. + path;
-  in
-    import ./helpers/nixosConfigurations.nix {inherit inputs self state-version lib;} {
-      ideapad-slim-5 = {
-        modules = [
-          inputs.nixos-hardware.nixosModules.lenovo-ideapad-slim-5
-          inputs.lanzaboote.nixosModules.lanzaboote
-          (root "/devices/ideapad-slim-5/configuration.nix")
-        ];
+  outputs =
+    {
+      self,
+      nixpkgs,
+      ...
+    }@inputs:
+    let
+      state-version = "26.05";
+      lib = nixpkgs.lib;
+      root = path: ./. + path;
+    in
+    import ./helpers/nixosConfigurations.nix
+      {
+        inherit
+          inputs
+          self
+          state-version
+          lib
+          ;
+      }
+      {
+        ideapad-slim-5 = {
+          modules = [
+            inputs.nixos-hardware.nixosModules.lenovo-ideapad-slim-5
+            inputs.lanzaboote.nixosModules.lanzaboote
+            (root "/devices/ideapad-slim-5/configuration.nix")
+          ];
+        };
+        home-server = {
+          modules = [
+            (root "/devices/home-server/configuration.nix")
+          ];
+        };
+        wsl = {
+          modules = [
+            inputs.nixos-wsl.nixosModules.default
+            (root "/devices/wsl/configuration.nix")
+          ];
+        };
       };
-      home-server = {
-        modules = [
-          (root "/devices/home-server/configuration.nix")
-        ];
-      };
-      wsl = {
-        modules = [
-          inputs.nixos-wsl.nixosModules.default
-          (root "/devices/wsl/configuration.nix")
-        ];
-      };
-    };
 }
