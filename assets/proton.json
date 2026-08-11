@@ -1,5 +1,10 @@
 {
-    "GE-Proton11-5": {
-        "x86-64": "sha256-Sbyi5zXMhPIKSotvL5LEZ2dbDoLpXRcCyuY9TsnBnus="
+    "latest": {
+        "ge-proton": "11-5"
+    },
+    "ge-proton": {
+        "11-5": {
+            "x86-64": "sha256-Sbyi5zXMhPIKSotvL5LEZ2dbDoLpXRcCyuY9TsnBnus="
+        }
     }
 }
