@@ -35,13 +35,15 @@ lib.mergeAttrsList (
             chaotic.homeModules.default
           ])
 
-          [
-            inputs.nixvim.homeModules.nixvim
-            inputs.nixcord.homeModules.nixcord
-            inputs.niri.homeModules.niri
-            inputs.agenix.homeManagerModules.default
-            inputs.cursors.homeModules.default
-          ]
+          (with inputs; [
+            nixvim.homeModules.nixvim
+            nixcord.homeModules.nixcord
+            niri.homeModules.niri
+            agenix.homeManagerModules.default
+
+            cursors.homeModules.default
+            proton.homeModules.default
+          ])
 
           (home.imports or [])
         ];
