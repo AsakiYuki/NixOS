@@ -939,6 +939,22 @@
         "type": "github"
       }
     },
+    "proton": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "path": "./flakes/proton",
+        "type": "path"
+      },
+      "original": {
+        "path": "./flakes/proton",
+        "type": "path"
+      },
+      "parent": []
+    },
     "root": {
       "inputs": {
         "agenix": "agenix",
@@ -959,6 +975,7 @@
         "nixpkgs": "nixpkgs_11",
         "nixvim": "nixvim",
         "overlays": "overlays",
+        "proton": "proton",
         "unstablepkgs": "unstablepkgs",
         "zen-browser": "zen-browser"
       }
