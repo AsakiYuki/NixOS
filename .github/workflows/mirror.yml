@@ -5,7 +5,7 @@ on:
     branches: ["*"]
     tags: ["*"]
   workflow_run:
-    workflows: ["update flake inputs lock files"]
+    workflows: ["checking update"]
     types:
       - completed
 
