@@ -87,7 +87,6 @@
     firefox.enable = true;
     zen-browser.enable = true;
     chromium.enable = true;
-    ladybird.enable = true;
     tor-browser.enable = true;
 
     cider = {
