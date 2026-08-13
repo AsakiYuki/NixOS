@@ -7,5 +7,6 @@
 
   outputs = {...}: {
     homeModules.default = import ./home;
+    # packages = import ./packages;
   };
 }
