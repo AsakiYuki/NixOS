@@ -72,7 +72,7 @@
     dolphin.enable = true;
     proton-apps.enable = true;
     winboat.enable = true;
-    easyeffects.enable = true;
+    # easyeffects.enable = true;
 
     cider = {
       enable = true;
