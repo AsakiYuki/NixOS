@@ -74,6 +74,21 @@
     winboat.enable = true;
     easyeffects.enable = true;
 
+    cider = {
+      enable = true;
+      package = pkgs.cider-2;
+    };
+
+    lmstudio = {
+      enable = true;
+      package = pkgs.lmstudio;
+    };
+
+    vscode = {
+      enable = true;
+      package = pkgs.vscode;
+    };
+
     # Office
     libreoffice.enable = true;
 
@@ -89,20 +104,5 @@
     zen-browser.enable = true;
     chromium.enable = true;
     tor-browser.enable = true;
-
-    cider = {
-      enable = true;
-      package = pkgs.cider-2;
-    };
-
-    lmstudio = {
-      enable = true;
-      package = pkgs.lmstudio;
-    };
-
-    vscode = {
-      enable = true;
-      package = pkgs.vscode;
-    };
   };
 }
