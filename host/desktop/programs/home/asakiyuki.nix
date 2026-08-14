@@ -72,6 +72,7 @@
     dolphin.enable = true;
     proton-apps.enable = true;
     winboat.enable = true;
+    easyeffects.enable = true;
 
     # Office
     libreoffice.enable = true;
