@@ -28,11 +28,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1786764133,
-        "narHash": "sha256-GoR0J8drDomtttibvTkvj2hST+L9E92f3WBze6hEJls=",
+        "lastModified": 1786806064,
+        "narHash": "sha256-Krr4kNUy6nW3hsdmdq2XqzXQ8fxRzK1D7Q2oj+49mOQ=",
         "owner": "chaotic-cx",
         "repo": "nyx",
-        "rev": "759ebbb84e639b4c37056f34ff17553c16acdd53",
+        "rev": "22e334d413914f01473e497cf319b6d776416bbf",
         "type": "github"
       },
       "original": {
@@ -121,11 +121,11 @@
         "snowfall-lib": "snowfall-lib"
       },
       "locked": {
-        "lastModified": 1786556986,
-        "narHash": "sha256-yKmpKNqiM10aGzJGayHacbisrY0qcVYska5NNztWJKA=",
+        "lastModified": 1786808165,
+        "narHash": "sha256-lGEa9YKuJBSa1e0/UZYquGAniiwLiyvbDoBzepymKxQ=",
         "owner": "LotusInputMethod",
         "repo": "fcitx5-lotus",
-        "rev": "d525716d77bca55d715e4b29e53d0397e08f0891",
+        "rev": "cd5c787e5a4dd7824b9d7b17530d6031a80354e3",
         "type": "github"
       },
       "original": {
