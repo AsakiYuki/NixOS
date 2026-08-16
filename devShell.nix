@@ -5,12 +5,13 @@
   };
 in {
   devShells.x86_64-linux.default = pkgs.mkShell {
-    buildInputs = with pkgs; [
-      hello
-    ];
+    # buildInputs = with pkgs; [
+    # ];
 
     shellHook = ''
-      echo "Welcome to the devShell!"
+      echo "Welcome to NixOS DevShell!"
+
+      alias repl="nix flake repl"
     '';
   };
 }
