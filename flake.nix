@@ -51,33 +51,46 @@
     lib = nixpkgs.lib;
     root = path: ./. + path;
   in
-    import ./helpers/nixosConfigurations.nix
-    {
-      inherit
-        inputs
-        self
-        state-version
-        lib
-        ;
-    }
-    {
-      ideapad-slim-5 = {
-        modules = [
-          inputs.nixos-hardware.nixosModules.lenovo-ideapad-slim-5
-          inputs.lanzaboote.nixosModules.lanzaboote
-          (root "/devices/ideapad-slim-5/configuration.nix")
-        ];
-      };
-      home-server = {
-        modules = [
-          (root "/devices/home-server/configuration.nix")
-        ];
-      };
-      wsl = {
-        modules = [
-          inputs.nixos-wsl.nixosModules.default
-          (root "/devices/wsl/configuration.nix")
-        ];
-      };
-    };
+    lib.mergeAttrsList [
+      rec {
+        system = builtins.currentSystem;
+        pkgs = import inputs.nixpkgs {
+          inherit system;
+          overlays = [inputs.proton.overlays.default];
+          config = {
+            allowUnfree = true;
+          };
+        };
+      }
+
+      (import ./helpers/nixosConfigurations.nix
+        {
+          inherit
+            inputs
+            self
+            state-version
+            lib
+            ;
+        }
+        {
+          ideapad-slim-5 = {
+            modules = [
+              inputs.nixos-hardware.nixosModules.lenovo-ideapad-slim-5
+              inputs.lanzaboote.nixosModules.lanzaboote
+              (root "/devices/ideapad-slim-5/configuration.nix")
+            ];
+          };
+          home-server = {
+            modules = [
+              (root "/devices/home-server/configuration.nix")
+            ];
+          };
+          wsl = {
+            modules = [
+              inputs.nixos-wsl.nixosModules.default
+              (root "/devices/wsl/configuration.nix")
+            ];
+          };
+        })
+    ];
 }
