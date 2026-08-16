@@ -51,18 +51,7 @@
     lib = nixpkgs.lib;
   in
     lib.mergeAttrsList [
-      rec {
-        system = builtins.currentSystem;
-        pkgs = import inputs.nixpkgs {
-          inherit system;
-          overlays = [inputs.proton.overlays.default];
-          config = {
-            allowUnfree = true;
-          };
-        };
-      }
-
-      (import ./dev.nix inputs)
+      (import ./dev-shell.nix inputs)
       (import ./nixosConfigurations.nix {inherit inputs self state-version lib;})
     ];
 }
