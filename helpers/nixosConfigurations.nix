@@ -18,24 +18,23 @@ in
             localSystem = sys;
             config.allowUnfree = true;
           };
-          extendedLib = lib.extend (final: prev:
-            import ../helpers {
-              inherit inputs self state-version unstable name;
-              lib = final;
-            });
+          extendedLib = lib.extend (
+            final: prev:
+              lib.mergeAttrs (import ../helpers {
+                inherit inputs self unstable;
+                lib = final;
+              })
+              {
+                flake-name = name;
+                state-version = state-version;
+              }
+          );
         in {
           "${name}" = extendedLib.nixosSystem {
             system = sys;
 
             specialArgs = extendedLib.mergeAttrs {
-              inherit
-                self
-                inputs
-                unstable
-                state-version
-                name
-                ;
-
+              inherit self inputs unstable;
               lib = extendedLib;
             } (value.specialArgs or {});
 

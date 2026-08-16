@@ -1,7 +1,6 @@
 {
   lib,
   inputs,
-  state-version,
   unstable,
   ...
 }: osconfig: users:
@@ -50,7 +49,7 @@ lib.mergeAttrsList (
 
         home = {
           username = name;
-          stateVersion = state-version;
+          stateVersion = lib.state-version;
         };
       };
     }
