@@ -18,7 +18,7 @@ in
             localSystem = sys;
             config.allowUnfree = true;
           };
-          extendedLib = lib.extend (
+          _lib = lib.extend (
             final: prev:
               lib.mergeAttrs (import ../helpers {
                 inherit inputs self unstable;
@@ -30,17 +30,17 @@ in
               }
           );
         in {
-          "${name}" = extendedLib.nixosSystem {
+          "${name}" = _lib.nixosSystem {
             system = sys;
 
-            specialArgs = extendedLib.mergeAttrs {
+            specialArgs = _lib.mergeAttrs {
               inherit self inputs unstable;
-              lib = extendedLib;
+              lib = _lib;
             } (value.specialArgs or {});
 
             modules =
               (value.modules or [])
-              ++ (extendedLib.concatLists [
+              ++ (_lib.concatLists [
                 (with inputs; [
                   chaotic.nixosModules.default
                 ])
@@ -49,10 +49,10 @@ in
                   (nixosModules "nix-index-database")
                   (nixosModules "home-manager")
                   (nixosModules "agenix")
-                  (extendedLib.root "/modules/nixos-default.nix")
-                  (extendedLib.root "/overlays")
-                  (extendedLib.root "/modules/system")
-                  (extendedLib.root "/options/system")
+                  (_lib.root "/modules/nixos-default.nix")
+                  (_lib.root "/overlays")
+                  (_lib.root "/modules/system")
+                  (_lib.root "/options/system")
                 ]
               ]);
           };
