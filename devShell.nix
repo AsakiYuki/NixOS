@@ -12,6 +12,7 @@ in {
       echo "Welcome to NixOS DevShell!"
 
       alias repl="nix repl ."
+      alias agenix="./agenix.sh"
     '';
   };
 }

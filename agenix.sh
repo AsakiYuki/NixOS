@@ -6,4 +6,4 @@ if [ ! -f "$KEY_PATH" ]; then
     exit 1
 fi
 
-agenix -i "$KEY_PATH" "$@"
+/bin/agenix -i "$KEY_PATH" "$@"
