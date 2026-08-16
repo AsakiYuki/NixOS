@@ -11,7 +11,7 @@ in {
     shellHook = ''
       echo "Welcome to NixOS DevShell!"
 
-      alias repl="nix flake repl"
+      alias repl="nix repl ."
     '';
   };
 }
