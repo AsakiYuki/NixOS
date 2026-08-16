@@ -7,6 +7,6 @@
 
   outputs = {...}: {
     homeModules.default = import ./home;
-    overlays.default = import ./overlays;
+    overlays.default = final: prev: import ./overlays {inherit final prev;};
   };
 }
