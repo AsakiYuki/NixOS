@@ -12,6 +12,7 @@ in {
   nixpkgs.overlays =
     lib.flatten [
       inputs.overlays.overlays.default
+      inputs.proton.overlays.default
       inputs.millennium.overlays.default
     ]
     ++ (lib.optional (!config.device.de.kdePlasma.enable) inputs.dolphin-overlay.overlays.default);
