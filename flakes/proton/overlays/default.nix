@@ -1,7 +1,4 @@
-{
-  final,
-  prev,
-}:
-prev.lib.mergeAttrsList (map (file: import file {inherit final prev;}) [
+{lib, ...} @ args:
+lib.mergeAttrsList (map (file: import file args) [
   ./ge-proton-packages.nix
 ])

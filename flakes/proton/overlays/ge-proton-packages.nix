@@ -1,4 +1,18 @@
-{
-  final,
-  prev,
-}: {}
+{pkgs, ...}: {
+  ge-proton-11-5 = pkgs.stdenv.mkDerivation {
+    pname = "ge-proton";
+    version = "11-5";
+
+    src = pkgs.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton11-5/GE-Proton11-5-x86_64.tar.gz";
+      hash = "sha256-Sbyi5zXMhPIKSotvL5LEZ2dbDoLpXRcCyuY9TsnBnus=";
+    };
+
+    dontBuild = true;
+
+    installPhase = ''
+      mkdir -p $out
+      cp -r ./* $out
+    '';
+  };
+}
