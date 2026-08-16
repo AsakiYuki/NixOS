@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/NixOS/nixos-artwork/refs/heads/master/logo/nix-snowflake-colours.svg" width="100" />
 </p>
 
-<h1 align="center">❄️ Asaki Yuki's NixOS</h1>
+<h1 align="center">Asaki Yuki's NixOS</h1>
 
 <p align="center">
   <em>Modular, multi-device NixOS configuration powered by Flakes</em>
