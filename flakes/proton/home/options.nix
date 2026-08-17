@@ -4,9 +4,16 @@
   ...
 }: {
   options.steam.protonPackages = lib.mkOption {
-    type = with lib.types; [listOf package];
+    type = with lib.types; listOf package;
     default = [];
   };
 
-  config = {};
+  config.home.file = builtins.listToAttrs (map (proton: let
+      name = proton.pname;
+      version = proton.version;
+    in {
+      name = ".local/share/Steam/compatibilitytools.d/${name}-${version}";
+      value.source = proton;
+    })
+    config.steam.protonPackages);
 }
