@@ -3,7 +3,7 @@
   pkgs,
   ...
 } @ args: let
-  protons = lib.importJSON ../../../assets/proton.json;
+  proton = lib.importJSON ../../../assets/proton.json;
   mkProtonPackage = {
     pname,
     version,
@@ -18,6 +18,6 @@
     '';
   };
 in
-  lib.mergeAttrsList (map (file: import file (args // {inherit protons mkProtonPackage;})) [
+  lib.mergeAttrsList (map (file: import file (args // {inherit proton mkProtonPackage;})) [
     ./ge-proton-packages.nix
   ])
