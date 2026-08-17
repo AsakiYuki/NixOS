@@ -3,7 +3,7 @@
   config,
   ...
 }: {
-  options.steam.protonPackages = lib.mkOption {
+  options.programs.steam.protonPackages = lib.mkOption {
     type = with lib.types; listOf package;
     default = [];
   };
@@ -15,5 +15,5 @@
       name = ".local/share/Steam/compatibilitytools.d/${name}-${version}";
       value.source = proton;
     })
-    config.steam.protonPackages);
+    config.programs.steam.protonPackages);
 }
