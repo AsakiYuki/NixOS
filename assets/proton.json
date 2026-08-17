@@ -16,5 +16,14 @@
                 "hash": "sha256-jOcPeEkBBPPNqyjXBoHm1Nk8AexPiLhx5+385NjUPT0="
             }
         }
+    },
+    "dw-proton": {
+        "latest": "11-0_11",
+        "releases": {
+            "11-0_11": {
+                "url": "https://dawn.wine/dawn-winery/dwproton/releases/download/dwproton-11.0-11/dwproton-11.0-11-x86_64.tar.xz",
+                "hash": "sha256-p1x1UAuXLG0MpYcyrssudKwpCRlKAPPxrv7UFyPe2lI="
+            }
+        }
     }
 }
