@@ -18,6 +18,6 @@
     '';
   };
 in
-  lib.mergeAttrsList (map (file: import file (args // {inherit proton mkProtonPackage;})) [
-    ./ge-proton-packages.nix
-  ])
+  lib.mergeAttrsList (map (file: import file (args // {inherit proton mkProtonPackage;})) (
+    map ({name, ...}: ./packages + "/${name}") (lib.attrsToList (builtins.readDir ./packages))
+  ))

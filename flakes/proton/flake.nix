@@ -6,7 +6,7 @@
   };
 
   outputs = {...}: {
-    homeModules.default = import ./home;
+    homeModules.default = import ./homeModules.nix;
     overlays.default = final: prev:
       import ./overlays (let
         pkgs = prev;
