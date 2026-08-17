@@ -3,7 +3,6 @@
   pkgs,
   ...
 } @ args: let
-  proton = lib.importJSON ../../../assets/proton.json;
   mkProtonPackage = {
     pname,
     version,
@@ -18,6 +17,9 @@
     '';
   };
 in
-  lib.mergeAttrsList (map (file: import file (args // {inherit proton mkProtonPackage;})) (
-    map ({name, ...}: ./packages + "/${name}") (lib.attrsToList (builtins.readDir ./packages))
-  ))
+  lib.mapAttrs'
+  (name: _: {
+    name = name;
+    value = import (./packages + "/${name}") (args // {inherit mkProtonPackage;});
+  })
+  (builtins.readDir ./packages)

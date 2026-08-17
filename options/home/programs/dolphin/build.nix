@@ -24,17 +24,11 @@ in {
         };
       }
 
-      (builtins.listToAttrs (map
-        ({
-          name,
-          value,
-        }: {
+      (lib.mapAttrs' (name: value: {
           name = ".local/share/kio/servicemenus/${name}.desktop";
-          value = {
-            text = lib.generators.toINI {} value;
-          };
+          value.text = lib.generators.toINI {} value;
         })
-        (lib.attrsToList config.programs.dolphin.services-menu)))
+        config.programs.dolphin.services-menu)
     ];
   };
 }
