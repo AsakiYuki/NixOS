@@ -1,3 +1,3 @@
 [
-  ./ge-proton-packages.nix
+  ./ge-proton.nix
 ]
