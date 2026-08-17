@@ -9,5 +9,6 @@
     ./hyprland
     ./niri.nix
     ./obs-studio.nix
+    ./steam.nix
   ];
 }
