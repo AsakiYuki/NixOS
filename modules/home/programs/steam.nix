@@ -1,7 +1,8 @@
 {pkgs, ...}: {
   programs.steam = {
-    protonPackages = [
-      pkgs.ge-proton-11-5
+    protonPackages = with pkgs; [
+      cachyos-proton-11-0_20260703
+      ge-proton-11-5
     ];
   };
 }

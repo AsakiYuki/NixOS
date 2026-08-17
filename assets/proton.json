@@ -9,9 +9,9 @@
         }
     },
     "cachyos-proton": {
-        "latest": "11.0-20260703",
+        "latest": "11-0_20260703",
         "releases": {
-            "11.0-20260703": {
+            "11-0_20260703": {
                 "url": "https://github.com/CachyOS/proton-cachyos/releases/download/cachyos-11.0-20260703-slr/proton-cachyos-11.0-20260703-slr-x86_64.tar.xz",
                 "hash": "sha256-jOcPeEkBBPPNqyjXBoHm1Nk8AexPiLhx5+385NjUPT0="
             }
