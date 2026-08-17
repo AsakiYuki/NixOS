@@ -61,8 +61,16 @@
     mangohud.enable = true;
     osu.enable = true;
     lutris.enable = true;
-    proton-ge.enable = true;
+    proton-utils.enable = true;
     prismlauncher.enable = true;
+
+    steam = {
+      protonPackages = with pkgs; [
+        cachyos-proton-11-0_20260703
+        dw-proton-11-0_11
+        ge-proton-11-5
+      ];
+    };
 
     # Downloader
     qbittorrent.enable = true;

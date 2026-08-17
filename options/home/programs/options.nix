@@ -49,7 +49,7 @@ in {
       (lib.mkIf cfg.jetbrains.idea.enable cfg.jetbrains.idea.package)
       (lib.mkIf cfg.jetbrains.datagrip.enable cfg.jetbrains.datagrip.package)
     ]
-    ++ (lib.optionals cfg.proton-ge.enable cfg.proton-ge.packages)
+    ++ (lib.optionals cfg.proton-utils.enable cfg.proton-utils.packages)
     ++ (lib.optionals cfg.proton-apps.enable cfg.proton-apps.packages);
 
   options.programs = {
@@ -122,7 +122,7 @@ in {
       };
     };
 
-    proton-ge = mkOpts "proton-ge utils" (with pkgs; [protonup-qt protonplus]);
+    proton-utils = mkOpts "proton-utils utils" (with pkgs; [protonup-qt protonplus]);
     proton-apps = mkOpts "proton-pass and proton-authenticator" (with pkgs; [proton-pass proton-authenticator]);
   };
 }
