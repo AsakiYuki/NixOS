@@ -6,6 +6,7 @@
 }: let
   cursors = lib.importJSON (lib.root "/assets/cursors.json");
   cursors-theme = config.theme.cursors;
+  cursors-name = lib.last (lib.splitString "/" cursors-theme);
 in {
   options = {
     theme.cursors = lib.mkOption {
@@ -17,7 +18,7 @@ in {
 
   config.home.pointerCursor = lib.mkIf (cursors-theme != null) {
     enable = true;
-    name = cursors-theme;
+    name = cursors-name;
     size = 98;
     gtk.enable = true;
     x11.enable = true;
@@ -32,7 +33,7 @@ in {
       };
     in (pkgs.runCommand "moveUp" {} ''
       mkdir -p $out/share/icons
-      ln -s ${packages} $out/share/icons/${cursors-theme}
+      ln -s ${packages} $out/share/icons/${cursors-name}
     '');
   };
 }

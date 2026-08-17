@@ -1,14 +1,11 @@
 {
-    "#HONKAI_IMPACT_3RD": "",
-    "elysia": "sha256-mjDHklWrX5Pp/vejRQiMk0VA6afY04HXGyGD0PcopdI=",
-    "#HONKAI_STAR_RAIL": "",
-    "castorice": "sha256-nqAC+Itr+TXLGG8zYDBoBve+MeRckds5BM23DrsCTMM=",
-    "#WUTHERING_WAVES": "",
-    "aemeath": "sha256-0eEsUks5MwW4g5Xau24SgchX+LD9Ra3azAH0KL9JzQw=",
-    "denia": "sha256-oNWGhsr0/ZkKroJkl7W0feZ6FV3Uzn71y/qf/GLDPdc=",
-    "cartethyia": "sha256-jYIDoX+rfUjw6LXrqE4y8j5IL0vByrrRkgRuz08Zy6U=",
-    "yangyang": "sha256-kUgTyYQywfHDz4po3bDUoJT6Byc3SUXdr2iMGAGqG/E=",
-    "hiyuki": "sha256-mBPvzVgAZbkXSc7K3pMhif9jnBQMQnLXgy9ZVIWOWRE=",
-    "lucilla": "sha256-N5Aj9PCIHGbafIJ0ooWJBppK9UA1e9AsT0Xasp3BCzc=",
-    "mornye": "sha256-SVmJ34gjSq6BZerUSRtvNQJoh6ZFK6rvXz0dJXmiU00="
+    "honkai-impact-3rd/elysia": "sha256-mjDHklWrX5Pp/vejRQiMk0VA6afY04HXGyGD0PcopdI=",
+    "honkai-star-rail/castorice": "sha256-nqAC+Itr+TXLGG8zYDBoBve+MeRckds5BM23DrsCTMM=",
+    "wuthering-waves/aemeath": "sha256-0eEsUks5MwW4g5Xau24SgchX+LD9Ra3azAH0KL9JzQw=",
+    "wuthering-waves/denia": "sha256-oNWGhsr0/ZkKroJkl7W0feZ6FV3Uzn71y/qf/GLDPdc=",
+    "wuthering-waves/cartethyia": "sha256-jYIDoX+rfUjw6LXrqE4y8j5IL0vByrrRkgRuz08Zy6U=",
+    "wuthering-waves/yangyang": "sha256-kUgTyYQywfHDz4po3bDUoJT6Byc3SUXdr2iMGAGqG/E=",
+    "wuthering-waves/hiyuki": "sha256-mBPvzVgAZbkXSc7K3pMhif9jnBQMQnLXgy9ZVIWOWRE=",
+    "wuthering-waves/lucilla": "sha256-N5Aj9PCIHGbafIJ0ooWJBppK9UA1e9AsT0Xasp3BCzc=",
+    "wuthering-waves/mornye": "sha256-SVmJ34gjSq6BZerUSRtvNQJoh6ZFK6rvXz0dJXmiU00="
 }
