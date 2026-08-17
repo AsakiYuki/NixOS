@@ -1,11 +1,16 @@
-{lib, ...} @ args: let
+{
+  lib,
+  pkgs,
+  ...
+} @ args: let
   protons = lib.importJSON ../../../assets/proton.json;
   mkProtonPackage = {
     pname,
     version,
     src,
   }: {
-    inherit pname version src;
+    inherit pname version;
+    src = pkgs.fetchzip src;
     dontBuild = true;
     installPhase = ''
       mkdir -p $out
