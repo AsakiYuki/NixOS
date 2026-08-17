@@ -28,11 +28,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1786942646,
-        "narHash": "sha256-dIRInMSw4WEKgO1DlGb3BJk4PETlqB/dXzkIEJ0L+zQ=",
+        "lastModified": 1786962667,
+        "narHash": "sha256-LbpS5vlAkMRBI5Ly4LN/8xv1WcuIxxgPByQ2G9tnyQg=",
         "owner": "chaotic-cx",
         "repo": "nyx",
-        "rev": "e1d54cfb0d93b0cb4224ed82e535b224f9ac6e69",
+        "rev": "dd53083cd11c360de851185c999e31964ccb78f4",
         "type": "github"
       },
       "original": {
@@ -442,11 +442,11 @@
       },
       "locked": {
         "dir": "packages/nix",
-        "lastModified": 1786922108,
-        "narHash": "sha256-vXj17J0hofoWR+oI06DbZGq/kpYiE0mcAwDAE9nICMY=",
+        "lastModified": 1786989972,
+        "narHash": "sha256-49rqWXpaYSN47rpyJCqYmwjwJ5aUoZW2aUBAd+/wkds=",
         "owner": "SteamClientHomebrew",
         "repo": "Millennium",
-        "rev": "e4f33f67748b17b188bae4cc389d63ca35c78060",
+        "rev": "44e01eb437b95c6e2004aed5dc3224bfb172d00c",
         "type": "github"
       },
       "original": {
