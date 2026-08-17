@@ -1,18 +1,24 @@
 {
   lib,
-  mkProtonPackage,
-  proton,
+  pkgs,
   ...
-}: let
-  releases = proton.ge-proton.releases;
-  pname = "ge-proton";
-in
-  lib.mapAttrs' (name: value: {
-    name = "${pname}-${name}";
-    value = mkProtonPackage {
-      inherit pname;
-      version = name;
-      src = value;
+} @ args: let
+  mkProtonPackage = {
+    pname,
+    version,
+    src,
+  }:
+    pkgs.stdenv.mkDerivation {
+      inherit pname version;
+      src = pkgs.fetchzip src;
+      dontBuild = true;
+      installPhase = ''
+        mkdir -p $out
+        cp -r ./* $out
+      '';
     };
-  })
-  releases
+
+  extraArgs = args // {inherit mkProtonPackage;};
+  packageFiles = import ./packages;
+in
+  lib.foldl' (acc: path: acc // (import path extraArgs)) {} packageFiles
