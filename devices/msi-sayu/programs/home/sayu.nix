@@ -8,6 +8,10 @@
 
     catppuccin.enable = true;
 
+    nixcord.enable = true;
+    nixcord.discord.enable = true;
+    nixcord.vesktop.enable = true;
+
     vscode = {
       enable = true;
       package = pkgs.vscode;
