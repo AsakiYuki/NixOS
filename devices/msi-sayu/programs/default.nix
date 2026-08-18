@@ -1,5 +1,6 @@
 {...}: {
   imports = [
-    ./sayu
+    ./home
+    ./system.nix
   ];
 }

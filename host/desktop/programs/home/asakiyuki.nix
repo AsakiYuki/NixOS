@@ -54,9 +54,6 @@
     catppuccin.enable = true;
     nwg-look.enable = true;
 
-    # Hyprland
-    hyprshot.enable = true;
-
     # Gaming
     mangohud.enable = true;
     osu.enable = true;
@@ -76,7 +73,6 @@
     qbittorrent.enable = true;
 
     # General
-    pavucontrol.enable = true;
     dolphin.enable = true;
     proton-apps.enable = true;
     winboat.enable = true;
