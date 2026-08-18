@@ -6,8 +6,8 @@
     # Gaming
     steam = {
       enable = true;
-      allowSteamlinkPorts = true;
-      allowMultiplayerPorts = true;
+      # allowSteamlinkPorts = true;
+      # allowMultiplayerPorts = true;
       gamescopeSession.enable = true;
     };
 
