@@ -9,6 +9,7 @@
     };
 
     home = {
+      theme.cursors = "wuthering-waves/denia";
       programs.btop.enable = true;
     };
   };
