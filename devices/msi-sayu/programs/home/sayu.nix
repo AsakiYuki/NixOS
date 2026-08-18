@@ -8,6 +8,11 @@
 
     catppuccin.enable = true;
 
+    bash.enable = true;
+    fastfetch.enable = true;
+    starship.enable = true;
+    ghostty.enable = true;
+
     nixcord.enable = true;
     nixcord.discord.enable = true;
     nixcord.vesktop.enable = true;
