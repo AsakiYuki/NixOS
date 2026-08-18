@@ -1,9 +1,6 @@
 {...}: {
   programs = {
     # Hyprland
-    hyprland.enable = false;
-    hyprland.xwayland.enable = true;
-    hyprland-portals.enable = true;
     quickshell.enable = true;
 
     # Gaming
@@ -26,7 +23,6 @@
     ffmpeg.enable = true;
     nodejs.enable = true;
     bun.enable = true;
-    brightnessctl.enable = true;
     python.enable = true;
     winepackages.enable = true;
     jdk.enable = true;

@@ -1,5 +1,13 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   imports = [
+    (lib.root "/users/sayu/configuration.nix")
+
+    ./programs
+
     ./hardware-configuration.nix
   ];
 
@@ -18,11 +26,6 @@
   services.pipewire = {
     enable = true;
     pulse.enable = true;
-  };
-
-  users.users.sayu = {
-    isNormalUser = true;
-    extraGroups = ["wheel"];
   };
 
   programs.firefox.enable = true;
