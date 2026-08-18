@@ -5,8 +5,9 @@
   };
 in {
   devShells.x86_64-linux.default = pkgs.mkShell {
-    # buildInputs = with pkgs; [
-    # ];
+    buildInputs = with pkgs; [
+      bun
+    ];
 
     shellHook = ''
       echo "Welcome to NixOS DevShell!"
