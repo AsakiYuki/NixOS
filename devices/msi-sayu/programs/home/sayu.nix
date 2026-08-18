@@ -12,6 +12,7 @@
     fastfetch.enable = true;
     starship.enable = true;
     ghostty.enable = true;
+    dolphin.enable = true;
 
     nixcord.enable = true;
     nixcord.discord.enable = true;
