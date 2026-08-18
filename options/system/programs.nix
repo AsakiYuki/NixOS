@@ -13,8 +13,8 @@ in {
     networking.firewall = lib.mkIf cfg.steam.enable {
       allowedTCPPorts = lib.mkIf cfg.steam.allowSteamlinkPorts [27036 27037];
       allowedUDPPorts =
-        (lib.optionalAttrs cfg.steam.allowSteamlinkPorts [27031 27032 27033 27034 27035 27036])
-        ++ (lib.optionalAttrs cfg.steam.allowMultiplayerPorts [4380 3478 4379]);
+        (lib.optional cfg.steam.allowSteamlinkPorts [27031 27032 27033 27034 27035 27036])
+        ++ (lib.optional cfg.steam.allowMultiplayerPorts [4380 3478 4379]);
     };
 
     environment.systemPackages =
