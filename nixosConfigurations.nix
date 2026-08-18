@@ -8,6 +8,11 @@ in {
       (root "/devices/ideapad-slim-5/configuration.nix")
     ];
   };
+  msi-sayu = {
+    modules = [
+      (root "/devices/msi-sayu/configuration.nix")
+    ];
+  };
   home-server = {
     modules = [
       (root "/devices/home-server/configuration.nix")
