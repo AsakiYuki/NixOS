@@ -1,26 +1,16 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{lib, ...}: {
   imports = [
     (lib.root "/users/sayu/configuration.nix")
 
     ./programs
+    ./services
+
     ./device.nix
+    ./boot.nix
 
     ./hardware-configuration.nix
   ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
   i18n.inputMethod.enable = true;
-
   networking.networkmanager.enable = true;
-  time.timeZone = "Asia/Ho_Chi_Minh";
-
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
 }
