@@ -14,6 +14,6 @@
   };
 
   config = {
-    flatpak.enable = config.device.flatpak.enable;
+    services.flatpak.enable = config.device.flatpak.enable;
   };
 }
