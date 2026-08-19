@@ -7,6 +7,7 @@
     prismlauncher.enable = true;
 
     catppuccin.enable = true;
+    flatpak.enable = true;
 
     bash.enable = true;
     fastfetch.enable = true;
