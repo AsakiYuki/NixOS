@@ -16,8 +16,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
   i18n.inputMethod.enable = true;
 
-  services.cloudflare-warp.enable = true;
-
   networking.networkmanager.enable = true;
   time.timeZone = "Asia/Ho_Chi_Minh";
 
