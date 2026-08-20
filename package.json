@@ -7,7 +7,8 @@
     "url": "git+https://github.com/AsakiYuki/nixos.git"
   },
   "devDependencies": {
-    "@types/node": "^26.1.2"
+    "@types/node": "^26.1.2",
+    "dotenv": "^17.4.2"
   },
   "bugs": {
     "url": "https://github.com/AsakiYuki/nixos/issues"
