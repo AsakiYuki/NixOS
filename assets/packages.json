@@ -1,10 +1,10 @@
 {
     "bun-baseline": {
-        "version": "123456",
+        "version": "1.4.0",
         "hash": "sha256-Poy0vf7yJ/hzk33QiQj5gnshI5Q7dfbaMD7xgwiyDKw="
     },
     "cage-xtmapper": {
-        "release": "123456",
+        "release": "20260208",
         "version-0.1.5": "sha256-ZmdltOQInGbCBpf/e8D2sB9Rjt4wqd8wwuSFvryHfFA=",
         "version-0.2.0": "sha256-F1C3KnTzTO1vEouixqO1xnsGmufRyAk+BiRlypNq4kQ="
     },
@@ -13,12 +13,12 @@
         "hash": "sha256-MsA6lK3PsyOEx938FgJFx8l9oqwoM3FzIK5goF73lTs="
     },
     "lsfg-vk": {
-        "version": "123456",
+        "version": "2.0.0",
         "dev-version": "28",
         "hash": "sha256-JiATwEz6NEVsab11O0HNmFzM3S3aANT0YLWqYAwJVk0="
     },
     "geode-cli": {
-        "version": "123456",
+        "version": "3.8.0",
         "hash": "sha256-iktrrg+/OeIsicIeOsgLxZUW9/ZQdqH57D6zqK4kb6c="
     }
 }
