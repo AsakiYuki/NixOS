@@ -12,6 +12,9 @@ in {
     shellHook = ''
       echo "Welcome to NixOS DevShell!"
 
+      source .env
+      export NIX_CONFIG="access-tokens = github.com=''${GH_TOKEN}"
+
       alias repl="nix repl ."
       alias agenix="./agenix.sh"
     '';
