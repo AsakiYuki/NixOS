@@ -60,8 +60,13 @@ in
     installPhase = ''
       runHook preInstall
 
-      mkdir -p $out/opt/geforcenow-electron $out/bin
+      mkdir -p $out/opt/geforcenow-electron $out/bin $out/share/applications $out/share/icons/hicolor/scalable/apps
       cp -r ./* $out/opt/geforcenow-electron/
+
+      cp ./com.github.hmlendea.geforcenow-electron.desktop $out/share/applications/
+
+      substituteInPlace $out/share/applications/com.github.hmlendea.geforcenow-electron.desktop \
+        --replace-fail "/opt/geforcenow-electron/geforcenow-electron" "$out/bin/geforcenow-electron"
 
       chmod +x $out/opt/geforcenow-electron/geforcenow-electron
 
