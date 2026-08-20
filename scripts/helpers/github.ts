@@ -1,5 +1,6 @@
 const GH_TOKEN = process.env.GH_TOKEN
 const auth: HeadersInit = GH_TOKEN ? { Authorization: `Bearer ${GH_TOKEN}` } : {}
+console.log(auth === undefined)
 
 export interface Asset {
 	name: string
