@@ -1,5 +1,5 @@
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN
-const auth: HeadersInit = GITHUB_TOKEN ? { Authorization: `Bearer ${GITHUB_TOKEN}` } : {}
+const GH_TOKEN = process.env.GH_TOKEN
+const auth: HeadersInit = GH_TOKEN ? { Authorization: `Bearer ${GH_TOKEN}` } : {}
 
 export interface Asset {
 	name: string
