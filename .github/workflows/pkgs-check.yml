@@ -35,5 +35,5 @@ jobs:
             git add assets/packages.json
             git commit \
               -m "ci(assets/packages.json): update packages infos $(date '+%H:%M:%S %d-%m-%Y')" \
-              -F commit.txt
+              -m commit.txt
           fi
