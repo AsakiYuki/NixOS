@@ -27,9 +27,6 @@ jobs:
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@main
 
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
-
       - name: Check for update and perform update
         run: |
           git config user.name "github-actions[bot]"
