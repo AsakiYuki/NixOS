@@ -10,7 +10,10 @@
 
   config.home.file = builtins.listToAttrs (map (proton: let
       name = proton.pname;
-      version = proton.version;
+      version =
+        if proton ? preFixup
+        then "latest"
+        else proton.version;
     in {
       name = ".local/share/Steam/compatibilitytools.d/${name}-${version}";
       value.source = proton;
