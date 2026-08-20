@@ -1,3 +1,6 @@
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN
+const auth: HeadersInit = GITHUB_TOKEN ? { Authorization: `Bearer ${GITHUB_TOKEN}` } : {}
+
 export interface Asset {
 	name: string
 	label: string
@@ -19,6 +22,11 @@ export async function getGithubRepoLatestRelease(
 ): Promise<LatestReleaseData | null> {
 	const response = await fetch(
 		`https://api.github.com/repos/${author}/${repository}/releases${preRelease ? "" : "/latest"}`,
+		{
+			headers: {
+				...auth,
+			},
+		},
 	)
 
 	if (response.status !== 200) return null
