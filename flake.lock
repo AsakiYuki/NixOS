@@ -121,11 +121,11 @@
         "snowfall-lib": "snowfall-lib"
       },
       "locked": {
-        "lastModified": 1786808165,
-        "narHash": "sha256-lGEa9YKuJBSa1e0/UZYquGAniiwLiyvbDoBzepymKxQ=",
+        "lastModified": 1787246675,
+        "narHash": "sha256-uZ4lgvVSowVhS4FUaVmFtczI5XhRlShsFY0YyDOIIAk=",
         "owner": "LotusInputMethod",
         "repo": "fcitx5-lotus",
-        "rev": "cd5c787e5a4dd7824b9d7b17530d6031a80354e3",
+        "rev": "9d3a996c4c172eeb4818674744a289fa6f8a5488",
         "type": "github"
       },
       "original": {
