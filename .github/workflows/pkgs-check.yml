@@ -36,4 +36,6 @@ jobs:
             git commit \
               -m "ci(assets/packages.json): update packages infos $(date '+%H:%M:%S %d-%m-%Y')" \
               -m commit.txt
+            git pull --rebase origin ${{ github.ref_name }}
+            git push origin HEAD:${{ github.ref_name }}
           fi
