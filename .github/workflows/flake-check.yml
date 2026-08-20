@@ -1,4 +1,4 @@
-name: checking update
+name: nix flake update check
 
 on:
   schedule:
@@ -45,15 +45,6 @@ jobs:
             git commit -m "ci(flake.lock): update flake inputs $(date '+%H:%M:%S %d-%m-%Y')"
           else
             echo "No changes in lock files to commit."
-          fi
-
-          bun run check-package-updates || true
-
-          git add assets/packages.json
-          if ! git diff --cached --quiet; then
-            git commit -m "ci(assets/packages.json): update packages infos $(date '+%H:%M:%S %d-%m-%Y')"
-          else
-            echo "No changes in packages files to commit."
           fi
 
           git pull --rebase origin ${{ github.ref_name }}

@@ -5,7 +5,7 @@ on:
     branches: ["*"]
     tags: ["*"]
   workflow_run:
-    workflows: ["checking update"]
+    workflows: ["nix flake update checker"]
     types:
       - completed
 
