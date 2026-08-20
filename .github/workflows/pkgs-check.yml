@@ -9,6 +9,9 @@ env:
   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   NIX_CONFIG: "access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}"
 
+permissions:
+  contents: write
+
 jobs:
   check:
     runs-on: ubuntu-latest
