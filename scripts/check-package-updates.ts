@@ -144,6 +144,24 @@ async function main() {
 				}
 			},
 		}),
+		fetchLastReleasePackage({
+			author: "hmlendea",
+			repository: "gfn-electron",
+			get_version: latest => latest.tag_name.slice(1),
+			new_version_found: async (cached, latest, version) => {
+				const file = latest.assets.find(({ name }) => `geforcenow-electron_${version}_linux.zip`)
+				if (!file) {
+					console.warn(`[WARN] Asset 'geforcenow-electron_${version}_linux.zip' not found in release v${version}.`)
+					return false
+				}
+
+				console.info(`[INFO] Fetching zip hash from: ${file.download_url}`)
+				const hash = await fetchZipHash(file.download_url)
+				descriptions.push(`geforcenow-electron v${version} - Hash: ${hash}`)
+
+				return { version, hash }
+			},
+		}),
 	])
 
 	if (!status.some(v => v)) return
