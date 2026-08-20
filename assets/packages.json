@@ -20,5 +20,9 @@
     "geode-cli": {
         "version": "3.8.0",
         "hash": "sha256-iktrrg+/OeIsicIeOsgLxZUW9/ZQdqH57D6zqK4kb6c="
+    },
+    "gfn-electron": {
+        "version": "3.0.2",
+        "hash": "sha256-UpJrjR1aGkC+7Wh+aVF/SilkzS0eMywd297HOOvCCTA="
     }
 }

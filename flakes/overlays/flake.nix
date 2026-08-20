@@ -12,6 +12,7 @@
       bun-baseline = final.callPackage ./packages/bun-baseline.nix {};
       geode-cli = final.callPackage ./packages/geode-cli.nix {};
       lsfg-vk = final.callPackage ./packages/lsfg-vk.nix {};
+      geforce-now-electron = final.callPackage ./packages/gfn-electron.nix {};
     };
   };
 }
