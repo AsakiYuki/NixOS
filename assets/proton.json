@@ -1,6 +1,8 @@
 {
     "ge-proton": {
         "latest": "11-5",
+        "source_name": "GE-Proton11-5-x86_64",
+        "override_name": "ge-proton-latest",
         "releases": {
             "11-5": {
                 "url": "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton11-5/GE-Proton11-5-x86_64.tar.gz",
@@ -10,6 +12,8 @@
     },
     "cachyos-proton": {
         "latest": "11-0_20260703",
+        "source_name": "proton-cachyos-11.0-20260703-slr-x86_64",
+        "override_name": "proton-cachyos-latest",
         "releases": {
             "11-0_20260703": {
                 "url": "https://github.com/CachyOS/proton-cachyos/releases/download/cachyos-11.0-20260703-slr/proton-cachyos-11.0-20260703-slr-x86_64.tar.xz",
@@ -19,6 +23,8 @@
     },
     "dw-proton": {
         "latest": "11-0_11",
+        "source_name": "dwproton-11.0-11-x86_64",
+        "override_name": "dwproton-latest",
         "releases": {
             "11-0_11": {
                 "url": "https://dawn.wine/dawn-winery/dwproton/releases/download/dwproton-11.0-11/dwproton-11.0-11-x86_64.tar.xz",

@@ -63,9 +63,9 @@
 
     steam = {
       protonPackages = with pkgs; [
-        cachyos-proton-11-0_20260703
-        dw-proton-11-0_11
-        ge-proton-11-5
+        cachyos-proton-latest
+        dw-proton-latest
+        ge-proton-latest
       ];
     };
 
