@@ -45,6 +45,7 @@ in {
       (getPkg "tldr")
 
       (getPkg "cider")
+      (getPkg "geforce-now")
 
       (lib.mkIf cfg.jetbrains.idea.enable cfg.jetbrains.idea.package)
       (lib.mkIf cfg.jetbrains.datagrip.enable cfg.jetbrains.datagrip.package)
@@ -87,6 +88,7 @@ in {
     xprop = mkOpt pkgs "xprop" {};
     nwg-look = mkOpt pkgs "nwg-look" {};
     davinci-resolve = mkOpt pkgs "davinci-resolve" {};
+    geforce-now = mkOpt pkgs "geforce-now-electron" {};
 
     easyeffects = mkOpt pkgs "easyeffects" {name = "Easy Effects";};
     libreoffice = mkOpt pkgs "libreoffice-qt-fresh" {name = "libreoffice";};
