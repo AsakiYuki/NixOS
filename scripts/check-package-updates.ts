@@ -8,6 +8,8 @@ import { fetchZipHash } from "./helpers/nix"
 
 let packages: any = {}
 
+const descriptions: string[] = []
+
 interface FetchLastPackageArgs {
 	author: string
 	repository: string
@@ -78,6 +80,7 @@ async function main() {
 
 				console.info(`[INFO] Fetching zip hash from: ${file.download_url}`)
 				const hash = await fetchZipHash(file.download_url)
+				descriptions.push(`bun v${version} (Linux x64 Baseline) - Hash: ${hash}`)
 
 				return { version, hash }
 			},
@@ -96,6 +99,7 @@ async function main() {
 
 				console.info(`[INFO] Fetching zip hash from: ${file.download_url}`)
 				const hash = await fetchZipHash(file.download_url)
+				descriptions.push(`geode-cli v${version} (Linux x64) - Hash: ${hash}`)
 
 				return { version, hash }
 			},
@@ -111,6 +115,7 @@ async function main() {
 
 				console.info(`[INFO] Fetching zip hash from: ${file.download_url}`)
 				const hash = await fetchZipHash(file.download_url)
+				descriptions.push(`lsfg-vk v${package_version}-dev${dev_version} (Linux x64) - Hash: ${hash}`)
 
 				return { version: package_version, "dev-version": dev_version, hash }
 			},
@@ -130,6 +135,8 @@ async function main() {
 					fetchZipHash(file2.download_url, false),
 				])
 
+				descriptions.push(`cage-xtmapper v${release} (Linux x64) - Hash 1: ${hash1}, Hash 2: ${hash2}`)
+
 				return {
 					release,
 					"version-0.1.5": hash1,
@@ -141,7 +148,10 @@ async function main() {
 
 	if (!status.some(v => v)) return
 
-	await fs.writeFile(path.join(__dirname, "../assets/packages.json"), JSON.stringify(packages, null, 4))
+	await Promise.all([
+		fs.writeFile(path.join(__dirname, "../assets/packages.json"), JSON.stringify(packages, null, 4)),
+		fs.writeFile(path.join(__dirname, "../commit.txt"), descriptions.join("\n")),
+	])
 }
 
 main()
