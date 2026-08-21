@@ -46,7 +46,7 @@ A Home Manager module providing anime-themed cursor packs (Honkai, Wuthering Wav
 ```nix
 # home.nix
 {
-  theme.cursors = "wuthering-waves/mornye";
+  theme.cursors = "wuthering-waves/denia";
 }
 ```
 
