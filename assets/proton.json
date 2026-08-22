@@ -22,7 +22,7 @@
         }
     },
     "dw-proton": {
-        "latest": "11-0_11",
+        "latest": "11-0_10",
         "source_name": "dwproton-11.0-11-x86_64",
         "override_name": "dwproton-latest",
         "releases": {
