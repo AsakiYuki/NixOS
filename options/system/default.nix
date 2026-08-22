@@ -6,6 +6,7 @@
   imports = [
     ./programs.nix
     ./environment.nix
+    ./services.nix
   ];
 
   options.device = {
