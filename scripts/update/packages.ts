@@ -3,8 +3,8 @@ import "dotenv/config"
 import path from "path"
 import fs from "fs/promises"
 
-import { getGithubRepoLatestRelease, LatestReleaseData } from "./helpers/github"
-import { fetchZipHash } from "./helpers/nix"
+import { getGithubRepoLatestRelease, LatestReleaseData } from "../helpers/github"
+import { fetchZipHash } from "../helpers/nix"
 
 let packages: any = {}
 
