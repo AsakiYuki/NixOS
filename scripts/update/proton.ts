@@ -72,6 +72,8 @@ async function getDwProton() {
 }
 
 async function writeCommit() {
+	if (descriptions.length > 1) return null
+
 	const commitFilePath = path.join(__dirname, "../../commit.txt")
 	const preCommit = await fs.readFile(commitFilePath, "utf-8").catch(() => null)
 
