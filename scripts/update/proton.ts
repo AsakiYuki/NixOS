@@ -63,6 +63,7 @@ async function getDwProton() {
 	descriptions.push(`dw-proton ${newVersion} - Hash: ${hash}`)
 
 	proton.latest = newVersion
+	proton.source_name = `${data.name}-x86_64`
 	proton.releases[newVersion] = {
 		url: file.download_url,
 		hash,
