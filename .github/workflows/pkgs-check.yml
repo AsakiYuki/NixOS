@@ -32,7 +32,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          bun run check-package-updates
+          bun run check-packages-update
 
           if [ -f commit.txt ]; then
             git add assets/packages.json
