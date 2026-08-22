@@ -63,7 +63,7 @@ async function fetchLastReleasePackage(options: FetchLastPackageArgs) {
 }
 
 async function main() {
-	packages = JSON.parse(await fs.readFile(path.join(__dirname, "../assets/packages.json"), "utf-8"))
+	packages = JSON.parse(await fs.readFile(path.join(__dirname, "../../assets/packages.json"), "utf-8"))
 
 	const status = await Promise.all([
 		fetchLastReleasePackage({
@@ -167,8 +167,8 @@ async function main() {
 	if (!status.some(v => v)) return
 
 	await Promise.all([
-		fs.writeFile(path.join(__dirname, "../assets/packages.json"), JSON.stringify(packages, null, 4)),
-		fs.writeFile(path.join(__dirname, "../commit.txt"), descriptions.join("\n")),
+		fs.writeFile(path.join(__dirname, "../../assets/packages.json"), JSON.stringify(packages, null, 4)),
+		fs.writeFile(path.join(__dirname, "../../commit.txt"), descriptions.join("\n")),
 	])
 }
 
