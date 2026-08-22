@@ -3,12 +3,13 @@ import "dotenv/config"
 import path from "path"
 import fs from "fs/promises"
 
-import { getGithubRepoLatestRelease, LatestReleaseData } from "../helpers/github"
+import { getGithubRepoLatestRelease } from "../helpers/github"
 import { fetchZipHash } from "../helpers/nix"
+import { LatestReleaseData } from "../helpers/git"
 
 let packages: any = {}
 
-const descriptions: string[] = []
+const descriptions: string[] = ["- packages update"]
 
 interface FetchLastPackageArgs {
 	author: string
