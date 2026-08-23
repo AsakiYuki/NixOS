@@ -39,11 +39,10 @@ in {
       (getPkg "davinci-resolve")
       (getPkg "wl-clipboard")
       (getPkg "easyeffects")
-
+      (getPkg "scrspy")
       (getPkg "pavucontrol")
       (getPkg "nwg-look")
       (getPkg "tldr")
-
       (getPkg "cider")
       (getPkg "geforce-now")
 
@@ -65,6 +64,7 @@ in {
       };
     };
 
+    scrspy = mkOpt pkgs "scrspy" {};
     slack = mkOpt pkgs "slack" {};
     notion = mkOpt pkgs "notion-app-enhanced" {name = "notion";};
     winboat = mkOpt pkgs "winboat" {};
