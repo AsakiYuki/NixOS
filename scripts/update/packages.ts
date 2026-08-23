@@ -9,7 +9,7 @@ import { LatestReleaseData } from "../helpers/git"
 
 let packages: any = {}
 
-const descriptions: string[] = ["- packages update"]
+const descriptions: string[] = []
 
 interface FetchLastPackageArgs {
 	author: string

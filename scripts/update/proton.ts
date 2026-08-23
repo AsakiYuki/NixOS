@@ -31,7 +31,7 @@ interface FetchProtonReleaseArgs {
 }
 
 let protons: Record<string, Proton> = {}
-const descriptions: string[] = ["- proton update"]
+const descriptions: string[] = []
 
 function versionNormalization(version: string) {
 	const charReplace: Record<string, string | void> = {
@@ -108,16 +108,11 @@ async function fetchProtonRelease(options: FetchProtonReleaseArgs) {
 }
 
 async function writeCommit() {
-	if (descriptions.length <= 1) return
-
-	const commitFilePath = path.join(__dirname, "../../commit.txt")
-	const preCommit = await fs.readFile(commitFilePath, "utf-8").catch(() => null)
-
-	const write = preCommit ? `${preCommit}\n\n${descriptions.join("\n")}` : descriptions.join("\n")
-	await fs.writeFile(commitFilePath, write, "utf-8")
+	if (descriptions.length === 0) return
+	await fs.writeFile(path.join(__dirname, "../../commit.txt"), descriptions.join("\n"), "utf-8")
 }
 
-; (async function main() {
+;(async function main() {
 	protons = JSON.parse(await fs.readFile(path.join(__dirname, "../../assets/proton.json"), "utf-8"))
 
 	const status = await Promise.all([

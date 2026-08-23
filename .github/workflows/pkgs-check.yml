@@ -33,14 +33,26 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           bun run check-packages-update
-          bun run check-proton-update
 
           if [ -f commit.txt ]; then
             git add assets/packages.json
+            git commit \
+              -m "ci(update-checker/packages): update packages infos $(date '+%H:%M:%S %d-%m-%Y')" \
+              -m "$(cat commit.txt)"
+
+            rm commit.txt
+          fi
+
+          bun run check-proton-update
+
+          if [ -f commit.txt ]; then
             git add assets/proton.json
             git commit \
-              -m "ci(update-checker): update packages infos $(date '+%H:%M:%S %d-%m-%Y')" \
+              -m "ci(update-checker/proton): update proton infos $(date '+%H:%M:%S %d-%m-%Y')" \
               -m "$(cat commit.txt)"
-            git pull --rebase origin ${{ github.ref_name }}
-            git push origin HEAD:${{ github.ref_name }}
-          fi
+
+            rm commit.txt
+          fi 
+
+          git pull --rebase origin ${{ github.ref_name }}
+          git push origin HEAD:${{ github.ref_name }}
