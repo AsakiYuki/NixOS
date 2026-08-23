@@ -36,5 +36,6 @@
 
     # KDE
     kde-packages.enable = true;
+    kdeconnect.enable = true;
   };
 }
