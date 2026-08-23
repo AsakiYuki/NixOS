@@ -116,6 +116,12 @@
           keyColor = "blue";
         }
         {
+          type = "swap";
+          format = "{percentage-bar} {used} / {total}";
+          key = "├─";
+          keyColor = "blue";
+        }
+        {
           type = "disk";
           format = "{size-percentage-bar} {name} ({mountpoint}) {size-used} / {size-total} - {filesystem}";
           key = "├─󰋊";
