@@ -41,6 +41,8 @@ jobs:
               -m "$(cat commit.txt)"
 
             rm commit.txt
+          else
+            echo "[INFO] Cannot found any packages update!"
           fi
 
           bun run check-proton-update
@@ -52,6 +54,8 @@ jobs:
               -m "$(cat commit.txt)"
 
             rm commit.txt
+          else
+            echo "[INFO] Cannot found any proton packages update!"
           fi 
 
           git pull --rebase origin ${{ github.ref_name }}
