@@ -14,6 +14,6 @@
 
   services.openssh = {
     enable = true;
-    passwordAuthentication = lib.mkForce true;
+    PasswordAuthentication = lib.mkForce true;
   };
 }
