@@ -1,4 +1,4 @@
-{...}: {
+{lib, ...}: {
   imports = [
     ./dae.nix
     ./pipewire.nix
@@ -12,5 +12,8 @@
     ./udev.nix
   ];
 
-  services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    passwordAuthentication = lib.mkForce true;
+  };
 }
