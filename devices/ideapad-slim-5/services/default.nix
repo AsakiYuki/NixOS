@@ -11,4 +11,6 @@
     ./logind.nix
     ./udev.nix
   ];
+
+  services.openssh.enable = true;
 }
