@@ -1,9 +1,12 @@
 {lib, ...}: {
   users.users.asakiyuki.openssh.authorizedKeys.keys = lib.mkAuthorizedKeys [
     "/home-server/asakiyuki.nixos.pub"
+
     "/ideapad-slim-5-14apk10/asakiyuki.nixos.pub"
     "/ideapad-slim-5-14apk10/asakiyuki.nixos.wsl.pub"
     "/ideapad-slim-5-14apk10/asakiyuki.windows.pub"
+
+    "/macos/asakiyuki.macos.pub"
   ] "/assets/public/ssh";
 
   home-manager.users.asakiyuki.programs.bash.initExtra = ''
