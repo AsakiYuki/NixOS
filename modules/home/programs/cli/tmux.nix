@@ -1,4 +1,10 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  osconfig,
+  ...
+}: let
+  cfg = osconfig.device.theme.catppuccin;
+
   TOP_PANEL = ''
     set -g pane-border-status top
     set -g pane-border-lines single
@@ -42,8 +48,8 @@ in {
       {
         plugin = catppuccin;
         extraConfig = ''
-          set -g @catppuccin_flavor 'mocha'
-          set -ogq @module-icon "#[bg=#{E:@thm_sapphire},fg=#{E:@thm_surface_0}]"
+          set -g @catppuccin_flavor '${cfg.flavor}'
+          set -ogq @module-icon "#[bg=#{E:@thm_${cfg.accent}},fg=#{E:@thm_surface_0}]"
           set -ogq @module-text "#[bg=#{E:@thm_surface_0},fg=#{E:@thm_fg}]"
         '';
       }
