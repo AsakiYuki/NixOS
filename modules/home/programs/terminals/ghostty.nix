@@ -1,4 +1,12 @@
-{...}: {
+{
+  osconfig,
+  lib,
+  ...
+}: let
+  cfg = osconfig.device.theme.catppuccin;
+  flavor = cfg.flavor;
+  colors = lib.catppuccin.${flavor};
+in {
   programs.ghostty = {
     settings = {
       theme = "catppuccin-mocha";
@@ -20,29 +28,29 @@
 
     themes = {
       catppuccin-mocha = {
-        background = "1e1e2e";
-        cursor-color = "f5e0dc";
-        foreground = "cdd6f4";
+        background = "${colors.base}";
+        cursor-color = "${colors.rosewater}";
+        foreground = "${colors.text}";
         palette = [
-          "0=#45475a"
-          "1=#f38ba8"
-          "2=#a6e3a1"
-          "3=#f9e2af"
-          "4=#89b4fa"
-          "5=#f5c2e7"
-          "6=#94e2d5"
-          "7=#bac2de"
-          "8=#585b70"
-          "9=#f38ba8"
-          "10=#a6e3a1"
-          "11=#f9e2af"
-          "12=#89b4fa"
-          "13=#f5c2e7"
-          "14=#94e2d5"
-          "15=#a6adc8"
+          "0=${colors.surface1}"
+          "1=${colors.red}"
+          "2=${colors.green}"
+          "3=${colors.yellow}"
+          "4=${colors.blue}"
+          "5=${colors.pink}"
+          "6=${colors.teal}"
+          "7=${colors.subtext1}"
+          "8=${colors.surface2}"
+          "9=${colors.red}"
+          "10=${colors.green}"
+          "11=${colors.yellow}"
+          "12=${colors.blue}"
+          "13=${colors.pink}"
+          "14=${colors.teal}"
+          "15=${colors.subtext0}"
         ];
-        selection-background = "353749";
-        selection-foreground = "cdd6f4";
+        selection-background = "${colors.surface1}";
+        selection-foreground = "${colors.text}";
       };
     };
   };
