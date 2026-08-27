@@ -1,11 +1,10 @@
 {
   config,
-  osconfig,
   pkgs,
   lib,
   ...
 }: let
-  cfg = osconfig.device.theme.catppuccin;
+  cfg = config.device.theme.catppuccin;
 
   catppuccin = pkgs.fetchzip {
     url = "https://github.com/catppuccin/gitea/releases/download/v1.0.2/catppuccin-gitea.tar.gz";
