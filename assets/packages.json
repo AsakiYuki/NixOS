@@ -14,12 +14,12 @@
     },
     "lsfg-vk": {
         "version": "2.0.0",
-        "dev-version": "28",
-        "hash": "sha256-JiATwEz6NEVsab11O0HNmFzM3S3aANT0YLWqYAwJVk0="
+        "dev-version": "29",
+        "hash": "sha256-IT8GYis0Sbn1jIEH3vp9S0jaNQHrJ98HA1qG5MFngBk="
     },
     "geode-cli": {
-        "version": "3.8.0",
-        "hash": "sha256-iktrrg+/OeIsicIeOsgLxZUW9/ZQdqH57D6zqK4kb6c="
+        "version": "3.9.0",
+        "hash": "sha256-3TAo6St1XU6ZvrIrYF0tOs+N0gg8bJO7Uvcgityodww="
     },
     "gfn-electron": {
         "version": "3.0.2",
