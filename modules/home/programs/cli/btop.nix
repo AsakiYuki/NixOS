@@ -1,12 +1,17 @@
 {
   lib,
   config,
+  osconfig,
   ...
 }:
 lib.mkIf config.programs.btop.enable {
-  programs.btop = {
+  programs.btop = let
+    cfg = osconfig.device.theme.catppuccin;
+    flavor = cfg.flavor;
+    colors = lib.catppuccin.${flavor};
+  in {
     settings = {
-      color_theme = "catppuccin_mocha";
+      color_theme = "catppuccin_${flavor}";
       theme_background = true;
       vim_keys = true;
       disable_mouse = true;
@@ -15,49 +20,49 @@ lib.mkIf config.programs.btop.enable {
     };
 
     themes = {
-      catppuccin_mocha = ''
-        theme[main_bg]="#1e1e2e"
-        theme[main_fg]="#cdd6f4"
-        theme[title]="#cdd6f4"
-        theme[hi_fg]="#89b4fa"
-        theme[selected_bg]="#45475a"
-        theme[selected_fg]="#89b4fa"
-        theme[inactive_fg]="#7f849c"
-        theme[graph_text]="#f5e0dc"
-        theme[meter_bg]="#45475a"
-        theme[proc_misc]="#f5e0dc"
-        theme[cpu_box]="#cba6f7"
-        theme[mem_box]="#a6e3a1"
-        theme[net_box]="#eba0ac"
-        theme[proc_box]="#89b4fa"
-        theme[div_line]="#6c7086"
-        theme[temp_start]="#a6e3a1"
-        theme[temp_mid]="#f9e2af"
-        theme[temp_end]="#f38ba8"
-        theme[cpu_start]="#94e2d5"
-        theme[cpu_mid]="#74c7ec"
-        theme[cpu_end]="#b4befe"
-        theme[free_start]="#cba6f7"
-        theme[free_mid]="#b4befe"
-        theme[free_end]="#89b4fa"
-        theme[cached_start]="#74c7ec"
-        theme[cached_mid]="#89b4fa"
-        theme[cached_end]="#b4befe"
-        theme[available_start]="#fab387"
-        theme[available_mid]="#eba0ac"
-        theme[available_end]="#f38ba8"
-        theme[used_start]="#a6e3a1"
-        theme[used_mid]="#94e2d5"
-        theme[used_end]="#89dceb"
-        theme[download_start]="#fab387"
-        theme[download_mid]="#eba0ac"
-        theme[download_end]="#f38ba8"
-        theme[upload_start]="#a6e3a1"
-        theme[upload_mid]="#94e2d5"
-        theme[upload_end]="#89dceb"
-        theme[process_start]="#74c7ec"
-        theme[process_mid]="#b4befe"
-        theme[process_end]="#cba6f7"
+      "catppuccin_${flavor}" = ''
+        theme[main_bg]="${colors.base}"
+        theme[main_fg]="${colors.text}"
+        theme[title]="${colors.text}"
+        theme[hi_fg]="${colors.blue}"
+        theme[selected_bg]="${colors.surface1}"
+        theme[selected_fg]="${colors.blue}"
+        theme[inactive_fg]="${colors.overlay1}"
+        theme[graph_text]="${colors.rosewater}"
+        theme[meter_bg]="${colors.surface1}"
+        theme[proc_misc]="${colors.rosewater}"
+        theme[cpu_box]="${colors.mauve}"
+        theme[mem_box]="${colors.green}"
+        theme[net_box]="${colors.maroon}"
+        theme[proc_box]="${colors.blue}"
+        theme[div_line]="${colors.overlay0}"
+        theme[temp_start]="${colors.green}"
+        theme[temp_mid]="${colors.yellow}"
+        theme[temp_end]="${colors.red}"
+        theme[cpu_start]="${colors.teal}"
+        theme[cpu_mid]="${colors.sappire}"
+        theme[cpu_end]="${colors.lavender}"
+        theme[free_start]="${colors.mauve}"
+        theme[free_mid]="${colors.lavender}"
+        theme[free_end]="${colors.blue}"
+        theme[cached_start]="${colors.sappire}"
+        theme[cached_mid]="${colors.blue}"
+        theme[cached_end]="${colors.lavender}"
+        theme[available_start]="${colors.peach}"
+        theme[available_mid]="${colors.maroon}"
+        theme[available_end]="${colors.red}"
+        theme[used_start]="${colors.green}"
+        theme[used_mid]="${colors.teal}"
+        theme[used_end]="${colors.sky}"
+        theme[download_start]="${colors.peach}"
+        theme[download_mid]="${colors.maroon}"
+        theme[download_end]="${colors.red}"
+        theme[upload_start]="${colors.green}"
+        theme[upload_mid]="${colors.teal}"
+        theme[upload_end]="${colors.sky}"
+        theme[process_start]="${colors.sappire}"
+        theme[process_mid]="${colors.lavender}"
+        theme[process_end]="${colors.mauve}"
       '';
     };
   };
