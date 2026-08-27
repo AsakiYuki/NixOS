@@ -7,6 +7,7 @@
     "/ideapad-slim-5-14apk10/asakiyuki.windows.pub"
 
     "/macos/asakiyuki.macos.pub"
+    "/android/asakiyuki.honor.pub"
   ] "/assets/public/ssh";
 
   home-manager.users.asakiyuki.programs.bash.initExtra = ''
