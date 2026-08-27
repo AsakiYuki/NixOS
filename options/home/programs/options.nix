@@ -2,6 +2,7 @@
   lib,
   pkgs,
   config,
+  osconfig,
   ...
 }: let
   cfg = config.programs;
@@ -103,13 +104,15 @@ in {
       idea = mkOpt pkgs.jetbrains "idea" {};
     };
 
-    catppuccin = {
+    catppuccin = let
+      cfg = osconfig.device.theme.catppuccin;
+    in {
       enable = lib.mkEnableOption "catppuccin";
       package = lib.mkOption {
         type = lib.types.package;
         default = pkgs.catppuccin-gtk.override {
-          variant = "mocha";
-          accents = ["sapphire"];
+          variant = cfg.flavor;
+          accents = [cfg.accent];
           size = "compact";
         };
         description = "Catppuccin GTK package";
@@ -117,8 +120,8 @@ in {
       kde = lib.mkOption {
         type = lib.types.package;
         default = pkgs.catppuccin-kde.override {
-          flavour = ["mocha"];
-          accents = ["sapphire"];
+          flavour = [cfg.flavor];
+          accents = [cfg.accent];
         };
         description = "Catppuccin KDE package";
       };
