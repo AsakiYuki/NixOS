@@ -1,5 +1,13 @@
 {lib, ...}: {
   options.device = {
+    catppuccin = {
+      flavor = lib.mkOption {
+        type = lib.types.enum (lib.attrNames lib.catppuccin);
+        default = "mocha";
+        description = "catppuccin flavor colors";
+      };
+    };
+
     dm = {
       sddm = {
         enable = lib.mkEnableOption "sddm";
