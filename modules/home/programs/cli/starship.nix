@@ -73,6 +73,8 @@
           Arch = "[󰣇](bold blue)";
           Windows = "[](bold blue)";
           NixOS = "[](bold blue)";
+          Macos = "[](bold gray)";
+          Android = "[](bold green)";
         };
       };
     };
