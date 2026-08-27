@@ -5,5 +5,6 @@
   attrs = {
     mkUsers = import ./mkUsers.nix args;
   };
+  catppuccin = import ./catppuccin.nix;
 in
-  fs // mkAuthKeys // mkProgOpt // attrs
+  fs // mkAuthKeys // mkProgOpt // attrs // {inherit catppuccin;}
