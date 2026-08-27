@@ -9,7 +9,7 @@
 in {
   programs.ghostty = {
     settings = {
-      theme = "catppuccin-mocha";
+      theme = "catppuccin-${flavor}";
 
       font-size = 9;
       font-family = "SauceCodePro NFP Bold";
@@ -27,7 +27,7 @@ in {
     };
 
     themes = {
-      catppuccin-mocha = {
+      "catppuccin-${flavor}" = {
         background = "${colors.base}";
         cursor-color = "${colors.rosewater}";
         foreground = "${colors.text}";
