@@ -9,14 +9,9 @@
   mkOpt = lib.mkProgramOption;
   mkOpts = lib.mkProgramsOption;
 in {
-  config = {
-    networking.firewall = lib.mkIf cfg.steam.enable {
-      allowedTCPPorts = lib.mkIf cfg.steam.allowSteamlinkPorts [27036 27037];
-      allowedUDPPorts =
-        (lib.optional cfg.steam.allowSteamlinkPorts [27031 27032 27033 27034 27035 27036])
-        ++ (lib.optional cfg.steam.allowMultiplayerPorts [4380 3478 4379]);
-    };
+  imports = [./steam.nix];
 
+  config = {
     environment.systemPackages =
       [
         (lib.mkIf config.virtualisation.waydroid.enable pkgs.cage-xtmapper)
@@ -57,10 +52,6 @@ in {
     quickshell = mkOpt pkgs "quickshell" {};
     papirus-icons = mkOpt pkgs "papirus-icon-theme" {name = "papirus-icon-theme";};
 
-    steam = {
-      allowSteamlinkPorts = lib.mkEnableOption "steam-link streaming ports";
-      allowMultiplayerPorts = lib.mkEnableOption "Steam multiplayer and voice ports";
-    };
     r-tensorflow = {
       enable = lib.mkEnableOption "R tensorflow";
       package = lib.mkOption {

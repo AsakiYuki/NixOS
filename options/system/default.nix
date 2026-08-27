@@ -4,7 +4,8 @@
   ...
 }: {
   imports = [
-    ./programs.nix
+    ./programs
+
     ./environment.nix
     ./services.nix
   ];
