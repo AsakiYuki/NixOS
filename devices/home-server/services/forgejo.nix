@@ -82,8 +82,8 @@ in {
   #   hostPackages = [];
   # };
 
-  systemd.tmpfiles.rules = lib.mkIf cfg.enable [
-    "d ${cfg.customDir}/public/assets/css 0755 forgejo forgejo -"
+  systemd.tmpfiles.rules = lib.mkIf config.services.forgejo.enable [
+    "d ${config.services.forgejo.customDir}/public/assets/css 0755 forgejo forgejo -"
   ];
 
   system.activationScripts.forgejoTheme = lib.mkIf config.services.forgejo.enable {
