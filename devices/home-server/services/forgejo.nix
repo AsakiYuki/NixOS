@@ -12,8 +12,6 @@
     sha256 = "sha256-rZHLORwLUfIFcB6K9yhrzr+UwdPNQVSadsw6rg8Q7gs=";
     stripRoot = false;
   };
-
-  cfg = config.services.forgejo;
 in {
   services.forgejo = {
     enable = true;
