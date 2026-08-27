@@ -17,6 +17,7 @@
     # General
     dconf.enable = true;
     ntfs3g.enable = true;
+    localsend.enable = true;
 
     # CLI
     llvm.enable = true;
