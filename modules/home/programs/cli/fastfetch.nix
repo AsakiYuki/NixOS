@@ -1,22 +1,30 @@
-{...}: {
+{
+  osconfig,
+  lib,
+  ...
+}: let
+  cfg = osconfig.device.theme.catppuccin;
+  colors = lib.catppuccin.${cfg.flavor};
+  accent = colors.${cfg.accent};
+in {
   programs.fastfetch = {
     settings = {
       logo = {
         padding.top = 1;
         color = {
-          "1" = "#89b4fa";
-          "2" = "#cdd6f4";
-          "3" = "#89b4fa";
-          "4" = "#cdd6f4";
-          "5" = "#89b4fa";
-          "6" = "#cdd6f4";
+          "1" = accent;
+          "2" = colors.text;
+          "3" = accent;
+          "4" = colors.text;
+          "5" = accent;
+          "6" = colors.text;
         };
       };
 
       display = {
         color = {
-          title = "#cdd6f4";
-          output = "#cdd6f4";
+          title = colors.text;
+          output = colors.text;
           separator = "black";
         };
 

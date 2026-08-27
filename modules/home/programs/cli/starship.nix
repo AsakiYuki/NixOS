@@ -1,4 +1,11 @@
-{...}: {
+{
+  osconfig,
+  lib,
+  ...
+}: let
+  cfg = osconfig.device.theme.catppuccin;
+  colors = lib.catppuccin.${cfg.flavor};
+in {
   programs.starship = {
     settings = {
       add_newline = true;
@@ -38,7 +45,7 @@
 
       directory = {
         format = "[$read_only]($read_only_style)[$path]($style)";
-        style = "#2e8be8";
+        style = "${colors.blue}";
         truncation_length = 2;
         read_only = "󰌾 ";
       };
@@ -52,7 +59,7 @@
       cmd_duration = {
         min_time = 1;
         format = "[\\[$duration\\]]($style) ";
-        style = "#C0C0C0";
+        style = "${colors.subtext1}";
         show_milliseconds = true;
       };
 
