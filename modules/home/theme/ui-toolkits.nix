@@ -3,7 +3,9 @@
   lib,
   pkgs,
   ...
-}: {
+}: let
+  cfg = osconfig.device.theme.catppuccin;
+in {
   # QT
   qt = {
     enable = true;
@@ -23,7 +25,7 @@
   # GTK
   gtk = {
     enable = true;
-    theme.name = "catppuccin-mocha-sapphire-compact";
+    theme.name = "catppuccin-${cfg.flavor}-${cfg.accent}-compact";
     gtk3.extraConfig.gtk-application-prefer-dark-theme = 1;
     gtk4.extraConfig.gtk-application-prefer-dark-theme = 1;
   };
