@@ -1,10 +1,17 @@
 {lib, ...}: {
   options.device = {
-    catppuccin = {
-      flavor = lib.mkOption {
-        type = lib.types.enum (lib.attrNames lib.catppuccin);
-        default = "mocha";
-        description = "catppuccin flavor colors";
+    theme = {
+      catppuccin = {
+        flavor = lib.mkOption {
+          type = lib.types.enum (lib.attrNames lib.catppuccin);
+          default = "mocha";
+          description = "catppuccin flavor colors";
+        };
+        accent = lib.mkOption {
+          type = lib.types.enum ["rosewater" "flamingo" "pink" "mauve" "red" "maroon" "peach" "yellow" "green" "teal" "sky" "sapphire" "blue" "lavender"];
+          default = "lavender";
+          description = "catppuccin accent color";
+        };
       };
     };
 
