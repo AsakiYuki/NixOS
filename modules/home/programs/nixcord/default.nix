@@ -1,4 +1,10 @@
-{ lib, ... }: {
+{
+  lib,
+  osconfig,
+  ...
+}: let
+  cfg = osconfig.device.theme.catppuccin;
+in {
   programs.nixcord = {
     quickCss = lib.readRootFile "/assets/programs/discord/style.css";
     discord.vencord.enable = true;
@@ -6,7 +12,7 @@
     config = {
       useQuickCss = true;
       enableReactDevtools = true;
-      themeLinks = [ "https://catppuccin.github.io/discord/dist/catppuccin-mocha-blue.theme.css" ];
+      themeLinks = ["https://catppuccin.github.io/discord/dist/catppuccin-${cfg.flavor}-${cfg.accent}.theme.css"];
 
       plugins = {
         blurNsfw.enable = true;
