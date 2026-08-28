@@ -1,14 +1,19 @@
 {
   pkgs,
   osconfig,
+  lib,
   ...
 }: let
   cfg = osconfig.device.theme.catppuccin;
+  colors = lib.catppuccin.${cfg.flavor};
+  accent = colors.${cfg.accent};
 
   TOP_PANEL = ''
     set -g pane-border-status top
     set -g pane-border-lines single
     set -g pane-border-indicators colour
+
+    set -g pane-active-border-style "fg=${accent}"
 
     set -g pane-border-format "#{E:@module-icon} #{pane_index} #{E:@module-text} #{pane_current_command}:#{pane_current_path} #[default]"
   '';
