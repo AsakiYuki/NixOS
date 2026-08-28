@@ -5,6 +5,7 @@
 }: let
   cfg = osconfig.device.theme.catppuccin;
   colors = lib.catppuccin.${cfg.flavor};
+  accent = colors.${cfg.accent};
 in {
   programs.starship = {
     settings = {
@@ -16,50 +17,49 @@ in {
         $cmd_duration$sudo$directory > '';
 
       sudo = {
-        format = "[$symbol]($style) ";
+        format = "[$symbol](bold fg:${accent}) ";
         symbol = "";
         disabled = false;
       };
 
       java = {
-        format = "[$symbol $version]($style) ";
+        format = "[$symbol $version](bold fg:${colors.red}) ";
         symbol = "";
       };
 
       cmake = {
-        format = "[$symbol $version](bold blue) ";
+        format = "[$symbol $version](bold fg:${colors.blue}) ";
         symbol = "";
       };
 
       nodejs = {
-        format = "[$symbol $version](bold green) ";
+        format = "[$symbol $version](bold fg:${colors.green}) ";
         symbol = "󰎙";
       };
 
       git_branch = {
-        format = "[$symbol $branch]($style) ";
+        format = "[$symbol $branch](bold fg:${colors.red}) ";
         symbol = "";
-        style = "red";
         disabled = false;
       };
 
       directory = {
         format = "[$read_only]($read_only_style)[$path]($style)";
-        style = "${colors.blue}";
+        style = accent;
         truncation_length = 2;
         read_only = "󰌾 ";
       };
 
       character = {
-        success_symbol = "[](green)";
-        error_symbol = "[](red)";
+        success_symbol = "[](fg:${colors.green})";
+        error_symbol = "[](fg:${colors.red})";
         disabled = false;
       };
 
       cmd_duration = {
         min_time = 1;
         format = "[\\[$duration\\]]($style) ";
-        style = "${colors.subtext1}";
+        style = colors.subtext1;
         show_milliseconds = true;
       };
 
@@ -70,18 +70,18 @@ in {
         zsh_indicator = "zsh";
         powershell_indicator = "pwsh";
         format = "[$indicator]($style)";
-        style = "white";
+        style = colors.text;
       };
 
       os = {
         format = "[$symbol]($style)";
         disabled = false;
         symbols = {
-          Arch = "[󰣇](bold blue)";
-          Windows = "[](bold blue)";
-          NixOS = "[](bold blue)";
-          Macos = "[](bold gray)";
-          Android = "[](bold green)";
+          Arch = "[󰣇](bold fg:${accent})";
+          Windows = "[](bold fg:${accent})";
+          NixOS = "[](bold fg:${accent})";
+          Macos = "[](bold fg:${accent})";
+          Android = "[](bold fg:${accent})";
         };
       };
     };
