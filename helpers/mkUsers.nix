@@ -12,9 +12,13 @@ lib.mergeAttrsList (
     }: let
       root = value.root or {};
       home = value.home or {};
-    in {
-      users.users.${name} = lib.mergeAttrs {isNormalUser = true;} root;
 
+      nix = value.nix or {};
+      trusted-user = nix.is-trusted-user or false;
+    in {
+      nix.settings.trusted-users = lib.mkIf trusted-user [name];
+
+      users.users.${name} = lib.mergeAttrs {isNormalUser = true;} root;
       home-manager.users.${name} = lib.mergeAttrs home {
         _module.args = lib.mergeAttrs {
           inherit

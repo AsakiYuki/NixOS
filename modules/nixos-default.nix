@@ -10,15 +10,8 @@
     nix = {
       settings = {
         auto-optimise-store = true;
-        experimental-features = [
-          "nix-command"
-          "flakes"
-        ];
-        trusted-users = [
-          "root"
-          "@wheel"
-          "asakiyuki"
-        ];
+        experimental-features = ["nix-command" "flakes"];
+        trusted-users = ["root" "@wheel"];
       };
       gc = {
         automatic = true;
