@@ -12,6 +12,11 @@
           default = "pink";
           description = "catppuccin accent color";
         };
+        accent-2 = lib.mkOption {
+          type = lib.types.enum ["rosewater" "flamingo" "pink" "mauve" "red" "maroon" "peach" "yellow" "green" "teal" "sky" "sapphire" "blue" "lavender"];
+          default = "mauve";
+          description = "catppuccin accent color";
+        };
       };
     };
 
