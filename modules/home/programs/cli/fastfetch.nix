@@ -6,6 +6,7 @@
   cfg = osconfig.device.theme.catppuccin;
   colors = lib.catppuccin.${cfg.flavor};
   accent = colors.${cfg.accent};
+  accent-2 = colors.${cfg.accent-2};
 in {
   programs.fastfetch = {
     settings = {
@@ -13,11 +14,11 @@ in {
         padding.top = 1;
         color = {
           "1" = accent;
-          "2" = colors.text;
+          "2" = accent-2;
           "3" = accent;
-          "4" = colors.text;
+          "4" = accent-2;
           "5" = accent;
-          "6" = colors.text;
+          "6" = accent-2;
         };
       };
 
@@ -35,8 +36,8 @@ in {
           border.right = "]";
           char.elapsed = "█";
           color = {
-            border = "green";
-            elapsed = "green";
+            border = accent;
+            elapsed = accent;
             total = "black";
           };
         };
@@ -58,7 +59,7 @@ in {
         {
           type = "title";
           format = " {user-name}@{host-name}";
-          outputColor = "bright_yellow";
+          outputColor = accent;
         }
 
         {
@@ -71,74 +72,74 @@ in {
         {
           type = "os";
           key = "╭─";
-          keyColor = "green";
+          keyColor = accent;
         }
         {
           type = "kernel";
           key = "├─󰌽";
-          keyColor = "green";
+          keyColor = accent;
         }
         {
           type = "shell";
           key = "├─";
-          keyColor = "green";
+          keyColor = accent;
         }
         {
           type = "packages";
           key = "├─󰆧";
-          keyColor = "green";
+          keyColor = accent;
         }
         {
           type = "uptime";
           key = "╰─󱑁";
-          keyColor = "green";
+          keyColor = accent;
         }
 
         "break"
 
         {
           type = "host";
-          keyColor = "blue";
+          keyColor = accent-2;
           key = "╭─󰧨";
         }
         {
           type = "cpu";
           key = "├─";
-          keyColor = "blue";
+          keyColor = accent-2;
         }
         {
           type = "gpu";
           key = "├─";
-          keyColor = "blue";
+          keyColor = accent-2;
         }
         {
           type = "sound";
           key = "├─";
           format = "{name}";
-          keyColor = "blue";
+          keyColor = accent-2;
         }
         {
           type = "memory";
           format = "{percentage-bar} {used} / {total}";
           key = "├─";
-          keyColor = "blue";
+          keyColor = accent-2;
         }
         {
           type = "swap";
           format = "{percentage-bar} {used} / {total}";
           key = "├─";
-          keyColor = "blue";
+          keyColor = accent-2;
         }
         {
           type = "disk";
           format = "{size-percentage-bar} {name} ({mountpoint}) {size-used} / {size-total} - {filesystem}";
           key = "├─󰋊";
-          keyColor = "blue";
+          keyColor = accent-2;
         }
         {
           type = "localip";
           key = "╰─";
-          keyColor = "blue";
+          keyColor = accent-2;
         }
 
         "break"
@@ -146,37 +147,37 @@ in {
         {
           type = "terminal";
           key = "╭─";
-          keyColor = "yellow";
+          keyColor = accent;
         }
         {
           type = "wm";
           key = "├─󰨇";
-          keyColor = "yellow";
+          keyColor = accent;
         }
         {
           type = "de";
           key = "├─󰨇";
-          keyColor = "yellow";
+          keyColor = accent;
         }
         {
           type = "bios";
           key = "├─";
-          keyColor = "yellow";
+          keyColor = accent;
         }
         {
           type = "theme";
           key = "├─󱓓";
-          keyColor = "yellow";
+          keyColor = accent;
         }
         {
           type = "icons";
           key = "├─󱓓";
-          keyColor = "yellow";
+          keyColor = accent;
         }
         {
           type = "cursor";
           key = "╰─󱓓";
-          keyColor = "yellow";
+          keyColor = accent;
         }
 
         "break"
