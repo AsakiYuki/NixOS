@@ -39,12 +39,16 @@ in {
         alwaysTrust.enable = true;
         betterFolders.enable = true;
         callTimer.enable = true;
-        showMeYourName.enable = true;
         showHiddenChannels.enable = true;
         silentMessageToggle.enable = true;
         serverInfo.enable = true;
         platformIndicators.enable = true;
         characterCounter.enable = true;
+
+        showMeYourName = {
+          enable = true;
+          mode = "nick-user";
+        };
 
         alwaysExpandRoles = {
           enable = true;
