@@ -7,7 +7,7 @@
 }: {
   programs.kde.kdeglobals = let
     cfg = osconfig.device.theme.catppuccin;
-    flavor = "${lib.toUpper (builtins.substring 0 1 cfg.flavor)}${builtins.substring 1 (-1) cfg.flavor}";
+    flavour = "${lib.toUpper (builtins.substring 0 1 cfg.flavour)}${builtins.substring 1 (-1) cfg.flavour}";
     accent = "${lib.toUpper (builtins.substring 0 1 cfg.accent)}${builtins.substring 1 (-1) cfg.accent}";
 
     isTilingWindowsManager =
@@ -18,10 +18,10 @@
     initExtra = lib.optionalString isTilingWindowsManager (
       builtins.readFile (
         (pkgs.catppuccin-kde.override {
-          flavour = [cfg.flavor];
+          flavour = [cfg.flavour];
           accents = [cfg.accent];
         })
-        + "/share/color-schemes/Catppuccin${flavor}${accent}.colors"
+        + "/share/color-schemes/Catppuccin${flavour}${accent}.colors"
       )
     );
     config = lib.optionalAttrs isTilingWindowsManager {

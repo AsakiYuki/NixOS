@@ -4,7 +4,7 @@
   ...
 }: let
   cfg = osconfig.device.theme.catppuccin;
-  colors = lib.catppuccin.${cfg.flavor};
+  colors = lib.catppuccin.${cfg.flavour};
   accent = colors.${cfg.accent};
 in {
   programs.starship = {

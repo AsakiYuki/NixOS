@@ -29,8 +29,8 @@ in {
       };
 
       ui = {
-        THEMES = "catppuccin-${cfg.flavor}-${cfg.accent}";
-        DEFAULT_THEME = "catppuccin-${cfg.flavor}-${cfg.accent}";
+        THEMES = "catppuccin-${cfg.flavour}-${cfg.accent}";
+        DEFAULT_THEME = "catppuccin-${cfg.flavour}-${cfg.accent}";
       };
 
       "ui.meta" = {

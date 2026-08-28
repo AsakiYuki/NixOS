@@ -7,11 +7,11 @@
 lib.mkIf config.programs.btop.enable {
   programs.btop = let
     cfg = osconfig.device.theme.catppuccin;
-    flavor = cfg.flavor;
-    colors = lib.catppuccin.${flavor};
+    flavour = cfg.flavour;
+    colors = lib.catppuccin.${flavour};
   in {
     settings = {
-      color_theme = "catppuccin_${flavor}";
+      color_theme = "catppuccin_${flavour}";
       theme_background = true;
       vim_keys = true;
       disable_mouse = true;
@@ -20,7 +20,7 @@ lib.mkIf config.programs.btop.enable {
     };
 
     themes = {
-      "catppuccin_${flavor}" = ''
+      "catppuccin_${flavour}" = ''
         theme[main_bg]="${colors.base}"
         theme[main_fg]="${colors.text}"
         theme[title]="${colors.text}"

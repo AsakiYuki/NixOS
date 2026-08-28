@@ -1,6 +1,10 @@
-{ unstable, ... }: {
+{
+  unstable,
+  osconfig,
+  ...
+}: {
   programs.nixvim = {
-    _module.args = { inherit unstable; };
+    _module.args = {inherit unstable osconfig;};
 
     imports = [
       ./keymaps
@@ -8,6 +12,7 @@
       ./lua
 
       ./extra-packages.nix
+      ./colorschemes.nix
       ./settings.nix
     ];
   };

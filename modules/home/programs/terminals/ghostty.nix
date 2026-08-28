@@ -4,12 +4,12 @@
   ...
 }: let
   cfg = osconfig.device.theme.catppuccin;
-  flavor = cfg.flavor;
-  colors = lib.catppuccin.${flavor};
+  flavour = cfg.flavour;
+  colors = lib.catppuccin.${flavour};
 in {
   programs.ghostty = {
     settings = {
-      theme = "catppuccin-${flavor}";
+      theme = "catppuccin-${flavour}";
 
       font-size = 9;
       font-family = "SauceCodePro NFP Bold";
@@ -27,7 +27,7 @@ in {
     };
 
     themes = {
-      "catppuccin-${flavor}" = {
+      "catppuccin-${flavour}" = {
         background = "${colors.base}";
         cursor-color = "${colors.rosewater}";
         foreground = "${colors.text}";

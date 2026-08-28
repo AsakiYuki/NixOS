@@ -6,13 +6,13 @@
 }: {
   xdg.configFile."autostart/apply-catppuccin-theme.desktop" = let
     cfg = osconfig.device.theme.catppuccin;
-    flavor = "${lib.toUpper (builtins.substring 0 1 cfg.flavor)}${builtins.substring 1 (-1) cfg.flavor}";
+    flavour = "${lib.toUpper (builtins.substring 0 1 cfg.flavour)}${builtins.substring 1 (-1) cfg.flavour}";
     accent = "${lib.toUpper (builtins.substring 0 1 cfg.accent)}${builtins.substring 1 (-1) cfg.accent}";
 
     kdePlasmaEnabled = lib.attrByPath ["device" "de" "kdePlasma" "enable"] false osconfig;
     script = pkgs.writeShellScript "apply-catppuccin-theme" ''
       if [ ! -f "$HOME/.config/.catppuccin_applied" ]; then
-        ${pkgs.kdePackages.plasma-workspace}/bin/plasma-apply-colorscheme Catppuccin${flavor}${accent}
+        ${pkgs.kdePackages.plasma-workspace}/bin/plasma-apply-colorscheme Catppuccin${flavour}${accent}
         touch "$HOME/.config/.catppuccin_applied"
       fi
     '';

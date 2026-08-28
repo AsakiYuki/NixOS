@@ -5,7 +5,7 @@
   ...
 }: let
   cfg = osconfig.device.theme.catppuccin;
-  colors = lib.catppuccin.${cfg.flavor};
+  colors = lib.catppuccin.${cfg.flavour};
   accent = colors.${cfg.accent};
 
   TOP_PANEL = ''
@@ -53,7 +53,7 @@ in {
       {
         plugin = catppuccin;
         extraConfig = ''
-          set -g @catppuccin_flavor '${cfg.flavor}'
+          set -g @catppuccin_flavour '${cfg.flavour}'
           set -ogq @module-icon "#[bg=#{E:@thm_${cfg.accent}},fg=#{E:@thm_surface_0}]"
           set -ogq @module-text "#[bg=#{E:@thm_surface_0},fg=#{E:@thm_fg}]"
         '';

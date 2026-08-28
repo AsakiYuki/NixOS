@@ -11,7 +11,7 @@
   in "\\1\\e[38;2;${toString r};${toString g};${toString b}m\\2";
 
   cfg = osconfig.device.theme.catppuccin;
-  colors = lib.catppuccin.${cfg.flavor};
+  colors = lib.catppuccin.${cfg.flavour};
   accent = colors.${cfg.accent};
   accent-2 = colors.${cfg.accent-2};
 in {

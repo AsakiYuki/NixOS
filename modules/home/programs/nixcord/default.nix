@@ -12,7 +12,7 @@ in {
     config = {
       useQuickCss = true;
       enableReactDevtools = true;
-      themeLinks = ["https://catppuccin.github.io/discord/dist/catppuccin-${cfg.flavor}-${cfg.accent}.theme.css"];
+      themeLinks = ["https://catppuccin.github.io/discord/dist/catppuccin-${cfg.flavour}-${cfg.accent}.theme.css"];
 
       plugins = {
         blurNsfw.enable = true;

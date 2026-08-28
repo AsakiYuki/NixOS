@@ -1,6 +1,5 @@
 {...}: {
   vimdiffAlias = true;
-  colorschemes.catppuccin.enable = true;
 
   opts = {
     number = true;

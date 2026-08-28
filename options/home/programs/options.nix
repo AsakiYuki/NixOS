@@ -111,7 +111,7 @@ in {
       package = lib.mkOption {
         type = lib.types.package;
         default = pkgs.catppuccin-gtk.override {
-          variant = cfg.flavor;
+          variant = cfg.flavour;
           accents = [cfg.accent];
           size = "compact";
         };
@@ -120,7 +120,7 @@ in {
       kde = lib.mkOption {
         type = lib.types.package;
         default = pkgs.catppuccin-kde.override {
-          flavour = [cfg.flavor];
+          flavour = [cfg.flavour];
           accents = [cfg.accent];
         };
         description = "Catppuccin KDE package";

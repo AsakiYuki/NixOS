@@ -5,7 +5,7 @@
   ...
 }: let
   cfg = osconfig.device.theme.catppuccin;
-  name = "${lib.toUpper (builtins.substring 0 1 cfg.flavor)}${builtins.substring 1 (-1) cfg.flavor}";
+  name = "${lib.toUpper (builtins.substring 0 1 cfg.flavour)}${builtins.substring 1 (-1) cfg.flavour}";
 in {
   files = {
     force = {};
@@ -15,8 +15,8 @@ in {
     # };
 
     source = {
-      ".config/qt5ct/colors/Catppuccin-${name}.conf" = "${pkgs.catppuccin-qt5ct}/share/qt5ct/colors/catppuccin-${cfg.flavor}-${cfg.accent}.conf";
-      ".config/qt6ct/colors/Catppuccin-${name}.conf" = "${pkgs.catppuccin-qt5ct}/share/qt6ct/colors/catppuccin-${cfg.flavor}-${cfg.accent}.conf";
+      ".config/qt5ct/colors/Catppuccin-${name}.conf" = "${pkgs.catppuccin-qt5ct}/share/qt5ct/colors/catppuccin-${cfg.flavour}-${cfg.accent}.conf";
+      ".config/qt6ct/colors/Catppuccin-${name}.conf" = "${pkgs.catppuccin-qt5ct}/share/qt6ct/colors/catppuccin-${cfg.flavour}-${cfg.accent}.conf";
       ".config/menus/applications.menu" = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
     };
 
