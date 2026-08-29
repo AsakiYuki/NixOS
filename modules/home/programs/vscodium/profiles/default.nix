@@ -1,5 +1,5 @@
-{...}: {
-    imports = [
-        ./default
-    ];
+{...}@args: {
+    programs.vscodium.profiles = {
+        default = import ./default args;
+    };
 }
