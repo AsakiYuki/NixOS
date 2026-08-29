@@ -3,13 +3,11 @@
   hmconfig,
   osconfig,
   ...
-}:
-{
+}: {
   services-menu.open-here = lib.mergeAttrsList (
     let
       cfg = hmconfig.programs;
-    in
-    [
+    in [
       {
         "Desktop Entry" = {
           Type = "Service";
@@ -19,6 +17,7 @@
           "X-KDE-Priority" = "TopLevel";
           Actions = lib.join ";" [
             (lib.optionalString cfg.vscode.enable "RunCodeDir")
+            (lib.optionalString (cfg.vscodium.enable) "RunCodeDir")
             (lib.optionalString (cfg.ghostty.enable && (!osconfig.device.de.kdePlasma.enable)) "RunGhosttyDir")
             (lib.optionalString cfg.nixvim.enable "RunNvimDir")
             (lib.optionalString cfg.antigravity.enable "RunAntigravityDir")
@@ -32,6 +31,14 @@
           Name = "Open with Code";
           Icon = "vscode";
           Exec = "code \"%F\"";
+        };
+      })
+
+      (lib.optionalAttrs cfg.vscodium.enable {
+        "Desktop Action RunCodeDir" = {
+          Name = "Open with VSCodium";
+          Icon = "vscodium";
+          Exec = "codium \"%F\"";
         };
       })
 

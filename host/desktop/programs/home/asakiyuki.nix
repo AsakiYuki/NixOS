@@ -90,11 +90,6 @@
       package = pkgs.lmstudio;
     };
 
-    vscode = {
-      enable = true;
-      package = pkgs.vscode;
-    };
-
     # Office
     libreoffice.enable = true;
 
