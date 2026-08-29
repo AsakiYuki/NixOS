@@ -7,6 +7,7 @@
     ./nixcord
     ./nixvim
     ./hyprland
+    ./vscodium
     ./niri.nix
     ./obs-studio.nix
   ];

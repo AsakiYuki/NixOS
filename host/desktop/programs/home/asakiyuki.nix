@@ -12,6 +12,7 @@
     antigravity.enable = true;
     antigravity.package = unstable.antigravity-ide;
     zed-editor.enable = true;
+    vscodium.enable = true;
     slack.enable = true;
     obsidian.enable = true;
     notion.enable = true;
