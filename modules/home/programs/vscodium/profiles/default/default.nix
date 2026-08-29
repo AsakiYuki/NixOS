@@ -1,1 +1,3 @@
-{...}: {}
+{...}: {
+    programs.vscodium.profiles.default = {};
+}
