@@ -1,5 +1,5 @@
 {...}: {
-    imports = [
-        ./default
-    ];
+  imports = [
+    ./default
+  ];
 }

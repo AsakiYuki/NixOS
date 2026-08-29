@@ -1,7 +1,7 @@
 {...}: {
-    imports = [
-        ./user-settings
+  imports = [
+    ./user-settings
 
-        ./extensions.nix
-    ];
-} 
+    ./extensions.nix
+  ];
+}

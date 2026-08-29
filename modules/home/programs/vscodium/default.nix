@@ -1,9 +1,9 @@
 {...}: {
-    imports = [
-        ./profiles
-    ];
+  imports = [
+    ./profiles
+  ];
 
-    programs.vscodium = {
-        argvSettings = {};
-    };
+  programs.vscodium = {
+    argvSettings = {};
+  };
 }
