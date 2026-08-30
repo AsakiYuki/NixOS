@@ -1,10 +1,10 @@
-{...}: {
+{pkgs, ...}: {
   programs.vscodium.profiles.default.userSettings = {
     "nixEnvSelector.useFlakes" = true;
 
     "nix.enableLanguageServer" = true;
-    "nix.serverPath" = "nixd";
-    "nix.formatterPath" = "nixfmt";
-    "nix.serverSettings".nixd.formatting.command = ["alejandra"];
+    "nix.serverPath" = "${pkgs.nixd}/bin/nixd";
+    "nix.formatterPath" = "${pkgs.nixfmt}/bin/nixfmt";
+    "nix.serverSettings".nixd.formatting.command = ["${pkgs.alejandra}/bin/alejandra"];
   };
 }
