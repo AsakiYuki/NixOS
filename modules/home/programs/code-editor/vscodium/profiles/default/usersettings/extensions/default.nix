@@ -6,5 +6,6 @@
     ./prettier.nix
     ./vscode-default-keybindings.nix
     ./vscord.nix
+    ./geode.nix
   ];
 }
