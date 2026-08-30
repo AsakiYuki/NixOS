@@ -7,5 +7,6 @@
     ./vscode-default-keybindings.nix
     ./vscord.nix
     ./geode.nix
+    ./cmake.nix
   ];
 }
