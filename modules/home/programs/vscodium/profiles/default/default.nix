@@ -3,5 +3,6 @@
     ./usersettings
 
     ./extensions.nix
+    ./keybindings.nix
   ];
 }
