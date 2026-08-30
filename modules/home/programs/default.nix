@@ -4,10 +4,9 @@
     ./browsers
     ./terminals
     ./file-manager
+    ./code-editor
     ./nixcord
-    ./nixvim
     ./hyprland
-    ./vscodium
     ./niri.nix
     ./obs-studio.nix
   ];
