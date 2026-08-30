@@ -18,6 +18,7 @@
     tyriar.sort-lines
     rangav.vscode-thunder-client
     tomoki1207.pdf
+    jbro.vscode-default-keybindings
     ms-vscode.hexeditor
     ms-vscode.live-server
     ms-vscode.remote-explorer
