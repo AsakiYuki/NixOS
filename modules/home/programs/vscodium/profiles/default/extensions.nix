@@ -1,5 +1,10 @@
-{pkgs, ...}: {
-  programs.vscodium.profiles.default.extensions = with pkgs.vscode-extensions; [
+{
+  pkgs,
+  unstable,
+  ...
+}: {
+  programs.vscodium.profiles.default.extensions = with pkgs.vscode-extensions;
+  with unstable.vscode-extensions; [
     # Themes
     catppuccin.catppuccin-vsc
     pkief.material-icon-theme
