@@ -50,6 +50,7 @@
     ms-dotnettools.vscode-dotnet-runtime
 
     # C/C++
+    geodesdk.geode
     ms-vscode.makefile-tools
     ms-vscode.cpptools
     ms-vscode.cmake-tools

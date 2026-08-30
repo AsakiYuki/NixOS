@@ -19,4 +19,20 @@ in {
       maintainers = [];
     };
   };
+  geodesdk.geode = buildVscodeMarketplaceExtension {
+    mktplcRef =
+      extensions."geodesdk.geode"
+      // {
+        name = "geode";
+        publisher = "geodesdk";
+      };
+
+    meta = {
+      description = "Utilities for the Geode Geometry Dash modding framework";
+      downloadPage = "https://marketplace.visualstudio.com/items?itemName=geodesdk.geode";
+      homepage = "https://github.com/geode-sdk/vscode";
+      license = lib.licenses.mit;
+      maintainers = [];
+    };
+  };
 }
