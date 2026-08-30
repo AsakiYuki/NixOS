@@ -1,4 +1,10 @@
 {
+    "vscode-extensions": {
+        "jbro.vscode-default-keybindings": {
+            "version": "0.2.61",
+            "hash": "sha256-O/PvflmD/Sv+4CdAq9UXIiVKiO1lKDH91pWxDeAGgFE="
+        }
+    },
     "bun-baseline": {
         "version": "1.4.0",
         "hash": "sha256-Poy0vf7yJ/hzk33QiQj5gnshI5Q7dfbaMD7xgwiyDKw="
