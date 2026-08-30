@@ -8,7 +8,6 @@
     "explorer.confirmDragAndDrop" = false;
     "explorer.compactFolders" = false;
     "window.confirmSaveUntitledWorkspace" = false;
-    "window.newWindowProfile" = "default";
     "terminal.integrated.suggest.enabled" = true;
     "workbench.secondarySideBar.defaultVisibility" = "hidden";
     "security.workspace.trust.untrustedFiles" = "open";
@@ -21,5 +20,9 @@
     "editor.mouseMiddleClickAction" = "openLink";
     "editor.selectionClipboard" = false;
     "terminal.integrated.enableMultiLinePasteWarning" = "never";
+    "extensions.autoUpdate" = false;
+    "extensions.autoCheckUpdates" = false;
+    "settingsSync.keybindingsPerPlatform" = true;
+    "workbench.settings.enableNaturalLanguageSearch" = false;
   };
 }
