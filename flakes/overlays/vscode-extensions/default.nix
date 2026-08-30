@@ -7,7 +7,7 @@ in {
       name = "vscode-default-keybindings";
       publisher = "jbro";
       version = "0.2.61";
-      hash = lib.fakeHash;
+      hash = "sha256-O/PvflmD/Sv+4CdAq9UXIiVKiO1lKDH91pWxDeAGgFE=";
     };
     meta = {
       description = "VSCode Default Keybindings is a keymap that enables you to load VSCode's default keybindings from another OS. Eg. use Mac keybindings on Windows.";
