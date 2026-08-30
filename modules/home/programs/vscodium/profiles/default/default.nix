@@ -1,6 +1,6 @@
 {...}: {
   imports = [
-    ./user-settings
+    ./usersettings
 
     ./extensions.nix
   ];
