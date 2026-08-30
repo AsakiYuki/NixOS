@@ -13,7 +13,7 @@
       geode-cli = final.callPackage ./packages/geode-cli.nix {};
       lsfg-vk = final.callPackage ./packages/lsfg-vk.nix {};
       geforce-now-electron = final.callPackage ./packages/gfn-electron.nix {};
-      vscode-extensions = import ./vscode-extensions {pkgs = prev;};
+      vscode-extensions = prev.vscode-extensions // (import ./vscode-extensions {pkgs = prev;});
     };
   };
 }
