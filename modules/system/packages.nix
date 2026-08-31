@@ -20,5 +20,7 @@
 
     lftp
     geode-cli
+    cmake
+    ninja
   ];
 }
