@@ -70,34 +70,32 @@
       };
     });
 
-    dev = {nixpkgs, ...}: {
-      devShells.x86_64-linux.default = let
-        pkgs = import nixpkgs {
-          system = "x86_64-linux";
-          overlays = import ./overlays/inputs-overlays.nix inputs;
+    devShell = {...} @ args: (import ./helpers/devShells.nix args {
+      default = {
+        overlays = import ./overlays/inputs-overlays.nix inputs;
+        shell = {pkgs, ...}: {
+          buildInputs = with pkgs; [
+            bun
+            vsce
+          ];
+
+          shellHook = ''
+            echo "Welcome to NixOS DevShell!"
+
+            if [ -e .env ]; then
+              source .env
+            fi
+
+            export NIX_CONFIG="access-tokens = github.com=''${GH_TOKEN}"
+
+            alias repl="nix repl ."
+            alias agenix="./agenix.sh"
+          '';
         };
-      in (pkgs.mkShell {
-        buildInputs = with pkgs; [
-          bun
-          vsce
-        ];
-
-        shellHook = ''
-          echo "Welcome to NixOS DevShell!"
-
-          if [ -e .env ]; then
-            source .env
-          fi
-
-          export NIX_CONFIG="access-tokens = github.com=''${GH_TOKEN}"
-
-          alias repl="nix repl ."
-          alias agenix="./agenix.sh"
-        '';
-      });
-    };
+      };
+    });
   in (lib.mergeAttrsList [
     (nixos {inherit self inputs state-version lib;})
-    (dev inputs)
+    (devShell inputs)
   ]);
 }
