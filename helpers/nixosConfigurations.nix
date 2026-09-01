@@ -5,59 +5,55 @@
   lib,
 }: let
   nixosModules = name: inputs.${name}.nixosModules.default;
+
+  defaultModules = [
+    inputs.chaotic.nixosModules.default
+    (nixosModules "nix-index-database")
+    (nixosModules "home-manager")
+    (nixosModules "agenix")
+  ];
 in
   cfg: {
-    nixosConfigurations = lib.mergeAttrsList (
-      map (
-        {
-          name,
-          value,
-        }: let
-          sys = value.system or "x86_64-linux";
-          unstable = import inputs.unstablepkgs {
-            localSystem = sys;
-            overlays = [(_: pkgs: import ../overlays/packages (pkgs // {inherit pkgs;}))];
-            config.allowUnfree = true;
-          };
-          _lib = lib.extend (
-            final: prev:
-              lib.mergeAttrs (import ../helpers {
-                inherit inputs self unstable;
-                lib = final;
-              })
-              {
-                flake-name = name;
-                state-version = state-version;
-              }
-          );
-        in {
-          "${name}" = _lib.nixosSystem {
-            system = sys;
+    nixosConfigurations = lib.mapAttrs (name: hostCfg: let
+      sys = hostCfg.system or "x86_64-linux";
 
-            specialArgs = _lib.mergeAttrs {
-              inherit self inputs unstable;
-              lib = _lib;
-            } (value.specialArgs or {});
+      unstable = import inputs.unstablepkgs {
+        localSystem = sys;
+        config.allowUnfree = true;
+        overlays = [
+          (_: pkgs: import ../overlays/packages (pkgs // {inherit pkgs;}))
+        ];
+      };
 
-            modules =
-              (value.modules or [])
-              ++ (_lib.concatLists [
-                (with inputs; [
-                  chaotic.nixosModules.default
-                ])
+      _lib = lib.extend (final: _:
+        (import ../helpers {
+          inherit inputs self unstable;
+          lib = final;
+        })
+        // {
+          flake-name = name;
+          inherit state-version;
+        });
+    in
+      _lib.nixosSystem {
+        system = sys;
 
-                [
-                  (nixosModules "nix-index-database")
-                  (nixosModules "home-manager")
-                  (nixosModules "agenix")
-                  (_lib.root "/modules/nixos-default.nix")
-                  (_lib.root "/overlays")
-                  (_lib.root "/modules/system")
-                  (_lib.root "/options/system")
-                ]
-              ]);
-          };
-        }
-      ) (lib.attrsToList cfg)
-    );
+        specialArgs =
+          {
+            inherit self inputs unstable;
+            lib = _lib;
+          }
+          // (hostCfg.specialArgs or {});
+
+        modules =
+          (hostCfg.modules or [])
+          ++ defaultModules
+          ++ [
+            (_lib.root "/modules/nixos-default.nix")
+            (_lib.root "/overlays")
+            (_lib.root "/modules/system")
+            (_lib.root "/options/system")
+          ];
+      })
+    cfg;
   }
