@@ -25,6 +25,7 @@
 
 ---
 
+<!--
 ## 📎 Sub-flakes
 
 This repo ships two standalone sub-flakes you can use independently in your own config:
@@ -76,4 +77,4 @@ Adds some packages to nixpkgs.
 }
 ```
 
-> Available packages are listed in [`flakes/overlays/README.md`](./flakes/overlays/README.md).
+> Available packages are listed in [`flakes/overlays/README.md`](./flakes/overlays/README.md). -->

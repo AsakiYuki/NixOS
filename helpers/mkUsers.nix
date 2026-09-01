@@ -32,6 +32,8 @@ lib.mergeAttrsList (
           [
             ../options/home
             ../modules/home
+            ../modules/custom/cursors
+            ../modules/custom/proton/home-manager
           ]
 
           (with inputs; [
@@ -43,9 +45,6 @@ lib.mergeAttrsList (
             nixcord.homeModules.nixcord
             niri.homeModules.niri
             agenix.homeManagerModules.default
-
-            cursors.homeModules.default
-            proton.homeModules.default
           ])
 
           (home.imports or [])

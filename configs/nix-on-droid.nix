@@ -9,6 +9,6 @@
       overlays = [nix-on-droid.overlays.default];
     };
 
-    modules = [./host/android];
+    modules = [../host/android];
   };
 }

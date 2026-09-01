@@ -1,6 +1,6 @@
 {pkgs}: let
   inherit (pkgs) vscode-utils lib;
-  extensions = lib.importJSON ../../../assets/vscode.extensions.json;
+  extensions = lib.importJSON ../../../../assets/vscode.extensions.json;
 
   buildVscodeMarketplaceExtension = {
     ref,

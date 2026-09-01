@@ -1,12 +1,11 @@
 {
   pkgs,
   lib,
-  prev,
   ...
 }: let
   data = (lib.importJSON ../../../../assets/packages.json).cider-2;
 in
-  prev.cider-2.overrideAttrs (prevAtts: rec {
+  pkgs.cider-2.overrideAttrs (prevAtts: rec {
     version = data.version;
 
     src = pkgs.fetchurl {

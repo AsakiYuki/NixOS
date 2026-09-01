@@ -44,9 +44,5 @@
     state-version = "26.05";
     lib = nixpkgs.lib;
   in
-    lib.mergeAttrsList [
-      (import ./nixOnDroid.nix inputs)
-      (import ./devShell.nix inputs)
-      (import ./nixosConfigurations.nix {inherit inputs self state-version lib;})
-    ];
+    import ./configs inputs;
 }

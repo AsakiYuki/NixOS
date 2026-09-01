@@ -1,5 +1,5 @@
-{inputs, ...} @ args: (import ./helpers/nixosConfigurations.nix args (let
-  root = path: ./. + path;
+{inputs, ...} @ args: (import ../helpers/nixosConfigurations.nix args (let
+  root = path: ./.. + path;
 in {
   ideapad-slim-5 = {
     modules = [
