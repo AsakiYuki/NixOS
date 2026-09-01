@@ -2,7 +2,7 @@ name: nix flake update check
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "13 */6 * * *"
   workflow_dispatch:
 
 env:
