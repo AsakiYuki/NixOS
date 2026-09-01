@@ -34,15 +34,6 @@
 
     nix-on-droid.url = "github:nix-community/nix-on-droid/prerelease-25.11";
     nix-on-droid.inputs.nixpkgs.follows = "nixpkgs";
-
-    overlays.url = "path:./flakes/overlays";
-    overlays.inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-
-    cursors.url = "path:./flakes/cursors";
-    cursors.inputs.nixpkgs.follows = "nixpkgs";
-
-    proton.url = "path:./flakes/proton";
-    proton.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {

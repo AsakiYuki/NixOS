@@ -57,22 +57,6 @@
         "type": "github"
       }
     },
-    "cursors": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "path": "./flakes/cursors",
-        "type": "path"
-      },
-      "original": {
-        "path": "./flakes/cursors",
-        "type": "path"
-      },
-      "parent": []
-    },
     "darwin": {
       "inputs": {
         "nixpkgs": [
@@ -860,22 +844,6 @@
         "type": "github"
       }
     },
-    "nixpkgs_13": {
-      "locked": {
-        "lastModified": 1788179007,
-        "narHash": "sha256-hn1oU2rue2SYK8dAr8+WNZWtbsz1S2W5mnHlSEuh3bo=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "34ab99075ac4f7e40cf037eef32cb1c360bb85e9",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1788179007,
@@ -1059,20 +1027,6 @@
         "type": "gitlab"
       }
     },
-    "overlays": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_13"
-      },
-      "locked": {
-        "path": "./flakes/overlays",
-        "type": "path"
-      },
-      "original": {
-        "path": "./flakes/overlays",
-        "type": "path"
-      },
-      "parent": []
-    },
     "pre-commit": {
       "inputs": {
         "flake-compat": "flake-compat_2",
@@ -1096,27 +1050,10 @@
         "type": "github"
       }
     },
-    "proton": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "path": "./flakes/proton",
-        "type": "path"
-      },
-      "original": {
-        "path": "./flakes/proton",
-        "type": "path"
-      },
-      "parent": []
-    },
     "root": {
       "inputs": {
         "agenix": "agenix",
         "chaotic": "chaotic",
-        "cursors": "cursors",
         "dolphin-overlay": "dolphin-overlay",
         "fcitx5-lotus": "fcitx5-lotus",
         "home-manager": "home-manager_3",
@@ -1132,8 +1069,6 @@
         "nixos-wsl": "nixos-wsl",
         "nixpkgs": "nixpkgs_11",
         "nixvim": "nixvim",
-        "overlays": "overlays",
-        "proton": "proton",
         "unstablepkgs": "unstablepkgs",
         "zen-browser": "zen-browser"
       }

@@ -3,7 +3,7 @@
   lib,
   ...
 }: let
-  data = (lib.importJSON ../../../assets/packages.json).lsfg-vk;
+  data = (lib.importJSON ../../../../assets/packages.json).lsfg-vk;
 in
   pkgs.stdenv.mkDerivation rec {
     pname = "lsfg-vk";

@@ -3,7 +3,7 @@
   lib,
   ...
 }: let
-  data = (lib.importJSON ../../../assets/packages.json).gfn-electron;
+  data = (lib.importJSON ../../../../assets/packages.json).gfn-electron;
 in
   pkgs.stdenv.mkDerivation rec {
     pname = "geforce-now-electron";

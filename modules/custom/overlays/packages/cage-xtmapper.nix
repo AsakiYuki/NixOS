@@ -4,7 +4,7 @@
   version ? "0.2.0",
   ...
 }: let
-  data = (lib.importJSON ../../../assets/packages.json).cage-xtmapper;
+  data = (lib.importJSON ../../../../assets/packages.json).cage-xtmapper;
   release = data.release;
   hash = data."version-${version}";
 in

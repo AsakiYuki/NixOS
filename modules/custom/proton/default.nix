@@ -3,6 +3,8 @@
   pkgs,
   ...
 } @ args: let
+  proton = lib.importJSON ../../../assets/proton.json;
+
   mkProtonPackage = {
     pname,
     version,
@@ -18,7 +20,7 @@
       '';
     };
 
-  extraArgs = args // {inherit mkProtonPackage;};
+  extraArgs = args // {inherit mkProtonPackage proton;};
   packageFiles = import ./packages;
 in
   lib.foldl' (acc: path: acc // (import path extraArgs)) {} packageFiles

@@ -3,7 +3,7 @@
   fetchzip,
   lib,
 }: let
-  data = (lib.importJSON ../../../assets/packages.json).geode-cli;
+  data = (lib.importJSON ../../../../assets/packages.json).geode-cli;
 in
   stdenv.mkDerivation rec {
     pname = "geode-cli";

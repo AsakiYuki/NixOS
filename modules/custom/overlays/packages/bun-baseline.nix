@@ -3,7 +3,7 @@
   lib,
   ...
 }: let
-  data = (lib.importJSON ../../../assets/packages.json).bun-baseline;
+  data = (lib.importJSON ../../../../assets/packages.json).bun-baseline;
 in
   pkgs.stdenv.mkDerivation rec {
     pname = "bun";
