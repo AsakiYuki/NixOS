@@ -7,7 +7,7 @@ function commit() {
     rm commit.txt
 }
 
-bun install
+bun install --frozen-lockfile
 bun run check-packages-update
 if [ -f commit.txt ]; then
     commit assets/packages.json "ci(update-checker/packages): update packages infos $(date '+%H:%M:%S %d-%m-%Y')"
