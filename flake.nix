@@ -51,6 +51,7 @@
     lib = nixpkgs.lib;
   in
     lib.mergeAttrsList [
+      (import ./apps.nix inputs)
       (import ./devShell.nix inputs)
       (import ./nixosConfigurations.nix {inherit inputs self state-version lib;})
     ];
