@@ -1,0 +1,18 @@
+{
+    "jbro.vscode-default-keybindings": {
+        "version": "0.2.61",
+        "hash": "sha256-O/PvflmD/Sv+4CdAq9UXIiVKiO1lKDH91pWxDeAGgFE="
+    },
+    "geodesdk.geode": {
+        "version": "1.22.1",
+        "hash": "sha256-t9xyZ8Ssv3Jhh+95dW8RNl4W7X21NkIz5LXm2G9UEGk="
+    },
+    "theqtcompany.qt-qml": {
+        "version": "1.17.0",
+        "hash": "sha256-4P0v3r1pHgLKR7Jt3Je3kBHSwVZ2djWlxQOmAbTsM/0="
+    },
+    "bbenoist.qml": {
+        "version": "1.0.0",
+        "hash": "sha256-tphnVlD5LA6Au+WDrLZkAxnMJeTCd3UTyTN1Jelditk="
+    }
+}

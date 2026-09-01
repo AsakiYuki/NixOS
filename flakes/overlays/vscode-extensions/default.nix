@@ -2,7 +2,7 @@
   inherit (pkgs) vscode-utils lib;
   inherit (vscode-utils) buildVscodeMarketplaceExtension;
 
-  extensions = (lib.importJSON ../../../assets/packages.json).vscode-extensions;
+  extensions = lib.importJSON ../../../assets/vscode.extensions.json;
 in {
   jbro.vscode-default-keybindings = buildVscodeMarketplaceExtension {
     mktplcRef =
