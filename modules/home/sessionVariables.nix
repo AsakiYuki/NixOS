@@ -5,12 +5,10 @@
   lib,
   ...
 }: let
-  isGeodeSDKInstalled =
-    (builtins.elem pkgs.geode-cli osconfig.environment.systemPackages)
-    || (builtins.elem pkgs.geode-cli config.home.packages);
+  isIncludedInPackages = pkg: (builtins.elem pkg osconfig.environment.systemPackages) || (builtins.elem pkg config.home.packages);
 in {
   home.sessionVariables = lib.mergeAttrsList [
-    (lib.optionalAttrs isGeodeSDKInstalled {
+    (lib.optionalAttrs (isIncludedInPackages pkgs.geode-cli) {
       GEODE_SDK = "${config.home.homeDirectory}/Documents/Geode";
       GEODE_TARGET_PLATFORM = "Win64";
     })
