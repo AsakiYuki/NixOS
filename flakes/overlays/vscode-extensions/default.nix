@@ -35,4 +35,36 @@ in {
       maintainers = [];
     };
   };
+  theqtcompany.qt-qml = buildVscodeMarketplaceExtension {
+    mktplcRef =
+      extensions."theqtcompany.qt-qml"
+      // {
+        name = "qt-qml";
+        publisher = "theqtcompany";
+      };
+
+    meta = {
+      description = "Qt QML Support";
+      downloadPage = "https://marketplace.visualstudio.com/items?itemName=theqtcompany.qt-qml";
+      homepage = "https://github.com/qt-labs/vscodeext";
+      license = lib.licenses.lgpl3Only;
+      maintainers = [];
+    };
+  };
+  bbenoist.qml = buildVscodeMarketplaceExtension {
+    mktplcRef =
+      extensions."bbenoist.qml"
+      // {
+        name = "qml";
+        publisher = "bbenoist";
+      };
+
+    meta = {
+      description = "QML language support for Visual Studio Code";
+      downloadPage = "https://marketplace.visualstudio.com/items?itemName=bbenoist.qml";
+      homepage = "https://github.com/bbenoist/vscode-qml";
+      license = lib.licenses.mit;
+      maintainers = [];
+    };
+  };
 }

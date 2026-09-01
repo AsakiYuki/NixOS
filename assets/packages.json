@@ -7,6 +7,14 @@
         "geodesdk.geode": {
             "version": "1.22.1",
             "hash": "sha256-t9xyZ8Ssv3Jhh+95dW8RNl4W7X21NkIz5LXm2G9UEGk="
+        },
+        "theqtcompany.qt-qml": {
+            "version": "1.17.0",
+            "hash": "sha256-t9xyZ8Ssv3Jhh+95dW8RNl4W7X21NkIz5LXm2G9UEGk="
+        },
+        "bbenoist.qml": {
+            "version": "1.0.0",
+            "hash": "sha256-t9xyZ8Ssv3Jhh+95dW8RNl4W7X21NkIz5LXm2G9UEGk="
         }
     },
     "bun-baseline": {
