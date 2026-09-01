@@ -29,7 +29,17 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+          BEFORE_COMMIT=$(git rev-parse HEAD)
+
           ./.github/pkgs-update.sh
 
-          git pull --rebase origin ${{ github.ref_name }}
-          git push origin HEAD:${{ github.ref_name }}
+          git checkout -- .
+          git clean -fd
+
+          AFTER_COMMIT=$(git rev-parse HEAD)
+          if [ "$BEFORE_COMMIT" != "$AFTER_COMMIT" ]; then
+            git pull --rebase origin ${{ github.ref_name }}
+            git push origin HEAD:${{ github.ref_name }}
+          else
+            echo "[INFO] Working tree clean, no updates to push."
+          fi

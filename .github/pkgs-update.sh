@@ -3,7 +3,7 @@
 
 function commit() {
     git add $1
-    git commit -m $2 -m "$(cat commit.txt)"
+    git commit -m "$2" -m "$(cat commit.txt)"
     rm commit.txt
 }
 
