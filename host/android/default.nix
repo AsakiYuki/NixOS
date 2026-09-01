@@ -37,11 +37,4 @@
 
   # Set your time zone
   #time.timeZone = "Europe/Berlin";
-
-  # Configure home-manager
-  home-manager = {
-    config = ./home.nix;
-    backupFileExtension = "hm-bak";
-    useGlobalPkgs = true;
-  };
 }
