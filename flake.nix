@@ -36,13 +36,5 @@
     nix-on-droid.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    ...
-  } @ inputs: let
-    state-version = "26.05";
-    lib = nixpkgs.lib;
-  in
-    import ./configs inputs;
+  outputs = {...} @ inputs: import ./configs inputs;
 }

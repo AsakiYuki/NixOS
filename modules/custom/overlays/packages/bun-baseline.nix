@@ -1,17 +1,17 @@
 {
   pkgs,
-  lib,
+  data,
   ...
 }: let
-  data = (lib.importJSON ../../../../assets/packages.json).bun-baseline;
+  inherit (data) bun-baseline;
 in
   pkgs.stdenv.mkDerivation rec {
     pname = "bun";
-    version = data.version;
+    version = bun-baseline.version;
 
     src = pkgs.fetchzip {
       url = "https://github.com/oven-sh/bun/releases/download/bun-v${version}/bun-linux-x64-baseline.zip";
-      hash = data.hash;
+      hash = bun-baseline.hash;
     };
 
     dontBuild = true;

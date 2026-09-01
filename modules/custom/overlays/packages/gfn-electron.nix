@@ -1,17 +1,18 @@
 {
   pkgs,
+  data,
   lib,
   ...
 }: let
-  data = (lib.importJSON ../../../../assets/packages.json).gfn-electron;
+  inherit (data) gfn-electron;
 in
   pkgs.stdenv.mkDerivation rec {
     pname = "geforce-now-electron";
-    version = data.version;
+    version = gfn-electron.version;
 
     src = pkgs.fetchzip {
       url = "https://github.com/hmlendea/gfn-electron/releases/download/v${version}/geforcenow-electron_${version}_linux.zip";
-      hash = data.hash;
+      hash = gfn-electron.hash;
       stripRoot = false;
     };
 

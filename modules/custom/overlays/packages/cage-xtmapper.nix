@@ -1,12 +1,12 @@
 {
   pkgs,
-  lib,
+  data,
   version ? "0.2.0",
   ...
 }: let
-  data = (lib.importJSON ../../../../assets/packages.json).cage-xtmapper;
-  release = data.release;
-  hash = data."version-${version}";
+  inherit (data) cage-xtmapper;
+  release = cage-xtmapper.release;
+  hash = cage-xtmapper."version-${version}";
 in
   pkgs.stdenv.mkDerivation {
     pname = "cage-xtmapper";

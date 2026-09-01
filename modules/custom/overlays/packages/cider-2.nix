@@ -1,16 +1,16 @@
 {
   pkgs,
-  lib,
+  data,
   ...
 }: let
-  data = (lib.importJSON ../../../../assets/packages.json).cider-2;
+  inherit (data) cider-2;
 in
   pkgs.cider-2.overrideAttrs (prevAtts: rec {
-    version = data.version;
+    version = cider-2.version;
 
     src = pkgs.fetchurl {
       url = "https://static.asakiyuki.com/packages/nixos/cider-v${version}-linux-x64.deb";
-      hash = data.hash;
+      hash = cider-2.hash;
     };
 
     postInstall = builtins.replaceStrings ["--replace-fail"] ["--replace-warn"] prevAtts.postInstall;

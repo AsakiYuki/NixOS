@@ -1,17 +1,18 @@
 {
-  stdenv,
-  fetchzip,
+  pkgs,
+  data,
   lib,
+  ...
 }: let
-  data = (lib.importJSON ../../../../assets/packages.json).geode-cli;
+  inherit (data) geode-cli;
 in
-  stdenv.mkDerivation rec {
+  pkgs.stdenv.mkDerivation rec {
     pname = "geode-cli";
-    version = data.version;
+    version = geode-cli.version;
 
-    src = fetchzip {
+    src = pkgs.fetchzip {
       url = "https://github.com/geode-sdk/cli/releases/download/v${version}/geode-cli-v${version}-linux.zip";
-      hash = data.hash;
+      hash = geode-cli.hash;
     };
 
     dontBuild = true;
