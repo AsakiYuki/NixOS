@@ -35,5 +35,69 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = {...} @ inputs: import ./configs inputs;
+  outputs = {
+    self,
+    nixpkgs,
+    ...
+  } @ inputs: let
+    inherit (nixpkgs) lib;
+    state-version = "26.05";
+    root = path: ./. + path;
+
+    nixos = {inputs, ...} @ args: (import ./helpers/nixosConfigurations.nix args {
+      ideapad-slim-5 = {
+        modules = [
+          inputs.nixos-hardware.nixosModules.lenovo-ideapad-slim-5
+          inputs.lanzaboote.nixosModules.lanzaboote
+          (root "/devices/ideapad-slim-5/configuration.nix")
+        ];
+      };
+      msi-sayu = {
+        modules = [
+          (root "/devices/msi-sayu/configuration.nix")
+        ];
+      };
+      home-server = {
+        modules = [
+          (root "/devices/home-server/configuration.nix")
+        ];
+      };
+      wsl = {
+        modules = [
+          inputs.nixos-wsl.nixosModules.default
+          (root "/devices/wsl/configuration.nix")
+        ];
+      };
+    });
+
+    dev = {nixpkgs, ...}: {
+      devShells.x86_64-linux.default = let
+        pkgs = import nixpkgs {
+          system = "x86_64-linux";
+          overlays = import ./overlays/inputs-overlays.nix inputs;
+        };
+      in (pkgs.mkShell {
+        buildInputs = with pkgs; [
+          bun
+          vsce
+        ];
+
+        shellHook = ''
+          echo "Welcome to NixOS DevShell!"
+
+          if [ -e .env ]; then
+            source .env
+          fi
+
+          export NIX_CONFIG="access-tokens = github.com=''${GH_TOKEN}"
+
+          alias repl="nix repl ."
+          alias agenix="./agenix.sh"
+        '';
+      });
+    };
+  in (lib.mergeAttrsList [
+    (nixos {inherit self inputs state-version lib;})
+    (dev inputs)
+  ]);
 }
