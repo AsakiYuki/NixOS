@@ -1,5 +1,5 @@
 #! /usr/bin/env nix-shell
-#! nix-shell -i sh -p nix git bun
+#! nix-shell -i sh -p nix git bun vsce
 
 function commit() {
     git add $1
@@ -14,6 +14,13 @@ if [ -f commit.txt ]; then
 else
     echo "[INFO] Cannot found any packages update!"
 fi
+
+bun run check-vscode-extensions-update
+if [ -f commit.txt ]; then
+    commit assets/vscode.extensions.json "ci(update-checker/packages): update vscode extensions infos $(date '+%H:%M:%S %d-%m-%Y')"
+else
+    echo "[INFO] Cannot found any vscode extensions update!"
+fi 
 
 bun run check-proton-update
 if [ -f commit.txt ]; then
