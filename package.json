@@ -24,7 +24,8 @@
   "license": "GPL-3.0",
   "scripts": {
     "check-packages-update": "bun run scripts/update/packages.ts",
-    "check-proton-update": "bun run scripts/update/proton.ts"
+    "check-proton-update": "bun run scripts/update/proton.ts",
+    "check-vscode-extensions-update": "bun run scripts/update/vscode-extensions.ts"
   },
   "type": "module"
 }

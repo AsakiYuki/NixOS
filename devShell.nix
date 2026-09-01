@@ -7,12 +7,16 @@ in {
   devShells.x86_64-linux.default = pkgs.mkShell {
     buildInputs = with pkgs; [
       bun
+      vsce
     ];
 
     shellHook = ''
       echo "Welcome to NixOS DevShell!"
 
-      source .env
+      if [ -e .env ]; then
+        source .env
+      fi
+
       export NIX_CONFIG="access-tokens = github.com=''${GH_TOKEN}"
 
       alias repl="nix repl ."
