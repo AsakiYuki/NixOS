@@ -1,10 +1,10 @@
 {
   pkgs,
   unstable,
+  lib,
   ...
 }: {
-  programs.vscodium.profiles.default.extensions = with pkgs.vscode-extensions;
-  with unstable.vscode-extensions; [
+  programs.vscodium.profiles.default.extensions = with (lib.recursiveUpdate pkgs.vscode-extensions unstable.vscode-extensions); [
     # Themes
     catppuccin.catppuccin-vsc
     pkief.material-icon-theme
@@ -78,6 +78,10 @@
 
     # LaTeX
     james-yu.latex-workshop
+
+    # QT/QML
+    theqtcompany.qt-qml
+    bbenoist.qml
 
     # JavaScript/TypeScript
     christian-kohler.npm-intellisense
