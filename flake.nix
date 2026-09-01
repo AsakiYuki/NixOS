@@ -32,6 +32,9 @@
     home-manager.url = "github:nix-community/home-manager/release-26.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    nix-on-droid.url = "github:nix-community/nix-on-droid/prerelease-25.11";
+    nix-on-droid.inputs.nixpkgs.follows = "nixpkgs";
+
     overlays.url = "path:./flakes/overlays";
     overlays.inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
@@ -51,6 +54,7 @@
     lib = nixpkgs.lib;
   in
     lib.mergeAttrsList [
+      (import ./nixOnDroid.nix inputs)
       (import ./devShell.nix inputs)
       (import ./nixosConfigurations.nix {inherit inputs self state-version lib;})
     ];
