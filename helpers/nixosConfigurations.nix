@@ -16,6 +16,7 @@ in
           sys = value.system or "x86_64-linux";
           unstable = import inputs.unstablepkgs {
             localSystem = sys;
+            overlays = [inputs.overlays.overlays.default];
             config.allowUnfree = true;
           };
           _lib = lib.extend (

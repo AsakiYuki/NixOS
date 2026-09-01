@@ -1,10 +1,5 @@
-{
-  pkgs,
-  unstable,
-  lib,
-  ...
-}: {
-  programs.vscodium.profiles.default.extensions = with (lib.recursiveUpdate pkgs.vscode-extensions unstable.vscode-extensions); [
+{unstable, ...}: {
+  programs.vscodium.profiles.default.extensions = with unstable.vscode-extensions; [
     # Themes
     catppuccin.catppuccin-vsc
     pkief.material-icon-theme

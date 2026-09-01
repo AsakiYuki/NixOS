@@ -33,7 +33,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     overlays.url = "path:./flakes/overlays";
-    overlays.inputs.nixpkgs.follows = "nixpkgs";
+    overlays.inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     cursors.url = "path:./flakes/cursors";
     cursors.inputs.nixpkgs.follows = "nixpkgs";
