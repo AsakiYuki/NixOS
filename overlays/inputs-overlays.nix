@@ -1,8 +1,4 @@
 {...} @ inputs: [
-  (final: prev: (import ../modules/custom/overlays {pkgs = prev;}))
-  (final: prev: (import ../modules/custom/proton {
-    pkgs = prev;
-    lib = prev.lib;
-  }))
+  (_: pkgs: import ./packages (pkgs // {inherit pkgs;}))
   inputs.millennium.overlays.default
 ]

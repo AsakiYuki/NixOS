@@ -32,8 +32,6 @@ lib.mergeAttrsList (
           [
             ../options/home
             ../modules/home
-            ../modules/custom/cursors
-            ../modules/custom/proton/home-manager
           ]
 
           (with inputs; [
