@@ -35,12 +35,8 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    ...
-  } @ inputs: let
-    inherit (nixpkgs) lib;
+  outputs = {...} @ inputs: let
+    inherit (inputs.nixpkgs) lib self;
     state-version = "26.05";
     root = path: ./. + path;
 
@@ -95,7 +91,9 @@
       };
     });
   in (lib.mergeAttrsList [
-    (nixos {inherit self inputs state-version lib;})
+    (nixos {
+      inherit inputs self state-version lib;
+    })
     (devShell inputs)
   ]);
 }

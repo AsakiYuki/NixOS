@@ -1,10 +1,10 @@
 if [ -e /etc/nixos ]; then
-    if [ $(readlink /etc/nixos) == $(pwd) ]; then
-        ./build.sh $1
+    if [ "$(readlink /etc/nixos)" == "$(pwd)" ]; then
+        ./build.sh "$1"
     else
-        echo "current configuration exist, cannot build!";
+        echo "current configuration exist, cannot build!"
     fi
-else 
+else
     ./symlink.sh
-    ./build.sh $1
+    ./build.sh "$1"
 fi

@@ -1,2 +1,2 @@
 #!/bin/sh
-sudo nixos-rebuild switch --flake /etc/nixos#$1
+sudo nixos-rebuild switch --flake "/etc/nixos#$1"

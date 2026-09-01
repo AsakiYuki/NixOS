@@ -1,10 +1,10 @@
 if [ -e /etc/nixos ]; then
-    if [ $(readlink /etc/nixos) == $(pwd) ]; then
-        ./install.sh $1
+    if [ "$(readlink /etc/nixos)" == "$(pwd)" ]; then
+        ./install.sh "$1"
     else
-        echo "current configuration exist, cannot install!";
+        echo "current configuration exist, cannot install!"
     fi
-else 
+else
     ./symlink.sh
-    ./install.sh $1
+    ./install.sh "$1"
 fi
