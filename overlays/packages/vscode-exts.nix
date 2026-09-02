@@ -472,7 +472,7 @@ in {
     };
   };
 
-  "13xforever".language-x86-64-assembly = buildVscodeMarketplaceExtension {
+  p13xforever.language-x86-64-assembly = buildVscodeMarketplaceExtension {
     ref = {
       publisher = "13xforever";
       name = "language-x86-64-assembly";
