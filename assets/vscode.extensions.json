@@ -1,7 +1,7 @@
 {
     "jbro.vscode-default-keybindings": {
-        "version": "0.2.74",
-        "hash": "sha256-CJhmGZKTp09IRtonPysOJh54fe5d6AKmhhG1vNbNDEc="
+        "version": "0.2.76",
+        "hash": "sha256-Dnb+yHkCDstMYuzX2z8Y3MY70wKJmeGX7NmDzQ8Tie0="
     },
     "geodesdk.geode": {
         "version": "1.22.1",
