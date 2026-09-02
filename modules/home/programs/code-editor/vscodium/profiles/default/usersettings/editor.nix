@@ -20,7 +20,7 @@
     "editor.mouseMiddleClickAction" = "openLink";
     "editor.selectionClipboard" = false;
     "terminal.integrated.enableMultiLinePasteWarning" = "never";
-    "extensions.autoUpdate" = false;
+    "extensions.autoUpdate" = "off";
     "extensions.autoCheckUpdates" = false;
     "settingsSync.keybindingsPerPlatform" = true;
     "workbench.settings.enableNaturalLanguageSearch" = false;
