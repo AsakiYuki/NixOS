@@ -14,5 +14,149 @@
     "bbenoist.qml": {
         "version": "1.0.0",
         "hash": "sha256-tphnVlD5LA6Au+WDrLZkAxnMJeTCd3UTyTN1Jelditk="
+    },
+    "adrianwilczynski.alpine-js-intellisense": {
+        "version": "1.2.0",
+        "hash": "sha256-Klx5ZvV06lXIJ3Q/mzq3KBjPpdROoxDkgEu7MBO+RhI="
+    },
+    "edwinkofler.vscode-assorted-languages": {
+        "version": "0.32.0",
+        "hash": "sha256-zlg7inLj9SzZQFO9AmaEVJN8nhhePmzqRY/hwTYDGUk="
+    },
+    "astro-build.astro-vscode": {
+        "version": "2.16.20",
+        "hash": "sha256-OzySaYlsPGyVtFoCE7mdGoozU0t6ZRYF56G8qczWd6s="
+    },
+    "formulahendry.auto-rename-tag": {
+        "version": "0.1.10",
+        "hash": "sha256-uXqWebxnDwaUVLFG6MUh4bZ7jw5d2rTHRm5NoR2n0Vs="
+    },
+    "thekalinga.bootstrap4-vscode": {
+        "version": "6.1.0",
+        "hash": "sha256-f/A9yrWxkFluTRuKdQK6u67qF3tk/EHTDn7XoE9fD8U="
+    },
+    "ms-vscode.cpp-devtools": {
+        "version": "0.7.0",
+        "hash": "sha256-zxnF1MThApdGAJ9LRqNpUMwU5GPRpawoB2p0S7qcuNM="
+    },
+    "ultram4rine.vscode-choosealicense": {
+        "version": "0.9.4",
+        "hash": "sha256-YmZ1Szvcv3E3q8JVNV1OirXFdYI29a4mR3rnhJfUSMM="
+    },
+    "openai.chatgpt": {
+        "version": "26.5825.51511",
+        "hash": "sha256-A6G426YKEPQt5GyyN5t3PfwP/gpVl1Aash5XTUtPP04="
+    },
+    "zokugun.cron-tasks": {
+        "version": "0.2.1",
+        "hash": "sha256-nfAQzlZfUFy1DzKhp/q2WqnGnzMdPukuTa4qsqysIro="
+    },
+    "mrmlnc.vscode-duplicate": {
+        "version": "1.2.1",
+        "hash": "sha256-mA3fd3rMsDnZk/LqoxRk/RF9iW+GMAAFE23wngK06cc="
+    },
+    "tobermory.es6-string-html": {
+        "version": "2.17.0",
+        "hash": "sha256-TbbFEEpio86T5NQq1g5XapPGdJVP+RRmhpHewJb9ffw="
+    },
+    "ctcuff.font-preview": {
+        "version": "2.2.1",
+        "hash": "sha256-n89jwcTnuxMhs21wG9F6a8bYeNDQGx2yptYCcUH9R+o="
+    },
+    "ecmel.vscode-html-css": {
+        "version": "2.0.14",
+        "hash": "sha256-0IAwX/KPh1CKCQENcztDnCkbYDWipO09zl3Qcb1RPfA="
+    },
+    "pushqrdx.inline-html": {
+        "version": "0.3.10",
+        "hash": "sha256-owJqWbL296ky4UZCFGPn4WmaohE3xnRs4qY2D6YzmYY="
+    },
+    "lllllllqw.jsdoc": {
+        "version": "1.0.9",
+        "hash": "sha256-MKOcoJzGGw6VHCevhLCOuhobpySJGx/SSMCqx4ZsR8A="
+    },
+    "joshuapoehls.json-escaper": {
+        "version": "1.1.2",
+        "hash": "sha256-m3zXzP8AiO7peu6HibCAu0wJMTmB3V175yMbBPhLczg="
+    },
+    "mojang-studios.minecraft-debugger": {
+        "version": "1.55.0",
+        "hash": "sha256-XHwutx42aoO2LD45bRyCtBtF5CBSkj97iIcoQN3sWZE="
+    },
+    "zz5840.minecraft-lang-colorizer": {
+        "version": "1.0.0",
+        "hash": "sha256-dOZGmNAEGMOG2xlfBn/OyY1SctSM28Qn/sVn/RVSzD0="
+    },
+    "stevertus.mcscript": {
+        "version": "0.0.3",
+        "hash": "sha256-8Yfg8DV1u9XYUBJXyZp/Wj9uQNbhqv3S7CoX75KzSk4="
+    },
+    "Cardinal90.multi-cursor-case-preserve": {
+        "version": "1.0.5",
+        "hash": "sha256-eJafjYDydD8DW83VLH9MPFeDENXBx3el7XvjZqu88Jw="
+    },
+    "cweijan.vscode-mysql-client2": {
+        "version": "9.0.2",
+        "hash": "sha256-bxzwnEht+GDPFkNlzdj/gMkteAFOFbEAQmWPv3D1R1s="
+    },
+    "code-nature.nilesoft-shell-file-formatter": {
+        "version": "1.19.7",
+        "hash": "sha256-nzoTRVj47OSA/BIXltcS82HGlrHo8GNN+zJxu5m2g64="
+    },
+    "jinxdash.prettier-rust": {
+        "version": "0.1.9",
+        "hash": "sha256-pb3I0NT72wKlnhw3O3vumia13tqXU3wbYi33WsI/uY0="
+    },
+    "rvest.vs-code-prettier-eslint": {
+        "version": "6.0.0",
+        "hash": "sha256-PogNeKhIlcGxUKrW5gHvFhNluUelWDGHCdg5K+xGXJY="
+    },
+    "inferrinizzard.prettier-sql-vscode": {
+        "version": "1.6.0",
+        "hash": "sha256-l6pf/+uv8Bn4uDMX0CbzSjydTStr73uRY550Ad9wm7Q="
+    },
+    "wallabyjs.quokka-vscode": {
+        "version": "1.0.769",
+        "hash": "sha256-fAwKe3tYLzaUbLRP6luid7Yl21wKseqm85m4r6ypxxg="
+    },
+    "syler.sass-indented": {
+        "version": "1.8.33",
+        "hash": "sha256-7+Yo6X+t56tnZzepBKEo5hJdgLxiF3+83hSFqpkhVpA="
+    },
+    "mrmlnc.vscode-scss": {
+        "version": "0.10.0",
+        "hash": "sha256-Iuirq+SUZz3V6QHeZNyj9EaWSszL4fD4cdorcMnbbSI="
+    },
+    "moyu.snapcode": {
+        "version": "1.1.0",
+        "hash": "sha256-ecLFEnqtFwytOzBmGDaCIUw/OctR9z5zNl7VOGl0DGo="
+    },
+    "jannisx11.snowstorm": {
+        "version": "3.2.2",
+        "hash": "sha256-gLupz8Ls6j9ihkT6hEx/ZRYeC+iwYoFLz0A8oXW1w6I="
+    },
+    "minecraftcommands.syntax-mcfunction": {
+        "version": "1.0.1",
+        "hash": "sha256-AhDAWJtdtWxL6iBBrJnNHZdn4ucaz3/HBdrq6QX9OT4="
+    },
+    "vosca.vscode-v-analyzer": {
+        "version": "0.0.2",
+        "hash": "sha256-Nn1ZaBRwJQoACF2MMaJvznTFzpCLXMnsevJHy0Iaws8="
+    },
+    "uctakeoff.vscode-counter": {
+        "version": "3.7.2",
+        "hash": "sha256-vu6JwH/tO2fiy5h8JpnIPBpwO8w62tCvbgEZUowkAcA="
+    },
+    "wallabyjs.wallaby-vscode": {
+        "version": "1.0.501",
+        "hash": "sha256-DIHdPWqIdiLK6u2Wnkpqm+KTIEQvGn3Uo0TYFGkocao="
+    },
+    "13xforever.language-x86-64-assembly": {
+        "version": "3.1.5",
+        "hash": "sha256-WIhmAZLR2WOSqQF3ozJ/Vr3Rp6HdSK7L23T3h4AVaGM="
+    },
+    "rogalmic.vscode-xml-complete": {
+        "version": "0.3.0",
+        "hash": "sha256-rrFnseaIWHZr0NcI8dlSHR4ezFKzv+pXpIBLUdXUI6U="
     }
 }

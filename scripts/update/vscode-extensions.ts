@@ -11,7 +11,7 @@ interface Extension {
 	hash: string
 }
 
-type VscodeExtensions = Record<string, Extension>
+type VscodeExtensions = Record<string, Extension | undefined>
 
 interface ExtensionPublisher {
 	publisherId: UUID
@@ -62,8 +62,10 @@ async function getExtInfos(extId: string): Promise<ExtensionInfos> {
 	return JSON.parse(await spawnStdout("vsce", ["show", extId, "--json"]))
 }
 
-async function checkMarketplaceExtension(extId: string, data: Extension): Promise<[string, Extension]> {
+async function checkMarketplaceExtension(extId: string, data: Extension | undefined): Promise<[string, Extension]> {
 	const infos = await getExtInfos(extId)
+	if (!data || !(data.version && data.hash))
+		data = { version: "0.0.0", hash: "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" }
 
 	console.log(`[INFO] Checking update for ${extId}...`)
 
