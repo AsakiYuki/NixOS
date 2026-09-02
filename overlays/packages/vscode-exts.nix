@@ -495,4 +495,16 @@ in {
       license = lib.licenses.mit;
     };
   };
+
+  blockceptionltd.blockceptionvscodeminecraftbedrockdevelopmentextension = buildVscodeMarketplaceExtension {
+    ref = {
+      publisher = "blockceptionltd";
+      name = "blockceptionvscodeminecraftbedrockdevelopmentextension";
+    };
+    meta = {
+      description = "An extension that provides code completion, validations, formatters, diagnostics, cheat-sheets, code-actions, creation of files, and development tools to help develop Minecraft Bedrock content";
+      homepage = "https://github.com/Blockception/minecraft-bedrock-language-server";
+      license = lib.licenses.bsd3;
+    };
+  };
 }

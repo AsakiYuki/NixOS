@@ -158,5 +158,9 @@
     "rogalmic.vscode-xml-complete": {
         "version": "0.3.0",
         "hash": "sha256-rrFnseaIWHZr0NcI8dlSHR4ezFKzv+pXpIBLUdXUI6U="
+    },
+    "blockceptionltd.blockceptionvscodeminecraftbedrockdevelopmentextension": {
+        "version": "9.1.16",
+        "hash": "sha256-NB+BFlyL/Gw7Ao/sX7FlxGJT/IjxAhGBwS4z/j4ywfk="
     }
 }
