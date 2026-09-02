@@ -9,8 +9,8 @@
         "version-0.2.0": "sha256-F1C3KnTzTO1vEouixqO1xnsGmufRyAk+BiRlypNq4kQ="
     },
     "cider-2": {
-        "version": "4.0.9.1",
-        "hash": "sha256-MsA6lK3PsyOEx938FgJFx8l9oqwoM3FzIK5goF73lTs="
+        "version": "4.0.17",
+        "hash": "sha256-CanpS0yydWOkGKp/8SIVSJ7EavFUs9xBxUgmL9AUXJU="
     },
     "lsfg-vk": {
         "version": "2.0.0",
