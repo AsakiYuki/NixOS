@@ -7,6 +7,7 @@
     geode-cli = ./geode-cli.nix;
     lsfg-vk = ./lsfg-vk.nix;
     geforce-now-electron = ./gfn-electron.nix;
+    opennow = ./opennow.nix;
   };
 in (lib.mapAttrs' (name: path: {
     inherit name;
