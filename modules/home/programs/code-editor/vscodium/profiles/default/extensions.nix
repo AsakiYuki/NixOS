@@ -19,6 +19,15 @@
     rangav.vscode-thunder-client
     tomoki1207.pdf
     jbro.vscode-default-keybindings
+    edwinkofler.vscode-assorted-languages
+    ultram4rine.vscode-choosealicense
+    openai.chatgpt
+    zokugun.cron-tasks
+    mrmlnc.vscode-duplicate
+    ctcuff.font-preview
+    moyu.snapcode
+    cardinal90.multi-cursor-case-preserve
+    uctakeoff.vscode-counter
     ms-vscode.hexeditor
     ms-vscode.live-server
     ms-vscode.remote-explorer
@@ -49,6 +58,7 @@
     ms-vscode.makefile-tools
     ms-vscode.cpptools
     ms-vscode.cmake-tools
+    ms-vscode.cpp-devtools
 
     # C#
     ms-dotnettools.csharp
@@ -80,18 +90,46 @@
 
     # JavaScript/TypeScript
     christian-kohler.npm-intellisense
+    wallabyjs.wallaby-vscode
+    wallabyjs.quokka-vscode
+    tobermory.es6-string-html
     yoavbls.pretty-ts-errors
     dbaeumer.vscode-eslint
     wix.vscode-import-cost
     meganrogge.template-string-converter
+    adrianwilczynski.alpine-js-intellisense
+    astro-build.astro-vscode
+    pushqrdx.inline-html
+    lllllllqw.jsdoc
+
+    # JSON
+    joshuapoehls.json-escaper
 
     # HTML/CSS/SASS
+    ecmel.vscode-html-css
     formulahendry.auto-close-tag
     formulahendry.auto-rename-tag
     ecmel.vscode-html-css
     gencer.html-slim-scss-css-class-completion
     svelte.svelte-vscode
+    formulahendry.auto-rename-tag
+    thekalinga.bootstrap4-vscode
+    syler.sass-indented
+    mrmlnc.vscode-scss
     bradlc.vscode-tailwindcss
+
+    # Minecraft
+    mojang-studios.minecraft-debugger
+    zz5840.minecraft-lang-colorizer
+    stevertus.mcscript
+    jannisx11.snowstorm
+    minecraftcommands.syntax-mcfunction
+
+    # Assembly
+    p13xforever.language-x86-64-assembly
+
+    # V
+    vosca.vscode-v-analyzer
 
     # Go
     golang.go
@@ -120,9 +158,17 @@
     # Formatter
     esbenp.prettier-vscode
     inferrinizzard.prettier-sql-vscode
+    code-nature.nilesoft-shell-file-formatter
+    jinxdash.prettier-rust
+    rvest.vs-code-prettier-eslint
+    inferrinizzard.prettier-sql-vscode
+
+    # SQL
+    cweijan.vscode-mysql-client2
 
     # XML
     dotjoshjohnson.xml
+    rogalmic.vscode-xml-complete
 
     # Code status
     leonardssh.vscord

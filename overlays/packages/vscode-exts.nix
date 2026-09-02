@@ -292,9 +292,9 @@ in {
     };
   };
 
-  Cardinal90.multi-cursor-case-preserve = buildVscodeMarketplaceExtension {
+  cardinal90.multi-cursor-case-preserve = buildVscodeMarketplaceExtension {
     ref = {
-      publisher = "Cardinal90";
+      publisher = "cardinal90";
       name = "multi-cursor-case-preserve";
     };
     meta = {
