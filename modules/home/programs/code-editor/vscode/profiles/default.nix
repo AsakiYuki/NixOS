@@ -17,7 +17,8 @@ in {
   programs = rec {
     vscode.profiles = {
       default = mkProfile [];
-      minecraft = mkProfile [./minecraft];
+      mcbe = mkProfile [./minecraft/bedrock];
+      mcje = mkProfile [./minecraft/java];
       nix = mkProfile [./nix];
       gd = mkProfile [./geometry-dash];
     };
