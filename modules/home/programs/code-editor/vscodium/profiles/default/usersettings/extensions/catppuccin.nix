@@ -1,5 +1,5 @@
 {...}: {
-  programs.vscodium.profiles.default.userSettings = {
+  userSettings = {
     "catppuccin.accentColor" = "pink";
     "catppuccin.syncWithIconPack" = false;
   };

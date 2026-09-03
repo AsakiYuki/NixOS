@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.vscodium.profiles.default.userSettings = {
+  userSettings = {
     "cmake.cmakePath" = "${pkgs.cmake}/bin/cmake";
   };
 }

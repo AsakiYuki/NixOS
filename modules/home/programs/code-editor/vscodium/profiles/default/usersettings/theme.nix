@@ -1,5 +1,5 @@
 {...}: {
-  programs.vscodium.profiles.default.userSettings = {
+  userSettings = {
     # Editor fonts
     "editor.letterSpacing" = 0.5;
     "editor.fontSize" = 12;

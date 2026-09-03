@@ -1,11 +1,10 @@
 {
   pkgs,
-  config,
+  hmconfig,
   ...
-}:
-{
-  programs.vscodium.profiles.default.userSettings = {
+}: {
+  userSettings = {
     "geode.geodeCliPath" = "${pkgs.geode-cli}/bin/geode";
-    "geode.geodeSdkPath" = "${config.home.homeDirectory}/Documents/Geode";
+    "geode.geodeSdkPath" = "${hmconfig.home.homeDirectory}/Documents/Geode";
   };
 }

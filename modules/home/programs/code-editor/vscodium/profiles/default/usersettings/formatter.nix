@@ -10,7 +10,7 @@
     jsonc = "vscode.json-language-features";
   };
 in {
-  programs.vscodium.profiles.default.userSettings =
+  userSettings =
     lib.mergeAttrs {
       # Formatter
       "editor.defaultFormatter" = "esbenp.prettier-vscode";

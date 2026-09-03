@@ -1,5 +1,5 @@
 {...}: {
-  programs.vscodium.profiles.default.userSettings = {
+  userSettings = {
     "editor.formatOnSave" = true;
     "files.autoSave" = "onFocusChange";
     "vscord.app.name" = "VSCodium";

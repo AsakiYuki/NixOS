@@ -1,5 +1,5 @@
 {...}: {
-  programs.vscodium.profiles.default.keybindings = [
+  keybindings = [
     {
       key = "ctrl+shift+i";
       command = "explorer.newFile";

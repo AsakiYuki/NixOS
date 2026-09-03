@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.vscodium.profiles.default.userSettings = {
+  userSettings = {
     "nixEnvSelector.useFlakes" = true;
 
     "nix.enableLanguageServer" = true;

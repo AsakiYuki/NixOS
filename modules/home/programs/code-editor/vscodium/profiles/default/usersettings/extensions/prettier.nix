@@ -1,5 +1,5 @@
 {...}: {
-  programs.vscodium.profiles.default.userSettings = {
+  userSettings = {
     "prettier.printWidth" = 120;
     "prettier.arrowParens" = "avoid";
     "prettier.tabWidth" = 2;

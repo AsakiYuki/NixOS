@@ -1,5 +1,5 @@
 {...}: {
-  programs.vscodium.profiles.default.userSettings = {
+  userSettings = {
     "vscord.app.name" = "VSCodium";
   };
 }

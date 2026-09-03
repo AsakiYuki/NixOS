@@ -1,5 +1,5 @@
 {...}: {
-  programs.vscodium.profiles.default.userSettings = {
+  userSettings = {
     "git.enableSmartCommit" = true;
     "git.autofetch" = true;
   };
