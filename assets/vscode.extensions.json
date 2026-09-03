@@ -1,7 +1,7 @@
 {
     "jbro.vscode-default-keybindings": {
-        "version": "0.2.76",
-        "hash": "sha256-Dnb+yHkCDstMYuzX2z8Y3MY70wKJmeGX7NmDzQ8Tie0="
+        "version": "0.2.77",
+        "hash": "sha256-AEzQWU72bwVeC7w99wdGDrxrBP+XuL22AXFfAjFRZmE="
     },
     "geodesdk.geode": {
         "version": "1.22.1",
@@ -44,8 +44,8 @@
         "hash": "sha256-YmZ1Szvcv3E3q8JVNV1OirXFdYI29a4mR3rnhJfUSMM="
     },
     "openai.chatgpt": {
-        "version": "26.5825.51511",
-        "hash": "sha256-A6G426YKEPQt5GyyN5t3PfwP/gpVl1Aash5XTUtPP04="
+        "version": "26.5901.22334",
+        "hash": "sha256-/eo/vvismRAG9JV3sBit33O+SSIcn9+NnRCA1fxksqI="
     },
     "zokugun.cron-tasks": {
         "version": "0.2.1",
