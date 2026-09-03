@@ -18,11 +18,8 @@
 in {
   catppuccin.catppuccin-vsc = pkgs.vscode-extensions.catppuccin.catppuccin-vsc.overrideAttrs (prev: {
     postFixup = ''
-      current=$(pwd)
-      cd $out/share/vscode/extensions/catppuccin.catppuccin-vsc/
-      substituteInPlace dist/main.cjs \
+      substituteInPlace $out/share/vscode/extensions/catppuccin.catppuccin-vsc/dist/main.cjs \
         --replace-warn 'var Xt=async t=>{' 'var Xt=async t=>{return null;'
-      cd $current
     '';
   });
 

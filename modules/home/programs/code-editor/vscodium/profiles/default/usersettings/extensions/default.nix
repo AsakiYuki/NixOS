@@ -8,5 +8,6 @@
     ./vscord.nix
     ./geode.nix
     ./cmake.nix
+    ./wallaby.nix
   ];
 }

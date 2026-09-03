@@ -1,0 +1,5 @@
+{...}: {
+  userSettings = {
+    "wallaby.noAutomaticInstall" = false;
+  };
+}
