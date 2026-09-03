@@ -17,10 +17,10 @@
     nixcord.enable = true;
     nixcord.discord.enable = true;
     nixcord.vesktop.enable = true;
+    opennow.enable = true;
 
-    vscode = {
+    vscodium = {
       enable = true;
-      package = pkgs.vscode;
     };
 
     steam = {
