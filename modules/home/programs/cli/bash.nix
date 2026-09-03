@@ -50,7 +50,6 @@
       cfg = config.programs;
     in ''
       ${lib.readRootFile "/scripts/shell/bash.sh"}
-      ${lib.readRootFile "/scripts/shell/truonglon.sh"}
       ${strOpt cfg.qpdf.enable "/scripts/shell/qpdf.sh"}
       ${strOpt cfg.tmux.enable "/scripts/shell/tmux.sh"}
     '';
