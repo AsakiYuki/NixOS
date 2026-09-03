@@ -11,13 +11,9 @@
   };
 in {
   userSettings =
-    lib.mergeAttrs {
-      # Formatter
-      "editor.defaultFormatter" = "esbenp.prettier-vscode";
-      "notebook.defaultFormatter" = "esbenp.prettier-vscode";
-    } (lib.mapAttrs' (name: value: {
-        name = "[${name}]";
-        value."editor.defaultFormatter" = value;
-      })
-      formatter-per-lang);
+    lib.mapAttrs' (name: value: {
+      name = "[${name}]";
+      value."editor.defaultFormatter" = value;
+    })
+    formatter-per-lang;
 }

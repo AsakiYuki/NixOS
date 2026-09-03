@@ -1,4 +1,5 @@
 {
+  unstable,
   osconfig,
   lib,
   ...
@@ -12,4 +13,9 @@ in {
     "catppuccin.accentColor" = accent;
     "catppuccin.syncWithIconPack" = false;
   };
+
+  extensions = with unstable.vscode-extensions; [
+    catppuccin.catppuccin-vsc
+    pkief.material-icon-theme
+  ];
 }

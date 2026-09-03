@@ -17,5 +17,6 @@ in {
   programs.vscodium.profiles = {
     default = mkProfile [];
     minecraft = mkProfile [./minecraft];
+    nix = mkProfile [./nix];
   };
 }
