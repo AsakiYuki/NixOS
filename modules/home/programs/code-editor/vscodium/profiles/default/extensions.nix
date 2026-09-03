@@ -118,14 +118,6 @@
     mrmlnc.vscode-scss
     bradlc.vscode-tailwindcss
 
-    # Minecraft
-    mojang-studios.minecraft-debugger
-    zz5840.minecraft-lang-colorizer
-    stevertus.mcscript
-    jannisx11.snowstorm
-    minecraftcommands.syntax-mcfunction
-    blockceptionltd.blockceptionvscodeminecraftbedrockdevelopmentextension
-
     # Assembly
     p13xforever.language-x86-64-assembly
 

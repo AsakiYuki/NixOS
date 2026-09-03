@@ -7,7 +7,7 @@
   ...
 }: let
   mkProfile = path: {...}: {
-    imports = [path];
+    imports = [./default] ++ path;
     _module.args = {
       inherit osconfig pkgs lib unstable;
       hmconfig = config;
@@ -15,6 +15,7 @@
   };
 in {
   programs.vscodium.profiles = {
-    default = mkProfile ./default;
+    default = mkProfile [];
+    minecraft = mkProfile [./minecraft];
   };
 }
