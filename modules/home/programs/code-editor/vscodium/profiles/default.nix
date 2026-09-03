@@ -18,5 +18,6 @@ in {
     default = mkProfile [];
     minecraft = mkProfile [./minecraft];
     nix = mkProfile [./nix];
+    gd = mkProfile [./geometry-dash];
   };
 }
