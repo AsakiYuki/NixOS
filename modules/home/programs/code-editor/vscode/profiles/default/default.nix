@@ -6,6 +6,7 @@
     ../_tools/prettier
     ../_tools/remote
     ../_tools/themes
+    ../_tools/keybinds
 
     ./usersettings
     ./extensions.nix
