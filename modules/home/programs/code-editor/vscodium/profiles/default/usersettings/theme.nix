@@ -12,7 +12,6 @@
     "scm.inputFontFamily" = "";
 
     # Editor themes
-    "workbench.colorTheme" = "Catppuccin Mocha";
     "workbench.iconTheme" = "material-icon-theme";
 
     # Other
