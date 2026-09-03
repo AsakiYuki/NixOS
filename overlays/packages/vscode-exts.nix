@@ -16,6 +16,16 @@
     meta = {downloadPage = "https://marketplace.visualstudio.com/items?itemName=${extId}";} // meta;
   });
 in {
+  catppuccin.catppuccin-vsc = pkgs.vscode-extensions.catppuccin.catppuccin-vsc.overrideAttrs (prev: {
+    postFixup = ''
+      current=$(pwd)
+      cd $out/share/vscode/extensions/catppuccin.catppuccin-vsc/
+      substituteInPlace dist/main.cjs \
+        --replace-warn 'var Xt=async t=>{' 'var Xt=async t=>{return null;'
+      cd $current
+    '';
+  });
+
   jbro.vscode-default-keybindings = buildVscodeMarketplaceExtension {
     ref = {
       publisher = "jbro";

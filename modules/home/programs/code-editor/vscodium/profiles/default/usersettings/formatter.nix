@@ -6,8 +6,8 @@
     qml = "theqtcompany.qt-qml";
     php = "bmewburn.vscode-intelephense-client";
     shellscript = "mads-hartmann.bash-ide-vscode";
-    json = "vscode.json-language-features";
-    jsonc = "vscode.json-language-features";
+    # json = "vscode.json-language-features";
+    # jsonc = "vscode.json-language-features";
   };
 in {
   userSettings =
