@@ -3,12 +3,13 @@
   config,
   pkgs,
   ...
-}: let 
-  mkSubModuleOptions = moduleOptions: lib.mkOption {
-    type = lib.types.submodule { options = moduleOptions; };
-    default = {};
-  };
-in  {
+}: let
+  mkSubModuleOptions = moduleOptions:
+    lib.mkOption {
+      type = lib.types.submodule {options = moduleOptions;};
+      default = {};
+    };
+in {
   options.programs.dolphin = mkSubModuleOptions {
     enable = lib.mkEnableOption "dolphin";
     package = lib.mkOption {
@@ -23,6 +24,14 @@ in  {
 
     settings = {
       General = {
+        Version = lib.mkOption {
+          type = lib.types.number;
+          default = 202;
+        };
+        ViewPropsTimestamp = lib.mkOption {
+          type = lib.types.str;
+          default = "2026,9,4,15,19,31.34";
+        };
         DoubleClickViewAction = lib.mkOption {
           type = lib.types.str;
           default = "edit_select_all";
@@ -37,7 +46,7 @@ in  {
         };
         UrlCompletionMode = lib.mkOption {
           type = lib.types.int;
-          default = 1;
+          default = 0;
         };
         ShowFullPath = lib.mkOption {
           type = lib.types.bool;
@@ -62,10 +71,6 @@ in  {
         TabStyle = lib.mkOption {
           type = lib.types.enum ["AutoSize" "FullWidth" "FixedSize"];
           default = "AutoSize";
-        };
-        Version = lib.mkOption {
-          type = lib.types.int;
-          default = 0;
         };
         HomeUrl = lib.mkOption {
           type = lib.types.str;
@@ -162,6 +167,24 @@ in  {
         ModifiedStartupSettings = lib.mkOption {
           type = lib.types.bool;
           default = false;
+        };
+      };
+
+      "KFileDialog Settings" = {
+        "Places Icons Auto-resize" = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        "Places Icons Static Size" = lib.mkOption {
+          type = lib.types.number;
+          default = 22;
+        };
+      };
+
+      MainWindow = {
+        "MenuBar" = lib.mkOption {
+          type = lib.types.enum ["Disabled" "Enabled"];
+          default = "Disabled";
         };
       };
 
@@ -390,6 +413,13 @@ in  {
         ConfirmRenameFileType = lib.mkOption {
           type = lib.types.bool;
           default = true;
+        };
+      };
+
+      PreviewSettings = {
+        Plugins = lib.mkOption {
+          type = lib.types.str;
+          default = "appimagethumbnail,audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs";
         };
       };
 
