@@ -105,11 +105,11 @@
         "snowfall-lib": "snowfall-lib"
       },
       "locked": {
-        "lastModified": 1788426139,
-        "narHash": "sha256-1UqNUBqbcuR+z8bOCVqO4sn9he1RHgbHW+FuBjC3A1k=",
+        "lastModified": 1788493479,
+        "narHash": "sha256-8P7bxCvvhYCOob/IgA9z8wQwpz1yIX7wbEqDrllJV3I=",
         "owner": "LotusInputMethod",
         "repo": "fcitx5-lotus",
-        "rev": "916ffa8d4f608a2fcf6f25aa54631ba1694b3b19",
+        "rev": "26cfd9295af7f55fb678c4f7fa0f2eeaaf624d99",
         "type": "github"
       },
       "original": {
@@ -542,11 +542,11 @@
         "systems": "systems_4"
       },
       "locked": {
-        "lastModified": 1788408265,
-        "narHash": "sha256-0HEWTgmgdqQ/4GMSH72FdLQMJZV1Itn83lWOc1WYYcU=",
+        "lastModified": 1788494954,
+        "narHash": "sha256-SRWINWPWk2ezK387AxdliOQ+h3T93EGUIV6Fm4WVFd0=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "32f3c1f02cf722976c5053ec993119ad6ef870b1",
+        "rev": "62e95390de025f9bd99220b9e2059d429bb94125",
         "type": "github"
       },
       "original": {
