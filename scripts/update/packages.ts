@@ -4,7 +4,7 @@ import path from "path"
 import fs from "fs/promises"
 
 import { getGithubRepoLatestRelease } from "../helpers/github"
-import { fetchZipHash } from "../helpers/nix"
+import { fetchUrlHash, fetchZipHash } from "../helpers/nix"
 import { LatestReleaseData } from "../helpers/git"
 
 let packages: any = {}
@@ -159,6 +159,25 @@ async function main() {
 				console.info(`[INFO] Fetching zip hash from: ${file.download_url}`)
 				const hash = await fetchZipHash(file.download_url)
 				descriptions.push(`geforcenow-electron v${version} - Hash: ${hash}`)
+
+				return { version, hash }
+			},
+		}),
+		fetchLastReleasePackage({
+			author: "OpenCloudGaming",
+			repository: "OpenNOW",
+			get_version: latest => latest.tag_name.slice(1),
+			new_version_found: async (cached, latest, version) => {
+				const file = latest.assets.find(({ name }) => name === `OpenNOW-v${version}-linux-amd64.deb`)
+
+				if (!file) {
+					console.warn(`[WARN] Asset 'OpenNOW-v${version}-linux-amd64.deb' not found in release v${version}.`)
+					return false
+				}
+
+				console.info(`[INFO] Fetching url hash from: ${file.download_url}`)
+				const hash = await fetchUrlHash(file.download_url)
+				descriptions.push(`opennow- v${version} - Hash: ${hash}`)
 
 				return { version, hash }
 			},
