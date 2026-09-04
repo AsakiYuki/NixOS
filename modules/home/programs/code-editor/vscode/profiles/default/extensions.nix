@@ -8,7 +8,6 @@
     hediet.vscode-drawio
     usernamehw.errorlens
     mikestead.dotenv
-    alefragnani.project-manager
     natqe.reload
     tyriar.sort-lines
     rangav.vscode-thunder-client
