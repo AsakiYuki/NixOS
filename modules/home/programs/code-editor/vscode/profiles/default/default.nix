@@ -2,6 +2,7 @@
   imports = [
     ../_lang/markdown
 
+    ../_tools/discord
     ../_tools/git
     ../_tools/prettier
     ../_tools/remote
