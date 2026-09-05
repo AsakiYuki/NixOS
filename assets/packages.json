@@ -1,7 +1,7 @@
 {
     "bun-baseline": {
-        "version": "1.4.1",
-        "hash": "sha256-ejTpUziHCj/jNtiZC+rJ3oiAkVIVj4V+Kiyac9VUD8E="
+        "version": "1.4.2",
+        "hash": "sha256-Nq85/hrOkT7M4VJ9Uc7Kr9e+uNx8unD4d30RzaQlYxc="
     },
     "cage-xtmapper": {
         "release": "20260208",
