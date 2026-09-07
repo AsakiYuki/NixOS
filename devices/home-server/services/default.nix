@@ -11,5 +11,6 @@
     ./fail2ban.nix
     ./httpd.nix
     ./tailscale.nix
+    ./minecraft
   ];
 }
