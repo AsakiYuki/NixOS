@@ -29,22 +29,6 @@
   };
 
   custom = {
-    tahoma = pkgs.stdenv.mkDerivation {
-      pname = "tahoma";
-      version = "1.0";
-      dontUnpack = true;
-
-      src = pkgs.fetchurl {
-        url = "https://www.asakiyuki.com/static/fonts/Tahoma.ttf";
-        sha256 = "129l1cprplci2xmxi0gnsjrvprr48xqp8kr5s9lrwcnaxvb4z4ni";
-      };
-
-      installPhase = ''
-        mkdir -p $out/share/fonts/truetype
-        cp $src $out/share/fonts/truetype/
-      '';
-    };
-
     segoe-ui = pkgs.stdenv.mkDerivation {
       pname = "segoe-ui";
       version = "1.0";
@@ -64,7 +48,7 @@
 in {
   fonts.enableDefaultPackages = true;
   fonts.packages = with pkgs; [
-    custom.tahoma
+    tahoma
     custom.segoe-ui
 
     # Nerd fonts
