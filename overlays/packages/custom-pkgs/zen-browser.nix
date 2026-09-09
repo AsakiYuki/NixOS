@@ -97,6 +97,7 @@ in (pkgs.stdenv.mkDerivation (finalAttrs: rec {
     mkdir -p "$out/bin"
     makeWrapper "$out/lib/zen-${version}/zen" "$out/bin/zen" \
       --prefix LD_LIBRARY_PATH : "${pkgs.lib.makeLibraryPath runtimeLibs}:/run/opengl-driver/lib" \
+      --set MOZ_LEGACY_PROFILES "1" \
       --set-default MOZ_ENABLE_WAYLAND "1" \
       --set-default MOZ_WEBRENDER "1" \
       --set-default MOZ_ACCELERATED "1" \
