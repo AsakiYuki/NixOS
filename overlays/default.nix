@@ -11,5 +11,5 @@ in {
 
   nixpkgs.overlays =
     lib.flatten (import ./inputs-overlays.nix inputs)
-    ++ (lib.optional (!config.device.de.kdePlasma.enable) inputs.dolphin-overlay.overlays.default);
+    ++ (lib.optional (!config.device.de.kdePlasma.enable) (import ./dolphin.nix));
 }
