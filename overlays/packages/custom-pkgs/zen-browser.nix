@@ -6,6 +6,17 @@
 }: let
   inherit (data) zen-browser;
 
+  inherit (pkgs.stdenv.hostPlatform) system;
+
+  archMap = {
+    "x86_64-linux" = "x86_64";
+    "aarch64-linux" = "aarch64";
+  };
+
+  targetArch =
+    archMap.${system}
+    or (throw "Unsupported system for zen-browser: ${system}");
+
   policies =
     ((config.zen or {}).policies or {})
     // {
@@ -36,8 +47,8 @@ in (pkgs.stdenv.mkDerivation (finalAttrs: rec {
   version = zen-browser.version;
 
   src = pkgs.fetchzip {
-    url = "https://github.com/zen-browser/desktop/releases/download/${version}/zen.linux-x86_64.tar.xz";
-    hash = zen-browser.hash.x86_64-linux;
+    url = "https://github.com/zen-browser/desktop/releases/download/${version}/zen.linux-${targetArch}.tar.xz";
+    hash = zen-browser.hash.${system};
   };
 
   nativeBuildInputs = with pkgs; [
@@ -126,6 +137,7 @@ in (pkgs.stdenv.mkDerivation (finalAttrs: rec {
   meta = {
     mainProgram = "zen";
     description = "Zen is a privacy-focused browser that blocks trackers, ads, and other unwanted content while offering the best browsing experience!";
+    platforms = ["x86_64-linux" "aarch64-linux"];
   };
 
   passthru = {
