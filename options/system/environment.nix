@@ -39,7 +39,6 @@
     };
 
     wm = {
-      niri.enable = lib.mkEnableOption "niri";
       hyprland = {
         enable = lib.mkEnableOption "hyprland";
 

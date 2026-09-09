@@ -10,7 +10,6 @@
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
     iris.url = "github:versenilvis/IRIS";
-    niri.url = "github:sodiboo/niri-flake";
     nixcord.url = "github:FlameFlag/nixcord";
     nixvim.url = "github:nix-community/nixvim/nixos-26.05";
     dolphin-overlay.url = "github:asakiyuki/dolphin-overlay";
@@ -24,9 +23,6 @@
 
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
-
-    fcitx5-lotus.url = "github:LotusInputMethod/fcitx5-lotus";
-    fcitx5-lotus.inputs.nixpkgs.follows = "nixpkgs";
 
     home-manager.url = "github:nix-community/home-manager/release-26.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";

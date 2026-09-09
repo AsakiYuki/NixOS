@@ -11,8 +11,7 @@
     accent = "${lib.toUpper (builtins.substring 0 1 cfg.accent)}${builtins.substring 1 (-1) cfg.accent}";
 
     isTilingWindowsManager =
-      (lib.attrByPath ["device" "wm" "hyprland" "enable"] false osconfig)
-      || (lib.attrByPath ["device" "wm" "niri" "enable"] false osconfig);
+      lib.attrByPath ["device" "wm" "hyprland" "enable"] false osconfig;
   in {
     enable = isTilingWindowsManager;
     initExtra = lib.optionalString isTilingWindowsManager (

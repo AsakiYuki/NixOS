@@ -7,7 +7,6 @@
     ./code-editor
     ./nixcord
     ./hyprland
-    ./niri.nix
     ./obs-studio.nix
   ];
 }

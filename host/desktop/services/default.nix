@@ -9,7 +9,6 @@
   imports = [
     ./home
     ./openssh.nix
-    ./fcitx5-lotus.nix
   ];
 
   services = {
