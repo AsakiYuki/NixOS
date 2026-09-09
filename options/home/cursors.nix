@@ -10,7 +10,7 @@
 in {
   options = {
     theme.cursors = lib.mkOption {
-      type = lib.types.enum ([null] ++ (builtins.filter (name: !lib.hasPrefix "#" name) (lib.attrNames cursors)));
+      type = lib.types.enum ([null] ++ (lib.attrNames cursors));
       default = null;
       description = "Cursor theme to use for the desktop";
     };
