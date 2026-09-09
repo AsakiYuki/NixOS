@@ -9,6 +9,7 @@
     geforce-now-electron = ./gfn-electron.nix;
     opennow = ./opennow.nix;
     zen-browser = ./zen-browser.nix;
+    iris = ./iris.nix;
   };
 in (lib.mapAttrs' (name: path: {
     inherit name;

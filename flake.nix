@@ -14,6 +14,7 @@
     nixvim.url = "github:nix-community/nixvim/nixos-26.05";
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+    millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
 
     # Security
     agenix.url = "github:ryantm/agenix";
@@ -21,10 +22,6 @@
 
     # Database
     nix-index-database.url = "github:nix-community/nix-index-database";
-
-    # IDK
-    iris.url = "github:versenilvis/IRIS";
-    millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
 
     # Follows
     millennium.inputs.nixpkgs.follows = "nixpkgs";

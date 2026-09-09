@@ -29,6 +29,13 @@
         "version": "0.5.5",
         "hash": "sha256-iTWPhDPIpXPJjLl5And/IrAlFzM6pavD7xz3A0GhprY="
     },
+    "iris": {
+        "version": "0.7.0",
+        "hash": {
+            "x86_64-linux": "sha256-38cvz79TSR9z1QV6LaG0B7rreBJBLIwi9L2ZN/S6z2Y=",
+            "aarch64-linux": "sha256-7HFgQgs5e5J9n7pVVeLlLaSfVEmDn5Fn+d9lY2z9Itg="
+        }
+    },
     "zen-browser": {
         "version": "1.22b",
         "hash": {

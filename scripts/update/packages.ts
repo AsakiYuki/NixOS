@@ -211,6 +211,34 @@ async function main() {
 				return { version, hash: { "x86_64-linux": hash_x86_64, "aarch64-linux": hash_aarch64 } }
 			},
 		}),
+		fetchLastReleasePackage({
+			author: "versenilvis",
+			repository: "IRIS",
+			package_name: "iris",
+			get_version: ({ tag_name }) => tag_name.slice(1),
+			new_version_found: async (cached, latest, version) => {
+				const files = latest.assets.filter(({ name }) => name.endsWith(".tar.gz"))
+
+				const x86_64 = files.find(({ name }) => name.includes("x_amd"))
+				const aarch64 = files.find(({ name }) => name.includes("x_arm"))
+
+				if (!aarch64 || !x86_64) {
+					console.warn(
+						`[WARN] Asset 'iris_linux_amd64.tar.gz' or 'iris_linux_arm64.tar.gz ' not found in release v${version}.`,
+					)
+					return false
+				}
+
+				console.info(`[INFO] Fetching url hash from:\n - amd64:${x86_64.download_url}\n - arm: ${aarch64.download_url}`)
+
+				const [hash_x86_64, hash_aarch64] = await Promise.all([
+					fetchZipHash(x86_64.download_url),
+					fetchZipHash(aarch64.download_url),
+				])
+
+				return { version, hash: { "x86_64-linux": hash_x86_64, "aarch64-linux": hash_aarch64 } }
+			},
+		}),
 	])
 
 	if (!status.some(v => v)) return
