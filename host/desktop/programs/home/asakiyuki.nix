@@ -1,6 +1,6 @@
 {
   pkgs,
-  unstable,
+  unstable-pkgs,
   ...
 }: {
   programs = {
@@ -10,7 +10,7 @@
     jetbrains.datagrip.enable = true;
     android-studio.enable = true;
     antigravity.enable = true;
-    antigravity.package = unstable.antigravity-ide;
+    antigravity.package = unstable-pkgs.antigravity-ide;
     zed-editor.enable = true;
     vscodium.enable = true;
     slack.enable = true;

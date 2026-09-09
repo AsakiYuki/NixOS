@@ -1,5 +1,5 @@
-{unstable, ...}: {
-  extensions = with unstable.vscode-extensions; [
+{unstable-pkgs, ...}: {
+  extensions = with unstable-pkgs.vscode-extensions; [
     # Utilities
     christian-kohler.path-intellisense
     aaron-bond.better-comments

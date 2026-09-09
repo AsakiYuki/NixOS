@@ -1,4 +1,4 @@
-{unstable, ...}: {
+{unstable-pkgs, ...}: {
   userSettings = {
     "prettier.printWidth" = 120;
     "prettier.arrowParens" = "avoid";
@@ -10,7 +10,7 @@
     "notebook.defaultFormatter" = "esbenp.prettier-vscode";
   };
 
-  extensions = with unstable.vscode-extensions; [
+  extensions = with unstable-pkgs.vscode-extensions; [
     esbenp.prettier-vscode
     inferrinizzard.prettier-sql-vscode
     code-nature.nilesoft-shell-file-formatter

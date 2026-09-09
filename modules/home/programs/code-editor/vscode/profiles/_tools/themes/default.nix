@@ -1,5 +1,5 @@
 {
-  unstable,
+  unstable-pkgs,
   osconfig,
   lib,
   ...
@@ -14,7 +14,7 @@ in {
     "catppuccin.syncWithIconPack" = false;
   };
 
-  extensions = with unstable.vscode-extensions; [
+  extensions = with unstable-pkgs.vscode-extensions; [
     catppuccin.catppuccin-vsc
     pkief.material-icon-theme
   ];

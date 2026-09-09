@@ -1,5 +1,5 @@
 {
-  unstable,
+  unstable-pkgs,
   osconfig,
   config,
   pkgs,
@@ -9,7 +9,7 @@
   mkProfile = path: {...}: {
     imports = [./default] ++ path;
     _module.args = {
-      inherit osconfig pkgs lib unstable;
+      inherit osconfig pkgs lib unstable-pkgs;
       hmconfig = config;
     };
   };

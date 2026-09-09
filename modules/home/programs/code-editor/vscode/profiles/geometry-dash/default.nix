@@ -1,5 +1,5 @@
 {
-  unstable,
+  unstable-pkgs,
   pkgs,
   hmconfig,
   ...
@@ -13,7 +13,7 @@
     "geode.geodeSdkPath" = "${hmconfig.home.homeDirectory}/Documents/Geode";
   };
 
-  extensions = with unstable.vscode-extensions; [
+  extensions = with unstable-pkgs.vscode-extensions; [
     geodesdk.geode
   ];
 }

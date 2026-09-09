@@ -1,5 +1,5 @@
 {
-  unstable,
+  unstable-pkgs,
   pkgs,
   ...
 }: {
@@ -7,7 +7,7 @@
     "cmake.cmakePath" = "${pkgs.cmake}/bin/cmake";
   };
 
-  extensions = with unstable.vscode-extensions; [
+  extensions = with unstable-pkgs.vscode-extensions; [
     ms-vscode.makefile-tools
     ms-vscode.cpptools
     ms-vscode.cmake-tools

@@ -1,9 +1,9 @@
-{unstable, ...}: {
+{unstable-pkgs, ...}: {
   userSettings = {
     "vscord.app.name" = "VSCodium";
   };
 
-  extensions = with unstable.vscode-extensions; [
+  extensions = with unstable-pkgs.vscode-extensions; [
     leonardssh.vscord
   ];
 }

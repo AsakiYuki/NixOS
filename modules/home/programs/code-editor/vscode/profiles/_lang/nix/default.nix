@@ -1,5 +1,5 @@
 {
-  unstable,
+  unstable-pkgs,
   pkgs,
   ...
 }: {
@@ -12,7 +12,7 @@
     "nix.serverSettings".nixd.formatting.command = ["${pkgs.alejandra}/bin/alejandra"];
   };
 
-  extensions = with unstable.vscode-extensions; [
+  extensions = with unstable-pkgs.vscode-extensions; [
     arrterian.nix-env-selector
     bbenoist.nix
     jnoortheen.nix-ide

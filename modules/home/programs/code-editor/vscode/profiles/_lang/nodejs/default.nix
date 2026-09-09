@@ -1,9 +1,9 @@
-{unstable, ...}: {
+{unstable-pkgs, ...}: {
   userSettings = {
     "wallaby.noAutomaticInstall" = false;
   };
 
-  extensions = with unstable.vscode-extensions; [
+  extensions = with unstable-pkgs.vscode-extensions; [
     christian-kohler.npm-intellisense
     wallabyjs.wallaby-vscode
     wallabyjs.quokka-vscode

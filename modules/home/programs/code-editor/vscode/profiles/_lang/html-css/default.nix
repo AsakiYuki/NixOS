@@ -1,5 +1,5 @@
-{unstable, ...}: {
-  extensions = with unstable.vscode-extensions; [
+{unstable-pkgs, ...}: {
+  extensions = with unstable-pkgs.vscode-extensions; [
     ecmel.vscode-html-css
     formulahendry.auto-close-tag
     formulahendry.auto-rename-tag

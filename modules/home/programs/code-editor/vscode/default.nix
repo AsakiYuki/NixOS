@@ -1,15 +1,15 @@
-{unstable, ...}: let
+{unstable-pkgs, ...}: let
   argvSettings = {};
 in {
   imports = [./profiles];
 
   programs.vscode = {
     inherit argvSettings;
-    package = unstable.vscode;
+    package = unstable-pkgs.vscode;
   };
 
   programs.vscodium = {
     inherit argvSettings;
-    package = unstable.vscodium;
+    package = unstable-pkgs.vscodium;
   };
 }

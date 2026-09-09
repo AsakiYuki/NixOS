@@ -17,7 +17,7 @@ in
     nixosConfigurations = lib.mapAttrs (name: hostCfg: let
       sys = hostCfg.system or "x86_64-linux";
 
-      unstable = import inputs.unstablepkgs {
+      unstable-pkgs = import inputs.nixos-unstable {
         localSystem = sys;
         config.allowUnfree = true;
         overlays = [
@@ -27,7 +27,7 @@ in
 
       _lib = lib.extend (final: _:
         (import ../helpers {
-          inherit inputs self unstable;
+          inherit inputs self unstable-pkgs;
           lib = final;
         })
         // {
@@ -40,7 +40,7 @@ in
 
         specialArgs =
           {
-            inherit self inputs unstable;
+            inherit self inputs unstable-pkgs;
             lib = _lib;
           }
           // (hostCfg.specialArgs or {});

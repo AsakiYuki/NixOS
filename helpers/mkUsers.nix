@@ -1,7 +1,7 @@
 {
   lib,
   inputs,
-  unstable,
+  unstable-pkgs,
   ...
 }: osconfig: users:
 lib.mergeAttrsList (
@@ -23,7 +23,7 @@ lib.mergeAttrsList (
         _module.args = lib.mergeAttrs {
           inherit
             inputs
-            unstable
+            unstable-pkgs
             osconfig
             ;
         } (lib.attrByPath ["_module" "args"] {} home);

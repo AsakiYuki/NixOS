@@ -1,5 +1,4 @@
-{ unstable, ... }@inputs:
-{
+{unstable-pkgs, ...} @ inputs: {
   plugins = {
     nvim-tree = import ./nvimtree.nix inputs;
     lsp = import ./lsp.nix inputs;
@@ -11,7 +10,7 @@
 
     barbar = {
       enable = true;
-      package = unstable.vimPlugins.barbar-nvim;
+      package = unstable-pkgs.vimPlugins.barbar-nvim;
     };
 
     cmp = import ./cmp.nix inputs;
