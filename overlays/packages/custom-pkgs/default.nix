@@ -8,6 +8,7 @@
     lsfg-vk = ./lsfg-vk.nix;
     geforce-now-electron = ./gfn-electron.nix;
     opennow = ./opennow.nix;
+    zen-browser = ./zen-browser.nix;
   };
 in (lib.mapAttrs' (name: path: {
     inherit name;

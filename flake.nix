@@ -22,9 +22,6 @@
     lanzaboote.url = "github:nix-community/lanzaboote/v1.0.0";
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
 
-    zen-browser.url = "github:youwen5/zen-browser-flake";
-    zen-browser.inputs.nixpkgs.follows = "nixpkgs";
-
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
 

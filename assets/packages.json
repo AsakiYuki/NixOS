@@ -22,11 +22,18 @@
         "hash": "sha256-3TAo6St1XU6ZvrIrYF0tOs+N0gg8bJO7Uvcgityodww="
     },
     "gfn-electron": {
-        "version": "3.0.2",
-        "hash": "sha256-UpJrjR1aGkC+7Wh+aVF/SilkzS0eMywd297HOOvCCTA="
+        "version": "3.0.3",
+        "hash": "sha256-ZMwv0Ge5BrEPZWO3219Fb68ema11qmhvXqrmtq1WjdY="
     },
     "OpenNOW": {
         "version": "0.5.5",
         "hash": "sha256-iTWPhDPIpXPJjLl5And/IrAlFzM6pavD7xz3A0GhprY="
+    },
+    "zen-browser": {
+        "version": "1.22b",
+        "hash": {
+            "x86_64": "sha256-eNFhRJ7VzbLR6nfa/S5xxtFiwucwQHyeLuXvT9PSIu4=",
+            "aarch64": "sha256-blJ6npuGztLxXB/oE8Hb909DzrMClNMAKholxdf8TdA="
+        }
     }
 }

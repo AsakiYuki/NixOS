@@ -150,7 +150,7 @@ async function main() {
 			repository: "gfn-electron",
 			get_version: latest => latest.tag_name.slice(1),
 			new_version_found: async (cached, latest, version) => {
-				const file = latest.assets.find(({ name }) => `geforcenow-electron_${version}_linux.zip`)
+				const file = latest.assets.find(({ name }) => name === `geforcenow-electron_${version}_linux.zip`)
 				if (!file) {
 					console.warn(`[WARN] Asset 'geforcenow-electron_${version}_linux.zip' not found in release v${version}.`)
 					return false
@@ -180,6 +180,35 @@ async function main() {
 				descriptions.push(`opennow- v${version} - Hash: ${hash}`)
 
 				return { version, hash }
+			},
+		}),
+		fetchLastReleasePackage({
+			author: "zen-browser",
+			repository: "desktop",
+			package_name: "zen-browser",
+			new_version_found: async (cached, latest, version) => {
+				const files = latest.assets.filter(({ name }) => name.endsWith(".tar.xz"))
+
+				const x86_64 = files.find(({ name }) => name.includes("x86_64"))
+				const aarch64 = files.find(({ name }) => name.includes("aarch64"))
+
+				if (!aarch64 || !x86_64) {
+					console.warn(
+						`[WARN] Asset 'zen.linux-x86_64.tar.xz' or 'zen.linux-aarch64.tar.xz' not found in release v${version}.`,
+					)
+					return false
+				}
+
+				console.info(
+					`[INFO] Fetching url hash from:\n - x86_64:${x86_64.download_url}\n - aarch64: ${aarch64.download_url}`,
+				)
+
+				const [hash_x86_64, hash_aarch64] = await Promise.all([
+					fetchZipHash(x86_64.download_url),
+					fetchZipHash(aarch64.download_url),
+				])
+
+				return { version, hash: { x86_64: hash_x86_64, aarch64: hash_aarch64 } }
 			},
 		}),
 	])
