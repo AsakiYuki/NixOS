@@ -208,7 +208,7 @@ async function main() {
 					fetchZipHash(aarch64.download_url),
 				])
 
-				return { version, hash: { x86_64: hash_x86_64, aarch64: hash_aarch64 } }
+				return { version, hash: { "x86_64-linux": hash_x86_64, "aarch64-linux": hash_aarch64 } }
 			},
 		}),
 	])

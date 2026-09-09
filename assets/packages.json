@@ -1,39 +1,39 @@
 {
-    "bun-baseline": {
-        "version": "1.4.2",
-        "hash": "sha256-Nq85/hrOkT7M4VJ9Uc7Kr9e+uNx8unD4d30RzaQlYxc="
-    },
-    "cage-xtmapper": {
-        "release": "20260208",
-        "version-0.1.5": "sha256-ZmdltOQInGbCBpf/e8D2sB9Rjt4wqd8wwuSFvryHfFA=",
-        "version-0.2.0": "sha256-F1C3KnTzTO1vEouixqO1xnsGmufRyAk+BiRlypNq4kQ="
-    },
-    "cider-2": {
-        "version": "4.0.17",
-        "hash": "sha256-CanpS0yydWOkGKp/8SIVSJ7EavFUs9xBxUgmL9AUXJU="
-    },
-    "lsfg-vk": {
-        "version": "2.0.0",
-        "dev-version": "29",
-        "hash": "sha256-IT8GYis0Sbn1jIEH3vp9S0jaNQHrJ98HA1qG5MFngBk="
-    },
-    "geode-cli": {
-        "version": "3.9.0",
-        "hash": "sha256-3TAo6St1XU6ZvrIrYF0tOs+N0gg8bJO7Uvcgityodww="
-    },
-    "gfn-electron": {
-        "version": "3.0.3",
-        "hash": "sha256-ZMwv0Ge5BrEPZWO3219Fb68ema11qmhvXqrmtq1WjdY="
-    },
-    "OpenNOW": {
-        "version": "0.5.5",
-        "hash": "sha256-iTWPhDPIpXPJjLl5And/IrAlFzM6pavD7xz3A0GhprY="
-    },
-    "zen-browser": {
-        "version": "1.22b",
-        "hash": {
-            "x86_64": "sha256-eNFhRJ7VzbLR6nfa/S5xxtFiwucwQHyeLuXvT9PSIu4=",
-            "aarch64": "sha256-blJ6npuGztLxXB/oE8Hb909DzrMClNMAKholxdf8TdA="
-        }
-    }
+	"bun-baseline": {
+		"version": "1.4.2",
+		"hash": "sha256-Nq85/hrOkT7M4VJ9Uc7Kr9e+uNx8unD4d30RzaQlYxc="
+	},
+	"cage-xtmapper": {
+		"release": "20260208",
+		"version-0.1.5": "sha256-ZmdltOQInGbCBpf/e8D2sB9Rjt4wqd8wwuSFvryHfFA=",
+		"version-0.2.0": "sha256-F1C3KnTzTO1vEouixqO1xnsGmufRyAk+BiRlypNq4kQ="
+	},
+	"cider-2": {
+		"version": "4.0.17",
+		"hash": "sha256-CanpS0yydWOkGKp/8SIVSJ7EavFUs9xBxUgmL9AUXJU="
+	},
+	"lsfg-vk": {
+		"version": "2.0.0",
+		"dev-version": "29",
+		"hash": "sha256-IT8GYis0Sbn1jIEH3vp9S0jaNQHrJ98HA1qG5MFngBk="
+	},
+	"geode-cli": {
+		"version": "3.9.0",
+		"hash": "sha256-3TAo6St1XU6ZvrIrYF0tOs+N0gg8bJO7Uvcgityodww="
+	},
+	"gfn-electron": {
+		"version": "3.0.3",
+		"hash": "sha256-ZMwv0Ge5BrEPZWO3219Fb68ema11qmhvXqrmtq1WjdY="
+	},
+	"OpenNOW": {
+		"version": "0.5.5",
+		"hash": "sha256-iTWPhDPIpXPJjLl5And/IrAlFzM6pavD7xz3A0GhprY="
+	},
+	"zen-browser": {
+		"version": "1.22b",
+		"hash": {
+			"x86_64-linux": "sha256-eNFhRJ7VzbLR6nfa/S5xxtFiwucwQHyeLuXvT9PSIu4=",
+			"aarch64-linux": "sha256-blJ6npuGztLxXB/oE8Hb909DzrMClNMAKholxdf8TdA="
+		}
+	}
 }
