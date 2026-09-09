@@ -60,7 +60,6 @@
     mangohud.enable = true;
     osu.enable = true;
     lutris.enable = true;
-    proton-utils.enable = true;
     prismlauncher.enable = true;
 
     steam = {
