@@ -2,7 +2,6 @@
   imports = [
     ./hardware-configuration.nix
     ./network
-    ./programs
     ./security
     ./services
     ./systemd

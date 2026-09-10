@@ -24,7 +24,7 @@
       gd = [];
     });
 in {
-  programs = {
+  config.programs = {
     vscode.profiles = profiles config.programs.vscode.global;
     vscodium.profiles = profiles config.programs.vscodium.global;
   };
