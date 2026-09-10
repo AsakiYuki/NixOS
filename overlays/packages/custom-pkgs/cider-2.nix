@@ -1,17 +1,33 @@
 {
   pkgs,
   data,
+  get-arch,
   ...
 }: let
   inherit (data.cider-2) version hash;
+
+  inherit
+    (get-arch {
+      "x86_64-linux" = {
+        archHash = "amd64";
+        archUrl = "x64";
+      };
+      "aarch64-linux" = {
+        archHash = "arm64";
+        archUrl = "arm64";
+      };
+    } "Cider-2")
+    archHash
+    archUrl
+    ;
 in (
   with pkgs; (stdenv.mkDerivation rec {
     inherit version;
     pname = "cider-2";
 
     src = pkgs.fetchurl {
-      inherit hash;
-      url = "https://static.asakiyuki.com/packages/nixos/cider-v${version}-linux-x64.deb";
+      hash = hash.${archHash};
+      url = "https://repo.cider.sh/apt/pool/main/cider-v${version}-linux-${archUrl}.deb";
     };
 
     nativeBuildInputs = [

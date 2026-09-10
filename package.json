@@ -27,5 +27,8 @@
     "check-proton-update": "bun run scripts/update/proton.ts",
     "check-vscode-extensions-update": "bun run scripts/update/vscode-extensions.ts"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "cheerio": "^1.2.0"
+  }
 }

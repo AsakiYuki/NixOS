@@ -1,4 +1,5 @@
 import "dotenv/config"
+import * as cheerio from "cheerio"
 
 import path from "path"
 import fs from "fs/promises"
@@ -200,15 +201,17 @@ async function main() {
 				}
 
 				console.info(
-					`[INFO] Fetching url hash from:\n - x86_64:${x86_64.download_url}\n - aarch64: ${aarch64.download_url}`,
+					`[INFO] Fetching url hash from:\n - amd64:${x86_64.download_url}\n - arm64: ${aarch64.download_url}`,
 				)
 
-				const [hash_x86_64, hash_aarch64] = await Promise.all([
+				const [amd64, arm64] = await Promise.all([
 					fetchZipHash(x86_64.download_url),
 					fetchZipHash(aarch64.download_url),
 				])
 
-				return { version, hash: { "x86_64-linux": hash_x86_64, "aarch64-linux": hash_aarch64 } }
+				descriptions.push(`zen-browser v${version} - Hash: amd64: ${amd64} - arm64: ${arm64}`)
+
+				return { version, hash: { amd64, arm64 } }
 			},
 		}),
 		fetchLastReleasePackage({
@@ -231,14 +234,72 @@ async function main() {
 
 				console.info(`[INFO] Fetching url hash from:\n - amd64:${x86_64.download_url}\n - arm: ${aarch64.download_url}`)
 
-				const [hash_x86_64, hash_aarch64] = await Promise.all([
+				const [amd64, arm64] = await Promise.all([
 					fetchZipHash(x86_64.download_url),
 					fetchZipHash(aarch64.download_url),
 				])
 
-				return { version, hash: { "x86_64-linux": hash_x86_64, "aarch64-linux": hash_aarch64 } }
+				descriptions.push(`iris v${version} - Hash: x86_64: ${amd64} - arm64: ${arm64}`)
+
+				return { version, hash: { amd64, arm64 } }
 			},
 		}),
+		(async function () {
+			try {
+				console.log(`[INFO] Checking latest release for cider-2...`)
+
+				const compareVer = (a: string, b: string) =>
+					a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" })
+				const getUrl = (file: string) => `https://repo.cider.sh/apt/pool/main/${file}`
+
+				const html = await fetch("https://repo.cider.sh/apt/pool/main/").then(v => v.text())
+				const $ = cheerio.load(html)
+
+				const currentVersion = packages["cider-2"].version
+
+				const latest = {
+					x64: "",
+					arm64: "",
+				}
+
+				$('a[href$=".deb"]').each((_, el) => {
+					const href = $(el).attr("href")
+					if (!href) return
+
+					if (href.endsWith("-linux-x64.deb") && (!latest.x64 || compareVer(href, latest.x64) > 0)) latest.x64 = href
+					else if (href.endsWith("-linux-arm64.deb") && (!latest.arm64 || compareVer(href, latest.arm64) > 0))
+						latest.arm64 = href
+				})
+
+				const version = latest.x64.split("-")[1].slice(1)
+
+				if (currentVersion === version) {
+					console.info(`[SKIP] cider-2 is already up to date (v${version}).`)
+					return false
+				}
+
+				console.info(`[UPDATE] New version found for cider-2: v${currentVersion} -> v${version}`)
+
+				console.info(
+					`[INFO] Fetching url hash from:\n - amd64: https://repo.cider.sh/apt/pool/main/${latest.x64}\n - arm64: https://repo.cider.sh/apt/pool/main/${latest.arm64}`,
+				)
+
+				const [arm64, amd64] = await Promise.all([fetchUrlHash(getUrl(latest.x64)), fetchUrlHash(getUrl(latest.arm64))])
+
+				descriptions.push(`cider-2 v${version} - Hash: arm64: ${arm64} - arm64: ${amd64}`)
+
+				packages["cider-2"] = {
+					version,
+					hash: { arm64, amd64 },
+				}
+
+				console.info(`[SUCCESS] Updated cider-2 to v${version}`)
+				return true
+			} catch (error) {
+				console.warn(`[WARN] Could not fetch latest release for cider-2.`)
+				return false
+			}
+		})(),
 	])
 
 	if (!status.some(v => v)) return

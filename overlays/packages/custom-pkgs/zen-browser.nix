@@ -1,21 +1,26 @@
 {
   pkgs,
   data,
+  get-arch,
   config ? pkgs.config,
   ...
 }: let
   inherit (data) zen-browser;
 
-  inherit (pkgs.stdenv.hostPlatform) system;
-
-  archMap = {
-    "x86_64-linux" = "x86_64";
-    "aarch64-linux" = "aarch64";
-  };
-
-  targetArch =
-    archMap.${system}
-    or (throw "Unsupported system for zen-browser: ${system}");
+  inherit
+    (get-arch {
+      "x86_64-linux" = {
+        archHash = "amd64";
+        archUrl = "x86_64";
+      };
+      "aarch64-linux" = {
+        archHash = "arm64";
+        archUrl = "aarch64";
+      };
+    } "zen-browser")
+    archHash
+    archUrl
+    ;
 
   policies =
     ((config.zen or {}).policies or {})
@@ -47,8 +52,8 @@ in (pkgs.stdenv.mkDerivation (finalAttrs: rec {
   version = zen-browser.version;
 
   src = pkgs.fetchzip {
-    url = "https://github.com/zen-browser/desktop/releases/download/${version}/zen.linux-${targetArch}.tar.xz";
-    hash = zen-browser.hash.${system};
+    url = "https://github.com/zen-browser/desktop/releases/download/${version}/zen.linux-${archUrl}.tar.xz";
+    hash = zen-browser.hash.${archHash};
   };
 
   nativeBuildInputs = with pkgs; [

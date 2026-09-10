@@ -2,27 +2,21 @@
   pkgs,
   data,
   lib,
+  get-arch,
   ...
 }: let
   inherit (data) iris;
-
-  inherit (pkgs.stdenv.hostPlatform) system;
-
-  archMap = {
+  arch = get-arch {
     "x86_64-linux" = "amd64";
     "aarch64-linux" = "arm64";
-  };
-
-  targetArch =
-    archMap.${system}
-    or (throw "Unsupported system for iris: ${system}");
+  } "iris";
 in (pkgs.stdenv.mkDerivation rec {
   pname = "iris";
   version = iris.version;
 
   src = pkgs.fetchzip {
-    url = "https://github.com/versenilvis/IRIS/releases/download/v${version}/iris_linux_${targetArch}.tar.gz";
-    hash = iris.hash.${system};
+    url = "https://github.com/versenilvis/IRIS/releases/download/v${version}/iris_linux_${arch}.tar.gz";
+    hash = iris.hash.${arch};
   };
 
   dontBuild = true;
