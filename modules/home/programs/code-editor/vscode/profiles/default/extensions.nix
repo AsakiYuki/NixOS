@@ -22,8 +22,5 @@
     cardinal90.multi-cursor-case-preserve
     uctakeoff.vscode-counter
     ms-vscode.hexeditor
-
-    # Code status
-    wakatime.vscode-wakatime
   ];
 }
