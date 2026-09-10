@@ -3,15 +3,15 @@
   data,
   ...
 }: let
-  inherit (data) OpenNOW;
+  inherit (data) opennow;
 in
   pkgs.stdenv.mkDerivation rec {
     pname = "opennow";
-    version = OpenNOW.version;
+    version = opennow.version;
 
     src = pkgs.fetchurl {
-      url = "https://github.com/OpenCloudGaming/OpenNOW/releases/download/v${OpenNOW.version}/OpenNOW-v${OpenNOW.version}-linux-amd64.deb";
-      hash = OpenNOW.hash;
+      url = "https://github.com/OpenCloudGaming/OpenNOW/releases/download/v${opennow.version}/OpenNOW-v${opennow.version}-linux-amd64.deb";
+      hash = opennow.hash;
     };
 
     nativeBuildInputs = with pkgs; [

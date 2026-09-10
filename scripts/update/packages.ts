@@ -167,6 +167,7 @@ async function main() {
 		fetchLastReleasePackage({
 			author: "OpenCloudGaming",
 			repository: "OpenNOW",
+			package_name: "opennow",
 			get_version: latest => latest.tag_name.slice(1),
 			new_version_found: async (cached, latest, version) => {
 				const file = latest.assets.find(({ name }) => name === `OpenNOW-v${version}-linux-amd64.deb`)
