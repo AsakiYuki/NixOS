@@ -286,13 +286,13 @@ async function main() {
 					`[INFO] Fetching url hash from:\n - amd64: https://repo.cider.sh/apt/pool/main/${latest.x64}\n - arm64: https://repo.cider.sh/apt/pool/main/${latest.arm64}`,
 				)
 
-				const [arm64, amd64] = await Promise.all([fetchUrlHash(getUrl(latest.x64)), fetchUrlHash(getUrl(latest.arm64))])
+				const [amd64, arm64] = await Promise.all([fetchUrlHash(getUrl(latest.x64)), fetchUrlHash(getUrl(latest.arm64))])
 
 				descriptions.push(`cider-2 v${version} - Hash: arm64: ${arm64} - arm64: ${amd64}`)
 
 				packages["cider-2"] = {
 					version,
-					hash: { arm64, amd64 },
+					hash: { amd64, arm64 },
 				}
 
 				console.info(`[SUCCESS] Updated cider-2 to v${version}`)
