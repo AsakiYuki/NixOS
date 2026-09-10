@@ -17,6 +17,7 @@ in (pkgs.stdenv.mkDerivation rec {
   src = pkgs.fetchzip {
     url = "https://github.com/versenilvis/IRIS/releases/download/v${version}/iris_linux_${arch}.tar.gz";
     hash = iris.hash.${arch};
+    stripRoot = false;
   };
 
   dontBuild = true;
