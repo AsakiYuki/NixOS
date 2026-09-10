@@ -18,7 +18,7 @@
         ];
         extraConfig = ''
           <Directory "/home/PUBLIC">
-              Options -Indexes +FollowSymLinks
+              Options +FollowSymLinks
               AllowOverride None
               Require all granted
 
