@@ -44,8 +44,8 @@
         "hash": "sha256-YmZ1Szvcv3E3q8JVNV1OirXFdYI29a4mR3rnhJfUSMM="
     },
     "openai.chatgpt": {
-        "version": "26.5903.61454",
-        "hash": "sha256-oBk/wOt34f5nAqBR8JFRhYg5NZmYmHrHhi26W6xJ/AY="
+        "version": "26.5903.71938",
+        "hash": "sha256-AI9ejdZxc09/PbQzRVI9DG8fAd2Zscz5b65yxzG+Bu4="
     },
     "zokugun.cron-tasks": {
         "version": "0.2.1",
