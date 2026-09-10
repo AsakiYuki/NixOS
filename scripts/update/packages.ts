@@ -232,7 +232,9 @@ async function main() {
 					return false
 				}
 
-				console.info(`[INFO] Fetching url hash from:\n - amd64:${x86_64.download_url}\n - arm: ${aarch64.download_url}`)
+				console.info(
+					`[INFO] Fetching url hash from:\n - amd64:${x86_64.download_url}\n - arm64: ${aarch64.download_url}`,
+				)
 
 				const [amd64, arm64] = await Promise.all([
 					fetchZipHash(x86_64.download_url),
