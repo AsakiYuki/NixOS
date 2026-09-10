@@ -4,5 +4,6 @@
     ./kde
     ./bash.nix
     ./options.nix
+    ./vscode.nix
   ];
 }

@@ -6,23 +6,26 @@
   lib,
   ...
 }: let
-  mkProfile = path: {...}: {
-    imports = [./default] ++ path;
-    _module.args = {
-      inherit osconfig pkgs lib unstable-pkgs;
-      hmconfig = config;
-    };
-  };
+  profiles = globalconfig: (lib.mapAttrs' (name: path: {
+      inherit name;
+      value = {...}: (globalconfig
+        // {
+          imports = [./default] ++ path;
+          _module.args = {
+            inherit osconfig pkgs lib unstable-pkgs;
+            hmconfig = config;
+          };
+        });
+    }) {
+      default = [];
+      mcbe = [./minecraft/bedrock];
+      mcje = [./minecraft/java];
+      nix = [./nix];
+      gd = [];
+    });
 in {
-  programs = rec {
-    vscode.profiles = {
-      default = mkProfile [];
-      mcbe = mkProfile [./minecraft/bedrock];
-      mcje = mkProfile [./minecraft/java];
-      nix = mkProfile [./nix];
-      gd = mkProfile [./geometry-dash];
-    };
-
-    vscodium = vscode;
+  programs = {
+    vscode.profiles = profiles config.programs.vscode.global;
+    vscodium.profiles = profiles config.programs.vscodium.global;
   };
 }
