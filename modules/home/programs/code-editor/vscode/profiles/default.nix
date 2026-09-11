@@ -6,13 +6,13 @@
   lib,
   ...
 }: let
-  profiles = globalconfig: (lib.mapAttrs' (name: path: {
+  profiles = isCodium: globalconfig: (lib.mapAttrs' (name: path: {
       inherit name;
       value = {...}: (globalconfig
         // {
           imports = [./default] ++ path;
           _module.args = {
-            inherit osconfig pkgs lib unstable-pkgs;
+            inherit isCodium osconfig pkgs lib unstable-pkgs;
             hmconfig = config;
           };
         });
@@ -25,7 +25,7 @@
     });
 in {
   config.programs = {
-    vscode.profiles = profiles config.programs.vscode.global;
-    vscodium.profiles = profiles config.programs.vscodium.global;
+    vscode.profiles = profiles false config.programs.vscode.global;
+    vscodium.profiles = profiles true config.programs.vscodium.global;
   };
 }

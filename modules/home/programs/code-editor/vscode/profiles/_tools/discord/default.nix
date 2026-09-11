@@ -1,6 +1,13 @@
-{unstable-pkgs, ...}: {
+{
+  unstable-pkgs,
+  isCodium,
+  ...
+}: {
   userSettings = {
-    "vscord.app.name" = "VSCodium";
+    "vscord.app.name" =
+      if isCodium
+      then "VSCodium"
+      else "VSCode";
   };
 
   extensions = with unstable-pkgs.vscode-extensions; [
