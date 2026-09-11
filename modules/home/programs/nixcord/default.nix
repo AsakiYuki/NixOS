@@ -1,12 +1,14 @@
 {
   lib,
   osconfig,
+  unstable-pkgs,
   ...
 }: let
   cfg = osconfig.device.theme.catppuccin;
 in {
   programs.nixcord = {
     quickCss = lib.readRootFile "/assets/programs/discord/style.css";
+    discord.package = unstable-pkgs.discord;
     discord.vencord.enable = true;
 
     config = {
