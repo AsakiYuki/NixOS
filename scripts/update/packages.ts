@@ -247,6 +247,23 @@ async function main() {
 				return { version, hash: { amd64, arm64 } }
 			},
 		}),
+		fetchLastReleasePackage({
+			author: "Wyze3306",
+			repository: "BedrockOnLinux",
+			package_name: "bedrock-on-linux",
+			pre_release: false,
+			get_version: ({ tag_name }) => tag_name.slice(1),
+			new_version_found: async (cached, latest, version) => {
+				const file = latest.assets.find(({ name }) => name.endsWith(".rpm"))
+				if (!file) return false
+
+				console.info(`[INFO] Fetching zip hash from: ${file.download_url}`)
+				const hash = await fetchUrlHash(file.download_url)
+				descriptions.push(`bedrock-on-linux v${version} - Hash: ${hash}`)
+
+				return { version, hash }
+			},
+		}),
 		(async function () {
 			try {
 				console.log(`[INFO] Checking latest release for cider-2...`)
