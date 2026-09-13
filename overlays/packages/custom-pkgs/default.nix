@@ -8,6 +8,7 @@
     lsfg-vk = ./lsfg-vk.nix;
     geforce-now-electron = ./gfn-electron.nix;
     opennow = ./opennow.nix;
+    zen-browser-unwarpped = ./zen-browser-unwarpped.nix;
     zen-browser = ./zen-browser.nix;
     iris = ./iris.nix;
   };
