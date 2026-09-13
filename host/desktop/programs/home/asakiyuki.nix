@@ -61,6 +61,7 @@
     osu.enable = true;
     lutris.enable = true;
     prismlauncher.enable = true;
+    bedrock-on-linux.enable = true;
 
     steam = {
       protonPackages = with pkgs; [

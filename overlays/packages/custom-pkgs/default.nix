@@ -10,6 +10,7 @@
     opennow = ./opennow.nix;
     zen-browser-unwarpped = ./zen-browser-unwarpped.nix;
     zen-browser = ./zen-browser.nix;
+    bedrock-on-linux = ./bedrock-on-linux.nix;
     iris = ./iris.nix;
   };
 in (lib.mapAttrs' (name: path: {

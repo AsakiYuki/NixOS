@@ -47,6 +47,7 @@ in {
       (getPkg "cider")
       (getPkg "geforce-now")
       (getPkg "opennow")
+      (getPkg "bedrock-on-linux")
 
       (lib.mkIf cfg.jetbrains.idea.enable cfg.jetbrains.idea.package)
       (lib.mkIf cfg.jetbrains.datagrip.enable cfg.jetbrains.datagrip.package)
@@ -66,6 +67,7 @@ in {
       };
     };
 
+    bedrock-on-linux = mkOpt pkgs "bedrock-on-linux" {};
     scrcpy = mkOpt pkgs "scrcpy" {};
     slack = mkOpt pkgs "slack" {};
     notion = mkOpt pkgs "notion-app-enhanced" {name = "notion";};
