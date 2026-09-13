@@ -15,6 +15,7 @@
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
     millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
+    bedrock-on-linux.url = "github:Wyze3306/BedrockOnLinux";
 
     # Security
     agenix.url = "github:ryantm/agenix";
@@ -25,6 +26,7 @@
 
     # Follows
     millennium.inputs.nixpkgs.follows = "nixpkgs";
+    bedrock-on-linux.inputs.nixpkgs.follows = "nixpkgs";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
