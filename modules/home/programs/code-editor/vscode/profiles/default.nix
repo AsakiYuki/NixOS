@@ -6,13 +6,13 @@
   lib,
   ...
 }: let
-  profiles = isCodium: globalconfig: (lib.mapAttrs' (name: path: {
+  profiles = is-codium: globalconfig: (lib.mapAttrs' (name: path: {
       inherit name;
       value = {...}: (globalconfig
         // {
           imports = [./default] ++ path;
           _module.args = {
-            inherit isCodium osconfig pkgs lib unstable-pkgs;
+            inherit is-codium osconfig pkgs lib unstable-pkgs;
             hmconfig = config;
           };
         });
