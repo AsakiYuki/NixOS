@@ -22,7 +22,7 @@
       mcbe = [./minecraft/bedrock];
       mcje = [./minecraft/java];
       nix = [./nix];
-      gd = [];
+      gd = [./geometry-dash];
     });
 in {
   config.programs = {
