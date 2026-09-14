@@ -18,6 +18,7 @@
         });
     }) {
       default = [];
+      node = [./node];
       mcbe = [./minecraft/bedrock];
       mcje = [./minecraft/java];
       nix = [./nix];
