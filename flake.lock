@@ -382,11 +382,11 @@
         "systems": "systems_2"
       },
       "locked": {
-        "lastModified": 1789186457,
-        "narHash": "sha256-K0ET+ydDFWxUrn6IpYsDmPc7v18wM3ren/iaUM2Aidk=",
+        "lastModified": 1789360421,
+        "narHash": "sha256-w3BTWJmfkrLKrrG5FS4LPElLoRmmRoWttWwjJUlpoGA=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "055bab29a0bf539092407ae65bd5e9f299394ddb",
+        "rev": "72a02f71884c54d6123261fd420b1f7d068ee3e7",
         "type": "github"
       },
       "original": {
@@ -404,11 +404,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1789288898,
-        "narHash": "sha256-6bMO4bJzMqoyDM/vMx7ZECdjvj3V1DR1JlYYVUArT3k=",
+        "lastModified": 1789354461,
+        "narHash": "sha256-TFiDKl4jW6hnH7/Ptxh4IcB9PdEq00yTyRt5hviunTY=",
         "owner": "FlameFlag",
         "repo": "nixcord",
-        "rev": "ddf1cc35c235a2e7103c942eafacdcb96b65d2d0",
+        "rev": "56efb34bedac3f55c4b37ff5b980dfa40b78e37c",
         "type": "github"
       },
       "original": {
