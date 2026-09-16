@@ -44,10 +44,10 @@
         }
     },
     "zen-browser": {
-        "version": "1.22.1b",
+        "version": "1.22.2b",
         "hash": {
-            "amd64": "sha256-FHjYQbFVLQluZJWIQS0F1PLWL2sMMtX7TB8qJYNZHs0=",
-            "arm64": "sha256-EGxDtHi4ayzGeOiG0Tyike+eJfTubHCmL4TgyIp2b6s="
+            "amd64": "sha256-dxXKvA0w7S4uJv9Sk7ONwymVOTcwmDG4BLzT5okAgZM=",
+            "arm64": "sha256-s0yKVpFQNMPjBXo2uSiTHySZ2uOk0fdXq3EKZ8vVlLw="
         }
     }
 }
