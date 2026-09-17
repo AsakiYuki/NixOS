@@ -35,6 +35,15 @@
     state-version = "26.05";
     root = path: ./. + path;
 
+    home-manager = {inputs, ...}@args: {
+      homeConfigurations."asakiyuki@Macbook-Air-M5" = inputs.home-manager.lib.homeManagerConfiguration {
+        pkgs = inputs.nixpkgs.legacyPackages."aarch64-darwin";
+        modules = [
+          (root "/host/macos")
+        ];
+      };
+    };
+
     nixos = {inputs, ...} @ args: (import ./helpers/nixosConfigurations.nix args {
       ideapad-slim-5 = {
         modules = [
@@ -90,5 +99,8 @@
       inherit inputs self state-version lib;
     })
     (devShell inputs)
+    (home-manager {
+      inherit inputs self state-version lib;
+    })
   ]);
 }
