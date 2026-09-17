@@ -5,5 +5,6 @@
     gamescope.enable = true;
 
     kde-packages.enable = true;
+    python.enable = true;
   };
 }
