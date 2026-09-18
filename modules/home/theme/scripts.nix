@@ -1,10 +1,10 @@
 {
   pkgs,
   lib,
-  osconfig,
+  config,
   ...
 }: let
-  cfg = osconfig.device.theme.catppuccin;
+  cfg = config.theme.catppuccin;
 
   catppuccin-gtk = pkgs.catppuccin-gtk.override {
     variant = cfg.flavour;

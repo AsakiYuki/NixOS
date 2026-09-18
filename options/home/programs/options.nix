@@ -2,7 +2,6 @@
   lib,
   pkgs,
   config,
-  osconfig,
   ...
 }: let
   cfg = config.programs;
@@ -109,7 +108,7 @@ in {
     };
 
     catppuccin = let
-      cfg = osconfig.device.theme.catppuccin;
+      cfg = config.theme.catppuccin;
     in {
       enable = lib.mkEnableOption "catppuccin";
       package = lib.mkOption {

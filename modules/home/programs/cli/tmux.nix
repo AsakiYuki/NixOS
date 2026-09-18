@@ -1,10 +1,10 @@
 {
   pkgs,
-  osconfig,
+  config,
   lib,
   ...
 }: let
-  cfg = osconfig.device.theme.catppuccin;
+  cfg = config.theme.catppuccin;
   colors = lib.catppuccin.${cfg.flavour};
   accent = colors.${cfg.accent};
 

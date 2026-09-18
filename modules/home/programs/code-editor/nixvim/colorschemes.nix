@@ -1,5 +1,5 @@
-{osconfig, ...}: let
-  cfg = osconfig.device.theme.catppuccin;
+{hmconfig, ...}: let
+  cfg = hmconfig.theme.catppuccin;
   flavour = cfg.flavour;
 in {
   colorschemes.catppuccin = {

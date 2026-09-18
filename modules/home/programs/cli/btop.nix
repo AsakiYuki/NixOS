@@ -1,12 +1,11 @@
 {
   lib,
   config,
-  osconfig,
   ...
 }:
 lib.mkIf config.programs.btop.enable {
   programs.btop = let
-    cfg = osconfig.device.theme.catppuccin;
+    cfg = config.theme.catppuccin;
     flavour = cfg.flavour;
     colors = lib.catppuccin.${flavour};
   in {

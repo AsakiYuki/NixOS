@@ -1,10 +1,10 @@
 {
   unstable-pkgs,
-  osconfig,
+  hmconfig,
   lib,
   ...
 }: let
-  cfg = osconfig.device.theme.catppuccin;
+  cfg = hmconfig.theme.catppuccin;
   name = "${lib.toUpper (builtins.substring 0 1 cfg.flavour)}${builtins.substring 1 (-1) cfg.flavour}";
   accent = cfg.accent;
 in {

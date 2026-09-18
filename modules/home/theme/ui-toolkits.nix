@@ -1,10 +1,11 @@
 {
   osconfig,
+  config,
   lib,
   pkgs,
   ...
 }: let
-  cfg = osconfig.device.theme.catppuccin;
+  cfg = config.theme.catppuccin;
 in {
   # QT
   qt = {

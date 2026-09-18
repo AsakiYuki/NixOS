@@ -1,10 +1,14 @@
 {
   unstable-pkgs,
   osconfig,
+  config,
   ...
 }: {
   programs.nixvim = {
-    _module.args = {inherit unstable-pkgs osconfig;};
+    _module.args = {
+      inherit unstable-pkgs osconfig;
+      hmconfig = config;
+    };
 
     imports = [
       ./keymaps

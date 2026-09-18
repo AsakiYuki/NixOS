@@ -1,9 +1,9 @@
 {
-  osconfig,
+  config,
   lib,
   ...
 }: let
-  cfg = osconfig.device.theme.catppuccin;
+  cfg = config.theme.catppuccin;
   flavour = cfg.flavour;
   colors = lib.catppuccin.${flavour};
 in {

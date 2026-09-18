@@ -1,10 +1,10 @@
 {
   pkgs,
-  osconfig,
+  config,
   lib,
   ...
 }: let
-  cfg = osconfig.device.theme.catppuccin;
+  cfg = config.theme.catppuccin;
   name = "${lib.toUpper (builtins.substring 0 1 cfg.flavour)}${builtins.substring 1 (-1) cfg.flavour}";
 in {
   files = {

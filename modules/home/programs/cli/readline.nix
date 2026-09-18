@@ -1,6 +1,6 @@
 {
   lib,
-  osconfig,
+  config,
   ...
 }: let
   hexColor = hex: let
@@ -10,7 +10,7 @@
     b = lib.hexToDec (builtins.substring 4 2 cleanHex);
   in "\\1\\e[38;2;${toString r};${toString g};${toString b}m\\2";
 
-  cfg = osconfig.device.theme.catppuccin;
+  cfg = config.theme.catppuccin;
   colors = lib.catppuccin.${cfg.flavour};
   accent = colors.${cfg.accent};
   accent-2 = colors.${cfg.accent-2};

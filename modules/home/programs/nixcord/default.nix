@@ -1,10 +1,10 @@
 {
   lib,
-  osconfig,
+  config,
   unstable-pkgs,
   ...
 }: let
-  cfg = osconfig.device.theme.catppuccin;
+  cfg = config.theme.catppuccin;
 in {
   programs.nixcord = {
     quickCss = lib.readRootFile "/assets/programs/discord/style.css";

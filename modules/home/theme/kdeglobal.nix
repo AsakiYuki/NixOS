@@ -6,7 +6,7 @@
   ...
 }: {
   programs.kde.kdeglobals = let
-    cfg = osconfig.device.theme.catppuccin;
+    cfg = config.theme.catppuccin;
     flavour = "${lib.toUpper (builtins.substring 0 1 cfg.flavour)}${builtins.substring 1 (-1) cfg.flavour}";
     accent = "${lib.toUpper (builtins.substring 0 1 cfg.accent)}${builtins.substring 1 (-1) cfg.accent}";
 
