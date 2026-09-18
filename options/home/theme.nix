@@ -1,0 +1,27 @@
+{
+  osconfig ? {},
+  lib,
+  ...
+}: let
+  catppuccin = lib.attrByPath ["device" "theme" "catppuccin"] {} osconfig;
+in {
+  options.theme = {
+    catppuccin = {
+      flavour = lib.mkOption {
+        type = lib.types.enum (lib.attrNames lib.catppuccin);
+        default = catppuccin.flavour ? "mocha";
+        description = "catppuccin flavour colors";
+      };
+      accent = lib.mkOption {
+        type = lib.types.enum ["rosewater" "flamingo" "pink" "mauve" "red" "maroon" "peach" "yellow" "green" "teal" "sky" "sapphire" "blue" "lavender"];
+        default = catppuccin.accent ? "pink";
+        description = "catppuccin accent color";
+      };
+      accent-2 = lib.mkOption {
+        type = lib.types.enum ["rosewater" "flamingo" "pink" "mauve" "red" "maroon" "peach" "yellow" "green" "teal" "sky" "sapphire" "blue" "lavender"];
+        default = catppuccin.accent-2 ? "mauve";
+        description = "catppuccin accent color";
+      };
+    };
+  };
+}

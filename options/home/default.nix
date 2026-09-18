@@ -5,5 +5,6 @@
     ./cursors.nix
     ./steam.nix
     ./files.nix
+    ./theme.nix
   ];
 }
