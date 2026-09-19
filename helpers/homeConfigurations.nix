@@ -2,6 +2,7 @@
   lib,
   inputs,
   self,
+  state-version,
   ...
 } @ args: hosts: {
   homeConfigurations = args.lib.mapAttrs (host: hostCfg: let
@@ -51,7 +52,8 @@
         config.allowUnfreePredicate = _: true;
       };
       extraSpecialArgs = {
-        inherit self inputs unstable-pkgs;
+        inherit self inputs unstable-pkgs state-version;
+        flake-name = host;
         is-home-configurations = true;
         osconfig = {};
       };
