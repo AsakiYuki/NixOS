@@ -28,6 +28,8 @@
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    agenix.inputs.nixpkgs.follows = "nixpkgs";
+    agenix.inputs.home-manager.follows = "home-manager";
   };
 
   outputs = {...} @ inputs: let
@@ -35,14 +37,10 @@
     state-version = "26.05";
     root = path: ./. + path;
 
-    home-manager = {inputs, ...}@args: {
-      homeConfigurations."asakiyuki@Macbook-Air-M5" = inputs.home-manager.lib.homeManagerConfiguration {
-        pkgs = inputs.nixpkgs.legacyPackages."aarch64-darwin";
-        modules = [
-          (root "/host/macos")
-        ];
-      };
-    };
+    home-manager = {inputs, ...} @ args: (import ./helpers/homeConfigurations.nix args {
+      asakiyuki.Macbook-Air-M5 = {};
+      "asakiyuki@Macbook-Air-M5" = {};
+    });
 
     nixos = {inputs, ...} @ args: (import ./helpers/nixosConfigurations.nix args {
       ideapad-slim-5 = {
