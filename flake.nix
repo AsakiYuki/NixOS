@@ -37,72 +37,12 @@
     state-version = "26.05";
     root = path: ./. + path;
 
-    home = {inputs, ...} @ args: (import ./helpers/homeConfigurations.nix args {
-      "asakiyuki@Macbook-Air-M5" = {
-        pkgs = inputs.nixpkgs.legacyPackages."aarch64-darwin";
-        modules = [
-          (root "/host/macos")
-        ];
-      };
-    });
-
-    nixos = {inputs, ...} @ args: (import ./helpers/nixosConfigurations.nix args {
-      ideapad-slim-5 = {
-        modules = [
-          inputs.nixos-hardware.nixosModules.lenovo-ideapad-slim-5
-          inputs.lanzaboote.nixosModules.lanzaboote
-          (root "/devices/ideapad-slim-5/configuration.nix")
-        ];
-      };
-      msi-sayu = {
-        modules = [
-          (root "/devices/msi-sayu/configuration.nix")
-        ];
-      };
-      home-server = {
-        modules = [
-          (root "/devices/home-server/configuration.nix")
-        ];
-      };
-      wsl = {
-        modules = [
-          inputs.nixos-wsl.nixosModules.default
-          (root "/devices/wsl/configuration.nix")
-        ];
-      };
-    });
-
-    devShell = {...} @ args: (import ./helpers/devShells.nix args {
-      default = {
-        overlays = import ./overlays/inputs-overlays.nix inputs;
-        shell = {pkgs, ...}: {
-          buildInputs = with pkgs; [
-            bun
-            vsce
-          ];
-
-          shellHook = ''
-            echo "Welcome to NixOS DevShell!"
-
-            if [ -e .env ]; then
-              source .env
-            fi
-
-            export NIX_CONFIG="access-tokens = github.com=''${GH_TOKEN}"
-
-            alias repl="nix repl ."
-            alias agenix="./agenix.sh"
-          '';
-        };
-      };
-    });
-
     args = {
-      inherit inputs self state-version lib;
+      inherit inputs self state-version lib root;
     };
   in (lib.mergeAttrsList [
-    (nixos args)
-    (home args)
-    (devShell inputs)
+    (import ./configs/nixos.nix args)
+    (import ./configs/home.nix args)
+    (import ./configs/dev.nix args)
   ]);
 }
