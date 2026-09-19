@@ -33,6 +33,7 @@
       [
         ../options/home
         ../modules/home
+        ../modules/home-default.nix
         ../overlays
         inputs.nixvim.homeModules.nixvim
         inputs.nixcord.homeModules.nixcord
