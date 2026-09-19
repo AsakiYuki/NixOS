@@ -37,7 +37,7 @@
     state-version = "26.05";
     root = path: ./. + path;
 
-    home-manager = {inputs, ...} @ args: (import ./helpers/homeConfigurations.nix args {
+    home = {inputs, ...} @ args: (import ./helpers/homeConfigurations.nix args {
       "asakiyuki@Macbook-Air-M5" = {
         pkgs = inputs.nixpkgs.legacyPackages."aarch64-darwin";
         modules = [
@@ -96,13 +96,13 @@
         };
       };
     });
+
+    args = {
+      inherit inputs self state-version lib;
+    };
   in (lib.mergeAttrsList [
-    (nixos {
-      inherit inputs self state-version lib;
-    })
+    (nixos args)
+    (home args)
     (devShell inputs)
-    (home-manager {
-      inherit inputs self state-version lib;
-    })
   ]);
 }
