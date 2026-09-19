@@ -26,6 +26,7 @@ lib.mergeAttrsList (
             unstable-pkgs
             osconfig
             ;
+          is-home-configurations = false;
         } (lib.attrByPath ["_module" "args"] {} home);
 
         imports = lib.concatLists [

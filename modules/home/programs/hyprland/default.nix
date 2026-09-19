@@ -7,7 +7,7 @@
     ./settings
   ];
 
-  wayland.windowManager.hyprland = lib.mkIf osconfig.device.wm.hyprland.enable {
+  wayland.windowManager.hyprland = lib.mkIf (lib.attrByPath ["device" "wm" "hyprland" "enable"] false osconfig) {
     enable = true;
     xwayland.enable = true;
   };

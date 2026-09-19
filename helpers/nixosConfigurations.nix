@@ -3,6 +3,7 @@
   self,
   state-version,
   lib,
+  ...
 }: cfg: let
   nixosModules = name: inputs.${name}.nixosModules.default;
 
@@ -41,6 +42,7 @@ in {
         {
           inherit self inputs unstable-pkgs;
           lib = _lib;
+          is-home-configurations = false;
         }
         // (hostCfg.specialArgs or {});
 

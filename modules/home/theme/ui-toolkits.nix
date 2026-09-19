@@ -1,4 +1,5 @@
 {
+  is-home-configurations,
   osconfig ? {},
   config,
   lib,
@@ -9,7 +10,7 @@
 in {
   # QT
   qt = {
-    enable = true;
+    enable = !is-home-configurations;
     platformTheme.name =
       if (lib.attrByPath ["device" "de" "kdePlasma" "enable"] false osconfig)
       then "kde"
@@ -25,7 +26,7 @@ in {
 
   # GTK
   gtk = {
-    enable = true;
+    enable = !is-home-configurations;
     theme.name = "catppuccin-${cfg.flavour}-${cfg.accent}-compact";
     gtk3.extraConfig.gtk-application-prefer-dark-theme = 1;
     gtk4.extraConfig.gtk-application-prefer-dark-theme = 1;

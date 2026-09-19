@@ -3,7 +3,7 @@
   config,
   ...
 }: {
-  services = lib.mkIf config.device.de.kdePlasma.enable {
+  services = lib.mkIf (lib.attrByPath ["device" "de" "kdePlasma" "enable"] false config) {
     desktopManager.plasma6.enable = true;
     xserver.enable = true;
   };

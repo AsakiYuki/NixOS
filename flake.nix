@@ -38,8 +38,12 @@
     root = path: ./. + path;
 
     home-manager = {inputs, ...} @ args: (import ./helpers/homeConfigurations.nix args {
-      asakiyuki.Macbook-Air-M5 = {};
-      "asakiyuki@Macbook-Air-M5" = {};
+      "asakiyuki@Macbook-Air-M5" = {
+        pkgs = inputs.nixpkgs.legacyPackages."aarch64-darwin";
+        modules = [
+          (root "/host/macos")
+        ];
+      };
     });
 
     nixos = {inputs, ...} @ args: (import ./helpers/nixosConfigurations.nix args {

@@ -1,12 +1,56 @@
-{...}: hosts: {
-  homeConfigurations = {};
-}
-# {
-#   homeConfigurations."asakiyuki@Macbook-Air-M5" = inputs.home-manager.lib.homeManagerConfiguration {
-#     pkgs = inputs.nixpkgs.legacyPackages."aarch64-darwin";
-#     modules = [
-#       (root "/host/macos")
-#     ];
-#   };
-# };
+args: hosts: {
+  homeConfigurations = args.lib.mapAttrs (host: hostCfg: let
+    inherit (args) lib inputs self;
+    inherit (hostCfg) pkgs modules;
 
+    system = pkgs.stdenv.hostPlatform.system;
+
+    unstable-pkgs = import inputs.nixos-unstable {
+      localSystem = system;
+      config.allowUnfree = true;
+      overlays = [
+        (_: p: import ../overlays/packages p)
+      ];
+    };
+
+    customLib = lib.extend (
+      final: _:
+        (import ../helpers (args
+          // {
+            inherit unstable-pkgs;
+            lib = final;
+          }))
+        // {
+          flake-name = host;
+        }
+    );
+
+    defaultModules =
+      [
+        ../options/home
+        ../modules/home
+        ../overlays
+        inputs.nixvim.homeModules.nixvim
+        inputs.nixcord.homeModules.nixcord
+        inputs.agenix.homeManagerModules.default
+      ]
+      ++ lib.optionals pkgs.stdenv.isLinux [
+        inputs.chaotic.homeModules.default
+      ];
+  in
+    inputs.home-manager.lib.homeManagerConfiguration {
+      lib = customLib;
+      pkgs = import inputs.nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+        config.allowUnfreePredicate = _: true;
+      };
+      extraSpecialArgs = {
+        inherit self inputs unstable-pkgs;
+        is-home-configurations = true;
+        osconfig = {};
+      };
+      modules = defaultModules ++ modules;
+    })
+  hosts;
+}
