@@ -1,5 +1,5 @@
 {
-  osconfig,
+  osconfig ? {},
   config,
   lib,
   ...

@@ -1,12 +1,13 @@
 {
   lib,
   hmconfig,
-  osconfig,
+  osconfig ? {},
   ...
 }: {
   services-menu.open-here = lib.mergeAttrsList (
     let
       cfg = hmconfig.programs;
+      kdeEnable = lib.attrByPath ["device" "de" "kdePlasma" "enable"] false osconfig;
     in [
       {
         "Desktop Entry" = {
@@ -18,7 +19,7 @@
           Actions = lib.join ";" [
             (lib.optionalString cfg.vscode.enable "RunCodeDir")
             (lib.optionalString (cfg.vscodium.enable) "RunCodeDir")
-            (lib.optionalString (cfg.ghostty.enable && (!osconfig.device.de.kdePlasma.enable)) "RunGhosttyDir")
+            (lib.optionalString (cfg.ghostty.enable && (!kdeEnable)) "RunGhosttyDir")
             (lib.optionalString cfg.nixvim.enable "RunNvimDir")
             (lib.optionalString cfg.antigravity.enable "RunAntigravityDir")
             (lib.optionalString (cfg.zed-editor.enable) "RunZedDir")
@@ -42,7 +43,7 @@
         };
       })
 
-      (lib.optionalAttrs (cfg.ghostty.enable && (!osconfig.device.de.kdePlasma.enable)) {
+      (lib.optionalAttrs (cfg.ghostty.enable && (!kdeEnable)) {
         "Desktop Action RunGhosttyDir" = {
           Name = "Open Ghostty here";
           Icon = "com.mitchellh.ghostty";

@@ -3,8 +3,7 @@
   lib,
   ...
 }: let
-  t = lib.attrByPath ["device" "theme" "catppuccin"] {} osconfig;
-  catppuccin = builtins.trace (builtins.toJSON t) t;
+  catppuccin = lib.attrByPath ["device" "theme" "catppuccin"] {} osconfig;
 in {
   options.theme = {
     catppuccin = {

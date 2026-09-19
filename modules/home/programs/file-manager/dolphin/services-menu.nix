@@ -1,7 +1,7 @@
 {
   pkgs,
   config,
-  osconfig,
+  osconfig ? {},
   ...
 }: {
   programs.dolphin = {...}: {

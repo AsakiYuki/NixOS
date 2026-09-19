@@ -1,6 +1,6 @@
 {
   unstable-pkgs,
-  osconfig,
+  osconfig ? {},
   config,
   ...
 }: {

@@ -1,7 +1,7 @@
 {
   lib,
   pkgs,
-  osconfig,
+  osconfig ? {},
   config,
   ...
 }: {

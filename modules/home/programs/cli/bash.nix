@@ -1,7 +1,7 @@
 {
   lib,
   config,
-  osconfig,
+  osconfig ? {},
   ...
 }: {
   programs.bash = {
@@ -32,7 +32,7 @@
           flake-upgrade = "nix flake update";
         }
         (attOpt config.programs.superfile.enable "spf" "superfile")
-        (attOpt osconfig.virtualisation.waydroid.enable "wss" "waydroid session stop; exit;")
+        (attOpt (lib.attrByPath ["virtualisation" "waydroid" "enable"] false osconfig) "wss" "waydroid session stop; exit;")
       ]
     );
 
