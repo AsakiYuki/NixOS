@@ -1,6 +1,10 @@
-args: hosts: {
+{
+  lib,
+  inputs,
+  self,
+  ...
+} @ args: hosts: {
   homeConfigurations = args.lib.mapAttrs (host: hostCfg: let
-    inherit (args) lib inputs self;
     inherit (hostCfg) pkgs modules;
 
     system = pkgs.stdenv.hostPlatform.system;
