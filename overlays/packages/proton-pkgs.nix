@@ -3,7 +3,7 @@
   lib,
   ...
 }: let
-  proton-data = lib.importJSON ../../../assets/proton.json;
+  proton-data = lib.importJSON ../../assets/proton.json;
 
   mkProtonPackage = {
     pname,
