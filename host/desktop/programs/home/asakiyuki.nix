@@ -66,6 +66,7 @@
     steam = {
       protonPackages = with pkgs; [
         cachyos-proton-latest
+        wineland-proton-latest
         dw-proton-latest
         ge-proton-latest
       ];
