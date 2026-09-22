@@ -1,84 +1,84 @@
 {
-    "ge-proton": {
-        "latest": "11-7",
-        "source_name": "GE-Proton11-7-x86_64",
-        "override_name": "ge-proton-latest",
-        "releases": {
-            "11-5": {
-                "url": "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton11-5/GE-Proton11-5-x86_64.tar.gz",
-                "hash": "sha256-Sbyi5zXMhPIKSotvL5LEZ2dbDoLpXRcCyuY9TsnBnus="
-            },
-            "11-6": {
-                "url": "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton11-6/GE-Proton11-6-x86_64.tar.gz",
-                "hash": "sha256-rX27DUrrrHtR1cgyr/424m9JPjrdASIisVGv2vWzMAs="
-            },
-            "11-7": {
-                "url": "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton11-7/GE-Proton11-7-x86_64.tar.gz",
-                "hash": "sha256-ftW0vE45v2JsbaYqo/So0ZFfvdtakHX0XEXEE4TdxLk="
-            }
-        }
-    },
-    "cachyos-proton": {
-        "latest": "11-0_20260703",
-        "source_name": "proton-cachyos-11.0-20260703-slr-x86_64",
-        "override_name": "proton-cachyos-latest",
-        "releases": {
-            "11-0_20260703": {
-                "url": "https://github.com/CachyOS/proton-cachyos/releases/download/cachyos-11.0-20260703-slr/proton-cachyos-11.0-20260703-slr-x86_64.tar.xz",
-                "hash": "sha256-jOcPeEkBBPPNqyjXBoHm1Nk8AexPiLhx5+385NjUPT0="
-            }
-        }
-    },
-    "cachyos-proton-v3": {
-        "latest": "11-0_20260703",
-        "source_name": "proton-cachyos-11.0-20260703-slr-x86_64_v3",
-        "overried_name": "proton-cachyos-v3-latest",
-        "releases": {
-            "11-0_20260703": {
-                "url": "https://github.com/CachyOS/proton-cachyos/releases/download/cachyos-11.0-20260703-slr/proton-cachyos-11.0-20260703-slr-x86_64_v3.tar.xz",
-                "hash": "sha256-8Y7orUvnFOG0zSqCrMyvmclmy3JInj7d8A2h0Y7RwhE="
-            }
-        }
-    },
-    "wineland-proton": {
-        "latest": "11-0_20260917",
-        "source_name": "proton-wineland-11.0-20260917-x86_64",
-        "override_name": "proton-wineland-latest",
-        "releases": {
-            "11-0_20260917": {
-                "url": "https://github.com/nanomatters/proton-cachyos/releases/download/wineland-11.0-20260917/proton-wineland-11.0-20260917-x86_64.tar.xz",
-                "hash": "sha256-eiZ8Vx0ftT6hhfFIooEH23WOJFdJ4Qh0zLudqkSIQ4Q="
-            }
-        }
-    },
-    "wineland-proton-v3": {
-        "latest": "11-0_20260917",
-        "source_name": "proton-wineland-11.0-20260917-x86_64_v3",
-        "overried_name": "proton-wineland-v3-latest",
-        "releases": {
-            "11-0_20260917": {
-                "url": "https://github.com/nanomatters/proton-cachyos/releases/download/wineland-11.0-20260917/proton-wineland-11.0-20260917-x86_64_v3.tar.xz",
-                "hash": "sha256-Y+OSSCBNaH0g1lrx9SsDIfwVslgnBV9aiaQOHn/0NB4="
-            }
-        }
-    },
-    "dw-proton": {
-        "latest": "11-0_13",
-        "source_name": "dwproton-11.0-13-x86_64",
-        "override_name": "dwproton-latest",
-        "releases": {
-            "11-0_11": {
-                "url": "https://dawn.wine/dawn-winery/dwproton/releases/download/dwproton-11.0-11/dwproton-11.0-11-x86_64.tar.xz",
-                "hash": "sha256-p1x1UAuXLG0MpYcyrssudKwpCRlKAPPxrv7UFyPe2lI="
-            },
-            "11-0_12": {
-                "url": "https://dawn.wine/dawn-winery/dwproton/releases/download/dwproton-11.0-12/dwproton-11.0-12-x86_64.tar.xz",
-                "hash": "sha256-NGyrXQcA+k87SnowFd41uq49luI32fZENTwFTma7NpI="
-            },
-            "11-0_13": {
-                "url": "https://dawn.wine/dawn-winery/dwproton/releases/download/dwproton-11.0-13/dwproton-11.0-13-x86_64.tar.xz",
-                "hash": "sha256-INbvpKk01gMyt72Z2jlJvov5k4LZztpFuiYgVkGBc1I="
-            }
-        }
-    }
+	"ge-proton": {
+		"latest": "11-7",
+		"source_name": "GE-Proton11-7-x86_64",
+		"override_name": "ge-proton-latest",
+		"releases": {
+			"11-5": {
+				"url": "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton11-5/GE-Proton11-5-x86_64.tar.gz",
+				"hash": "sha256-Sbyi5zXMhPIKSotvL5LEZ2dbDoLpXRcCyuY9TsnBnus="
+			},
+			"11-6": {
+				"url": "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton11-6/GE-Proton11-6-x86_64.tar.gz",
+				"hash": "sha256-rX27DUrrrHtR1cgyr/424m9JPjrdASIisVGv2vWzMAs="
+			},
+			"11-7": {
+				"url": "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton11-7/GE-Proton11-7-x86_64.tar.gz",
+				"hash": "sha256-ftW0vE45v2JsbaYqo/So0ZFfvdtakHX0XEXEE4TdxLk="
+			}
+		}
+	},
+	"cachyos-proton": {
+		"latest": "11-0_20260703",
+		"source_name": "proton-cachyos-11.0-20260703-slr-x86_64",
+		"override_name": "proton-cachyos-latest",
+		"releases": {
+			"11-0_20260703": {
+				"url": "https://github.com/CachyOS/proton-cachyos/releases/download/cachyos-11.0-20260703-slr/proton-cachyos-11.0-20260703-slr-x86_64.tar.xz",
+				"hash": "sha256-jOcPeEkBBPPNqyjXBoHm1Nk8AexPiLhx5+385NjUPT0="
+			}
+		}
+	},
+	"cachyos-proton-v3": {
+		"latest": "11-0_20260703",
+		"source_name": "proton-cachyos-11.0-20260703-slr-x86_64_v3",
+		"override_name": "proton-cachyos-v3-latest",
+		"releases": {
+			"11-0_20260703": {
+				"url": "https://github.com/CachyOS/proton-cachyos/releases/download/cachyos-11.0-20260703-slr/proton-cachyos-11.0-20260703-slr-x86_64_v3.tar.xz",
+				"hash": "sha256-8Y7orUvnFOG0zSqCrMyvmclmy3JInj7d8A2h0Y7RwhE="
+			}
+		}
+	},
+	"wineland-proton": {
+		"latest": "11-0_20260917",
+		"source_name": "proton-wineland-11.0-20260917-x86_64",
+		"override_name": "proton-wineland-latest",
+		"releases": {
+			"11-0_20260917": {
+				"url": "https://github.com/nanomatters/proton-cachyos/releases/download/wineland-11.0-20260917/proton-wineland-11.0-20260917-x86_64.tar.xz",
+				"hash": "sha256-eiZ8Vx0ftT6hhfFIooEH23WOJFdJ4Qh0zLudqkSIQ4Q="
+			}
+		}
+	},
+	"wineland-proton-v3": {
+		"latest": "11-0_20260917",
+		"source_name": "proton-wineland-11.0-20260917-x86_64_v3",
+		"override_name": "proton-wineland-v3-latest",
+		"releases": {
+			"11-0_20260917": {
+				"url": "https://github.com/nanomatters/proton-cachyos/releases/download/wineland-11.0-20260917/proton-wineland-11.0-20260917-x86_64_v3.tar.xz",
+				"hash": "sha256-Y+OSSCBNaH0g1lrx9SsDIfwVslgnBV9aiaQOHn/0NB4="
+			}
+		}
+	},
+	"dw-proton": {
+		"latest": "11-0_13",
+		"source_name": "dwproton-11.0-13-x86_64",
+		"override_name": "dwproton-latest",
+		"releases": {
+			"11-0_11": {
+				"url": "https://dawn.wine/dawn-winery/dwproton/releases/download/dwproton-11.0-11/dwproton-11.0-11-x86_64.tar.xz",
+				"hash": "sha256-p1x1UAuXLG0MpYcyrssudKwpCRlKAPPxrv7UFyPe2lI="
+			},
+			"11-0_12": {
+				"url": "https://dawn.wine/dawn-winery/dwproton/releases/download/dwproton-11.0-12/dwproton-11.0-12-x86_64.tar.xz",
+				"hash": "sha256-NGyrXQcA+k87SnowFd41uq49luI32fZENTwFTma7NpI="
+			},
+			"11-0_13": {
+				"url": "https://dawn.wine/dawn-winery/dwproton/releases/download/dwproton-11.0-13/dwproton-11.0-13-x86_64.tar.xz",
+				"hash": "sha256-INbvpKk01gMyt72Z2jlJvov5k4LZztpFuiYgVkGBc1I="
+			}
+		}
+	}
 }
