@@ -137,10 +137,15 @@ async function writeCommit() {
 			key: "cachyos-proton",
 			author: "CachyOS",
 			repository: "proton-cachyos",
-			get_version: latest => {
-				const rawVersion = latest.tag_name.replace(/^cachyos-/, "").replace(/-slr$/, "")
-				return versionNormalization(rawVersion)
-			},
+			get_version: latest => versionNormalization(latest.tag_name.replace(/^cachyos-/, "").replace(/-slr$/, "")),
+			get_source_name: latest => `proton-${latest.tag_name}-x86_64`,
+			asset_extension: "tar.xz",
+		}),
+		fetchProtonRelease({
+			key: "wineland-proton",
+			author: "nanomatters",
+			repository: "proton-cachyos",
+			get_version: latest => versionNormalization(latest.tag_name.replace(/^wineland-/, "").replace(/-slr$/, "")),
 			get_source_name: latest => `proton-${latest.tag_name}-x86_64`,
 			asset_extension: "tar.xz",
 		}),

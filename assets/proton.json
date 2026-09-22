@@ -29,6 +29,17 @@
             }
         }
     },
+    "wineland-proton": {
+        "latest": "11-0_20260917",
+        "source_name": "proton-wineland-11.0-20260917-x86_64",
+        "override_name": "proton-wineland-latest",
+        "releases": {
+            "11-0_20260917": {
+                "url": "https://github.com/nanomatters/proton-cachyos/releases/download/wineland-11.0-20260917/proton-wineland-11.0-20260917-x86_64.tar.xz",
+                "hash": "sha256-eiZ8Vx0ftT6hhfFIooEH23WOJFdJ4Qh0zLudqkSIQ4Q="
+            }
+        }
+    },
     "dw-proton": {
         "latest": "11-0_13",
         "source_name": "dwproton-11.0-13-x86_64",

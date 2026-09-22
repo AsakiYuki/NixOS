@@ -8,6 +8,7 @@
     ./ge-proton.nix
     ./cachyos-proton.nix
     ./dw-proton.nix
+    ./wineland-proton.nix
   ];
 
   mkProtonPackage = {
