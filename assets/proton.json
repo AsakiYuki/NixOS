@@ -29,6 +29,17 @@
             }
         }
     },
+    "cachyos-proton-v3": {
+        "latest": "11-0_20260703",
+        "source_name": "proton-cachyos-11.0-20260703-slr-x86_64_v3",
+        "overried_name": "proton-cachyos-v3-latest",
+        "releases": {
+            "11-0_20260703": {
+                "url": "https://github.com/CachyOS/proton-cachyos/releases/download/cachyos-11.0-20260703-slr/proton-cachyos-11.0-20260703-slr-x86_64_v3.tar.xz",
+                "hash": "sha256-8Y7orUvnFOG0zSqCrMyvmclmy3JInj7d8A2h0Y7RwhE="
+            }
+        }
+    },
     "wineland-proton": {
         "latest": "11-0_20260917",
         "source_name": "proton-wineland-11.0-20260917-x86_64",
@@ -37,6 +48,17 @@
             "11-0_20260917": {
                 "url": "https://github.com/nanomatters/proton-cachyos/releases/download/wineland-11.0-20260917/proton-wineland-11.0-20260917-x86_64.tar.xz",
                 "hash": "sha256-eiZ8Vx0ftT6hhfFIooEH23WOJFdJ4Qh0zLudqkSIQ4Q="
+            }
+        }
+    },
+    "wineland-proton-v3": {
+        "latest": "11-0_20260917",
+        "source_name": "proton-wineland-11.0-20260917-x86_64_v3",
+        "overried_name": "proton-wineland-v3-latest",
+        "releases": {
+            "11-0_20260917": {
+                "url": "https://github.com/nanomatters/proton-cachyos/releases/download/wineland-11.0-20260917/proton-wineland-11.0-20260917-x86_64_v3.tar.xz",
+                "hash": "sha256-Y+OSSCBNaH0g1lrx9SsDIfwVslgnBV9aiaQOHn/0NB4="
             }
         }
     },

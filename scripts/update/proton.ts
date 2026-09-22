@@ -3,7 +3,7 @@ import "dotenv/config"
 import fs from "fs/promises"
 import path from "path"
 
-import { getGitLatestReleases, LatestReleaseData } from "../helpers/git"
+import { Asset, getGitLatestReleases, LatestReleaseData } from "../helpers/git"
 import { getGithubRepoLatestRelease } from "../helpers/github"
 import { fetchZipHash } from "../helpers/nix"
 
@@ -85,7 +85,7 @@ async function fetchProtonRelease(options: FetchProtonReleaseArgs) {
 
 	const sourceName = get_source_name(latestRelease)
 	const assetFileName = `${sourceName}.${asset_extension}`
-	const file = latestRelease.assets.find(({ name }) => name === assetFileName)
+	const file = latestRelease.assets.find(asset => asset.name === assetFileName)
 
 	if (!file) {
 		console.warn(`[WARN] Asset '${assetFileName}' not found in release ${latestRelease.tag_name}.`)
@@ -142,11 +142,27 @@ async function writeCommit() {
 			asset_extension: "tar.xz",
 		}),
 		fetchProtonRelease({
+			key: "cachyos-proton-v3",
+			author: "CachyOS",
+			repository: "proton-cachyos",
+			get_version: latest => versionNormalization(latest.tag_name.replace(/^cachyos-/, "").replace(/-slr$/, "")),
+			get_source_name: latest => `proton-${latest.tag_name}-x86_64_v3`,
+			asset_extension: "tar.xz",
+		}),
+		fetchProtonRelease({
 			key: "wineland-proton",
 			author: "nanomatters",
 			repository: "proton-cachyos",
 			get_version: latest => versionNormalization(latest.tag_name.replace(/^wineland-/, "").replace(/-slr$/, "")),
 			get_source_name: latest => `proton-${latest.tag_name}-x86_64`,
+			asset_extension: "tar.xz",
+		}),
+		fetchProtonRelease({
+			key: "wineland-proton-v3",
+			author: "nanomatters",
+			repository: "proton-cachyos",
+			get_version: latest => versionNormalization(latest.tag_name.replace(/^wineland-/, "").replace(/-slr$/, "")),
+			get_source_name: latest => `proton-${latest.tag_name}-x86_64_v3`,
 			asset_extension: "tar.xz",
 		}),
 	])

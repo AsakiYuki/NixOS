@@ -7,8 +7,10 @@
   proton-pkgs = [
     ./ge-proton.nix
     ./cachyos-proton.nix
+    ./cachyos-proton-v3.nix
     ./dw-proton.nix
     ./wineland-proton.nix
+    ./wineland-proton-v3.nix
   ];
 
   mkProtonPackage = {
