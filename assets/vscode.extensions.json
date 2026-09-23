@@ -44,8 +44,8 @@
         "hash": "sha256-YmZ1Szvcv3E3q8JVNV1OirXFdYI29a4mR3rnhJfUSMM="
     },
     "openai.chatgpt": {
-        "version": "26.5917.61114",
-        "hash": "sha256-/tsHMT97JgQoO4O4QrdvDox0h+7kKM/uZW8ZevySoTo="
+        "version": "26.5917.62051",
+        "hash": "sha256-v8LLcaS7gkhmEiCywgXJiqpcz8z/p18PSn4WFuYQjQ8="
     },
     "zokugun.cron-tasks": {
         "version": "0.2.1",
@@ -144,8 +144,8 @@
         "hash": "sha256-Nn1ZaBRwJQoACF2MMaJvznTFzpCLXMnsevJHy0Iaws8="
     },
     "uctakeoff.vscode-counter": {
-        "version": "3.8.0",
-        "hash": "sha256-1YHPD1DpZt3o973TzQ4rfMwM4PDDSvENsnHjfSJhNf8="
+        "version": "3.8.1",
+        "hash": "sha256-AC4hIxvxLt9du1cZfVpyI7KIS/fC3DcCy84aMRaGBlg="
     },
     "wallabyjs.wallaby-vscode": {
         "version": "1.0.502",
@@ -160,7 +160,7 @@
         "hash": "sha256-rrFnseaIWHZr0NcI8dlSHR4ezFKzv+pXpIBLUdXUI6U="
     },
     "blockceptionltd.blockceptionvscodeminecraftbedrockdevelopmentextension": {
-        "version": "9.1.18",
-        "hash": "sha256-Zag8NhZL7K0eHH5qksc9NPDhxiCdAuhKaAqHeLAaCyI="
+        "version": "9.1.19",
+        "hash": "sha256-edPcp7T+pbSz9UyGy8pQwuPPiZlgfGF5qBIPyCu7+UU="
     }
 }
