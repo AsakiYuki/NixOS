@@ -9,6 +9,7 @@
       ./sine.nix
       ./presets.nix
       ./search.nix
+      ./settings.nix
     ];
 
     _module.args = {inherit pkgs lib;};
