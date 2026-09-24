@@ -16,7 +16,29 @@ in {
     };
   };
 
-  config.home.pointerCursor = lib.mkIf (cursors-theme != null) {
+  config.home.pointerCursor = lib.mkIf (cursors-theme != null) (let
+    cursors-data = cursors.${cursors-theme};
+    is-cursors-hash = (builtins.typeOf cursors-data) != "set";
+
+    inherit
+      (
+        if is-cursors-hash
+        then {
+          stripRoot = true;
+          hash = cursors-data;
+          url = "https://static.asakiyuki.com/packages/cursors/linux/${cursors-theme}.tar.gz";
+        }
+        else {
+          url = cursors-data.url or "https://static.asakiyuki.com/packages/cursors/linux/${cursors-theme}.tar.gz";
+          hash = cursors-data.hash or (throw "${cursors-theme} is not a hash, please define in assets/cursors.json");
+          stripRoot = cursors-data.strip-root or true;
+        }
+      )
+      stripRoot
+      url
+      hash
+      ;
+  in {
     enable = true;
     name = cursors-name;
     size = 98;
@@ -25,15 +47,11 @@ in {
     hyprcursor.enable = true;
     sway.enable = true;
     dotIcons.enable = true;
-    package = let
-      url = "https://static.asakiyuki.com/packages/cursors/linux/${cursors-theme}.tar.gz";
-      hash = cursors.${cursors-theme};
-      packages = pkgs.fetchzip {
-        inherit url hash;
-      };
-    in (pkgs.runCommand "moveUp" {} ''
+    package = pkgs.runCommand "moveUp" {} ''
       mkdir -p $out/share/icons
-      ln -s ${packages} $out/share/icons/${cursors-name}
-    '');
-  };
+      ln -s ${pkgs.fetchzip {
+        inherit url hash stripRoot;
+      }} $out/share/icons/${cursors-name}
+    '';
+  });
 }
