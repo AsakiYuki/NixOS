@@ -13,7 +13,7 @@
     ];
   in {
     imports = [
-      ./pins
+      ./essential.nix
       ./keyboard-shortcuts.nix
       ./sine.nix
       ./presets.nix
