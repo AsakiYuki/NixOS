@@ -185,37 +185,6 @@ async function main() {
 			},
 		}),
 		fetchLastReleasePackage({
-			author: "zen-browser",
-			repository: "desktop",
-			package_name: "zen-browser",
-			new_version_found: async (cached, latest, version) => {
-				const files = latest.assets.filter(({ name }) => name.endsWith(".tar.xz"))
-
-				const x86_64 = files.find(({ name }) => name.includes("x86_64"))
-				const aarch64 = files.find(({ name }) => name.includes("aarch64"))
-
-				if (!aarch64 || !x86_64) {
-					console.warn(
-						`[WARN] Asset 'zen.linux-x86_64.tar.xz' or 'zen.linux-aarch64.tar.xz' not found in release v${version}.`,
-					)
-					return false
-				}
-
-				console.info(
-					`[INFO] Fetching url hash from:\n - amd64:${x86_64.download_url}\n - arm64: ${aarch64.download_url}`,
-				)
-
-				const [amd64, arm64] = await Promise.all([
-					fetchZipHash(x86_64.download_url),
-					fetchZipHash(aarch64.download_url),
-				])
-
-				descriptions.push(`zen-browser v${version} - Hash: amd64: ${amd64} - arm64: ${arm64}`)
-
-				return { version, hash: { amd64, arm64 } }
-			},
-		}),
-		fetchLastReleasePackage({
 			author: "versenilvis",
 			repository: "IRIS",
 			package_name: "iris",

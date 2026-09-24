@@ -15,6 +15,7 @@
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
     millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
     # Security
     agenix.url = "github:ryantm/agenix";
@@ -28,6 +29,8 @@
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    zen-browser.inputs.nixpkgs.follows = "nixpkgs";
+    zen-browser.inputs.home-manager.follows = "home-manager";
     agenix.inputs.nixpkgs.follows = "nixpkgs";
     agenix.inputs.home-manager.follows = "home-manager";
   };

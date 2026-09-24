@@ -26,7 +26,6 @@ in {
       (getPkg "rustup")
       (getPkg "ghidra")
       (getPkg "qbittorrent")
-      (getPkg "zen-browser")
       (getPkg "mangohud")
       (getPkg "telegram")
       (getPkg "vlc")
@@ -100,7 +99,6 @@ in {
     telegram = mkOpt pkgs "telegram-desktop" {name = "telegram-desktop";};
     pavucontrol = mkOpt pkgs.lxqt "pavucontrol-qt" {name = "pavucontrol-qt";};
     cider = mkOpt pkgs "cider-2" {name = "cider-2";};
-    zen-browser = mkOpt pkgs "zen-browser" {name = "zen-browser";};
 
     jetbrains = {
       datagrip = mkOpt pkgs.jetbrains "datagrip" {};
