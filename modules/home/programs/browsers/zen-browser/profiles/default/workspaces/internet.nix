@@ -1,7 +1,7 @@
 {...}: {
   spaces."Internet" = {
     id = "a8322d19-70f5-4990-af1c-a2e633648c84";
-    position = 1000;
+    position = 1;
     icon = "🌍";
     pins = {
       "Apple Music" = {
