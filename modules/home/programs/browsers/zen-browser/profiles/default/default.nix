@@ -14,6 +14,7 @@
   in {
     imports = [
       ./keyboard-shortcuts.nix
+      ./pins.nix
       ./sine.nix
       ./presets.nix
       ./search.nix
