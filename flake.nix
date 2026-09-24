@@ -4,6 +4,7 @@
   inputs = {
     # Packages Manager
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    nur.url = "github:nix-community/NUR";
     nixos-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
@@ -25,6 +26,7 @@
     nix-index-database.url = "github:nix-community/nix-index-database";
 
     # Follows
+    nur.inputs.nixpkgs.follows = "nixpkgs";
     millennium.inputs.nixpkgs.follows = "nixpkgs";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";

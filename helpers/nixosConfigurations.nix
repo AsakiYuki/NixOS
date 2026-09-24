@@ -9,6 +9,7 @@
 
   defaultModules = [
     inputs.chaotic.nixosModules.default
+    inputs.nur.overlays.default
     (nixosModules "nix-index-database")
     (nixosModules "home-manager")
     (nixosModules "agenix")

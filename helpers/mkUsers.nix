@@ -40,6 +40,7 @@ lib.mergeAttrsList (
           ])
 
           (with inputs; [
+            nur.overlays.default
             zen-browser.homeModules.beta
             nixvim.homeModules.nixvim
             nixcord.homeModules.nixcord

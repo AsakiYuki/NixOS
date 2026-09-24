@@ -6,6 +6,7 @@
   programs.zen-browser.profiles.default = {...}: {
     imports = [
       ./workspaces
+      ./extensions
       ./essential.nix
       ./keyboard-shortcuts.nix
       ./sine.nix
