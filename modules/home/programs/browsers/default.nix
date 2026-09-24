@@ -1,7 +1,7 @@
 {...}: {
   imports = [
+    ./firefox
     ./chromium.nix
-    ./firefox.nix
     ./zen-browser.nix
   ];
 }
