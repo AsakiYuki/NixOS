@@ -11,7 +11,6 @@
       "1207efa9-fce4-439f-a673-9d3c0e4e8820" # Clickable URL bar
       "906c6915-5677-48ff-9bfc-096a02a72379" # Floating Status Bar
       "cb15abdb-0514-4e09-8ce5-722cf1f4a20f" # Hide Extension Name
-      "6c122084-c4ec-4c9e-8cc5-3d87c3a089cb" # NavBar Margin
       "c45c4894-d6bd-47fc-997a-0c4d015334f1" # No pinned tab reset btn
       "e122b5d9-d385-4bf8-9971-e137809097d0" # No Top Sites
       "f50841b2-5e4a-4534-985d-b7f7b96088c2" # NoHighlightSplit
