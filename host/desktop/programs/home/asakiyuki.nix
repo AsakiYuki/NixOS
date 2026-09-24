@@ -120,9 +120,14 @@
               position = 5001;
               url = "https://portal.inet.vn/";
             };
+            "AP Poly" = {
+              id = "01540ea6-8f9a-48ab-b8f4-e59a1a49e3f5";
+              position = 5002;
+              url = "https://ap.poly.edu.vn/sinh-vien";
+            };
             "Byethost" = {
               id = "b5777088-4232-4de4-bb0f-a8f46a87075b";
-              position = 5002;
+              position = 5003;
               url = "https://cpanel.hyethost.com/";
             };
             "English" = {
