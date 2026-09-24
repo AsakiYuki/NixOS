@@ -1,6 +1,13 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   programs.zen-browser.profiles.default = {...}: {
-    _module.args = {inherit pkgs;};
+    imports = [./keyboard-shortcuts.nix];
+
+    _module.args = {inherit pkgs lib;};
+
     sine = {
       enable = true;
     };
