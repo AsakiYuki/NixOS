@@ -21,6 +21,7 @@
     moyu.snapcode
     cardinal90.multi-cursor-case-preserve
     uctakeoff.vscode-counter
+    netcorext.uuid-generator
     ms-vscode.hexeditor
   ];
 }
