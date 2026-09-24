@@ -281,5 +281,11 @@ in
           homepage = "https://github.com/Blockception/minecraft-bedrock-language-server";
           license = lib.licenses.bsd3;
         };
+
+        netcorext.uuid-generator = {
+          description = "Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter.";
+          homepage = "https://github.com/arenchen/vscode-uuid-generator";
+          license = lib.licenses.mit;
+        };
       })
   ]
