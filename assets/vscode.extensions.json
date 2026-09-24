@@ -162,5 +162,9 @@
     "blockceptionltd.blockceptionvscodeminecraftbedrockdevelopmentextension": {
         "version": "9.1.19",
         "hash": "sha256-edPcp7T+pbSz9UyGy8pQwuPPiZlgfGF5qBIPyCu7+UU="
+    },
+    "netcorext.uuid-generator": {
+        "version": "0.0.5",
+        "hash": "sha256-2sdI0eBV7kTpETpqhbrWCJSJxZ0P35QtmllMhlj9sAY="
     }
 }
