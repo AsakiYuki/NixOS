@@ -6,10 +6,10 @@
     };
     forgejo = {};
     host = {
-      members = ["asakiyuki" "hieze"];
+      members = ["asakiyuki"];
     };
     mc-bedrock = {
-      members = ["asakiyuki" "hieze"];
+      members = ["asakiyuki"];
     };
   };
 }

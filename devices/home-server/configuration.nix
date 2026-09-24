@@ -10,6 +10,5 @@
 
     (lib.root "/host/server")
     (lib.root "/users/junko/configuration.nix")
-    (lib.root "/users/hieze/configuration.nix")
   ];
 }
