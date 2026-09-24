@@ -103,8 +103,48 @@
 
     # Browsers
     firefox.enable = true;
-    zen-browser.enable = true;
     chromium.enable = true;
     tor-browser.enable = true;
+
+    zen-browser = {
+      enable = true;
+      profiles.default = {...}: {
+        spaces."Study" = {
+          id = "ae80085e-8bc0-4ed9-885c-9d3b09d6d6e3";
+          position = 5000;
+          icon = "📗";
+          pins = {
+            "iNet" = {
+              id = "63b3a644-d91f-4968-bf1f-4482bbcde296";
+              position = 5001;
+              url = "https://portal.inet.vn/";
+            };
+            "Byethost" = {
+              id = "b5777088-4232-4de4-bb0f-a8f46a87075b";
+              position = 5002;
+              url = "https://cpanel.hyethost.com/";
+            };
+            "English" = {
+              id = "6ae6b6df-afe7-4925-9289-ffcf1bb44bcc";
+              position = 5003;
+              isFolderCollapsed = true;
+              isGroup = true;
+              pins = {
+                "Cambridge" = {
+                  id = "83bffc59-7e22-40e4-a5ca-c211f3ea14c2";
+                  position = 5050;
+                  url = "https://dictionary.cambridge.org/";
+                };
+                "Language Hub" = {
+                  id = "27e11f6d-602b-4f65-a0c4-ab2e9ba9e3db";
+                  position = 5051;
+                  url = "https://lms.languagehub.vn/";
+                };
+              };
+            };
+          };
+        };
+      };
+    };
   };
 }
