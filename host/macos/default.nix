@@ -16,6 +16,8 @@
       discord.enable = true;
     };
 
+    nixvim.enable = true;
+
     ghostty = {
       enable = true;
       package = pkgs.ghostty-bin;
