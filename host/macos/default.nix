@@ -1,6 +1,10 @@
 {pkgs, ...}: {
   home.homeDirectory = "/Users/asakiyuki";
 
+  programs.vscodium = {
+    enable = true;
+  };
+
   home.packages = with pkgs; [
     git
     ripgrep
