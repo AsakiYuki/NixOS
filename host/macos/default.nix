@@ -7,6 +7,7 @@
     zen-browser.enable = true;
     fastfetch.enable = true;
     starship.enable = true;
+    ghostty.enable = true;
     git.enable = true;
     tmux.enable = true;
     nixcord.enable = true;
