@@ -15,7 +15,7 @@
     ghostty = {
       enable = true;
       package = pkgs.ghostty-bin;
-      settings.font-size = 100;
+      settings.font-size = 12;
     };
     cider = {
       enable = true;
