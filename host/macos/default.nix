@@ -9,14 +9,22 @@
     starship.enable = true;
     git.enable = true;
     tmux.enable = true;
-    nixcord.enable = true;
-    nixcord.discord.enable = true;
-    nixcord.vesktop.enable = true;
+
+    nixcord = {
+      enable = true;
+      vesktop.enable = true;
+      discord = {
+        enable = true;
+        package = pkgs.discord;
+      };
+    };
+
     ghostty = {
       enable = true;
       package = pkgs.ghostty-bin;
       settings.font-size = 12;
     };
+
     cider = {
       enable = true;
       package = pkgs.cider-2;
