@@ -14,7 +14,7 @@
       localSystem = system;
       config.allowUnfree = true;
       overlays = [
-        (_: p: import ../overlays/packages p)
+        (_: pkgs: import ../overlays/packages (pkgs // {inherit pkgs;}))
       ];
     };
 
