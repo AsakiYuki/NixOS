@@ -9,7 +9,7 @@
       ./extensions
       ./essential.nix
       ./keyboard-shortcuts.nix
-      ./sine.nix
+      ./mods.nix
       ./presets.nix
       ./search.nix
       ./settings.nix
