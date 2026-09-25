@@ -2,9 +2,10 @@
   home.homeDirectory = "/Users/asakiyuki";
 
   programs = {
+    bash.enable = true;
     vscodium.enable = true;
     zen-browser.enable = true;
-    cider-2.enable = true;
+    cider.enable = true;
   };
 
   home.packages = with pkgs; [
