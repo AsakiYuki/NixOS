@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  is-home-configurations,
   osconfig ? {},
   ...
 }: {
@@ -26,8 +27,14 @@
 
           logout = "pkill -KILL -u $USER";
 
-          nrs = "sudo nixos-rebuild switch --flake /etc/nixos#${lib.flake-name} --option warn-dirty false";
-          nrb = "sudo nixos-rebuild build --flake /etc/nixos#${lib.flake-name} --option warn-dirty false";
+          nrs =
+            if is-home-configurations
+            then "home-manager switch --flake ${config.home.homeDirectory}/nixos#${lib.flake-name} --option warn-dirty false"
+            else "sudo nixos-rebuild switch --flake /etc/nixos#${lib.flake-name} --option warn-dirty false";
+          nrb =
+            if is-home-configurations
+            then "home-manager build --flake ${config.home.homeDirectory}/nixos#${lib.flake-name} --option warn-dirty false"
+            else "sudo nixos-rebuild build --flake /etc/nixos#${lib.flake-name} --option warn-dirty false";
           flake-upgrade = "nix flake update";
         }
         (attOpt config.programs.superfile.enable "spf" "superfile")
