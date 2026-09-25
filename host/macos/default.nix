@@ -13,10 +13,7 @@
     nixcord = {
       enable = true;
       vesktop.enable = true;
-      discord = {
-        enable = true;
-        package = pkgs.discord;
-      };
+      discord.enable = true;
     };
 
     ghostty = {
