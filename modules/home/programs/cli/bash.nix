@@ -1,11 +1,20 @@
 {
   lib,
+  pkgs,
   config,
   is-home-configurations,
   osconfig ? {},
   ...
 }: {
   programs.bash = {
+    sessionVariables = lib.mkIf pkgs.stdenv.isDarwin {
+      BASH_SILENCE_DEPRECATION_WARNING = "1";
+    };
+
+    bashrcExtra = lib.mkIf pkgs.stdenv.isDarwin ''
+      export BASH_SILENCE_DEPRECATION_WARNING=1
+    '';
+
     iris = {
       config = {
         core = {
@@ -29,11 +38,11 @@
 
           nrs =
             if is-home-configurations
-            then "home-manager switch --flake ${config.home.homeDirectory}/nixos#${lib.flake-name} --option warn-dirty false"
+            then "sudo home-manager switch --flake ${config.home.homeDirectory}/nixos#${lib.flake-name} -b backup --option warn-dirty false"
             else "sudo nixos-rebuild switch --flake /etc/nixos#${lib.flake-name} --option warn-dirty false";
           nrb =
             if is-home-configurations
-            then "home-manager build --flake ${config.home.homeDirectory}/nixos#${lib.flake-name} --option warn-dirty false"
+            then "sudo home-manager build --flake ${config.home.homeDirectory}/nixos#${lib.flake-name} --option warn-dirty false"
             else "sudo nixos-rebuild build --flake /etc/nixos#${lib.flake-name} --option warn-dirty false";
           flake-upgrade = "nix flake update";
         }
