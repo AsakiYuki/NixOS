@@ -2,21 +2,24 @@
   pkgs,
   data,
   lib,
-  get-arch,
   ...
 }: let
-  inherit (data) iris;
-  arch = get-arch {
-    "x86_64-linux" = "amd64";
-    "aarch64-linux" = "arm64";
-  } "iris";
-in (pkgs.stdenv.mkDerivation rec {
+  inherit (data.iris) version hash;
+
+  pkg-hash = hash.${pkgs.stdenv.system} or (throw "Iris is not support current system: ${pkgs.stdenv.system}");
+  pkg-url = "https://github.com/versenilvis/IRIS/releases/download/v${version}/iris_linux_${{
+      "x86_64-linux" = "x64";
+      "aarch64-linux" = "arm64";
+    }.${
+      pkgs.stdenv.system
+    }}.tar.gz";
+in (pkgs.stdenv.mkDerivation {
   pname = "iris";
-  version = iris.version;
+  inherit version;
 
   src = pkgs.fetchzip {
-    url = "https://github.com/versenilvis/IRIS/releases/download/v${version}/iris_linux_${arch}.tar.gz";
-    hash = iris.hash.${arch};
+    url = pkg-url;
+    hash = pkg-hash;
     stripRoot = false;
   };
 
