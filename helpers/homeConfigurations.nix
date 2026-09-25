@@ -36,7 +36,6 @@
         ../modules/home
         ../modules/home-default.nix
         ../overlays
-        inputs.nur.overlays.default
         inputs.zen-browser.homeModules.beta
         inputs.nixvim.homeModules.nixvim
         inputs.nixcord.homeModules.nixcord
