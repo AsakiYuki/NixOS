@@ -21,7 +21,11 @@
     ghostty = {
       enable = true;
       package = pkgs.ghostty-bin;
-      settings.font-size = 12;
+      settings = {
+        font-size = 12;
+        window-width = 210;
+        window-height = 52;
+      };
     };
 
     cider = {
