@@ -4,6 +4,7 @@
   ...
 }: {
   programs.zen-browser.profiles.default = {...}: {
+    isDefault = true;
     imports = [
       ./workspaces
       ./extensions

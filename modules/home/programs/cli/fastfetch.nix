@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }: let
   cfg = config.theme.catppuccin;
@@ -12,14 +13,22 @@ in {
     settings = {
       logo = {
         padding.top = 1;
-        color = {
-          "1" = accent;
-          "2" = accent-2;
-          "3" = accent;
-          "4" = accent-2;
-          "5" = accent;
-          "6" = accent-2;
-        };
+        color =
+          lib.mkIf pkgs.stdenv.isDarwin {
+            "1" = accent;
+            "2" = accent;
+            "3" = accent;
+            "4" = accent;
+            "5" = accent;
+            "6" = accent;
+          } {
+            "1" = accent;
+            "2" = accent-2;
+            "3" = accent;
+            "4" = accent-2;
+            "5" = accent;
+            "6" = accent-2;
+          };
       };
 
       display = {
