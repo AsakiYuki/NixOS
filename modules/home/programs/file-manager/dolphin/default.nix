@@ -2,8 +2,7 @@
   lib,
   config,
   ...
-}:
-{
+}: {
   imports = [
     ./services-menu.nix
     ./settings.nix
@@ -19,4 +18,3 @@
     };
   };
 }
-

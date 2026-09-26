@@ -4,7 +4,7 @@
   lib,
   ...
 } @ args: {
-  wayland.windowManager.hyprland = {
+  wayland.windowManager.hyprland = lib.mkIf (!config.programs.disable-module.hyprland) {
     extraConfig = ''
       -- Global Variables
       TouchpadName = nil

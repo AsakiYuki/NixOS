@@ -7,7 +7,7 @@
   flavour = cfg.flavour;
   colors = lib.catppuccin.${flavour};
 in {
-  programs.ghostty = {
+  programs.ghostty = lib.mkIf (!config.programs.disable-module.ghostty) {
     settings = {
       theme = "catppuccin-${flavour}";
 

@@ -1,5 +1,9 @@
-{...}: {
-  programs.kitty = {
+{
+  lib,
+  config,
+  ...
+}: {
+  programs.kitty = lib.mkIf (!config.programs.disable-module.kitty) {
     keybindings = {
       "ctrl+c" = "copy_to_clipboard";
       "ctrl+v" = "paste_from_clipboard";

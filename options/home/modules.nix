@@ -8,5 +8,8 @@
     neovim = lib.mkEnableOption "neovim";
     steam = lib.mkEnableOption "steam";
     discord = lib.mkEnableOption "discord";
+    hyprland = lib.mkEnableOption "hyprland";
+    ghostty = lib.mkEnableOption "ghostty";
+    kitty = lib.mkEnableOption "kitty";
   };
 }
