@@ -26,7 +26,7 @@ in {
         listen 10808;
         listen [::]:10808;
         allow 127.0.0.1;
-        allow 192.168.1.0/24;
+        allow 192.168.0.0/16;
         allow 100.64.0.0/10;
         deny all;
         proxy_pass 127.0.0.1:1080;
@@ -88,14 +88,6 @@ in {
       "api.asakiyuki.com" = {
         forceSSL = true;
         enableACME = true;
-        locations."/" = {
-          proxyPass = "http://localhost:5482";
-        };
-      };
-
-      "api.asakiyuki.id.vn" = {
-        enableACME = true;
-        forceSSL = true;
         locations."/" = {
           proxyPass = "http://localhost:5482";
         };
