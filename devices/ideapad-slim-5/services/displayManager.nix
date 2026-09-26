@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   services.displayManager = {
     defaultSession = "plasma";
     autoLogin = {
