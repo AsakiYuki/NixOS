@@ -9,9 +9,17 @@
         shExpMatch(host, "*.steam-chat.com") ||
         shExpMatch(host, "steam-chat.com")
       ) {
-        return "SOCKS5 192.168.1.100:10808; SOCKS 192.168.1.100:10808; SOCKS5 100.66.141.14:10808; DIRECT";
+        var myIp = myIpAddress();
+        if (isInNet(myIp, "192.168.1.0", "255.255.255.0")) {
+          return "SOCKS5 192.168.1.100:10808; DIRECT";
+        }
+        if (isInNet(myIp, "100.64.0.0", "255.192.0.0")) {
+          return "SOCKS5 100.66.141.14:10808; DIRECT";
+        }
+        return "DIRECT";
       }
 
+      // Tat ca cac website khac luon di thang truc tiep
       return "DIRECT";
     }
   '';
