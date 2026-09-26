@@ -2,9 +2,10 @@
   unstable-pkgs,
   osconfig ? {},
   config,
+  lib,
   ...
 }: {
-  programs.nixvim = {
+  programs.nixvim = lib.mkIf (!config.programs.disable-module.neovim) {
     _module.args = {
       inherit unstable-pkgs osconfig;
       hmconfig = config;

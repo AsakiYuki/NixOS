@@ -1,10 +1,9 @@
 {
   pkgs,
   lib,
-  config,
   ...
 }: {
-  config = lib.mkIf (!config.programs.disable-module.zen-browser) {
+  config = {
     programs.zen-browser.profiles.default = {...}: {
       isDefault = true;
       imports = [
@@ -24,4 +23,3 @@
     };
   };
 }
-
