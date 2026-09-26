@@ -8,7 +8,6 @@
       dns = {
         bind_hosts = [
           "0.0.0.0"
-          "::"
         ];
         port = 53;
         protection_enabled = true;
