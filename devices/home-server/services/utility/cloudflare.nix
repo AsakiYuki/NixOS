@@ -7,7 +7,7 @@
       apiTokenFile = config.age.secrets.cloudflare.path;
       frequency = "*:0/5";
       proxied = false;
-      ipv6 = true;
+      ipv6 = false;
       ipv4 = true;
       deleteMissing = false;
       domains = [
