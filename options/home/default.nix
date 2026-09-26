@@ -6,5 +6,6 @@
     ./steam.nix
     ./files.nix
     ./theme.nix
+    ./modules.nix
   ];
 }

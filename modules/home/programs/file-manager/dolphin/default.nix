@@ -3,7 +3,7 @@
   config,
   ...
 }:
-{
+lib.mkIf (!config.programs.disable-module.dolphin) {
   imports = [
     ./services-menu.nix
     ./settings.nix

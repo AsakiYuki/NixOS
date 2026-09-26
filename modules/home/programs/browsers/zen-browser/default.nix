@@ -1,8 +1,10 @@
 {
   lib,
   pkgs,
+  config,
   ...
-}: {
+}:
+lib.mkIf (!config.programs.disable-module.zen-browser) {
   imports = [
     ./profiles/default
     ./policies.nix

@@ -26,7 +26,7 @@
     });
 in {
   config.programs = {
-    vscode.profiles = profiles false config.programs.vscode.global;
-    vscodium.profiles = profiles true config.programs.vscodium.global;
+    vscode.profiles = lib.lib.mkIf (!config.programs.disable-module.vscode) (profiles false config.programs.vscode.global);
+    vscodium.profiles = lib.lib.mkIf (!config.programs.disable-module.vscodium) (profiles true config.programs.vscodium.global);
   };
 }

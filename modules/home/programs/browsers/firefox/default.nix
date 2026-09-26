@@ -2,7 +2,8 @@
   lib,
   config,
   ...
-}: {
+}:
+lib.mkIf (!config.programs.disable-module.firefox) {
   imports = [./profiles/default];
 
   files = lib.mkIf config.programs.firefox.enable {
