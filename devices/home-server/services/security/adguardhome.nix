@@ -38,7 +38,21 @@
     };
   };
 
-  systemd.services.adguardhome.serviceConfig.SupplementaryGroups = [ "nginx" ];
+  systemd.services.adguardhome = {
+    after = [
+      "network.target"
+      "acme-adguard.asakiyuki.com.service"
+    ];
+    serviceConfig = {
+      SupplementaryGroups = [
+        "acme"
+        "nginx"
+      ];
+      ReadOnlyPaths = [
+        "/var/lib/acme/adguard.asakiyuki.com"
+      ];
+    };
+  };
 
-  security.acme.certs."adguard.asakiyuki.com".reloadServices = [ "adguardhome.service" ];
+  security.acme.certs."adguard.asakiyuki.com".reloadServices = ["adguardhome.service"];
 }
