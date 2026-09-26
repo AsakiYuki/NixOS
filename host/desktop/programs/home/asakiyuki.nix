@@ -69,15 +69,6 @@
     prismlauncher.enable = true;
     bedrock-on-linux.enable = true;
 
-    steam = {
-      protonPackages = with pkgs; [
-        cachyos-proton-v3-latest
-        wineland-proton-v3-latest
-        dw-proton-latest
-        ge-proton-latest
-      ];
-    };
-
     # Downloader
     qbittorrent.enable = true;
 

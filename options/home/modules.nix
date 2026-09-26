@@ -6,5 +6,6 @@
     zen-browser = lib.mkEnableOption "zen-browser";
     dolphin = lib.mkEnableOption "dolphin";
     neovim = lib.mkEnableOption "neovim";
+    steam = lib.mkEnableOption "steam";
   };
 }

@@ -7,6 +7,8 @@
     ./code-editor
     ./nixcord
     ./hyprland
+
     ./obs-studio.nix
+    ./steam.nix
   ];
 }
