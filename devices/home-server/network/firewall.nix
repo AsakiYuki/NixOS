@@ -3,7 +3,8 @@
     enable = true;
 
     allowedUDPPorts = [
-      53
+      53 # DNS
+      853 # DNS-over-QUIC (DoQ)
     ];
 
     allowedTCPPorts = [
@@ -14,6 +15,7 @@
       443
 
       53 # DNS
+      853 # DNS-over-TLS (DoT for Android Private DNS)
       3306 # MySQL
     ];
   };

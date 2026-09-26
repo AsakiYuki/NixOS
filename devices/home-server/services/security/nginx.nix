@@ -81,6 +81,13 @@
         locations."/" = {
           proxyPass = "http://localhost:34778";
         };
+        locations."/dns-query" = {
+          proxyPass = "https://127.0.0.1:34780/dns-query";
+          extraConfig = ''
+            proxy_ssl_server_name on;
+            proxy_ssl_name adguard.asakiyuki.com;
+          '';
+        };
       };
 
       # "mail.asakiyuki.com" = {
