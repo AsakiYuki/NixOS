@@ -6,6 +6,8 @@
         shExpMatch(host, "steampowered.com") ||
         shExpMatch(host, "*.steamcommunity.com") ||
         shExpMatch(host, "steamcommunity.com") ||
+        shExpMatch(host, "*.steamgames.com") ||
+        shExpMatch(host, "steamgames.com") ||
         shExpMatch(host, "*.steam-chat.com") ||
         shExpMatch(host, "steam-chat.com")
       ) {
@@ -19,7 +21,6 @@
         return "DIRECT";
       }
 
-      // Tat ca cac website khac luon di thang truc tiep
       return "DIRECT";
     }
   '';
