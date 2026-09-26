@@ -1,23 +1,27 @@
 {
   pkgs,
   lib,
+  config,
   ...
 }: {
-  programs.zen-browser.profiles.default = {...}: {
-    isDefault = true;
-    imports = [
-      ./workspaces
-      ./extensions
-      ./essential.nix
-      ./keyboard-shortcuts.nix
-      ./mods.nix
-      ./presets.nix
-      ./search.nix
-      ./settings.nix
-    ];
+  config = lib.mkIf (!config.programs.disable-module.zen-browser) {
+    programs.zen-browser.profiles.default = {...}: {
+      isDefault = true;
+      imports = [
+        ./workspaces
+        ./extensions
+        ./essential.nix
+        ./keyboard-shortcuts.nix
+        ./mods.nix
+        ./presets.nix
+        ./search.nix
+        ./settings.nix
+      ];
 
-    _module.args = {
-      inherit pkgs lib;
+      _module.args = {
+        inherit pkgs lib;
+      };
     };
   };
 }
+
