@@ -56,8 +56,8 @@ in {
       color0 = colors.surface1;
       color8 = colors.surface2;
 
-      color1 = colors.f38ba8;
-      color9 = colors.f38ba8;
+      color1 = colors.red;
+      color9 = colors.red;
 
       color2 = colors.green;
       color10 = colors.green;
