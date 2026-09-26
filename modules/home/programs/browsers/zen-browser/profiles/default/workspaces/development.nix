@@ -356,7 +356,7 @@
             editedTitle = true;
             id = "bb53a970-de65-4052-b60b-b44050880f4f";
             position = 2553;
-            url = "http://192.168.1.1:442/";
+            url = "http://192.168.1.1:81/";
           };
           "[Second] Wifi Router" = {
             editedTitle = true;
