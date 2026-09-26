@@ -40,9 +40,15 @@
     gcc.enable = true;
     tldr.enable = true;
     translate-shell.enable = true;
+
     yt-dlp = {
       enable = true;
       settings.cookies-from-browser = "firefox";
+    };
+
+    git.settings.user = {
+      name = "Asaki Yuki";
+      email = "vantrong2007vn@gmail.com";
     };
 
     # RE Tools
