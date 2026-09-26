@@ -1,6 +1,35 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+  pacFile = pkgs.writeText "proxy.pac" ''
+    function FindProxyForURL(url, host) {
+      if (
+        shExpMatch(host, "*.steampowered.com") ||
+        shExpMatch(host, "steampowered.com") ||
+        shExpMatch(host, "*.steamcommunity.com") ||
+        shExpMatch(host, "steamcommunity.com") ||
+        shExpMatch(host, "*.steam-chat.com") ||
+        shExpMatch(host, "steam-chat.com")
+      ) {
+        return "SOCKS5 192.168.1.100:10808; SOCKS 192.168.1.100:10808; SOCKS5 100.66.141.14:10808; DIRECT";
+      }
+
+      return "DIRECT";
+    }
+  '';
+in {
   services.nginx = {
     enable = true;
+
+    streamConfig = ''
+      server {
+        listen 10808;
+        listen [::]:10808;
+        allow 127.0.0.1;
+        allow 192.168.1.0/24;
+        allow 100.64.0.0/10;
+        deny all;
+        proxy_pass 127.0.0.1:1080;
+      }
+    '';
 
     commonHttpConfig = ''
       set_real_ip_from 103.21.244.0/22;
@@ -29,6 +58,15 @@
       "_" = {
         default = true;
         rejectSSL = true;
+        locations."= /proxy.pac" = {
+          alias = "${pacFile}";
+          extraConfig = ''
+            default_type application/x-ns-proxy-autoconfig;
+          '';
+        };
+        locations."= /steam.pac" = {
+          return = "301 /proxy.pac";
+        };
       };
 
       "asakiyuki.com" = {
@@ -87,6 +125,15 @@
             proxy_ssl_server_name on;
             proxy_ssl_name adguard.asakiyuki.com;
           '';
+        };
+        locations."= /proxy.pac" = {
+          alias = "${pacFile}";
+          extraConfig = ''
+            default_type application/x-ns-proxy-autoconfig;
+          '';
+        };
+        locations."= /steam.pac" = {
+          return = "301 /proxy.pac";
         };
       };
 
