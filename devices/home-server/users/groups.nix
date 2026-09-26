@@ -1,9 +1,7 @@
 {...}: {
   users.groups = {
     gitea-runner = {};
-    public = {
-      members = ["nextcloud"];
-    };
+    public = {};
     forgejo = {};
     host = {
       members = ["asakiyuki"];
