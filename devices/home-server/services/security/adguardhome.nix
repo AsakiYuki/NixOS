@@ -13,6 +13,7 @@
         port = 53;
         protection_enabled = true;
         filtering_enabled = true;
+        aaaa_disabled = true;
         upstream_dns = [
           "https://dns.cloudflare.com/dns-query"
           "https://dns.google/dns-query"
