@@ -32,6 +32,8 @@
         port_dns_over_tls = 853;
         port_dns_over_quic = 853;
         port_https = 34780;
+        certificate_chain = "";
+        private_key = "";
         certificate_path = "/var/lib/acme/adguard.asakiyuki.com/fullchain.pem";
         private_key_path = "/var/lib/acme/adguard.asakiyuki.com/key.pem";
       };
