@@ -7,5 +7,6 @@
     dolphin = lib.mkEnableOption "dolphin";
     neovim = lib.mkEnableOption "neovim";
     steam = lib.mkEnableOption "steam";
+    discord = lib.mkEnableOption "discord";
   };
 }

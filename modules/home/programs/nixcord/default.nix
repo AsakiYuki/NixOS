@@ -6,7 +6,7 @@
 }: let
   cfg = config.theme.catppuccin;
 in {
-  programs.nixcord = {
+  programs.nixcord = lib.mkIf (!config.programs.disable-module.discord) {
     quickCss = lib.readRootFile "/assets/programs/discord/style.css";
     discord.package = unstable-pkgs.discord;
     discord.vencord.enable = true;
