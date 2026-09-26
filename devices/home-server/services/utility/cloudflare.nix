@@ -13,7 +13,6 @@
       domains = [
         "asakiyuki.com"
         "ddns.asakiyuki.com"
-        "mx1.asakiyuki.com"
       ];
     };
   };

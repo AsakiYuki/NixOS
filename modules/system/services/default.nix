@@ -6,7 +6,6 @@
     ./openssh.nix
     ./sddm.nix
     ./envfs.nix
-    ./stalwart.nix
     ./tailscale.nix
     ./fail2ban.nix
   ];
