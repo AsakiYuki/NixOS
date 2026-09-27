@@ -1,48 +1,48 @@
 {
-    "bun-baseline": {
-        "version": "1.4.2",
-        "hash": "sha256-Nq85/hrOkT7M4VJ9Uc7Kr9e+uNx8unD4d30RzaQlYxc="
-    },
-    "bedrock-on-linux": {
-        "version": "2.2.7",
-        "hash": "sha256-A7M25J5VZKlvp4BL0FlbVQJuECjWDHsNrYazvC4RVus="
-    },
-    "cage-xtmapper": {
-        "release": "20260208",
-        "version-0.1.5": "sha256-ZmdltOQInGbCBpf/e8D2sB9Rjt4wqd8wwuSFvryHfFA=",
-        "version-0.2.0": "sha256-F1C3KnTzTO1vEouixqO1xnsGmufRyAk+BiRlypNq4kQ="
-    },
-    "lsfg-vk": {
-        "version": "2.0.0",
-        "dev-version": "29",
-        "hash": "sha256-IT8GYis0Sbn1jIEH3vp9S0jaNQHrJ98HA1qG5MFngBk="
-    },
-    "geode-cli": {
-        "version": "3.9.0",
-        "hash": "sha256-3TAo6St1XU6ZvrIrYF0tOs+N0gg8bJO7Uvcgityodww="
-    },
-    "gfn-electron": {
-        "version": "3.0.3",
-        "hash": "sha256-ZMwv0Ge5BrEPZWO3219Fb68ema11qmhvXqrmtq1WjdY="
-    },
-    "opennow": {
-        "version": "0.5.5",
-        "hash": "sha256-iTWPhDPIpXPJjLl5And/IrAlFzM6pavD7xz3A0GhprY="
-    },
-    "cider-2": {
-        "version": "4.0.17",
-        "darwin-version": "4.0.25",
-        "hash": {
-            "x86_64-linux": "sha256-CanpS0yydWOkGKp/8SIVSJ7EavFUs9xBxUgmL9AUXJU=",
-            "aarch64-linux": "sha256-HA68YE3z08yFg+1OETondI44ysT/PKjRmntObS+nTe4=",
-            "aarch64-darwin": "sha256-5c/Hyv43/E5PeOFWygXrd87yE/BsDZ9RYJ6jjcChcf8="
-        }
-    },
-    "iris": {
-        "version": "0.7.1",
-        "hash": {
-            "amd64": "sha256-8x8k3g86lmy9i22dMjnTj04xkpsxxCUiuaVRKpsZIQM=",
-            "arm64": "sha256-BwI4dTRuksof5Pk9CAB0QBYFG8wVSNH1RMnFrM9vB68="
-        }
-    }
+	"bun-baseline": {
+		"version": "1.4.2",
+		"hash": "sha256-Nq85/hrOkT7M4VJ9Uc7Kr9e+uNx8unD4d30RzaQlYxc="
+	},
+	"bedrock-on-linux": {
+		"version": "2.2.7",
+		"hash": "sha256-A7M25J5VZKlvp4BL0FlbVQJuECjWDHsNrYazvC4RVus="
+	},
+	"cage-xtmapper": {
+		"release": "20260208",
+		"version-0.1.5": "sha256-ZmdltOQInGbCBpf/e8D2sB9Rjt4wqd8wwuSFvryHfFA=",
+		"version-0.2.0": "sha256-F1C3KnTzTO1vEouixqO1xnsGmufRyAk+BiRlypNq4kQ="
+	},
+	"lsfg-vk": {
+		"version": "2.0.0",
+		"dev-version": "29",
+		"hash": "sha256-IT8GYis0Sbn1jIEH3vp9S0jaNQHrJ98HA1qG5MFngBk="
+	},
+	"geode-cli": {
+		"version": "3.9.0",
+		"hash": "sha256-3TAo6St1XU6ZvrIrYF0tOs+N0gg8bJO7Uvcgityodww="
+	},
+	"gfn-electron": {
+		"version": "3.0.3",
+		"hash": "sha256-ZMwv0Ge5BrEPZWO3219Fb68ema11qmhvXqrmtq1WjdY="
+	},
+	"opennow": {
+		"version": "0.5.5",
+		"hash": "sha256-iTWPhDPIpXPJjLl5And/IrAlFzM6pavD7xz3A0GhprY="
+	},
+	"cider-2": {
+		"version": "4.0.17",
+		"darwin-version": "4.0.25",
+		"hash": {
+			"x86_64-linux": "sha256-CanpS0yydWOkGKp/8SIVSJ7EavFUs9xBxUgmL9AUXJU=",
+			"aarch64-linux": "sha256-HA68YE3z08yFg+1OETondI44ysT/PKjRmntObS+nTe4=",
+			"aarch64-darwin": "sha256-5c/Hyv43/E5PeOFWygXrd87yE/BsDZ9RYJ6jjcChcf8="
+		}
+	},
+	"iris": {
+		"version": "0.7.1",
+		"hash": {
+			"x86_64-linux": "sha256-8x8k3g86lmy9i22dMjnTj04xkpsxxCUiuaVRKpsZIQM=",
+			"aarch64-linux": "sha256-BwI4dTRuksof5Pk9CAB0QBYFG8wVSNH1RMnFrM9vB68="
+		}
+	}
 }
