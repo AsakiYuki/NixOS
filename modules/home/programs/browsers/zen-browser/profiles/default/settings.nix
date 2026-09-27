@@ -18,5 +18,8 @@
     "zen.updates.show-update-notification" = false;
     "zen.view.window.scheme" = 0;
     "zen.welcome-screen.seen" = true;
+
+    "network.proxy.type" = 2;
+    "network.proxy.autoconfig_url" = "https://adguard.asakiyuki.com/proxy.pac";
   };
 }
