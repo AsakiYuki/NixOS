@@ -170,5 +170,9 @@
     "openai.codex-audio": {
         "version": "26.917.62051",
         "hash": "sha256-dSHfrFPHFjbJdpx0E+iYRC42MXIA2cWJFOTrY0CalNU="
+    },
+    "google.google-antigravity": {
+        "version": "1.5.0",
+        "hash": "sha256-M8DSpZmnznljLCVitwOCEhWOMOeyk04i2K/EGA2kJ5w="
     }
 }

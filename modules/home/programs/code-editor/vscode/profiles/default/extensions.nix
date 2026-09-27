@@ -14,7 +14,6 @@
     tomoki1207.pdf
     edwinkofler.vscode-assorted-languages
     ultram4rine.vscode-choosealicense
-    openai.chatgpt
     zokugun.cron-tasks
     mrmlnc.vscode-duplicate
     ctcuff.font-preview
@@ -23,6 +22,8 @@
     uctakeoff.vscode-counter
     netcorext.uuid-generator
     ms-vscode.hexeditor
+    openai.chatgpt
     openai.codex-audio
+    google.google-antigravity
   ];
 }

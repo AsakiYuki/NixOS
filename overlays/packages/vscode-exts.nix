@@ -292,5 +292,11 @@ in
           description = "Local microphone support for Codex dictation, including remote workspaces.";
           license = lib.licenses.unfree;
         };
+
+        google.google-antigravity = {
+          description = "Bring Google's agent-first development platform to Visual Studio Code.";
+          homepage = "https://antigravity.google/";
+          license = lib.licenses.mit;
+        };
       })
   ]
