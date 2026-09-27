@@ -28,8 +28,5 @@ in {
   config.programs = {
     vscode.profiles = lib.mkIf (!config.programs.disable-module.vscode) (profiles false config.programs.vscode.global);
     vscodium.profiles = lib.mkIf (!config.programs.disable-module.vscodium) (profiles true config.programs.vscodium.global);
-
-    vscode.mutableExtensionsDir = true;
-    vscodium.mutableExtensionsDir = true;
   };
 }
