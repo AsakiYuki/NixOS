@@ -1,34 +1,35 @@
 {
-  "name": "nixos",
-  "version": "1.0.0",
-  "author": "AsakiYuki",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AsakiYuki/nixos.git"
-  },
-  "devDependencies": {
-    "@types/node": "^26.1.2",
-    "dotenv": "^17.4.2"
-  },
-  "bugs": {
-    "url": "https://github.com/AsakiYuki/nixos/issues"
-  },
-  "description": "The Asa's nix configurations",
-  "homepage": "https://github.com/AsakiYuki/nixos#readme",
-  "keywords": [
-    "nix",
-    "nixos",
-    "nixos-config",
-    "nixos-configurations"
-  ],
-  "license": "GPL-3.0",
-  "scripts": {
-    "check-packages-update": "bun run scripts/update/packages.ts",
-    "check-proton-update": "bun run scripts/update/proton.ts",
-    "check-vscode-extensions-update": "bun run scripts/update/vscode-extensions.ts"
-  },
-  "type": "module",
-  "dependencies": {
-    "cheerio": "^1.2.0"
-  }
+	"name": "nixos",
+	"version": "1.0.0",
+	"author": "AsakiYuki",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/AsakiYuki/nixos.git"
+	},
+	"devDependencies": {
+		"@types/node": "^26.1.2",
+		"dotenv": "^17.4.2"
+	},
+	"bugs": {
+		"url": "https://github.com/AsakiYuki/nixos/issues"
+	},
+	"description": "The Asa's nix configurations",
+	"homepage": "https://github.com/AsakiYuki/nixos#readme",
+	"keywords": [
+		"nix",
+		"nixos",
+		"nixos-config",
+		"nixos-configurations"
+	],
+	"license": "GPL-3.0",
+	"scripts": {
+		"check-packages-update": "bun run scripts/update/packages.ts",
+		"check-proton-update": "bun run scripts/update/proton.ts",
+		"check-vscode-extensions-update": "bun run scripts/update/vscode-extensions.ts",
+		"check-firefox-addons-update": "bun run scripts/update/firefox-addons.ts"
+	},
+	"type": "module",
+	"dependencies": {
+		"cheerio": "^1.2.0"
+	}
 }

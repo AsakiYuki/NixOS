@@ -114,6 +114,6 @@ let vscodeExtensions: VscodeExtensions
 
 	await Promise.all([
 		fs.writeFile(filePath, JSON.stringify(vscodeExtensions, null, 4), "utf-8"),
-		fs.writeFile(path.join(__dirname, "../../commit.txt"), descriptions.join("\n")),
+		fs.writeFile(path.join(__dirname, "../../vscode-extensions-commit.txt"), descriptions.join("\n")),
 	])
 })()

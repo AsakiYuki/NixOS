@@ -109,7 +109,7 @@ async function fetchProtonRelease(options: FetchProtonReleaseArgs) {
 
 async function writeCommit() {
 	if (descriptions.length === 0) return
-	await fs.writeFile(path.join(__dirname, "../../commit.txt"), descriptions.join("\n"), "utf-8")
+	await fs.writeFile(path.join(__dirname, "../../proton-commit.txt"), descriptions.join("\n"), "utf-8")
 }
 
 ;(async function main() {

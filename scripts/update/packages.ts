@@ -295,7 +295,7 @@ async function main() {
 
 	await Promise.all([
 		fs.writeFile(path.join(__dirname, "../../assets/packages.json"), JSON.stringify(packages, null, 4)),
-		fs.writeFile(path.join(__dirname, "../../commit.txt"), descriptions.join("\n")),
+		fs.writeFile(path.join(__dirname, "../../packages-commit.txt"), descriptions.join("\n")),
 	])
 }
 

@@ -8,4 +8,5 @@ secret.key
 result
 
 # git
-commit.txt
+/commit.txt
+/*-commit.txt
