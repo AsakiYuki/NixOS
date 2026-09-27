@@ -1,5 +1,5 @@
 {pkgs, ...}: {
   programs.steam = {
-    package = pkgs.millennium-steam;
+    # package = pkgs.millennium-steam;
   };
 }
