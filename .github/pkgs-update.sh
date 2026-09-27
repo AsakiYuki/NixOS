@@ -34,3 +34,12 @@ if [ -f proton-commit.txt ]; then
 else
     echo "[INFO] Cannot found any proton packages update!"
 fi 
+
+bun run check-firefox-addons-update
+if [ -f proton-commit.txt ]; then
+    commit firefox.addons.json \
+        "ci(update-checker/firefox-addons): update firefox addons infos $(date '+%H:%M:%S %d-%m-%Y')" \
+        "firefox-addons-commit.txt"
+else
+    echo "[INFO] Cannot found any firefox addons update!"
+fi 
