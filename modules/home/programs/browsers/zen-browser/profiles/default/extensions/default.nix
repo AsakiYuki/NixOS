@@ -10,8 +10,7 @@ in {
   extensions = {...}: {
     _module.args = args;
 
-    packages = with pkgs.nur.repos.rycee.firefox-addons;
-    with pkgs.nur.repos.ijohanne.firefoxPlugins; [
+    packages = with pkgs.nur.repos.rycee.firefox-addons; [
       enhancer-for-youtube
       ublock-origin
       auth-helper
