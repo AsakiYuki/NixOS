@@ -92,7 +92,7 @@
                 editedTitle = true;
                 id = "acf40c19-6575-47a0-890c-ec1854f2bafa";
                 position = 2103;
-                url = "https://mynixos.org/";
+                url = "https://mynixos.com/";
               };
             };
           };
