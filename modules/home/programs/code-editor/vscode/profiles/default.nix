@@ -10,6 +10,7 @@
       inherit name;
       value = {...}: (globalconfig
         // {
+          mutableExtensionsDir = true;
           imports = [./default] ++ path;
           _module.args = {
             inherit is-codium osconfig pkgs lib unstable-pkgs;
