@@ -1,4 +1,5 @@
-{pkgs, ...} @ args: {
+{pkgs, ...} @ args: let
+in {
   extensionButtons = {
     nav-bar = [
       "authenticator@mymindstorm"
@@ -9,12 +10,13 @@
   extensions = {...}: {
     _module.args = args;
 
-    packages = with pkgs.nur.repos.rycee.firefox-addons; [
+    packages = with pkgs.nur.repos.rycee.firefox-addons;
+    with pkgs.nur.repos.ijohanne.firefoxPlugins; [
+      enhancer-for-youtube
       ublock-origin
       auth-helper
       cookie-editor
       darkreader
-      enhancer-for-youtube
       sponsorblock
       header-editor
       proton-pass
