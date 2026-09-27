@@ -22,8 +22,5 @@
     uctakeoff.vscode-counter
     netcorext.uuid-generator
     ms-vscode.hexeditor
-    openai.chatgpt
-    openai.codex-audio
-    google.google-antigravity
   ];
 }

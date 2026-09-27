@@ -8,6 +8,7 @@
     ../_tools/remote
     ../_tools/themes
     ../_tools/keybinds
+    ../_tools/ai
 
     ./usersettings
     ./extensions.nix
