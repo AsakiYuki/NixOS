@@ -1,7 +1,7 @@
-{unstable-pkgs, ...}: {
+{ unstable-pkgs, ... }: {
   extensions = with unstable-pkgs.vscode-extensions; [
-    # openai.chatgpt
-    # openai.codex-audio
+    openai.chatgpt
+    openai.codex-audio
     google.google-antigravity
   ];
 
