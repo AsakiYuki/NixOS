@@ -14,7 +14,4 @@
     ./extensions.nix
     ./keybindings.nix
   ];
-
-  enableExtensionUpdateCheck = false;
-  enableUpdateCheck = false;
 }
