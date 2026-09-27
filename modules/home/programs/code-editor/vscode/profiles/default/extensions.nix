@@ -23,5 +23,6 @@
     uctakeoff.vscode-counter
     netcorext.uuid-generator
     ms-vscode.hexeditor
+    openai.codex-audio
   ];
 }

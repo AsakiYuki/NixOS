@@ -166,5 +166,9 @@
     "netcorext.uuid-generator": {
         "version": "0.0.5",
         "hash": "sha256-2sdI0eBV7kTpETpqhbrWCJSJxZ0P35QtmllMhlj9sAY="
+    },
+    "openai.codex-audio": {
+        "version": "26.917.62051",
+        "hash": "sha256-dSHfrFPHFjbJdpx0E+iYRC42MXIA2cWJFOTrY0CalNU="
     }
 }

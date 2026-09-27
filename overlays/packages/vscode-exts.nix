@@ -287,5 +287,10 @@ in
           homepage = "https://github.com/arenchen/vscode-uuid-generator";
           license = lib.licenses.mit;
         };
+
+        openai.codex-audio = {
+          description = "Local microphone support for Codex dictation, including remote workspaces.";
+          license = lib.licenses.unfree;
+        };
       })
   ]
