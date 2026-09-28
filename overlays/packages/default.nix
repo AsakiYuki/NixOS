@@ -4,6 +4,7 @@
   ...
 } @ args: (lib.mergeAttrsList [
   (import ./custom-pkgs args)
+  (import ./firefox-addons.nix args)
   (import ./proton-pkgs.nix args)
   (import ./fonts.nix args)
   {
