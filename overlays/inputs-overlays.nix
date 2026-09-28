@@ -3,5 +3,4 @@
 in [
   (importOverlays ./packages)
   inputs.millennium.overlays.default
-  inputs.nur.overlays.default
 ]
