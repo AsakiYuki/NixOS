@@ -8,7 +8,7 @@
       isDefault = true;
       imports = [
         ./workspaces
-        ./extensions
+        ./extensions.nix
         ./essential.nix
         ./keyboard-shortcuts.nix
         ./mods.nix
