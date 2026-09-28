@@ -11,20 +11,20 @@ in {
     _module.args = args;
 
     packages = with pkgs.firefox-addons; [
-      # enhancer-for-youtube
+      enhancer-for-youtube
       ublock-origin
-      # auth-helper
-      # cookie-editor
-      # darkreader
-      # sponsorblock
-      # header-editor
-      # proton-pass
-      # proton-vpn
-      # react-devtools
-      # return-youtube-dislikes
-      # tampermonkey
-      # user-agent-string-switcher
-      # vimium-c
+      auth-helper
+      cookie-editor
+      darkreader
+      sponsorblock
+      header-editor
+      proton-pass
+      proton-vpn
+      react-devtools
+      return-youtube-dislikes
+      tampermonkey
+      user-agent-string-switcher
+      vimium-c
     ];
   };
 }

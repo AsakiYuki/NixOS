@@ -1,13 +1,200 @@
 {
-	"ublock-origin": {
-		"version": "1.75.0",
-		"id": "uBlock0@raymondhill.net",
-		"src": {
-			"url": "https://addons.mozilla.org/firefox/downloads/file/5034826/ublock_origin-1.75.0.xpi",
-			"hash": "sha256-W3RBWGBFY3BkS9gPFhJehlsObDVrtd/PuEBpln6qUoc="
-		},
-		"meta": {
-			"description": "Finally, an efficient wide-spectrum content blocker. Easy on CPU and memory."
-		}
-	}
+    "ublock-origin": {
+        "id": "uBlock0@raymondhill.net",
+        "version": "1.75.0",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5034826/ublock_origin-1.75.0.xpi",
+            "hash": "sha256-W3RBWGBFY3BkS9gPFhJehlsObDVrtd/PuEBpln6qUoc="
+        },
+        "meta": {
+            "name": "uBlock Origin",
+            "description": "Finally, an efficient wide-spectrum content blocker. Easy on CPU and memory.",
+            "homepage": "https://github.com/gorhill/uBlock#ublock-origin",
+            "license": "GNU General Public License v3.0 only",
+            "author": "Raymond Hill"
+        }
+    },
+    "enhancer-for-youtube": {
+        "id": "enhancerforyoutube@maximerf.addons.mozilla.org",
+        "version": "2.0.136",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4933627/enhancer_for_youtube-2.0.136.xpi",
+            "hash": "sha256-OKBCCATQgiT8ROg4rsQy6UfraIsTAPQj7uy7RNMwN/o="
+        },
+        "meta": {
+            "name": "Enhancer for YouTube™",
+            "description": "Take control of YouTube and boost your user experience!",
+            "homepage": "https://www.mrfdev.com/enhancer-for-youtube",
+            "license": "Proprietary License",
+            "author": "Max RF"
+        }
+    },
+    "auth-helper": {
+        "id": "authenticator@mymindstorm",
+        "version": "8.0.2",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4353166/auth_helper-8.0.2.xpi",
+            "hash": "sha256-26uRlHI330yFl/6hsA3OBc9/rqJ3Ij8sUQkPkUiBKmI="
+        },
+        "meta": {
+            "name": "Authenticator",
+            "description": "Authenticator generates 2-Step Verification codes in your browser.",
+            "homepage": "https://github.com/Authenticator-Extension/Authenticator",
+            "license": "MIT License",
+            "author": "mymindstorm"
+        }
+    },
+    "cookie-editor": {
+        "id": "{c3c10168-4186-445c-9c5b-63f12b8e2c87}",
+        "version": "1.13.0",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4241002/cookie_editor-1.13.0.xpi",
+            "hash": "sha256-PW/YOoND36XkRh2DwoViZPt0s2scFlMFFo0BP0gx27A="
+        },
+        "meta": {
+            "name": "Cookie-Editor",
+            "description": "Cookie-Editor lets you efficiently create, edit and delete a cookie for the current tab. Perfect for developing, quickly testing or even manually managing your cookies for your privacy.",
+            "homepage": "https://cookie-editor.com/",
+            "license": "GNU General Public License v3.0 only",
+            "author": "cgagnier"
+        }
+    },
+    "darkreader": {
+        "version": "4.9.133",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5055786/darkreader-4.9.133.xpi",
+            "hash": "sha256-6wbFCW12FhbH8dlUwRUkykv/T+cikETcH84oiowIU6s="
+        },
+        "meta": {
+            "name": "Dark Reader",
+            "description": "Dark mode for every website. Take care of your eyes, use dark theme for night and daily browsing.",
+            "homepage": "https://darkreader.org/",
+            "license": "MIT License",
+            "author": "Dark Reader Ltd"
+        }
+    },
+    "sponsorblock": {
+        "version": "6.1.7",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4897574/sponsorblock-6.1.7.xpi",
+            "hash": "sha256-DVDhYyxvFe4VpUPmcOHFcpdGBaXAJiKRbgjgJoA9+D8="
+        },
+        "meta": {
+            "name": "SponsorBlock - Skip Sponsorships on YouTube",
+            "description": "Easily skip YouTube video sponsors. When you visit a YouTube video, the extension will check the database for reported sponsors and automatically skip known sponsors. You can also report sponsors in videos. Other browsers: https://sponsor.ajay.app",
+            "homepage": "https://sponsor.ajay.app",
+            "license": "GNU Lesser General Public License v3.0 only",
+            "author": "Ajay (SponsorBlock)"
+        }
+    },
+    "header-editor": {
+        "version": "5.2.12",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4822302/header_editor-5.2.12.xpi",
+            "hash": "sha256-K17P5fx25lwpyyyx36Yd4sIyDE9QTELNvObEOPlzM6s="
+        },
+        "meta": {
+            "name": "Header Editor",
+            "description": "Manage browser's requests, include modify the request headers and response headers, redirect requests, cancel requests",
+            "homepage": "https://he.firefoxcn.net/en/",
+            "license": "GNU General Public License v2.0 only",
+            "author": "泷涯"
+        }
+    },
+    "proton-pass": {
+        "version": "1.41.1",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5055526/proton_pass-1.41.1.xpi",
+            "hash": "sha256-9nxYNuXv8/gqw44Dp7J9MLhNu1JG90uyG4tbsV082TY="
+        },
+        "meta": {
+            "name": "Proton Pass",
+            "description": "Free and unlimited password manager to keep your login credentials safe and manage them directly in your browser.",
+            "homepage": "https://proton.me",
+            "license": "GNU General Public License v3.0 only",
+            "author": "Proton"
+        }
+    },
+    "proton-vpn": {
+        "version": "3.0",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/2844710/proton_vpn-3.0.xpi",
+            "hash": "sha256-6xaS8ffZxmn07/YVuNsisCC5zNjNmVuGJAwqa8G4rjc="
+        },
+        "meta": {
+            "name": "Moz Proton VPN",
+            "description": "Theme based on a Firefox backdrop.",
+            "license": "Creative Commons Attribution-NonCommercial-Share Alike 3.0",
+            "author": "Paul"
+        }
+    },
+    "react-devtools": {
+        "version": "6.1.1",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4432990/react_devtools-6.1.1.xpi",
+            "hash": "sha256-staeIgQCvWuLx9gzlIkVsdbcq7RTodUIcqPbhg/ZLEY="
+        },
+        "meta": {
+            "name": "React Developer Tools",
+            "description": "React Developer Tools is a tool that allows you to inspect a React tree, including the component hierarchy, props, state, and more. To get started, just open the Firefox devtools and switch to the \"⚛️ Components\" or \"⚛️ Profiler\" tab.",
+            "homepage": "https://github.com/facebook/react",
+            "license": "MIT License",
+            "author": "React"
+        }
+    },
+    "return-youtube-dislikes": {
+        "version": "4.0.6",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5012638/return_youtube_dislikes-4.0.6.xpi",
+            "hash": "sha256-WXGXSfbfOMFgHKXznAIVjV8AXEPp7uofGVJ/RoyUEhc="
+        },
+        "meta": {
+            "name": "Return YouTube Dislike",
+            "description": "Returns ability to see dislike statistics on youtube",
+            "license": "GNU General Public License v3.0 only",
+            "author": "Dmitry Selivanov"
+        }
+    },
+    "tampermonkey": {
+        "version": "5.5.0",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4797143/tampermonkey-5.5.0.xpi",
+            "hash": "sha256-GQAxx428VpYRSDVgHyyOa4Va0eE0313yePj8FYwGWQg="
+        },
+        "meta": {
+            "name": "Tampermonkey",
+            "description": "Tampermonkey is the world's most popular userscript manager.",
+            "homepage": "https://tampermonkey.net",
+            "license": "All Rights Reserved",
+            "author": "Jan Biniok"
+        }
+    },
+    "user-agent-string-switcher": {
+        "version": "0.7.1",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4997127/user_agent_string_switcher-0.7.1.xpi",
+            "hash": "sha256-c9V7RrG1apCa0ayVBtrla+Ma8kLS06mdawBJ8d3yeTo="
+        },
+        "meta": {
+            "name": "User-Agent Switcher and Manager",
+            "description": "Spoof websites trying to gather information about your web navigation—like your browser type and operating system—to deliver distinct content you may not want.",
+            "homepage": "https://webextension.org/listing/useragent-switcher.html",
+            "license": "Mozilla Public License 2.0",
+            "author": "Ray"
+        }
+    },
+    "vimium-c": {
+        "version": "2.12.3",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4474326/vimium_c-2.12.3.xpi",
+            "hash": "sha256-4aT4zBN5HfuYXCp40z3x6KQPI71uypIXFly3SACd9UA="
+        },
+        "meta": {
+            "name": "Vimium C - All by Keyboard",
+            "description": "A keyboard shortcut tool for keyboard-based page navigation and browser tab operations with an advanced omnibar and global shortcuts",
+            "homepage": "https://github.com/gdh1995/vimium-c",
+            "license": "MIT License",
+            "author": "Dahan Gong"
+        }
+    }
 }
