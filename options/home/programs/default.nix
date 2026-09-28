@@ -1,4 +1,4 @@
-{...}: {
+{ ... }: {
   imports = [
     ./dolphin
     ./kde
@@ -6,5 +6,6 @@
     ./options.nix
     ./vscode.nix
     ./zen-browser.nix
+    ./steam.nix
   ];
 }
