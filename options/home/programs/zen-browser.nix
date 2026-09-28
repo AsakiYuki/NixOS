@@ -41,7 +41,7 @@ in {
           settings,
         }: {
           name = package.meta.addonid;
-          value.toOverwrite = settings;
+          value = settings;
         })
         cfg.extension-settings.override);
     };
