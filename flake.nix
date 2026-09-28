@@ -31,7 +31,6 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     zen-browser.inputs.nixpkgs.follows = "nixpkgs";
     agenix.inputs.nixpkgs.follows = "nixpkgs";
-    agenix.inputs.home-manager.follows = "home-manager";
   };
 
   outputs = {...} @ inputs: let
