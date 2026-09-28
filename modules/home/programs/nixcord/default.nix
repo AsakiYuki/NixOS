@@ -1,20 +1,24 @@
 {
   lib,
   config,
-  unstable-pkgs,
+  pkgs,
   ...
-}: let
+}:
+let
   cfg = config.theme.catppuccin;
-in {
+in
+{
   programs.nixcord = lib.mkIf (!config.programs.disable-module.discord) {
     quickCss = lib.readRootFile "/assets/programs/discord/style.css";
-    discord.package = unstable-pkgs.discord;
+    discord.package = pkgs.discord;
     discord.vencord.enable = true;
 
     config = {
       useQuickCss = true;
       enableReactDevtools = true;
-      themeLinks = ["https://catppuccin.github.io/discord/dist/catppuccin-${cfg.flavour}-${cfg.accent}.theme.css"];
+      themeLinks = [
+        "https://catppuccin.github.io/discord/dist/catppuccin-${cfg.flavour}-${cfg.accent}.theme.css"
+      ];
 
       plugins = {
         blurNsfw.enable = true;
