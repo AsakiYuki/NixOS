@@ -1,10 +1,11 @@
 {pkgs, ...} @ args: let
 in {
   extensionButtons = {
-    nav-bar = [
-      "authenticator@mymindstorm"
-      "78272b6fa58f4a1abaac99321d503a20@proton.me"
-    ];
+    nav-bar = map (addon: addon.meta.addonid) (with pkgs.firefox-addons; [
+      enhancer-for-youtube
+      auth-helper
+      proton-pass
+    ]);
   };
 
   extensions = {...}: {
