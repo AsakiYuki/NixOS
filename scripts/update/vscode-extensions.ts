@@ -62,6 +62,12 @@ async function getExtInfos(extId: string): Promise<ExtensionInfos> {
 	return JSON.parse(await spawnStdout("vsce", ["show", extId, "--json"]))
 }
 
+function toSriHash(hexHash: string): string {
+	const cleanHex = hexHash.trim().replace(/^sha256[:\-]/i, "")
+	const base64 = Buffer.from(cleanHex, "hex").toString("base64")
+	return `sha256-${base64}`
+}
+
 async function checkMarketplaceExtension(extId: string, data: Extension | undefined): Promise<[string, Extension]> {
 	const infos = await getExtInfos(extId)
 	if (!data || !(data.version && data.hash))
@@ -70,7 +76,8 @@ async function checkMarketplaceExtension(extId: string, data: Extension | undefi
 	console.log(`[INFO] Checking update for ${extId}...`)
 
 	const currentVersion = data.version
-	const newVersion = infos.versions[0].version
+	const latestVersionInfo = infos.versions[0]
+	const newVersion = latestVersionInfo.version
 
 	if (currentVersion === newVersion) {
 		console.info(`[SKIP] ${extId} is already up to date (${currentVersion}).`)
@@ -79,21 +86,15 @@ async function checkMarketplaceExtension(extId: string, data: Extension | undefi
 
 	console.info(`[UPDATE] New version found for ${extId}: ${currentVersion} -> ${newVersion}`)
 
-	const vsixSha256 = infos.versions[0].properties.find(
+	const vsixSha256 = latestVersionInfo.properties?.find(
 		({ key }) => key === "Microsoft.VisualStudio.Services.VsixSha256",
 	)
 
-	const convertedHash = await spawnStdout("nix", [
-		"--extra-experimental-features",
-		"nix-command",
-		"hash",
-		"convert",
-		"--to",
-		"sri",
-		"--hash-algo",
-		"sha256",
-		vsixSha256?.value!,
-	])
+	if (!vsixSha256?.value) {
+		throw new Error(`[ERROR] VsixSha256 property not found for ${extId}`)
+	}
+
+	const convertedHash = toSriHash(vsixSha256.value)
 
 	descriptions.push(`${extId} ${newVersion} - Hash: ${convertedHash}`)
 	console.info(`[SUCCESS] Updated ${extId} to v${newVersion}`)
