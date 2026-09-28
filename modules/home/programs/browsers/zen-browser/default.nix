@@ -6,6 +6,7 @@
 }: {
   imports = [
     ./profiles/default
+    ./private-browsing-extensions.nix
     ./policies.nix
   ];
 
