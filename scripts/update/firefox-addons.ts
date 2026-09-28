@@ -31,7 +31,7 @@ async function main() {
 			const data = await fetchFirefoxAddon(currentAddon.id ?? name)
 			const isSameVersion = data.current_version.version === currentAddon.version
 
-			if (isSameVersion && currentAddon.meta?.description) return null
+			if (isSameVersion && currentAddon.meta?.description && currentAddon.id) return null
 
 			const [algo, hex] = data.current_version.file.hash.split(/[:\-]/)
 			const base64 = Buffer.from(hex, "hex").toString("base64")
@@ -51,6 +51,7 @@ async function main() {
 			addons[name] = {
 				...currentAddon,
 				version: data.current_version.version,
+				id: currentAddon.id ?? data.guid,
 				src: {
 					url: data.current_version.file.url,
 					hash,
