@@ -4,7 +4,7 @@
 		"id": "uBlock0@raymondhill.net",
 		"src": {
 			"url": "https://addons.mozilla.org/firefox/downloads/file/5034826/ublock_origin-1.75.0.xpi",
-			"hash": "sha256-A52zLUkBLkDhniL+QpyKGlxGguhdu2jH14MkPHAbMJw="
+			"hash": "sha256-W3RBWGBFY3BkS9gPFhJehlsObDVrtd/PuEBpln6qUoc="
 		},
 		"meta": {
 			"description": "Finally, an efficient wide-spectrum content blocker. Easy on CPU and memory."
