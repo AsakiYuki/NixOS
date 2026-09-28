@@ -11,7 +11,7 @@
     addonid,
     ...
   }: (pkgs.stdenv.mkDerivation {
-    inherit meta;
+    meta = {inherit addonid;} // meta;
 
     name = "${pname}-${version}";
     src = pkgs.fetchurl fetchurl;

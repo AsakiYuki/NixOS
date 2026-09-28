@@ -5,5 +5,6 @@
     ./bash.nix
     ./options.nix
     ./vscode.nix
+    ./zen-broser.nix
   ];
 }
