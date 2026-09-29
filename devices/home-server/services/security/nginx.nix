@@ -2,7 +2,9 @@
   pkgs,
   lib,
   ...
-}: {
+}: let
+  pacFile = toString (pkgs.writeText "proxy.pac" (lib.readRootFile "/assets/public/proxy.pac"));
+in {
   services.nginx = {
     enable = true;
 
@@ -46,7 +48,7 @@
         default = true;
         rejectSSL = true;
         locations."= /proxy.pac" = {
-          alias = toString (pkgs.writeText "proxy.pac" (lib.readRootFile "/assets/public/proxy.pac"));
+          alias = pacFile;
           extraConfig = ''
             default_type application/x-ns-proxy-autoconfig;
           '';
@@ -92,7 +94,7 @@
           '';
         };
         locations."= /proxy.pac" = {
-          alias = "${pacFile}";
+          alias = pacFile;
           extraConfig = ''
             default_type application/x-ns-proxy-autoconfig;
           '';
