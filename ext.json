@@ -1,0 +1,3337 @@
+{
+	"publisher": {
+		"publisherId": "e7d69ca9-dc53-43ae-9107-5dd2f1824cc6",
+		"publisherName": "jbro",
+		"displayName": "jbro",
+		"flags": 2,
+		"domain": null,
+		"isDomainVerified": false
+	},
+	"extensionId": "1cbb7a03-7ba7-4c71-8361-b3faf42136dd",
+	"extensionName": "vscode-default-keybindings",
+	"displayName": "VSCode Default Keybindings",
+	"flags": 260,
+	"lastUpdated": "2026-09-25T16:22:32.517Z",
+	"publishedDate": "2024-07-19T21:20:26.657Z",
+	"releaseDate": "2024-07-19T21:20:26.657Z",
+	"shortDescription": "VSCode Default Keybindings is a keymap that enables you to load VSCode's default keybindings from another OS. Eg. use Mac keybindings on Windows.",
+	"versions": [
+		{
+			"version": "0.2.82",
+			"flags": 1,
+			"lastUpdated": "2026-09-25T16:22:32.517Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.139.1" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "333e552ef7e8f6d95a37ab95925d47c41d9b34b6484e6ac3a9fbde9e5dc06768"
+				}
+			]
+		},
+		{
+			"version": "0.2.81",
+			"flags": 1,
+			"lastUpdated": "2026-09-23T16:00:28.743Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.139.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "8bf7832df2f675b78ff7908721cb8cb3ecceebeef40aa1729c7862f79a4cae99"
+				}
+			]
+		},
+		{
+			"version": "0.2.77",
+			"flags": 1,
+			"lastUpdated": "2026-09-03T15:41:02.833Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.136.1" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "004cd0594ef66f055e0bbc3df707460ebc6b04ff97b8bdb601715f0231516661"
+				}
+			]
+		},
+		{
+			"version": "0.2.76",
+			"flags": 1,
+			"lastUpdated": "2026-09-02T15:52:38.327Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.136.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "0e76fec879020ecb4c62ecd7db3f18dcc63bd3028999e197ecd983cd0f1389ed"
+				}
+			]
+		},
+		{
+			"version": "0.2.74",
+			"flags": 1,
+			"lastUpdated": "2026-07-23T02:10:32.270Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.130.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "089866199293a74f4846da273f2b0e261e787dee5de802a68611b5bcd6cd0c47"
+				}
+			]
+		},
+		{
+			"version": "0.2.73",
+			"flags": 1,
+			"lastUpdated": "2026-07-18T01:53:48.463Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.129.1" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "22d72d508f4d9bfe378693538280647f6beffd58042b611c04586320b02d6e3d"
+				}
+			]
+		},
+		{
+			"version": "0.2.72",
+			"flags": 1,
+			"lastUpdated": "2026-07-16T02:00:42.600Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.129.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "1f20039f64a8952e3036da9364f401602ea8d1ef5ea464a640107f0d66500267"
+				}
+			]
+		},
+		{
+			"version": "0.2.71",
+			"flags": 1,
+			"lastUpdated": "2026-07-15T01:51:40.100Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.128.1" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "168ebe6f18d3c0bf6cd3999c5e890029f41bbcd2d4b210b12450eaf93fe9ae94"
+				}
+			]
+		},
+		{
+			"version": "0.2.70",
+			"flags": 1,
+			"lastUpdated": "2026-07-08T13:53:43.177Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.128.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "ff1a59c96a4b2ddbf2237250c1c12b977a5d91a021e97b5bd84305eff86c731d"
+				}
+			]
+		},
+		{
+			"version": "0.2.69",
+			"flags": 1,
+			"lastUpdated": "2026-07-01T13:01:55.167Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.127.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "341bfda09c0f611516f2144c1daa78701d56a2b18987158e40ee01a03eda3f96"
+				}
+			]
+		},
+		{
+			"version": "0.2.68",
+			"flags": 1,
+			"lastUpdated": "2026-06-24T12:47:57.800Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.126.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "fad9e9987c9ab11268946ea729c5669fd4adfc22cede109dd5c44d73a6187f9d"
+				}
+			]
+		},
+		{
+			"version": "0.2.67",
+			"flags": 1,
+			"lastUpdated": "2026-06-19T13:14:36.730Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.125.1" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "c8d79673d4e9f431a5dd8a0c8819e01b0de8d1f6d36bbf81b4bbddceab7aee70"
+				}
+			]
+		},
+		{
+			"version": "0.2.66",
+			"flags": 1,
+			"lastUpdated": "2026-06-18T00:47:12.747Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.125.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "7e2ec6952ea374f8b0f59e1d208ff418383a44cf039e5049c51a69cdfcf5b5a2"
+				}
+			]
+		},
+		{
+			"version": "0.2.65",
+			"flags": 1,
+			"lastUpdated": "2026-06-12T13:11:00.760Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.124.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "d3174588d4d5418989e8198905a8895a0ffe66bc65e2d367b37c8b35236fea5e"
+				}
+			]
+		},
+		{
+			"version": "0.2.64",
+			"flags": 1,
+			"lastUpdated": "2026-06-12T00:50:56.990Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.124.1" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "55cd403bf5a1b6f74955678f251fd14768b19991157a20214e9aed7f3407b469"
+				}
+			]
+		},
+		{
+			"version": "0.2.63",
+			"flags": 1,
+			"lastUpdated": "2026-06-10T13:12:52.367Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.124.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "57fd5fd221ebdb089415a2da6058c2da5b29f96700dede83f9945646bd4ca047"
+				}
+			]
+		},
+		{
+			"version": "0.2.62",
+			"flags": 1,
+			"lastUpdated": "2026-06-09T20:02:27.073Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.123.1" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "74b9a703b323920bb0a3c2cd457ef968d5ce2a287c9e571fde90baf906913d38"
+				}
+			]
+		},
+		{
+			"version": "0.2.61",
+			"flags": 1,
+			"lastUpdated": "2026-05-27T19:29:42.140Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.121.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "3bf3ef7e5983fd2bfee02740abd51722254a88ed652831fdd695b10de0068051"
+				}
+			]
+		},
+		{
+			"version": "0.2.60",
+			"flags": 1,
+			"lastUpdated": "2026-04-16T09:04:49.153Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.116.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "e7945ea69b304074b26ea0462f32879684b72098e357b9227116a9b1ed6cd6e4"
+				}
+			]
+		},
+		{
+			"version": "0.2.59",
+			"flags": 1,
+			"lastUpdated": "2026-03-26T20:21:14.927Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.113.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "6e60db7f3ce19c551f009b6dda49c6b9d88f2764d1756296f19055fe9e31aa22"
+				}
+			]
+		},
+		{
+			"version": "0.2.58",
+			"flags": 1,
+			"lastUpdated": "2026-02-20T20:53:22.917Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.109.5" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "0ae78afcb992f434b92ccf47686d5d5eeb9bd2b0ced85bfb8e8b91ff2304dde5"
+				}
+			]
+		},
+		{
+			"version": "0.2.57",
+			"flags": 1,
+			"lastUpdated": "2026-02-18T19:17:51.547Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.109.4" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "c8334b72e6c21094adc329b3af34f8caf66344a314a6b151ced0ab372e140652"
+				}
+			]
+		},
+		{
+			"version": "0.2.56",
+			"flags": 1,
+			"lastUpdated": "2026-02-11T18:55:10.337Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.109.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "9ebf4cc9a26a6071a96ce461738dda4bdf034d38af435429d09f3602a92c2649"
+				}
+			]
+		},
+		{
+			"version": "0.2.55",
+			"flags": 1,
+			"lastUpdated": "2026-02-09T07:54:07.697Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.109.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "10239227150aede059c3e88fb2cfd504a2c809980cdfb0bf114cbf7cd2bd35b8"
+				}
+			]
+		},
+		{
+			"version": "0.2.54",
+			"flags": 1,
+			"lastUpdated": "2026-01-24T21:25:00.510Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.108.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "de8a9ae5eb180f0c7b5226894e67c0d2c887a165d826eef359c9cb23b533769e"
+				}
+			]
+		},
+		{
+			"version": "0.2.53",
+			"flags": 1,
+			"lastUpdated": "2026-01-15T12:52:27.800Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.108.1" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "032ce3b2ee6f2521cf1a7ba37c0503b2508f8181215406d21c2473ac861bf015"
+				}
+			]
+		},
+		{
+			"version": "0.2.52",
+			"flags": 1,
+			"lastUpdated": "2025-12-27T19:14:52.400Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.107.1" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "28a659d4f8392b0148e2a65c0229d18515fcdb83636b9b6215a204a6efd6d051"
+				}
+			]
+		},
+		{
+			"version": "0.2.51",
+			"flags": 1,
+			"lastUpdated": "2025-12-11T18:27:09.977Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.107.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "489f988212c9316aaf36cbe130b2f3c8f824022cbf83e5a5a1b5c1c7499418bb"
+				}
+			]
+		},
+		{
+			"version": "0.2.50",
+			"flags": 1,
+			"lastUpdated": "2025-11-27T20:18:46.303Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.106.3" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "fa294bb0d941ebb66a3889a607c76df903c80924a4aea03b1ffa0163caf1b86a"
+				}
+			]
+		},
+		{
+			"version": "0.2.49",
+			"flags": 1,
+			"lastUpdated": "2025-11-20T22:21:51.817Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.106.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "d60a0fcf63d4a6ea24a983b4c796427c03d93d360c96f02115edce0823f78ccb"
+				}
+			]
+		},
+		{
+			"version": "0.2.47",
+			"flags": 1,
+			"lastUpdated": "2025-11-14T21:06:03.330Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.106.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "5978c59e79df477f20b6b08983d338e33722c4fba44fbf6e2edbb57401ffb770"
+				}
+			]
+		},
+		{
+			"version": "0.2.46",
+			"flags": 1,
+			"lastUpdated": "2025-10-18T11:52:42.380Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.105.1" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "d2ce26c53100d08341fe7118e4b024c3650fecc54ee7f266bcf29ea4cac6b31e"
+				}
+			]
+		},
+		{
+			"version": "0.2.45",
+			"flags": 1,
+			"lastUpdated": "2025-10-05T19:13:44.953Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.104.3" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "08d4245cdb3551e1f892554416bdd5336165d7c1f802bcb11ce85cf2571f254a"
+				}
+			]
+		},
+		{
+			"version": "0.2.44",
+			"flags": 1,
+			"lastUpdated": "2025-09-26T16:46:50.597Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.104.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "b41166ce94b145bf660197edab7bb70d89026a6c79ce579a27e2f70e54c85137"
+				}
+			]
+		},
+		{
+			"version": "0.2.43",
+			"flags": 1,
+			"lastUpdated": "2025-09-18T11:34:19.297Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.104.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "99848f64469bc2508093477973e8f11bfd29dd723961617a199f28c2668482d0"
+				}
+			]
+		},
+		{
+			"version": "0.2.42",
+			"flags": 1,
+			"lastUpdated": "2025-08-26T19:22:38.633Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.103.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "00f2c78f0e57f9b6ed0c07fb181ad02db32e875aff7e5ccd9175a6e14c4f172b"
+				}
+			]
+		},
+		{
+			"version": "0.2.41",
+			"flags": 1,
+			"lastUpdated": "2025-08-08T09:17:47.667Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.103.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "74da149e2f45d711308dae8b44346c2062095728691745df82e2009258b09395"
+				}
+			]
+		},
+		{
+			"version": "0.2.40",
+			"flags": 1,
+			"lastUpdated": "2025-07-24T17:11:55.320Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.102.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "47077b0cc6ce045494dfa073a09694756cc21b1c3aa748b02e9e9ffd774020f6"
+				}
+			]
+		},
+		{
+			"version": "0.2.39",
+			"flags": 1,
+			"lastUpdated": "2025-07-22T20:08:48.503Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.102.1" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "e90deb3816eab44fb3b673597d28c45c2824facf2a9b50f0325c769c0906241c"
+				}
+			]
+		},
+		{
+			"version": "0.2.38",
+			"flags": 1,
+			"lastUpdated": "2025-07-10T18:37:13.807Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.102.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "05ee4e42df218344593f9f869a03ae536442d11cb2595d2312d361abb58151b6"
+				}
+			]
+		},
+		{
+			"version": "0.2.37",
+			"flags": 1,
+			"lastUpdated": "2025-06-28T21:05:26.367Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.101.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "b28633b65f89b152e56324d7ce39d4394b7e7c20b9397780b4861f8fea10f513"
+				}
+			]
+		},
+		{
+			"version": "0.2.36",
+			"flags": 1,
+			"lastUpdated": "2025-06-26T17:13:59.883Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.101.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "79a0ceda5d8f1f07214f7d5a924b446b6d8cb815d4b8fba2256ee0e9810d6b1d"
+				}
+			]
+		},
+		{
+			"version": "0.2.35",
+			"flags": 1,
+			"lastUpdated": "2025-06-23T17:37:03.220Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.101.1" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "8716d6142f2bc5c43fd29a139fa8e414d5612a400f7d758a7e5c2182a1a7c48d"
+				}
+			]
+		},
+		{
+			"version": "0.2.34",
+			"flags": 1,
+			"lastUpdated": "2025-06-19T17:26:31.110Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.101.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "8d5ca0283226978a60ae290a28ba6974a764637a2380436b8523689d49563cd7"
+				}
+			]
+		},
+		{
+			"version": "0.2.33",
+			"flags": 1,
+			"lastUpdated": "2025-06-18T19:11:09.733Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.101.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "6b6db3666929c8a7c7588a1e0bef3a806d5a1d9456e972e1bae58b53c08ecb75"
+				}
+			]
+		},
+		{
+			"version": "0.2.32",
+			"flags": 1,
+			"lastUpdated": "2025-06-18T09:48:36.150Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.101.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "6ff5ef858c427cb392f55300e342a44f0b15c92ca225792c0f43adc48a0b8690"
+				}
+			]
+		},
+		{
+			"version": "0.2.31",
+			"flags": 1,
+			"lastUpdated": "2025-06-09T20:49:13.860Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.100.3" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "a809f523ec1d8ac4558f94731fd12eec02c7f72a9f769379a932424b870cca24"
+				}
+			]
+		},
+		{
+			"version": "0.2.30",
+			"flags": 1,
+			"lastUpdated": "2025-06-02T19:32:17.370Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.100.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "e4137e7461b184b833063ecd326dc3edd8ff88f0892b5f4c2ab0a61fe77bb656"
+				}
+			]
+		},
+		{
+			"version": "0.2.29",
+			"flags": 1,
+			"lastUpdated": "2025-05-23T20:18:22.183Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.100.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "2b2408267631edde49c05c830c26bafa3e3dde96b77ed63f71963608ecee5e1e"
+				}
+			]
+		},
+		{
+			"version": "0.2.28",
+			"flags": 1,
+			"lastUpdated": "2025-05-22T21:28:20.613Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.100.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "42d2b91c7e36e141b1c75687c275b07520188b1cb71983cfd16aeb2c27d70cdd"
+				}
+			]
+		},
+		{
+			"version": "0.2.27",
+			"flags": 1,
+			"lastUpdated": "2025-05-22T12:31:01.380Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.100.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "b4ec763bf90d420d0b3d766ecf2f070f7621979a55b8d763882ca4ff23b1cc8f"
+				}
+			]
+		},
+		{
+			"version": "0.2.26",
+			"flags": 1,
+			"lastUpdated": "2025-05-22T12:28:52.247Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.100.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "2744cdb5bc7d6598e541563791f700e2ad144816052d1c05f11fc6a34e23d7e3"
+				}
+			]
+		},
+		{
+			"version": "0.2.25",
+			"flags": 1,
+			"lastUpdated": "2025-05-22T12:26:44.320Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.100.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "8adee699427754cbf1e99aeebf8d1a739068cadbada360598b4540c3f80a3652"
+				}
+			]
+		},
+		{
+			"version": "0.2.24",
+			"flags": 1,
+			"lastUpdated": "2025-05-22T12:21:53.760Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.100.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "c07be3bd6a707b77550daf105b2bcb031e9fcdbc66a8981d8c50e1a3aaa5480a"
+				}
+			]
+		},
+		{
+			"version": "0.2.23",
+			"flags": 1,
+			"lastUpdated": "2025-05-07T18:50:29.013Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.99.3" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "180acbf9a745841c17020ee5b23a8d2d3cf87524445f36e1db2f942988f75d8f"
+				}
+			]
+		},
+		{
+			"version": "0.2.22",
+			"flags": 1,
+			"lastUpdated": "2025-05-04T20:11:13.933Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.99.3" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "09054d6f3310c39cb303a3cf6c97c639d6f77eb042a8091edf626c6262cfb0ae"
+				}
+			]
+		},
+		{
+			"version": "0.2.21",
+			"flags": 1,
+			"lastUpdated": "2025-05-04T20:00:10.563Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.99.3" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "8e9cce73dcd09711ddfe5e877c362d80a76bd8cecab476d1439500cb1b849b77"
+				}
+			]
+		},
+		{
+			"version": "0.2.20",
+			"flags": 1,
+			"lastUpdated": "2025-04-29T19:54:18.687Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.99.3" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "6c95cabbec036ebed8ca01372a41232d8dc1a26e904f785229ebedafbddb56aa"
+				}
+			]
+		},
+		{
+			"version": "0.2.19",
+			"flags": 1,
+			"lastUpdated": "2025-04-23T10:33:49.657Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.99.3" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "a0d356a92e8549a2c9573dafc3391a016335d117e6629bb7635136bfba17ef5a"
+				}
+			]
+		},
+		{
+			"version": "0.2.18",
+			"flags": 1,
+			"lastUpdated": "2025-04-19T16:14:39.107Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.99.3" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "e195ba6438235b78a3cd4cc1df15311e6e2bfeb50d39d6edf752e50a32bd78ef"
+				}
+			]
+		},
+		{
+			"version": "0.2.17",
+			"flags": 1,
+			"lastUpdated": "2025-04-14T19:13:55.630Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.99.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "480449f895b6fe8e6d98215489cbd0f9e98233046073f963ac7c925fae59b63a"
+				}
+			]
+		},
+		{
+			"version": "0.2.16",
+			"flags": 1,
+			"lastUpdated": "2025-03-25T13:23:44.830Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.98.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "5e554913522b262a02da94e400b481e28ef829a189bc1d7aeacbf1a50cecfb1c"
+				}
+			]
+		},
+		{
+			"version": "0.2.15",
+			"flags": 1,
+			"lastUpdated": "2025-02-26T15:10:39.510Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.97.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "e7a176d505c5c700256a4b3771f006e9b112d2af7ac466cb4b4460656f26415a"
+				}
+			]
+		},
+		{
+			"version": "0.2.14",
+			"flags": 1,
+			"lastUpdated": "2025-02-18T19:22:57.557Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.97.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "30110247addd2ccdfb6230c40d378877dd834d2f2383c9d052544632814afb53"
+				}
+			]
+		},
+		{
+			"version": "0.2.13",
+			"flags": 1,
+			"lastUpdated": "2025-02-12T19:22:17.550Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.97.1" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "d47cb59ab5f0f621d7ae793019a1c9f311c14889955440a9144a162951e69115"
+				}
+			]
+		},
+		{
+			"version": "0.2.12",
+			"flags": 1,
+			"lastUpdated": "2025-01-19T19:48:32.517Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.96.4" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "d423f2767906f2c13b9966f16cdc368c2da18a50e1649929c11502feb4fa7611"
+				}
+			]
+		},
+		{
+			"version": "0.2.11",
+			"flags": 1,
+			"lastUpdated": "2025-01-14T06:18:27.333Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.96.3" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "ac53dc5cd2cad4fb782e2372b907b53f533002243cab7d09afc3ca172fcec08d"
+				}
+			]
+		},
+		{
+			"version": "0.2.10",
+			"flags": 1,
+			"lastUpdated": "2025-01-02T18:31:38.370Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.96.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "db556f5c998033f037d22daa8af8c419514878062086e556bb17bbe4c1ff8336"
+				}
+			]
+		},
+		{
+			"version": "0.2.9",
+			"flags": 1,
+			"lastUpdated": "2024-12-13T14:03:45.270Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.96.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "5939e9434f3b2f50defff3f4485f98ac4d81ec0a49d7d975a0382116f35e6b41"
+				}
+			]
+		},
+		{
+			"version": "0.2.8",
+			"flags": 1,
+			"lastUpdated": "2024-11-22T17:21:34.317Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.95.3" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "a3b9bb8630c2161cfe369a44eadacc2ac62d453cafbeeb626378294119ce760d"
+				}
+			]
+		},
+		{
+			"version": "0.2.7",
+			"flags": 1,
+			"lastUpdated": "2024-11-01T23:09:36.663Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.95.1" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "2cb274f1fb21b578e4ba4507017a65182af19d27c7ab0172a9495bea23dfaf0c"
+				}
+			]
+		},
+		{
+			"version": "0.2.6",
+			"flags": 1,
+			"lastUpdated": "2024-10-30T10:57:43.727Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.95.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{ "key": "Microsoft.VisualStudio.Code.EnabledApiProposals", "value": "" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "7fa7ecc512fa5ce902ba80636c27f0eae778f6e880a6f3292bf8d170569f81b1"
+				}
+			]
+		},
+		{
+			"version": "0.2.5",
+			"flags": 1,
+			"lastUpdated": "2024-10-19T19:52:30.820Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.94.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "60632245b7ae4b84ed4c578b5f2135279926670707fe46c1086321a76780ec75"
+				}
+			]
+		},
+		{
+			"version": "0.2.4",
+			"flags": 1,
+			"lastUpdated": "2024-10-06T17:14:49.827Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.94.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "630e177f15c900858d5aff8ac6794190db9ac8bccda82f61b288dd9884e188df"
+				}
+			]
+		},
+		{
+			"version": "0.2.3",
+			"flags": 1,
+			"lastUpdated": "2024-09-14T17:55:09.980Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.93.1" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "4ea1053caa1a1923ac981457e57e57498da43643248c26882bc74823a4e185c5"
+				}
+			]
+		},
+		{
+			"version": "0.2.2",
+			"flags": 1,
+			"lastUpdated": "2024-09-09T07:31:35.587Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.93.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "630e6d9ad11ea6e63eedf6823bcfa9fa3fed915f1787a2e0a2c48b71ef3dd91e"
+				}
+			]
+		},
+		{
+			"version": "0.2.1",
+			"flags": 0,
+			"lastUpdated": "2024-08-20T18:23:07.870Z",
+			"validationResultMessage": "Something went wrong, please retry after sometime.",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.92.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "2a48441dbd27739cfc4c4f5013645c7c07a116b97212bb8ae2adcb9fe6c91cde"
+				}
+			]
+		},
+		{
+			"version": "0.2.0",
+			"flags": 1,
+			"lastUpdated": "2024-08-19T13:23:53.983Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.92.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "7b5abfa1a60a1c5017fc978fff619e8c79002e1f66a34375ed3c4298041212ed"
+				}
+			]
+		},
+		{
+			"version": "0.1.5",
+			"flags": 1,
+			"lastUpdated": "2024-08-19T11:01:06.950Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.92.2" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "cd9f034f54a2b869d1a23520920ec00e5df8e0c00024a7b886b80e54078a9752"
+				}
+			]
+		},
+		{
+			"version": "0.1.4",
+			"flags": 1,
+			"lastUpdated": "2024-08-12T17:23:53.023Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.92.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "7ff1bf745fa7d3a90123ffe02a12f814f20ccaea7655cb139e35ba70d3768c93"
+				}
+			]
+		},
+		{
+			"version": "0.1.3",
+			"flags": 1,
+			"lastUpdated": "2024-08-12T17:10:54.443Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.92.0" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "833eaa0a59af8931aa5a362ac95955ae63df69929c12b3bf0fad530fbfb51732"
+				}
+			]
+		},
+		{
+			"version": "0.1.2",
+			"flags": 1,
+			"lastUpdated": "2024-08-06T19:50:58.367Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.91.1" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "947bde09614d78bd700581c20ff0d1a5ca34b366e9f85ebfc5df0e024148c4c4"
+				}
+			]
+		},
+		{
+			"version": "0.1.1",
+			"flags": 1,
+			"lastUpdated": "2024-07-22T22:02:35.370Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github.com/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.91.1" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "0deeefbbf94dddb995260fea643363fdec0656cbb1489afb973d812faf815046"
+				}
+			]
+		},
+		{
+			"version": "0.1.0",
+			"flags": 1,
+			"lastUpdated": "2024-07-21T19:11:24.413Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.91.1" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "19121b893d7e37519bc573ccb2e63d509a9dfefd0d1ae667fbf4dab64e85d31b"
+				}
+			]
+		},
+		{
+			"version": "0.0.1",
+			"flags": 1,
+			"lastUpdated": "2024-07-19T21:23:17.423Z",
+			"properties": [
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Getstarted",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Support",
+					"value": "https://github/jbro/vscode-default-keybindings/issues"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Learn",
+					"value": "https://github.com/jbro/vscode-default-keybindings"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.Source",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{
+					"key": "Microsoft.VisualStudio.Services.Links.GitHub",
+					"value": "https://github.com/jbro/vscode-default-keybindings.git"
+				},
+				{ "key": "Microsoft.VisualStudio.Code.Engine", "value": "^1.91.1" },
+				{ "key": "Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown", "value": "true" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionDependencies", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionPack", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.LocalizedLanguages", "value": "" },
+				{ "key": "Microsoft.VisualStudio.Code.ExtensionKind", "value": "ui,workspace,web" },
+				{ "key": "Microsoft.VisualStudio.Services.Content.Pricing", "value": "Free" },
+				{
+					"key": "Microsoft.VisualStudio.Services.VsixSha256",
+					"value": "a1b378d68e961ae74ff30e41f9974c37de10e3b2065a6aaeb5cec5edb8d752a4"
+				}
+			]
+		}
+	],
+	"categories": ["Keymaps"],
+	"tags": ["__web_extension", "keybindings", "keymap", "linux", "mac", "macos", "windows"],
+	"statistics": [
+		{ "statisticName": "install", "value": 2050 },
+		{ "statisticName": "averagerating", "value": 5 },
+		{ "statisticName": "ratingcount", "value": 1 },
+		{ "statisticName": "trendingdaily", "value": 0 },
+		{ "statisticName": "trendingmonthly", "value": 3.9081582804103565 },
+		{ "statisticName": "trendingweekly", "value": 0.8793356130923302 },
+		{ "statisticName": "updateCount", "value": 10479 },
+		{ "statisticName": "weightedRating", "value": 4.500064696304763 },
+		{ "statisticName": "downloadCount", "value": 2315 }
+	],
+	"deploymentType": 0
+}

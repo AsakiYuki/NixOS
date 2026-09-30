@@ -4,7 +4,6 @@ import fs from "fs/promises"
 import path from "path"
 import { spawnStdout } from "../helpers/shell"
 import { UUID } from "crypto"
-import { info } from "console"
 
 interface Extension {
 	version: string
