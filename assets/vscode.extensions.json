@@ -1,15 +1,14 @@
 {
     "jbro": {
         "vscode-default-keybindings": {
+            "src": {
+                "version": "0.2.83",
+                "hash": "sha256-+Aa/8Ohf9fCXaOkJO7rAmUwBOGT3ufdzULvjXjQ6F6I="
+            },
             "meta": {
-                "extension_id": "jbro.vscode-default-keybindings",
                 "description": "VSCode Default Keybindings is a keymap that enables you to load VSCode's default keybindings from another OS. Eg. use Mac keybindings on Windows.",
                 "homepage": "https://github.com/jbro/vscode-default-keybindings",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=jbro.vscode-default-keybindings"
-            },
-            "src": {
-                "version": "0.2.82",
-                "hash": "sha256-Mz5VLvfo9tlaN6uVkl1HxB2bNLZITmrDqfvenl3AZ2g="
             }
         }
     },
