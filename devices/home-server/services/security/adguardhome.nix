@@ -5,6 +5,13 @@
     openFirewall = true;
 
     settings = {
+      filtering = {
+        protection_enabled = true;
+        filtering_enabled = true;
+        parental_enabled = false;
+        safebrowsing_enabled = false;
+      };
+
       dns = {
         bind_hosts = [
           "0.0.0.0"
