@@ -53,13 +53,21 @@ export class VSCE {
 		return Object.fromEntries(properties.map(({ key, value }) => [key, value]))
 	}
 
+	static getPropertyByKey(key: string, properties: Property[]) {
+		return properties.find(property => property.key === key)?.value
+	}
+
 	static standardizeStatistic(statistics: Statistic[]): Record<string, number> {
 		return Object.fromEntries(statistics.map(({ statisticName, value }) => [statisticName, value]))
+	}
+
+	static toSriHash(hexHash: string) {
+		const cleanHex = hexHash.trim().replace(/^sha256[:\-]/i, "")
+		const base64 = Buffer.from(cleanHex, "hex").toString("base64")
+		return `sha256-${base64}`
 	}
 
 	static async show(extensionId: string): Promise<ExtensionInfo> {
 		return await VSCE.exec("show", extensionId)
 	}
 }
-
-VSCE.show("jbro.vscode-default-keybindings").then(v => console.log(JSON.stringify(v.extensionId)))
