@@ -520,11 +520,11 @@
         }
     },
     "media-downloader-unleashed": {
-        "version": "4.1.2",
+        "version": "4.1.4",
         "id": "{dab9a10d-f9c5-4e8d-9351-67531e85b508}",
         "src": {
-            "url": "https://addons.mozilla.org/firefox/downloads/file/5054745/media_downloader_unleashed-4.1.2.xpi",
-            "hash": "sha256-PLw4C5BOmjI8hwnoahc2pGgFlLM8D8YgpQaJVdNSp20="
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5073400/media_downloader_unleashed-4.1.4.xpi",
+            "hash": "sha256-oaz4KzPpnQalKoEzWRbveaNNR1BgIbChHNtXiDEs814="
         },
         "meta": {
             "name": "Media Downloader Unleashed!!",
