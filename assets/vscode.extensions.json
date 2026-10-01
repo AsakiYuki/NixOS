@@ -163,8 +163,8 @@
         },
         "codex-audio": {
             "src": {
-                "version": "26.928.31416",
-                "hash": "sha256-JvJI0lHgH4zqFEjBsEsGBXaO+PTfFBAGS1JAJxdPA5M="
+                "version": "26.928.40906",
+                "hash": "sha256-ddk3Z7FIdDDM0LKRLkb7BhyCiB67jAQI+4nm16AAUtY="
             },
             "meta": {
                 "description": "Local microphone support for Codex dictation, including remote workspaces.",
