@@ -152,25 +152,23 @@
     },
     "openai": {
         "chatgpt": {
+            "src": {
+                "version": "26.5928.31416",
+                "hash": "sha256-wLFycBlF6ZOJr2hrM76rUWaA5QKpPjdWsyQ1pk2oTnw="
+            },
             "meta": {
-                "extension_id": "openai.chatgpt",
                 "description": "Codex is a coding agent that works with you everywhere you code — included in ChatGPT Plus, Pro, Business, Edu, and Enterprise plans.",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=openai.chatgpt"
-            },
-            "src": {
-                "version": "26.5917.62051",
-                "hash": "sha256-v8LLcaS7gkhmEiCywgXJiqpcz8z/p18PSn4WFuYQjQ8="
             }
         },
         "codex-audio": {
+            "src": {
+                "version": "26.928.31416",
+                "hash": "sha256-JvJI0lHgH4zqFEjBsEsGBXaO+PTfFBAGS1JAJxdPA5M="
+            },
             "meta": {
-                "extension_id": "openai.codex-audio",
                 "description": "Local microphone support for Codex dictation, including remote workspaces.",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=openai.codex-audio"
-            },
-            "src": {
-                "version": "26.917.62051",
-                "hash": "sha256-dSHfrFPHFjbJdpx0E+iYRC42MXIA2cWJFOTrY0CalNU="
             }
         }
     },
