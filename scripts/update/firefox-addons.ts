@@ -61,7 +61,7 @@ async function main() {
 					...(currentAddon.meta || {}),
 				},
 			}
-			console.log(`[INFO] New update found: ${data.guid} - ${data.current_version.version} - ${hash}`)
+			console.log(`[INFO] New update found: ${name} - ${data.current_version.version} - ${hash}`)
 			commits.push(`${data.guid} ${data.current_version.version} - Hash: ${hash}`)
 		}),
 	)
