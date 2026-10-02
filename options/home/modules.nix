@@ -2,6 +2,7 @@
   options.programs.disable-module = {
     vscode = lib.mkEnableOption "vscode";
     vscodium = lib.mkEnableOption "vscodium";
+    antigravity = lib.mkEnableOption "antigravity";
     firefox = lib.mkEnableOption "firefox";
     zen-browser = lib.mkEnableOption "zen-browser";
     dolphin = lib.mkEnableOption "dolphin";

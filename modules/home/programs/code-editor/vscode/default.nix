@@ -17,4 +17,9 @@ in {
     inherit argvSettings;
     package = unstable-pkgs.vscodium;
   };
+
+  programs.antigravity = lib.mkIf (!config.programs.disable-module.antigravity) {
+    inherit argvSettings;
+    package = unstable-pkgs.antigravity-ide;
+  };
 }

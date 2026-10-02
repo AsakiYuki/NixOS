@@ -28,6 +28,6 @@ in {
   config.programs = {
     vscode.profiles = lib.mkIf (!config.programs.disable-module.vscode) (profiles "vscode" config.programs.vscode.global);
     vscodium.profiles = lib.mkIf (!config.programs.disable-module.vscodium) (profiles "vscodium" config.programs.vscodium.global);
-    antigravity.profiles = lib.mkIf (!config.programs.disable-module.vscodium) (profiles "antigravity" config.programs.vscodium.global);
+    antigravity.profiles = lib.mkIf (!config.programs.disable-module.antigravity) (profiles "antigravity" config.programs.vscodium.global);
   };
 }
