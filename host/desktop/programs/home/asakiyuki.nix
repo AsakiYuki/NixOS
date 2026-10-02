@@ -1,8 +1,4 @@
-{
-  pkgs,
-  unstable-pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   programs = {
     # Code editors
     nixvim.enable = true;
@@ -10,7 +6,6 @@
     jetbrains.datagrip.enable = true;
     android-studio.enable = true;
     antigravity.enable = true;
-    antigravity.package = unstable-pkgs.antigravity-ide;
     zed-editor.enable = true;
     vscodium.enable = true;
     slack.enable = true;

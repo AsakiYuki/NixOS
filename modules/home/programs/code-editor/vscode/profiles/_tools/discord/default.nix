@@ -1,13 +1,16 @@
 {
   unstable-pkgs,
-  is-codium,
+  editor-name,
   ...
-}: {
+}: let
+  map-name = {
+    "vscode" = "VSCode";
+    "vscodium" = "VSCodium";
+    "antigravity" = "Antigravity";
+  };
+in {
   userSettings = {
-    "vscord.app.name" =
-      if is-codium
-      then "VSCodium"
-      else "VSCode";
+    "vscord.app.name" = map-name.${editor-name};
   };
 
   extensions = with unstable-pkgs.vscode-extensions; [

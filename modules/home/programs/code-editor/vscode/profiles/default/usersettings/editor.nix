@@ -2,7 +2,6 @@
   userSettings = {
     "editor.formatOnSave" = true;
     "files.autoSave" = "onFocusChange";
-    "vscord.app.name" = "VSCodium";
     "editor.minimap.enabled" = false;
     "explorer.confirmDelete" = false;
     "explorer.confirmDragAndDrop" = false;
