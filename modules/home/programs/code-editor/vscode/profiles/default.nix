@@ -6,13 +6,13 @@
   lib,
   ...
 }: let
-  profiles = editor-name: globalconfig: (lib.mapAttrs' (name: path: {
+  profiles = editor: globalconfig: (lib.mapAttrs' (name: path: {
       inherit name;
       value = {...}: (globalconfig
         // {
           imports = [./default] ++ path;
           _module.args = {
-            inherit editor-name osconfig pkgs lib unstable-pkgs;
+            inherit editor osconfig pkgs lib unstable-pkgs;
             hmconfig = config;
           };
         });
