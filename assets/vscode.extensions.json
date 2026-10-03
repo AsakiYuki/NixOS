@@ -607,5 +607,18 @@
                 "hash": "sha256-3tIt0tOrQ0jiJ5hJj+/zvBH6SjxzNbujzi9wJeieAnI="
             }
         }
+    },
+    "redcmd": {
+        "json-embedded-languages": {
+            "src": {
+                "version": "0.5.0",
+                "hash": "sha256-F4LIEJwjC46mAvq8mS17GsWSdA+JhvDWviOGtx21s6I="
+            },
+            "meta": {
+                "description": "Embedded Language(s) inside JSON",
+                "homepage": "https://marketplace.visualstudio.com/items?itemName=RedCMD.json-embedded-languages",
+                "downloadPage": "https://marketplace.visualstudio.com/items?itemName=redcmd.json-embedded-languages"
+            }
+        }
     }
 }

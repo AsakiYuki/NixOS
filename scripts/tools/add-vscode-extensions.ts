@@ -9,8 +9,8 @@ async function main(...args: string[]) {
 	await Promise.all(
 		args
 			.map(extension => {
-				const getExtNameRegex = /(?<=itemName\=)(\w|-)+.(\w|-)+/
-				const isExtName = /^(\w|-)+.(\w|-)+$/
+				const getExtNameRegex = /(?<=((itemName\=)|(ext install )))(\w|-)+\.(\w|-)+/
+				const isExtName = /^((\w|-)+\.(\w|-)+)$/
 				if (getExtNameRegex.test(extension)) extension = extension.match(getExtNameRegex)?.[0]!
 				if (!isExtName.test(extension)) return null
 				return extension.toLowerCase().split(".")
