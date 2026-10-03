@@ -17,15 +17,6 @@ else
     echo "[INFO] Cannot found any packages update!"
 fi
 
-bun run check-vscode-extensions-update
-if [ -f vscode-extensions-commit.txt ]; then
-    commit assets/vscode.extensions.json \
-        "ci(update-checker/packages): update vscode extensions infos $(date '+%H:%M:%S %d-%m-%Y')" \
-        "vscode-extensions-commit.txt"
-else
-    echo "[INFO] Cannot found any vscode extensions update!"
-fi 
-
 bun run check-proton-update
 if [ -f proton-commit.txt ]; then
     commit assets/proton.json \
@@ -33,6 +24,15 @@ if [ -f proton-commit.txt ]; then
         "proton-commit.txt"
 else
     echo "[INFO] Cannot found any proton packages update!"
+fi 
+
+bun run check-vscode-extensions-update
+if [ -f vscode-extensions-commit.txt ]; then
+    commit assets/vscode.extensions.json \
+        "ci(update-checker/vscode-extensions): update vscode extensions infos $(date '+%H:%M:%S %d-%m-%Y')" \
+        "vscode-extensions-commit.txt"
+else
+    echo "[INFO] Cannot found any vscode extensions update!"
 fi 
 
 bun run check-firefox-addons-update
