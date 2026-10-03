@@ -5,8 +5,8 @@ import { VSCE } from "../helpers/vsce"
 import path from "path"
 
 async function main() {
-	const extensionsDir = path.join(__dirname, "../../assets/vscode.extensions.json")
-	const data: Record<string, Record<string, any>> = JSON.parse(await fs.readFile(extensionsDir, "utf-8"))
+	const filepath = path.join(__dirname, "../../assets/vscode.extensions.json")
+	const data: Record<string, Record<string, any>> = JSON.parse(await fs.readFile(filepath, "utf-8"))
 	const commits: string[] = []
 
 	await Promise.all(
@@ -42,7 +42,7 @@ async function main() {
 	)
 
 	await Promise.all([
-		fs.writeFile(extensionsDir, JSON.stringify(data, null, 4), "utf-8"),
+		fs.writeFile(filepath, JSON.stringify(data, null, 4), "utf-8"),
 		fs.writeFile(path.join(__dirname, "../../vscode-extensions-commit.txt"), commits.join("\n")),
 	])
 }
