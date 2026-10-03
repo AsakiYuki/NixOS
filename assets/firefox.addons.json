@@ -727,5 +727,35 @@
             "license": "GNU General Public License v2.0 only",
             "author": "Giorgio Maone"
         }
+    },
+    "image-search-options": {
+        "version": "3.0.12",
+        "id": "{4a313247-8330-4a81-948e-b79936516f78}",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/3059971/image_search_options-3.0.12.xpi",
+            "hash": "sha256-H73YWX/DKxvhEwKpWOo7orAQ7c/rQywpljeyxYxv0Gg="
+        },
+        "meta": {
+            "name": "Image Search Options",
+            "description": "A customizable reverse image search tool that conveniently presents a variety of top image search engines.",
+            "homepage": "http://saucenao.com/",
+            "license": "Mozilla Public License 1.1",
+            "author": "Xamayon"
+        }
+    },
+    "auto-tab-discard": {
+        "version": "0.7.3",
+        "id": "{c2c003ee-bd69-42a2-b0e9-6f34222cb046}",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4978053/auto_tab_discard-0.7.3.xpi",
+            "hash": "sha256-ZqmHOOad+a18eusSpJXFiA0fVvuTYQ9RzTIHqbc+5wI="
+        },
+        "meta": {
+            "name": "Auto Tab Discard",
+            "description": "Increase browser speed and reduce memory load and when you have numerous open tabs.",
+            "homepage": "https://webextension.org/listing/tab-discard.html",
+            "license": "Mozilla Public License 2.0",
+            "author": "tlintspr"
+        }
     }
 }
