@@ -145,6 +145,17 @@
                 "homepage": "https://github.com/Microsoft/vscode-cpptools",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools"
             }
+        },
+        "cmake-tools": {
+            "src": {
+                "version": "1.25.0",
+                "hash": "sha256-2S9OXVKDf4+ty9g+0si1bxe8X570YCCtf9WVPEf/2BA="
+            },
+            "meta": {
+                "description": "Extended CMake support in Visual Studio Code",
+                "homepage": "https://github.com/microsoft/vscode-cmake-tools",
+                "downloadPage": "https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools"
+            }
         }
     },
     "ultram4rine": {
@@ -618,6 +629,58 @@
                 "description": "Embedded Language(s) inside JSON",
                 "homepage": "https://marketplace.visualstudio.com/items?itemName=RedCMD.json-embedded-languages",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=redcmd.json-embedded-languages"
+            }
+        }
+    },
+    "ms-toolsai": {
+        "jupyter-keymap": {
+            "src": {
+                "version": "1.1.2",
+                "hash": "sha256-9BLyBZzZ0Z6QQ05QSxFJYNZmZDc5O3eYkCxe/UsmKws="
+            },
+            "meta": {
+                "description": "Jupyter keymaps for notebooks",
+                "homepage": "https://github.com/Microsoft/vscode-jupyter-keymap#readme",
+                "downloadPage": "https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter-keymap"
+            }
+        }
+    },
+    "ritwickdey": {
+        "liveserver": {
+            "src": {
+                "version": "5.7.10",
+                "hash": "sha256-D474GdTCAH8b+zuO+1M+cnluKfBv7mAMdtH7F777W5U="
+            },
+            "meta": {
+                "description": "Launch a development local Server with live reload feature for static & dynamic pages",
+                "homepage": "https://ritwickdey.github.io/vscode-live-server/",
+                "downloadPage": "https://marketplace.visualstudio.com/items?itemName=ritwickdey.liveserver"
+            }
+        }
+    },
+    "dbaeumer": {
+        "vscode-eslint": {
+            "src": {
+                "version": "3.0.34",
+                "hash": "sha256-ynCPFzne4YS4WNjQSmGky+e2IaE3SLxj6FkjKyLPcAs="
+            },
+            "meta": {
+                "description": "Integrates ESLint JavaScript into VS Code.",
+                "homepage": "https://github.com/Microsoft/vscode-eslint#readme",
+                "downloadPage": "https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
+            }
+        }
+    },
+    "redhat": {
+        "java": {
+            "src": {
+                "version": "1.57.2026093008",
+                "hash": "sha256-r8XnYUH0rp2+7BF/tYiFo/bTTSQfP3d5ZUqc+TtyJdA="
+            },
+            "meta": {
+                "description": "Java Linting, Intellisense, formatting, refactoring, Maven/Gradle support and more...",
+                "homepage": "https://github.com/redhat-developer/vscode-java#readme",
+                "downloadPage": "https://marketplace.visualstudio.com/items?itemName=redhat.java"
             }
         }
     }
