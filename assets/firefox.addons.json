@@ -757,5 +757,35 @@
             "license": "Mozilla Public License 2.0",
             "author": "tlintspr"
         }
+    },
+    "decentraleyes": {
+        "version": "3.0.2",
+        "id": "jid1-BoFifL9Vbdl2zQ@jetpack",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4943310/decentraleyes-3.0.2.xpi",
+            "hash": "sha256-50nQ0ZhbV5Mys2qgDUO9EcnoILE3VwFlfPms7tu0dYE="
+        },
+        "meta": {
+            "name": "Decentraleyes",
+            "description": "Protects you against tracking through \"free\", centralized, content delivery. It prevents a lot of requests from reaching networks like Google Hosted Libraries, and serves local files to keep sites from breaking. Complements regular content blockers.",
+            "homepage": "https://decentraleyes.org",
+            "license": "Mozilla Public License 2.0",
+            "author": "Thomas Rientjes"
+        }
+    },
+    "bitwarden-password-manager": {
+        "version": "2026.9.3",
+        "id": "{446900e4-71c2-419f-a6a7-df9c091e268b}",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5076543/bitwarden_password_manager-2026.9.3.xpi",
+            "hash": "sha256-XdbvpdIo2+rHoMaog/lReH3GbleYUyLOVJIQsN+NBUw="
+        },
+        "meta": {
+            "name": "Bitwarden Password Manager",
+            "description": "At home, at work, or on the go, Bitwarden easily secures all your passwords, passkeys, and sensitive information.",
+            "homepage": "https://bitwarden.com",
+            "license": "GNU General Public License v3.0 only",
+            "author": "Bitwarden Inc."
+        }
     }
 }
