@@ -178,11 +178,11 @@
         }
     },
     "user-agent-string-switcher": {
-        "version": "0.7.1",
+        "version": "0.7.2",
         "id": "{a6c4a591-f1b2-4f03-b3ff-767e5bedf4e7}",
         "src": {
-            "url": "https://addons.mozilla.org/firefox/downloads/file/4997127/user_agent_string_switcher-0.7.1.xpi",
-            "hash": "sha256-c9V7RrG1apCa0ayVBtrla+Ma8kLS06mdawBJ8d3yeTo="
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5081116/user_agent_string_switcher-0.7.2.xpi",
+            "hash": "sha256-mtDgPXN9s2Nm4W8cYQLFrFhn4056X5XwvN8A4s2gtoI="
         },
         "meta": {
             "name": "User-Agent Switcher and Manager",
