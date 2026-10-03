@@ -35,6 +35,7 @@ in {
       simple-modify-header
       socialfocus
       styl-us
+      ambient-light-for-youtube
     ];
   };
 }

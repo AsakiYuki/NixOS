@@ -787,5 +787,20 @@
             "license": "GNU General Public License v3.0 only",
             "author": "Bitwarden Inc."
         }
+    },
+    "ambient-light-for-youtube": {
+        "version": "2.38.17",
+        "id": "{60493d8c-aec8-448e-a247-5d2cfa047d69}",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4618615/ambient_light_for_youtube-2.38.17.xpi",
+            "hash": "sha256-7hZx2gisXI0JSxwIe1C9WqiUkJaLIq0TsVVAO/K1W3g="
+        },
+        "meta": {
+            "name": "Ambient light for YouTube™",
+            "description": "Immerse yourself in YouTube™ videos with ambient light!",
+            "homepage": "https://github.com/WesselKroos/youtube-ambilight",
+            "license": "MIT License",
+            "author": "Wezelkrozum"
+        }
     }
 }
