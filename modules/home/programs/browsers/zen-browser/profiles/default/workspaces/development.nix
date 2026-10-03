@@ -34,6 +34,12 @@
         position = 2004;
         url = "https://catppuccin.com/palette";
       };
+      "Regex101" = {
+        editedTitle = true;
+        id = "42483fbd-be9a-4bb4-9cfd-29678c32d487";
+        position = 2005;
+        url = "https://regex101.com/";
+      };
       "Search Tools" = {
         id = "04105a96-3c0f-4a4d-b5c2-e7b092f2cf27";
         position = 2050;
