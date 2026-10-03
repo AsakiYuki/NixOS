@@ -18,6 +18,9 @@
 
         alias repl="nix repl ."
         alias agenix="./agenix.sh"
+
+        alias add-firefox-addons="bun run add-firefox-addons"
+        alias add-vscode-extensions="bun run add-vscode-extensions"
       '';
     };
   };
