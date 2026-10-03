@@ -134,6 +134,17 @@
                 "version": "0.7.1",
                 "hash": "sha256-6Z1G1ECACtv9PBU7GJJqDNTTTFm2ucvAr3iAIBpMY7Y="
             }
+        },
+        "cpptools": {
+            "src": {
+                "version": "1.35.2",
+                "hash": "sha256-jiIBqnhMNHokcrGVpEJ+6rChIIZ8fkVj+7D0O2+7aRk="
+            },
+            "meta": {
+                "description": "C/C++ IntelliSense, debugging, and code browsing.",
+                "homepage": "https://github.com/Microsoft/vscode-cpptools",
+                "downloadPage": "https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools"
+            }
         }
     },
     "ultram4rine": {
