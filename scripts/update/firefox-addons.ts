@@ -4,7 +4,7 @@ import path from "path"
 
 import { fetchFirefoxAddon } from "../helpers/firefox.addons"
 
-interface FirefoxAddon {
+export interface FirefoxAddon {
 	version: string
 	id: string
 	src: {
