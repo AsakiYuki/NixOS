@@ -208,11 +208,11 @@
         }
     },
     "md-this-page": {
-        "version": "1.0.0",
+        "version": "2.0.0",
         "id": "ademking@md-this-page",
         "src": {
-            "url": "https://addons.mozilla.org/firefox/downloads/file/4768946/md_this_page-1.0.0.xpi",
-            "hash": "sha256-gqkRJupmph7Aa8WWBkIDA0MDIpK6I4w18cBF8/JrvP8="
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5082692/md_this_page-2.0.0.xpi",
+            "hash": "sha256-r2b8Wf98Ls+6AZJT32e7q7sNgYZ7rNo+BY96/4aG2+0="
         },
         "meta": {
             "name": ".MD this page",
