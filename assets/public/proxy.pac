@@ -14,6 +14,8 @@ function FindProxyForURL(url, host) {
 		match(host, "yandex.ru")
 	) {
 		return "SOCKS5 192.168.1.100:10808; SOCKS5 100.66.141.14:10808; DIRECT"
+	} else if (match(host, "whatismyip.com")) {
+		return "SOCK5 101.36.104.239:10808; DIRECT"
 	}
 
 	return "DIRECT"
