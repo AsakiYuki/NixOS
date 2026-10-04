@@ -29,7 +29,7 @@
           "${key}" = value;
         });
       in [
-        {
+        rec {
           cls = "clear";
           cleanup = "sudo nix-collect-garbage -d";
           cls-log = "sudo journalctl --vacuum-time=1s";
@@ -40,10 +40,26 @@
             if is-home-configurations
             then "home-manager switch --flake ${config.home.homeDirectory}/nixos#${lib.flake-name} -b backup --option warn-dirty false"
             else "sudo nixos-rebuild switch --flake /etc/nixos#${lib.flake-name} --option warn-dirty false";
+
           nrb =
             if is-home-configurations
             then "home-manager build --flake ${config.home.homeDirectory}/nixos#${lib.flake-name} --option warn-dirty false"
             else "sudo nixos-rebuild build --flake /etc/nixos#${lib.flake-name} --option warn-dirty false";
+
+          system-update = toString (pkgs.writeShellScript "system-update" ''
+            echo "Please wait for the system update process!";
+
+            current_directory=$(pwd);
+
+            cd /etc/nixos
+            git pull origin main
+            ${nrs}
+
+            cd $current_directory
+
+            echo "Update completed!"
+          '');
+
           flake-upgrade = "nix flake update";
         }
         (attOpt config.programs.superfile.enable "spf" "superfile")
