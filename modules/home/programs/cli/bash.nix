@@ -5,7 +5,9 @@
   is-home-configurations,
   osconfig ? {},
   ...
-}: {
+}: let
+  cfg = config.programs;
+in {
   programs.bash = {
     sessionVariables = lib.mkIf pkgs.stdenv.isDarwin {
       BASH_SILENCE_DEPRECATION_WARNING = "1";
@@ -61,6 +63,16 @@
           '');
 
           flake-upgrade = "nix flake update";
+
+          slice-pdf = lib.mkIf cfg.qpdf.enable (toString (pkgs.writeShellScript "slice-pdf" "qpdf \"$1\" --pages . $3-$4 -- \"$2\""));
+
+          get-hash = toString (pkgs.writeShellScript "get-hash" "nix hash convert --hash-algo sha256 --from nix32 $(nix-prefetch-url --unpack \"$1\")");
+          get-process-env-vars = toString (pkgs.writeShellScript "get-process-env-vars" "xargs -0 -L1 -a /proc/$1/environ");
+          nixos-list-generations = "sudo nix-env --list-generations -p /nix/var/nix/profiles/system";
+          nixos-rollback = toString (pkgs.writeShellScript "nixos-rollback" ''
+            sudo nix-env --switch-generation $1 -p /nix/var/nix/profiles/system
+            sudo /nix/var/nix/profiles/system/bin/switch-to-configuration switch
+          '');
         }
         (attOpt config.programs.superfile.enable "spf" "superfile")
         (attOpt (lib.attrByPath ["virtualisation" "waydroid" "enable"] false osconfig) "wss" "waydroid session stop; exit;")
@@ -76,13 +88,20 @@
       "autocd"
     ];
 
-    initExtra = let
-      strOpt = condition: filePath: (lib.optionalString condition (lib.readRootFile filePath));
-      cfg = config.programs;
-    in ''
-      ${lib.readRootFile "/scripts/shell/bash.sh"}
-      ${strOpt cfg.qpdf.enable "/scripts/shell/qpdf.sh"}
-      ${strOpt cfg.tmux.enable "/scripts/shell/tmux.sh"}
+    initExtra = lib.optionalString cfg.tmux.enable ''
+      allowed_terms=("xterm-kitty" "xterm-ghostty")
+
+      should_run_tmux=false
+      for term in "''${allowed_terms[@]}"; do
+          if [[ "$TERM" == "$term" ]]; then
+              should_run_tmux=true
+              break
+          fi
+      done
+
+      if [ -z "$TMUX" ] && [ "$should_run_tmux" = true ]; then
+          exec tmux
+      fi
     '';
   };
 }
