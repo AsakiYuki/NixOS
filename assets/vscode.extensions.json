@@ -580,15 +580,14 @@
     },
     "blockceptionltd": {
         "blockceptionvscodeminecraftbedrockdevelopmentextension": {
+            "src": {
+                "version": "9.1.20",
+                "hash": "sha256-uFe/bBOeuCLe/yY3pZ4buY9OzTLGFp32RK0lwru1T6s="
+            },
             "meta": {
-                "extension_id": "blockceptionltd.blockceptionvscodeminecraftbedrockdevelopmentextension",
                 "description": "An extension that provides code completion, validations, formatters, diagnostics, cheat-sheets, code-actions, creation of files, and development tools to help develop Minecraft Bedrock content",
                 "homepage": "https://github.com/Blockception/minecraft-bedrock-language-server",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=blockceptionltd.blockceptionvscodeminecraftbedrockdevelopmentextension"
-            },
-            "src": {
-                "version": "9.1.19",
-                "hash": "sha256-edPcp7T+pbSz9UyGy8pQwuPPiZlgfGF5qBIPyCu7+UU="
             }
         }
     },
