@@ -137,8 +137,8 @@
         },
         "cpptools": {
             "src": {
-                "version": "1.35.2",
-                "hash": "sha256-jiIBqnhMNHokcrGVpEJ+6rChIIZ8fkVj+7D0O2+7aRk="
+                "version": "1.35.3",
+                "hash": "sha256-3lNnpU+HiBGQuIAzbnLbkhDSbDqvYug73zreYMTV0W0="
             },
             "meta": {
                 "description": "C/C++ IntelliSense, debugging, and code browsing.",
