@@ -175,8 +175,8 @@
     "openai": {
         "chatgpt": {
             "src": {
-                "version": "26.5928.31416",
-                "hash": "sha256-wLFycBlF6ZOJr2hrM76rUWaA5QKpPjdWsyQ1pk2oTnw="
+                "version": "26.5930.51102",
+                "hash": "sha256-iJ/xTBneLdB/kUqz1iZPVI5yn6Yhdih51PRW2OIn5hg="
             },
             "meta": {
                 "description": "Codex is a coding agent that works with you everywhere you code — included in ChatGPT Plus, Pro, Business, Edu, and Enterprise plans.",
