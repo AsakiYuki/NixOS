@@ -607,14 +607,13 @@
     },
     "google": {
         "google-antigravity": {
+            "src": {
+                "version": "1.7.0",
+                "hash": "sha256-HE8W0kzbzZxpjC2I434YEW1T0DZ3cXGZqvo/F7k+hMI="
+            },
             "meta": {
-                "extension_id": "google.google-antigravity",
                 "description": "Bring Google's agent-first development platform to Visual Studio Code.",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=google.google-antigravity"
-            },
-            "src": {
-                "version": "1.6.0",
-                "hash": "sha256-3tIt0tOrQ0jiJ5hJj+/zvBH6SjxzNbujzi9wJeieAnI="
             }
         }
     },
