@@ -1,14 +1,27 @@
 {pkgs, ...}: {
   home.homeDirectory = "/Users/asakiyuki";
 
+  home.packages = with pkgs; [
+    atoll
+  ];
+
   programs = {
     bash.enable = true;
     vscodium.enable = true;
     zen-browser.enable = true;
     fastfetch.enable = true;
     starship.enable = true;
-    git.enable = true;
     tmux.enable = true;
+
+    git = {
+      enable = true;
+      settings = {
+        users = {
+          name = "Asaki Yuki";
+          email = "vantrong2007vn@gmail.com";
+        };
+      };
+    };
 
     nixcord = {
       enable = true;

@@ -69,8 +69,6 @@ in
         pkgs.makeWrapper
       ];
 
-      sourceRoot = ".";
-
       installPhase = ''
         runHook preInstall
 
@@ -82,8 +80,8 @@ in
         runHook postInstall
       '';
 
+      sourceRoot = ".";
       dontFixup = true;
-
       meta = commonMeta;
     }
   else

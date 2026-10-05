@@ -1,3 +1,3 @@
 {
-  
+  atoll = ./atoll.nix;
 }
