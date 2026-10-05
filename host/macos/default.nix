@@ -16,7 +16,7 @@
     git = {
       enable = true;
       settings = {
-        users = {
+        user = {
           name = "Asaki Yuki";
           email = "vantrong2007vn@gmail.com";
         };
