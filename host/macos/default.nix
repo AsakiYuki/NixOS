@@ -3,6 +3,7 @@
 
   home.packages = with pkgs; [
     atoll
+    ripgrep
   ];
 
   programs = {
