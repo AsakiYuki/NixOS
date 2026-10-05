@@ -1,6 +1,6 @@
 {pkgs, ...}: 
 if pkgs.stdenv.isDarwin then
-pkgs.stdenvNoCC.mkDerivation {
+pkgs.stdenvNoCC.mkDerivation rec {
   version = "2.2.3";
   pname = "atoll"; 
 
@@ -32,6 +32,7 @@ pkgs.stdenvNoCC.mkDerivation {
 
     mkdir -p $out/Applications $out/bin
     cp -R Atoll.app $out/Applications/
+    makeWrapper "$out/Applications/Atoll.app/Contents/MacOS/Atoll" "$out/bin/${pname}"    
 
     runHook preInstall
   '';

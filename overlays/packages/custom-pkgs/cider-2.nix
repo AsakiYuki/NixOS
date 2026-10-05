@@ -75,8 +75,7 @@ in
         mkdir -p $out/Applications $out/bin
         cp -R Cider.app $out/Applications/
         makeWrapper "$out/Applications/Cider.app/Contents/MacOS/Cider" "$out/bin/${pname}"
-        ln -s "$out/bin/${pname}" "$out/bin/cider"
-
+        
         runHook postInstall
       '';
 
