@@ -41,7 +41,7 @@ in
       cp -R Atoll.app $out/Applications/
       makeWrapper "$out/Applications/Atoll.app/Contents/MacOS/Atoll" "$out/bin/${pname}"
 
-      runHook preInstall
+      runHook postInstall
     '';
 
     sourceRoot = ".";
