@@ -2,10 +2,17 @@
   home.homeDirectory = "/Users/asakiyuki";
 
   home.packages = with pkgs; [
+    nerd-fonts.sauce-code-pro
+
     atoll
     ripgrep
     tinycast
+    cloudflare-warp
+    localsend
+    proton-pass
   ];
+
+  fonts.fontconfig.enable = true;
 
   programs = {
     bash.enable = true;
