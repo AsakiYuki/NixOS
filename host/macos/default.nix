@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     atoll
     ripgrep
+    tinycast
   ];
 
   programs = {
