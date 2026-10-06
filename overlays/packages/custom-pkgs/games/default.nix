@@ -4,4 +4,5 @@
   geforce-now-electron = ./gfn-electron.nix;
   opennow = ./opennow.nix;
   bedrock-on-linux = ./bedrock-on-linux.nix;
+  prismlauncher = ./prismlauncher.nix;
 }
