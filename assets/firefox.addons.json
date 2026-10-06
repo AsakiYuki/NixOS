@@ -744,11 +744,11 @@
         }
     },
     "auto-tab-discard": {
-        "version": "0.7.3",
+        "version": "0.7.5",
         "id": "{c2c003ee-bd69-42a2-b0e9-6f34222cb046}",
         "src": {
-            "url": "https://addons.mozilla.org/firefox/downloads/file/4978053/auto_tab_discard-0.7.3.xpi",
-            "hash": "sha256-ZqmHOOad+a18eusSpJXFiA0fVvuTYQ9RzTIHqbc+5wI="
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5090327/auto_tab_discard-0.7.5.xpi",
+            "hash": "sha256-d+emMOOrN4RAw5JOV0UNuIvyYoA2CLGkdDDzzIxSlPY="
         },
         "meta": {
             "name": "Auto Tab Discard",
