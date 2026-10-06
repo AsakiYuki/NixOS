@@ -13,6 +13,7 @@
     fastfetch.enable = true;
     starship.enable = true;
     tmux.enable = true;
+    prismlauncher.enable = true;
 
     git = {
       enable = true;

@@ -8,6 +8,7 @@ then let
   inherit (pkgs.prismlauncher) pname meta;
 in (pkgs.stdenv.mkDerivation {
   inherit pname meta;
+  name = "prismlauncher-11.1.1";
   src = pkgs.fetchzip {
     url = "https://github.com/PrismLauncher/PrismLauncher/releases/download/11.1.1/PrismLauncher-macOS-11.1.1.zip";
     hash = lib.fakeHash;
