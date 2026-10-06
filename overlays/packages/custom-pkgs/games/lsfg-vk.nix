@@ -1,17 +1,13 @@
-{
-  pkgs,
-  data,
-  ...
-}: let
-  inherit (data) lsfg-vk;
+{pkgs, ...}: let
+  # inherit (data) lsfg-vk;
 in
-  pkgs.stdenv.mkDerivation rec {
+  pkgs.stdenv.mkDerivation {
     pname = "lsfg-vk";
-    version = lsfg-vk.version;
+    version = "2.0.0.r13.g50845d4";
 
     src = pkgs.fetchzip {
-      url = "https://github.com/PancakeTAS/lsfg-vk/releases/download/v${version}-dev/lsfg-vk-${version}-dev${lsfg-vk.dev-version}-linux.tar.xz";
-      hash = lsfg-vk.hash;
+      url = "https://builds.lsfg-vk.dev/lsfg-vk-2.0.0.r13.g50845d4.tar.xz";
+      hash = "sha256-4YhmLR2kVjWCMOl10ARM6iZvbLsLyI03xrWZaJNEDRg=";
       stripRoot = false;
     };
 
