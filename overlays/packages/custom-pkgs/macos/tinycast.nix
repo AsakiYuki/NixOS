@@ -1,7 +1,7 @@
 {pkgs, ...}:
 if (pkgs.stdenv.isDarwin)
 then
-  (pkgs.stdenv.mkDerivation rec {
+  (pkgs.stdenv.mkDerivation {
     version = "0.11.12";
     pname = "tinycast";
 
@@ -19,8 +19,7 @@ then
       runHook preInstall
 
       mkdir -p $out/Applications/Tinycast.app $out/bin
-      cp -R $src $out/Applications/Tinycast.app
-      makeWrapper $out/Applications/Tinycast.app/Contents/MacOS/Tinycast $out/bin/${pname}
+      cp -R $src/* $out/Applications/Tinycast.app
 
       runHook postInstall
     '';
