@@ -13,7 +13,7 @@ in
 
     src = pkgs.fetchurl {
       inherit hash;
-      url = "https://github.com/Ebullioscopic/Atoll/releases/download/v2.3.3/Atoll-2.3.3.dmg";
+      url = "https://github.com/Ebullioscopic/Atoll/releases/download/v${version}/Atoll-${version}.dmg";
     };
 
     nativeBuildInputs = [
