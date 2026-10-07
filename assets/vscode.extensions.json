@@ -148,8 +148,8 @@
         },
         "cmake-tools": {
             "src": {
-                "version": "1.25.1",
-                "hash": "sha256-lAAlUuzJDlq/JTmDuLjezlHGmsrCAbtGKhgf8MCQj08="
+                "version": "1.25.2",
+                "hash": "sha256-cdi5OxIQ+X1GNnTWpIxJzyTBqd4ZcBOn0kGqc/vCVBc="
             },
             "meta": {
                 "description": "Extended CMake support in Visual Studio Code",
