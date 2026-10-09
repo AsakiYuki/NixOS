@@ -40,6 +40,12 @@
         position = 2005;
         url = "https://regex101.com/";
       };
+      "OpenRouter" = {
+        editedTitle = true;
+        id = "e796a253-d9c1-4ca2-b872-8ef7155243fc";
+        position = 2006;
+        url = "https://openrouter.ai";
+      };
       "Search Tools" = {
         id = "04105a96-3c0f-4a4d-b5c2-e7b092f2cf27";
         position = 2050;
