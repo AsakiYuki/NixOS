@@ -3,6 +3,11 @@
     webserver = "nginx";
     sites."inet.asakiyuki.com" = {
       package = unstable-pkgs.wordpress;
+      database = {
+        name = "wordpress";
+        user = "wordpress";
+        createLocally = true;
+      };
       settings = {
         DISALLOW_FILE_MODS = true;
         AUTOMATIC_UPDATER_DISABLED = true;
