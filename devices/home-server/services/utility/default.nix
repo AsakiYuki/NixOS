@@ -4,5 +4,6 @@
     ./forgejo.nix
     ./httpd.nix
     ./mysql.nix
+    ./phpfpm.nix
   ];
 }

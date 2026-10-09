@@ -85,6 +85,33 @@ in
       "inet.asakiyuki.com" = {
         forceSSL = true;
         enableACME = true;
+        root = "/var/www/wordpress";
+        locations."/" = {
+          extraConfig = ''
+            index index.php index.html;
+            try_files $uri $uri/ /index.php$is_args$args;
+          '';
+        };
+        locations."~ \\.php$" = {
+          extraConfig = ''
+            fastcgi_split_path_info ^(.+\.php)(/.+)$;
+            fastcgi_pass unix:/run/phpfpm/wordpress.sock;
+            fastcgi_index index.php;
+            include ${pkgs.nginx}/conf/fastcgi.conf;
+          '';
+        };
+        locations."~ /\\." = {
+          extraConfig = "deny all;";
+        };
+        locations."~* /(?:uploads|files)/.*\\.php$" = {
+          extraConfig = "deny all;";
+        };
+        locations."~* \\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$" = {
+          extraConfig = ''
+            expires max;
+            log_not_found off;
+          '';
+        };
       };
 
       "adguard.asakiyuki.com" = {
