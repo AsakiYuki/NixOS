@@ -2,11 +2,13 @@
   config,
   lib,
   ...
-}: let
+}:
+let
   cfg = config.theme.catppuccin;
   flavour = cfg.flavour;
   colors = lib.catppuccin.${flavour};
-in {
+in
+{
   programs.ghostty = lib.mkIf (!config.programs.disable-module.ghostty) {
     settings = {
       theme = "catppuccin-${flavour}";
@@ -14,8 +16,8 @@ in {
       font-size = 9;
       font-family = "SauceCodePro NFP Bold";
 
-      window-width = 230;
-      window-height = 68;
+      window-width = 262;
+      window-height = 75;
 
       window-padding-x = 5;
       window-padding-y = 0;
