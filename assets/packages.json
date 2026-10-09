@@ -22,8 +22,8 @@
         "hash": "sha256-3TAo6St1XU6ZvrIrYF0tOs+N0gg8bJO7Uvcgityodww="
     },
     "gfn-electron": {
-        "version": "3.0.3",
-        "hash": "sha256-ZMwv0Ge5BrEPZWO3219Fb68ema11qmhvXqrmtq1WjdY="
+        "version": "3.0.4",
+        "hash": "sha256-SwufxhOTrF23heFQCaZXBGGKZdNTakTsLLm9cupgC6I="
     },
     "opennow": {
         "version": "0.5.5",
@@ -39,10 +39,10 @@
         }
     },
     "iris": {
-        "version": "0.7.2",
+        "version": "0.7.3-nightly.ded7e3",
         "hash": {
-            "x86_64-linux": "sha256-BRl0MY05Qo3xZqwvo9tWIAi5iSXSgFfPIo4Ip4Ra/Wc=",
-            "aarch64-linux": "sha256-LrQHbUz+ORjv5HM2MPn6E63jrIYFy6FEYPpXktuJ0Ok="
+            "x86_64-linux": "sha256-4byc6BIyYDP0moe1oB0gY+tvhYWaELJxxgd5NeXm0hc=",
+            "aarch64-linux": "sha256-z9kQ76UezvKoJc62EpZAuY2IMdpiyYBLwJJ/Jtyte5Y="
         }
     },
     "atoll": {
