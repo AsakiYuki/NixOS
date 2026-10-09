@@ -14,6 +14,12 @@
           "wordpress.*" = "ALL PRIVILEGES";
         };
       }
+      {
+        name = "asakiyuki";
+        ensurePermissions = {
+          "wordpress.*" = "ALL PRIVILEGES";
+        };
+      }
     ];
   };
 }

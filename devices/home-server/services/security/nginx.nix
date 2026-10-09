@@ -85,31 +85,13 @@ in
       "inet.asakiyuki.com" = {
         forceSSL = true;
         enableACME = true;
-        root = "/var/www/wordpress";
         locations."/" = {
+          proxyPass = "http://localhost:3367";
           extraConfig = ''
-            index index.php index.html;
-            try_files $uri $uri/ /index.php$is_args$args;
-          '';
-        };
-        locations."~ \\.php$" = {
-          extraConfig = ''
-            fastcgi_split_path_info ^(.+\.php)(/.+)$;
-            fastcgi_pass unix:/run/phpfpm/wordpress.sock;
-            fastcgi_index index.php;
-            include ${pkgs.nginx}/conf/fastcgi.conf;
-          '';
-        };
-        locations."~ /\\." = {
-          extraConfig = "deny all;";
-        };
-        locations."~* /(?:uploads|files)/.*\\.php$" = {
-          extraConfig = "deny all;";
-        };
-        locations."~* \\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$" = {
-          extraConfig = ''
-            expires max;
-            log_not_found off;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
           '';
         };
       };
