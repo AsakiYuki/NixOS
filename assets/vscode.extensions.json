@@ -581,8 +581,8 @@
     "blockceptionltd": {
         "blockceptionvscodeminecraftbedrockdevelopmentextension": {
             "src": {
-                "version": "9.1.20",
-                "hash": "sha256-uFe/bBOeuCLe/yY3pZ4buY9OzTLGFp32RK0lwru1T6s="
+                "version": "9.1.21",
+                "hash": "sha256-gOch8wlW/M/lZ4gkAWgn3EtgfxFUNIV91bA7n+P6nP8="
             },
             "meta": {
                 "description": "An extension that provides code completion, validations, formatters, diagnostics, cheat-sheets, code-actions, creation of files, and development tools to help develop Minecraft Bedrock content",
