@@ -175,8 +175,8 @@
     "openai": {
         "chatgpt": {
             "src": {
-                "version": "26.51002.51308",
-                "hash": "sha256-neUw2AD8ViqmSSjpRsS04OXTRJilFQ5cb2A6i/h3zVI="
+                "version": "26.51007.21434",
+                "hash": "sha256-DR1vALE5W6k60KDFTksXCf5HmiLxMcuKIibHdFrxZb4="
             },
             "meta": {
                 "description": "Codex is a coding agent that works with you everywhere you code — included in ChatGPT Plus, Pro, Business, Edu, and Enterprise plans.",
@@ -185,8 +185,8 @@
         },
         "codex-audio": {
             "src": {
-                "version": "26.1002.51308",
-                "hash": "sha256-rfwEbKvqO7NOV+2xgJkUgzH66/ImA+8yArBae8QVTAI="
+                "version": "26.1007.21434",
+                "hash": "sha256-VnOZ4TSA985FkahhpBcw+mzQBnyLTc9LFI1ej4aWgUI="
             },
             "meta": {
                 "description": "Local microphone support for Codex dictation, including remote workspaces.",
