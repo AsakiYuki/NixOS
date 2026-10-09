@@ -1,4 +1,4 @@
-{config, ...}: {
+{ config, ... }: {
   services = {
     cloudflare-warp.enable = true;
 
@@ -13,6 +13,7 @@
       domains = [
         "asakiyuki.com"
         "ddns.asakiyuki.com"
+        "inet.asakiyuki.com"
       ];
     };
   };

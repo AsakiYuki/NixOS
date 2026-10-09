@@ -2,9 +2,11 @@
   pkgs,
   lib,
   ...
-}: let
+}:
+let
   pacFile = toString (pkgs.writeText "proxy.pac" (lib.readRootFile "/assets/public/proxy.pac"));
-in {
+in
+{
   services.nginx = {
     enable = true;
 
@@ -77,6 +79,21 @@ in {
         enableACME = true;
         locations."/" = {
           proxyPass = "http://localhost:5482";
+        };
+      };
+
+      "inet.asakiyuki.com" = {
+        forceSSL = true;
+        enableACME = true;
+        locations."/" = {
+          proxyPass = "http://localhost:3367";
+          extraConfig = ''
+            proxy_set_header Host $http_host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+            proxy_http_version 1.1;
+          '';
         };
       };
 
