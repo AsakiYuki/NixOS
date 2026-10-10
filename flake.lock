@@ -360,11 +360,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1791524776,
-        "narHash": "sha256-6WumjDtfjsgt6eG37ZEOBBZy+YF8p87YXAjhlj49zHQ=",
+        "lastModified": 1791610153,
+        "narHash": "sha256-rsNrfGjPl6gZ9xLA4JuxErUuzXG3i0eVEPt7R+g2/es=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "050eea3013518e9dba524230456687ff19783af9",
+        "rev": "2b3de3195966ba80499063064dca608c805cb34a",
         "type": "github"
       },
       "original": {
@@ -383,11 +383,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1791584265,
-        "narHash": "sha256-Vm67pBM7skBKWUcrgCsJ04Dmqud3mOBJnnnxQdpdG5k=",
+        "lastModified": 1791603599,
+        "narHash": "sha256-sNM7yBXBZxCcnY6jQJWzJR3jIxy8hiA75hbKmrJ0NRc=",
         "owner": "FlameFlag",
         "repo": "nixcord",
-        "rev": "193d4b92e0de5216290496dc31998449b32abef6",
+        "rev": "d5595af239d10a6069452923f1a46dc341cba0f8",
         "type": "github"
       },
       "original": {
@@ -738,11 +738,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1791521685,
-        "narHash": "sha256-S4ZBR4y3cQ6NbLDJqoQR48718TWCM1ofpjt8Mzo83Hg=",
+        "lastModified": 1791587008,
+        "narHash": "sha256-LOIfH4MtVc2KIFQI8ElOOgmgrgUzJjfx3OYu4VnTvIU=",
         "owner": "0xc000022070",
         "repo": "zen-browser-flake",
-        "rev": "841dba01deda5e994a9838da9d2216f493fbaea9",
+        "rev": "a6359784912804e2bad0826b63454cf4493e885e",
         "type": "github"
       },
       "original": {
