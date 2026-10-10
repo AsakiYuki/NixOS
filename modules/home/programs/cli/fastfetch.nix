@@ -132,19 +132,19 @@ in {
         }
         {
           type = "memory";
-          format = "{percentage-bar} {used} / {total}";
+          format = "{percentage-bar} {used} / {total} [Physical]";
           key = "├─";
           keyColor = accent-2;
         }
         {
           type = "swap";
-          format = "{percentage-bar} {used} / {total}";
+          format = "{percentage-bar} {used} / {total} [Virtual]";
           key = "├─";
           keyColor = accent-2;
         }
         {
           type = "disk";
-          format = "{size-percentage-bar} {name} ({mountpoint}) {size-used} / {size-total} - {filesystem}";
+          format = "{size-percentage-bar} {size-used} / {size-total} [{mountpoint}] [{filesystem}]";
           key = "├─󰋊";
           keyColor = accent-2;
         }
