@@ -2,7 +2,6 @@
   imports = [
     ./hardware-configuration.nix
     ./chaotic.nix
-    ./zram.nix
 
     ./hardware
     ./systemd

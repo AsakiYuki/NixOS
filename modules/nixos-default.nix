@@ -26,5 +26,12 @@
       backupFileExtension = "bak";
       backupCommand = "${pkgs.trash-cli}/bin/trash";
     };
+
+    zramSwap = {
+      enable = true;
+      algorithm = "zstd";
+      memoryPercent = 50;
+      priority = 100;
+    };
   };
 }
