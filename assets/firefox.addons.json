@@ -565,11 +565,11 @@
         }
     },
     "popup-blocker": {
-        "version": "0.9.1",
+        "version": "0.9.2",
         "id": "{de22fd49-c9ab-4359-b722-b3febdc3a0b0}",
         "src": {
-            "url": "https://addons.mozilla.org/firefox/downloads/file/4674849/popup_blocker-0.9.1.xpi",
-            "hash": "sha256-Zw9jUeP8r+FhMuK23Xwelb9NOXawqYs4pZx0oVbVLOs="
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5104931/popup_blocker-0.9.2.xpi",
+            "hash": "sha256-kYsJ7C6IAv7YXd9E1H3+tNgnmeMHXS52eJwJpU3KT4o="
         },
         "meta": {
             "name": "Popup Blocker (strict)",
