@@ -4,8 +4,8 @@
         "hash": "sha256-Nq85/hrOkT7M4VJ9Uc7Kr9e+uNx8unD4d30RzaQlYxc="
     },
     "bedrock-on-linux": {
-        "version": "2.2.8",
-        "hash": "sha256-mOFKULx/pLvj18yxZR1Sh9mwErWssToul18YjKjSsQ8="
+        "version": "2.2.9",
+        "hash": "sha256-5bBtRRZjY1xc83RDZ5ipKZNmD9O9Knwz9kLgyn9kDZA="
     },
     "cage-xtmapper": {
         "release": "20260208",
