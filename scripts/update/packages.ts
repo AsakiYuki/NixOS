@@ -56,10 +56,13 @@ async function fetchLastReleasePackage(options: FetchLastPackageArgs) {
 		return false
 	}
 
-	console.info(`[UPDATE] New version found for ${pkgName}: v${cacheVersion} -> v${newVersion}`)
 	const ret = await new_version_found(cached, latestRelease, newVersion)
-	if (ret) packages[pkgName] = ret
+	if (!ret) {
+		console.warn(`[WARN] Failed to process update for ${pkgName}.`)
+		return false
+	}
 
+	packages[pkgName] = ret
 	console.info(`[SUCCESS] Updated ${pkgName} to v${newVersion}`)
 	return true
 }
@@ -168,6 +171,7 @@ async function main() {
 			author: "OpenCloudGaming",
 			repository: "OpenNOW",
 			package_name: "opennow",
+			pre_release: false,
 			get_version: latest => latest.tag_name.slice(1),
 			new_version_found: async (cached, latest, version) => {
 				const file = latest.assets.find(({ name }) => name === `OpenNOW-v${version}-linux-amd64.deb`)
@@ -179,7 +183,7 @@ async function main() {
 
 				console.info(`[INFO] Fetching url hash from: ${file.download_url}`)
 				const hash = await fetchUrlHash(file.download_url)
-				descriptions.push(`opennow- v${version} - Hash: ${hash}`)
+				descriptions.push(`opennow v${version} - Hash: ${hash}`)
 
 				return { version, hash }
 			},
@@ -233,6 +237,65 @@ async function main() {
 				return { version, hash }
 			},
 		}),
+		fetchLastReleasePackage({
+			author: "Ebullioscopic",
+			repository: "Atoll",
+			package_name: "atoll",
+			pre_release: false,
+			get_version: latest => latest.tag_name.replace(/^v/, ""),
+			new_version_found: async (cached, latest, version) => {
+				const file = latest.assets.find(({ name }) => name === `Atoll-${version}.dmg`)
+				if (!file) {
+					console.warn(`[WARN] Asset 'Atoll-${version}.dmg' not found in release v${version}.`)
+					return false
+				}
+
+				console.info(`[INFO] Fetching url hash from: ${file.download_url}`)
+				const hash = await fetchUrlHash(file.download_url)
+				descriptions.push(`atoll v${version} - Hash: ${hash}`)
+
+				return { version, hash }
+			},
+		}),
+		fetchLastReleasePackage({
+			author: "storytold",
+			repository: "photocraft",
+			package_name: "photocraft",
+			pre_release: false,
+			get_version: latest => latest.tag_name.replace(/^v/, ""),
+			new_version_found: async (cached, latest, version) => {
+				const files = latest.assets.filter(({ name }) => name.endsWith(".tar.gz"))
+
+				const x86_64 = files.find(({ name }) => name.includes("linux-x86_64"))
+				const aarch64 = files.find(({ name }) => name.includes("linux-aarch64"))
+
+				if (!x86_64 || !aarch64) {
+					console.warn(
+						`[WARN] Asset 'photocraft-${version}-linux-x86_64.tar.gz' or 'linux-aarch64' not found in release v${version}.`,
+					)
+					return false
+				}
+
+				console.info(
+					`[INFO] Fetching zip hash from:\n - amd64: ${x86_64.download_url}\n - arm64: ${aarch64.download_url}`,
+				)
+
+				const [amd64, arm64] = await Promise.all([
+					fetchZipHash(x86_64.download_url),
+					fetchZipHash(aarch64.download_url),
+				])
+
+				descriptions.push(`photocraft v${version} - Hash: x86_64: ${amd64} - aarch64: ${arm64}`)
+
+				return {
+					version,
+					hash: {
+						"x86_64-linux": amd64,
+						"aarch64-linux": arm64,
+					},
+				}
+			},
+		}),
 		(async function () {
 			try {
 				console.log(`[INFO] Checking latest release for cider-2...`)
@@ -244,7 +307,8 @@ async function main() {
 				const html = await fetch("https://repo.cider.sh/apt/pool/main/").then(v => v.text())
 				const $ = cheerio.load(html)
 
-				const currentVersion = packages["cider-2"].version
+				const cached = packages["cider-2"]
+				const currentVersion = cached?.version
 
 				const latest = {
 					x64: "",
@@ -275,11 +339,16 @@ async function main() {
 
 				const [amd64, arm64] = await Promise.all([fetchUrlHash(getUrl(latest.x64)), fetchUrlHash(getUrl(latest.arm64))])
 
-				descriptions.push(`cider-2 v${version} - Hash: arm64: ${arm64} - arm64: ${amd64}`)
+				descriptions.push(`cider-2 v${version} - Hash: x86_64: ${amd64} - aarch64: ${arm64}`)
 
 				packages["cider-2"] = {
+					...cached,
 					version,
-					hash: { amd64, arm64 },
+					hash: {
+						...cached?.hash,
+						"x86_64-linux": amd64,
+						"aarch64-linux": arm64,
+					},
 				}
 
 				console.info(`[SUCCESS] Updated cider-2 to v${version}`)
