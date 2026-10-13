@@ -2,8 +2,8 @@
     "jbro": {
         "vscode-default-keybindings": {
             "src": {
-                "version": "0.2.84",
-                "hash": "sha256-GDyc0s8/puqZtRG0zLSolvPI/z/C+j5AWl1H348OnvA="
+                "version": "0.2.85",
+                "hash": "sha256-t8aoxcZGA3YBJWsahEBvS4HFYZP5dVqxvoUKhfNQPyQ="
             },
             "meta": {
                 "description": "VSCode Default Keybindings is a keymap that enables you to load VSCode's default keybindings from another OS. Eg. use Mac keybindings on Windows.",
@@ -320,15 +320,14 @@
     },
     "mojang-studios": {
         "minecraft-debugger": {
+            "src": {
+                "version": "1.58.0",
+                "hash": "sha256-bhWOfaHOFBJXI+yIlEXVs+SzLa982E8iCeuPl3Torf8="
+            },
             "meta": {
-                "extension_id": "mojang-studios.minecraft-debugger",
                 "description": "Debug your JavaScript code running in Minecraft Bedrock.",
                 "homepage": "https://github.com/Mojang/minecraft-debugger#readme",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=mojang-studios.minecraft-debugger"
-            },
-            "src": {
-                "version": "1.56.1",
-                "hash": "sha256-nd+m+73/cN3e8t4P8sPmdB4loYTshjrsJySwiPxCAj4="
             }
         }
     },
