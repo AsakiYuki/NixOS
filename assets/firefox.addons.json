@@ -490,11 +490,11 @@
         }
     },
     "easy-youtube-video-download": {
-        "version": "25.3",
+        "version": "25.4",
         "id": "{b9acf540-acba-11e1-8ccb-001fd0e08bd4}",
         "src": {
-            "url": "https://addons.mozilla.org/firefox/downloads/file/4997872/easy_youtube_video_download-25.3.xpi",
-            "hash": "sha256-Oh0Z7sns3gkOl1E7D9xPU2Vs4CifCX2LE4iHRUPCMIk="
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5115876/easy_youtube_video_download-25.4.xpi",
+            "hash": "sha256-BwXsCj8FhshyrHV4c+QNNbRqrQYUDXIkxu3U0xyiA5Q="
         },
         "meta": {
             "name": "Easy Youtube Video Downloader Express",
