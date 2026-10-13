@@ -13,9 +13,8 @@
         "version-0.2.0": "sha256-F1C3KnTzTO1vEouixqO1xnsGmufRyAk+BiRlypNq4kQ="
     },
     "lsfg-vk": {
-        "version": "2.0.0",
-        "dev-version": "29",
-        "hash": "sha256-IT8GYis0Sbn1jIEH3vp9S0jaNQHrJ98HA1qG5MFngBk="
+        "version": "2.0.0.r15.geb080c9",
+        "hash": "sha256-1AGr2ttko0DrPYJ+iF7yOqLY4YNeyZrbNUzMsRSE86U="
     },
     "geode-cli": {
         "version": "3.9.0",

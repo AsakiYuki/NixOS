@@ -1,13 +1,23 @@
-{pkgs, ...}: let
-  # inherit (data) lsfg-vk;
+{
+  pkgs,
+  lib ? pkgs.lib,
+  data ? {},
+  ...
+}: let
+  inherit (pkgs) stdenv;
+  lsfgData =
+    data.lsfg-vk or {
+      version = "2.0.0.r15.geb080c9";
+      hash = "sha256-1AGr2ttko0DrPYJ+iF7yOqLY4YNeyZrbNUzMsRSE86U=";
+    };
 in
-  pkgs.stdenv.mkDerivation {
+  stdenv.mkDerivation rec {
     pname = "lsfg-vk";
-    version = "2.0.0.r13.g50845d4";
+    inherit (lsfgData) version;
 
     src = pkgs.fetchzip {
-      url = "https://builds.lsfg-vk.dev/lsfg-vk-2.0.0.r13.g50845d4.tar.xz";
-      hash = "sha256-4YhmLR2kVjWCMOl10ARM6iZvbLsLyI03xrWZaJNEDRg=";
+      url = "https://builds.lsfg-vk.dev/lsfg-vk-${version}.tar.xz";
+      inherit (lsfgData) hash;
       stripRoot = false;
     };
 
@@ -21,6 +31,7 @@ in
       qt6.qtdeclarative
       stdenv.cc.cc.lib
       vulkan-loader
+      libGL
     ];
 
     dontBuild = true;
@@ -33,4 +44,12 @@ in
 
       runHook postInstall
     '';
+
+    meta = with lib; {
+      description = "Lossless Scaling Frame Generation Vulkan layer";
+      homepage = "https://builds.lsfg-vk.dev/";
+      license = licenses.unfree;
+      platforms = ["x86_64-linux"];
+      mainProgram = "lsfg-vk-ui";
+    };
   }

@@ -109,22 +109,58 @@ async function main() {
 				return { version, hash }
 			},
 		}),
-		fetchLastReleasePackage({
-			author: "PancakeTAS",
-			repository: "lsfg-vk",
-			cache_version: cached => `${cached.version}-dev${cached["dev-version"]}`,
-			get_version: latest => latest.name.slice(8),
-			new_version_found: async (cached, latest, version) => {
-				const [package_version, dev_version] = version.split("-dev")
-				const file = latest.assets[0]
+		(async function () {
+			try {
+				console.log(`[INFO] Checking latest release for lsfg-vk...`)
 
-				console.info(`[INFO] Fetching zip hash from: ${file.download_url}`)
-				const hash = await fetchZipHash(file.download_url)
-				descriptions.push(`lsfg-vk v${package_version}-dev${dev_version} (Linux x64) - Hash: ${hash}`)
+				const html = await fetch("https://builds.lsfg-vk.dev/").then(v => v.text())
+				const $ = cheerio.load(html)
 
-				return { version: package_version, "dev-version": dev_version, hash }
-			},
-		}),
+				const cached = packages["lsfg-vk"]
+				const currentVersion = cached?.version
+
+				let href = ""
+				$("a").each((_, el) => {
+					const text = $(el).text()
+					if (!href && (text.includes("Latest git version") || text.includes("Latest release"))) {
+						href = $(el).attr("href") || ""
+					}
+				})
+
+				const match = href.match(/^lsfg-vk-(.+)\.tar\.xz$/)
+				if (!match) {
+					console.warn(`[WARN] Could not find latest git build for lsfg-vk.`)
+					return false
+				}
+
+				const version = match[1]
+
+				if (currentVersion === version) {
+					console.info(`[SKIP] lsfg-vk is already up to date (v${version}).`)
+					return false
+				}
+
+				console.info(`[UPDATE] New version found for lsfg-vk: v${currentVersion} -> v${version}`)
+
+				const downloadUrl = `https://builds.lsfg-vk.dev/${href}`
+				console.info(`[INFO] Fetching zip hash from: ${downloadUrl}`)
+
+				const hash = await fetchZipHash(downloadUrl)
+
+				descriptions.push(`lsfg-vk v${version} (Linux x64) - Hash: ${hash}`)
+
+				packages["lsfg-vk"] = {
+					version,
+					hash,
+				}
+
+				console.info(`[SUCCESS] Updated lsfg-vk to v${version}`)
+				return true
+			} catch (error) {
+				console.warn(`[WARN] Could not fetch latest release for lsfg-vk: ${error}`)
+				return false
+			}
+		})(),
 		fetchLastReleasePackage({
 			author: "Xtr126",
 			repository: "cage-xtmapper",

@@ -62,7 +62,7 @@ async function main() {
 				},
 			}
 			console.log(`[INFO] New update found: ${name} - ${data.current_version.version} - ${hash}`)
-			commits.push(`${data.guid} ${data.current_version.version} - Hash: ${hash}`)
+			commits.push(`${name} - ${data.guid} ${data.current_version.version} - Hash: ${hash}`)
 		}),
 	)
 

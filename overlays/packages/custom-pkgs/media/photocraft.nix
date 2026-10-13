@@ -57,7 +57,7 @@ in
       makeWrapper
     ];
 
-    buildInputs = with pkgs; [
+    buildInputs = [
       stdenv.cc.cc.lib
     ];
 
