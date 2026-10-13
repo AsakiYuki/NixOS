@@ -92,6 +92,7 @@
     gimp.enable = true;
     davinci-resolve.enable = true;
     obs-studio.enable = true;
+    photocraft.enable = true;
 
     # Browsers
     firefox.enable = true;

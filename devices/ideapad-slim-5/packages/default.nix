@@ -9,7 +9,5 @@
     ryzenadj
     sbctl
     rsync
-
-    photocraft
   ];
 }

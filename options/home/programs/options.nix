@@ -46,6 +46,7 @@ in {
       (getPkg "geforce-now")
       (getPkg "opennow")
       (getPkg "bedrock-on-linux")
+      (getPkg "photocraft")
 
       (lib.mkIf cfg.jetbrains.idea.enable cfg.jetbrains.idea.package)
       (lib.mkIf cfg.jetbrains.datagrip.enable cfg.jetbrains.datagrip.package)
@@ -92,6 +93,7 @@ in {
     davinci-resolve = mkOpt pkgs "davinci-resolve" {};
     geforce-now = mkOpt pkgs "geforce-now-electron" {};
     opennow = mkOpt pkgs "opennow" {};
+    photocraft = mkOpt pkgs "photocraft" {};
 
     easyeffects = mkOpt pkgs "easyeffects" {name = "Easy Effects";};
     libreoffice = mkOpt pkgs "libreoffice-qt-fresh" {name = "libreoffice";};
