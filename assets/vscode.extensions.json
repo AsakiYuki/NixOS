@@ -671,8 +671,8 @@
     "redhat": {
         "java": {
             "src": {
-                "version": "1.57.2026093008",
-                "hash": "sha256-uEmSD1kd8ftKGEDmSa4P9yluoCVc5oT5BKa6aWgKojg="
+                "version": "1.58.2026101408",
+                "hash": "sha256-yBl46tD+e5e1eGeUxk2idWzZkW59GmzY86fsYcaxd0Y="
             },
             "meta": {
                 "description": "Java Linting, Intellisense, formatting, refactoring, Maven/Gradle support and more...",
