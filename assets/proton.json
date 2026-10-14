@@ -1,7 +1,7 @@
 {
     "ge-proton": {
-        "latest": "11-8",
-        "source_name": "GE-Proton11-8-x86_64",
+        "latest": "11-9",
+        "source_name": "GE-Proton11-9-x86_64",
         "override_name": "ge-proton-latest",
         "releases": {
             "11-5": {
@@ -19,6 +19,10 @@
             "11-8": {
                 "url": "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton11-8/GE-Proton11-8-x86_64.tar.gz",
                 "hash": "sha256-ELz1uCrqnwlrlU4NrzgAx+bXeERkEEyFd2tCQLMOmFg="
+            },
+            "11-9": {
+                "url": "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton11-9/GE-Proton11-9-x86_64.tar.gz",
+                "hash": "sha256-1o3sTPdQmIOKkm6qctt9lQfDEMCsysFyVfVK4sfRpw8="
             }
         }
     },
