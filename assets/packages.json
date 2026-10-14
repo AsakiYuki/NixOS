@@ -49,10 +49,10 @@
         "hash": "sha256-vaQKuvn1+Kae3nvYONXBzIZeQNxcgTW8EUlBOEAANjQ="
     },
     "photocraft": {
-        "version": "0.8.2",
+        "version": "0.9.0",
         "hash": {
-            "x86_64-linux": "sha256-nT50LVxFEtCxvJsGp5cztgBO8aEWVtZKTEeapAh8p7M=",
-            "aarch64-linux": "sha256-oOz/kj3EU+EhIfzD75tfopifGdnQbIaHMzfPJZrQgjM="
+            "x86_64-linux": "sha256-ycjUc5zv+Xe62JF13dHdDtgK+DSMj3WKKhejSyu2vfo=",
+            "aarch64-linux": "sha256-HfOmSrolufZEkV+ClnXurGWO3ikbxFsQvgDWo6+z0xg="
         }
     }
 }
