@@ -23,6 +23,7 @@
       mcje = [./minecraft/java];
       nix = [./nix];
       gd = [./geometry-dash];
+      python = [./python];
     });
 in {
   config.programs = {
