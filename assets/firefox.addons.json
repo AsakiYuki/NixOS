@@ -625,11 +625,11 @@
         }
     },
     "besttimetracker": {
-        "version": "4.6.3",
+        "version": "4.6.4",
         "id": "{a8cf72f7-09b7-4cd4-9aaa-7a023bf09916}",
         "src": {
-            "url": "https://addons.mozilla.org/firefox/downloads/file/5048157/besttimetracker-4.6.3.xpi",
-            "hash": "sha256-4nkZNu/2JFYheJyjVGq/7dbpLUSq9m5kSVYpTnlMDlU="
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5125842/besttimetracker-4.6.4.xpi",
+            "hash": "sha256-twzDGQc2HTJ3/rzG06sLjShhrO5n1i+7pN9FfjuisAI="
         },
         "meta": {
             "name": "Time Tracker - Web Habit Builder",
@@ -774,11 +774,11 @@
         }
     },
     "bitwarden-password-manager": {
-        "version": "2026.9.3",
+        "version": "2026.10.0",
         "id": "{446900e4-71c2-419f-a6a7-df9c091e268b}",
         "src": {
-            "url": "https://addons.mozilla.org/firefox/downloads/file/5076543/bitwarden_password_manager-2026.9.3.xpi",
-            "hash": "sha256-XdbvpdIo2+rHoMaog/lReH3GbleYUyLOVJIQsN+NBUw="
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5125667/bitwarden_password_manager-2026.10.0.xpi",
+            "hash": "sha256-ol4C6WH0/87NoSWE8y8ZkxAq11CenKhFguUocQn1vSA="
         },
         "meta": {
             "name": "Bitwarden Password Manager",
