@@ -670,9 +670,10 @@
     },
     "redhat": {
         "java": {
+            "hashStrategy": "versioned-vsix",
             "src": {
                 "version": "1.58.2026101508",
-                "hash": "sha256-bsNmmDYmtbKoAQFIaZACdlBX7vhQjQGW7hom2cKIyfU="
+                "hash": "sha256-faQRpP234XhsOU4ChUqo3/ROM5v9ECYZhne3SUqApYg="
             },
             "meta": {
                 "description": "Java Linting, Intellisense, formatting, refactoring, Maven/Gradle support and more...",

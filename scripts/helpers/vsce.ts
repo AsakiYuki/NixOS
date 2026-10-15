@@ -1,4 +1,4 @@
-import { UUID } from "crypto"
+import { createHash, type UUID } from "crypto"
 import { spawnStdout } from "../helpers/shell"
 
 export interface Publisher {
@@ -65,6 +65,22 @@ export class VSCE {
 		const cleanHex = hexHash.trim().replace(/^sha256[:\-]/i, "")
 		const base64 = Buffer.from(cleanHex, "hex").toString("base64")
 		return `sha256-${base64}`
+	}
+
+	static async hashVersionedVsix(extensionId: string, version: string): Promise<string> {
+		const [publisher, ...nameParts] = extensionId.split(".")
+		if (!publisher || nameParts.length === 0) throw new Error(`Invalid extension ID: ${extensionId}`)
+
+		const name = nameParts.join(".")
+		const url = `https://${publisher}.gallery.vsassets.io/_apis/public/gallery/publisher/${publisher}/extension/${name}/${version}/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage`
+		const response = await fetch(url)
+		if (!response.ok || !response.body) {
+			throw new Error(`Failed to download ${extensionId} v${version}: HTTP ${response.status}`)
+		}
+
+		const hash = createHash("sha256")
+		for await (const chunk of response.body) hash.update(chunk)
+		return `sha256-${hash.digest("base64")}`
 	}
 
 	static async show(extensionId: string): Promise<ExtensionInfo> {

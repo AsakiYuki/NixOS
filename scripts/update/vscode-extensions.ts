@@ -14,15 +14,23 @@ async function main() {
 			await Promise.all(
 				Object.entries(extensions).map(async ([extension, info]) => {
 					const id = `${author}.${extension}`
+					const useVersionedVsixHash = id === "redhat.java"
 
 					const extInfo = await VSCE.show(id)
 					const currentVersion = extInfo.versions[0]
-					if (info.src?.version === currentVersion.version) return Promise.resolve(null)
+					if (
+						info.src?.version === currentVersion.version &&
+						(!useVersionedVsixHash || info.hashStrategy === "versioned-vsix")
+					)
+						return Promise.resolve(null)
 
 					const properties = VSCE.standardizeProperties(currentVersion.properties)
-					const hash = VSCE.toSriHash(properties["Microsoft.VisualStudio.Services.VsixSha256"])
+					const hash = useVersionedVsixHash
+						? await VSCE.hashVersionedVsix(id, currentVersion.version)
+						: VSCE.toSriHash(properties["Microsoft.VisualStudio.Services.VsixSha256"])
 
 					data[author][extension] = {
+						...(useVersionedVsixHash ? { hashStrategy: "versioned-vsix" } : {}),
 						src: {
 							version: currentVersion.version,
 							hash,

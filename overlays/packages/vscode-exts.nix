@@ -16,6 +16,7 @@ lib.mergeAttrsList [
     lib.mapAttrs (name: {
       src,
       meta,
+      ...
     }: (pkgs.vscode-utils.buildVscodeMarketplaceExtension {
       mktplcRef = {inherit publisher name;} // src;
       inherit meta;
