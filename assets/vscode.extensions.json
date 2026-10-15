@@ -2,8 +2,8 @@
     "jbro": {
         "vscode-default-keybindings": {
             "src": {
-                "version": "0.2.86",
-                "hash": "sha256-im5LqRRtJ5UxNMM5sZSLGREvO9yXtSCxHgtEH3nDvMA="
+                "version": "0.2.87",
+                "hash": "sha256-zGZAiqZBYkz3N76uW/ceQ9pcUC6jCc+IBp43szTyMrI="
             },
             "meta": {
                 "description": "VSCode Default Keybindings is a keymap that enables you to load VSCode's default keybindings from another OS. Eg. use Mac keybindings on Windows.",
@@ -137,8 +137,8 @@
         },
         "cpptools": {
             "src": {
-                "version": "1.35.3",
-                "hash": "sha256-3lNnpU+HiBGQuIAzbnLbkhDSbDqvYug73zreYMTV0W0="
+                "version": "1.35.4",
+                "hash": "sha256-QMnq26FNur88fNnb7GE5Sl3FJ95/J7a6IVgAiUMhrSI="
             },
             "meta": {
                 "description": "C/C++ IntelliSense, debugging, and code browsing.",
