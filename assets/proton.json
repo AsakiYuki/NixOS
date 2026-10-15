@@ -57,8 +57,8 @@
         }
     },
     "wineland-proton": {
-        "latest": "11-0_20261011",
-        "source_name": "proton-wineland-11.0-20261011-x86_64",
+        "latest": "11-0_20261015",
+        "source_name": "proton-wineland-11.0-20261015-x86_64",
         "override_name": "proton-wineland-latest",
         "releases": {
             "11-0_20260917": {
@@ -88,12 +88,16 @@
             "11-0_20261011": {
                 "url": "https://github.com/nanomatters/proton-cachyos/releases/download/wineland-11.0-20261011/proton-wineland-11.0-20261011-x86_64.tar.xz",
                 "hash": "sha256-xS1nQiOVneoJzjUKmw7Ia58dsrBEd4kr0xi83fs7iSk="
+            },
+            "11-0_20261015": {
+                "url": "https://github.com/nanomatters/proton-salkim/releases/download/wineland-11.0-20261015/proton-wineland-11.0-20261015-x86_64.tar.xz",
+                "hash": "sha256-cacwol74hOi8dEdkH4djbGrSOvP5ILJPxITgzueajus="
             }
         }
     },
     "wineland-proton-v3": {
-        "latest": "11-0_20261011",
-        "source_name": "proton-wineland-11.0-20261011-x86_64_v3",
+        "latest": "11-0_20261015",
+        "source_name": "proton-wineland-11.0-20261015-x86_64_v3",
         "override_name": "proton-wineland-v3-latest",
         "releases": {
             "11-0_20260917": {
@@ -123,6 +127,10 @@
             "11-0_20261011": {
                 "url": "https://github.com/nanomatters/proton-cachyos/releases/download/wineland-11.0-20261011/proton-wineland-11.0-20261011-x86_64_v3.tar.xz",
                 "hash": "sha256-OkvSdYZIFKor9sfZV+2hdVBJfI8CBh7vSZHGvtARj20="
+            },
+            "11-0_20261015": {
+                "url": "https://github.com/nanomatters/proton-salkim/releases/download/wineland-11.0-20261015/proton-wineland-11.0-20261015-x86_64_v3.tar.xz",
+                "hash": "sha256-LrL6AV3wdTMKd1zkI4cKjTiKp77+V4ws8RVHsswOnTY="
             }
         }
     },
