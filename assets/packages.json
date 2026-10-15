@@ -38,10 +38,10 @@
         }
     },
     "iris": {
-        "version": "0.7.4-nightly.96597b",
+        "version": "0.7.4-nightly.38215d",
         "hash": {
-            "x86_64-linux": "sha256-6/YYMdk14h3DVwqgEYDZxuv7pxx/96HpblPhIfI5trI=",
-            "aarch64-linux": "sha256-WwpBttz4JaBQ1VUxOedoaSQ+f2cPysHu5EVmiAS7KWI="
+            "x86_64-linux": "sha256-HZWlnTdLYA5+Lqd6YEuLo63ih2KQIicc6uYYGX0JS8s=",
+            "aarch64-linux": "sha256-hNy+54J5uXLP9SWu8v9UfgwSQQSgw1uAOFVuMQc8jb8="
         }
     },
     "atoll": {
