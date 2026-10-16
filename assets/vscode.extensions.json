@@ -672,8 +672,8 @@
         "java": {
             "hashStrategy": "versioned-vsix",
             "src": {
-                "version": "1.58.2026101508",
-                "hash": "sha256-faQRpP234XhsOU4ChUqo3/ROM5v9ECYZhne3SUqApYg="
+                "version": "1.58.2026101608",
+                "hash": "sha256-v4lf3HJYTeN6FnCD6tFqCiy2OFzl2LDMiR6Ma9iaEwE="
             },
             "meta": {
                 "description": "Java Linting, Intellisense, formatting, refactoring, Maven/Gradle support and more...",
