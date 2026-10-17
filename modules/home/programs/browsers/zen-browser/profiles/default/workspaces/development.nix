@@ -134,6 +134,12 @@
             position = 2152;
             url = "https://developers.raycast.com/basics/getting-started/";
           };
+          "Git Conventional Branch" = {
+            editedTitle = true;
+            id = "36c93352-20a8-4e38-a4af-9d5197e8ed09";
+            position = 2153;
+            url = "https://conventionalbranch.org/";
+          };
           "Lang Docs" = {
             id = "306d27fb-d12b-44b9-90d6-fbd5eac28dd7";
             position = 2200;
