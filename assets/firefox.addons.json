@@ -625,11 +625,11 @@
         }
     },
     "besttimetracker": {
-        "version": "4.6.4",
+        "version": "4.6.5",
         "id": "{a8cf72f7-09b7-4cd4-9aaa-7a023bf09916}",
         "src": {
-            "url": "https://addons.mozilla.org/firefox/downloads/file/5125842/besttimetracker-4.6.4.xpi",
-            "hash": "sha256-twzDGQc2HTJ3/rzG06sLjShhrO5n1i+7pN9FfjuisAI="
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5132235/besttimetracker-4.6.5.xpi",
+            "hash": "sha256-xlEOiZ410qsyRRohYXakoxKZ/FxwooQO9FVMdvPVcIU="
         },
         "meta": {
             "name": "Time Tracker - Web Habit Builder",
