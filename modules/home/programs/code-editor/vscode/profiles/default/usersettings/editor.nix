@@ -23,5 +23,6 @@
     "extensions.autoCheckUpdates" = false;
     "settingsSync.keybindingsPerPlatform" = true;
     "workbench.settings.enableNaturalLanguageSearch" = false;
+    "workbench.startupEditor" = "none";
   };
 }
