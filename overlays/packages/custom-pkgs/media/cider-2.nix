@@ -105,8 +105,12 @@ in
         gtk3
         libgbm
         libGL
+        libva
         nspr
         nss
+        vulkan-loader
+        mesa
+        libglvnd
       ];
 
       unpackPhase = ''
@@ -133,7 +137,18 @@ in
 
       postFixup = ''
         makeWrapper $out/lib/cider/Cider $out/bin/${pname} \
-          --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath [libGL]}"
+          --prefix LD_LIBRARY_PATH : "/run/opengl-driver/lib:${lib.makeLibraryPath [libGL mesa vulkan-loader libglvnd libgbm libva]}" \
+          --set-default LIBGL_DRIVERS_PATH /run/opengl-driver/lib/dri \
+          --set-default VK_DRIVER_FILES /run/opengl-driver/share/vulkan/icd.d/radeon_icd.x86_64.json \
+          --set-default VK_LOADER_LAYERS_DISABLE VK_LAYER_LSFGVK_frame_generation \
+          --add-flags "--enable-features=UseOzonePlatform,VaapiVideoDecoder,Vulkan" \
+          --add-flags "--enable-unsafe-webgpu" \
+          --add-flags "--use-gl=angle" \
+          --add-flags "--use-angle=gl" \
+          --add-flags "--use-webgpu-adapter=default" \
+          --add-flags "--ignore-gpu-blocklist" \
+          --add-flags "--ozone-platform-hint=auto" \
+          --add-flags "--disable-gpu-sandbox"
 
         mv $out/share/applications/cider.desktop $out/share/applications/${pname}.desktop
         substituteInPlace $out/share/applications/${pname}.desktop \
