@@ -8,16 +8,20 @@
   lsfgData =
     data.lsfg-vk or {
       version = "2.0.0.r15.geb080c9";
-      hash = "sha256-1AGr2ttko0DrPYJ+iF7yOqLY4YNeyZrbNUzMsRSE86U=";
+      source.x86_64-linux = {
+        url = "https://builds.lsfg-vk.dev/lsfg-vk-2.0.0.r15.geb080c9.tar.xz";
+        hash = "sha256-1AGr2ttko0DrPYJ+iF7yOqLY4YNeyZrbNUzMsRSE86U=";
+      };
     };
+  source = lsfgData.source.${stdenv.system}
+    or (throw "LSFG-VK is not supported on ${stdenv.system}");
 in
   stdenv.mkDerivation rec {
     pname = "lsfg-vk";
     inherit (lsfgData) version;
 
     src = pkgs.fetchzip {
-      url = "https://builds.lsfg-vk.dev/lsfg-vk-${version}.tar.xz";
-      inherit (lsfgData) hash;
+      inherit (source) url hash;
       stripRoot = false;
     };
 

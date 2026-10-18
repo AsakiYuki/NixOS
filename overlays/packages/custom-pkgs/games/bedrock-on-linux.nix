@@ -5,14 +5,15 @@
   ...
 }: let
   pname = "bedrock-on-linux";
-  inherit (data.${pname}) version hash;
+  inherit (data.${pname}) version;
+  source = data.${pname}.source.${pkgs.stdenv.system}
+    or (throw "Bedrock on Linux is not supported on ${pkgs.stdenv.system}");
 
   unpacked = pkgs.stdenv.mkDerivation {
     inherit pname version;
 
     src = pkgs.fetchurl {
-      inherit hash;
-      url = "https://github.com/Wyze3306/BedrockOnLinux/releases/download/v${version}/bedrock-on-linux-${version}-1.x86_64.rpm";
+      inherit (source) hash url;
     };
 
     nativeBuildInputs = [pkgs.rpmextract];

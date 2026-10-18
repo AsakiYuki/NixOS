@@ -4,22 +4,15 @@
   lib,
   ...
 }: let
-  inherit (data.iris) version hash;
-
-  pkg-hash = hash.${pkgs.stdenv.system} or (throw "Iris is not support current system: ${pkgs.stdenv.system}");
-  pkg-url = "https://github.com/versenilvis/IRIS/releases/download/v${version}/iris_linux_${{
-      "x86_64-linux" = "x64";
-      "aarch64-linux" = "arm64";
-    }.${
-      pkgs.stdenv.system
-    }}.tar.gz";
+  inherit (data.iris) version;
+  pkg-source = data.iris.source.${pkgs.stdenv.system}
+    or (throw "Iris is not supported on ${pkgs.stdenv.system}");
 in (pkgs.stdenv.mkDerivation {
   pname = "iris";
   inherit version;
 
   src = pkgs.fetchzip {
-    url = pkg-url;
-    hash = pkg-hash;
+    inherit (pkg-source) url hash;
     stripRoot = false;
   };
 

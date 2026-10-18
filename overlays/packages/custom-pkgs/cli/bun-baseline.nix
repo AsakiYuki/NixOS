@@ -4,14 +4,15 @@
   ...
 }: let
   inherit (data) bun-baseline;
+  source = bun-baseline.source.${pkgs.stdenv.system}
+    or (throw "Bun baseline is not supported on ${pkgs.stdenv.system}");
 in
   pkgs.stdenv.mkDerivation rec {
     pname = "bun";
     version = bun-baseline.version;
 
     src = pkgs.fetchzip {
-      url = "https://github.com/oven-sh/bun/releases/download/bun-v${version}/bun-linux-x64-baseline.zip";
-      hash = bun-baseline.hash;
+      inherit (source) url hash;
     };
 
     dontBuild = true;
@@ -29,5 +30,6 @@ in
         mit
         lgpl21Only
       ];
+      platforms = ["x86_64-linux" "aarch64-linux"];
     };
   }

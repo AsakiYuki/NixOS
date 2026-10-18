@@ -5,13 +5,14 @@
   ...
 }: let
   inherit (data) geode-cli;
+  source = geode-cli.source.${pkgs.stdenv.system}
+    or (throw "Geode CLI is not supported on ${pkgs.stdenv.system}");
 in (pkgs.stdenv.mkDerivation rec {
   pname = "geode-cli";
   version = geode-cli.version;
 
   src = pkgs.fetchzip {
-    url = "https://github.com/geode-sdk/cli/releases/download/v${version}/geode-cli-v${version}-linux.zip";
-    hash = geode-cli.hash;
+    inherit (source) url hash;
   };
 
   dontBuild = true;

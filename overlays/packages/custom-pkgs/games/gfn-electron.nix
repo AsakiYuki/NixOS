@@ -5,14 +5,15 @@
   ...
 }: let
   inherit (data) gfn-electron;
+  source = gfn-electron.source.${pkgs.stdenv.system}
+    or (throw "GeForce NOW Electron is not supported on ${pkgs.stdenv.system}");
 in
   pkgs.stdenv.mkDerivation rec {
     pname = "geforce-now-electron";
     version = gfn-electron.version;
 
     src = pkgs.fetchzip {
-      url = "https://github.com/hmlendea/gfn-electron/releases/download/v${version}/geforcenow-electron_${version}_linux.zip";
-      hash = gfn-electron.hash;
+      inherit (source) url hash;
       stripRoot = false;
     };
 

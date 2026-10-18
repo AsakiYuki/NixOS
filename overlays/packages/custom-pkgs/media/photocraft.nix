@@ -8,28 +8,22 @@
   photocraftData =
     data.photocraft or {
       version = "0.8.2";
-      hash = {
-        "x86_64-linux" = "sha256-nT50LVxFEtCxvJsGp5cztgBO8aEWVtZKTEeapAh8p7M=";
-        "aarch64-linux" = "sha256-oOz/kj3EU+EhIfzD75tfopifGdnQbIaHMzfPJZrQgjM=";
+      source = {
+        "x86_64-linux" = {
+          url = "https://github.com/storytold/photocraft/releases/download/v0.8.2/photocraft-0.8.2-linux-x86_64.tar.gz";
+          hash = "sha256-nT50LVxFEtCxvJsGp5cztgBO8aEWVtZKTEeapAh8p7M=";
+        };
+        "aarch64-linux" = {
+          url = "https://github.com/storytold/photocraft/releases/download/v0.8.2/photocraft-0.8.2-linux-aarch64.tar.gz";
+          hash = "sha256-oOz/kj3EU+EhIfzD75tfopifGdnQbIaHMzfPJZrQgjM=";
+        };
       };
     };
 
   version = photocraftData.version;
 
-  arch =
-    {
-      "x86_64-linux" = "x86_64";
-      "aarch64-linux" = "aarch64";
-    }.${
-      stdenv.system
-    }
-    or (throw "Unsupported architecture for Photocraft: ${stdenv.system}");
-
-  pkgHash =
-    if builtins.isAttrs photocraftData.hash
-    then (photocraftData.hash.${stdenv.system}
-        or (throw "Unsupported architecture hash for Photocraft: ${stdenv.system}"))
-    else photocraftData.hash;
+  source = photocraftData.source.${stdenv.system}
+    or (throw "Photocraft is not supported on ${stdenv.system}");
 
   runtimeLibs = with pkgs; [
     wayland
@@ -48,8 +42,7 @@ in
     inherit version;
 
     src = pkgs.fetchzip {
-      url = "https://github.com/storytold/photocraft/releases/download/v${version}/photocraft-${version}-linux-${arch}.tar.gz";
-      hash = pkgHash;
+      inherit (source) url hash;
     };
 
     nativeBuildInputs = with pkgs; [

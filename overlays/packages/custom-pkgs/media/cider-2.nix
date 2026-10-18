@@ -11,30 +11,9 @@
     then (ciderData.darwin-version or ciderData.version)
     else ciderData.version;
 
-  pkg-hash =
-    ciderData.hash.${stdenv.system}
-    or (throw "Cider-2 is not support current system: ${stdenv.system}");
-
-  pkg-url =
-    if stdenv.isDarwin
-    then "https://static.asakiyuki.com/packages/nixos/cider-v${version}-macos-${
-      {
-        "aarch64-darwin" = "arm64";
-        "x86_64-darwin" = "x64";
-      }.${
-        stdenv.system
-      }
-        or (throw "Unsupported Darwin system for Cider-2: ${stdenv.system}")
-    }.dmg"
-    else "https://repo.cider.sh/apt/pool/main/cider-v${version}-linux-${
-      {
-        "x86_64-linux" = "x64";
-        "aarch64-linux" = "arm64";
-      }.${
-        stdenv.system
-      }
-        or (throw "Unsupported Linux system for Cider-2: ${stdenv.system}")
-    }.deb";
+  pkg-source =
+    ciderData.source.${stdenv.system}
+    or (throw "Cider-2 is not supported on ${stdenv.system}");
 
   commonMeta = {
     description = "Powerful music player that allows you listen to your favorite tracks with style";
@@ -49,7 +28,6 @@
       "x86_64-linux"
       "aarch64-linux"
       "aarch64-darwin"
-      "x86_64-darwin"
     ];
   };
 in
@@ -60,8 +38,7 @@ in
       pname = "cider-2";
 
       src = pkgs.fetchurl {
-        hash = pkg-hash;
-        url = pkg-url;
+        inherit (pkg-source) hash url;
       };
 
       nativeBuildInputs = [
@@ -89,8 +66,7 @@ in
       pname = "cider-2";
 
       src = pkgs.fetchurl {
-        hash = pkg-hash;
-        url = pkg-url;
+        inherit (pkg-source) hash url;
       };
 
       nativeBuildInputs = [

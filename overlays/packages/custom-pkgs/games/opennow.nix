@@ -4,14 +4,15 @@
   ...
 }: let
   inherit (data) opennow;
+  source = opennow.source.${pkgs.stdenv.system}
+    or (throw "OpenNOW is not supported on ${pkgs.stdenv.system}");
 in
   pkgs.stdenv.mkDerivation rec {
     pname = "opennow";
     version = opennow.version;
 
     src = pkgs.fetchurl {
-      url = "https://github.com/OpenCloudGaming/OpenNOW/releases/download/v${opennow.version}/OpenNOW-v${opennow.version}-linux-amd64.deb";
-      hash = opennow.hash;
+      inherit (source) url hash;
     };
 
     nativeBuildInputs = with pkgs; [
@@ -90,7 +91,7 @@ in
       homepage = "https://github.com/OpenCloudGaming/OpenNOW";
       license = licenses.mit;
       mainProgram = "opennow-stable";
-      platforms = ["x86_64-linux"];
+      platforms = ["x86_64-linux" "aarch64-linux"];
       sourceProvenance = with sourceTypes; [binaryNativeCode];
     };
   }

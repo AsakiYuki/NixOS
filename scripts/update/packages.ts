@@ -77,17 +77,28 @@ async function main() {
 			package_name: "bun-baseline",
 			get_version: latest => latest.tag_name.split("v")[1],
 			new_version_found: async (cached, latest, version) => {
-				const file = latest.assets.find(({ name }) => name === "bun-linux-x64-baseline.zip")
-				if (!file) {
-					console.warn(`[WARN] Asset 'bun-linux-x64-baseline.zip' not found in release v${version}.`)
+				const assets = {
+					"x86_64-linux": latest.assets.find(({ name }) => name === "bun-linux-x64-baseline.zip"),
+					"aarch64-linux": latest.assets.find(({ name }) => name === "bun-linux-aarch64.zip"),
+				}
+				if (!assets["x86_64-linux"] || !assets["aarch64-linux"]) {
+					console.warn(`[WARN] Bun x64 baseline or Linux aarch64 asset not found in release v${version}.`)
 					return false
 				}
 
-				console.info(`[INFO] Fetching zip hash from: ${file.download_url}`)
-				const hash = await fetchZipHash(file.download_url)
-				descriptions.push(`bun v${version} (Linux x64 Baseline) - Hash: ${hash}`)
+				const [x64Hash, arm64Hash] = await Promise.all([
+					fetchZipHash(assets["x86_64-linux"].download_url),
+					fetchZipHash(assets["aarch64-linux"].download_url),
+				])
+				descriptions.push(`bun v${version} - Hash: x86_64: ${x64Hash} - aarch64: ${arm64Hash}`)
 
-				return { version, hash }
+				return {
+					version,
+					source: {
+						"x86_64-linux": { url: assets["x86_64-linux"].download_url, hash: x64Hash },
+						"aarch64-linux": { url: assets["aarch64-linux"].download_url, hash: arm64Hash },
+					},
+				}
 			},
 		}),
 		fetchLastReleasePackage({
@@ -106,7 +117,7 @@ async function main() {
 				const hash = await fetchZipHash(file.download_url)
 				descriptions.push(`geode-cli v${version} (Linux x64) - Hash: ${hash}`)
 
-				return { version, hash }
+				return { version, source: { "x86_64-linux": { url: file.download_url, hash } } }
 			},
 		}),
 		(async function () {
@@ -151,7 +162,7 @@ async function main() {
 
 				packages["lsfg-vk"] = {
 					version,
-					hash,
+					source: { "x86_64-linux": { url: downloadUrl, hash } },
 				}
 
 				console.info(`[SUCCESS] Updated lsfg-vk to v${version}`)
@@ -180,8 +191,10 @@ async function main() {
 
 				return {
 					release,
-					"version-0.1.5": hash1,
-					"version-0.2.0": hash2,
+					versions: {
+						"0.1.5": { "x86_64-linux": { url: file1.download_url, hash: hash1 } },
+						"0.2.0": { "x86_64-linux": { url: file2.download_url, hash: hash2 } },
+					},
 				}
 			},
 		}),
@@ -200,7 +213,7 @@ async function main() {
 				const hash = await fetchZipHash(file.download_url)
 				descriptions.push(`geforcenow-electron v${version} - Hash: ${hash}`)
 
-				return { version, hash }
+				return { version, source: { "x86_64-linux": { url: file.download_url, hash } } }
 			},
 		}),
 		fetchLastReleasePackage({
@@ -210,18 +223,29 @@ async function main() {
 			pre_release: false,
 			get_version: latest => latest.tag_name.slice(1),
 			new_version_found: async (cached, latest, version) => {
-				const file = latest.assets.find(({ name }) => name === `OpenNOW-v${version}-linux-amd64.deb`)
+				const assets = {
+					"x86_64-linux": latest.assets.find(({ name }) => name === `OpenNOW-v${version}-linux-amd64.deb`),
+					"aarch64-linux": latest.assets.find(({ name }) => name === `OpenNOW-v${version}-linux-arm64.deb`),
+				}
 
-				if (!file) {
-					console.warn(`[WARN] Asset 'OpenNOW-v${version}-linux-amd64.deb' not found in release v${version}.`)
+				if (!assets["x86_64-linux"] || !assets["aarch64-linux"]) {
+					console.warn(`[WARN] OpenNOW x86_64 or aarch64 Linux .deb asset not found in release v${version}.`)
 					return false
 				}
 
-				console.info(`[INFO] Fetching url hash from: ${file.download_url}`)
-				const hash = await fetchUrlHash(file.download_url)
-				descriptions.push(`opennow v${version} - Hash: ${hash}`)
+				const [x64Hash, arm64Hash] = await Promise.all([
+					fetchUrlHash(assets["x86_64-linux"].download_url),
+					fetchUrlHash(assets["aarch64-linux"].download_url),
+				])
+				descriptions.push(`opennow v${version} - Hash: x86_64: ${x64Hash} - aarch64: ${arm64Hash}`)
 
-				return { version, hash }
+				return {
+					version,
+					source: {
+						"x86_64-linux": { url: assets["x86_64-linux"].download_url, hash: x64Hash },
+						"aarch64-linux": { url: assets["aarch64-linux"].download_url, hash: arm64Hash },
+					},
+				}
 			},
 		}),
 		fetchLastReleasePackage({
@@ -253,7 +277,13 @@ async function main() {
 
 				descriptions.push(`iris v${version} - Hash: x86_64: ${amd64} - arm64: ${arm64}`)
 
-				return { version, hash: { "x86_64-linux": amd64, "aarch64-linux": arm64 } }
+				return {
+					version,
+					source: {
+						"x86_64-linux": { url: x86_64.download_url, hash: amd64 },
+						"aarch64-linux": { url: aarch64.download_url, hash: arm64 },
+					},
+				}
 			},
 		}),
 		fetchLastReleasePackage({
@@ -270,7 +300,7 @@ async function main() {
 				const hash = await fetchUrlHash(file.download_url)
 				descriptions.push(`bedrock-on-linux v${version} - Hash: ${hash}`)
 
-				return { version, hash }
+				return { version, source: { "x86_64-linux": { url: file.download_url, hash } } }
 			},
 		}),
 		fetchLastReleasePackage({
@@ -290,7 +320,7 @@ async function main() {
 				const hash = await fetchUrlHash(file.download_url)
 				descriptions.push(`atoll v${version} - Hash: ${hash}`)
 
-				return { version, hash }
+				return { version, source: { "universal-darwin": { url: file.download_url, hash } } }
 			},
 		}),
 		fetchLastReleasePackage({
@@ -325,9 +355,9 @@ async function main() {
 
 				return {
 					version,
-					hash: {
-						"x86_64-linux": amd64,
-						"aarch64-linux": arm64,
+					source: {
+						"x86_64-linux": { url: x86_64.download_url, hash: amd64 },
+						"aarch64-linux": { url: aarch64.download_url, hash: arm64 },
 					},
 				}
 			},
@@ -380,10 +410,10 @@ async function main() {
 				packages["cider-2"] = {
 					...cached,
 					version,
-					hash: {
-						...cached?.hash,
-						"x86_64-linux": amd64,
-						"aarch64-linux": arm64,
+					source: {
+						...cached?.source,
+						"x86_64-linux": { url: getUrl(latest.x64), hash: amd64 },
+						"aarch64-linux": { url: getUrl(latest.arm64), hash: arm64 },
 					},
 				}
 

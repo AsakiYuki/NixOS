@@ -6,15 +6,15 @@
 }: let
   inherit (data) cage-xtmapper;
   release = cage-xtmapper.release;
-  hash = cage-xtmapper."version-${version}";
+  source = cage-xtmapper.versions.${version}.${pkgs.stdenv.system}
+    or (throw "cage-xtmapper ${version} is not supported on ${pkgs.stdenv.system}");
 in
   pkgs.stdenv.mkDerivation {
     pname = "cage-xtmapper";
     version = version;
 
     src = pkgs.fetchurl {
-      url = "https://github.com/Xtr126/cage-xtmapper/releases/download/v${release}/cage-xtmapper-v${version}.tar";
-      hash = hash;
+      inherit (source) url hash;
     };
 
     nativeBuildInputs = [pkgs.autoPatchelfHook];
