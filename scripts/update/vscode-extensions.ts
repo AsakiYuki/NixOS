@@ -22,7 +22,7 @@ const targetPlatforms = [
 type ExtensionSource = {
 	version: string
 	checkedPlatforms?: boolean
-	platforms: Record<string, { hash: string }>
+	hash: Record<string, string>
 }
 
 async function hashVsix(id: string, version: string, targetPlatform?: string): Promise<string | null> {
@@ -61,7 +61,7 @@ async function main() {
 			const currentVersion = extInfo.versions[0]
 			if (!currentVersion) throw new Error(`Marketplace returned no versions for ${id}`)
 			if (info.src?.version === currentVersion.version && info.src?.checkedPlatforms) {
-				const platformList = Object.keys(info.src.platforms ?? {}).join(", ")
+				const platformList = Object.keys(info.src.hash ?? {}).join(", ")
 				commits.push(`${id} ${currentVersion.version} - Platforms: ${platformList}`)
 				console.info(`[SKIP] ${id} already has platform hashes (${platformList})`)
 				continue
@@ -69,7 +69,7 @@ async function main() {
 
 			const source: ExtensionSource = {
 				version: currentVersion.version,
-				platforms: {},
+				hash: {},
 			}
 			const properties = VSCE.standardizeProperties(currentVersion.properties)
 			const universalHash = id === "redhat.java"
@@ -77,17 +77,17 @@ async function main() {
 				: properties["Microsoft.VisualStudio.Services.VsixSha256"]
 					? VSCE.toSriHash(properties["Microsoft.VisualStudio.Services.VsixSha256"])
 					: await hashVsix(id, currentVersion.version)
-			if (universalHash) source.platforms.universal = { hash: universalHash }
+			if (universalHash) source.hash.universal = universalHash
 
 			const available = await Promise.all(targetPlatforms.map(async targetPlatform => {
 				const hash = await hashVsix(id, currentVersion.version, targetPlatform)
-				return hash ? [targetPlatform, { hash }] as const : null
+				return hash ? [targetPlatform, hash] as const : null
 			}))
 			for (const entry of available) {
-				if (entry) source.platforms[entry[0]] = entry[1]
+				if (entry) source.hash[entry[0]] = entry[1]
 			}
 
-			if (Object.keys(source.platforms).length === 0) {
+			if (Object.keys(source.hash).length === 0) {
 				throw new Error(`Marketplace returned no universal or platform VSIX for ${id}`)
 			}
 			source.checkedPlatforms = true
@@ -101,7 +101,7 @@ async function main() {
 				},
 			}
 
-			const platformList = Object.keys(source.platforms).join(", ")
+			const platformList = Object.keys(source.hash).join(", ")
 			console.info(`[SUCCESS] Updated ${id} to v${currentVersion.version} (${platformList})`)
 			commits.push(`${id} ${currentVersion.version} - Platforms: ${platformList}`)
 			await fs.writeFile(filepath, JSON.stringify(data, null, 4), "utf-8")

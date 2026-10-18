@@ -25,7 +25,7 @@ interface ExtensionRecord {
 	src: {
 		version: string
 		checkedPlatforms: true
-		platforms: Partial<Record<Platform, { hash: string }>>
+		hash: Partial<Record<Platform, string>>
 	}
 	meta: Record<string, string>
 }
@@ -134,7 +134,7 @@ async function addExtension(id: string, catalog: ExtensionCatalog, filepath: str
 	const properties = VSCE.standardizeProperties(currentVersion.properties)
 	const source: ExtensionRecord["src"] = {
 		version: currentVersion.version,
-		platforms: {},
+		hash: {},
 		checkedPlatforms: true,
 	}
 
@@ -144,16 +144,16 @@ async function addExtension(id: string, catalog: ExtensionCatalog, filepath: str
 		: marketplaceHash
 			? VSCE.toSriHash(marketplaceHash)
 			: await hashVsix(id, currentVersion.version)
-	if (universalHash) source.platforms.universal = { hash: universalHash }
+	if (universalHash) source.hash.universal = universalHash
 
 	const platformHashes = await Promise.all(
 		targetPlatforms.map(async platform => [platform, await hashVsix(id, currentVersion.version, platform)] as const),
 	)
 	for (const [platform, hash] of platformHashes) {
-		if (hash) source.platforms[platform] = { hash }
+		if (hash) source.hash[platform] = hash
 	}
 
-	if (Object.keys(source.platforms).length === 0) {
+	if (Object.keys(source.hash).length === 0) {
 		throw new Error(`Marketplace returned no universal or platform VSIX for ${id}`)
 	}
 
@@ -164,8 +164,8 @@ async function addExtension(id: string, catalog: ExtensionCatalog, filepath: str
 	}
 	await writeCatalog(filepath, catalog)
 
-	const platforms = Object.keys(source.platforms).join(", ")
-	console.info(`[SUCCESS] Added ${id} v${currentVersion.version} (${platforms})`)
+	const platformList = Object.keys(source.hash).join(", ")
+	console.info(`[SUCCESS] Added ${id} v${currentVersion.version} (${platformList})`)
 	return true
 }
 

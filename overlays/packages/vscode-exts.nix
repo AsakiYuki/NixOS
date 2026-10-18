@@ -23,18 +23,18 @@ let
 		let
 			source = extension.src;
 			selectedPlatform =
-				if targetPlatform != null && builtins.hasAttr targetPlatform source.platforms then targetPlatform
+				if targetPlatform != null && builtins.hasAttr targetPlatform source.hash then targetPlatform
 				else "universal";
-			platformSource = source.platforms.${selectedPlatform} or null;
+			selectedHash = source.hash.${selectedPlatform} or null;
 		in
-		if platformSource == null then
+		if selectedHash == null then
 			throw "VS Code extension ${publisher}.${name} has no VSIX for ${pkgs.stdenv.hostPlatform.system} and no universal fallback"
 		else
 		pkgs.vscode-utils.buildVscodeMarketplaceExtension {
 			mktplcRef = {
 				inherit publisher name;
 				version = source.version;
-				hash = platformSource.hash;
+				hash = selectedHash;
 			} // lib.optionalAttrs (selectedPlatform != "universal") {
 				arch = targetPlatform;
 			};
