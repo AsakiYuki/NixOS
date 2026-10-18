@@ -802,5 +802,390 @@
             "license": "MIT License",
             "author": "Wezelkrozum"
         }
+    },
+    "clearurls": {
+        "version": "1.27.3",
+        "id": "{74145f27-f039-47ce-a470-a662b129930a}",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4432106/clearurls-1.27.3.xpi",
+            "hash": "sha256-VJJrbkJ01ZNaX8DapjIPHTcePS8aWHdGfKOrIqZcTyA="
+        },
+        "meta": {
+            "name": "ClearURLs",
+            "description": "Automatically removes tracking parameters from URLs",
+            "homepage": "https://clearurls.xyz/",
+            "license": "GNU Lesser General Public License v3.0 only",
+            "author": "Kevin"
+        }
+    },
+    "consent-o-matic": {
+        "version": "1.1.5",
+        "id": "gdpr@cavi.au.dk",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4515369/consent_o_matic-1.1.5.xpi",
+            "hash": "sha256-ohGavDKWONbnrxq05VSKNIRl4C7sEd4I3uCvhJGZI9w="
+        },
+        "meta": {
+            "name": "Consent-O-Matic",
+            "description": "Automatic handling of GDPR consent forms",
+            "homepage": "https://consentomatic.au.dk/",
+            "license": "MIT License",
+            "author": "CAVI - Aarhus University"
+        }
+    },
+    "sidebery": {
+        "version": "5.6.1",
+        "id": "{3c078156-979c-498b-8990-85f7987dd929}",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4903712/sidebery-5.6.1.xpi",
+            "hash": "sha256-6KCktVarfdU2iXwYFq+dCRgDAiMGjqZoOgQ3YQOmyvI="
+        },
+        "meta": {
+            "name": "Sidebery",
+            "description": "Vertical tabs tree and bookmarks in sidebar with advanced containers configuration, grouping and many other features.",
+            "homepage": "https://github.com/mbnuqw/sidebery",
+            "license": "MIT License",
+            "author": "mbnuqw"
+        }
+    },
+    "multi-account-containers": {
+        "version": "8.3.8",
+        "id": "@testpilot-containers",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4867303/multi_account_containers-8.3.8.xpi",
+            "hash": "sha256-MGopSEU2PxWnR46WILQ/keoXYQiHJ4COIye//xbBREc="
+        },
+        "meta": {
+            "name": "Firefox Multi-Account Containers",
+            "description": "Firefox Multi-Account Containers lets you keep parts of your online life separated into color-coded tabs. Cookies are separated by container, allowing you to use the web with multiple accounts and integrate Mozilla VPN for an extra layer of privacy.",
+            "homepage": "https://github.com/mozilla/multi-account-containers/#readme",
+            "license": "Mozilla Public License 2.0",
+            "author": "Firefox"
+        }
+    },
+    "single-file": {
+        "version": "1.31.2",
+        "id": "{531906d3-e22f-4a6c-a102-8057b88a1a63}",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5133971/single_file-1.31.2.xpi",
+            "hash": "sha256-xbfXQDNWTOVGcIDPUdtySEziTZ0U5X6sOBlllLJCOE0="
+        },
+        "meta": {
+            "name": "SingleFile",
+            "description": "Save an entire web page—including images and styling—as a single HTML file.",
+            "homepage": "https://www.getsinglefile.com",
+            "license": "AGPL v3",
+            "author": "gildas"
+        }
+    },
+    "gesturefy": {
+        "version": "3.2.19",
+        "id": "{506e023c-7f2b-40a3-8066-bc5deb40aebe}",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5059402/gesturefy-3.2.19.xpi",
+            "hash": "sha256-A+e14JORI76HP3lZfi7w18sirPrl1c5N+DwZmAEejlw="
+        },
+        "meta": {
+            "name": "Gesturefy",
+            "description": "Navigate, operate, and browse faster with mouse gestures! A customizable mouse gesture add-on with a variety of different commands.",
+            "homepage": "https://github.com/Robbendebiene/Gesturefy",
+            "license": "GNU General Public License v3.0 only",
+            "author": "Robbendebiene"
+        }
+    },
+    "libredirect": {
+        "version": "3.4.0",
+        "id": "7esoorv3@alefvanoon.anonaddy.me",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4916828/libredirect-3.4.0.xpi",
+            "hash": "sha256-wPqaXCMC63NLG2FChDcQYTMM8uezUZ7pbFPovliuKY8="
+        },
+        "meta": {
+            "name": "LibRedirect",
+            "description": "Redirects YouTube, Twitter, TikTok... requests to alternative privacy friendly frontends.",
+            "homepage": "https://libredirect.manerakai.com/",
+            "license": "GNU General Public License v3.0 only",
+            "author": "ManeraKai"
+        }
+    },
+    "tree-style-tab": {
+        "version": "4.4.9",
+        "id": "treestyletab@piro.sakura.ne.jp",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5072919/tree_style_tab-4.4.9.xpi",
+            "hash": "sha256-b6ifkijs1dYb67OPOLpoUeJO5SHURlJfugskpJLpaYQ="
+        },
+        "meta": {
+            "name": "Tree Style Tab",
+            "description": "Show tabs like a tree.",
+            "homepage": "https://github.com/piroor/treestyletab",
+            "license": "Custom License",
+            "author": "Piro (piro_or)"
+        }
+    },
+    "tab-stash": {
+        "version": "3.5",
+        "id": "tab-stash@condordes.net",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5028003/tab_stash-3.5.xpi",
+            "hash": "sha256-J0cURtWZzcYm+R/t9rVy+0scSWTpssK0cWnXU3w8lSQ="
+        },
+        "meta": {
+            "name": "Tab Stash",
+            "description": "Easily save and organize batches of tabs as bookmarks. Clear your tabs, clear your mind. Only for Firefox.",
+            "homepage": "https://josh-berry.github.io/tab-stash/",
+            "license": "Mozilla Public License 2.0",
+            "author": "Josh Berry"
+        }
+    },
+    "video-speed-control": {
+        "version": "0.1.6",
+        "id": "{24e032ab-bf0b-41ad-b404-79abc127bcbf}",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4859676/video_speed_control-0.1.6.xpi",
+            "hash": "sha256-8eCdy+i47VCN41iUL0zKKMFNFa0Urzs9txir5Nc4Gdw="
+        },
+        "meta": {
+            "name": "Video Speed Control",
+            "description": "Easily control HTML5 video playback speed via toolbar popup",
+            "homepage": "https://mybrowseraddon.com/video-speed-control.html",
+            "license": "Mozilla Public License 2.0",
+            "author": "Sevina"
+        }
+    },
+    "augmented-steam": {
+        "version": "5.0.0",
+        "id": "{1be309c5-3e4f-4b99-927d-bb500eb4fa88}",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5079049/augmented_steam-5.0.0.xpi",
+            "hash": "sha256-GMEosjJvNenAqdGXOrIGqONdfMqJoPf2GBLnoUsxqPQ="
+        },
+        "meta": {
+            "name": "Augmented Steam",
+            "description": "Augments your Steam Experience",
+            "homepage": "https://augmentedsteam.com/",
+            "license": "GNU General Public License v3.0 only",
+            "author": "IsThereAnyDeal"
+        }
+    },
+    "traduzir-paginas-web": {
+        "version": "10.2.1.0",
+        "id": "{036a55b4-5e72-4d05-a06c-cba2dfcc134a}",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4962745/traduzir_paginas_web-10.2.1.0.xpi",
+            "hash": "sha256-Z/S5AnlCZZDM+I+FrvFFCZSLTmYWgtk4qTwLzOlMUjs="
+        },
+        "meta": {
+            "name": "TWP - Translate Web Pages",
+            "description": "Translate your page in real time using Google, Bing or Yandex.\nIt is not necessary to open new tabs.",
+            "license": "Mozilla Public License 2.0",
+            "author": "Filipe Dev"
+        }
+    },
+    "web-developer": {
+        "version": "3.0.1",
+        "id": "{c45c406e-ab73-11d8-be73-000a95be3b12}",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4306323/web_developer-3.0.1.xpi",
+            "hash": "sha256-TSzidzGG+qOFvZXP/xDiRON6KIgASXt1C6tmXXviGj0="
+        },
+        "meta": {
+            "name": "Web Developer",
+            "description": "The Web Developer extension adds various web developer tools to the browser.",
+            "homepage": "http://chrispederick.com/work/web-developer/firefox/",
+            "license": "GNU Lesser General Public License v3.0 only",
+            "author": "chrispederick"
+        }
+    },
+    "my-redirector": {
+        "version": "1.0.11",
+        "id": "{5816eaf8-2431-4468-9c04-62d8b44df5b7}",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4830387/my_redirector-1.0.11.xpi",
+            "hash": "sha256-j/Om9NbuITIFkttKbLSgSzOwYDzx7/yUfm7QNjm2CwQ="
+        },
+        "meta": {
+            "name": "Redirector",
+            "description": "This extension allows you to set custom redirects. It is useful for redirecting popular sites to alternative frontends (e.g. youtube to invidious), or restoring functionality (e.g. automatic redirection to Zoom's web client).",
+            "homepage": "https://github.com/lifo9/Redirector",
+            "license": "MIT License",
+            "author": "Jakub Filo"
+        }
+    },
+    "flagfox": {
+        "version": "6.2.6",
+        "id": "{1018e4d6-728f-4b20-ad56-37578a4de76b}",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5067561/flagfox-6.2.6.xpi",
+            "hash": "sha256-/8lVRU+zKlCoptmUgCM3/PqCGYzPnfze2UCFymqVB0I="
+        },
+        "meta": {
+            "name": "Flagfox",
+            "description": "Displays a country flag depicting the location of the current website's server and provides a multitude of tools such as site safety checks, whois, translation, similar sites, validation, URL shortening, and more...",
+            "homepage": "https://flagfox.wordpress.com/",
+            "license": "Flagfox License",
+            "author": "Dave G"
+        }
+    },
+    "search_by_image": {
+        "version": "8.5.3",
+        "id": "{2e5ff8c8-32fe-46d0-9fc8-6b8986621f3c}",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4840197/search_by_image-8.5.3.xpi",
+            "hash": "sha256-umBEeLUPXEbhMBHqfj4pBqvHsbcst+h7AsT73vpkrjc="
+        },
+        "meta": {
+            "name": "Search by Image",
+            "description": "A powerful reverse image search tool, with support for various search engines, such as Google, Bing, Yandex, Baidu and TinEye.",
+            "homepage": "https://github.com/dessant/search-by-image#readme",
+            "license": "GNU General Public License v3.0 only",
+            "author": "Armin Sebastian"
+        }
+    },
+    "simple-translate": {
+        "version": "3.1.0",
+        "id": "simple-translate@sienori",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4979122/simple_translate-3.1.0.xpi",
+            "hash": "sha256-wnWR6uc2P7BjXyEnesTgvFcJ5s/ymdM77E3oEGwpiVE="
+        },
+        "meta": {
+            "name": "Simple Translate",
+            "description": "Quickly translate selected or typed text on web pages. Supports Google Translate and DeepL API.",
+            "homepage": "https://simple-translate.sienori.com",
+            "license": "Mozilla Public License 2.0",
+            "author": "sienori"
+        }
+    },
+    "temporary-containers-plus": {
+        "version": "2.1.5",
+        "id": "{1ea2fa75-677e-4702-b06a-50fc7d06fe7e}",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4796436/temporary_containers_plus-2.1.5.xpi",
+            "hash": "sha256-yApz7kEwKns0pzRI5vf0LB/GhPs+Wzf+0BF+f/yrvxk="
+        },
+        "meta": {
+            "name": "Temporary Containers Plus",
+            "description": "Open tabs, websites, and links in automatically managed disposable containers. Containers isolate the data websites store (cookies, cache, and more) from each other, further enhancing your privacy while you browse.",
+            "homepage": "https://github.com/GodKratos/temporary-containers",
+            "license": "MIT License",
+            "author": "Bunta126"
+        }
+    },
+    "tab-session-manager": {
+        "version": "7.4.0",
+        "id": "Tab-Session-Manager@sienori",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4905104/tab_session_manager-7.4.0.xpi",
+            "hash": "sha256-EN3DvCcXnLMpYvqGKeh9nSw4l6YEujR2ZuvhahSIdRs="
+        },
+        "meta": {
+            "name": "Tab Session Manager",
+            "description": "Save and restore the state of windows and tabs. It also supports automatic saving and cloud sync.",
+            "homepage": "https://tab-session-manager.sienori.com/",
+            "license": "Mozilla Public License 2.0",
+            "author": "sienori"
+        }
+    },
+    "print-edit-we": {
+        "version": "29.7",
+        "id": "printedit-we@DW-dev",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4479263/print_edit_we-29.7.xpi",
+            "hash": "sha256-+ts5LhNmYnTQlkb17jS/B8OKihUqMMavxOI+Q7DLRjo="
+        },
+        "meta": {
+            "name": "Print Edit WE",
+            "description": "Edit the contents of a web page prior to printing or saving. Elements in the web page can be edited, formatted, hidden or deleted. Unwanted content, such as adverts and sidebars, can easily be removed.",
+            "license": "GNU General Public License v2.0 only",
+            "author": "DW-dev"
+        }
+    },
+    "save-page-we": {
+        "version": "28.11",
+        "id": "savepage-we@DW-dev",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4091842/save_page_we-28.11.xpi",
+            "hash": "sha256-JvlQRxH6RAFPjLVwU9CQAVO0RuYjCMzx89mJwod3HP0="
+        },
+        "meta": {
+            "name": "Save Page WE",
+            "description": "Save a complete web page (as currently displayed) as a single HTML file that can be opened in any browser. Save a single page, multiple selected pages or a list of page URLs. Automate saving from command line.",
+            "license": "GNU General Public License v2.0 only",
+            "author": "DW-dev"
+        }
+    },
+    "read-aloud": {
+        "version": "1.81.1",
+        "id": "{ddc62400-f22d-4dd3-8b4a-05837de53c2e}",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4687318/read_aloud-1.81.1.xpi",
+            "hash": "sha256-AOa62piBQQj6o84QggO1BS2463FKJ0chpLUy9w+hVFg="
+        },
+        "meta": {
+            "name": "Read Aloud: A Text to Speech Voice Reader",
+            "description": "Read out loud the current web-page article with one click. Supports 40+ languages.",
+            "license": "GNU General Public License v3.0 only",
+            "author": "LSD Software"
+        }
+    },
+    "unpaywall": {
+        "version": "3.98",
+        "id": "{f209234a-76f0-4735-9920-eb62507a54cd}",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/3816853/unpaywall-3.98.xpi",
+            "hash": "sha256-aJO+qG08TtfxEAvw4XNZG1JqBi9N3XvhPDClRXPHl/s="
+        },
+        "meta": {
+            "name": "Unpaywall",
+            "description": "Get free text of research papers as you browse, using Unpaywall's index of ten million legal, open-access articles.",
+            "homepage": "https://unpaywall.org/products/extension",
+            "license": "MIT License",
+            "author": "Impactstory team"
+        }
+    },
+    "skip-redirect": {
+        "version": "3.0.2",
+        "id": "skipredirect@sblask",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/4968151/skip_redirect-3.0.2.xpi",
+            "hash": "sha256-HtnEyhX87Slj3AAdlcR0Xu2aHFu5121woxQNvVcVudc="
+        },
+        "meta": {
+            "name": "Skip Redirect",
+            "description": "Some web pages use intermediary pages before redirecting to a final page. This add-on tries to extract the final url from the intermediary url and goes there straight away if successful.",
+            "license": "MIT License",
+            "author": "Sebastian Blask"
+        }
+    },
+    "keepassxc-browser": {
+        "version": "1.10.4.1",
+        "id": "keepassxc-browser@keepassxc.org",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5078406/keepassxc_browser-1.10.4.1.xpi",
+            "hash": "sha256-rkEVej8Bewdzq7ogl9WwBWJBYx0KOK021o0LJLGkCcE="
+        },
+        "meta": {
+            "name": "KeePassXC-Browser",
+            "description": "Official browser plugin for the KeePassXC password manager (https://keepassxc.org).",
+            "homepage": "https://keepassxc.org/",
+            "license": "GNU General Public License v3.0 only",
+            "author": "KeePassXC Team"
+        }
+    },
+    "onetab": {
+        "version": "2.24",
+        "id": "extension@one-tab.com",
+        "src": {
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5108930/onetab-2.24.xpi",
+            "hash": "sha256-6wA6piFGu6o7e1z58nFGkz48LYHoIkZZ9UOY0ApSLXQ="
+        },
+        "meta": {
+            "name": "OneTab",
+            "description": "Save up to 95% memory and reduce tab clutter",
+            "homepage": "https://www.one-tab.com",
+            "license": "Custom License",
+            "author": "OneTab Team"
+        }
     }
 }
