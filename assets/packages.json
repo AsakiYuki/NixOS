@@ -39,11 +39,11 @@
         }
     },
     "lsfg-vk": {
-        "version": "2.0.0.r15.geb080c9",
+        "version": "2.0.0.r16.g21fbd1b",
         "source": {
             "x86_64-linux": {
-                "url": "https://builds.lsfg-vk.dev/lsfg-vk-2.0.0.r15.geb080c9.tar.xz",
-                "hash": "sha256-1AGr2ttko0DrPYJ+iF7yOqLY4YNeyZrbNUzMsRSE86U="
+                "url": "https://builds.lsfg-vk.dev/lsfg-vk-2.0.0.r16.g21fbd1b.tar.xz",
+                "hash": "sha256-FAeAvsZWJfEykdo3eGX2YsBEqx2xowMjyh1XDGrpV8w="
             }
         }
     },
