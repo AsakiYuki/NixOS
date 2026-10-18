@@ -33,10 +33,6 @@ type Theme = {
 }
 type MillenniumData = PluginData & { themes?: Record<string, Theme> }
 
-function nixAttrName(id: string): string {
-	return id.replaceAll(".", "_")
-}
-
 function run(command: string, args: string[], cwd?: string): Promise<{ code: number; output: string }> {
 	return new Promise((resolve, reject) => {
 		const child = spawn(command, args, { cwd, env: process.env })
@@ -111,6 +107,7 @@ async function hashDependencies(names: string[], data: PluginData, root: string)
   pkgs = import flake.inputs.nixpkgs.outPath {
     overlays = [ (_: pkgs: import ./overlays/packages (pkgs // { inherit pkgs; })) ];
   };
+  nixAttrName = id: builtins.replaceStrings [ "." ] [ "_" ] id;
   names = [ ${names.map(name => JSON.stringify(name)).join(" ")} ];
 in pkgs.linkFarm "millennium-plugin-dependencies" (map (name: {
   inherit name;
@@ -160,6 +157,7 @@ async function hashThemeDependencies(names: string[], data: MillenniumData, root
   pkgs = import flake.inputs.nixpkgs.outPath {
     overlays = [ (_: pkgs: import ./overlays/packages (pkgs // { inherit pkgs; })) ];
   };
+  nixAttrName = id: builtins.replaceStrings [ "." ] [ "_" ] id;
   names = [ ${names.map(name => JSON.stringify(name)).join(" ")} ];
 in pkgs.linkFarm "millennium-theme-dependencies" (map (name: {
   inherit name;
@@ -194,6 +192,7 @@ async function buildPlugins(names: string[], root: string): Promise<void> {
   pkgs = import flake.inputs.nixpkgs.outPath {
     overlays = [ (_: pkgs: import ./overlays/packages (pkgs // { inherit pkgs; })) ];
   };
+  nixAttrName = id: builtins.replaceStrings [ "." ] [ "_" ] id;
   names = [ ${names.map(name => JSON.stringify(name)).join(" ")} ];
 in pkgs.linkFarm "millennium-plugin-build-check" (map (name: {
   inherit name;
@@ -219,6 +218,7 @@ async function buildThemes(names: string[], root: string): Promise<void> {
   pkgs = import flake.inputs.nixpkgs.outPath {
     overlays = [ (_: pkgs: import ./overlays/packages (pkgs // { inherit pkgs; })) ];
   };
+  nixAttrName = id: builtins.replaceStrings [ "." ] [ "_" ] id;
   names = [ ${names.map(name => JSON.stringify(name)).join(" ")} ];
 in pkgs.linkFarm "millennium-theme-build-check" (map (name: {
   inherit name;
