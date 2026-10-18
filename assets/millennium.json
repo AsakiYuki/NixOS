@@ -586,12 +586,12 @@
         },
         "zehn": {
             "name": "Zehn",
-            "version": "2026.10.17",
+            "version": "2026.10.18",
             "description": "Windows 10 Fluent Design for Steam - Minimal, colorable, light/dark, and more!",
             "owner": "yurisuika",
             "repo": "Zehn",
-            "rev": "bacb8925e768754f2791d1ce326cc6faeb1da87e",
-            "hash": "02vch668fi34gdnj6x3v5yz1xpak13rdhv3wbfd24n5r1ba955b6",
+            "rev": "78a94cc86e403f36fb77d7113838ec8e0e3fd723",
+            "hash": "1qz5am1wq17h8nkw5d8b814kx2c5l9i1jca8hfav8719vzczzk81",
             "storeId": "p98ZoGwVHK65NExmPaki"
         },
         "classic-steam-library": {
@@ -632,8 +632,8 @@
             "description": "Theme with a dark aesthetic and modular-inspired look, offering clarity, flexibility, and an enhanced user experience.",
             "owner": "SpaceTheme",
             "repo": "Steam",
-            "rev": "af2a36c43d99cbd8134cc5fd16cd0fedbc4a06f3",
-            "hash": "0831b5m6n58nh88mbz50v25mh02ixi3vmf485grk3dl5wz7ydlc7",
+            "rev": "650f3961021720b8c1ee88fc9ca2cdf97f12ed0d",
+            "hash": "1h0w4q9qh0wpljfrj62f3257rdz08k4lk9ahjhrkh1vqhp6767s8",
             "storeId": "zQndv1rI0FXLh3QTRgOL"
         },
         "mont-black": {
