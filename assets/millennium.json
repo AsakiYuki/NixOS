@@ -423,7 +423,7 @@
         "steam-2-0-modular": {
             "name": "Steam 2.0 modular",
             "version": "1.0.4",
-            "description": "Steam 2.0 Modular is an elegant and minimalist theme inspired by GOG 2.0 that modernizes the Steam experience. It allows you to change and create different color gradients for all the app\u2019s backgrounds, manually sort the library, and hide the game list and new shelf. This theme focuses on simplifying the interface by removing unnecessary visual elements and reorganizing content more efficiently, all while maintaining the full functionality of Steam.",
+            "description": "Steam 2.0 Modular is an elegant and minimalist theme inspired by GOG 2.0 that modernizes the Steam experience. It allows you to change and create different color gradients for all the app’s backgrounds, manually sort the library, and hide the game list and new shelf. This theme focuses on simplifying the interface by removing unnecessary visual elements and reorganizing content more efficiently, all while maintaining the full functionality of Steam.",
             "owner": "Br1Rol2",
             "repo": "Steam2.0-modular",
             "rev": "303b4e88e499d848ac63bb8476d4cc8afa287bee",
@@ -495,7 +495,7 @@
         "tsukushiaria": {
             "name": "TsukushiAria",
             "version": "1.2.4",
-            "description": "The genius, unrivaled, ultimate necromancer! \ud83d\udc7b\u2729\u2871 I think I'm gonna completely captivate all those pushover adults~ \ud83d\udc9c",
+            "description": "The genius, unrivaled, ultimate necromancer! 👻✩⡱ I think I'm gonna completely captivate all those pushover adults~ 💜",
             "owner": "1739321142",
             "repo": "TsukushiAria-theme",
             "rev": "2704fdf37ca2ec9a978c0ced17be7ed231eb983b",
@@ -632,8 +632,8 @@
             "description": "Theme with a dark aesthetic and modular-inspired look, offering clarity, flexibility, and an enhanced user experience.",
             "owner": "SpaceTheme",
             "repo": "Steam",
-            "rev": "5b23b14bf2d0edbfe1d2e44c2b3070d6efe27f55",
-            "hash": "1hz6rdmjzn06vwyvxgbmhkmrxwvzl27ia26kk8jfxqaw6f3nayia",
+            "rev": "af2a36c43d99cbd8134cc5fd16cd0fedbc4a06f3",
+            "hash": "0831b5m6n58nh88mbz50v25mh02ixi3vmf485grk3dl5wz7ydlc7",
             "storeId": "zQndv1rI0FXLh3QTRgOL"
         },
         "mont-black": {
@@ -668,12 +668,12 @@
         },
         "glass-dusk": {
             "name": "Glass Dusk",
-            "version": "1.6.9",
+            "version": "1.6.10",
             "description": "Smoked glass over the art of the game you have open: the client takes its accent colour from that art. Styles the library, store, menus, Big Picture and the in-game overlay.",
             "owner": "Yareli0i",
             "repo": "glass-dusk",
-            "rev": "df7d8cab9b6eba7f327742b6879bceb4b92f8a7a",
-            "hash": "0ky40xicnazn5f1i7lszxkpzcyprj090i8m8y2b2mnxrxvikm635",
+            "rev": "079654612ce19586d68e1268863338d9b484bc1d",
+            "hash": "1isqlrz2h8mplc35gjsbh6l5n5whvm3w1h8713ips6g7c51v8421",
             "storeId": "0hs3xMU5Eb85uvIALzkq"
         },
         "aika": {
