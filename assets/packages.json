@@ -74,15 +74,15 @@
         }
     },
     "opennow": {
-        "version": "0.5.5",
+        "version": "1.0.3",
         "source": {
             "x86_64-linux": {
-                "url": "https://github.com/OpenCloudGaming/OpenNOW/releases/download/v0.5.5/OpenNOW-v0.5.5-linux-amd64.deb",
-                "hash": "sha256-iTWPhDPIpXPJjLl5And/IrAlFzM6pavD7xz3A0GhprY="
+                "url": "https://github.com/OpenCloudGaming/OpenNOW/releases/download/v1.0.3/OpenNOW-Qt-1.0.3-Linux-x64.deb",
+                "hash": "sha256-kh64bJNumjRab1EJ41/LaPbB2YWW15xYhPgLBFEcJI8="
             },
             "aarch64-linux": {
-                "url": "https://github.com/OpenCloudGaming/OpenNOW/releases/download/v0.5.5/OpenNOW-v0.5.5-linux-arm64.deb",
-                "hash": "sha256-G6NA8cpqfWWoBZ6L9XwC3csk1UcwXXLtYZocIUeodH0="
+                "url": "https://github.com/OpenCloudGaming/OpenNOW/releases/download/v1.0.3/OpenNOW-Qt-1.0.3-Linux-arm64.deb",
+                "hash": "sha256-rGtEVC/K5w3+d+Bp7zf2kFO56fvgJWwh5+fWtBmOgXM="
             }
         }
     },
