@@ -52,7 +52,15 @@
 		"source": {
 			"x86_64-linux": {
 				"url": "https://github.com/geode-sdk/cli/releases/download/v3.9.0/geode-cli-v3.9.0-linux.zip",
-				"hash": "sha256-3TAo6St1XU6ZvrIrYF0tOs+N0gg8bJO7Uvcgityodww="
+				"hash": "sha256-wccyYZEGumMABFJoSehhfaWIF0bh2BhWRg43sLa5ly0="
+			},
+			"aarch64-linux": {
+				"url": "https://github.com/geode-sdk/cli/releases/download/v3.9.0/geode-cli-v3.9.0-linux-arm.zip",
+				"hash": "sha256-5yWJgNGuG3nZhzmQK3EIueCQQ1F/10stnKhw10UHCws="
+			},
+			"x86_64-darwin": {
+				"url": "https://github.com/geode-sdk/cli/releases/download/v3.9.0/geode-cli-v3.9.0-mac.zip",
+				"hash": "sha256-lI5JlezmrCWlUWdFqh0PBE1qK38mQWDVNkkjxawC4Yc="
 			}
 		}
 	},

@@ -11,16 +11,17 @@ in (pkgs.stdenv.mkDerivation rec {
   pname = "geode-cli";
   version = geode-cli.version;
 
-  src = pkgs.fetchzip {
+  src = pkgs.fetchurl {
     inherit (source) url hash;
   };
+
+  nativeBuildInputs = [pkgs.unzip];
 
   dontBuild = true;
 
   installPhase = ''
     mkdir -p $out/bin
-    cp geode $out/bin
-    chmod +x $out/bin/geode
+    install -m755 geode $out/bin/geode
   '';
 
   meta = with lib; {

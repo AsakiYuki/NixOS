@@ -107,17 +107,26 @@ async function main() {
 			package_name: "geode-cli",
 			get_version: latest => latest.tag_name.slice(1),
 			new_version_found: async (cached, latest, version) => {
-				const file = latest.assets.find(({ name }) => name === `geode-cli-v${version}-linux.zip`)
-				if (!file) {
-					console.warn(`[WARN] Asset 'geode-cli-v${version}-linux.zip' not found in release v${version}.`)
+				const assets = {
+					"x86_64-linux": latest.assets.find(({ name }) => name === `geode-cli-v${version}-linux.zip`),
+					"aarch64-linux": latest.assets.find(({ name }) => name === `geode-cli-v${version}-linux-arm.zip`),
+					"x86_64-darwin": latest.assets.find(({ name }) => name === `geode-cli-v${version}-mac.zip`),
+				}
+				if (!Object.values(assets).some(Boolean)) {
+					console.warn(`[WARN] No supported platform asset found for geode-cli v${version}.`)
 					return false
 				}
 
-				console.info(`[INFO] Fetching zip hash from: ${file.download_url}`)
-				const hash = await fetchZipHash(file.download_url)
-				descriptions.push(`geode-cli v${version} (Linux x64) - Hash: ${hash}`)
+				const source: Record<string, { url: string; hash: string }> = {}
+				for (const [system, file] of Object.entries(assets)) {
+					if (!file) continue
+					console.info(`[INFO] Fetching archive hash from: ${file.download_url}`)
+					const hash = await fetchUrlHash(file.download_url)
+					descriptions.push(`geode-cli v${version} (${system}) - Hash: ${hash}`)
+					source[system] = { url: file.download_url, hash }
+				}
 
-				return { version, source: { "x86_64-linux": { url: file.download_url, hash } } }
+				return { version, source }
 			},
 		}),
 		(async function () {
