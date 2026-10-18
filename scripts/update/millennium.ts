@@ -26,9 +26,15 @@ type Theme = {
 	rev: string
 	hash: string
 	storeId: string
+	buildCommand?: string
+	depsHash?: string
 	[key: string]: unknown
 }
 type MillenniumData = PluginData & { themes?: Record<string, Theme> }
+
+function nixAttrName(id: string): string {
+	return id.replaceAll(".", "_")
+}
 
 function run(command: string, args: string[], cwd?: string): Promise<{ code: number; output: string }> {
 	return new Promise((resolve, reject) => {
@@ -75,7 +81,7 @@ async function hashDependencies(names: string[], data: PluginData, root: string)
   names = [ ${names.map(name => JSON.stringify(name)).join(" ")} ];
 in pkgs.linkFarm "millennium-plugin-dependencies" (map (name: {
   inherit name;
-  path = pkgs.millennium-plugins.\"\${name}\".dependencies;
+  path = pkgs.millennium-plugins.\"\${nixAttrName name}\".dependencies;
 }) names)`
 
 	const firstPass = await run("nix", [
@@ -112,6 +118,42 @@ in pkgs.linkFarm "millennium-plugin-dependencies" (map (name: {
 	if (validation.code !== 0) throw new Error(`Pinned dependency derivations failed to build:\n${validation.output}`)
 }
 
+async function hashThemeDependencies(names: string[], data: MillenniumData, root: string): Promise<void> {
+	if (names.length === 0) return
+
+	for (const name of names) data.themes![name].depsHash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+	const expression = `let
+  flake = builtins.getFlake (toString ./.);
+  pkgs = import flake.inputs.nixpkgs.outPath {
+    overlays = [ (_: pkgs: import ./overlays/packages (pkgs // { inherit pkgs; })) ];
+  };
+  names = [ ${names.map(name => JSON.stringify(name)).join(" ")} ];
+in pkgs.linkFarm "millennium-theme-dependencies" (map (name: {
+  inherit name;
+  path = pkgs.millennium-themes.\"\${nixAttrName name}\".dependencies;
+}) names)`
+	const firstPass = await run("nix", [
+		"build", "--impure", "--keep-going", "--extra-experimental-features", "nix-command flakes",
+		"--no-link", "--expr", expression,
+	], root)
+	const hashes = new Map<string, string>()
+	const mismatch = /hash mismatch in fixed-output derivation '\/nix\/store\/[0-9a-z]+-([^']+)-node-modules-[^']+\.drv':[\s\S]*?got:\s+(sha256-[^\s]+)/g
+	for (const match of firstPass.output.matchAll(mismatch)) hashes.set(match[1], match[2])
+
+	for (const name of names) {
+		const hash = hashes.get(name)
+		if (!hash) throw new Error(`Could not calculate theme dependency hash for ${name}. Nix output:\n${firstPass.output}`)
+		data.themes![name].depsHash = hash
+	}
+	await fs.writeFile(path.join(root, "assets/millennium.json"), JSON.stringify(data, null, 4) + "\n", "utf8")
+
+	const validation = await run("nix", [
+		"build", "--impure", "--keep-going", "--extra-experimental-features", "nix-command flakes",
+		"--no-link", "--expr", expression,
+	], root)
+	if (validation.code !== 0) throw new Error(`Pinned theme dependency derivations failed to build:\n${validation.output}`)
+}
+
 async function buildPlugins(names: string[], root: string): Promise<void> {
 	if (names.length === 0) return
 	const expression = `let
@@ -122,7 +164,7 @@ async function buildPlugins(names: string[], root: string): Promise<void> {
   names = [ ${names.map(name => JSON.stringify(name)).join(" ")} ];
 in pkgs.linkFarm "millennium-plugin-build-check" (map (name: {
   inherit name;
-  path = pkgs.millennium-plugins.\"\${name}\";
+  path = pkgs.millennium-plugins.\"\${nixAttrName name}\";
 }) names)`
 	const result = await run("nix", [
 		"build",
@@ -147,7 +189,7 @@ async function buildThemes(names: string[], root: string): Promise<void> {
   names = [ ${names.map(name => JSON.stringify(name)).join(" ")} ];
 in pkgs.linkFarm "millennium-theme-build-check" (map (name: {
   inherit name;
-  path = pkgs.millennium-themes."\${name}";
+  path = pkgs.millennium-themes."\${nixAttrName name}";
 }) names)`
 	const result = await run("nix", [
 		"build",
@@ -160,6 +202,21 @@ in pkgs.linkFarm "millennium-theme-build-check" (map (name: {
 		expression,
 	], root)
 	if (result.code !== 0) throw new Error(`Updated Millennium themes failed to build:\n${result.output}`)
+}
+
+async function themeBuildMetadata(owner: string, repo: string, rev: string, key: string): Promise<{ buildCommand?: string }> {
+	const response = await fetch(`https://raw.githubusercontent.com/${owner}/${repo}/${rev}/package.json`)
+	if (response.status === 404) return {}
+	if (!response.ok) throw new Error(`Failed to inspect ${owner}/${repo}@${rev}/package.json: HTTP ${response.status}`)
+	const manifest = await response.json() as Record<string, any>
+	if (!manifest.scripts?.build) return {}
+
+	const knownBuildCommands: Record<string, string> = {
+		juxtematic: "npm run build -- client && npm run build -- web",
+		"microsoft-office-2007-styled-theme": "npm run build",
+		"windows-95": "npm run build -- steam",
+	}
+	return { buildCommand: knownBuildCommands[key] ?? "npm run build" }
 }
 
 function themeKey(name: string, id: string): string {
@@ -271,7 +328,16 @@ async function main() {
 			) continue
 
 			const hash = previous?.rev === rev ? previous.hash : await nixHash(owner, repo, rev)
-			data.themes[key] = { name, version, description, owner, repo, rev, hash, storeId }
+			const { buildCommand } = await themeBuildMetadata(owner, repo, rev, key)
+			const next: Theme = { ...(previous ?? {}), name, version, description, owner, repo, rev, hash, storeId }
+			if (buildCommand) {
+				next.buildCommand = buildCommand
+				next.depsHash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+			} else {
+				delete next.buildCommand
+				delete next.depsHash
+			}
+			data.themes[key] = next
 			changedThemeNames.push(key)
 			changes.push(`${previous ? "Updated" : "Added"} theme: ${key} ${previous?.version ?? "(new)"} -> ${version} (${rev})`)
 			console.info(`[INFO] ${previous ? "Updated" : "Added"} theme ${key} at ${rev}`)
@@ -286,6 +352,7 @@ async function main() {
 		try {
 			await fs.writeFile(dataPath, JSON.stringify(data, null, 4) + "\n", "utf8")
 			await hashDependencies(changedNames, data, root)
+			await hashThemeDependencies(changedThemeNames.filter(name => data.themes![name].buildCommand), data, root)
 			await fs.writeFile(dataPath, JSON.stringify(data, null, 4) + "\n", "utf8")
 			await buildPlugins(changedNames, root)
 			await buildThemes(changedThemeNames, root)

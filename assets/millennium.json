@@ -456,7 +456,9 @@
             "repo": "aerothemesteam",
             "rev": "8e176621470fe461dd668fbe46f761768ecc49c1",
             "hash": "01lp0kxlgl1bklw68my1rl1acaxjs997lyzkwi5l5lbcgk8myv9l",
-            "storeId": "Dn6O7CHFe9P5FfksaUas"
+            "storeId": "Dn6O7CHFe9P5FfksaUas",
+            "buildCommand": "npm run build",
+            "depsHash": "sha256-HJuupClE/1xJDB97fZTh8g6/ASsqDplNLsEfBy0Ez+s="
         },
         "minimal-dark": {
             "name": "Minimal Dark",
@@ -526,7 +528,9 @@
             "repo": "juxtematic",
             "rev": "dd071f89e340a303a9e11beb005d4127c63c6784",
             "hash": "1fyr2kr99kgiir99gmxlkhh2g6vvzj9ls8xbbscwlyi5ky73i5f9",
-            "storeId": "hvGem3YVgRwPdDumShwq"
+            "storeId": "hvGem3YVgRwPdDumShwq",
+            "buildCommand": "npm run build -- client && npm run build -- web",
+            "depsHash": "sha256-zVCR5xOJSSjacHKg7KBd0Wpez3JkS3u7rxUwPBh5b2o="
         },
         "qol-toggles-steam": {
             "name": "QOL Toggles Steam",
@@ -606,7 +610,9 @@
             "repo": "win95-themes",
             "rev": "d2ae4fad38f2c2c349ea2a8b31c506bd57c84dbe",
             "hash": "0wdaqwajix6yr4flgl8vi9z40hj6dv5klbxfkn8v3zl2sck1a59a",
-            "storeId": "wnFmUHHXL0BkWgthDoJJ"
+            "storeId": "wnFmUHHXL0BkWgthDoJJ",
+            "buildCommand": "npm run build -- steam",
+            "depsHash": "sha256-ZFkrQJNLVaszXWQB+RtIqlginCiTPqHFThqmalAtBks="
         },
         "spacetheme-for-steam": {
             "name": "SpaceTheme for Steam",
