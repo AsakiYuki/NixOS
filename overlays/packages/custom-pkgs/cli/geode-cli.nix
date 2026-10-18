@@ -15,6 +15,8 @@ in (pkgs.stdenv.mkDerivation {
     inherit (source) url hash;
   };
 
+  sourceRoot = ".";
+
   nativeBuildInputs = [pkgs.unzip];
 
   dontBuild = true;
