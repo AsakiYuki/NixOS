@@ -267,14 +267,15 @@
         },
         "size-on-disk": {
             "name": "size-on-disk",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "description": "",
             "owner": "k0d13",
             "repo": "steam-size-on-disk",
-            "rev": "35ee6ab7a221429766ddafcee4d7a2a288246ecc",
-            "hash": "08xpkvl3hqagw77gwmzz01gb5jf9kxc6378kx8169imkc7kmb26g",
+            "rev": "600e00f66bf2dc84093c7af47624e563b177c827",
+            "hash": "1269grynzhfxl8iaw9ia1z09rhap7kwk8wqwd9zc2xgayby73xkh",
             "packageManager": "pnpm",
-            "depsHash": "sha256-C5OxZY2mVYPL4b90v4l7fP06oG6K9F4AGAhG2u7KK/I="
+            "depsHash": "sha256-5SLNXrL0rRQiRq4oDwCUZrMQkuNQ35peTZH+CZE4y54=",
+            "configKeys": []
         },
         "sortium": {
             "name": "sortium",
