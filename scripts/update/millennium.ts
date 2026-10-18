@@ -17,6 +17,18 @@ type Plugin = {
 }
 
 type PluginData = { plugins: Record<string, Plugin> }
+type Theme = {
+	name: string
+	version: string
+	description: string
+	owner: string
+	repo: string
+	rev: string
+	hash: string
+	storeId: string
+	[key: string]: unknown
+}
+type MillenniumData = PluginData & { themes?: Record<string, Theme> }
 
 function run(command: string, args: string[], cwd?: string): Promise<{ code: number; output: string }> {
 	return new Promise((resolve, reject) => {
@@ -101,6 +113,7 @@ in pkgs.linkFarm "millennium-plugin-dependencies" (map (name: {
 }
 
 async function buildPlugins(names: string[], root: string): Promise<void> {
+	if (names.length === 0) return
 	const expression = `let
   flake = builtins.getFlake (toString ./.);
   pkgs = import flake.inputs.nixpkgs.outPath {
@@ -124,17 +137,54 @@ in pkgs.linkFarm "millennium-plugin-build-check" (map (name: {
 	if (result.code !== 0) throw new Error(`Updated Millennium plugins failed to build:\n${result.output}`)
 }
 
+async function buildThemes(names: string[], root: string): Promise<void> {
+	if (names.length === 0) return
+	const expression = `let
+  flake = builtins.getFlake (toString ./.);
+  pkgs = import flake.inputs.nixpkgs.outPath {
+    overlays = [ (_: pkgs: import ./overlays/packages (pkgs // { inherit pkgs; })) ];
+  };
+  names = [ ${names.map(name => JSON.stringify(name)).join(" ")} ];
+in pkgs.linkFarm "millennium-theme-build-check" (map (name: {
+  inherit name;
+  path = pkgs.millennium-themes."\${name}";
+}) names)`
+	const result = await run("nix", [
+		"build",
+		"--impure",
+		"--keep-going",
+		"--extra-experimental-features",
+		"nix-command flakes",
+		"--no-link",
+		"--expr",
+		expression,
+	], root)
+	if (result.code !== 0) throw new Error(`Updated Millennium themes failed to build:\n${result.output}`)
+}
+
+function themeKey(name: string, id: string): string {
+	const slug = name
+		.toLowerCase()
+		.normalize("NFKD")
+		.replace(/[\u0300-\u036f]/g, "")
+		.replace(/[^a-z0-9]+/g, "-")
+		.replace(/^-|-$/g, "")
+	return slug || `theme-${id.toLowerCase()}`
+}
+
 async function main() {
 	const root = process.cwd()
 	const dataPath = path.join(root, "assets/millennium.json")
 	const commitPath = path.join(root, "millennium-commit.txt")
 	const originalFile = await fs.readFile(dataPath, "utf8")
-	const data: PluginData = JSON.parse(originalFile)
+	const data: MillenniumData = JSON.parse(originalFile)
+	data.themes ??= {}
 	const temp = await fs.mkdtemp(path.join(os.tmpdir(), "millennium-plugin-database-"))
 	await fs.rm(commitPath, { force: true })
 	const database = path.join(temp, "PluginDatabase")
 	const changes: string[] = []
 	const changedNames: string[] = []
+	const changedThemeNames: string[] = []
 
 	try {
 		await runChecked("git", [
@@ -189,8 +239,46 @@ async function main() {
 			console.info(`[INFO] ${previous ? "Updated" : "Added"} ${key} at ${rev}`)
 		}
 
-		if (changedNames.length === 0) {
-			console.info("[INFO] No new or updated approved Millennium plugins.")
+		const response = await fetch("https://steambrew.app/api/v2")
+		if (!response.ok) throw new Error(`Failed to fetch Millennium themes: HTTP ${response.status}`)
+		const catalog = await response.json()
+		if (!Array.isArray(catalog)) throw new Error("Millennium theme API returned an unexpected catalog format")
+
+		const normalizedThemeIds = new Set<string>()
+		for (const item of catalog) {
+			const name = String(item.name ?? "").trim()
+			const storeId = String(item.data?.id ?? "").trim()
+			const owner = String(item.data?.github?.owner ?? "").trim()
+			const repo = String(item.data?.github?.repo ?? "").trim()
+			const rev = String(item.commit_data?.oid ?? "").trim()
+			if (!name || !storeId || !owner || !repo || !/^[0-9a-f]{40}$/i.test(rev)) {
+				console.warn(`[WARN] Skipping Millennium theme with incomplete GitHub metadata: ${name || storeId || "(unnamed)"}`)
+				continue
+			}
+
+			const key = themeKey(name, storeId)
+			if (normalizedThemeIds.has(key)) throw new Error(`Millennium theme ID collision after lowercasing: ${name} -> ${key}`)
+			normalizedThemeIds.add(key)
+
+			const previous = data.themes[key]
+			const version = String(item.version ?? rev.slice(0, 7))
+			const description = String(item.description ?? "")
+			if (
+				previous?.rev === rev &&
+				previous.version === version &&
+				previous.description === description &&
+				previous.storeId === storeId
+			) continue
+
+			const hash = previous?.rev === rev ? previous.hash : await nixHash(owner, repo, rev)
+			data.themes[key] = { name, version, description, owner, repo, rev, hash, storeId }
+			changedThemeNames.push(key)
+			changes.push(`${previous ? "Updated" : "Added"} theme: ${key} ${previous?.version ?? "(new)"} -> ${version} (${rev})`)
+			console.info(`[INFO] ${previous ? "Updated" : "Added"} theme ${key} at ${rev}`)
+		}
+
+		if (changedNames.length === 0 && changedThemeNames.length === 0) {
+			console.info("[INFO] No new or updated approved Millennium plugins or themes.")
 			await fs.rm(commitPath, { force: true })
 			return
 		}
@@ -200,12 +288,13 @@ async function main() {
 			await hashDependencies(changedNames, data, root)
 			await fs.writeFile(dataPath, JSON.stringify(data, null, 4) + "\n", "utf8")
 			await buildPlugins(changedNames, root)
+			await buildThemes(changedThemeNames, root)
 			await fs.writeFile(commitPath, changes.join("\n"), "utf8")
 		} catch (error) {
 			await fs.writeFile(dataPath, originalFile, "utf8")
 			throw error
 		}
-		console.info(`[INFO] Updated ${changedNames.length} Millennium plugin(s).`)
+		console.info(`[INFO] Updated ${changedNames.length} Millennium plugin(s) and ${changedThemeNames.length} theme(s).`)
 	} finally {
 		await fs.rm(temp, { recursive: true, force: true })
 	}
