@@ -12,8 +12,15 @@
   }:
     pkgs.stdenv.mkDerivation {
       inherit pname version;
-      src = pkgs.fetchzip src;
+      src = pkgs.fetchurl src;
       dontBuild = true;
+      unpackPhase = ''
+        runHook preUnpack
+        mkdir -p proton-source
+        tar --extract --file "$src" --directory proton-source --strip-components=1
+        cd proton-source
+        runHook postUnpack
+      '';
       installPhase = ''
         mkdir -p $out
         cp -r ./* $out

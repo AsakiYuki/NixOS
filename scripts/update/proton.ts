@@ -5,7 +5,7 @@ import path from "path"
 
 import { Asset, getGitLatestReleases, LatestReleaseData } from "../helpers/git"
 import { getGithubRepoLatestRelease } from "../helpers/github"
-import { fetchZipHash } from "../helpers/nix"
+import { fetchUrlHash } from "../helpers/nix"
 
 interface ProtonRelease {
 	url: string
@@ -92,8 +92,8 @@ async function fetchProtonRelease(options: FetchProtonReleaseArgs) {
 		return false
 	}
 
-	console.info(`[INFO] Fetching zip hash from: ${file.download_url}`)
-	const hash = await fetchZipHash(file.download_url)
+	console.info(`[INFO] Fetching archive hash from: ${file.download_url}`)
+	const hash = await fetchUrlHash(file.download_url)
 	descriptions.push(`${key} ${newVersion} - Hash: ${hash}`)
 
 	proton.latest = newVersion
