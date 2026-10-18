@@ -7,7 +7,7 @@
   inherit (data) geode-cli;
   source = geode-cli.source.${pkgs.stdenv.system}
     or (throw "Geode CLI is not supported on ${pkgs.stdenv.system}");
-in (pkgs.stdenv.mkDerivation rec {
+in (pkgs.stdenv.mkDerivation {
   pname = "geode-cli";
   version = geode-cli.version;
 
