@@ -187,8 +187,15 @@ async function main() {
 			cache_version: cached => cached.release,
 			get_version: latest => latest.tag_name.slice(1),
 			new_version_found: async (cached, latest, release) => {
-				const file1 = latest.assets[0]
-				const file2 = latest.assets[1]
+				const file1 = latest.assets.find(({ name }) => name === "cage-xtmapper-v0.1.5.tar")
+				const file2 = latest.assets.find(({ name }) => name === "cage-xtmapper-v0.2.0.tar")
+
+				if (!file1 || !file2) {
+					console.warn(
+						`[WARN] Expected cage-xtmapper v0.1.5 and v0.2.0 tar assets not found in release v${release}.`,
+					)
+					return false
+				}
 
 				console.info(`[INFO] Fetching zip hash from: ${file1.download_url}, ${file2.download_url}`)
 				const [hash1, hash2] = await Promise.all([
