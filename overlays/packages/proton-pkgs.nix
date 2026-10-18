@@ -4,6 +4,8 @@
   ...
 }: let
   proton-data = lib.importJSON ../../assets/proton.json;
+  hostPlatform = pkgs.stdenv.hostPlatform;
+  system = hostPlatform.system;
 
   mkProtonPackage = {
     pname,
@@ -30,23 +32,33 @@
   buildProton = pname: let
     proton = proton-data.${pname};
     versions =
-      lib.mapAttrs' (ver: src: {
-        name = "${pname}-${ver}";
-        value = mkProtonPackage {
-          inherit pname src;
-          version = ver;
-        };
-      })
-      proton.releases;
+      lib.filterAttrs (_: value: value != null)
+      (lib.mapAttrs' (ver: release: {
+          name = "${pname}-${ver}";
+          value = let
+            src = release.${system} or null;
+          in
+            if src == null
+            then null
+            else mkProtonPackage {
+              inherit pname src;
+              version = ver;
+            };
+        })
+        proton.releases);
+    latest = versions."${pname}-${proton.latest}" or null;
+    sourceName = proton.source_name.${system} or null;
   in
     versions
-    // {
-      "${pname}-latest" = versions."${pname}-${proton.latest}".overrideAttrs (_: {
+    // lib.optionalAttrs (latest != null && sourceName != null) {
+      "${pname}-latest" = latest.overrideAttrs (_: {
         preFixup = ''
           substituteInPlace "$out/compatibilitytool.vdf" \
-            --replace-fail "${proton.source_name}" "${proton.override_name}"
+            --replace-fail "${sourceName}" "${proton.override_name}"
         '';
       });
     };
 in
-  lib.foldl' (acc: pname: acc // buildProton pname) {} (lib.attrNames proton-data)
+  if system != "x86_64-linux" && system != "aarch64-linux"
+  then {}
+  else lib.foldl' (acc: pname: acc // buildProton pname) {} (lib.attrNames proton-data)
