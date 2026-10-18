@@ -28,6 +28,7 @@
 		"check-vscode-extensions-update": "bun run scripts/update/vscode-extensions.ts",
 		"check-firefox-addons-update": "bun run scripts/update/firefox-addons.ts",
 		"check-millennium-update": "bun run scripts/update/millennium.ts",
+		"check-millennium-settings": "bun run scripts/update/millennium.ts --config-keys-only",
 		"add-firefox-addons": "bun run scripts/tools/add-firefox-addons.ts",
 		"add-vscode-extensions": "bun run scripts/tools/add-vscode-extensions.ts"
 	},

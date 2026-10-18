@@ -13,6 +13,7 @@ type Plugin = {
 	hash: string
 	packageManager: "npm" | "pnpm" | "bun"
 	depsHash: string
+	configKeys?: string[]
 	[key: string]: unknown
 }
 
@@ -67,6 +68,38 @@ function packageManager(manifest: Record<string, any>, files: Set<string>): Plug
 	if (files.has("pnpm-lock.yaml")) return "pnpm"
 	if (files.has("bun.lock") || files.has("bun.lockb")) return "bun"
 	return "npm"
+}
+
+async function pluginConfigKeys(root: string): Promise<string[]> {
+	const sourceExtensions = new Set([".js", ".jsx", ".ts", ".tsx", ".mjs", ".cjs", ".lua", ".py"])
+	const ignoredDirectories = new Set([".git", "node_modules", "dist", "build", "coverage"])
+	const files: string[] = []
+	const visit = async (directory: string): Promise<void> => {
+		for (const entry of await fs.readdir(directory, { withFileTypes: true })) {
+			if (entry.isDirectory()) {
+				if (!ignoredDirectories.has(entry.name)) await visit(path.join(directory, entry.name))
+			} else if (entry.isFile() && sourceExtensions.has(path.extname(entry.name))) {
+				files.push(path.join(directory, entry.name))
+			}
+		}
+	}
+	await visit(root)
+
+	const keys = new Set<string>()
+	const configAccessPatterns = [
+		/\busePluginConfig\s*(?:<[^>]*>)?\s*\(\s*(["'])([^"'\n]+)\1/g,
+		/\b(?:millennium\s*\.\s*)?config\s*\.\s*(?:get|set)\s*\(\s*(["'])([^"'\n]+)\1/g,
+	]
+	for (const file of files) {
+		const source = await fs.readFile(file, "utf8")
+		for (const pattern of configAccessPatterns) {
+			for (const match of source.matchAll(pattern)) {
+				const key = match[2].trim()
+				if (key && !key.includes("${")) keys.add(key)
+			}
+		}
+	}
+	return [...keys].sort((a, b) => a.localeCompare(b))
 }
 
 async function hashDependencies(names: string[], data: PluginData, root: string): Promise<void> {
@@ -231,6 +264,7 @@ function themeKey(name: string, id: string): string {
 
 async function main() {
 	const root = process.cwd()
+	const configKeysOnly = process.argv.includes("--config-keys-only")
 	const dataPath = path.join(root, "assets/millennium.json")
 	const commitPath = path.join(root, "millennium-commit.txt")
 	const originalFile = await fs.readFile(dataPath, "utf8")
@@ -241,6 +275,7 @@ async function main() {
 	const database = path.join(temp, "PluginDatabase")
 	const changes: string[] = []
 	const changedNames: string[] = []
+	const changedConfigNames: string[] = []
 	const changedThemeNames: string[] = []
 
 	try {
@@ -271,7 +306,26 @@ async function main() {
 			if (!owner || !repo || extra.length) throw new Error(`Invalid plugin repository URL: ${remote}`)
 
 			const previous = data.plugins[key]
-			if (previous?.rev === rev) continue
+			const configKeys = await pluginConfigKeys(sourceDir)
+			const configKeysChanged = JSON.stringify(previous?.configKeys ?? []) !== JSON.stringify(configKeys)
+			if (configKeysOnly) {
+				if (previous && configKeysChanged) {
+					data.plugins[key] = { ...previous, configKeys }
+					changedConfigNames.push(key)
+					changes.push(`Updated config keys: ${key} (${configKeys.length} key(s))`)
+					console.info(`[INFO] Discovered ${configKeys.length} config key(s) for ${key}`)
+				}
+				continue
+			}
+			if (previous?.rev === rev && !configKeysChanged) continue
+
+			if (previous?.rev === rev) {
+				data.plugins[key] = { ...previous, configKeys }
+				changedConfigNames.push(key)
+				changes.push(`Updated config keys: ${key} (${configKeys.length} key(s))`)
+				console.info(`[INFO] Discovered ${configKeys.length} config key(s) for ${key}`)
+				continue
+			}
 
 			const manifestPath = path.join(sourceDir, "package.json")
 			const manifest = JSON.parse(await fs.readFile(manifestPath, "utf8")) as Record<string, any>
@@ -289,6 +343,7 @@ async function main() {
 				hash,
 				packageManager: packageManager(manifest, files),
 				depsHash: "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+				configKeys,
 			}
 			data.plugins[key] = next
 			changedNames.push(key)
@@ -296,55 +351,61 @@ async function main() {
 			console.info(`[INFO] ${previous ? "Updated" : "Added"} ${key} at ${rev}`)
 		}
 
-		const response = await fetch("https://steambrew.app/api/v2")
-		if (!response.ok) throw new Error(`Failed to fetch Millennium themes: HTTP ${response.status}`)
-		const catalog = await response.json()
-		if (!Array.isArray(catalog)) throw new Error("Millennium theme API returned an unexpected catalog format")
+		if (!configKeysOnly) {
+			const response = await fetch("https://steambrew.app/api/v2")
+			if (!response.ok) throw new Error(`Failed to fetch Millennium themes: HTTP ${response.status}`)
+			const catalog = await response.json()
+			if (!Array.isArray(catalog)) throw new Error("Millennium theme API returned an unexpected catalog format")
 
-		const normalizedThemeIds = new Set<string>()
-		for (const item of catalog) {
-			const name = String(item.name ?? "").trim()
-			const storeId = String(item.data?.id ?? "").trim()
-			const owner = String(item.data?.github?.owner ?? "").trim()
-			const repo = String(item.data?.github?.repo ?? "").trim()
-			const rev = String(item.commit_data?.oid ?? "").trim()
-			if (!name || !storeId || !owner || !repo || !/^[0-9a-f]{40}$/i.test(rev)) {
-				console.warn(`[WARN] Skipping Millennium theme with incomplete GitHub metadata: ${name || storeId || "(unnamed)"}`)
-				continue
+			const normalizedThemeIds = new Set<string>()
+			for (const item of catalog) {
+				const name = String(item.name ?? "").trim()
+				const storeId = String(item.data?.id ?? "").trim()
+				const owner = String(item.data?.github?.owner ?? "").trim()
+				const repo = String(item.data?.github?.repo ?? "").trim()
+				const rev = String(item.commit_data?.oid ?? "").trim()
+				if (!name || !storeId || !owner || !repo || !/^[0-9a-f]{40}$/i.test(rev)) {
+					console.warn(`[WARN] Skipping Millennium theme with incomplete GitHub metadata: ${name || storeId || "(unnamed)"}`)
+					continue
+				}
+
+				const key = themeKey(name, storeId)
+				if (normalizedThemeIds.has(key)) throw new Error(`Millennium theme ID collision after lowercasing: ${name} -> ${key}`)
+				normalizedThemeIds.add(key)
+
+				const previous = data.themes[key]
+				const version = String(item.version ?? rev.slice(0, 7))
+				const description = String(item.description ?? "")
+				if (
+					previous?.rev === rev &&
+					previous.version === version &&
+					previous.description === description &&
+					previous.storeId === storeId
+				) continue
+
+				const hash = previous?.rev === rev ? previous.hash : await nixHash(owner, repo, rev)
+				const { buildCommand } = await themeBuildMetadata(owner, repo, rev, key)
+				const next: Theme = { ...(previous ?? {}), name, version, description, owner, repo, rev, hash, storeId }
+				if (buildCommand) {
+					next.buildCommand = buildCommand
+					next.depsHash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+				} else {
+					delete next.buildCommand
+					delete next.depsHash
+				}
+				data.themes[key] = next
+				changedThemeNames.push(key)
+				changes.push(`${previous ? "Updated" : "Added"} theme: ${key} ${previous?.version ?? "(new)"} -> ${version} (${rev})`)
+				console.info(`[INFO] ${previous ? "Updated" : "Added"} theme ${key} at ${rev}`)
 			}
-
-			const key = themeKey(name, storeId)
-			if (normalizedThemeIds.has(key)) throw new Error(`Millennium theme ID collision after lowercasing: ${name} -> ${key}`)
-			normalizedThemeIds.add(key)
-
-			const previous = data.themes[key]
-			const version = String(item.version ?? rev.slice(0, 7))
-			const description = String(item.description ?? "")
-			if (
-				previous?.rev === rev &&
-				previous.version === version &&
-				previous.description === description &&
-				previous.storeId === storeId
-			) continue
-
-			const hash = previous?.rev === rev ? previous.hash : await nixHash(owner, repo, rev)
-			const { buildCommand } = await themeBuildMetadata(owner, repo, rev, key)
-			const next: Theme = { ...(previous ?? {}), name, version, description, owner, repo, rev, hash, storeId }
-			if (buildCommand) {
-				next.buildCommand = buildCommand
-				next.depsHash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
-			} else {
-				delete next.buildCommand
-				delete next.depsHash
-			}
-			data.themes[key] = next
-			changedThemeNames.push(key)
-			changes.push(`${previous ? "Updated" : "Added"} theme: ${key} ${previous?.version ?? "(new)"} -> ${version} (${rev})`)
-			console.info(`[INFO] ${previous ? "Updated" : "Added"} theme ${key} at ${rev}`)
 		}
 
-		if (changedNames.length === 0 && changedThemeNames.length === 0) {
-			console.info("[INFO] No new or updated approved Millennium plugins or themes.")
+		if (changedNames.length === 0 && changedConfigNames.length === 0 && changedThemeNames.length === 0) {
+			console.info(
+				configKeysOnly
+					? "[INFO] No Millennium plugin config keys changed."
+					: "[INFO] No new or updated approved Millennium plugins or themes.",
+			)
 			await fs.rm(commitPath, { force: true })
 			return
 		}
@@ -361,7 +422,9 @@ async function main() {
 			await fs.writeFile(dataPath, originalFile, "utf8")
 			throw error
 		}
-		console.info(`[INFO] Updated ${changedNames.length} Millennium plugin(s) and ${changedThemeNames.length} theme(s).`)
+		console.info(
+			`[INFO] Updated ${changedNames.length} plugin package(s), ${changedConfigNames.length} plugin config key list(s), and ${changedThemeNames.length} theme(s).`,
+		)
 	} finally {
 		await fs.rm(temp, { recursive: true, force: true })
 	}

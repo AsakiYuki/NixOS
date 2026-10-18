@@ -42,7 +42,12 @@
             "rev": "7e484ddb86ad4160d92106c2ad9a3e95faa97627",
             "hash": "15x0p4xdzh38zyy2g7qd34bangjqmv0awqaxggv4bbql2nxnkadv",
             "packageManager": "pnpm",
-            "depsHash": "sha256-fnarupRupv4LQvFnPQN83Lr+moGxO7wi5C87Z1MItyQ="
+            "depsHash": "sha256-fnarupRupv4LQvFnPQN83Lr+moGxO7wi5C87Z1MItyQ=",
+            "configKeys": [
+                "expand_details",
+                "leetify_api_key",
+                "show_steam_details"
+            ]
         },
         "csstats-extension": {
             "name": "csstats-extension",
@@ -174,7 +179,14 @@
             "rev": "d419ff8959a05af0602a1674de86ac6ed4cf0a03",
             "hash": "11in9hnm170hxk9kisq6gk1rk3wmn71jc80cf3i85a69m4042lzg",
             "packageManager": "npm",
-            "depsHash": "sha256-U8W3qGu2ms0YX5h4KO42H7c0kKTLQAoqtGTu1qKZQQc="
+            "depsHash": "sha256-U8W3qGu2ms0YX5h4KO42H7c0kKTLQAoqtGTu1qKZQQc=",
+            "configKeys": [
+                "auto_resync_on_startup",
+                "default_disablelist_enabled",
+                "disabled_shortcuts",
+                "last_sync_at",
+                "uwp_snapshot"
+            ]
         },
         "non-steam-playtimes": {
             "name": "non-steam-playtimes",

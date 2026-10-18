@@ -3,5 +3,5 @@
     ./home
   ];
 
-  programs.steam.millennium.enable = true;
+  programs.steam.millennium.enable = false;
 }
