@@ -1411,7 +1411,7 @@
         }
     },
     "dw-proton": {
-        "latest": "11-0_14",
+        "latest": "11-0_15",
         "override_name": "dwproton-latest",
         "releases": {
             "11-0_14": {
@@ -1659,10 +1659,16 @@
                     "url": "https://github.com/dawn-winery/dwproton-mirror/releases/download/dwproton-10.0-1/dwproton-10.0-1-x86_64.tar.xz",
                     "hash": "sha256-yFtsrI42ZbxyRLZGMynccL2TigqIEkR75SlRW8/7E7A="
                 }
+            },
+            "11-0_15": {
+                "x86_64-linux": {
+                    "url": "https://dawn.wine/dawn-winery/dwproton/releases/download/dwproton-11.0-15/dwproton-11.0-15-x86_64.tar.xz",
+                    "hash": "sha256-gGbew9f1MtVeW21pemHW1KMJH4WaHvmylDiVqhuUev0="
+                }
             }
         },
         "source_name": {
-            "x86_64-linux": "dwproton-11.0-14-x86_64"
+            "x86_64-linux": "dwproton-11.0-15-x86_64"
         }
     }
 }
