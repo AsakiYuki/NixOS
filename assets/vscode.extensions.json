@@ -3,7 +3,12 @@
         "vscode-default-keybindings": {
             "src": {
                 "version": "0.2.87",
-                "hash": "sha256-zGZAiqZBYkz3N76uW/ceQ9pcUC6jCc+IBp43szTyMrI="
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-zGZAiqZBYkz3N76uW/ceQ9pcUC6jCc+IBp43szTyMrI="
+                    }
+                },
+                "checkedPlatforms": true
             },
             "meta": {
                 "description": "VSCode Default Keybindings is a keymap that enables you to load VSCode's default keybindings from another OS. Eg. use Mac keybindings on Windows.",
@@ -14,131 +19,226 @@
     },
     "geodesdk": {
         "geode": {
+            "src": {
+                "version": "1.22.1",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-t9xyZ8Ssv3Jhh+95dW8RNl4W7X21NkIz5LXm2G9UEGk="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "geodesdk.geode",
                 "description": "Utilities for the Geode Geometry Dash modding framework",
                 "homepage": "https://github.com/geode-sdk/vscode#readme",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=geodesdk.geode"
-            },
-            "src": {
-                "version": "1.22.1",
-                "hash": "sha256-t9xyZ8Ssv3Jhh+95dW8RNl4W7X21NkIz5LXm2G9UEGk="
             }
         }
     },
     "theqtcompany": {
         "qt-qml": {
+            "src": {
+                "version": "1.17.0",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-4P0v3r1pHgLKR7Jt3Je3kBHSwVZ2djWlxQOmAbTsM/0="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "theqtcompany.qt-qml",
                 "description": "Qt QML Support",
                 "homepage": "https://www.qt.io/",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=theqtcompany.qt-qml"
-            },
-            "src": {
-                "version": "1.17.0",
-                "hash": "sha256-4P0v3r1pHgLKR7Jt3Je3kBHSwVZ2djWlxQOmAbTsM/0="
             }
         }
     },
     "bbenoist": {
         "qml": {
+            "src": {
+                "version": "1.0.0",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-tphnVlD5LA6Au+WDrLZkAxnMJeTCd3UTyTN1Jelditk="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "bbenoist.qml",
                 "description": "QML language support for Visual Studio Code",
                 "homepage": "https://github.com/bbenoist/vscode-qml/blob/master/README.md",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=bbenoist.qml"
-            },
-            "src": {
-                "version": "1.0.0",
-                "hash": "sha256-tphnVlD5LA6Au+WDrLZkAxnMJeTCd3UTyTN1Jelditk="
             }
         }
     },
     "adrianwilczynski": {
         "alpine-js-intellisense": {
-            "meta": {
-                "extension_id": "adrianwilczynski.alpine-js-intellisense",
-                "description": "Simple IntelliSense & Snippets for Alpine.js framework.",
-                "downloadPage": "https://marketplace.visualstudio.com/items?itemName=adrianwilczynski.alpine-js-intellisense"
-            },
             "src": {
                 "version": "1.2.0",
-                "hash": "sha256-Klx5ZvV06lXIJ3Q/mzq3KBjPpdROoxDkgEu7MBO+RhI="
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-Klx5ZvV06lXIJ3Q/mzq3KBjPpdROoxDkgEu7MBO+RhI="
+                    }
+                },
+                "checkedPlatforms": true
+            },
+            "meta": {
+                "description": "Simple IntelliSense & Snippets for Alpine.js framework.",
+                "downloadPage": "https://marketplace.visualstudio.com/items?itemName=adrianwilczynski.alpine-js-intellisense"
             }
         }
     },
     "edwinkofler": {
         "vscode-assorted-languages": {
+            "src": {
+                "version": "0.32.0",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-zlg7inLj9SzZQFO9AmaEVJN8nhhePmzqRY/hwTYDGUk="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "edwinkofler.vscode-assorted-languages",
                 "description": "Syntax Highlighting for an assortment of languages",
                 "homepage": "https://github.com/fox-projects/vscode-assorted-languages#readme",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=edwinkofler.vscode-assorted-languages"
-            },
-            "src": {
-                "version": "0.32.0",
-                "hash": "sha256-zlg7inLj9SzZQFO9AmaEVJN8nhhePmzqRY/hwTYDGUk="
             }
         }
     },
     "astro-build": {
         "astro-vscode": {
+            "src": {
+                "version": "2.16.20",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-OzySaYlsPGyVtFoCE7mdGoozU0t6ZRYF56G8qczWd6s="
+                    },
+                    "linux-x64": {
+                        "hash": "sha256-ry/F2bhmQ5cWJPW6RnDolB+XdFNlGfhOq3QSGvb99cY="
+                    },
+                    "linux-arm64": {
+                        "hash": "sha256-hAXlyETXmBElPmZKtNHVflln2klCbi3Gju/ay5roEBU="
+                    },
+                    "linux-armhf": {
+                        "hash": "sha256-YZxa9QneC8vD7LiRYatFlwxamON8Szoi1Kn9Hsqavyk="
+                    },
+                    "alpine-x64": {
+                        "hash": "sha256-A/Lo6J0JzDo0BbMAsnllbLGPiXkXiUk5HCvKh+JEz2M="
+                    },
+                    "alpine-arm64": {
+                        "hash": "sha256-OzySaYlsPGyVtFoCE7mdGoozU0t6ZRYF56G8qczWd6s="
+                    },
+                    "darwin-x64": {
+                        "hash": "sha256-XSofruw2A+598cI9kkl7/iMHkM3bZbjJV1DEOGPo0gQ="
+                    },
+                    "darwin-arm64": {
+                        "hash": "sha256-yzFM9N9Ojc6XMOoSwZ58ArnFNSzCeDyEd/HD+Dc9jq4="
+                    },
+                    "win32-x64": {
+                        "hash": "sha256-L09ZvFRQmSjzzlHwFkOnRkQUD0EPi7znphOkgFXfWPw="
+                    },
+                    "win32-arm64": {
+                        "hash": "sha256-1q92O/bZ+wG1gmOho044nyS+Srd6zjBkYVeCEBfMjAs="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "astro-build.astro-vscode",
                 "description": "Language support for Astro",
                 "homepage": "https://github.com/withastro/astro#readme",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode"
-            },
-            "src": {
-                "version": "2.16.20",
-                "hash": "sha256-OzySaYlsPGyVtFoCE7mdGoozU0t6ZRYF56G8qczWd6s="
             }
         }
     },
     "formulahendry": {
         "auto-rename-tag": {
+            "src": {
+                "version": "0.1.10",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-uXqWebxnDwaUVLFG6MUh4bZ7jw5d2rTHRm5NoR2n0Vs="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "formulahendry.auto-rename-tag",
                 "description": "Auto rename paired HTML/XML tag",
                 "homepage": "https://github.com/formulahendry/vscode-auto-rename-tag/blob/master/README.md",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag"
-            },
-            "src": {
-                "version": "0.1.10",
-                "hash": "sha256-uXqWebxnDwaUVLFG6MUh4bZ7jw5d2rTHRm5NoR2n0Vs="
             }
         }
     },
     "thekalinga": {
         "bootstrap4-vscode": {
+            "src": {
+                "version": "6.1.0",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-f/A9yrWxkFluTRuKdQK6u67qF3tk/EHTDn7XoE9fD8U="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "thekalinga.bootstrap4-vscode",
                 "description": "Bootstrap 4 snippets based on documentation + Font awesome 4 + Font Awesome 5 Free & Pro snippets",
                 "homepage": "https://github.com/1tontech/bootstrap4-snippets/blob/master/README.md",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=thekalinga.bootstrap4-vscode"
-            },
-            "src": {
-                "version": "6.1.0",
-                "hash": "sha256-f/A9yrWxkFluTRuKdQK6u67qF3tk/EHTDn7XoE9fD8U="
             }
         }
     },
     "ms-vscode": {
         "cpp-devtools": {
-            "meta": {
-                "extension_id": "ms-vscode.cpp-devtools",
-                "description": "Enhanced development tools for C++ in VS Code",
-                "downloadPage": "https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpp-devtools"
-            },
             "src": {
                 "version": "0.7.1",
-                "hash": "sha256-6Z1G1ECACtv9PBU7GJJqDNTTTFm2ucvAr3iAIBpMY7Y="
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-6Z1G1ECACtv9PBU7GJJqDNTTTFm2ucvAr3iAIBpMY7Y="
+                    }
+                },
+                "checkedPlatforms": true
+            },
+            "meta": {
+                "description": "Enhanced development tools for C++ in VS Code",
+                "downloadPage": "https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpp-devtools"
             }
         },
         "cpptools": {
             "src": {
                 "version": "1.35.4",
-                "hash": "sha256-QMnq26FNur88fNnb7GE5Sl3FJ95/J7a6IVgAiUMhrSI="
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-QMnq26FNur88fNnb7GE5Sl3FJ95/J7a6IVgAiUMhrSI="
+                    },
+                    "linux-x64": {
+                        "hash": "sha256-OAoWwO+4VFdy01pNoy8eeOVRAYj99RDKdFrET9wFaM8="
+                    },
+                    "linux-arm64": {
+                        "hash": "sha256-QMnq26FNur88fNnb7GE5Sl3FJ95/J7a6IVgAiUMhrSI="
+                    },
+                    "linux-armhf": {
+                        "hash": "sha256-JI8Qc8hTkfCZ0m19UKwymFIDpwtYm6vcqcz+oetbd0M="
+                    },
+                    "alpine-x64": {
+                        "hash": "sha256-SgW78DoiJWPU9cXoYxhsh/4rdZI/os22wy5fpinWlag="
+                    },
+                    "alpine-arm64": {
+                        "hash": "sha256-1n4dVni2LoLJSMwVPakHjVaQHUaxNVOX8r9BEyAeumE="
+                    },
+                    "darwin-x64": {
+                        "hash": "sha256-mJyMP7G3aGnqireBTfLYg1xPhd5dNHwdpLBvfOrVk0s="
+                    },
+                    "darwin-arm64": {
+                        "hash": "sha256-Shsjp29MnajU0S/CnjQCRCfve3WkNCeovUL6pBRmFbM="
+                    },
+                    "win32-x64": {
+                        "hash": "sha256-XF4RdP5OZT6nVifdw36LXj2maxgCPf5WFeDOIV3fPFI="
+                    },
+                    "win32-arm64": {
+                        "hash": "sha256-u/nip7IwoKzeELqq18p9E5rnqudzHVye8S41phF+iJE="
+                    }
+                },
+                "checkedPlatforms": true
             },
             "meta": {
                 "description": "C/C++ IntelliSense, debugging, and code browsing.",
@@ -149,7 +249,12 @@
         "cmake-tools": {
             "src": {
                 "version": "1.25.5",
-                "hash": "sha256-k7mPyLrKkIYInmXR9eyaIylfAaCe5OtBMXJFrHQisx8="
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-k7mPyLrKkIYInmXR9eyaIylfAaCe5OtBMXJFrHQisx8="
+                    }
+                },
+                "checkedPlatforms": true
             },
             "meta": {
                 "description": "Extended CMake support in Visual Studio Code",
@@ -160,15 +265,19 @@
     },
     "ultram4rine": {
         "vscode-choosealicense": {
+            "src": {
+                "version": "0.9.4",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-YmZ1Szvcv3E3q8JVNV1OirXFdYI29a4mR3rnhJfUSMM="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "ultram4rine.vscode-choosealicense",
                 "description": "Choose a license for your project in VS Code",
                 "homepage": "https://github.com/ultram4rine/vscode-choosealicense",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=ultram4rine.vscode-choosealicense"
-            },
-            "src": {
-                "version": "0.9.4",
-                "hash": "sha256-YmZ1Szvcv3E3q8JVNV1OirXFdYI29a4mR3rnhJfUSMM="
             }
         }
     },
@@ -176,7 +285,27 @@
         "chatgpt": {
             "src": {
                 "version": "26.51007.21434",
-                "hash": "sha256-DR1vALE5W6k60KDFTksXCf5HmiLxMcuKIibHdFrxZb4="
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-DR1vALE5W6k60KDFTksXCf5HmiLxMcuKIibHdFrxZb4="
+                    },
+                    "linux-arm64": {
+                        "hash": "sha256-ZCIn+vK8P+xkrdEsoZKXHSuuNJt9GBLCHLRy/8Y8X4I="
+                    },
+                    "alpine-x64": {
+                        "hash": "sha256-DR1vALE5W6k60KDFTksXCf5HmiLxMcuKIibHdFrxZb4="
+                    },
+                    "alpine-arm64": {
+                        "hash": "sha256-WtTnCv8CBX9RrN5B2n5mzU3hZS1b2XiQd8S3wDGNrQA="
+                    },
+                    "darwin-x64": {
+                        "hash": "sha256-lMbgS80pVAts5d2AWaacnJucnPxCBk+2jKQGyUDz5TI="
+                    },
+                    "darwin-arm64": {
+                        "hash": "sha256-JKSbsmx4QLw43Kle0Pj3L6+9bUYNO0ggyaapbaT9MPs="
+                    }
+                },
+                "checkedPlatforms": true
             },
             "meta": {
                 "description": "Codex is a coding agent that works with you everywhere you code — included in ChatGPT Plus, Pro, Business, Edu, and Enterprise plans.",
@@ -186,7 +315,12 @@
         "codex-audio": {
             "src": {
                 "version": "26.1007.21434",
-                "hash": "sha256-VnOZ4TSA985FkahhpBcw+mzQBnyLTc9LFI1ej4aWgUI="
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-VnOZ4TSA985FkahhpBcw+mzQBnyLTc9LFI1ej4aWgUI="
+                    }
+                },
+                "checkedPlatforms": true
             },
             "meta": {
                 "description": "Local microphone support for Codex dictation, including remote workspaces.",
@@ -196,125 +330,161 @@
     },
     "zokugun": {
         "cron-tasks": {
+            "src": {
+                "version": "0.2.1",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-nfAQzlZfUFy1DzKhp/q2WqnGnzMdPukuTa4qsqysIro="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "zokugun.cron-tasks",
                 "description": "Easily schedule your tasks",
                 "homepage": "https://github.com/zokugun/vscode-cron",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=zokugun.cron-tasks"
-            },
-            "src": {
-                "version": "0.2.1",
-                "hash": "sha256-nfAQzlZfUFy1DzKhp/q2WqnGnzMdPukuTa4qsqysIro="
             }
         }
     },
     "mrmlnc": {
         "vscode-duplicate": {
+            "src": {
+                "version": "1.2.1",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-mA3fd3rMsDnZk/LqoxRk/RF9iW+GMAAFE23wngK06cc="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "mrmlnc.vscode-duplicate",
                 "description": "Ability to duplicate files in VS Code",
                 "homepage": "https://github.com/mrmlnc/vscode-duplicate/blob/master/README.md",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-duplicate"
-            },
-            "src": {
-                "version": "1.2.1",
-                "hash": "sha256-mA3fd3rMsDnZk/LqoxRk/RF9iW+GMAAFE23wngK06cc="
             }
         },
         "vscode-scss": {
+            "src": {
+                "version": "0.10.0",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-Iuirq+SUZz3V6QHeZNyj9EaWSszL4fD4cdorcMnbbSI="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "mrmlnc.vscode-scss",
                 "description": "Advanced autocompletion and refactoring support for SCSS",
                 "homepage": "https://github.com/mrmlnc/vscode-scss/blob/master/README.md",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss"
-            },
-            "src": {
-                "version": "0.10.0",
-                "hash": "sha256-Iuirq+SUZz3V6QHeZNyj9EaWSszL4fD4cdorcMnbbSI="
             }
         }
     },
     "tobermory": {
         "es6-string-html": {
+            "src": {
+                "version": "2.17.0",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-TbbFEEpio86T5NQq1g5XapPGdJVP+RRmhpHewJb9ffw="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "tobermory.es6-string-html",
                 "description": "Syntax highlighting in es6 multiline strings",
                 "homepage": "https://github.com/mydesireiscoma/es6-string-html#readme",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=tobermory.es6-string-html"
-            },
-            "src": {
-                "version": "2.17.0",
-                "hash": "sha256-TbbFEEpio86T5NQq1g5XapPGdJVP+RRmhpHewJb9ffw="
             }
         }
     },
     "ctcuff": {
         "font-preview": {
+            "src": {
+                "version": "2.2.1",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-n89jwcTnuxMhs21wG9F6a8bYeNDQGx2yptYCcUH9R+o="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "ctcuff.font-preview",
                 "description": "Preview fonts in VS Code",
                 "homepage": "https://github.com/ctcuff/vscode-font-preview#readme",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=ctcuff.font-preview"
-            },
-            "src": {
-                "version": "2.2.1",
-                "hash": "sha256-n89jwcTnuxMhs21wG9F6a8bYeNDQGx2yptYCcUH9R+o="
             }
         }
     },
     "ecmel": {
         "vscode-html-css": {
+            "src": {
+                "version": "2.0.14",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-0IAwX/KPh1CKCQENcztDnCkbYDWipO09zl3Qcb1RPfA="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "ecmel.vscode-html-css",
                 "description": "CSS Intellisense for HTML",
                 "homepage": "https://github.com/ecmel/vscode-html-css",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css"
-            },
-            "src": {
-                "version": "2.0.14",
-                "hash": "sha256-0IAwX/KPh1CKCQENcztDnCkbYDWipO09zl3Qcb1RPfA="
             }
         }
     },
     "pushqrdx": {
         "inline-html": {
+            "src": {
+                "version": "0.3.10",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-owJqWbL296ky4UZCFGPn4WmaohE3xnRs4qY2D6YzmYY="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "pushqrdx.inline-html",
                 "description": "IntelliSense, Emmet and Syntax Highlighting for html/css inside ES6 Template Strings.",
                 "homepage": "https://github.com/pushqrdx/vscode-inline-html#readme",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=pushqrdx.inline-html"
-            },
-            "src": {
-                "version": "0.3.10",
-                "hash": "sha256-owJqWbL296ky4UZCFGPn4WmaohE3xnRs4qY2D6YzmYY="
             }
         }
     },
     "lllllllqw": {
         "jsdoc": {
+            "src": {
+                "version": "1.0.9",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-MKOcoJzGGw6VHCevhLCOuhobpySJGx/SSMCqx4ZsR8A="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "lllllllqw.jsdoc",
                 "description": "Quickly create JSDoc-style comments for functions.",
                 "homepage": "https://github.com/lllllllqw/vscode-jsdoc#readme",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=lllllllqw.jsdoc"
-            },
-            "src": {
-                "version": "1.0.9",
-                "hash": "sha256-MKOcoJzGGw6VHCevhLCOuhobpySJGx/SSMCqx4ZsR8A="
             }
         }
     },
     "joshuapoehls": {
         "json-escaper": {
+            "src": {
+                "version": "1.1.2",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-m3zXzP8AiO7peu6HibCAu0wJMTmB3V175yMbBPhLczg="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "joshuapoehls.json-escaper",
                 "description": "Escapes or unescapes a JSON string.",
                 "homepage": "https://github.com/jpoehls/vscode-json-escaper",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=joshuapoehls.json-escaper"
-            },
-            "src": {
-                "version": "1.1.2",
-                "hash": "sha256-m3zXzP8AiO7peu6HibCAu0wJMTmB3V175yMbBPhLczg="
             }
         }
     },
@@ -322,7 +492,12 @@
         "minecraft-debugger": {
             "src": {
                 "version": "1.58.0",
-                "hash": "sha256-bhWOfaHOFBJXI+yIlEXVs+SzLa982E8iCeuPl3Torf8="
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-bhWOfaHOFBJXI+yIlEXVs+SzLa982E8iCeuPl3Torf8="
+                    }
+                },
+                "checkedPlatforms": true
             },
             "meta": {
                 "description": "Debug your JavaScript code running in Minecraft Bedrock.",
@@ -333,247 +508,319 @@
     },
     "zz5840": {
         "minecraft-lang-colorizer": {
-            "meta": {
-                "extension_id": "zz5840.minecraft-lang-colorizer",
-                "description": "A colorize for minecraft .lang file",
-                "downloadPage": "https://marketplace.visualstudio.com/items?itemName=zz5840.minecraft-lang-colorizer"
-            },
             "src": {
                 "version": "1.0.0",
-                "hash": "sha256-dOZGmNAEGMOG2xlfBn/OyY1SctSM28Qn/sVn/RVSzD0="
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-dOZGmNAEGMOG2xlfBn/OyY1SctSM28Qn/sVn/RVSzD0="
+                    }
+                },
+                "checkedPlatforms": true
+            },
+            "meta": {
+                "description": "A colorize for minecraft .lang file",
+                "downloadPage": "https://marketplace.visualstudio.com/items?itemName=zz5840.minecraft-lang-colorizer"
             }
         }
     },
     "stevertus": {
         "mcscript": {
+            "src": {
+                "version": "0.0.3",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-8Yfg8DV1u9XYUBJXyZp/Wj9uQNbhqv3S7CoX75KzSk4="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "stevertus.mcscript",
                 "description": "Language support for the mcscript programming language",
                 "homepage": "https://stevertus.com/mcscript",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=stevertus.mcscript"
-            },
-            "src": {
-                "version": "0.0.3",
-                "hash": "sha256-8Yfg8DV1u9XYUBJXyZp/Wj9uQNbhqv3S7CoX75KzSk4="
             }
         }
     },
     "cardinal90": {
         "multi-cursor-case-preserve": {
+            "src": {
+                "version": "1.0.5",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-eJafjYDydD8DW83VLH9MPFeDENXBx3el7XvjZqu88Jw="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "cardinal90.multi-cursor-case-preserve",
                 "description": "Preserves case when editing with multiple cursors",
                 "homepage": "https://github.com/Cardinal90/multi-cursor-case-preserve/blob/master/README.md",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=cardinal90.multi-cursor-case-preserve"
-            },
-            "src": {
-                "version": "1.0.5",
-                "hash": "sha256-eJafjYDydD8DW83VLH9MPFeDENXBx3el7XvjZqu88Jw="
             }
         }
     },
     "cweijan": {
         "vscode-mysql-client2": {
+            "src": {
+                "version": "9.0.2",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-bxzwnEht+GDPFkNlzdj/gMkteAFOFbEAQmWPv3D1R1s="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "cweijan.vscode-mysql-client2",
                 "description": "Database Management for MySQL/MariaDB, PostgreSQL, Redis and ElasticSearch.",
                 "homepage": "https://database-client.com",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-mysql-client2"
-            },
-            "src": {
-                "version": "9.0.2",
-                "hash": "sha256-bxzwnEht+GDPFkNlzdj/gMkteAFOFbEAQmWPv3D1R1s="
             }
         }
     },
     "code-nature": {
         "nilesoft-shell-file-formatter": {
-            "meta": {
-                "extension_id": "code-nature.nilesoft-shell-file-formatter",
-                "description": "Nilesoft Shell configration files highlighting and snippets",
-                "downloadPage": "https://marketplace.visualstudio.com/items?itemName=code-nature.nilesoft-shell-file-formatter"
-            },
             "src": {
                 "version": "1.19.7",
-                "hash": "sha256-nzoTRVj47OSA/BIXltcS82HGlrHo8GNN+zJxu5m2g64="
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-nzoTRVj47OSA/BIXltcS82HGlrHo8GNN+zJxu5m2g64="
+                    }
+                },
+                "checkedPlatforms": true
+            },
+            "meta": {
+                "description": "Nilesoft Shell configration files highlighting and snippets",
+                "downloadPage": "https://marketplace.visualstudio.com/items?itemName=code-nature.nilesoft-shell-file-formatter"
             }
         }
     },
     "jinxdash": {
         "prettier-rust": {
+            "src": {
+                "version": "0.1.9",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-pb3I0NT72wKlnhw3O3vumia13tqXU3wbYi33WsI/uY0="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "jinxdash.prettier-rust",
                 "description": "Prettier Rust is a code formatter that autocorrects bad syntax",
                 "homepage": "https://github.com/jinxdash/prettier-plugin-rust#readme",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=jinxdash.prettier-rust"
-            },
-            "src": {
-                "version": "0.1.9",
-                "hash": "sha256-pb3I0NT72wKlnhw3O3vumia13tqXU3wbYi33WsI/uY0="
             }
         }
     },
     "rvest": {
         "vs-code-prettier-eslint": {
+            "src": {
+                "version": "6.0.0",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-PogNeKhIlcGxUKrW5gHvFhNluUelWDGHCdg5K+xGXJY="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "rvest.vs-code-prettier-eslint",
                 "description": "A Visual Studio Extension to format JavaScript and Typescript code using prettier-eslint package",
                 "homepage": "https://github.com/idahogurl/vs-code-prettier-eslint#readme",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=rvest.vs-code-prettier-eslint"
-            },
-            "src": {
-                "version": "6.0.0",
-                "hash": "sha256-PogNeKhIlcGxUKrW5gHvFhNluUelWDGHCdg5K+xGXJY="
             }
         }
     },
     "inferrinizzard": {
         "prettier-sql-vscode": {
+            "src": {
+                "version": "1.6.0",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-l6pf/+uv8Bn4uDMX0CbzSjydTStr73uRY550Ad9wm7Q="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "inferrinizzard.prettier-sql-vscode",
                 "description": "VSCode Extension to format SQL files",
                 "homepage": "https://github.com/sql-formatter-org/sql-formatter#readme",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=inferrinizzard.prettier-sql-vscode"
-            },
-            "src": {
-                "version": "1.6.0",
-                "hash": "sha256-l6pf/+uv8Bn4uDMX0CbzSjydTStr73uRY550Ad9wm7Q="
             }
         }
     },
     "wallabyjs": {
         "quokka-vscode": {
+            "src": {
+                "version": "1.0.769",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-fAwKe3tYLzaUbLRP6luid7Yl21wKseqm85m4r6ypxxg="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "wallabyjs.quokka-vscode",
                 "description": "JavaScript and TypeScript playground in your editor.",
                 "homepage": "http://quokkajs.com",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=wallabyjs.quokka-vscode"
-            },
-            "src": {
-                "version": "1.0.769",
-                "hash": "sha256-fAwKe3tYLzaUbLRP6luid7Yl21wKseqm85m4r6ypxxg="
             }
         },
         "wallaby-vscode": {
+            "src": {
+                "version": "1.0.502",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-13V2tmzdPEQ+QzbmB1wv/zBQ01j/AuzWLeF+uGuY4P8="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "wallabyjs.wallaby-vscode",
                 "description": "Test Runner with Instant Actionable Results.",
                 "homepage": "http://wallabyjs.com",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=wallabyjs.wallaby-vscode"
-            },
-            "src": {
-                "version": "1.0.502",
-                "hash": "sha256-13V2tmzdPEQ+QzbmB1wv/zBQ01j/AuzWLeF+uGuY4P8="
             }
         }
     },
     "syler": {
         "sass-indented": {
+            "src": {
+                "version": "1.8.33",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-7+Yo6X+t56tnZzepBKEo5hJdgLxiF3+83hSFqpkhVpA="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "syler.sass-indented",
                 "description": "Indented Sass syntax Highlighting, Autocomplete & Formatter",
                 "homepage": "https://github.com/TheRealSyler/vscode-sass-indented#readme",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=syler.sass-indented"
-            },
-            "src": {
-                "version": "1.8.33",
-                "hash": "sha256-7+Yo6X+t56tnZzepBKEo5hJdgLxiF3+83hSFqpkhVpA="
             }
         }
     },
     "moyu": {
         "snapcode": {
-            "meta": {
-                "extension_id": "moyu.snapcode",
-                "description": "📸  Snapcode for your code",
-                "downloadPage": "https://marketplace.visualstudio.com/items?itemName=moyu.snapcode"
-            },
             "src": {
                 "version": "1.1.0",
-                "hash": "sha256-ecLFEnqtFwytOzBmGDaCIUw/OctR9z5zNl7VOGl0DGo="
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-ecLFEnqtFwytOzBmGDaCIUw/OctR9z5zNl7VOGl0DGo="
+                    }
+                },
+                "checkedPlatforms": true
+            },
+            "meta": {
+                "description": "📸  Snapcode for your code",
+                "downloadPage": "https://marketplace.visualstudio.com/items?itemName=moyu.snapcode"
             }
         }
     },
     "jannisx11": {
         "snowstorm": {
+            "src": {
+                "version": "3.2.2",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-gLupz8Ls6j9ihkT6hEx/ZRYeC+iwYoFLz0A8oXW1w6I="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "jannisx11.snowstorm",
                 "description": "Minecraft Bedrock Edition particle editor",
                 "homepage": "https://github.com/JannisX11/snowstorm#readme",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=jannisx11.snowstorm"
-            },
-            "src": {
-                "version": "3.2.2",
-                "hash": "sha256-gLupz8Ls6j9ihkT6hEx/ZRYeC+iwYoFLz0A8oXW1w6I="
             }
         }
     },
     "minecraftcommands": {
         "syntax-mcfunction": {
+            "src": {
+                "version": "1.0.1",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-AhDAWJtdtWxL6iBBrJnNHZdn4ucaz3/HBdrq6QX9OT4="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "minecraftcommands.syntax-mcfunction",
                 "description": "Syntax highlighting for mcfunction files (Last Updated: 1.21)",
                 "homepage": "https://github.com/MinecraftCommands/syntax-mcfunction#readme",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=minecraftcommands.syntax-mcfunction"
-            },
-            "src": {
-                "version": "1.0.1",
-                "hash": "sha256-AhDAWJtdtWxL6iBBrJnNHZdn4ucaz3/HBdrq6QX9OT4="
             }
         }
     },
     "vosca": {
         "vscode-v-analyzer": {
+            "src": {
+                "version": "0.0.2",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-Nn1ZaBRwJQoACF2MMaJvznTFzpCLXMnsevJHy0Iaws8="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "vosca.vscode-v-analyzer",
                 "description": "V language support (syntax highlighting, formatter, language server) for Visual Studio Code.",
                 "homepage": "https://vosca.dev/",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=vosca.vscode-v-analyzer"
-            },
-            "src": {
-                "version": "0.0.2",
-                "hash": "sha256-Nn1ZaBRwJQoACF2MMaJvznTFzpCLXMnsevJHy0Iaws8="
             }
         }
     },
     "uctakeoff": {
         "vscode-counter": {
+            "src": {
+                "version": "3.8.1",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-AC4hIxvxLt9du1cZfVpyI7KIS/fC3DcCy84aMRaGBlg="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "uctakeoff.vscode-counter",
                 "description": "Count lines of code in many programming languages.",
                 "homepage": "https://github.com/uctakeoff/vscode-counter",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=uctakeoff.vscode-counter"
-            },
-            "src": {
-                "version": "3.8.1",
-                "hash": "sha256-AC4hIxvxLt9du1cZfVpyI7KIS/fC3DcCy84aMRaGBlg="
             }
         }
     },
     "13xforever": {
         "language-x86-64-assembly": {
+            "src": {
+                "version": "3.1.5",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-WIhmAZLR2WOSqQF3ozJ/Vr3Rp6HdSK7L23T3h4AVaGM="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "13xforever.language-x86-64-assembly",
                 "description": "Cutting edge x86 and x86_64 assembly syntax highlighting",
                 "homepage": "https://github.com/13xforever/x86_64-assembly-vscode#readme",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=13xforever.language-x86-64-assembly"
-            },
-            "src": {
-                "version": "3.1.5",
-                "hash": "sha256-WIhmAZLR2WOSqQF3ozJ/Vr3Rp6HdSK7L23T3h4AVaGM="
             }
         }
     },
     "rogalmic": {
         "vscode-xml-complete": {
-            "meta": {
-                "extension_id": "rogalmic.vscode-xml-complete",
-                "description": "XML editing helper (using XSD schemaLocation)",
-                "downloadPage": "https://marketplace.visualstudio.com/items?itemName=rogalmic.vscode-xml-complete"
-            },
             "src": {
                 "version": "0.3.0",
-                "hash": "sha256-rrFnseaIWHZr0NcI8dlSHR4ezFKzv+pXpIBLUdXUI6U="
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-rrFnseaIWHZr0NcI8dlSHR4ezFKzv+pXpIBLUdXUI6U="
+                    }
+                },
+                "checkedPlatforms": true
+            },
+            "meta": {
+                "description": "XML editing helper (using XSD schemaLocation)",
+                "downloadPage": "https://marketplace.visualstudio.com/items?itemName=rogalmic.vscode-xml-complete"
             }
         }
     },
@@ -581,7 +828,12 @@
         "blockceptionvscodeminecraftbedrockdevelopmentextension": {
             "src": {
                 "version": "9.1.21",
-                "hash": "sha256-gOch8wlW/M/lZ4gkAWgn3EtgfxFUNIV91bA7n+P6nP8="
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-gOch8wlW/M/lZ4gkAWgn3EtgfxFUNIV91bA7n+P6nP8="
+                    }
+                },
+                "checkedPlatforms": true
             },
             "meta": {
                 "description": "An extension that provides code completion, validations, formatters, diagnostics, cheat-sheets, code-actions, creation of files, and development tools to help develop Minecraft Bedrock content",
@@ -592,15 +844,19 @@
     },
     "netcorext": {
         "uuid-generator": {
+            "src": {
+                "version": "0.0.5",
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-2sdI0eBV7kTpETpqhbrWCJSJxZ0P35QtmllMhlj9sAY="
+                    }
+                },
+                "checkedPlatforms": true
+            },
             "meta": {
-                "extension_id": "netcorext.uuid-generator",
                 "description": "Generate a UUID",
                 "homepage": "https://github.com/arenchen/vscode-uuid-generator",
                 "downloadPage": "https://marketplace.visualstudio.com/items?itemName=netcorext.uuid-generator"
-            },
-            "src": {
-                "version": "0.0.5",
-                "hash": "sha256-2sdI0eBV7kTpETpqhbrWCJSJxZ0P35QtmllMhlj9sAY="
             }
         }
     },
@@ -608,7 +864,12 @@
         "google-antigravity": {
             "src": {
                 "version": "1.8.0",
-                "hash": "sha256-h2GTvOkESX96Ce/ja3+vbV8qH+WA/4VLhj00JR4EOOY="
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-h2GTvOkESX96Ce/ja3+vbV8qH+WA/4VLhj00JR4EOOY="
+                    }
+                },
+                "checkedPlatforms": true
             },
             "meta": {
                 "description": "Bring Google's agent-first development platform to Visual Studio Code.",
@@ -620,7 +881,12 @@
         "json-embedded-languages": {
             "src": {
                 "version": "0.5.0",
-                "hash": "sha256-F4LIEJwjC46mAvq8mS17GsWSdA+JhvDWviOGtx21s6I="
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-F4LIEJwjC46mAvq8mS17GsWSdA+JhvDWviOGtx21s6I="
+                    }
+                },
+                "checkedPlatforms": true
             },
             "meta": {
                 "description": "Embedded Language(s) inside JSON",
@@ -633,7 +899,12 @@
         "jupyter-keymap": {
             "src": {
                 "version": "1.1.2",
-                "hash": "sha256-9BLyBZzZ0Z6QQ05QSxFJYNZmZDc5O3eYkCxe/UsmKws="
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-9BLyBZzZ0Z6QQ05QSxFJYNZmZDc5O3eYkCxe/UsmKws="
+                    }
+                },
+                "checkedPlatforms": true
             },
             "meta": {
                 "description": "Jupyter keymaps for notebooks",
@@ -646,7 +917,12 @@
         "liveserver": {
             "src": {
                 "version": "5.7.10",
-                "hash": "sha256-D474GdTCAH8b+zuO+1M+cnluKfBv7mAMdtH7F777W5U="
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-D474GdTCAH8b+zuO+1M+cnluKfBv7mAMdtH7F777W5U="
+                    }
+                },
+                "checkedPlatforms": true
             },
             "meta": {
                 "description": "Launch a development local Server with live reload feature for static & dynamic pages",
@@ -659,7 +935,12 @@
         "vscode-eslint": {
             "src": {
                 "version": "3.0.34",
-                "hash": "sha256-ynCPFzne4YS4WNjQSmGky+e2IaE3SLxj6FkjKyLPcAs="
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-ynCPFzne4YS4WNjQSmGky+e2IaE3SLxj6FkjKyLPcAs="
+                    }
+                },
+                "checkedPlatforms": true
             },
             "meta": {
                 "description": "Integrates ESLint JavaScript into VS Code.",
@@ -670,10 +951,32 @@
     },
     "redhat": {
         "java": {
-            "hashStrategy": "versioned-vsix",
             "src": {
                 "version": "1.58.2026101608",
-                "hash": "sha256-v4lf3HJYTeN6FnCD6tFqCiy2OFzl2LDMiR6Ma9iaEwE="
+                "platforms": {
+                    "universal": {
+                        "hash": "sha256-v4lf3HJYTeN6FnCD6tFqCiy2OFzl2LDMiR6Ma9iaEwE="
+                    },
+                    "linux-x64": {
+                        "hash": "sha256-Vg/0g+GXrQEf/Skvz4UNi2mC7Va3GIui08QoGSmumNI="
+                    },
+                    "linux-arm64": {
+                        "hash": "sha256-qjE6VEN0CoYxn6OSsla2jLHY7Yub54rRIqe7N6RRClY="
+                    },
+                    "darwin-x64": {
+                        "hash": "sha256-DgrdT9mzUY6BATvVmqGyN0MxQZAH+fMp+/ccJZX5ix0="
+                    },
+                    "darwin-arm64": {
+                        "hash": "sha256-rErQ2Br9qJQetYPS38dXtWsAt0wDiq0l9iB5GTjTLxo="
+                    },
+                    "win32-x64": {
+                        "hash": "sha256-f/LtsK34blfpE/YF6sOAdzeRaIpp4PYp3u/eOnlEsaY="
+                    },
+                    "win32-arm64": {
+                        "hash": "sha256-fYBxj9JpGLbB1p52Uq3Mk4sdE+NbVzpWFAmbeWaVJtg="
+                    }
+                },
+                "checkedPlatforms": true
             },
             "meta": {
                 "description": "Java Linting, Intellisense, formatting, refactoring, Maven/Gradle support and more...",
