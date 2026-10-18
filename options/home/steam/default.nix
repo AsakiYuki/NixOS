@@ -1,5 +1,5 @@
-{...}: {
+{ ... }: {
   imports = [
-    ./millennium.nix
+    ./millennium
   ];
 }
