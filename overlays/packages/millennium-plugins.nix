@@ -3,7 +3,7 @@
   lib,
   ...
 }: let
-  pluginData = lib.importJSON ../../assets/millennium.plugins.json;
+  pluginData = lib.importJSON ../../assets/millennium.json;
 
   mkMillenniumPlugin = {
     pname,

@@ -24,7 +24,7 @@ if [ -f proton-commit.txt ]; then
         "proton-commit.txt"
 else
     echo "[INFO] Cannot found any proton packages update!"
-fi 
+fi
 
 bun run check-vscode-extensions-update
 if [ -f vscode-extensions-commit.txt ]; then
@@ -33,7 +33,7 @@ if [ -f vscode-extensions-commit.txt ]; then
         "vscode-extensions-commit.txt"
 else
     echo "[INFO] Cannot found any vscode extensions update!"
-fi 
+fi
 
 bun run check-firefox-addons-update
 if [ -f firefox-addons-commit.txt ]; then
@@ -42,4 +42,13 @@ if [ -f firefox-addons-commit.txt ]; then
         "firefox-addons-commit.txt"
 else
     echo "[INFO] Cannot found any firefox addons update!"
-fi 
+fi
+
+bun run check-millennium-update
+if [ -f millennium-commit.txt ]; then
+    commit assets/millennium.json \
+        "ci(update-checker/millennium): update plugins infos $(date '+%H:%M:%S %d-%m-%Y')" \
+        "millennium-commit.txt"
+else
+    echo "[INFO] Cannot found any Millennium plugin update!"
+fi
