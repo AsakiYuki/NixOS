@@ -1,6 +1,8 @@
 #! /usr/bin/env nix-shell
 #! nix-shell -i sh -p nix git bun vsce
 
+set -e
+
 function commit() {
     git add $1
     git commit -m "$2" -m "$(cat "$3")"

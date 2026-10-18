@@ -55,13 +55,12 @@ async function hashDependencies(names: string[], data: PluginData, root: string)
 	if (names.length === 0) return
 
 	for (const name of names) data.plugins[name].depsHash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
-	const namesNix = JSON.stringify(names)
 	const expression = `let
   flake = builtins.getFlake (toString ./.);
   pkgs = import flake.inputs.nixpkgs.outPath {
     overlays = [ (_: pkgs: import ./overlays/packages (pkgs // { inherit pkgs; })) ];
   };
-  names = ${namesNix};
+  names = [ ${names.map(name => JSON.stringify(name)).join(" ")} ];
 in pkgs.linkFarm "millennium-plugin-dependencies" (map (name: {
   inherit name;
   path = pkgs.millennium-plugins.\"\${name}\".dependencies;
@@ -102,13 +101,12 @@ in pkgs.linkFarm "millennium-plugin-dependencies" (map (name: {
 }
 
 async function buildPlugins(names: string[], root: string): Promise<void> {
-	const namesNix = JSON.stringify(names)
 	const expression = `let
   flake = builtins.getFlake (toString ./.);
   pkgs = import flake.inputs.nixpkgs.outPath {
     overlays = [ (_: pkgs: import ./overlays/packages (pkgs // { inherit pkgs; })) ];
   };
-  names = ${namesNix};
+  names = [ ${names.map(name => JSON.stringify(name)).join(" ")} ];
 in pkgs.linkFarm "millennium-plugin-build-check" (map (name: {
   inherit name;
   path = pkgs.millennium-plugins.\"\${name}\";
