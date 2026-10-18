@@ -187,8 +187,10 @@ async function main() {
 			cache_version: cached => cached.release,
 			get_version: latest => latest.tag_name.slice(1),
 			new_version_found: async (cached, latest, release) => {
-				const file1 = latest.assets.find(({ name }) => name === "cage-xtmapper-v0.1.5.tar")
-				const file2 = latest.assets.find(({ name }) => name === "cage-xtmapper-v0.2.0.tar")
+				const findTarForVersion = (version: string) =>
+					latest.assets.find(({ name }) => name.toLowerCase().endsWith(".tar") && name.includes(version))
+				const file1 = findTarForVersion("0.1.5")
+				const file2 = findTarForVersion("0.2.0")
 
 				if (!file1 || !file2) {
 					console.warn(
@@ -239,9 +241,13 @@ async function main() {
 			pre_release: false,
 			get_version: latest => latest.tag_name.slice(1),
 			new_version_found: async (cached, latest, version) => {
+				const linuxDebs = latest.assets.filter(({ name }) => {
+					const normalizedName = name.toLowerCase()
+					return normalizedName.endsWith(".deb") && normalizedName.includes("linux") && name.includes(version)
+				})
 				const assets = {
-					"x86_64-linux": latest.assets.find(({ name }) => name === `OpenNOW-v${version}-linux-amd64.deb`),
-					"aarch64-linux": latest.assets.find(({ name }) => name === `OpenNOW-v${version}-linux-arm64.deb`),
+					"x86_64-linux": linuxDebs.find(({ name }) => /(?:x64|amd64)/i.test(name)),
+					"aarch64-linux": linuxDebs.find(({ name }) => /(?:arm64|aarch64)/i.test(name)),
 				}
 
 				if (!assets["x86_64-linux"] || !assets["aarch64-linux"]) {

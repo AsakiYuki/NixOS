@@ -67,20 +67,26 @@ export class VSCE {
 		return `sha256-${base64}`
 	}
 
-	static async hashVersionedVsix(extensionId: string, version: string): Promise<string> {
+	static async hashVersionedVsix(extensionId: string, version: string): Promise<string | null> {
 		const [publisher, ...nameParts] = extensionId.split(".")
 		if (!publisher || nameParts.length === 0) throw new Error(`Invalid extension ID: ${extensionId}`)
 
 		const name = nameParts.join(".")
 		const url = `https://${publisher}.gallery.vsassets.io/_apis/public/gallery/publisher/${publisher}/extension/${name}/${version}/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage`
-		const response = await fetch(url)
-		if (!response.ok || !response.body) {
-			throw new Error(`Failed to download ${extensionId} v${version}: HTTP ${response.status}`)
-		}
+		try {
+			const response = await fetch(url, { signal: AbortSignal.timeout(90_000) })
+			if (!response.ok || !response.body) {
+				console.warn(`[WARN] Failed to download ${extensionId} v${version}: HTTP ${response.status}`)
+				return null
+			}
 
-		const hash = createHash("sha256")
-		for await (const chunk of response.body) hash.update(chunk)
-		return `sha256-${hash.digest("base64")}`
+			const hash = createHash("sha256")
+			for await (const chunk of response.body) hash.update(chunk)
+			return `sha256-${hash.digest("base64")}`
+		} catch (error) {
+			console.warn(`[WARN] Failed to hash ${extensionId} v${version}: ${String(error)}`)
+			return null
+		}
 	}
 
 	static async show(extensionId: string): Promise<ExtensionInfo> {

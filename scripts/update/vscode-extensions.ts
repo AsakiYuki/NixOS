@@ -50,6 +50,7 @@ async function hashVsix(id: string, version: string, targetPlatform?: string): P
 
 async function main() {
 	const filepath = path.join(__dirname, "../../assets/vscode.extensions.json")
+	const commitFilepath = path.join(__dirname, "../../vscode-extensions-commit.txt")
 	const data: Record<string, Record<string, any>> = JSON.parse(await fs.readFile(filepath, "utf-8"))
 	const commits: string[] = []
 
@@ -57,12 +58,21 @@ async function main() {
 		for (const [name, info] of Object.entries(extensions)) {
 			const id = `${publisher}.${name}`
 			console.info(`[INFO] Fetching ${id}`)
-			const extInfo = await VSCE.show(id)
+			let extInfo
+			try {
+				extInfo = await VSCE.show(id)
+			} catch (error) {
+				console.warn(`[WARN] Could not fetch Marketplace metadata for ${id}; skipping: ${String(error)}`)
+				continue
+			}
+
 			const currentVersion = extInfo.versions[0]
-			if (!currentVersion) throw new Error(`Marketplace returned no versions for ${id}`)
+			if (!currentVersion) {
+				console.warn(`[WARN] Marketplace returned no versions for ${id}; skipping.`)
+				continue
+			}
 			if (info.src?.version === currentVersion.version && info.src?.checkedPlatforms) {
 				const platformList = Object.keys(info.src.hash ?? {}).join(", ")
-				commits.push(`${id} ${currentVersion.version} - Platforms: ${platformList}`)
 				console.info(`[SKIP] ${id} already has platform hashes (${platformList})`)
 				continue
 			}
@@ -88,7 +98,8 @@ async function main() {
 			}
 
 			if (Object.keys(source.hash).length === 0) {
-				throw new Error(`Marketplace returned no universal or platform VSIX for ${id}`)
+				console.warn(`[WARN] Marketplace returned no downloadable VSIX for ${id}; skipping.`)
+				continue
 			}
 			source.checkedPlatforms = true
 
@@ -108,9 +119,15 @@ async function main() {
 		}
 	}
 
+	if (commits.length === 0) {
+		await fs.rm(commitFilepath, { force: true })
+		console.info(`[INFO] No VS Code extension updates found.`)
+		return
+	}
+
 	await Promise.all([
 		fs.writeFile(filepath, JSON.stringify(data, null, 4), "utf-8"),
-		fs.writeFile(path.join(__dirname, "../../vscode-extensions-commit.txt"), commits.join("\n")),
+		fs.writeFile(commitFilepath, commits.join("\n")),
 	])
 }
 
