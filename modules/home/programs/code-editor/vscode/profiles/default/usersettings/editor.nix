@@ -1,4 +1,8 @@
-{...}: {
+{
+  lib,
+  pkgs,
+  ...
+}: {
   userSettings = {
     "editor.formatOnSave" = true;
     "files.autoSave" = "onFocusChange";
@@ -24,5 +28,11 @@
     "settingsSync.keybindingsPerPlatform" = true;
     "workbench.settings.enableNaturalLanguageSearch" = false;
     "workbench.startupEditor" = "none";
+  } // lib.optionalAttrs pkgs.stdenv.isDarwin {
+    "terminal.integrated.defaultProfile.osx" = "Bash (Nix)";
+    "terminal.integrated.profiles.osx"."Bash (Nix)" = {
+      path = "/Users/asakiyuki/.nix-profile/bin/bash";
+      args = ["-l"];
+    };
   };
 }
