@@ -5,15 +5,15 @@
 }:
 if pkgs.stdenv.isDarwin
 then let
-  inherit (data.atoll) version hash;
+  inherit (data.atoll) version;
+  source = data.atoll.source."universal-darwin";
 in
   pkgs.stdenvNoCC.mkDerivation rec {
     inherit version;
     pname = "atoll";
 
     src = pkgs.fetchurl {
-      inherit hash;
-      url = "https://github.com/Ebullioscopic/Atoll/releases/download/v${version}/Atoll-${version}.dmg";
+      inherit (source) hash url;
     };
 
     nativeBuildInputs = [
