@@ -1,0 +1,328 @@
+{
+	"plugins": {
+		"achievement-groups": {
+			"name": "Achievement Groups",
+			"version": "2.1.1",
+			"description": "SteamHunters achievement groups and other info right in your Steam client",
+			"owner": "BossSloth",
+			"repo": "SteamHunter-plugin",
+			"rev": "582147fb1c7f1e471d1b377d200aaaf4af239723",
+			"hash": "1yrk1z6qw5w7kj7cd0yq7ciczz1yxrc9d5hiyn4if0sggw9gi4z3"
+		},
+		"adamraichu.auto-accept-custom-launch-args": {
+			"name": "Auto Accept Custom Launch Arguments",
+			"version": "1.2.4",
+			"description": "WARNING: This plugin affects/interferes with a feature of steam designed to keep you safe. Use at your own risk, and only if you understand what you are doing.",
+			"owner": "AdamRaichu",
+			"repo": "auto-accept-custom-launch-args",
+			"rev": "084d32b5947103aa36fec083db78b51fd80edd3b",
+			"hash": "1h6wz3v1rvxbgb7mkb8psx4l34v6c3z7nmmac1m0vgisz7wgv6xr"
+		},
+		"aerothemesteam": {
+			"name": "Microsoft Office 2007 Styled Theme plugin",
+			"version": "1.8.0",
+			"description": "Plugin for the theme. Adds a top bar, app filter status, and some buttons.",
+			"owner": "ricewind012",
+			"repo": "aerothemesteam",
+			"rev": "01471375c1ea2b57244a206edea73c3e322d2634",
+			"hash": "16kfp136fbx73w829kidg5mz2nqxvn7jip8vmn7mbf23xqmqdf8v"
+		},
+		"cs2-profile-stats": {
+			"name": "CS2 Profile Stats",
+			"version": "0.4.5",
+			"description": "Displays useful Leetify, FACEIT, and Steam CS2 statistics directly on Steam profiles.",
+			"owner": "Shightrox",
+			"repo": "millennium-cs2-profile-stats",
+			"rev": "7e484ddb86ad4160d92106c2ad9a3e95faa97627",
+			"hash": "15x0p4xdzh38zyy2g7qd34bangjqmv0awqaxggv4bbql2nxnkadv"
+		},
+		"csstats-extension": {
+			"name": "CSStats.gg Extension",
+			"version": "1.1.3",
+			"description": "A Millennium plugin that adds CSStats.gg integration to Steam profiles.",
+			"owner": "TOR968",
+			"repo": "csstats-extension",
+			"rev": "86dca7f0c6c76d3b7a1f9a912a1f663726374d9f",
+			"hash": "1jqnkwgdp559miqrx0rqvsql09b5i1mi93b4j0n3sc49xvp7kz77"
+		},
+		"cswatch-plugin": {
+			"name": "CSWatch Plugin",
+			"version": "1.0.0",
+			"description": "Steam Millennium plugin adding button redirecting to CSWat.ch under profile.",
+			"owner": "Leon135",
+			"repo": "cswatch-plugin",
+			"rev": "6d6387f3d2699cc1bc6c0e1ee99b612160745dba",
+			"hash": "0yzrjdzn8raksq0c8sgrbagyyd0fb8xg6pqv6hhn5vgjcblhsfh5"
+		},
+		"dotastats": {
+			"name": "Dota 2 Stats",
+			"version": "2.0.0",
+			"description": "View Dota 2 statistics on player profiles.",
+			"owner": "BambooFury",
+			"repo": "Dota-Stats",
+			"rev": "586a34da0c0c8cce1883c6d97b3208ae2eb1037b",
+			"hash": "1301ld33igypq0qg25mmp0l7hygl2008y9a5vai0g35r0b94k40l"
+		},
+		"dwmx": {
+			"name": "Window Styler (DWMX)",
+			"version": "unstable-28c1a17",
+			"description": "Enable custom window backdrops on supporting themes.",
+			"owner": "shdwmtr",
+			"repo": "dwmx",
+			"rev": "28c1a17f533d0ae5e98745616e859548912898e0",
+			"hash": "1zlivpdaywpiasbinzqmq28ahqyfidwz2wb26bnk9c5b0gkinjyj"
+		},
+		"Easy-Restart-Reload-for-Steam": {
+			"name": "Easy Restart / Reload for Steam",
+			"version": "1.5.0",
+			"description": "Adds configurable Restart, Reload UI, and Developer Mode restart actions to the Steam root menu.",
+			"owner": "SaiyajinK",
+			"repo": "Easy-Restart-Reload-for-Steam",
+			"rev": "dc79ae21c6a71af946fd71b5867eee1b179ea184",
+			"hash": "0q0w3k5f4y4dw8s6956m9yclkbcqbam4gbxk4lgw99iphqkcvw73"
+		},
+		"extendium": {
+			"name": "Extendium",
+			"version": "2.0.5",
+			"description": "Chrome extension support for Steam. Install extensions like SteamDB, Augmented Steam, UBlock Origin, and more in your Steam Desktop Client",
+			"owner": "BossSloth",
+			"repo": "Extendium",
+			"rev": "550bb1c0b3fd7c5165677e7a226112af11a842e1",
+			"hash": "1anwddy6a4c960iajabvw83xaxypkfc1c51r6par2rmaqwl0hny8"
+		},
+		"fullscreen-notifications-fix": {
+			"name": "Fullscreen Notifications Fix",
+			"version": "1.0.1",
+			"description": "Fixes Steam notifications not appearing when a fullscreen non-Steam app is focused.",
+			"owner": "k0d13",
+			"repo": "steam-fullscreen-notifications-fix",
+			"rev": "a811555dafaef174a98e414098f4725d5ccaaa31",
+			"hash": "1ayd2rdrl39m6jh1wmy8qvig9jvdj510bx3nyn4y0b83wn2p118g"
+		},
+		"gratitude": {
+			"name": "Gratitude - Gifted Games Reminder",
+			"version": "1.1.5",
+			"description": "A plugin for your Steam Library that adds a helpful indicator to games you have been gifted. NOTE: must visit Store page to initilize gift data.",
+			"owner": "BlythT",
+			"repo": "Gratitude-Millennium-Plugin",
+			"rev": "47fb9dcb58478e2f72e37a617d90b3e8645ee331",
+			"hash": "05c3q5nl2lfqh066x84vm696rn7vph26i0lvjmd13m8qz9788bn3"
+		},
+		"hltb-millennium-plugin": {
+			"name": "HLTB for Steam",
+			"version": "2.2.0",
+			"description": "Displays How Long To Beat completion times on game pages",
+			"owner": "jcdoll",
+			"repo": "hltb-millennium-plugin",
+			"rev": "7decc0a06bb26b365a779c9d1a85195834c940e1",
+			"hash": "14s6b3hfpdfzz3pd0cxqqzv3dvn12g141v5x1kr1k5xhw1crma1y"
+		},
+		"leetify-extension": {
+			"name": "Leetify Extension",
+			"version": "2.2.3",
+			"description": "A Millennium plugin that adds Leetify integration to Steam profiles.",
+			"owner": "TOR968",
+			"repo": "leetify-extension",
+			"rev": "80082ced08186ceeca7ab9fdcd388fe632b8c633",
+			"hash": "020jziqdvkg2csjf99jzk4zf2s49fs747jy30723lx40mgx96ak6"
+		},
+		"millennium-faceit-stats": {
+			"name": "FaceIt Stats",
+			"version": "unstable-3e55d6b",
+			"description": "Displays player FaceIt statistics on steam profiles.",
+			"owner": "alowave",
+			"repo": "millennium-faceit-stats",
+			"rev": "3e55d6bb2275bace8d4e83087fb832919b83ef71",
+			"hash": "148n5l8y010ncypl1683a55k5vkk9ikb959qr3r125rjfngv6ca7"
+		},
+		"millennium-uwp-library-sync": {
+			"name": "UWP & XBOX Library Sync",
+			"version": "0.0.1",
+			"description": "Allows you to automatically add your UWP & XBOX (app) games to Steam.",
+			"owner": "xwxfox",
+			"repo": "millennium-uwp-library-sync",
+			"rev": "d419ff8959a05af0602a1674de86ac6ed4cf0a03",
+			"hash": "11in9hnm170hxk9kisq6gk1rk3wmn71jc80cf3i85a69m4042lzg"
+		},
+		"non-steam-playtimes": {
+			"name": "Non-Steam Playtimes",
+			"version": "2.0.3",
+			"description": "Track playtime for non-Steam games.",
+			"owner": "k0d13",
+			"repo": "steam-non-steam-playtimes",
+			"rev": "f2c14ecbc0cfcdff6bba5f1d703231ec6037588f",
+			"hash": "1vfdyg9bzg2cngq3gc6w4k2k5vclg09y8r4a502n1gx93l3d34f5"
+		},
+		"playercount-badge": {
+			"name": "Player Count",
+			"version": "1.0.0",
+			"description": "Show live Steam player counts on game library pages in desktop mode.",
+			"owner": "swindlesmccoop",
+			"repo": "playercount-badge",
+			"rev": "9af7579b3a61ede809a090f4d5d095c2684688ed",
+			"hash": "0408j3fkmhjpd0j9zwzgav54xqlkf16m0ffdshar13xryacfy0np"
+		},
+		"protondb": {
+			"name": "ProtonDB",
+			"version": "1.0.0",
+			"description": "Shows ProtonDB compatibility ratings on Steam store pages.",
+			"owner": "unicxrn",
+			"repo": "protondb-millennium",
+			"rev": "7913678dca9592b28d2f619aeefd47b06ebf36a2",
+			"hash": "13l8f77q4vmd2pz1dvk1jkpykz12hwby0f74927fq5rcam3v5i9v"
+		},
+		"protondb-library-badges": {
+			"name": "ProtonDB Library Badges",
+			"version": "1.0.1",
+			"description": "ProtonDB compatibility tiers in the desktop Steam library: inline game-page stat, sidebar indicators, and a tier section in the Library Filters panel.",
+			"owner": "Yohlo",
+			"repo": "protondb-library-badges",
+			"rev": "3e3ea9402a1f729e629270afdcc481c12f31bb42",
+			"hash": "1z6bf4b8vifangh10js8bb6y6mj672hhznsyjvblzhykl5315dri"
+		},
+		"protondb-status": {
+			"name": "ProtonDB Status",
+			"version": "1.3.0",
+			"description": "Show ProtonDB compatibility ratings on game library pages.",
+			"owner": "nyakuoff",
+			"repo": "protondb-badge",
+			"rev": "b8c8b430d1df1ca90285af354d369b5cdb45131c",
+			"hash": "1dw1mpbg1fd24kc613kpv5njsiwqfqdvzn4nzd1vv6x39lb327pb"
+		},
+		"recent-chats": {
+			"name": "Recent Chats",
+			"version": "0.4.1",
+			"description": "Adds a recent-conversations view to Steam's desktop and overlay Friends windows.",
+			"owner": "Alex979",
+			"repo": "Steam-Recent-Chats-plugin",
+			"rev": "37eed4d594eea5986839738a79a3bcda0a59b365",
+			"hash": "00nybch9pgza9j4ynfnqzprxg4wkndgfjw646x1bfki2mv31g6dd"
+		},
+		"RSS-feed-in-whats-new": {
+			"name": "RSS feed in whats new",
+			"version": "1.0.2",
+			"description": "A plugin for adding RSS news to whats new block in Steam",
+			"owner": "diemonic1",
+			"repo": "RSS-feed-in-whats-new",
+			"rev": "dbce337c1e847021d8007f11d385254526e96766",
+			"hash": "0l16xqqy26j1dxs9sp39m8dw3cbvlf6rma2j74fhd7sv8738nrb6"
+		},
+		"size-on-disk": {
+			"name": "Size on Disk",
+			"version": "1.2.0",
+			"description": "Instantly see the size of a game on disk.",
+			"owner": "k0d13",
+			"repo": "steam-size-on-disk",
+			"rev": "35ee6ab7a221429766ddafcee4d7a2a288246ecc",
+			"hash": "08xpkvl3hqagw77gwmzz01gb5jf9kxc6378kx8169imkc7kmb26g"
+		},
+		"sortium": {
+			"name": "Sortium",
+			"version": "1.0.1",
+			"description": "Advanced library sorting for the Steam client based on global completion metrics.",
+			"owner": "SalvadorCorreia",
+			"repo": "Sortium",
+			"rev": "d6a286c51cdbb10765606d0e92fb35b3e14216fa",
+			"hash": "0804xzv9vx6sgzc4lx8w7l3g2208va7cg2db68q8mxc4np866v0k"
+		},
+		"steam-browser-history": {
+			"name": "Browser History",
+			"version": "1.0.3",
+			"description": "See your browser history on URL bar click",
+			"owner": "ricewind012",
+			"repo": "steam-browser-history",
+			"rev": "8214f3641be641610e8237f9e14a21fdcbb4a735",
+			"hash": "1sc3cw7f7jxgqzls4b5bfnnx7vpnfpjbir3z6xr5v124jz17i8h7"
+		},
+		"steam-change-window-params": {
+			"name": "Change Window Params",
+			"version": "1.0.2",
+			"description": "Use system titlebar, transparent windows, no size limits, etc.",
+			"owner": "ricewind012",
+			"repo": "steam-change-window-params",
+			"rev": "ee57e92f9fe4f058082f8eb35b8ccbb2437cf4be",
+			"hash": "135ymz0yinr987cynp9kp5lylig0k85cvdkdf2isgv1xikjwjark"
+		},
+		"steam-collections-plus": {
+			"name": "Collections+",
+			"version": "3.1.2",
+			"description": "Extra functionality for collections",
+			"owner": "luthor112",
+			"repo": "steam-collections-plus",
+			"rev": "b5ab1f267a9a148f5c4c7a0e94263a6886c0af2a",
+			"hash": "02rx9d7643q7r8bym8d7kg7cipp9wmap17cg0z40ymp0bdb1a4xf"
+		},
+		"steam-easygrid": {
+			"name": "Easy SteamGrid",
+			"version": "4.4.0",
+			"description": "Quick and easy SteamGridDB integration",
+			"owner": "luthor112",
+			"repo": "steam-easygrid",
+			"rev": "3be3c47ec244d722393be79a6868c35688672c22",
+			"hash": "00v9zphnprirrpz8ic8nviz51lqg226s1qpsw35j02d5ggp6k0br"
+		},
+		"Steam-GameRenamer-Plugin": {
+			"name": "Game Renamer",
+			"version": "1.0.3",
+			"description": "Rename different games in the Steam library",
+			"owner": "Inceptofn",
+			"repo": "Steam-GameRenamer-Plugin",
+			"rev": "f24a9eeeac350bf6ede9baa4af289e9d4d1cedef",
+			"hash": "1rf8mg0l7migkbqd12cvc5aa6p7gqkqa43m4xw49wax8vvpgjzvm"
+		},
+		"steam-global-launch-options": {
+			"name": "Global Launch Options",
+			"version": "1.1.0",
+			"description": "Set default launch options that automatically apply to all Steam games.",
+			"owner": "BlafKing",
+			"repo": "steam-global-launch-options",
+			"rev": "0043e8ccf244739c18023be80a48509b6c8afade",
+			"hash": "0sx9fn4s3y2xska1g5hvllxs40hlhivj6pcbrlxnadv8na53k903"
+		},
+		"steam-librarian": {
+			"name": "Steam Librarian",
+			"version": "3.0.0",
+			"description": "Extra functionality for the Steam Library",
+			"owner": "luthor112",
+			"repo": "steam-librarian",
+			"rev": "c9e5974ad242a6ac0f4918eb0583877f6ea6431c",
+			"hash": "0sv87l27wwwhm4gk53pa90vf47y79ai5i08hj9f481pj58vsg4ic"
+		},
+		"steam-logo-pos": {
+			"name": "Custom Logo Position",
+			"version": "2.0.4",
+			"description": "Arbitrary repositioning of application logos",
+			"owner": "luthor112",
+			"repo": "steam-logo-pos",
+			"rev": "d9261ed33b8b18a6db6aadabbf9af32f42e35da1",
+			"hash": "0qfnlwc21bm58d975fmnr42gxkd9ssqsvg5bfslvdx5sjc6wdyyc"
+		},
+		"steam-share": {
+			"name": "Steam Share",
+			"version": "1.1.0",
+			"description": "Adds a native-style Share action to Steam Store game pages.",
+			"owner": "wopln",
+			"repo": "Steam-Share",
+			"rev": "fe22a68ff5184a93a101e5832aa2c91b38486043",
+			"hash": "024s2md2j7k9rp6axsggshi5xyq8l7jn24izwhjazj6w01x2nx64"
+		},
+		"steam-taskbar-progress": {
+			"name": "Taskbar Download progress",
+			"version": "2.3.0",
+			"description": "Display the Steam download status on the Windows taskbar",
+			"owner": "luthor112",
+			"repo": "steam-taskbar-progress",
+			"rev": "56678fd10dba9826d34fcf8e6630fe1c099360e1",
+			"hash": "0gxf0jfz5qz4x76c2hqf4w0lz82b2dkr73l69pzwzk5jh2qlnhh3"
+		},
+		"valve-internal-enabler": {
+			"name": "Valve Internal Enabler",
+			"version": "1.0.0",
+			"description": "Enables the Valve Internal menu in settings.",
+			"owner": "veygax",
+			"repo": "valve-internal-enabler",
+			"rev": "e83934d658283d1db32a06567b024dd876dd8f53",
+			"hash": "1gxbira4amag5ngikb4i0g5q46r7xnk4ihww2xpa8fyqg0cgf239"
+		}
+	}
+}
