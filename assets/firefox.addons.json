@@ -864,11 +864,11 @@
         }
     },
     "single-file": {
-        "version": "1.31.2",
+        "version": "1.31.3",
         "id": "{531906d3-e22f-4a6c-a102-8057b88a1a63}",
         "src": {
-            "url": "https://addons.mozilla.org/firefox/downloads/file/5133971/single_file-1.31.2.xpi",
-            "hash": "sha256-xbfXQDNWTOVGcIDPUdtySEziTZ0U5X6sOBlllLJCOE0="
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5135297/single_file-1.31.3.xpi",
+            "hash": "sha256-NZMj+4gJcgKjB98vMlX0k4ryexgEDZuJtNPaiPvcLPg="
         },
         "meta": {
             "name": "SingleFile",
