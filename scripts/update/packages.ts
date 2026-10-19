@@ -384,6 +384,35 @@ async function main() {
 				}
 			},
 		}),
+		fetchLastReleasePackage({
+			author: "YoreYore33",
+			repository: "Cider-MV-Resolver",
+			package_name: "cider-mv-resolver",
+			pre_release: false,
+			get_version: latest => latest.tag_name.replace(/^MV/, ""),
+			new_version_found: async (cached, latest, version) => {
+				const assets = {
+					"x86_64-linux": latest.assets.find(({ name }) => name === `Cider-MV-Resolver-${version}-Linux-x64.zip`),
+					"x86_64-darwin": latest.assets.find(({ name }) => name === `Cider-MV-Resolver-${version}-macOS-x64.zip`),
+					"aarch64-darwin": latest.assets.find(({ name }) => name === `Cider-MV-Resolver-${version}-macOS-arm64.zip`),
+				}
+				if (!Object.values(assets).some(Boolean)) {
+					console.warn(`[WARN] No supported Cider MV Resolver assets found in release ${latest.tag_name}.`)
+					return false
+				}
+
+				const source: Record<string, { url: string; hash: string }> = {}
+				for (const [system, asset] of Object.entries(assets)) {
+					if (!asset) continue
+					console.info(`[INFO] Fetching archive hash for ${system}: ${asset.download_url}`)
+					const hash = await fetchZipHash(asset.download_url)
+					descriptions.push(`cider-mv-resolver v${version} (${system}) - Hash: ${hash}`)
+					source[system] = { url: asset.download_url, hash }
+				}
+
+				return { version, source }
+			},
+		}),
 		(async function () {
 			try {
 				console.log(`[INFO] Checking latest release for cider-2...`)

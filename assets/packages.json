@@ -104,6 +104,23 @@
             }
         }
     },
+    "cider-mv-resolver": {
+        "version": "1.2.0",
+        "source": {
+            "x86_64-linux": {
+                "url": "https://github.com/YoreYore33/Cider-MV-Resolver/releases/download/MV1.2.0/Cider-MV-Resolver-1.2.0-Linux-x64.zip",
+                "hash": "sha256-VtQMj3WUS7znrBFwHd51FWGljkNj5OU20SGCWd6+TDQ="
+            },
+            "x86_64-darwin": {
+                "url": "https://github.com/YoreYore33/Cider-MV-Resolver/releases/download/MV1.2.0/Cider-MV-Resolver-1.2.0-macOS-x64.zip",
+                "hash": "sha256-LFe2TCXPVc6BEi1+HKtmZDFg2RvTDx7HTo7s4cxPivM="
+            },
+            "aarch64-darwin": {
+                "url": "https://github.com/YoreYore33/Cider-MV-Resolver/releases/download/MV1.2.0/Cider-MV-Resolver-1.2.0-macOS-arm64.zip",
+                "hash": "sha256-oXW6mJIFggKT65cO5kQ8EPV2u8qROHDNmJ/pfNHHUu4="
+            }
+        }
+    },
     "iris": {
         "version": "0.7.4",
         "source": {
