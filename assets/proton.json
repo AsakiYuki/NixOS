@@ -1,6 +1,6 @@
 {
     "ge-proton": {
-        "latest": "11-10",
+        "latest": "11-11",
         "override_name": "ge-proton-latest",
         "releases": {
             "11-9": {
@@ -284,11 +284,21 @@
                     "url": "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton11-10/GE-Proton11-10-aarch64.tar.gz",
                     "hash": "sha256-DScCX0kDKZ4xJR2D6qaYG48KliGBCKc1pDZR8EfbDcw="
                 }
+            },
+            "11-11": {
+                "x86_64-linux": {
+                    "url": "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton11-11/GE-Proton11-11-x86_64.tar.gz",
+                    "hash": "sha256-qoWYbK2lcJqou/qK3X87+5JcvhVxDJiZWJjTCP8so8E="
+                },
+                "aarch64-linux": {
+                    "url": "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton11-11/GE-Proton11-11-aarch64.tar.gz",
+                    "hash": "sha256-xw6zzBxIpM8XGdZDyG/AaQYPxqH+y0kOwDKV8vdUGtE="
+                }
             }
         },
         "source_name": {
-            "x86_64-linux": "GE-Proton11-10-x86_64",
-            "aarch64-linux": "GE-Proton11-10-aarch64"
+            "x86_64-linux": "GE-Proton11-11-x86_64",
+            "aarch64-linux": "GE-Proton11-11-aarch64"
         }
     },
     "cachyos-proton": {
