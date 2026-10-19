@@ -22,18 +22,18 @@
         }
     },
     "cage-xtmapper": {
-        "release": "20260208",
+        "release": "20261019",
         "versions": {
             "0.1.5": {
                 "x86_64-linux": {
-                    "url": "https://github.com/Xtr126/cage-xtmapper/releases/download/v20260208/cage-xtmapper-v0.1.5.tar",
-                    "hash": "sha256-ZmdltOQInGbCBpf/e8D2sB9Rjt4wqd8wwuSFvryHfFA="
+                    "url": "https://github.com/Xtr126/cage-xtmapper/releases/download/v20261019/cage-xtmapper-v0.1.5.tar",
+                    "hash": "sha256-EhkYmojcpW/9WXoxf84I4V35GzOKEUTH/MUSc4ou0JA="
                 }
             },
             "0.2.0": {
                 "x86_64-linux": {
-                    "url": "https://github.com/Xtr126/cage-xtmapper/releases/download/v20260208/cage-xtmapper-v0.2.0.tar",
-                    "hash": "sha256-F1C3KnTzTO1vEouixqO1xnsGmufRyAk+BiRlypNq4kQ="
+                    "url": "https://github.com/Xtr126/cage-xtmapper/releases/download/v20261019/cage-xtmapper-v0.2.0.tar",
+                    "hash": "sha256-FRIPR274FhsiZfH/ORIFqwVhZUQbsFJb5EK9te89LbQ="
                 }
             }
         }
