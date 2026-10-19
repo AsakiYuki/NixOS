@@ -190,11 +190,11 @@
         },
         "cmake-tools": {
             "src": {
-                "version": "1.25.5",
-                "checkedPlatforms": true,
+                "version": "1.25.6",
                 "hash": {
-                    "universal": "sha256-k7mPyLrKkIYInmXR9eyaIylfAaCe5OtBMXJFrHQisx8="
-                }
+                    "universal": "sha256-q+mFTweffL837l1EJS6no0OKgJynMr/q4gM6oy36WeM="
+                },
+                "checkedPlatforms": true
             },
             "meta": {
                 "description": "Extended CMake support in Visual Studio Code",
