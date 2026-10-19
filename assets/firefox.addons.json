@@ -325,11 +325,11 @@
         }
     },
     "styl-us": {
-        "version": "2.4.14",
+        "version": "2.4.16",
         "id": "{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}",
         "src": {
-            "url": "https://addons.mozilla.org/firefox/downloads/file/5044316/styl_us-2.4.14.xpi",
-            "hash": "sha256-UdTv1qpkhKdJuX42Ii97vi/2me0WuaE630DstqBZcIE="
+            "url": "https://addons.mozilla.org/firefox/downloads/file/5139589/styl_us-2.4.16.xpi",
+            "hash": "sha256-kKa0SiPz9Z/5Zag98dZFPFn1it6Pj7hCRAMiYNv2w4E="
         },
         "meta": {
             "name": "Stylus",
