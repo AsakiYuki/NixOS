@@ -433,12 +433,12 @@
         },
         "atoms": {
             "name": "ATOMS",
-            "version": "1.1.1.1.1.1.1.1.1.1112",
+            "version": "1.1.1.1.1.1.1.1.1.1113",
             "description": "Just another \"take\" on Metro Steam.",
             "owner": "Plaer1",
             "repo": "ATOMS",
-            "rev": "ff4172b4c708420280a15f2c94beac7c1018c5b4",
-            "hash": "0g1ppsglq16w6n2g5aagxwb6vqm769vnj3lb14fhvmk2xk1cm8ad",
+            "rev": "255b6a962f1bc078f105860a2bdfa6166acf33d3",
+            "hash": "184yad8qf9vd0gdsn459lil1z9b6c72zcgzpbw06d3i05q8b50sg",
             "storeId": "76Xgq0WveUq1hSptzvkv"
         },
         "adwaita": {
@@ -505,12 +505,12 @@
         },
         "nevko-ui": {
             "name": "NEVKO-UI",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "description": "Another Design for Steam",
             "owner": "dotFelixan",
             "repo": "NEVKO-UI",
-            "rev": "80698f434b734f91b14888d14e493f4b3059e25c",
-            "hash": "0aha2xa5854b1l5bkdz1a7pjf1dxrxx6203rr9wfmi1syh91qlr8",
+            "rev": "9a9cd3b2413681644ac764299efe168e31fe500b",
+            "hash": "0wyzflyzqpxmf053n8d0z69hl505h8klwvz56cq9gmprzm14lf8h",
             "storeId": "PfApgfY80M1svZEWXQtX"
         },
         "leimu": {
@@ -557,12 +557,12 @@
         },
         "material": {
             "name": "Material",
-            "version": "1.5.17",
+            "version": "1.5.18",
             "description": "Theme based on Google's Material 3 Design.",
             "owner": "kuska1",
             "repo": "Material-Theme",
-            "rev": "7a2852552eaf3cbadadb623e6e7703956854e730",
-            "hash": "1a0p5rlncf7mld6vklcrsacjwbaxz3scgymgqyza8zmhhaxnviqj",
+            "rev": "13f78fed5d8161b0eb558ab8b1f83f4e662a713a",
+            "hash": "0fjjnwvacsxh1nbl4ysli5h1irph3sf546i2kdfcnfywp0van8vd",
             "storeId": "ipYjqODds05KMcvh7QJn"
         },
         "metro-by-rose": {
@@ -621,11 +621,11 @@
             "description": "A faithful Windows 95-styled look",
             "owner": "ricewind012",
             "repo": "win95-themes",
-            "rev": "d2ae4fad38f2c2c349ea2a8b31c506bd57c84dbe",
-            "hash": "0wdaqwajix6yr4flgl8vi9z40hj6dv5klbxfkn8v3zl2sck1a59a",
+            "rev": "8bcb41dc1ba6a8f9a1ca192b5805d909a62a66f4",
+            "hash": "103k39sajiqb3q448gyjxmgpmjfrcr0fsj0pc9i1b2l0nzmk3n2m",
             "storeId": "wnFmUHHXL0BkWgthDoJJ",
             "buildCommand": "npm run build -- steam",
-            "depsHash": "sha256-ZFkrQJNLVaszXWQB+RtIqlginCiTPqHFThqmalAtBks="
+            "depsHash": "sha256-Gy21ilrMI0ChCs8ULKMcf/Hvyc9pHWwtbreifCJMKpM="
         },
         "spacetheme-for-steam": {
             "name": "SpaceTheme for Steam",
