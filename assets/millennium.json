@@ -669,12 +669,12 @@
         },
         "glass-dusk": {
             "name": "Glass Dusk",
-            "version": "1.6.10",
+            "version": "1.6.11",
             "description": "Smoked glass over the art of the game you have open: the client takes its accent colour from that art. Styles the library, store, menus, Big Picture and the in-game overlay.",
             "owner": "Yareli0i",
             "repo": "glass-dusk",
-            "rev": "079654612ce19586d68e1268863338d9b484bc1d",
-            "hash": "1isqlrz2h8mplc35gjsbh6l5n5whvm3w1h8713ips6g7c51v8421",
+            "rev": "96acccecea7146d6cdfe425fc3afa0b4cc7a3d6a",
+            "hash": "1l0bwdm21252di54hcp8rfx4fbxmgdang39hg0m72ydfhl3lcfhq",
             "storeId": "0hs3xMU5Eb85uvIALzkq"
         },
         "aika": {
