@@ -46,6 +46,7 @@ in {
       (getPkg "geforce-now")
       (getPkg "opennow")
       (getPkg "bedrock-on-linux")
+      (getPkg "cider-mv-resolver")
       (getPkg "photocraft")
 
       (lib.mkIf cfg.jetbrains.idea.enable cfg.jetbrains.idea.package)
@@ -67,6 +68,7 @@ in {
     };
 
     bedrock-on-linux = mkOpt pkgs "bedrock-on-linux" {};
+    cider-mv-resolver = mkOpt pkgs "cider-mv-resolver" {};
     scrcpy = mkOpt pkgs "scrcpy" {};
     slack = mkOpt pkgs "slack" {};
     notion = mkOpt pkgs "notion-app-enhanced" {name = "notion";};

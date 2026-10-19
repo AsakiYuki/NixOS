@@ -10,6 +10,7 @@ let
   source =
     resolverData.source.${stdenv.system}
       or (throw "Cider MV Resolver is not supported on ${stdenv.system}");
+  runtimeLibs = lib.optionals stdenv.isLinux [ pkgs.icu ];
   src = pkgs.fetchzip {
     inherit (source) url hash;
     stripRoot = true;
@@ -23,10 +24,12 @@ stdenv.mkDerivation {
   nativeBuildInputs = lib.optionals stdenv.isLinux [
     pkgs.autoPatchelfHook
   ];
-  buildInputs = lib.optionals stdenv.isLinux [
-    pkgs.zlib
-    stdenv.cc.cc.lib
-  ];
+  buildInputs =
+    lib.optionals stdenv.isLinux [
+      pkgs.zlib
+      stdenv.cc.cc.lib
+    ]
+    ++ runtimeLibs;
 
   dontBuild = true;
   dontStrip = true;
@@ -50,6 +53,9 @@ stdenv.mkDerivation {
     data_dir="''${XDG_DATA_HOME:-$HOME/.local/share}/CiderMvResolver"
     mkdir -p "$data_dir"
     ln -sfn ${placeholder "out"}/libexec/cider-mv-resolver/yt-dlp "$data_dir/yt-dlp"
+    ${lib.optionalString stdenv.isLinux ''
+      export LD_LIBRARY_PATH="${lib.makeLibraryPath runtimeLibs}''${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+    ''}
     cd "$data_dir"
     exec ${placeholder "out"}/libexec/cider-mv-resolver/CiderMvResolver
     EOF
