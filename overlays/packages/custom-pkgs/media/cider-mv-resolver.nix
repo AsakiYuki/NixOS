@@ -10,7 +10,10 @@ let
   source =
     resolverData.source.${stdenv.system}
       or (throw "Cider MV Resolver is not supported on ${stdenv.system}");
-  runtimeLibs = lib.optionals stdenv.isLinux [ pkgs.icu ];
+  runtimeLibs = lib.optionals stdenv.isLinux [
+    pkgs.icu
+    pkgs.openssl
+  ];
   src = pkgs.fetchzip {
     inherit (source) url hash;
     stripRoot = true;
@@ -38,7 +41,26 @@ stdenv.mkDerivation {
     runHook preInstall
 
     install -Dm755 CiderMvResolver $out/libexec/cider-mv-resolver/CiderMvResolver
-    install -Dm755 yt-dlp $out/libexec/cider-mv-resolver/yt-dlp
+    install -Dm755 yt-dlp $out/libexec/cider-mv-resolver/yt-dlp-unwrapped
+    cat > $out/libexec/cider-mv-resolver/yt-dlp <<'EOF'
+    #!${stdenv.shell}
+    export PATH="${pkgs.deno}/bin:''${PATH:-}"
+    exec ${placeholder "out"}/libexec/cider-mv-resolver/yt-dlp-unwrapped "$@"
+    EOF
+    chmod +x $out/libexec/cider-mv-resolver/yt-dlp
+
+    mkdir -p $out/bin
+    cat > $out/bin/cider-mv-resolver-yt-dlp <<'EOF'
+    #!${stdenv.shell}
+    yt_dlp="''${CIDER_MV_RESOLVER_YT_DLP_REAL:-${placeholder "out"}/libexec/cider-mv-resolver/yt-dlp}"
+    config="''${CIDER_MV_RESOLVER_YT_DLP_CONFIG:-''${XDG_CONFIG_HOME:-$HOME/.config}/yt-dlp/config}"
+    if [ -r "$config" ]; then
+      exec "$yt_dlp" --config-locations "$config" "$@"
+    fi
+    exec "$yt_dlp" "$@"
+    EOF
+    chmod +x $out/bin/cider-mv-resolver-yt-dlp
+
     install -Dm644 YT-DLP-COPYING.txt $out/share/licenses/cider-mv-resolver/YT-DLP-COPYING.txt
     install -Dm644 THIRD_PARTY_NOTICES.md $out/share/licenses/cider-mv-resolver/THIRD_PARTY_NOTICES.md
     install -Dm644 README_EN.md $out/share/doc/cider-mv-resolver/README.md
@@ -52,7 +74,9 @@ stdenv.mkDerivation {
     #!${stdenv.shell}
     data_dir="''${XDG_DATA_HOME:-$HOME/.local/share}/CiderMvResolver"
     mkdir -p "$data_dir"
-    ln -sfn ${placeholder "out"}/libexec/cider-mv-resolver/yt-dlp "$data_dir/yt-dlp"
+    yt_dlp="''${CIDER_MV_RESOLVER_YT_DLP:-${placeholder "out"}/libexec/cider-mv-resolver/yt-dlp}"
+    ln -sfn "$yt_dlp" "$data_dir/yt-dlp"
+    export PATH="${pkgs.deno}/bin:''${PATH:-}"
     ${lib.optionalString stdenv.isLinux ''
       export LD_LIBRARY_PATH="${lib.makeLibraryPath runtimeLibs}''${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
     ''}
