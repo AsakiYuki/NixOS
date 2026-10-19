@@ -383,11 +383,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1792354133,
-        "narHash": "sha256-ncYaCksO/r8PVWLWxWQWgAQvisy+UfWSYvBQszvzQwE=",
+        "lastModified": 1792388734,
+        "narHash": "sha256-PisexpJ5lsL25C2x7FeA+99nYO+4lY8ZNDwJjnEdYQ4=",
         "owner": "FlameFlag",
         "repo": "nixcord",
-        "rev": "324115db0fe29255e7b4e2ea19ba6a30a393f016",
+        "rev": "3d1d68de85a7f7c7f596d6fe6761e5e22b2061b3",
         "type": "github"
       },
       "original": {
@@ -738,11 +738,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792271801,
-        "narHash": "sha256-LYN8miMEew9CxgRrF/RCnAyOe6476dQM/JzELnFQef0=",
+        "lastModified": 1792412429,
+        "narHash": "sha256-01La/n5mmzoHiAuBxMNNUx3EFPxJoNxr4uTWh3kk5m0=",
         "owner": "0xc000022070",
         "repo": "zen-browser-flake",
-        "rev": "e1b9b3578ebb388b56012cd9ddd80e19681d2d39",
+        "rev": "dfc5cd756966ccfc924f8925628acb1fe6f51651",
         "type": "github"
       },
       "original": {
