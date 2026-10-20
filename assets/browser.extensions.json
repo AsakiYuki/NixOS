@@ -1,1470 +1,1470 @@
 {
-    "firefox": {
-        "ublock-origin": {
-            "version": "1.75.0",
-            "id": "uBlock0@raymondhill.net",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5034826/ublock_origin-1.75.0.xpi",
-                "hash": "sha256-W3RBWGBFY3BkS9gPFhJehlsObDVrtd/PuEBpln6qUoc="
-            },
-            "meta": {
-                "name": "uBlock Origin",
-                "description": "Finally, an efficient wide-spectrum content blocker. Easy on CPU and memory.",
-                "homepage": "https://github.com/gorhill/uBlock#ublock-origin",
-                "license": "GNU General Public License v3.0 only",
-                "author": "Raymond Hill"
-            }
-        },
-        "enhancer-for-youtube": {
-            "version": "2.0.136",
-            "id": "enhancerforyoutube@maximerf.addons.mozilla.org",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4933627/enhancer_for_youtube-2.0.136.xpi",
-                "hash": "sha256-OKBCCATQgiT8ROg4rsQy6UfraIsTAPQj7uy7RNMwN/o="
-            },
-            "meta": {
-                "name": "Enhancer for YouTube\u2122",
-                "description": "Take control of YouTube and boost your user experience!",
-                "homepage": "https://www.mrfdev.com/enhancer-for-youtube",
-                "license": "Proprietary License",
-                "author": "Max RF"
-            }
-        },
-        "auth-helper": {
-            "version": "8.0.2",
-            "id": "authenticator@mymindstorm",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4353166/auth_helper-8.0.2.xpi",
-                "hash": "sha256-26uRlHI330yFl/6hsA3OBc9/rqJ3Ij8sUQkPkUiBKmI="
-            },
-            "meta": {
-                "name": "Authenticator",
-                "description": "Authenticator generates 2-Step Verification codes in your browser.",
-                "homepage": "https://github.com/Authenticator-Extension/Authenticator",
-                "license": "MIT License",
-                "author": "mymindstorm"
-            }
-        },
-        "cookie-editor": {
-            "version": "1.13.0",
-            "id": "{c3c10168-4186-445c-9c5b-63f12b8e2c87}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4241002/cookie_editor-1.13.0.xpi",
-                "hash": "sha256-PW/YOoND36XkRh2DwoViZPt0s2scFlMFFo0BP0gx27A="
-            },
-            "meta": {
-                "name": "Cookie-Editor",
-                "description": "Cookie-Editor lets you efficiently create, edit and delete a cookie for the current tab. Perfect for developing, quickly testing or even manually managing your cookies for your privacy.",
-                "homepage": "https://cookie-editor.com/",
-                "license": "GNU General Public License v3.0 only",
-                "author": "cgagnier"
-            }
-        },
-        "darkreader": {
-            "version": "4.9.133",
-            "id": "addon@darkreader.org",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5055786/darkreader-4.9.133.xpi",
-                "hash": "sha256-6wbFCW12FhbH8dlUwRUkykv/T+cikETcH84oiowIU6s="
-            },
-            "meta": {
-                "name": "Dark Reader",
-                "description": "Dark mode for every website. Take care of your eyes, use dark theme for night and daily browsing.",
-                "homepage": "https://darkreader.org/",
-                "license": "MIT License",
-                "author": "Dark Reader Ltd"
-            }
-        },
-        "sponsorblock": {
-            "version": "6.1.7",
-            "id": "sponsorBlocker@ajay.app",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4897574/sponsorblock-6.1.7.xpi",
-                "hash": "sha256-DVDhYyxvFe4VpUPmcOHFcpdGBaXAJiKRbgjgJoA9+D8="
-            },
-            "meta": {
-                "name": "SponsorBlock - Skip Sponsorships on YouTube",
-                "description": "Easily skip YouTube video sponsors. When you visit a YouTube video, the extension will check the database for reported sponsors and automatically skip known sponsors. You can also report sponsors in videos. Other browsers: https://sponsor.ajay.app",
-                "homepage": "https://sponsor.ajay.app",
-                "license": "GNU Lesser General Public License v3.0 only",
-                "author": "Ajay (SponsorBlock)"
-            }
-        },
-        "header-editor": {
-            "version": "5.2.12",
-            "id": "headereditor-amo@addon.firefoxcn.net",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4822302/header_editor-5.2.12.xpi",
-                "hash": "sha256-K17P5fx25lwpyyyx36Yd4sIyDE9QTELNvObEOPlzM6s="
-            },
-            "meta": {
-                "name": "Header Editor",
-                "description": "Manage browser's requests, include modify the request headers and response headers, redirect requests, cancel requests",
-                "homepage": "https://he.firefoxcn.net/en/",
-                "license": "GNU General Public License v2.0 only",
-                "author": "\u6cf7\u6daf"
-            }
-        },
-        "proton-pass": {
-            "version": "1.41.1",
-            "id": "78272b6fa58f4a1abaac99321d503a20@proton.me",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5055526/proton_pass-1.41.1.xpi",
-                "hash": "sha256-9nxYNuXv8/gqw44Dp7J9MLhNu1JG90uyG4tbsV082TY="
-            },
-            "meta": {
-                "name": "Proton Pass",
-                "description": "Free and unlimited password manager to keep your login credentials safe and manage them directly in your browser.",
-                "homepage": "https://proton.me",
-                "license": "GNU General Public License v3.0 only",
-                "author": "Proton"
-            }
-        },
-        "proton-vpn": {
-            "version": "3.0",
-            "id": "{c228008e-9d02-4c6d-9b54-288507710fa1}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/2844710/proton_vpn-3.0.xpi",
-                "hash": "sha256-6xaS8ffZxmn07/YVuNsisCC5zNjNmVuGJAwqa8G4rjc="
-            },
-            "meta": {
-                "name": "Moz Proton VPN",
-                "description": "Theme based on a Firefox backdrop.",
-                "license": "Creative Commons Attribution-NonCommercial-Share Alike 3.0",
-                "author": "Paul"
-            }
-        },
-        "react-devtools": {
-            "version": "6.1.1",
-            "id": "@react-devtools",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4432990/react_devtools-6.1.1.xpi",
-                "hash": "sha256-staeIgQCvWuLx9gzlIkVsdbcq7RTodUIcqPbhg/ZLEY="
-            },
-            "meta": {
-                "name": "React Developer Tools",
-                "description": "React Developer Tools is a tool that allows you to inspect a React tree, including the component hierarchy, props, state, and more. To get started, just open the Firefox devtools and switch to the \"\u269b\ufe0f Components\" or \"\u269b\ufe0f Profiler\" tab.",
-                "homepage": "https://github.com/facebook/react",
-                "license": "MIT License",
-                "author": "React"
-            }
-        },
-        "return-youtube-dislikes": {
-            "version": "4.0.6",
-            "id": "{762f9885-5a13-4abd-9c77-433dcd38b8fd}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5012638/return_youtube_dislikes-4.0.6.xpi",
-                "hash": "sha256-WXGXSfbfOMFgHKXznAIVjV8AXEPp7uofGVJ/RoyUEhc="
-            },
-            "meta": {
-                "name": "Return YouTube Dislike",
-                "description": "Returns ability to see dislike statistics on youtube",
-                "license": "GNU General Public License v3.0 only",
-                "author": "Dmitry Selivanov"
-            }
-        },
-        "tampermonkey": {
-            "version": "5.5.0",
-            "id": "firefox@tampermonkey.net",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4797143/tampermonkey-5.5.0.xpi",
-                "hash": "sha256-GQAxx428VpYRSDVgHyyOa4Va0eE0313yePj8FYwGWQg="
-            },
-            "meta": {
-                "name": "Tampermonkey",
-                "description": "Tampermonkey is the world's most popular userscript manager.",
-                "homepage": "https://tampermonkey.net",
-                "license": "All Rights Reserved",
-                "author": "Jan Biniok"
-            }
-        },
-        "user-agent-string-switcher": {
-            "version": "0.7.2",
-            "id": "{a6c4a591-f1b2-4f03-b3ff-767e5bedf4e7}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5081116/user_agent_string_switcher-0.7.2.xpi",
-                "hash": "sha256-mtDgPXN9s2Nm4W8cYQLFrFhn4056X5XwvN8A4s2gtoI="
-            },
-            "meta": {
-                "name": "User-Agent Switcher and Manager",
-                "description": "Spoof websites trying to gather information about your web navigation\u2014like your browser type and operating system\u2014to deliver distinct content you may not want.",
-                "homepage": "https://webextension.org/listing/useragent-switcher.html",
-                "license": "Mozilla Public License 2.0",
-                "author": "Ray"
-            }
-        },
-        "vimium-c": {
-            "version": "2.12.3",
-            "id": "vimium-c@gdh1995.cn",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4474326/vimium_c-2.12.3.xpi",
-                "hash": "sha256-4aT4zBN5HfuYXCp40z3x6KQPI71uypIXFly3SACd9UA="
-            },
-            "meta": {
-                "name": "Vimium C - All by Keyboard",
-                "description": "A keyboard shortcut tool for keyboard-based page navigation and browser tab operations with an advanced omnibar and global shortcuts",
-                "homepage": "https://github.com/gdh1995/vimium-c",
-                "license": "MIT License",
-                "author": "Dahan Gong"
-            }
-        },
-        "md-this-page": {
-            "version": "2.0.0",
-            "id": "ademking@md-this-page",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5082692/md_this_page-2.0.0.xpi",
-                "hash": "sha256-r2b8Wf98Ls+6AZJT32e7q7sNgYZ7rNo+BY96/4aG2+0="
-            },
-            "meta": {
-                "name": ".MD this page",
-                "description": "Convert web page to markdown with one click",
-                "homepage": "https://github.com/Ademking/MD-This-Page",
-                "license": "MIT License",
-                "author": "Adem KOUKI"
-            }
-        },
-        "cambridge-dictionary-english": {
-            "version": "3.5.3.4",
-            "id": "{e577f4f3-8b71-4948-98c0-278b0c7cd194}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4624145/cambridge_dictionary_english-3.5.3.4.xpi",
-                "hash": "sha256-aa6MlaZPfhYsjPAtlyGQAPdbQfTmW88hlvtrasa3N7A="
-            },
-            "meta": {
-                "name": "Cambridge Dictionary",
-                "description": "Looking for a fast way to look up English words without leaving your page? This open-source add-on for the Cambridge Dictionary allows for quick word searches, using English or bilingual dictionaries.",
-                "homepage": "https://github.com/fkolcu/cambridge-dictionary-ffextension",
-                "license": "MIT License",
-                "author": "Furkan"
-            }
-        },
-        "cookies-txt": {
-            "version": "1.0",
-            "id": "{12cf650b-1822-40aa-bff0-996df6948878}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4624727/cookies_txt-1.0.xpi",
-                "hash": "sha256-UnenR0iPK75lfoP4Jm6399PDCuuIa+U7neh3ZvIFNAY="
-            },
-            "meta": {
-                "name": "cookies.txt",
-                "description": "Exports all cookies to a Netscape HTTP Cookie File, as used by curl, wget, and youtube-dl, among others.",
-                "license": "GNU General Public License v3.0 only",
-                "author": "Lennon Hill"
-            }
-        },
-        "default-bookmark-folder": {
-            "version": "4.0.0",
-            "id": "default-bookmark-folder@gustiaux.com",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4259794/default_bookmark_folder-4.0.0.xpi",
-                "hash": "sha256-9c14s4xjFc6MnhAKpqHMNNGi9myaGN2u94iqgIQf5rc="
-            },
-            "meta": {
-                "name": "Default Bookmark Folder",
-                "description": "Allows you to choose the default bookmark location folder and quickly bookmark pages via a dedicated icon.",
-                "homepage": "https://github.com/teddy-gustiaux/default-bookmark-folder",
-                "license": "MIT License",
-                "author": "Teddy Gustiaux"
-            }
-        },
-        "google-sponsored-remover": {
-            "version": "1.0.0",
-            "id": "googlesponsoredremover@ryanstew.art",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4100244/google_sponsored_remover-1.0.0.xpi",
-                "hash": "sha256-JuRbeM7UQ67/46A0QWOYaP8ie+Zfz6aNubmzlAW6TLU="
-            },
-            "meta": {
-                "name": "Google Sponsored Remover",
-                "description": "Remove the sponsored listings on google searches!\n\nRight click the extension and allow the extension to always run on google.com after installing.",
-                "license": "Mozilla Public License 2.0",
-                "author": "Ryn"
-            }
-        },
-        "librezam": {
-            "version": "5.9",
-            "id": "Librezam@Librezam",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4752025/librezam-5.9.xpi",
-                "hash": "sha256-CQJH8N7ZYPAT9ZPRiU11rP7fQR0TBx+WtJ+xE+7vKlE="
-            },
-            "meta": {
-                "name": "Librezam",
-                "description": "Open-source music recognition extension using Shazam API (also supports Audd, ACRCloud, Tencent, and NetEase APIs as alternative backends)",
-                "license": "GNU Affero General Public License v3.0 only",
-                "author": "FoxRefire"
-            }
-        },
-        "simple-modify-header": {
-            "version": "1.9.0",
-            "id": "{f6ca2dfb-43a6-4334-9fad-8d5a71a1fe67}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4319544/simple_modify_header-1.9.0.xpi",
-                "hash": "sha256-xeJhZEeMDHGno7Yejjb6BXEP4TkRygjdvU7tcJaJRMI="
-            },
-            "meta": {
-                "name": "simple-modify-headers",
-                "description": "The extension rewrite the header (request or response)  based on a rules table. It 's possible to add, modify or remove header fields for a choosen url pattern. It's possible to import/export the configuration",
-                "homepage": "https://github.com/didierfred/SimpleModifyHeaders/tree/v1.8.1",
-                "license": "Mozilla Public License 2.0",
-                "author": "Didierfred"
-            }
-        },
-        "socialfocus": {
-            "version": "8.0",
-            "id": "{26b4f076-089c-4c69-8497-44b7e5c9faef}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4947601/socialfocus-8.0.xpi",
-                "hash": "sha256-XpRGk0Ku2MyJDisNmxgIBGg1cP/YZlVE58zeP86CET8="
-            },
-            "meta": {
-                "name": "SocialFocus: Hide Distractions",
-                "description": "Block feed, shorts, related and other distractions on time-wasting sites like Instagram, Facebook, YouTube, Twitter, Reddit, LinkedIn...",
-                "homepage": "https://socialfocus.app",
-                "license": "All Rights Reserved",
-                "author": "Yevhen Tretiakov"
-            }
-        },
-        "styl-us": {
-            "version": "2.4.16",
-            "id": "{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5139589/styl_us-2.4.16.xpi",
-                "hash": "sha256-kKa0SiPz9Z/5Zag98dZFPFn1it6Pj7hCRAMiYNv2w4E="
-            },
-            "meta": {
-                "name": "Stylus",
-                "description": "Redesign your favorite websites with Stylus, an actively developed and community driven userstyles manager. Easily install custom themes from popular online repositories, or create, edit, and manage your own personalized CSS stylesheets.",
-                "homepage": "https://add0n.com/stylus.html",
-                "license": "GNU General Public License v3.0 only",
-                "author": "Stylus Team"
-            }
-        },
-        "steam-database": {
-            "version": "4.37",
-            "id": "firefox-extension@steamdb.info",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4967437/steam_database-4.37.xpi",
-                "hash": "sha256-0oDZqL5/6Lzf/WBpfa9ZA8tNpnkSVpUQ+3qL1oVi1sw="
-            },
-            "meta": {
-                "name": "SteamDB",
-                "description": "Adds SteamDB links and new features on the Steam store and community. View lowest game prices and stats.",
-                "homepage": "https://steamdb.info/",
-                "license": "BSD 2-Clause \"Simplified\" License",
-                "author": "SteamDB"
-            }
-        },
-        "youtube-nonstop": {
-            "version": "0.9.2",
-            "id": "{0d7cafdd-501c-49ca-8ebb-e3341caaa55e}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4187690/youtube_nonstop-0.9.2.xpi",
-                "hash": "sha256-dlnRgPduqQjqgbhO2b3RiGJOqqYriKzL5titToyu/zg="
-            },
-            "meta": {
-                "name": "YouTube NonStop",
-                "description": "Tired of getting that \"Video paused. Continue watching?\" confirmation dialog?\nThis extension autoclicks it, so you can listen to your favorite music uninterrupted.\n\nWorking on YouTube and YouTube Music!",
-                "homepage": "https://github.com/lawfx/YoutubeNonStop",
-                "license": "MIT License",
-                "author": "lawfx"
-            }
-        },
-        "mozilla-vpn-extension": {
-            "version": "1.35.0",
-            "id": "vpn@mozilla.com",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4482969/mozilla_vpn_extension-1.35.0.xpi",
-                "hash": "sha256-SAfjAnkBrY1bEwGw3iYbQomq/MhIthQbIJ0emsUwi9Q="
-            },
-            "meta": {
-                "name": "Mozilla VPN Extension",
-                "description": "Get more from Mozilla VPN with the Firefox extension \u2014 currently available for Windows. Turn off VPN for specific websites, set different locations for different websites, and keep protection for Firefox on, even when the Mozilla VPN app is off.",
-                "homepage": "https://www.mozilla.org/products/vpn/",
-                "license": "Mozilla Public License 2.0",
-                "author": "Firefox"
-            }
-        },
-        "canvasblocker": {
-            "version": "1.12",
-            "id": "CanvasBlocker@kkapsner.de",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4691016/canvasblocker-1.12.xpi",
-                "hash": "sha256-BpjZLEvS0ZCy9AJWE79L09ukCRDVirTPGzLzZjeiRMk="
-            },
-            "meta": {
-                "name": "CanvasBlocker",
-                "description": "Alters some JS APIs to prevent fingerprinting.",
-                "homepage": "https://github.com/kkapsner/CanvasBlocker/",
-                "license": "Mozilla Public License 2.0",
-                "author": "kkapsner"
-            }
-        },
-        "dont-track-me-google1": {
-            "version": "4.30",
-            "id": "dont-track-me-google@robwu.nl",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4998037/dont_track_me_google1-4.30.xpi",
-                "hash": "sha256-MRpGovlqAgzCxbFVDLLkHg+4MIvfbnKSmo4ZvkoTcek="
-            },
-            "meta": {
-                "name": "Don't track me Google",
-                "description": "Removes the annoying link-conversion at Google Search / maps / ...",
-                "homepage": "https://github.com/Rob--W/dont-track-me-google",
-                "license": "MIT License",
-                "author": "Rob W"
-            }
-        },
-        "facebook-container": {
-            "version": "2.3.12",
-            "id": "@contain-facebook",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4451874/facebook_container-2.3.12.xpi",
-                "hash": "sha256-M2m9hlh3hg5tfTg5nVkCswDT1XN6yy0TQv9b6x03gME="
-            },
-            "meta": {
-                "name": "Facebook Container",
-                "description": "Prevent Facebook from tracking you around the web. The Facebook Container extension for Firefox helps you take control and isolate your web activity from Facebook.",
-                "homepage": "https://github.com/mozilla/contain-facebook",
-                "license": "Mozilla Public License 2.0",
-                "author": "Firefox"
-            }
-        },
-        "history-cleaner": {
-            "version": "1.7.0",
-            "id": "{a138007c-5ff6-4d10-83d9-0afaf0efbe5e}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4403189/history_cleaner-1.7.0.xpi",
-                "hash": "sha256-nqJYAGfruZJz5aWxpo4+ZHuOBX1yRqWMZRJZnAf88U0="
-            },
-            "meta": {
-                "name": "History Cleaner",
-                "description": "Deletes browsing history older than a specified number of days.",
-                "homepage": "https://github.com/Rayquaza01/HistoryCleaner",
-                "license": "MIT License",
-                "author": "Rayquaza01"
-            }
-        },
-        "privacy-badger17": {
-            "version": "2026.9.15",
-            "id": "jid1-MnnxcxisBPnSXQ@jetpack",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5032646/privacy_badger17-2026.9.15.xpi",
-                "hash": "sha256-l82JEeNIbaNKUyp8fygGzW0M+hF6H75eh0cEKpRELWI="
-            },
-            "meta": {
-                "name": "Privacy Badger",
-                "description": "Automatically learns to block hidden trackers. Made by the leading digital rights nonprofit EFF to stop companies from spying on you.",
-                "homepage": "https://privacybadger.org/",
-                "license": "GNU General Public License v3.0 only",
-                "author": "EFF Technologists"
-            }
-        },
-        "free-download-manager-addon": {
-            "version": "3.3.2",
-            "id": "fdm_ffext2@freedownloadmanager.org",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4904785/free_download_manager_addon-3.3.2.xpi",
-                "hash": "sha256-Hw0ObXkca539EkwBkdjWuX8bL4oocrsp+ztuvl5RyXo="
-            },
-            "meta": {
-                "name": "Free Download Manager official extension",
-                "description": "Free Download Manager integration with your Firefox browser",
-                "homepage": "https://freedownloadmanager.org",
-                "license": "Mozilla Public License 2.0",
-                "author": "freedownloadmanager.org"
-            }
-        },
-        "plasma-integration": {
-            "version": "2.1",
-            "id": "plasma-browser-integration@kde.org",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4614817/plasma_integration-2.1.xpi",
-                "hash": "sha256-Nb+jdm4JcWDnT1Jb3lTZe7upDXJdqkJbneb+9uxenUQ="
-            },
-            "meta": {
-                "name": "Plasma Integration",
-                "description": "Multitask efficiently by controlling browser functions from the Plasma desktop.",
-                "homepage": "http://kde.org",
-                "license": "GNU General Public License v3.0 only",
-                "author": "KDE"
-            }
-        },
-        "easy-youtube-video-download": {
-            "version": "25.4",
-            "id": "{b9acf540-acba-11e1-8ccb-001fd0e08bd4}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5115876/easy_youtube_video_download-25.4.xpi",
-                "hash": "sha256-BwXsCj8FhshyrHV4c+QNNbRqrQYUDXIkxu3U0xyiA5Q="
-            },
-            "meta": {
-                "name": "Easy Youtube Video Downloader Express",
-                "description": "A simple extension for superfast and easy YouTube downloads in FLV, 3GP, MP3, MP4, 720p, and 1080p formats.",
-                "homepage": "https://www.yourvideofile.org",
-                "license": "Mozilla Public License 2.0",
-                "author": "Dishita"
-            }
-        },
-        "yomitan": {
-            "version": "26.9.8.0",
-            "id": "{6b733b82-9261-47ee-a595-2dda294a4d08}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5040552/yomitan-26.9.8.0.xpi",
-                "hash": "sha256-Yp3MR/hwkofm4fmdX41ygrZJsAhV71BLbRuEtYrYMck="
-            },
-            "meta": {
-                "name": "Yomitan",
-                "description": "Powerful and versatile pop-up dictionary for language learning used by 100,000+ language learners.",
-                "homepage": "https://github.com/themoeway/yomitan",
-                "license": "GNU General Public License v3.0 only",
-                "author": "Darius Jahandarie"
-            }
-        },
-        "media-downloader-unleashed": {
-            "version": "4.1.8",
-            "id": "{dab9a10d-f9c5-4e8d-9351-67531e85b508}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5129184/media_downloader_unleashed-4.1.8.xpi",
-                "hash": "sha256-Sh/XAoM/bxufuiDC1gZ5P2ewIhsCdGR9t99mLAPlQbQ="
-            },
-            "meta": {
-                "name": "Media Downloader Unleashed!!",
-                "description": "Detect and download \ud83c\udfac videos, \ud83c\udfa5 streams, \ud83c\udfb5 audio and other files from your browser!\nCompatible with .m3u8, .mpd, .mp4, .mp3, .ogg and many more formats and websites!\nCompletely free, open-source!",
-                "homepage": "https://github.com/helloyanis/media-downloader-unleashed",
-                "license": "MIT License",
-                "author": "\ud83e\udd8a helloyanis"
-            }
-        },
-        "weather-extension": {
-            "version": "6.0.46",
-            "id": "{a79a9c4c-9c3f-4bf4-9e58-6574cc0b7ecb}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5052074/weather_extension-6.0.46.xpi",
-                "hash": "sha256-x0so+U+YU/tf41VI4KxB7sJDzWUcDTKTw/s7kzReRXw="
-            },
-            "meta": {
-                "name": "Weather Extension",
-                "description": "Weather at a glance in Firefox: toolbar temperature, hourly and daily forecasts, radar, eight themes, and optional Weather Pro features.",
-                "homepage": "https://weatherextension.com/",
-                "license": "Mozilla Public License 2.0",
-                "author": "Tim"
-            }
-        },
-        "port-authority": {
-            "version": "2.2.0",
-            "id": "{6c00218c-707a-4977-84cf-36df1cef310f}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4516988/port_authority-2.2.0.xpi",
-                "hash": "sha256-QyzeiYIwxtQyzwih7npgX8rIxiC4Mn0/jaTwiUQ5JzE="
-            },
-            "meta": {
-                "name": "Port Authority",
-                "description": "Blocks malicious websites from port-scanning your computer/network and dynamically blocks all LexisNexis endpoints from running their invasive data collection scripts.",
-                "homepage": "https://github.com/ACK-J/Port_Authoirty",
-                "license": "GNU General Public License v2.0 only",
-                "author": "Hacks and Hops"
-            }
-        },
-        "popup-blocker": {
-            "version": "0.9.3",
-            "id": "{de22fd49-c9ab-4359-b722-b3febdc3a0b0}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5130331/popup_blocker-0.9.3.xpi",
-                "hash": "sha256-+U40vftLehZWlov7yAgq0VlSzYoOqm0yaLjQLJJwn9c="
-            },
-            "meta": {
-                "name": "Popup Blocker (strict)",
-                "description": "Strictly block all popup requests from any website by default. A notification window is opened to allow you accept, reject, open the popup in background page, or redirect the current page to popup address",
-                "homepage": "https://webextension.org/listing/popup-blocker.html",
-                "license": "Mozilla Public License 2.0",
-                "author": "Jeremy Schomery"
-            }
-        },
-        "audio-equalizer-wext": {
-            "version": "0.2.1",
-            "id": "{63d150c4-394c-4275-bc32-c464e76a891c}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4873581/audio_equalizer_wext-0.2.1.xpi",
-                "hash": "sha256-U2gPdtEb3mhUM0W5FMV7PpYqluM80Gf0urWiLch7gxU="
-            },
-            "meta": {
-                "name": "Audio Equalizer",
-                "description": "Stylish audio equalizer in toolbar popup.",
-                "homepage": "https://mybrowseraddon.com/audio-equalizer.html",
-                "license": "Mozilla Public License 2.0",
-                "author": "Muyor"
-            }
-        },
-        "view-page-archive": {
-            "version": "7.3.3",
-            "id": "{d07ccf11-c0cd-4938-a265-2a4d6ad01189}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4871262/view_page_archive-7.3.3.xpi",
-                "hash": "sha256-gcolvUE5LPSwPUwcTDnr1aTqqEDvik0m+Esd05aZmjQ="
-            },
-            "meta": {
-                "name": "Web Archives",
-                "description": "View archived and cached versions of web pages on various search engines, such as the Wayback Machine and Archive\u2024is.",
-                "homepage": "https://github.com/dessant/web-archives#readme",
-                "license": "GNU General Public License v3.0 only",
-                "author": "Armin Sebastian"
-            }
-        },
-        "youtube-high-definition": {
-            "version": "118.0.9",
-            "id": "{7b1bf0b6-a1b9-42b0-b75d-252036438bdc}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4344731/youtube_high_definition-118.0.9.xpi",
-                "hash": "sha256-mRlarIiiaqGUrOLwB12bTncQrD8McA0YrT21e2Vu5Rc="
-            },
-            "meta": {
-                "name": "YouTube High Definition",
-                "description": "YouTube High Definition is a powerful tool that automatically plays all YouTube videos in HD, changes video player size, offers auto-stop and mute, and much more.",
-                "homepage": "http://barisderin.com/",
-                "license": "GNU Lesser General Public License v3.0 only",
-                "author": "Baris Derin"
-            }
-        },
-        "besttimetracker": {
-            "version": "4.6.5",
-            "id": "{a8cf72f7-09b7-4cd4-9aaa-7a023bf09916}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5132235/besttimetracker-4.6.5.xpi",
-                "hash": "sha256-xlEOiZ410qsyRRohYXakoxKZ/FxwooQO9FVMdvPVcIU="
-            },
-            "meta": {
-                "name": "Time Tracker - Web Habit Builder",
-                "description": "Track time, analyze your habits and block addictive sites",
-                "homepage": "https://time-tracker-4-browser.app/en/",
-                "license": "MIT License",
-                "author": "sheepie z"
-            }
-        },
-        "swift-selection-search": {
-            "version": "3.49.0",
-            "id": "jid1-KdTtiCj6wxVAFA@jetpack",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4473415/swift_selection_search-3.49.0.xpi",
-                "hash": "sha256-OcIHNjb32MPkkAKpMOC1ae/HUee+tG9+1/F8RLPBaA8="
-            },
-            "meta": {
-                "name": "Swift Selection Search",
-                "description": "Swiftly access your search engines in a popup panel when you select text in a webpage. Context menu also included!",
-                "homepage": "https://github.com/CanisLupus/swift-selection-search",
-                "license": "MIT License",
-                "author": "Daniel Lobo"
-            }
-        },
-        "undoclosetabbutton": {
-            "version": "8.1.0",
-            "id": "{4853d046-c5a3-436b-bc36-220fd935ee1d}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4513641/undoclosetabbutton-8.1.0.xpi",
-                "hash": "sha256-/5pHtGb+KahgoYRqZVAuMncXlF3J985ifJzWSihZuqs="
-            },
-            "meta": {
-                "name": "Undo Close Tab",
-                "description": "Allows you to restore the tab you just closed with a single click\u2014plus it can offer a list of recently closed tabs within a convenient context menu.",
-                "homepage": "https://github.com/M-Reimer/undoclosetab",
-                "license": "GNU General Public License v3.0 only",
-                "author": "Manuel Reimer"
-            }
-        },
-        "copy-plaintext": {
-            "version": "1.15",
-            "id": "copyplaintext@eros.man",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4143512/copy_plaintext-1.15.xpi",
-                "hash": "sha256-GGNTFiXRix/GvV3avyrDIp+m3LGKNPl7NyIxcq5TDfc="
-            },
-            "meta": {
-                "name": "Copy PlainText",
-                "description": "Copy Plain Text without any formatting",
-                "license": "Mozilla Public License 2.0",
-                "author": "erosman"
-            }
-        },
-        "soundfixer": {
-            "version": "1.4.1",
-            "id": "soundfixer@unrelenting.technology",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4205769/soundfixer-1.4.1.xpi",
-                "hash": "sha256-sinHdjXk6Jq1hhRK6i/Ml3osXlFQmoSsiE+lninud5I="
-            },
-            "meta": {
-                "name": "SoundFixer",
-                "description": "Helps you fix annoying sound problems on sites like YouTube: audio in one channel only, too quiet or too loud.\n\n(Unfortunately, this extension does not work on all websites because of cross-domain issues \u2014 but it does work on YouTube!)",
-                "homepage": "https://github.com/valpackett/soundfixer",
-                "license": "Unlicense",
-                "author": "Val Packett"
-            }
-        },
-        "youtube-better-ambient": {
-            "version": "1.0.15",
-            "id": "pr0verter@gmail.com",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4761235/youtube_better_ambient-1.0.15.xpi",
-                "hash": "sha256-ibjv0U+Ui9RxYbnj3ITtMVjuobWuO2LJfHeft6bozq8="
-            },
-            "meta": {
-                "name": "youtube-better-ambient",
-                "description": "Enhances YouTube\u2019s ambient mode by placing a blurred version of the video in the background and making various UI elements transparent for a more immersive experience",
-                "homepage": "https://github.com/kabel2/youtube-better-ambient",
-                "license": "MIT License",
-                "author": "kabel2"
-            }
-        },
-        "noscript": {
-            "version": "13.6.36",
-            "id": "{73a6fe31-595d-460b-a920-fcc0f8843232}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5075209/noscript-13.6.36.xpi",
-                "hash": "sha256-EIY4UdGP50poDkbkqBP9WVULtKNWolTN4+j4XIDbAHg="
-            },
-            "meta": {
-                "name": "NoScript Security Suite",
-                "description": "The best security you can get in a web browser! Allow potentially malicious web content to run only from sites you trust. Protect yourself against XSS other web security exploits.",
-                "homepage": "https://noscript.net",
-                "license": "GNU General Public License v2.0 only",
-                "author": "Giorgio Maone"
-            }
-        },
-        "image-search-options": {
-            "version": "3.0.12",
-            "id": "{4a313247-8330-4a81-948e-b79936516f78}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/3059971/image_search_options-3.0.12.xpi",
-                "hash": "sha256-H73YWX/DKxvhEwKpWOo7orAQ7c/rQywpljeyxYxv0Gg="
-            },
-            "meta": {
-                "name": "Image Search Options",
-                "description": "A customizable reverse image search tool that conveniently presents a variety of top image search engines.",
-                "homepage": "http://saucenao.com/",
-                "license": "Mozilla Public License 1.1",
-                "author": "Xamayon"
-            }
-        },
-        "auto-tab-discard": {
-            "version": "0.7.7",
-            "id": "{c2c003ee-bd69-42a2-b0e9-6f34222cb046}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5111461/auto_tab_discard-0.7.7.xpi",
-                "hash": "sha256-zdTURn5+CRRp9u2tAhNGHZBzb25/yCNGZlJcynY3U8M="
-            },
-            "meta": {
-                "name": "Auto Tab Discard",
-                "description": "Increase browser speed and reduce memory load and when you have numerous open tabs.",
-                "homepage": "https://webextension.org/listing/tab-discard.html",
-                "license": "Mozilla Public License 2.0",
-                "author": "tlintspr"
-            }
-        },
-        "decentraleyes": {
-            "version": "3.0.2",
-            "id": "jid1-BoFifL9Vbdl2zQ@jetpack",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4943310/decentraleyes-3.0.2.xpi",
-                "hash": "sha256-50nQ0ZhbV5Mys2qgDUO9EcnoILE3VwFlfPms7tu0dYE="
-            },
-            "meta": {
-                "name": "Decentraleyes",
-                "description": "Protects you against tracking through \"free\", centralized, content delivery. It prevents a lot of requests from reaching networks like Google Hosted Libraries, and serves local files to keep sites from breaking. Complements regular content blockers.",
-                "homepage": "https://decentraleyes.org",
-                "license": "Mozilla Public License 2.0",
-                "author": "Thomas Rientjes"
-            }
-        },
-        "bitwarden-password-manager": {
-            "version": "2026.10.0",
-            "id": "{446900e4-71c2-419f-a6a7-df9c091e268b}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5125667/bitwarden_password_manager-2026.10.0.xpi",
-                "hash": "sha256-ol4C6WH0/87NoSWE8y8ZkxAq11CenKhFguUocQn1vSA="
-            },
-            "meta": {
-                "name": "Bitwarden Password Manager",
-                "description": "At home, at work, or on the go, Bitwarden easily secures all your passwords, passkeys, and sensitive information.",
-                "homepage": "https://bitwarden.com",
-                "license": "GNU General Public License v3.0 only",
-                "author": "Bitwarden Inc."
-            }
-        },
-        "ambient-light-for-youtube": {
-            "version": "2.38.17",
-            "id": "{60493d8c-aec8-448e-a247-5d2cfa047d69}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4618615/ambient_light_for_youtube-2.38.17.xpi",
-                "hash": "sha256-7hZx2gisXI0JSxwIe1C9WqiUkJaLIq0TsVVAO/K1W3g="
-            },
-            "meta": {
-                "name": "Ambient light for YouTube\u2122",
-                "description": "Immerse yourself in YouTube\u2122 videos with ambient light!",
-                "homepage": "https://github.com/WesselKroos/youtube-ambilight",
-                "license": "MIT License",
-                "author": "Wezelkrozum"
-            }
-        },
-        "clearurls": {
-            "version": "1.27.3",
-            "id": "{74145f27-f039-47ce-a470-a662b129930a}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4432106/clearurls-1.27.3.xpi",
-                "hash": "sha256-VJJrbkJ01ZNaX8DapjIPHTcePS8aWHdGfKOrIqZcTyA="
-            },
-            "meta": {
-                "name": "ClearURLs",
-                "description": "Automatically removes tracking parameters from URLs",
-                "homepage": "https://clearurls.xyz/",
-                "license": "GNU Lesser General Public License v3.0 only",
-                "author": "Kevin"
-            }
-        },
-        "consent-o-matic": {
-            "version": "1.1.5",
-            "id": "gdpr@cavi.au.dk",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4515369/consent_o_matic-1.1.5.xpi",
-                "hash": "sha256-ohGavDKWONbnrxq05VSKNIRl4C7sEd4I3uCvhJGZI9w="
-            },
-            "meta": {
-                "name": "Consent-O-Matic",
-                "description": "Automatic handling of GDPR consent forms",
-                "homepage": "https://consentomatic.au.dk/",
-                "license": "MIT License",
-                "author": "CAVI - Aarhus University"
-            }
-        },
-        "sidebery": {
-            "version": "5.6.1",
-            "id": "{3c078156-979c-498b-8990-85f7987dd929}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4903712/sidebery-5.6.1.xpi",
-                "hash": "sha256-6KCktVarfdU2iXwYFq+dCRgDAiMGjqZoOgQ3YQOmyvI="
-            },
-            "meta": {
-                "name": "Sidebery",
-                "description": "Vertical tabs tree and bookmarks in sidebar with advanced containers configuration, grouping and many other features.",
-                "homepage": "https://github.com/mbnuqw/sidebery",
-                "license": "MIT License",
-                "author": "mbnuqw"
-            }
-        },
-        "multi-account-containers": {
-            "version": "8.3.8",
-            "id": "@testpilot-containers",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4867303/multi_account_containers-8.3.8.xpi",
-                "hash": "sha256-MGopSEU2PxWnR46WILQ/keoXYQiHJ4COIye//xbBREc="
-            },
-            "meta": {
-                "name": "Firefox Multi-Account Containers",
-                "description": "Firefox Multi-Account Containers lets you keep parts of your online life separated into color-coded tabs. Cookies are separated by container, allowing you to use the web with multiple accounts and integrate Mozilla VPN for an extra layer of privacy.",
-                "homepage": "https://github.com/mozilla/multi-account-containers/#readme",
-                "license": "Mozilla Public License 2.0",
-                "author": "Firefox"
-            }
-        },
-        "single-file": {
-            "version": "1.31.5",
-            "id": "{531906d3-e22f-4a6c-a102-8057b88a1a63}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5141757/single_file-1.31.5.xpi",
-                "hash": "sha256-8bJ5reWG31TN2eYdxtK/nnPb6+IcN3urKv0A6VU2JuU="
-            },
-            "meta": {
-                "name": "SingleFile",
-                "description": "Save an entire web page\u2014including images and styling\u2014as a single HTML file.",
-                "homepage": "https://www.getsinglefile.com",
-                "license": "AGPL v3",
-                "author": "gildas"
-            }
-        },
-        "gesturefy": {
-            "version": "3.2.19",
-            "id": "{506e023c-7f2b-40a3-8066-bc5deb40aebe}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5059402/gesturefy-3.2.19.xpi",
-                "hash": "sha256-A+e14JORI76HP3lZfi7w18sirPrl1c5N+DwZmAEejlw="
-            },
-            "meta": {
-                "name": "Gesturefy",
-                "description": "Navigate, operate, and browse faster with mouse gestures! A customizable mouse gesture add-on with a variety of different commands.",
-                "homepage": "https://github.com/Robbendebiene/Gesturefy",
-                "license": "GNU General Public License v3.0 only",
-                "author": "Robbendebiene"
-            }
-        },
-        "libredirect": {
-            "version": "3.4.0",
-            "id": "7esoorv3@alefvanoon.anonaddy.me",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4916828/libredirect-3.4.0.xpi",
-                "hash": "sha256-wPqaXCMC63NLG2FChDcQYTMM8uezUZ7pbFPovliuKY8="
-            },
-            "meta": {
-                "name": "LibRedirect",
-                "description": "Redirects YouTube, Twitter, TikTok... requests to alternative privacy friendly frontends.",
-                "homepage": "https://libredirect.manerakai.com/",
-                "license": "GNU General Public License v3.0 only",
-                "author": "ManeraKai"
-            }
-        },
-        "tree-style-tab": {
-            "version": "4.4.9",
-            "id": "treestyletab@piro.sakura.ne.jp",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5072919/tree_style_tab-4.4.9.xpi",
-                "hash": "sha256-b6ifkijs1dYb67OPOLpoUeJO5SHURlJfugskpJLpaYQ="
-            },
-            "meta": {
-                "name": "Tree Style Tab",
-                "description": "Show tabs like a tree.",
-                "homepage": "https://github.com/piroor/treestyletab",
-                "license": "Custom License",
-                "author": "Piro (piro_or)"
-            }
-        },
-        "tab-stash": {
-            "version": "3.5",
-            "id": "tab-stash@condordes.net",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5028003/tab_stash-3.5.xpi",
-                "hash": "sha256-J0cURtWZzcYm+R/t9rVy+0scSWTpssK0cWnXU3w8lSQ="
-            },
-            "meta": {
-                "name": "Tab Stash",
-                "description": "Easily save and organize batches of tabs as bookmarks. Clear your tabs, clear your mind. Only for Firefox.",
-                "homepage": "https://josh-berry.github.io/tab-stash/",
-                "license": "Mozilla Public License 2.0",
-                "author": "Josh Berry"
-            }
-        },
-        "video-speed-control": {
-            "version": "0.1.6",
-            "id": "{24e032ab-bf0b-41ad-b404-79abc127bcbf}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4859676/video_speed_control-0.1.6.xpi",
-                "hash": "sha256-8eCdy+i47VCN41iUL0zKKMFNFa0Urzs9txir5Nc4Gdw="
-            },
-            "meta": {
-                "name": "Video Speed Control",
-                "description": "Easily control HTML5 video playback speed via toolbar popup",
-                "homepage": "https://mybrowseraddon.com/video-speed-control.html",
-                "license": "Mozilla Public License 2.0",
-                "author": "Sevina"
-            }
-        },
-        "augmented-steam": {
-            "version": "5.0.0",
-            "id": "{1be309c5-3e4f-4b99-927d-bb500eb4fa88}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5079049/augmented_steam-5.0.0.xpi",
-                "hash": "sha256-GMEosjJvNenAqdGXOrIGqONdfMqJoPf2GBLnoUsxqPQ="
-            },
-            "meta": {
-                "name": "Augmented Steam",
-                "description": "Augments your Steam Experience",
-                "homepage": "https://augmentedsteam.com/",
-                "license": "GNU General Public License v3.0 only",
-                "author": "IsThereAnyDeal"
-            }
-        },
-        "traduzir-paginas-web": {
-            "version": "10.2.1.0",
-            "id": "{036a55b4-5e72-4d05-a06c-cba2dfcc134a}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4962745/traduzir_paginas_web-10.2.1.0.xpi",
-                "hash": "sha256-Z/S5AnlCZZDM+I+FrvFFCZSLTmYWgtk4qTwLzOlMUjs="
-            },
-            "meta": {
-                "name": "TWP - Translate Web Pages",
-                "description": "Translate your page in real time using Google, Bing or Yandex.\nIt is not necessary to open new tabs.",
-                "license": "Mozilla Public License 2.0",
-                "author": "Filipe Dev"
-            }
-        },
-        "web-developer": {
-            "version": "3.0.1",
-            "id": "{c45c406e-ab73-11d8-be73-000a95be3b12}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4306323/web_developer-3.0.1.xpi",
-                "hash": "sha256-TSzidzGG+qOFvZXP/xDiRON6KIgASXt1C6tmXXviGj0="
-            },
-            "meta": {
-                "name": "Web Developer",
-                "description": "The Web Developer extension adds various web developer tools to the browser.",
-                "homepage": "http://chrispederick.com/work/web-developer/firefox/",
-                "license": "GNU Lesser General Public License v3.0 only",
-                "author": "chrispederick"
-            }
-        },
-        "my-redirector": {
-            "version": "1.0.11",
-            "id": "{5816eaf8-2431-4468-9c04-62d8b44df5b7}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4830387/my_redirector-1.0.11.xpi",
-                "hash": "sha256-j/Om9NbuITIFkttKbLSgSzOwYDzx7/yUfm7QNjm2CwQ="
-            },
-            "meta": {
-                "name": "Redirector",
-                "description": "This extension allows you to set custom redirects. It is useful for redirecting popular sites to alternative frontends (e.g. youtube to invidious), or restoring functionality (e.g. automatic redirection to Zoom's web client).",
-                "homepage": "https://github.com/lifo9/Redirector",
-                "license": "MIT License",
-                "author": "Jakub Filo"
-            }
-        },
-        "flagfox": {
-            "version": "6.2.6",
-            "id": "{1018e4d6-728f-4b20-ad56-37578a4de76b}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5067561/flagfox-6.2.6.xpi",
-                "hash": "sha256-/8lVRU+zKlCoptmUgCM3/PqCGYzPnfze2UCFymqVB0I="
-            },
-            "meta": {
-                "name": "Flagfox",
-                "description": "Displays a country flag depicting the location of the current website's server and provides a multitude of tools such as site safety checks, whois, translation, similar sites, validation, URL shortening, and more...",
-                "homepage": "https://flagfox.wordpress.com/",
-                "license": "Flagfox License",
-                "author": "Dave G"
-            }
-        },
-        "search_by_image": {
-            "version": "8.5.3",
-            "id": "{2e5ff8c8-32fe-46d0-9fc8-6b8986621f3c}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4840197/search_by_image-8.5.3.xpi",
-                "hash": "sha256-umBEeLUPXEbhMBHqfj4pBqvHsbcst+h7AsT73vpkrjc="
-            },
-            "meta": {
-                "name": "Search by Image",
-                "description": "A powerful reverse image search tool, with support for various search engines, such as Google, Bing, Yandex, Baidu and TinEye.",
-                "homepage": "https://github.com/dessant/search-by-image#readme",
-                "license": "GNU General Public License v3.0 only",
-                "author": "Armin Sebastian"
-            }
-        },
-        "simple-translate": {
-            "version": "3.1.0",
-            "id": "simple-translate@sienori",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4979122/simple_translate-3.1.0.xpi",
-                "hash": "sha256-wnWR6uc2P7BjXyEnesTgvFcJ5s/ymdM77E3oEGwpiVE="
-            },
-            "meta": {
-                "name": "Simple Translate",
-                "description": "Quickly translate selected or typed text on web pages. Supports Google Translate and DeepL API.",
-                "homepage": "https://simple-translate.sienori.com",
-                "license": "Mozilla Public License 2.0",
-                "author": "sienori"
-            }
-        },
-        "temporary-containers-plus": {
-            "version": "2.1.5",
-            "id": "{1ea2fa75-677e-4702-b06a-50fc7d06fe7e}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4796436/temporary_containers_plus-2.1.5.xpi",
-                "hash": "sha256-yApz7kEwKns0pzRI5vf0LB/GhPs+Wzf+0BF+f/yrvxk="
-            },
-            "meta": {
-                "name": "Temporary Containers Plus",
-                "description": "Open tabs, websites, and links in automatically managed disposable containers. Containers isolate the data websites store (cookies, cache, and more) from each other, further enhancing your privacy while you browse.",
-                "homepage": "https://github.com/GodKratos/temporary-containers",
-                "license": "MIT License",
-                "author": "Bunta126"
-            }
-        },
-        "tab-session-manager": {
-            "version": "7.4.0",
-            "id": "Tab-Session-Manager@sienori",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4905104/tab_session_manager-7.4.0.xpi",
-                "hash": "sha256-EN3DvCcXnLMpYvqGKeh9nSw4l6YEujR2ZuvhahSIdRs="
-            },
-            "meta": {
-                "name": "Tab Session Manager",
-                "description": "Save and restore the state of windows and tabs. It also supports automatic saving and cloud sync.",
-                "homepage": "https://tab-session-manager.sienori.com/",
-                "license": "Mozilla Public License 2.0",
-                "author": "sienori"
-            }
-        },
-        "print-edit-we": {
-            "version": "29.7",
-            "id": "printedit-we@DW-dev",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4479263/print_edit_we-29.7.xpi",
-                "hash": "sha256-+ts5LhNmYnTQlkb17jS/B8OKihUqMMavxOI+Q7DLRjo="
-            },
-            "meta": {
-                "name": "Print Edit WE",
-                "description": "Edit the contents of a web page prior to printing or saving. Elements in the web page can be edited, formatted, hidden or deleted. Unwanted content, such as adverts and sidebars, can easily be removed.",
-                "license": "GNU General Public License v2.0 only",
-                "author": "DW-dev"
-            }
-        },
-        "save-page-we": {
-            "version": "28.11",
-            "id": "savepage-we@DW-dev",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4091842/save_page_we-28.11.xpi",
-                "hash": "sha256-JvlQRxH6RAFPjLVwU9CQAVO0RuYjCMzx89mJwod3HP0="
-            },
-            "meta": {
-                "name": "Save Page WE",
-                "description": "Save a complete web page (as currently displayed) as a single HTML file that can be opened in any browser. Save a single page, multiple selected pages or a list of page URLs. Automate saving from command line.",
-                "license": "GNU General Public License v2.0 only",
-                "author": "DW-dev"
-            }
-        },
-        "read-aloud": {
-            "version": "1.82.0",
-            "id": "{ddc62400-f22d-4dd3-8b4a-05837de53c2e}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5137478/read_aloud-1.82.0.xpi",
-                "hash": "sha256-SggKImWHfiH64vaXriqt8RXDeDwOazDzdNVFe7XFpTA="
-            },
-            "meta": {
-                "name": "Read Aloud: A Text to Speech Voice Reader",
-                "description": "Read out loud the current web-page article with one click. Supports 40+ languages.",
-                "license": "GNU General Public License v3.0 only",
-                "author": "LSD Software"
-            }
-        },
-        "unpaywall": {
-            "version": "3.98",
-            "id": "{f209234a-76f0-4735-9920-eb62507a54cd}",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/3816853/unpaywall-3.98.xpi",
-                "hash": "sha256-aJO+qG08TtfxEAvw4XNZG1JqBi9N3XvhPDClRXPHl/s="
-            },
-            "meta": {
-                "name": "Unpaywall",
-                "description": "Get free text of research papers as you browse, using Unpaywall's index of ten million legal, open-access articles.",
-                "homepage": "https://unpaywall.org/products/extension",
-                "license": "MIT License",
-                "author": "Impactstory team"
-            }
-        },
-        "skip-redirect": {
-            "version": "3.0.2",
-            "id": "skipredirect@sblask",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/4968151/skip_redirect-3.0.2.xpi",
-                "hash": "sha256-HtnEyhX87Slj3AAdlcR0Xu2aHFu5121woxQNvVcVudc="
-            },
-            "meta": {
-                "name": "Skip Redirect",
-                "description": "Some web pages use intermediary pages before redirecting to a final page. This add-on tries to extract the final url from the intermediary url and goes there straight away if successful.",
-                "license": "MIT License",
-                "author": "Sebastian Blask"
-            }
-        },
-        "keepassxc-browser": {
-            "version": "1.10.4.1",
-            "id": "keepassxc-browser@keepassxc.org",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5078406/keepassxc_browser-1.10.4.1.xpi",
-                "hash": "sha256-rkEVej8Bewdzq7ogl9WwBWJBYx0KOK021o0LJLGkCcE="
-            },
-            "meta": {
-                "name": "KeePassXC-Browser",
-                "description": "Official browser plugin for the KeePassXC password manager (https://keepassxc.org).",
-                "homepage": "https://keepassxc.org/",
-                "license": "GNU General Public License v3.0 only",
-                "author": "KeePassXC Team"
-            }
-        },
-        "onetab": {
-            "version": "2.24",
-            "id": "extension@one-tab.com",
-            "src": {
-                "url": "https://addons.mozilla.org/firefox/downloads/file/5108930/onetab-2.24.xpi",
-                "hash": "sha256-6wA6piFGu6o7e1z58nFGkz48LYHoIkZZ9UOY0ApSLXQ="
-            },
-            "meta": {
-                "name": "OneTab",
-                "description": "Save up to 95% memory and reduce tab clutter",
-                "homepage": "https://www.one-tab.com",
-                "license": "Custom License",
-                "author": "OneTab Team"
-            }
-        }
-    },
-    "chrome": {
-        "ublock-origin-lite": {
-            "id": "ddkjiahejlhfcafbddmgiahcphecmpfh",
-            "version": "2026.1018.2229",
-            "src": {
-                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcRYe4sOX4czxaaPxT3nVyfO8lRbp_p9e6Y4yNYVdUcK-wxqKE0sQaqlVLIxO-KTgEOdZK5Ktmf1qE00-EJKrCrTdK6bkMRrSn5_Znc34sd_N7JYlX6_7xlhYWKVHZUGAMZSmuUG6Xe5Tcl2Jcrk-dGTNkrFF2fBRg/DDKJIAHEJLHFCAFBDDMGIAHCPHECMPFH_2026_1018_2229_0.crx",
-                "hash": "sha256-VZ0Q733LlrxOgS3ms/8MLmx6vKV4Mk2Nev19jPeKbdc="
-            },
-            "meta": {
-                "name": "uBlock Origin Lite",
-                "description": "An efficient content blocker for Chromium-based browsers.",
-                "homepage": "https://github.com/uBlockOrigin/uBOL-home",
-                "license": "GPL-3.0-or-later",
-                "author": "Raymond Hill"
-            },
-            "managedSettings": {
-                "defaultFiltering": "complete",
-                "disableFirstRunPage": true,
-                "showBlockedCount": true
-            }
-        },
-        "tampermonkey": {
-            "id": "gcalenpjmijncebpfijmoaglllgpjagf",
-            "version": "5.6.6242",
-            "src": {
-                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcRoE6fkRW_PWqGokYnqWZ1wj-UYeYzHzEPAUOWe6qaWBl1sR1ALL4DPvNWhfPG-jYQ2UzeTsDoU0IcT-faYtzEpBuS6UaRbUYlFzbEm_hBtBnVwlgTHna8xLTkLKHwAxlKa5cs0LEbsz61I9w_8AGrMESKWcZcU/GCALENPJMIJNCEBPFIJMOAGLLLGPJAGF_5_6_6242_0.crx",
-                "hash": "sha256-CxaXiy1O4RrDduiIt47xTycVDAUlpTT9Zx18FJVWebM="
-            },
-            "meta": {
-                "name": "Tampermonkey",
-                "description": "A userscript manager for Chromium-based browsers.",
-                "homepage": "https://www.tampermonkey.net/",
-                "license": "Proprietary License",
-                "author": "Jan Biniok"
-            },
-            "managedSettings": {
-                "jsonImport": []
-            }
-        },
-        "keepassxc-browser": {
-            "id": "oboonakemofpalcgghocfoadofidjkkk",
-            "version": "1.10.4.1",
-            "src": {
-                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcQbEAp_PMHqz1CpECAkCsQ-lWRgtqu57jKKNC_3FaXpu37lQFFbYEo6GEUObOILGhT46fbKbKVR6Nj4W3lFPfq99t9yk30bcCLlRLZoXmmiytRjvSUSjqPsZjsvGkIAxlKa5bdOtG5nVb_7NVV3U9IEH-sSq_Kj/OBOONAKEMOFPALCGGHOCFOADOFIDJKKK_1_10_4_1.crx",
-                "hash": "sha256-rabNmvObnhSuu20w6sNltm6HBO8/3ORucbFf7CZGME4="
-            },
-            "meta": {
-                "name": "KeePassXC-Browser",
-                "homepage": "https://keepassxc.org/",
-                "author": "KeePassXC Team"
-            },
-            "managedSettings": {
-                "settings": {
-                    "colorTheme": "system",
-                    "autoRetrieveCredentials": true,
-                    "showGettingStartedGuideAlert": false
-                }
-            }
-        },
-        "proton-pass": {
-            "id": "ghmbeldphafepmbegfdlkpapadhbakde",
-            "version": "1.42.0",
-            "src": {
-                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcT3QbE-bAQiRdIUn4XPljZtp2SUya697XVxSJuGecgEDgEkwA6KTVeQiN9fngYz-auiBXtHJOOy-OVRxaBfNnm4YvJrSe9h9ngIowTVKQ3coz_WMNhS_4PPGlcLk_YDAMZSmuWY-GtSm5PK-5uZZwOt9Fry1o-s8g/GHMBELDPHAFEPMBEGFDLKPAPADHBAKDE_1_42_0_0.crx",
-                "hash": "sha256-bt+LtIygXRhPADo/p4oqUQWduxvV+F1We/o9iHqdPxI="
-            },
-            "meta": {
-                "name": "Proton Pass: Free Password Manager",
-                "homepage": "https://chromewebstore.google.com/detail/ghmbeldphafepmbegfdlkpapadhbakde",
-                "description": "Free and fully encrypted password manager to keep your logins and passwords safe."
-            }
-        },
-        "auto-tab-discard": {
-            "id": "jhnleheckmknfcgijgkadoemagpecfol",
-            "version": "0.7.7",
-            "src": {
-                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcSMBoFGr6kSag46aIPbDlB7I7dP0RvxqOvTU0qjUDgzAOmklWp-qtlJPBcfW9YmK2hPWc6T4drqyF1VGz87mJnvbqA4Xk22_lmzqU2y4qpbWCmzG90qZ4o-u4dfhSwAxlKa5aoCuC5fQ2iue1atvIw9-7Y_MMIX/JHNLEHECKMKNFCGIJGKADOEMAGPECFOL_0_7_7_0.crx",
-                "hash": "sha256-tHPU12CEUCxHGpvQlNO0edq3bZKe80Q8LXdocbKCHYg="
-            },
-            "meta": {
-                "name": "Auto Tab Discard",
-                "homepage": "https://chromewebstore.google.com/detail/jhnleheckmknfcgijgkadoemagpecfol",
-                "description": "Increase browser speed and reduce memory load when you have numerous open tabs."
-            },
-            "managedSettings": {
-                "period": 1800,
-                "number": 20,
-                "mode": "time-based",
-                "audio": true,
-                "paused": true,
-                "pinned": true,
-                "form": true,
-                "online": true
-            }
-        },
-        "darkreader": {
-            "id": "eimadpbcbfnmbkopoojfekhnkhdbieeh",
-            "version": "4.9.133",
-            "src": {
-                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcSRy7yMWTvNkm6ejOebfYYQyM9v_7GiQiIJRZK1ef9E5dq0onHRyLplKIPQ1jOlFOLzz5Hr4Dqne7G6OoMelSnk8ikA-3inxvXpFSDway1szqX4kUXw1GQiwMDrpvsAxlKa5bgysZoJUnSlS9xvIyXwZgn1twZf/EIMADPBCBFNMBKOPOOJFEKHNKHDBIEEH_4_9_133_0.crx",
-                "hash": "sha256-7jjyDR1QeJ9LSCyaGl2tq1mbhoL9Kn37feIfroVhuRg="
-            },
-            "meta": {
-                "name": "Dark Reader",
-                "homepage": "https://chromewebstore.google.com/detail/eimadpbcbfnmbkopoojfekhnkhdbieeh",
-                "description": "Dark mode for every website. Take care of your eyes, use dark theme for night and daily browsing."
-            }
-        },
-        "single-file": {
-            "id": "mpiodijhokgodhhofbcjdecpffjipkle",
-            "version": "1.31.4",
-            "src": {
-                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcR6McqXYM665Avoz73O5oK-t5ZcPlq_bn0UAC-tPhozvS32CZseJC46RbmMVNsjcSt6YyJIhlDTxZlDfvVWh-WUWu6g32ZanvHqttdzqW99RSEnm65HIqsVdlJxDY8AxlKa5T9LvERGUzuhyS7XJQMX_o7_yP1u/MPIODIJHOKGODHHOFBCJDECPFFJIPKLE_1_31_4_0.crx",
-                "hash": "sha256-Jbjzk0EgVo38QHb9j0npk/31TiGdZOwvVf9CWLX2GAc="
-            },
-            "meta": {
-                "name": "SingleFile",
-                "homepage": "https://chromewebstore.google.com/detail/mpiodijhokgodhhofbcjdecpffjipkle",
-                "description": "Save a complete page into a single HTML file"
-            }
-        },
-        "sponsorblock-for-youtube-skip-sponsorships": {
-            "id": "mnjggcdmjocbbbhaepdhchncahnbgone",
-            "version": "6.1.6",
-            "src": {
-                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcTWfnmqjE44RBK5YQoPMBxSo1y7qcdg-DJ-fXQTElUiCRzoz076L2PnzCsPUQZqQOP-Qty-EFYPhnHaRYiJntKDMiuafq3_rcJ-LGKTOnEWoklqBe8_F207JV_shHYAxlKa5U8gzzlCzUWtqqLN4CT8eVJIRN0L/MNJGGCDMJOCBBBHAEPDHCHNCAHNBGONE_6_1_6_0.crx",
-                "hash": "sha256-VYf+K2qZRhAcoN3nxu/nanVcXuW21uY9/EjH9zbNtP8="
-            },
-            "meta": {
-                "name": "SponsorBlock for YouTube - Skip Sponsorships",
-                "homepage": "https://chromewebstore.google.com/detail/mnjggcdmjocbbbhaepdhchncahnbgone",
-                "description": "Skip sponsorships, subscription begging and more on YouTube videos. Report sponsors on videos you watch to save others' time."
-            }
-        },
-        "return-youtube-dislike": {
-            "id": "gebbhagfogifgggkldgodflihgfeippi",
-            "version": "4.0.5",
-            "src": {
-                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcTrCEEj5FjyOd1OpfxvHzoJxXSmnG2L1nDaAYl0zYK7C3eFcY1GfGq5vcqFMtDah6w_l_BdVA2Wgtd2jDOmRFduIs1YhyyyhGwiMfNurQ-s3WhQu2iUmFIB_yG0a2EAxlKa5cSh9s9vXTrLJxITvdMuSXfKkELD/GEBBHAGFOGIFGGGKLDGODFLIHGFEIPPI_4_0_5_0.crx",
-                "hash": "sha256-orlCwWL0GeALQYCMxrHd71wpOWNVupLk0VrtQcxYtUk="
-            },
-            "meta": {
-                "name": "Return YouTube Dislike",
-                "homepage": "https://chromewebstore.google.com/detail/gebbhagfogifgggkldgodflihgfeippi",
-                "description": "Returns ability to see dislikes"
-            }
-        },
-        "auth-helper": {
-            "id": "bhghoamapcdpbohphigoooaddinpkbai",
-            "version": "8.0.1",
-            "src": {
-                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcREt77HGFO8vh_lC-Pf0GsylamJ0uuXlfbGX3EOT84lChmQAHwYp-cRnhYIkTIyCi_dbrSjXrWlZtkLWzb--dE8lKYKJA-6XttoAv4lgw4yJb7uID6rLHCknitk8OueAMZSmuVnkGoWN9MJD5QFqUanOsjlo6oPWA/BHGHOAMAPCDPBOHPHIGOOOADDINPKBAI_8_0_1_0.crx",
-                "hash": "sha256-zyHVeLo7swr2xMostJXomhMpasoKPhRn2Vc1HXlAu7I="
-            },
-            "meta": {
-                "name": "Authenticator",
-                "homepage": "https://chromewebstore.google.com/detail/bhghoamapcdpbohphigoooaddinpkbai",
-                "description": "Authenticator generates two-factor authentication codes in your browser."
-            }
-        },
-        "user-agent-string-switcher": {
-            "id": "bhchdcejhohfmigjafbampogmaanbfkg",
-            "version": "0.7.2",
-            "src": {
-                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcRw1P_YXwaG_4_5sd-6VufD6-FlSMl-gS4wVrPuGoL6QBeZZmGQD-8-XHUEEn_Nz8L8EvnYOM1WMIRNaFPlyo-ELHnR45RHEmOEYEUQni6GRQOm21mYqf0SYli9urQAxlKa5WNNdx82ASQ7R7nD2b9Q4Q6Wcmyy/BHCHDCEJHOHFMIGJAFBAMPOGMAANBFKG_0_7_2_0.crx",
-                "hash": "sha256-Z4HDZOZpxpWcKPUDIxaVmjMY8aE5UwZeR335qksH40A="
-            },
-            "meta": {
-                "name": "User-Agent Switcher and Manager",
-                "homepage": "https://chromewebstore.google.com/detail/bhchdcejhohfmigjafbampogmaanbfkg",
-                "description": "Spoof websites trying to gather information about your web navigation to deliver distinct content you may not want"
-            }
-        },
-        "react-devtools": {
-            "id": "fmkadmapgofadopljbjfkapdkoienihi",
-            "version": "8.0.0",
-            "src": {
-                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcTTwTsxETatDIg4CEI_bjxcn1HOVzFjQjXl6Z_-hgYPUm3q0i6S6vLcjii8am2kWLGMKi_kMyvVezcnd7dVqzubhZexPqm3mMXweP6Gb6wnwsw4GLM-IsUgjlka-E4AxlKa5U6I0MeE0izvhAXOBaeRkPQ4PrBY/FMKADMAPGOFADOPLJBJFKAPDKOIENIHI_8_0_0_0.crx",
-                "hash": "sha256-2S4RIqFjYsxVEJJwaKWxqNULQ+HzviXDEX98AFgHswI="
-            },
-            "meta": {
-                "name": "React Developer Tools",
-                "homepage": "https://chromewebstore.google.com/detail/fmkadmapgofadopljbjfkapdkoienihi"
-            }
-        },
-        "vimium-c": {
-            "id": "hfjbmagddngcpeloejdejnfgbamkjaeg",
-            "version": "2.12.2",
-            "src": {
-                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcQ8OYxWfoJ9qp7pOR-FjwfMU-yi16Sb2L8CFhlZsCPKmvMHS36J0ouKIPnjH7PP67DsNnyBcRUZtyPAn01fobLaMpiepnOi1y0XHaWtcIra-JLVESB5_9Z4h4-RzG0AxlKa5TgJRFxpXs7t9c6fhRYHFf9_AnAX/HFJBMAGDDNGCPELOEJDEJNFGBAMKJAEG_2_12_2_0.crx",
-                "hash": "sha256-1kiLH+QIjOIheJXFNE/BKJ7tWZLvwHpr6ec1cLIlBCM="
-            },
-            "meta": {
-                "name": "Vimium C - All by Keyboard",
-                "homepage": "https://chromewebstore.google.com/detail/hfjbmagddngcpeloejdejnfgbamkjaeg",
-                "description": "A keyboard shortcut tool for keyboard-based page navigation and browser tab operations with an advanced omnibar and global shortcuts"
-            }
-        },
-        "styl-us": {
-            "id": "clngdbkpkpeebahjckkjfobafhncgmne",
-            "version": "2.4.14",
-            "src": {
-                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcR4r_qeFex0hTH-CD6FsP3rL5zYZmfBS6xPpaYp07_ZRe7dQrfMH8XavGpCM5I-FAjkyqd_yzk_-Vmq7w6xAb-RzCKnexJLyZ9_Q-P0UnqZ5et5Y3xni_8066OlMaIAxlKa5d4MloEPqW0zmOrV_J5-AS-mDS8d/CLNGDBKPKPEEBAHJCKKJFOBAFHNCGMNE_2_4_14_0.crx",
-                "hash": "sha256-82toCWp5v/Crf35et50ISOw2Q66ZhJrCx59rhDVTRPk="
-            },
-            "meta": {
-                "name": "Stylus",
-                "homepage": "https://chromewebstore.google.com/detail/clngdbkpkpeebahjckkjfobafhncgmne",
-                "description": "Redesign the web with Stylus, a user styles manager. Stylus allows you to easily install themes and skins for many popular sites."
-            }
-        },
-        "steam-database": {
-            "id": "kdbmhfkmnlmbkgbabkdealhhbfhlmmon",
-            "version": "4.37",
-            "src": {
-                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcSpsCaZhc80ORfuFRs8yxwtOtCU0d9WSWMbr6AyhBGgeYZQ4ZjPE4EjRLVG4tjJSrbq6Tv8THWuwfqI-7b9CO0z68r8zKE-waxFKFSYc0jIP7fa182Tl_QhmtFKSxwAxlKa5YkqPL6tuy0rt-_4C0Lf-5u5dwn_/KDBMHFKMNLMBKGBABKDEALHHBFHLMMON_4_37_0_0.crx",
-                "hash": "sha256-p+ifp+k4wwTlLQzwN5D5UTK+viMYBpreGfleXgwPeFc="
-            },
-            "meta": {
-                "name": "SteamDB",
-                "homepage": "https://chromewebstore.google.com/detail/kdbmhfkmnlmbkgbabkdealhhbfhlmmon",
-                "description": "Adds SteamDB links and new features on the Steam store and community. View lowest game prices and stats."
-            }
-        },
-        "cookie-editor": {
-            "id": "hlkenndednhfkekhgcdicdfddnkalmdm",
-            "version": "1.13.0",
-            "src": {
-                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcTs7-1I8JKDIXjew4_jbd7OzHLF0-PS6kpTjkD0z5TM8iZGpL5kvu5du2DWokbTKAWTmLxjqH53DRFobQOgbd4qryUWcizGJMbS22ylOr_nbD0RFDXdexKGJY3pX5oAxlKa5fkE4Da4PPjHqfwOnUxQ1rRqMw4Z/HLKENNDEDNHFKEKHGCDICDFDDNKALMDM_1_13_0_0.crx",
-                "hash": "sha256-dUoHKltjJ9J6DU1uKZqOKLKl+vvVlcy2v81AkK6OsDg="
-            },
-            "meta": {
-                "name": "Cookie-Editor",
-                "homepage": "https://chromewebstore.google.com/detail/hlkenndednhfkekhgcdicdfddnkalmdm",
-                "description": "Simple yet powerful Cookie Editor that allow you to quickly create, edit and delete cookies without leaving your tab."
-            }
-        },
-        "simple-translate": {
-            "id": "ibplnjkanclpjokhdolnendpplpjiace",
-            "version": "3.1.0",
-            "src": {
-                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcTkec_gmhEUNybDEIv38UUh1UtX72mOctuvVkKfI-i87W50bC0muPGktz7Q87Gy_jple11pwOIdRku2f5_TQvLvb0POKdssXoosCow-xwbpxrE0cW8iWA4DId9DaakAxlKa5cc7BNnmZvxi2Yuyz2lsnafPPnoU/IBPLNJKANCLPJOKHDOLNENDPPLPJIACE_3_1_0_0.crx",
-                "hash": "sha256-cC5FdeERprBc/zT66FtlkTW51/AsQ+gXRtixobw2IWg="
-            },
-            "meta": {
-                "name": "Simple Translate",
-                "homepage": "https://chromewebstore.google.com/detail/ibplnjkanclpjokhdolnendpplpjiace",
-                "description": "Quickly translate selected or typed text on web pages. Supports Google Translate and DeepL API."
-            }
-        },
-        "onetab": {
-            "id": "chphlpgkkbolifaimnlloiipkdnihall",
-            "version": "2.24",
-            "src": {
-                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcQtDZF7UHqeHkjKqRUX99FP5kNjeuHHWAZQgL-D0uI6F9Mi2uCstzIjBDdqz91L3gpjgbGH0vvExASAO04wUwFnL-qgtOWbXZhS9Ik00j5zhmOBN3i92SLd2LDn7ebuAMZSmuXaf4z8Xp7ePzC0_-Odl0hOY7P9ug/CHPHLPGKKBOLIFAIMNLLOIIPKDNIHALL_2_24_0_0.crx",
-                "hash": "sha256-e9tguLeVyjXBAgZFFDrrjbCLdaAVa5WOzwDDXftOVVE="
-            },
-            "meta": {
-                "name": "OneTab",
-                "homepage": "https://chromewebstore.google.com/detail/chphlpgkkbolifaimnlloiipkdnihall",
-                "description": "Save up to 95% memory and reduce tab clutter"
-            }
-        },
-        "enhancer-for-youtube": {
-            "id": "ponfpcnoihfmfllpaingbgckeeldkhle",
-            "version": "3.0.19",
-            "src": {
-                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcSJgE8HjP-4FAiNG77eb3bAeqQFGva5qYWSqSogR3hVCRZsAKwlSB7cjijZ7vjxxv-6oLd1viM9y4cnTfSsmsYp6pljcF95b8VaHRO3d8Ty0fqg6nSORi-8zuerbQkAxlKa5dHnqW9l9z_-aq88iSj9NHFVhllm/PONFPCNOIHFMFLLPAINGBGCKEELDKHLE_3_0_19_0.crx",
-                "hash": "sha256-0vw3iCq/F5muPwn7Ny4g8LBkKrmSspaCtBo2ATxULeQ="
-            },
-            "meta": {
-                "name": "Enhancer for YouTube\u2122",
-                "homepage": "https://chromewebstore.google.com/detail/ponfpcnoihfmfllpaingbgckeeldkhle",
-                "description": "Take control of YouTube and boost your user experience!"
-            }
-        }
-    }
+	"firefox": {
+		"ublock-origin": {
+			"version": "1.75.0",
+			"id": "uBlock0@raymondhill.net",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5034826/ublock_origin-1.75.0.xpi",
+				"hash": "sha256-W3RBWGBFY3BkS9gPFhJehlsObDVrtd/PuEBpln6qUoc="
+			},
+			"meta": {
+				"name": "uBlock Origin",
+				"description": "Finally, an efficient wide-spectrum content blocker. Easy on CPU and memory.",
+				"homepage": "https://github.com/gorhill/uBlock#ublock-origin",
+				"license": "GNU General Public License v3.0 only",
+				"author": "Raymond Hill"
+			}
+		},
+		"enhancer-for-youtube": {
+			"version": "2.0.136",
+			"id": "enhancerforyoutube@maximerf.addons.mozilla.org",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4933627/enhancer_for_youtube-2.0.136.xpi",
+				"hash": "sha256-OKBCCATQgiT8ROg4rsQy6UfraIsTAPQj7uy7RNMwN/o="
+			},
+			"meta": {
+				"name": "Enhancer for YouTube\u2122",
+				"description": "Take control of YouTube and boost your user experience!",
+				"homepage": "https://www.mrfdev.com/enhancer-for-youtube",
+				"license": "Proprietary License",
+				"author": "Max RF"
+			}
+		},
+		"auth-helper": {
+			"version": "8.0.2",
+			"id": "authenticator@mymindstorm",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4353166/auth_helper-8.0.2.xpi",
+				"hash": "sha256-26uRlHI330yFl/6hsA3OBc9/rqJ3Ij8sUQkPkUiBKmI="
+			},
+			"meta": {
+				"name": "Authenticator",
+				"description": "Authenticator generates 2-Step Verification codes in your browser.",
+				"homepage": "https://github.com/Authenticator-Extension/Authenticator",
+				"license": "MIT License",
+				"author": "mymindstorm"
+			}
+		},
+		"cookie-editor": {
+			"version": "1.13.0",
+			"id": "{c3c10168-4186-445c-9c5b-63f12b8e2c87}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4241002/cookie_editor-1.13.0.xpi",
+				"hash": "sha256-PW/YOoND36XkRh2DwoViZPt0s2scFlMFFo0BP0gx27A="
+			},
+			"meta": {
+				"name": "Cookie-Editor",
+				"description": "Cookie-Editor lets you efficiently create, edit and delete a cookie for the current tab. Perfect for developing, quickly testing or even manually managing your cookies for your privacy.",
+				"homepage": "https://cookie-editor.com/",
+				"license": "GNU General Public License v3.0 only",
+				"author": "cgagnier"
+			}
+		},
+		"darkreader": {
+			"version": "4.9.133",
+			"id": "addon@darkreader.org",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5055786/darkreader-4.9.133.xpi",
+				"hash": "sha256-6wbFCW12FhbH8dlUwRUkykv/T+cikETcH84oiowIU6s="
+			},
+			"meta": {
+				"name": "Dark Reader",
+				"description": "Dark mode for every website. Take care of your eyes, use dark theme for night and daily browsing.",
+				"homepage": "https://darkreader.org/",
+				"license": "MIT License",
+				"author": "Dark Reader Ltd"
+			}
+		},
+		"sponsorblock": {
+			"version": "6.1.7",
+			"id": "sponsorBlocker@ajay.app",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4897574/sponsorblock-6.1.7.xpi",
+				"hash": "sha256-DVDhYyxvFe4VpUPmcOHFcpdGBaXAJiKRbgjgJoA9+D8="
+			},
+			"meta": {
+				"name": "SponsorBlock - Skip Sponsorships on YouTube",
+				"description": "Easily skip YouTube video sponsors. When you visit a YouTube video, the extension will check the database for reported sponsors and automatically skip known sponsors. You can also report sponsors in videos. Other browsers: https://sponsor.ajay.app",
+				"homepage": "https://sponsor.ajay.app",
+				"license": "GNU Lesser General Public License v3.0 only",
+				"author": "Ajay (SponsorBlock)"
+			}
+		},
+		"header-editor": {
+			"version": "5.2.12",
+			"id": "headereditor-amo@addon.firefoxcn.net",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4822302/header_editor-5.2.12.xpi",
+				"hash": "sha256-K17P5fx25lwpyyyx36Yd4sIyDE9QTELNvObEOPlzM6s="
+			},
+			"meta": {
+				"name": "Header Editor",
+				"description": "Manage browser's requests, include modify the request headers and response headers, redirect requests, cancel requests",
+				"homepage": "https://he.firefoxcn.net/en/",
+				"license": "GNU General Public License v2.0 only",
+				"author": "\u6cf7\u6daf"
+			}
+		},
+		"proton-pass": {
+			"version": "1.41.1",
+			"id": "78272b6fa58f4a1abaac99321d503a20@proton.me",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5055526/proton_pass-1.41.1.xpi",
+				"hash": "sha256-9nxYNuXv8/gqw44Dp7J9MLhNu1JG90uyG4tbsV082TY="
+			},
+			"meta": {
+				"name": "Proton Pass",
+				"description": "Free and unlimited password manager to keep your login credentials safe and manage them directly in your browser.",
+				"homepage": "https://proton.me",
+				"license": "GNU General Public License v3.0 only",
+				"author": "Proton"
+			}
+		},
+		"proton-vpn": {
+			"version": "3.0",
+			"id": "{c228008e-9d02-4c6d-9b54-288507710fa1}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/2844710/proton_vpn-3.0.xpi",
+				"hash": "sha256-6xaS8ffZxmn07/YVuNsisCC5zNjNmVuGJAwqa8G4rjc="
+			},
+			"meta": {
+				"name": "Moz Proton VPN",
+				"description": "Theme based on a Firefox backdrop.",
+				"license": "Creative Commons Attribution-NonCommercial-Share Alike 3.0",
+				"author": "Paul"
+			}
+		},
+		"react-devtools": {
+			"version": "6.1.1",
+			"id": "@react-devtools",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4432990/react_devtools-6.1.1.xpi",
+				"hash": "sha256-staeIgQCvWuLx9gzlIkVsdbcq7RTodUIcqPbhg/ZLEY="
+			},
+			"meta": {
+				"name": "React Developer Tools",
+				"description": "React Developer Tools is a tool that allows you to inspect a React tree, including the component hierarchy, props, state, and more. To get started, just open the Firefox devtools and switch to the \"\u269b\ufe0f Components\" or \"\u269b\ufe0f Profiler\" tab.",
+				"homepage": "https://github.com/facebook/react",
+				"license": "MIT License",
+				"author": "React"
+			}
+		},
+		"return-youtube-dislikes": {
+			"version": "4.0.6",
+			"id": "{762f9885-5a13-4abd-9c77-433dcd38b8fd}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5012638/return_youtube_dislikes-4.0.6.xpi",
+				"hash": "sha256-WXGXSfbfOMFgHKXznAIVjV8AXEPp7uofGVJ/RoyUEhc="
+			},
+			"meta": {
+				"name": "Return YouTube Dislike",
+				"description": "Returns ability to see dislike statistics on youtube",
+				"license": "GNU General Public License v3.0 only",
+				"author": "Dmitry Selivanov"
+			}
+		},
+		"tampermonkey": {
+			"version": "5.5.0",
+			"id": "firefox@tampermonkey.net",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4797143/tampermonkey-5.5.0.xpi",
+				"hash": "sha256-GQAxx428VpYRSDVgHyyOa4Va0eE0313yePj8FYwGWQg="
+			},
+			"meta": {
+				"name": "Tampermonkey",
+				"description": "Tampermonkey is the world's most popular userscript manager.",
+				"homepage": "https://tampermonkey.net",
+				"license": "All Rights Reserved",
+				"author": "Jan Biniok"
+			}
+		},
+		"user-agent-string-switcher": {
+			"version": "0.7.2",
+			"id": "{a6c4a591-f1b2-4f03-b3ff-767e5bedf4e7}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5081116/user_agent_string_switcher-0.7.2.xpi",
+				"hash": "sha256-mtDgPXN9s2Nm4W8cYQLFrFhn4056X5XwvN8A4s2gtoI="
+			},
+			"meta": {
+				"name": "User-Agent Switcher and Manager",
+				"description": "Spoof websites trying to gather information about your web navigation\u2014like your browser type and operating system\u2014to deliver distinct content you may not want.",
+				"homepage": "https://webextension.org/listing/useragent-switcher.html",
+				"license": "Mozilla Public License 2.0",
+				"author": "Ray"
+			}
+		},
+		"vimium-c": {
+			"version": "2.12.3",
+			"id": "vimium-c@gdh1995.cn",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4474326/vimium_c-2.12.3.xpi",
+				"hash": "sha256-4aT4zBN5HfuYXCp40z3x6KQPI71uypIXFly3SACd9UA="
+			},
+			"meta": {
+				"name": "Vimium C - All by Keyboard",
+				"description": "A keyboard shortcut tool for keyboard-based page navigation and browser tab operations with an advanced omnibar and global shortcuts",
+				"homepage": "https://github.com/gdh1995/vimium-c",
+				"license": "MIT License",
+				"author": "Dahan Gong"
+			}
+		},
+		"md-this-page": {
+			"version": "2.0.0",
+			"id": "ademking@md-this-page",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5082692/md_this_page-2.0.0.xpi",
+				"hash": "sha256-r2b8Wf98Ls+6AZJT32e7q7sNgYZ7rNo+BY96/4aG2+0="
+			},
+			"meta": {
+				"name": ".MD this page",
+				"description": "Convert web page to markdown with one click",
+				"homepage": "https://github.com/Ademking/MD-This-Page",
+				"license": "MIT License",
+				"author": "Adem KOUKI"
+			}
+		},
+		"cambridge-dictionary-english": {
+			"version": "3.5.3.4",
+			"id": "{e577f4f3-8b71-4948-98c0-278b0c7cd194}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4624145/cambridge_dictionary_english-3.5.3.4.xpi",
+				"hash": "sha256-aa6MlaZPfhYsjPAtlyGQAPdbQfTmW88hlvtrasa3N7A="
+			},
+			"meta": {
+				"name": "Cambridge Dictionary",
+				"description": "Looking for a fast way to look up English words without leaving your page? This open-source add-on for the Cambridge Dictionary allows for quick word searches, using English or bilingual dictionaries.",
+				"homepage": "https://github.com/fkolcu/cambridge-dictionary-ffextension",
+				"license": "MIT License",
+				"author": "Furkan"
+			}
+		},
+		"cookies-txt": {
+			"version": "1.0",
+			"id": "{12cf650b-1822-40aa-bff0-996df6948878}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4624727/cookies_txt-1.0.xpi",
+				"hash": "sha256-UnenR0iPK75lfoP4Jm6399PDCuuIa+U7neh3ZvIFNAY="
+			},
+			"meta": {
+				"name": "cookies.txt",
+				"description": "Exports all cookies to a Netscape HTTP Cookie File, as used by curl, wget, and youtube-dl, among others.",
+				"license": "GNU General Public License v3.0 only",
+				"author": "Lennon Hill"
+			}
+		},
+		"default-bookmark-folder": {
+			"version": "4.0.0",
+			"id": "default-bookmark-folder@gustiaux.com",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4259794/default_bookmark_folder-4.0.0.xpi",
+				"hash": "sha256-9c14s4xjFc6MnhAKpqHMNNGi9myaGN2u94iqgIQf5rc="
+			},
+			"meta": {
+				"name": "Default Bookmark Folder",
+				"description": "Allows you to choose the default bookmark location folder and quickly bookmark pages via a dedicated icon.",
+				"homepage": "https://github.com/teddy-gustiaux/default-bookmark-folder",
+				"license": "MIT License",
+				"author": "Teddy Gustiaux"
+			}
+		},
+		"google-sponsored-remover": {
+			"version": "1.0.0",
+			"id": "googlesponsoredremover@ryanstew.art",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4100244/google_sponsored_remover-1.0.0.xpi",
+				"hash": "sha256-JuRbeM7UQ67/46A0QWOYaP8ie+Zfz6aNubmzlAW6TLU="
+			},
+			"meta": {
+				"name": "Google Sponsored Remover",
+				"description": "Remove the sponsored listings on google searches!\n\nRight click the extension and allow the extension to always run on google.com after installing.",
+				"license": "Mozilla Public License 2.0",
+				"author": "Ryn"
+			}
+		},
+		"librezam": {
+			"version": "5.9",
+			"id": "Librezam@Librezam",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4752025/librezam-5.9.xpi",
+				"hash": "sha256-CQJH8N7ZYPAT9ZPRiU11rP7fQR0TBx+WtJ+xE+7vKlE="
+			},
+			"meta": {
+				"name": "Librezam",
+				"description": "Open-source music recognition extension using Shazam API (also supports Audd, ACRCloud, Tencent, and NetEase APIs as alternative backends)",
+				"license": "GNU Affero General Public License v3.0 only",
+				"author": "FoxRefire"
+			}
+		},
+		"simple-modify-header": {
+			"version": "1.9.0",
+			"id": "{f6ca2dfb-43a6-4334-9fad-8d5a71a1fe67}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4319544/simple_modify_header-1.9.0.xpi",
+				"hash": "sha256-xeJhZEeMDHGno7Yejjb6BXEP4TkRygjdvU7tcJaJRMI="
+			},
+			"meta": {
+				"name": "simple-modify-headers",
+				"description": "The extension rewrite the header (request or response)  based on a rules table. It 's possible to add, modify or remove header fields for a choosen url pattern. It's possible to import/export the configuration",
+				"homepage": "https://github.com/didierfred/SimpleModifyHeaders/tree/v1.8.1",
+				"license": "Mozilla Public License 2.0",
+				"author": "Didierfred"
+			}
+		},
+		"socialfocus": {
+			"version": "8.0",
+			"id": "{26b4f076-089c-4c69-8497-44b7e5c9faef}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4947601/socialfocus-8.0.xpi",
+				"hash": "sha256-XpRGk0Ku2MyJDisNmxgIBGg1cP/YZlVE58zeP86CET8="
+			},
+			"meta": {
+				"name": "SocialFocus: Hide Distractions",
+				"description": "Block feed, shorts, related and other distractions on time-wasting sites like Instagram, Facebook, YouTube, Twitter, Reddit, LinkedIn...",
+				"homepage": "https://socialfocus.app",
+				"license": "All Rights Reserved",
+				"author": "Yevhen Tretiakov"
+			}
+		},
+		"styl-us": {
+			"version": "2.4.16",
+			"id": "{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5139589/styl_us-2.4.16.xpi",
+				"hash": "sha256-kKa0SiPz9Z/5Zag98dZFPFn1it6Pj7hCRAMiYNv2w4E="
+			},
+			"meta": {
+				"name": "Stylus",
+				"description": "Redesign your favorite websites with Stylus, an actively developed and community driven userstyles manager. Easily install custom themes from popular online repositories, or create, edit, and manage your own personalized CSS stylesheets.",
+				"homepage": "https://add0n.com/stylus.html",
+				"license": "GNU General Public License v3.0 only",
+				"author": "Stylus Team"
+			}
+		},
+		"steam-database": {
+			"version": "4.37",
+			"id": "firefox-extension@steamdb.info",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4967437/steam_database-4.37.xpi",
+				"hash": "sha256-0oDZqL5/6Lzf/WBpfa9ZA8tNpnkSVpUQ+3qL1oVi1sw="
+			},
+			"meta": {
+				"name": "SteamDB",
+				"description": "Adds SteamDB links and new features on the Steam store and community. View lowest game prices and stats.",
+				"homepage": "https://steamdb.info/",
+				"license": "BSD 2-Clause \"Simplified\" License",
+				"author": "SteamDB"
+			}
+		},
+		"youtube-nonstop": {
+			"version": "0.9.2",
+			"id": "{0d7cafdd-501c-49ca-8ebb-e3341caaa55e}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4187690/youtube_nonstop-0.9.2.xpi",
+				"hash": "sha256-dlnRgPduqQjqgbhO2b3RiGJOqqYriKzL5titToyu/zg="
+			},
+			"meta": {
+				"name": "YouTube NonStop",
+				"description": "Tired of getting that \"Video paused. Continue watching?\" confirmation dialog?\nThis extension autoclicks it, so you can listen to your favorite music uninterrupted.\n\nWorking on YouTube and YouTube Music!",
+				"homepage": "https://github.com/lawfx/YoutubeNonStop",
+				"license": "MIT License",
+				"author": "lawfx"
+			}
+		},
+		"mozilla-vpn-extension": {
+			"version": "1.35.0",
+			"id": "vpn@mozilla.com",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4482969/mozilla_vpn_extension-1.35.0.xpi",
+				"hash": "sha256-SAfjAnkBrY1bEwGw3iYbQomq/MhIthQbIJ0emsUwi9Q="
+			},
+			"meta": {
+				"name": "Mozilla VPN Extension",
+				"description": "Get more from Mozilla VPN with the Firefox extension \u2014 currently available for Windows. Turn off VPN for specific websites, set different locations for different websites, and keep protection for Firefox on, even when the Mozilla VPN app is off.",
+				"homepage": "https://www.mozilla.org/products/vpn/",
+				"license": "Mozilla Public License 2.0",
+				"author": "Firefox"
+			}
+		},
+		"canvasblocker": {
+			"version": "1.12",
+			"id": "CanvasBlocker@kkapsner.de",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4691016/canvasblocker-1.12.xpi",
+				"hash": "sha256-BpjZLEvS0ZCy9AJWE79L09ukCRDVirTPGzLzZjeiRMk="
+			},
+			"meta": {
+				"name": "CanvasBlocker",
+				"description": "Alters some JS APIs to prevent fingerprinting.",
+				"homepage": "https://github.com/kkapsner/CanvasBlocker/",
+				"license": "Mozilla Public License 2.0",
+				"author": "kkapsner"
+			}
+		},
+		"dont-track-me-google1": {
+			"version": "4.30",
+			"id": "dont-track-me-google@robwu.nl",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4998037/dont_track_me_google1-4.30.xpi",
+				"hash": "sha256-MRpGovlqAgzCxbFVDLLkHg+4MIvfbnKSmo4ZvkoTcek="
+			},
+			"meta": {
+				"name": "Don't track me Google",
+				"description": "Removes the annoying link-conversion at Google Search / maps / ...",
+				"homepage": "https://github.com/Rob--W/dont-track-me-google",
+				"license": "MIT License",
+				"author": "Rob W"
+			}
+		},
+		"facebook-container": {
+			"version": "2.3.12",
+			"id": "@contain-facebook",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4451874/facebook_container-2.3.12.xpi",
+				"hash": "sha256-M2m9hlh3hg5tfTg5nVkCswDT1XN6yy0TQv9b6x03gME="
+			},
+			"meta": {
+				"name": "Facebook Container",
+				"description": "Prevent Facebook from tracking you around the web. The Facebook Container extension for Firefox helps you take control and isolate your web activity from Facebook.",
+				"homepage": "https://github.com/mozilla/contain-facebook",
+				"license": "Mozilla Public License 2.0",
+				"author": "Firefox"
+			}
+		},
+		"history-cleaner": {
+			"version": "1.7.0",
+			"id": "{a138007c-5ff6-4d10-83d9-0afaf0efbe5e}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4403189/history_cleaner-1.7.0.xpi",
+				"hash": "sha256-nqJYAGfruZJz5aWxpo4+ZHuOBX1yRqWMZRJZnAf88U0="
+			},
+			"meta": {
+				"name": "History Cleaner",
+				"description": "Deletes browsing history older than a specified number of days.",
+				"homepage": "https://github.com/Rayquaza01/HistoryCleaner",
+				"license": "MIT License",
+				"author": "Rayquaza01"
+			}
+		},
+		"privacy-badger17": {
+			"version": "2026.9.15",
+			"id": "jid1-MnnxcxisBPnSXQ@jetpack",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5032646/privacy_badger17-2026.9.15.xpi",
+				"hash": "sha256-l82JEeNIbaNKUyp8fygGzW0M+hF6H75eh0cEKpRELWI="
+			},
+			"meta": {
+				"name": "Privacy Badger",
+				"description": "Automatically learns to block hidden trackers. Made by the leading digital rights nonprofit EFF to stop companies from spying on you.",
+				"homepage": "https://privacybadger.org/",
+				"license": "GNU General Public License v3.0 only",
+				"author": "EFF Technologists"
+			}
+		},
+		"free-download-manager-addon": {
+			"version": "3.3.2",
+			"id": "fdm_ffext2@freedownloadmanager.org",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4904785/free_download_manager_addon-3.3.2.xpi",
+				"hash": "sha256-Hw0ObXkca539EkwBkdjWuX8bL4oocrsp+ztuvl5RyXo="
+			},
+			"meta": {
+				"name": "Free Download Manager official extension",
+				"description": "Free Download Manager integration with your Firefox browser",
+				"homepage": "https://freedownloadmanager.org",
+				"license": "Mozilla Public License 2.0",
+				"author": "freedownloadmanager.org"
+			}
+		},
+		"plasma-integration": {
+			"version": "2.1",
+			"id": "plasma-browser-integration@kde.org",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4614817/plasma_integration-2.1.xpi",
+				"hash": "sha256-Nb+jdm4JcWDnT1Jb3lTZe7upDXJdqkJbneb+9uxenUQ="
+			},
+			"meta": {
+				"name": "Plasma Integration",
+				"description": "Multitask efficiently by controlling browser functions from the Plasma desktop.",
+				"homepage": "http://kde.org",
+				"license": "GNU General Public License v3.0 only",
+				"author": "KDE"
+			}
+		},
+		"easy-youtube-video-download": {
+			"version": "25.4",
+			"id": "{b9acf540-acba-11e1-8ccb-001fd0e08bd4}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5115876/easy_youtube_video_download-25.4.xpi",
+				"hash": "sha256-BwXsCj8FhshyrHV4c+QNNbRqrQYUDXIkxu3U0xyiA5Q="
+			},
+			"meta": {
+				"name": "Easy Youtube Video Downloader Express",
+				"description": "A simple extension for superfast and easy YouTube downloads in FLV, 3GP, MP3, MP4, 720p, and 1080p formats.",
+				"homepage": "https://www.yourvideofile.org",
+				"license": "Mozilla Public License 2.0",
+				"author": "Dishita"
+			}
+		},
+		"yomitan": {
+			"version": "26.9.8.0",
+			"id": "{6b733b82-9261-47ee-a595-2dda294a4d08}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5040552/yomitan-26.9.8.0.xpi",
+				"hash": "sha256-Yp3MR/hwkofm4fmdX41ygrZJsAhV71BLbRuEtYrYMck="
+			},
+			"meta": {
+				"name": "Yomitan",
+				"description": "Powerful and versatile pop-up dictionary for language learning used by 100,000+ language learners.",
+				"homepage": "https://github.com/themoeway/yomitan",
+				"license": "GNU General Public License v3.0 only",
+				"author": "Darius Jahandarie"
+			}
+		},
+		"media-downloader-unleashed": {
+			"version": "4.1.8",
+			"id": "{dab9a10d-f9c5-4e8d-9351-67531e85b508}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5129184/media_downloader_unleashed-4.1.8.xpi",
+				"hash": "sha256-Sh/XAoM/bxufuiDC1gZ5P2ewIhsCdGR9t99mLAPlQbQ="
+			},
+			"meta": {
+				"name": "Media Downloader Unleashed!!",
+				"description": "Detect and download \ud83c\udfac videos, \ud83c\udfa5 streams, \ud83c\udfb5 audio and other files from your browser!\nCompatible with .m3u8, .mpd, .mp4, .mp3, .ogg and many more formats and websites!\nCompletely free, open-source!",
+				"homepage": "https://github.com/helloyanis/media-downloader-unleashed",
+				"license": "MIT License",
+				"author": "\ud83e\udd8a helloyanis"
+			}
+		},
+		"weather-extension": {
+			"version": "6.0.46",
+			"id": "{a79a9c4c-9c3f-4bf4-9e58-6574cc0b7ecb}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5052074/weather_extension-6.0.46.xpi",
+				"hash": "sha256-x0so+U+YU/tf41VI4KxB7sJDzWUcDTKTw/s7kzReRXw="
+			},
+			"meta": {
+				"name": "Weather Extension",
+				"description": "Weather at a glance in Firefox: toolbar temperature, hourly and daily forecasts, radar, eight themes, and optional Weather Pro features.",
+				"homepage": "https://weatherextension.com/",
+				"license": "Mozilla Public License 2.0",
+				"author": "Tim"
+			}
+		},
+		"port-authority": {
+			"version": "2.2.0",
+			"id": "{6c00218c-707a-4977-84cf-36df1cef310f}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4516988/port_authority-2.2.0.xpi",
+				"hash": "sha256-QyzeiYIwxtQyzwih7npgX8rIxiC4Mn0/jaTwiUQ5JzE="
+			},
+			"meta": {
+				"name": "Port Authority",
+				"description": "Blocks malicious websites from port-scanning your computer/network and dynamically blocks all LexisNexis endpoints from running their invasive data collection scripts.",
+				"homepage": "https://github.com/ACK-J/Port_Authoirty",
+				"license": "GNU General Public License v2.0 only",
+				"author": "Hacks and Hops"
+			}
+		},
+		"popup-blocker": {
+			"version": "0.9.3",
+			"id": "{de22fd49-c9ab-4359-b722-b3febdc3a0b0}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5130331/popup_blocker-0.9.3.xpi",
+				"hash": "sha256-+U40vftLehZWlov7yAgq0VlSzYoOqm0yaLjQLJJwn9c="
+			},
+			"meta": {
+				"name": "Popup Blocker (strict)",
+				"description": "Strictly block all popup requests from any website by default. A notification window is opened to allow you accept, reject, open the popup in background page, or redirect the current page to popup address",
+				"homepage": "https://webextension.org/listing/popup-blocker.html",
+				"license": "Mozilla Public License 2.0",
+				"author": "Jeremy Schomery"
+			}
+		},
+		"audio-equalizer-wext": {
+			"version": "0.2.1",
+			"id": "{63d150c4-394c-4275-bc32-c464e76a891c}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4873581/audio_equalizer_wext-0.2.1.xpi",
+				"hash": "sha256-U2gPdtEb3mhUM0W5FMV7PpYqluM80Gf0urWiLch7gxU="
+			},
+			"meta": {
+				"name": "Audio Equalizer",
+				"description": "Stylish audio equalizer in toolbar popup.",
+				"homepage": "https://mybrowseraddon.com/audio-equalizer.html",
+				"license": "Mozilla Public License 2.0",
+				"author": "Muyor"
+			}
+		},
+		"view-page-archive": {
+			"version": "7.3.3",
+			"id": "{d07ccf11-c0cd-4938-a265-2a4d6ad01189}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4871262/view_page_archive-7.3.3.xpi",
+				"hash": "sha256-gcolvUE5LPSwPUwcTDnr1aTqqEDvik0m+Esd05aZmjQ="
+			},
+			"meta": {
+				"name": "Web Archives",
+				"description": "View archived and cached versions of web pages on various search engines, such as the Wayback Machine and Archive\u2024is.",
+				"homepage": "https://github.com/dessant/web-archives#readme",
+				"license": "GNU General Public License v3.0 only",
+				"author": "Armin Sebastian"
+			}
+		},
+		"youtube-high-definition": {
+			"version": "118.0.9",
+			"id": "{7b1bf0b6-a1b9-42b0-b75d-252036438bdc}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4344731/youtube_high_definition-118.0.9.xpi",
+				"hash": "sha256-mRlarIiiaqGUrOLwB12bTncQrD8McA0YrT21e2Vu5Rc="
+			},
+			"meta": {
+				"name": "YouTube High Definition",
+				"description": "YouTube High Definition is a powerful tool that automatically plays all YouTube videos in HD, changes video player size, offers auto-stop and mute, and much more.",
+				"homepage": "http://barisderin.com/",
+				"license": "GNU Lesser General Public License v3.0 only",
+				"author": "Baris Derin"
+			}
+		},
+		"besttimetracker": {
+			"version": "4.6.5",
+			"id": "{a8cf72f7-09b7-4cd4-9aaa-7a023bf09916}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5132235/besttimetracker-4.6.5.xpi",
+				"hash": "sha256-xlEOiZ410qsyRRohYXakoxKZ/FxwooQO9FVMdvPVcIU="
+			},
+			"meta": {
+				"name": "Time Tracker - Web Habit Builder",
+				"description": "Track time, analyze your habits and block addictive sites",
+				"homepage": "https://time-tracker-4-browser.app/en/",
+				"license": "MIT License",
+				"author": "sheepie z"
+			}
+		},
+		"swift-selection-search": {
+			"version": "3.49.0",
+			"id": "jid1-KdTtiCj6wxVAFA@jetpack",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4473415/swift_selection_search-3.49.0.xpi",
+				"hash": "sha256-OcIHNjb32MPkkAKpMOC1ae/HUee+tG9+1/F8RLPBaA8="
+			},
+			"meta": {
+				"name": "Swift Selection Search",
+				"description": "Swiftly access your search engines in a popup panel when you select text in a webpage. Context menu also included!",
+				"homepage": "https://github.com/CanisLupus/swift-selection-search",
+				"license": "MIT License",
+				"author": "Daniel Lobo"
+			}
+		},
+		"undoclosetabbutton": {
+			"version": "8.1.0",
+			"id": "{4853d046-c5a3-436b-bc36-220fd935ee1d}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4513641/undoclosetabbutton-8.1.0.xpi",
+				"hash": "sha256-/5pHtGb+KahgoYRqZVAuMncXlF3J985ifJzWSihZuqs="
+			},
+			"meta": {
+				"name": "Undo Close Tab",
+				"description": "Allows you to restore the tab you just closed with a single click\u2014plus it can offer a list of recently closed tabs within a convenient context menu.",
+				"homepage": "https://github.com/M-Reimer/undoclosetab",
+				"license": "GNU General Public License v3.0 only",
+				"author": "Manuel Reimer"
+			}
+		},
+		"copy-plaintext": {
+			"version": "1.15",
+			"id": "copyplaintext@eros.man",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4143512/copy_plaintext-1.15.xpi",
+				"hash": "sha256-GGNTFiXRix/GvV3avyrDIp+m3LGKNPl7NyIxcq5TDfc="
+			},
+			"meta": {
+				"name": "Copy PlainText",
+				"description": "Copy Plain Text without any formatting",
+				"license": "Mozilla Public License 2.0",
+				"author": "erosman"
+			}
+		},
+		"soundfixer": {
+			"version": "1.4.1",
+			"id": "soundfixer@unrelenting.technology",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4205769/soundfixer-1.4.1.xpi",
+				"hash": "sha256-sinHdjXk6Jq1hhRK6i/Ml3osXlFQmoSsiE+lninud5I="
+			},
+			"meta": {
+				"name": "SoundFixer",
+				"description": "Helps you fix annoying sound problems on sites like YouTube: audio in one channel only, too quiet or too loud.\n\n(Unfortunately, this extension does not work on all websites because of cross-domain issues \u2014 but it does work on YouTube!)",
+				"homepage": "https://github.com/valpackett/soundfixer",
+				"license": "Unlicense",
+				"author": "Val Packett"
+			}
+		},
+		"youtube-better-ambient": {
+			"version": "1.0.15",
+			"id": "pr0verter@gmail.com",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4761235/youtube_better_ambient-1.0.15.xpi",
+				"hash": "sha256-ibjv0U+Ui9RxYbnj3ITtMVjuobWuO2LJfHeft6bozq8="
+			},
+			"meta": {
+				"name": "youtube-better-ambient",
+				"description": "Enhances YouTube\u2019s ambient mode by placing a blurred version of the video in the background and making various UI elements transparent for a more immersive experience",
+				"homepage": "https://github.com/kabel2/youtube-better-ambient",
+				"license": "MIT License",
+				"author": "kabel2"
+			}
+		},
+		"noscript": {
+			"version": "13.6.36",
+			"id": "{73a6fe31-595d-460b-a920-fcc0f8843232}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5075209/noscript-13.6.36.xpi",
+				"hash": "sha256-EIY4UdGP50poDkbkqBP9WVULtKNWolTN4+j4XIDbAHg="
+			},
+			"meta": {
+				"name": "NoScript Security Suite",
+				"description": "The best security you can get in a web browser! Allow potentially malicious web content to run only from sites you trust. Protect yourself against XSS other web security exploits.",
+				"homepage": "https://noscript.net",
+				"license": "GNU General Public License v2.0 only",
+				"author": "Giorgio Maone"
+			}
+		},
+		"image-search-options": {
+			"version": "3.0.12",
+			"id": "{4a313247-8330-4a81-948e-b79936516f78}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/3059971/image_search_options-3.0.12.xpi",
+				"hash": "sha256-H73YWX/DKxvhEwKpWOo7orAQ7c/rQywpljeyxYxv0Gg="
+			},
+			"meta": {
+				"name": "Image Search Options",
+				"description": "A customizable reverse image search tool that conveniently presents a variety of top image search engines.",
+				"homepage": "http://saucenao.com/",
+				"license": "Mozilla Public License 1.1",
+				"author": "Xamayon"
+			}
+		},
+		"auto-tab-discard": {
+			"version": "0.7.7",
+			"id": "{c2c003ee-bd69-42a2-b0e9-6f34222cb046}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5111461/auto_tab_discard-0.7.7.xpi",
+				"hash": "sha256-zdTURn5+CRRp9u2tAhNGHZBzb25/yCNGZlJcynY3U8M="
+			},
+			"meta": {
+				"name": "Auto Tab Discard",
+				"description": "Increase browser speed and reduce memory load and when you have numerous open tabs.",
+				"homepage": "https://webextension.org/listing/tab-discard.html",
+				"license": "Mozilla Public License 2.0",
+				"author": "tlintspr"
+			}
+		},
+		"decentraleyes": {
+			"version": "3.0.2",
+			"id": "jid1-BoFifL9Vbdl2zQ@jetpack",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4943310/decentraleyes-3.0.2.xpi",
+				"hash": "sha256-50nQ0ZhbV5Mys2qgDUO9EcnoILE3VwFlfPms7tu0dYE="
+			},
+			"meta": {
+				"name": "Decentraleyes",
+				"description": "Protects you against tracking through \"free\", centralized, content delivery. It prevents a lot of requests from reaching networks like Google Hosted Libraries, and serves local files to keep sites from breaking. Complements regular content blockers.",
+				"homepage": "https://decentraleyes.org",
+				"license": "Mozilla Public License 2.0",
+				"author": "Thomas Rientjes"
+			}
+		},
+		"bitwarden-password-manager": {
+			"version": "2026.10.0",
+			"id": "{446900e4-71c2-419f-a6a7-df9c091e268b}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5125667/bitwarden_password_manager-2026.10.0.xpi",
+				"hash": "sha256-ol4C6WH0/87NoSWE8y8ZkxAq11CenKhFguUocQn1vSA="
+			},
+			"meta": {
+				"name": "Bitwarden Password Manager",
+				"description": "At home, at work, or on the go, Bitwarden easily secures all your passwords, passkeys, and sensitive information.",
+				"homepage": "https://bitwarden.com",
+				"license": "GNU General Public License v3.0 only",
+				"author": "Bitwarden Inc."
+			}
+		},
+		"ambient-light-for-youtube": {
+			"version": "2.38.17",
+			"id": "{60493d8c-aec8-448e-a247-5d2cfa047d69}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4618615/ambient_light_for_youtube-2.38.17.xpi",
+				"hash": "sha256-7hZx2gisXI0JSxwIe1C9WqiUkJaLIq0TsVVAO/K1W3g="
+			},
+			"meta": {
+				"name": "Ambient light for YouTube\u2122",
+				"description": "Immerse yourself in YouTube\u2122 videos with ambient light!",
+				"homepage": "https://github.com/WesselKroos/youtube-ambilight",
+				"license": "MIT License",
+				"author": "Wezelkrozum"
+			}
+		},
+		"clearurls": {
+			"version": "1.27.3",
+			"id": "{74145f27-f039-47ce-a470-a662b129930a}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4432106/clearurls-1.27.3.xpi",
+				"hash": "sha256-VJJrbkJ01ZNaX8DapjIPHTcePS8aWHdGfKOrIqZcTyA="
+			},
+			"meta": {
+				"name": "ClearURLs",
+				"description": "Automatically removes tracking parameters from URLs",
+				"homepage": "https://clearurls.xyz/",
+				"license": "GNU Lesser General Public License v3.0 only",
+				"author": "Kevin"
+			}
+		},
+		"consent-o-matic": {
+			"version": "1.1.5",
+			"id": "gdpr@cavi.au.dk",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4515369/consent_o_matic-1.1.5.xpi",
+				"hash": "sha256-ohGavDKWONbnrxq05VSKNIRl4C7sEd4I3uCvhJGZI9w="
+			},
+			"meta": {
+				"name": "Consent-O-Matic",
+				"description": "Automatic handling of GDPR consent forms",
+				"homepage": "https://consentomatic.au.dk/",
+				"license": "MIT License",
+				"author": "CAVI - Aarhus University"
+			}
+		},
+		"sidebery": {
+			"version": "5.6.1",
+			"id": "{3c078156-979c-498b-8990-85f7987dd929}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4903712/sidebery-5.6.1.xpi",
+				"hash": "sha256-6KCktVarfdU2iXwYFq+dCRgDAiMGjqZoOgQ3YQOmyvI="
+			},
+			"meta": {
+				"name": "Sidebery",
+				"description": "Vertical tabs tree and bookmarks in sidebar with advanced containers configuration, grouping and many other features.",
+				"homepage": "https://github.com/mbnuqw/sidebery",
+				"license": "MIT License",
+				"author": "mbnuqw"
+			}
+		},
+		"multi-account-containers": {
+			"version": "8.3.8",
+			"id": "@testpilot-containers",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4867303/multi_account_containers-8.3.8.xpi",
+				"hash": "sha256-MGopSEU2PxWnR46WILQ/keoXYQiHJ4COIye//xbBREc="
+			},
+			"meta": {
+				"name": "Firefox Multi-Account Containers",
+				"description": "Firefox Multi-Account Containers lets you keep parts of your online life separated into color-coded tabs. Cookies are separated by container, allowing you to use the web with multiple accounts and integrate Mozilla VPN for an extra layer of privacy.",
+				"homepage": "https://github.com/mozilla/multi-account-containers/#readme",
+				"license": "Mozilla Public License 2.0",
+				"author": "Firefox"
+			}
+		},
+		"single-file": {
+			"version": "1.31.5",
+			"id": "{531906d3-e22f-4a6c-a102-8057b88a1a63}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5141757/single_file-1.31.5.xpi",
+				"hash": "sha256-8bJ5reWG31TN2eYdxtK/nnPb6+IcN3urKv0A6VU2JuU="
+			},
+			"meta": {
+				"name": "SingleFile",
+				"description": "Save an entire web page\u2014including images and styling\u2014as a single HTML file.",
+				"homepage": "https://www.getsinglefile.com",
+				"license": "AGPL v3",
+				"author": "gildas"
+			}
+		},
+		"gesturefy": {
+			"version": "3.2.19",
+			"id": "{506e023c-7f2b-40a3-8066-bc5deb40aebe}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5059402/gesturefy-3.2.19.xpi",
+				"hash": "sha256-A+e14JORI76HP3lZfi7w18sirPrl1c5N+DwZmAEejlw="
+			},
+			"meta": {
+				"name": "Gesturefy",
+				"description": "Navigate, operate, and browse faster with mouse gestures! A customizable mouse gesture add-on with a variety of different commands.",
+				"homepage": "https://github.com/Robbendebiene/Gesturefy",
+				"license": "GNU General Public License v3.0 only",
+				"author": "Robbendebiene"
+			}
+		},
+		"libredirect": {
+			"version": "3.4.0",
+			"id": "7esoorv3@alefvanoon.anonaddy.me",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4916828/libredirect-3.4.0.xpi",
+				"hash": "sha256-wPqaXCMC63NLG2FChDcQYTMM8uezUZ7pbFPovliuKY8="
+			},
+			"meta": {
+				"name": "LibRedirect",
+				"description": "Redirects YouTube, Twitter, TikTok... requests to alternative privacy friendly frontends.",
+				"homepage": "https://libredirect.manerakai.com/",
+				"license": "GNU General Public License v3.0 only",
+				"author": "ManeraKai"
+			}
+		},
+		"tree-style-tab": {
+			"version": "4.4.9",
+			"id": "treestyletab@piro.sakura.ne.jp",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5072919/tree_style_tab-4.4.9.xpi",
+				"hash": "sha256-b6ifkijs1dYb67OPOLpoUeJO5SHURlJfugskpJLpaYQ="
+			},
+			"meta": {
+				"name": "Tree Style Tab",
+				"description": "Show tabs like a tree.",
+				"homepage": "https://github.com/piroor/treestyletab",
+				"license": "Custom License",
+				"author": "Piro (piro_or)"
+			}
+		},
+		"tab-stash": {
+			"version": "3.5",
+			"id": "tab-stash@condordes.net",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5028003/tab_stash-3.5.xpi",
+				"hash": "sha256-J0cURtWZzcYm+R/t9rVy+0scSWTpssK0cWnXU3w8lSQ="
+			},
+			"meta": {
+				"name": "Tab Stash",
+				"description": "Easily save and organize batches of tabs as bookmarks. Clear your tabs, clear your mind. Only for Firefox.",
+				"homepage": "https://josh-berry.github.io/tab-stash/",
+				"license": "Mozilla Public License 2.0",
+				"author": "Josh Berry"
+			}
+		},
+		"video-speed-control": {
+			"version": "0.1.6",
+			"id": "{24e032ab-bf0b-41ad-b404-79abc127bcbf}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4859676/video_speed_control-0.1.6.xpi",
+				"hash": "sha256-8eCdy+i47VCN41iUL0zKKMFNFa0Urzs9txir5Nc4Gdw="
+			},
+			"meta": {
+				"name": "Video Speed Control",
+				"description": "Easily control HTML5 video playback speed via toolbar popup",
+				"homepage": "https://mybrowseraddon.com/video-speed-control.html",
+				"license": "Mozilla Public License 2.0",
+				"author": "Sevina"
+			}
+		},
+		"augmented-steam": {
+			"version": "5.0.0",
+			"id": "{1be309c5-3e4f-4b99-927d-bb500eb4fa88}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5079049/augmented_steam-5.0.0.xpi",
+				"hash": "sha256-GMEosjJvNenAqdGXOrIGqONdfMqJoPf2GBLnoUsxqPQ="
+			},
+			"meta": {
+				"name": "Augmented Steam",
+				"description": "Augments your Steam Experience",
+				"homepage": "https://augmentedsteam.com/",
+				"license": "GNU General Public License v3.0 only",
+				"author": "IsThereAnyDeal"
+			}
+		},
+		"traduzir-paginas-web": {
+			"version": "10.2.1.0",
+			"id": "{036a55b4-5e72-4d05-a06c-cba2dfcc134a}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4962745/traduzir_paginas_web-10.2.1.0.xpi",
+				"hash": "sha256-Z/S5AnlCZZDM+I+FrvFFCZSLTmYWgtk4qTwLzOlMUjs="
+			},
+			"meta": {
+				"name": "TWP - Translate Web Pages",
+				"description": "Translate your page in real time using Google, Bing or Yandex.\nIt is not necessary to open new tabs.",
+				"license": "Mozilla Public License 2.0",
+				"author": "Filipe Dev"
+			}
+		},
+		"web-developer": {
+			"version": "3.0.1",
+			"id": "{c45c406e-ab73-11d8-be73-000a95be3b12}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4306323/web_developer-3.0.1.xpi",
+				"hash": "sha256-TSzidzGG+qOFvZXP/xDiRON6KIgASXt1C6tmXXviGj0="
+			},
+			"meta": {
+				"name": "Web Developer",
+				"description": "The Web Developer extension adds various web developer tools to the browser.",
+				"homepage": "http://chrispederick.com/work/web-developer/firefox/",
+				"license": "GNU Lesser General Public License v3.0 only",
+				"author": "chrispederick"
+			}
+		},
+		"my-redirector": {
+			"version": "1.0.11",
+			"id": "{5816eaf8-2431-4468-9c04-62d8b44df5b7}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4830387/my_redirector-1.0.11.xpi",
+				"hash": "sha256-j/Om9NbuITIFkttKbLSgSzOwYDzx7/yUfm7QNjm2CwQ="
+			},
+			"meta": {
+				"name": "Redirector",
+				"description": "This extension allows you to set custom redirects. It is useful for redirecting popular sites to alternative frontends (e.g. youtube to invidious), or restoring functionality (e.g. automatic redirection to Zoom's web client).",
+				"homepage": "https://github.com/lifo9/Redirector",
+				"license": "MIT License",
+				"author": "Jakub Filo"
+			}
+		},
+		"flagfox": {
+			"version": "6.2.6",
+			"id": "{1018e4d6-728f-4b20-ad56-37578a4de76b}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5067561/flagfox-6.2.6.xpi",
+				"hash": "sha256-/8lVRU+zKlCoptmUgCM3/PqCGYzPnfze2UCFymqVB0I="
+			},
+			"meta": {
+				"name": "Flagfox",
+				"description": "Displays a country flag depicting the location of the current website's server and provides a multitude of tools such as site safety checks, whois, translation, similar sites, validation, URL shortening, and more...",
+				"homepage": "https://flagfox.wordpress.com/",
+				"license": "Flagfox License",
+				"author": "Dave G"
+			}
+		},
+		"search_by_image": {
+			"version": "8.5.3",
+			"id": "{2e5ff8c8-32fe-46d0-9fc8-6b8986621f3c}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4840197/search_by_image-8.5.3.xpi",
+				"hash": "sha256-umBEeLUPXEbhMBHqfj4pBqvHsbcst+h7AsT73vpkrjc="
+			},
+			"meta": {
+				"name": "Search by Image",
+				"description": "A powerful reverse image search tool, with support for various search engines, such as Google, Bing, Yandex, Baidu and TinEye.",
+				"homepage": "https://github.com/dessant/search-by-image#readme",
+				"license": "GNU General Public License v3.0 only",
+				"author": "Armin Sebastian"
+			}
+		},
+		"simple-translate": {
+			"version": "3.1.0",
+			"id": "simple-translate@sienori",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4979122/simple_translate-3.1.0.xpi",
+				"hash": "sha256-wnWR6uc2P7BjXyEnesTgvFcJ5s/ymdM77E3oEGwpiVE="
+			},
+			"meta": {
+				"name": "Simple Translate",
+				"description": "Quickly translate selected or typed text on web pages. Supports Google Translate and DeepL API.",
+				"homepage": "https://simple-translate.sienori.com",
+				"license": "Mozilla Public License 2.0",
+				"author": "sienori"
+			}
+		},
+		"temporary-containers-plus": {
+			"version": "2.1.5",
+			"id": "{1ea2fa75-677e-4702-b06a-50fc7d06fe7e}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4796436/temporary_containers_plus-2.1.5.xpi",
+				"hash": "sha256-yApz7kEwKns0pzRI5vf0LB/GhPs+Wzf+0BF+f/yrvxk="
+			},
+			"meta": {
+				"name": "Temporary Containers Plus",
+				"description": "Open tabs, websites, and links in automatically managed disposable containers. Containers isolate the data websites store (cookies, cache, and more) from each other, further enhancing your privacy while you browse.",
+				"homepage": "https://github.com/GodKratos/temporary-containers",
+				"license": "MIT License",
+				"author": "Bunta126"
+			}
+		},
+		"tab-session-manager": {
+			"version": "7.4.0",
+			"id": "Tab-Session-Manager@sienori",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4905104/tab_session_manager-7.4.0.xpi",
+				"hash": "sha256-EN3DvCcXnLMpYvqGKeh9nSw4l6YEujR2ZuvhahSIdRs="
+			},
+			"meta": {
+				"name": "Tab Session Manager",
+				"description": "Save and restore the state of windows and tabs. It also supports automatic saving and cloud sync.",
+				"homepage": "https://tab-session-manager.sienori.com/",
+				"license": "Mozilla Public License 2.0",
+				"author": "sienori"
+			}
+		},
+		"print-edit-we": {
+			"version": "29.7",
+			"id": "printedit-we@DW-dev",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4479263/print_edit_we-29.7.xpi",
+				"hash": "sha256-+ts5LhNmYnTQlkb17jS/B8OKihUqMMavxOI+Q7DLRjo="
+			},
+			"meta": {
+				"name": "Print Edit WE",
+				"description": "Edit the contents of a web page prior to printing or saving. Elements in the web page can be edited, formatted, hidden or deleted. Unwanted content, such as adverts and sidebars, can easily be removed.",
+				"license": "GNU General Public License v2.0 only",
+				"author": "DW-dev"
+			}
+		},
+		"save-page-we": {
+			"version": "28.11",
+			"id": "savepage-we@DW-dev",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4091842/save_page_we-28.11.xpi",
+				"hash": "sha256-JvlQRxH6RAFPjLVwU9CQAVO0RuYjCMzx89mJwod3HP0="
+			},
+			"meta": {
+				"name": "Save Page WE",
+				"description": "Save a complete web page (as currently displayed) as a single HTML file that can be opened in any browser. Save a single page, multiple selected pages or a list of page URLs. Automate saving from command line.",
+				"license": "GNU General Public License v2.0 only",
+				"author": "DW-dev"
+			}
+		},
+		"read-aloud": {
+			"version": "1.82.0",
+			"id": "{ddc62400-f22d-4dd3-8b4a-05837de53c2e}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5137478/read_aloud-1.82.0.xpi",
+				"hash": "sha256-SggKImWHfiH64vaXriqt8RXDeDwOazDzdNVFe7XFpTA="
+			},
+			"meta": {
+				"name": "Read Aloud: A Text to Speech Voice Reader",
+				"description": "Read out loud the current web-page article with one click. Supports 40+ languages.",
+				"license": "GNU General Public License v3.0 only",
+				"author": "LSD Software"
+			}
+		},
+		"unpaywall": {
+			"version": "3.98",
+			"id": "{f209234a-76f0-4735-9920-eb62507a54cd}",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/3816853/unpaywall-3.98.xpi",
+				"hash": "sha256-aJO+qG08TtfxEAvw4XNZG1JqBi9N3XvhPDClRXPHl/s="
+			},
+			"meta": {
+				"name": "Unpaywall",
+				"description": "Get free text of research papers as you browse, using Unpaywall's index of ten million legal, open-access articles.",
+				"homepage": "https://unpaywall.org/products/extension",
+				"license": "MIT License",
+				"author": "Impactstory team"
+			}
+		},
+		"skip-redirect": {
+			"version": "3.0.2",
+			"id": "skipredirect@sblask",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/4968151/skip_redirect-3.0.2.xpi",
+				"hash": "sha256-HtnEyhX87Slj3AAdlcR0Xu2aHFu5121woxQNvVcVudc="
+			},
+			"meta": {
+				"name": "Skip Redirect",
+				"description": "Some web pages use intermediary pages before redirecting to a final page. This add-on tries to extract the final url from the intermediary url and goes there straight away if successful.",
+				"license": "MIT License",
+				"author": "Sebastian Blask"
+			}
+		},
+		"keepassxc-browser": {
+			"version": "1.10.4.1",
+			"id": "keepassxc-browser@keepassxc.org",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5078406/keepassxc_browser-1.10.4.1.xpi",
+				"hash": "sha256-rkEVej8Bewdzq7ogl9WwBWJBYx0KOK021o0LJLGkCcE="
+			},
+			"meta": {
+				"name": "KeePassXC-Browser",
+				"description": "Official browser plugin for the KeePassXC password manager (https://keepassxc.org).",
+				"homepage": "https://keepassxc.org/",
+				"license": "GNU General Public License v3.0 only",
+				"author": "KeePassXC Team"
+			}
+		},
+		"onetab": {
+			"version": "2.24",
+			"id": "extension@one-tab.com",
+			"src": {
+				"url": "https://addons.mozilla.org/firefox/downloads/file/5108930/onetab-2.24.xpi",
+				"hash": "sha256-6wA6piFGu6o7e1z58nFGkz48LYHoIkZZ9UOY0ApSLXQ="
+			},
+			"meta": {
+				"name": "OneTab",
+				"description": "Save up to 95% memory and reduce tab clutter",
+				"homepage": "https://www.one-tab.com",
+				"license": "Custom License",
+				"author": "OneTab Team"
+			}
+		}
+	},
+	"chrome": {
+		"ublock-origin-lite": {
+			"id": "ddkjiahejlhfcafbddmgiahcphecmpfh",
+			"version": "2026.1018.2229",
+			"src": {
+				"url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcRYe4sOX4czxaaPxT3nVyfO8lRbp_p9e6Y4yNYVdUcK-wxqKE0sQaqlVLIxO-KTgEOdZK5Ktmf1qE00-EJKrCrTdK6bkMRrSn5_Znc34sd_N7JYlX6_7xlhYWKVHZUGAMZSmuUG6Xe5Tcl2Jcrk-dGTNkrFF2fBRg/DDKJIAHEJLHFCAFBDDMGIAHCPHECMPFH_2026_1018_2229_0.crx",
+				"hash": "sha256-VZ0Q733LlrxOgS3ms/8MLmx6vKV4Mk2Nev19jPeKbdc="
+			},
+			"meta": {
+				"name": "uBlock Origin Lite",
+				"description": "An efficient content blocker for Chromium-based browsers.",
+				"homepage": "https://github.com/uBlockOrigin/uBOL-home",
+				"license": "GPL-3.0-or-later",
+				"author": "Raymond Hill"
+			},
+			"managedSettings": {
+				"defaultFiltering": "complete",
+				"disableFirstRunPage": true,
+				"showBlockedCount": true
+			}
+		},
+		"tampermonkey": {
+			"id": "gcalenpjmijncebpfijmoaglllgpjagf",
+			"version": "5.6.6242",
+			"src": {
+				"url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcRoE6fkRW_PWqGokYnqWZ1wj-UYeYzHzEPAUOWe6qaWBl1sR1ALL4DPvNWhfPG-jYQ2UzeTsDoU0IcT-faYtzEpBuS6UaRbUYlFzbEm_hBtBnVwlgTHna8xLTkLKHwAxlKa5cs0LEbsz61I9w_8AGrMESKWcZcU/GCALENPJMIJNCEBPFIJMOAGLLLGPJAGF_5_6_6242_0.crx",
+				"hash": "sha256-CxaXiy1O4RrDduiIt47xTycVDAUlpTT9Zx18FJVWebM="
+			},
+			"meta": {
+				"name": "Tampermonkey",
+				"description": "A userscript manager for Chromium-based browsers.",
+				"homepage": "https://www.tampermonkey.net/",
+				"license": "Proprietary License",
+				"author": "Jan Biniok"
+			},
+			"managedSettings": {
+				"jsonImport": []
+			}
+		},
+		"keepassxc-browser": {
+			"id": "oboonakemofpalcgghocfoadofidjkkk",
+			"version": "1.10.4.1",
+			"src": {
+				"url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcQbEAp_PMHqz1CpECAkCsQ-lWRgtqu57jKKNC_3FaXpu37lQFFbYEo6GEUObOILGhT46fbKbKVR6Nj4W3lFPfq99t9yk30bcCLlRLZoXmmiytRjvSUSjqPsZjsvGkIAxlKa5bdOtG5nVb_7NVV3U9IEH-sSq_Kj/OBOONAKEMOFPALCGGHOCFOADOFIDJKKK_1_10_4_1.crx",
+				"hash": "sha256-rabNmvObnhSuu20w6sNltm6HBO8/3ORucbFf7CZGME4="
+			},
+			"meta": {
+				"name": "KeePassXC-Browser",
+				"homepage": "https://keepassxc.org/",
+				"author": "KeePassXC Team"
+			},
+			"managedSettings": {
+				"settings": {
+					"colorTheme": "system",
+					"autoRetrieveCredentials": true,
+					"showGettingStartedGuideAlert": false
+				}
+			}
+		},
+		"proton-pass": {
+			"id": "ghmbeldphafepmbegfdlkpapadhbakde",
+			"version": "1.42.0",
+			"src": {
+				"url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcT3QbE-bAQiRdIUn4XPljZtp2SUya697XVxSJuGecgEDgEkwA6KTVeQiN9fngYz-auiBXtHJOOy-OVRxaBfNnm4YvJrSe9h9ngIowTVKQ3coz_WMNhS_4PPGlcLk_YDAMZSmuWY-GtSm5PK-5uZZwOt9Fry1o-s8g/GHMBELDPHAFEPMBEGFDLKPAPADHBAKDE_1_42_0_0.crx",
+				"hash": "sha256-bt+LtIygXRhPADo/p4oqUQWduxvV+F1We/o9iHqdPxI="
+			},
+			"meta": {
+				"name": "Proton Pass: Free Password Manager",
+				"homepage": "https://chromewebstore.google.com/detail/ghmbeldphafepmbegfdlkpapadhbakde",
+				"description": "Free and fully encrypted password manager to keep your logins and passwords safe."
+			}
+		},
+		"auto-tab-discard": {
+			"id": "jhnleheckmknfcgijgkadoemagpecfol",
+			"version": "0.7.7",
+			"src": {
+				"url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcSMBoFGr6kSag46aIPbDlB7I7dP0RvxqOvTU0qjUDgzAOmklWp-qtlJPBcfW9YmK2hPWc6T4drqyF1VGz87mJnvbqA4Xk22_lmzqU2y4qpbWCmzG90qZ4o-u4dfhSwAxlKa5aoCuC5fQ2iue1atvIw9-7Y_MMIX/JHNLEHECKMKNFCGIJGKADOEMAGPECFOL_0_7_7_0.crx",
+				"hash": "sha256-tHPU12CEUCxHGpvQlNO0edq3bZKe80Q8LXdocbKCHYg="
+			},
+			"meta": {
+				"name": "Auto Tab Discard",
+				"homepage": "https://chromewebstore.google.com/detail/jhnleheckmknfcgijgkadoemagpecfol",
+				"description": "Increase browser speed and reduce memory load when you have numerous open tabs."
+			},
+			"managedSettings": {
+				"period": 1800,
+				"number": 20,
+				"mode": "time-based",
+				"audio": true,
+				"paused": true,
+				"pinned": true,
+				"form": true,
+				"online": true
+			}
+		},
+		"darkreader": {
+			"id": "eimadpbcbfnmbkopoojfekhnkhdbieeh",
+			"version": "4.9.133",
+			"src": {
+				"url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcSRy7yMWTvNkm6ejOebfYYQyM9v_7GiQiIJRZK1ef9E5dq0onHRyLplKIPQ1jOlFOLzz5Hr4Dqne7G6OoMelSnk8ikA-3inxvXpFSDway1szqX4kUXw1GQiwMDrpvsAxlKa5bgysZoJUnSlS9xvIyXwZgn1twZf/EIMADPBCBFNMBKOPOOJFEKHNKHDBIEEH_4_9_133_0.crx",
+				"hash": "sha256-7jjyDR1QeJ9LSCyaGl2tq1mbhoL9Kn37feIfroVhuRg="
+			},
+			"meta": {
+				"name": "Dark Reader",
+				"homepage": "https://chromewebstore.google.com/detail/eimadpbcbfnmbkopoojfekhnkhdbieeh",
+				"description": "Dark mode for every website. Take care of your eyes, use dark theme for night and daily browsing."
+			}
+		},
+		"single-file": {
+			"id": "mpiodijhokgodhhofbcjdecpffjipkle",
+			"version": "1.31.4",
+			"src": {
+				"url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcR6McqXYM665Avoz73O5oK-t5ZcPlq_bn0UAC-tPhozvS32CZseJC46RbmMVNsjcSt6YyJIhlDTxZlDfvVWh-WUWu6g32ZanvHqttdzqW99RSEnm65HIqsVdlJxDY8AxlKa5T9LvERGUzuhyS7XJQMX_o7_yP1u/MPIODIJHOKGODHHOFBCJDECPFFJIPKLE_1_31_4_0.crx",
+				"hash": "sha256-Jbjzk0EgVo38QHb9j0npk/31TiGdZOwvVf9CWLX2GAc="
+			},
+			"meta": {
+				"name": "SingleFile",
+				"homepage": "https://chromewebstore.google.com/detail/mpiodijhokgodhhofbcjdecpffjipkle",
+				"description": "Save a complete page into a single HTML file"
+			}
+		},
+		"sponsorblock": {
+			"id": "mnjggcdmjocbbbhaepdhchncahnbgone",
+			"version": "6.1.6",
+			"src": {
+				"url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcTWfnmqjE44RBK5YQoPMBxSo1y7qcdg-DJ-fXQTElUiCRzoz076L2PnzCsPUQZqQOP-Qty-EFYPhnHaRYiJntKDMiuafq3_rcJ-LGKTOnEWoklqBe8_F207JV_shHYAxlKa5U8gzzlCzUWtqqLN4CT8eVJIRN0L/MNJGGCDMJOCBBBHAEPDHCHNCAHNBGONE_6_1_6_0.crx",
+				"hash": "sha256-VYf+K2qZRhAcoN3nxu/nanVcXuW21uY9/EjH9zbNtP8="
+			},
+			"meta": {
+				"name": "SponsorBlock for YouTube - Skip Sponsorships",
+				"homepage": "https://chromewebstore.google.com/detail/mnjggcdmjocbbbhaepdhchncahnbgone",
+				"description": "Skip sponsorships, subscription begging and more on YouTube videos. Report sponsors on videos you watch to save others' time."
+			}
+		},
+		"return-youtube-dislike": {
+			"id": "gebbhagfogifgggkldgodflihgfeippi",
+			"version": "4.0.5",
+			"src": {
+				"url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcTrCEEj5FjyOd1OpfxvHzoJxXSmnG2L1nDaAYl0zYK7C3eFcY1GfGq5vcqFMtDah6w_l_BdVA2Wgtd2jDOmRFduIs1YhyyyhGwiMfNurQ-s3WhQu2iUmFIB_yG0a2EAxlKa5cSh9s9vXTrLJxITvdMuSXfKkELD/GEBBHAGFOGIFGGGKLDGODFLIHGFEIPPI_4_0_5_0.crx",
+				"hash": "sha256-orlCwWL0GeALQYCMxrHd71wpOWNVupLk0VrtQcxYtUk="
+			},
+			"meta": {
+				"name": "Return YouTube Dislike",
+				"homepage": "https://chromewebstore.google.com/detail/gebbhagfogifgggkldgodflihgfeippi",
+				"description": "Returns ability to see dislikes"
+			}
+		},
+		"auth-helper": {
+			"id": "bhghoamapcdpbohphigoooaddinpkbai",
+			"version": "8.0.1",
+			"src": {
+				"url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcREt77HGFO8vh_lC-Pf0GsylamJ0uuXlfbGX3EOT84lChmQAHwYp-cRnhYIkTIyCi_dbrSjXrWlZtkLWzb--dE8lKYKJA-6XttoAv4lgw4yJb7uID6rLHCknitk8OueAMZSmuVnkGoWN9MJD5QFqUanOsjlo6oPWA/BHGHOAMAPCDPBOHPHIGOOOADDINPKBAI_8_0_1_0.crx",
+				"hash": "sha256-zyHVeLo7swr2xMostJXomhMpasoKPhRn2Vc1HXlAu7I="
+			},
+			"meta": {
+				"name": "Authenticator",
+				"homepage": "https://chromewebstore.google.com/detail/bhghoamapcdpbohphigoooaddinpkbai",
+				"description": "Authenticator generates two-factor authentication codes in your browser."
+			}
+		},
+		"user-agent-string-switcher": {
+			"id": "bhchdcejhohfmigjafbampogmaanbfkg",
+			"version": "0.7.2",
+			"src": {
+				"url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcRw1P_YXwaG_4_5sd-6VufD6-FlSMl-gS4wVrPuGoL6QBeZZmGQD-8-XHUEEn_Nz8L8EvnYOM1WMIRNaFPlyo-ELHnR45RHEmOEYEUQni6GRQOm21mYqf0SYli9urQAxlKa5WNNdx82ASQ7R7nD2b9Q4Q6Wcmyy/BHCHDCEJHOHFMIGJAFBAMPOGMAANBFKG_0_7_2_0.crx",
+				"hash": "sha256-Z4HDZOZpxpWcKPUDIxaVmjMY8aE5UwZeR335qksH40A="
+			},
+			"meta": {
+				"name": "User-Agent Switcher and Manager",
+				"homepage": "https://chromewebstore.google.com/detail/bhchdcejhohfmigjafbampogmaanbfkg",
+				"description": "Spoof websites trying to gather information about your web navigation to deliver distinct content you may not want"
+			}
+		},
+		"react-devtools": {
+			"id": "fmkadmapgofadopljbjfkapdkoienihi",
+			"version": "8.0.0",
+			"src": {
+				"url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcTTwTsxETatDIg4CEI_bjxcn1HOVzFjQjXl6Z_-hgYPUm3q0i6S6vLcjii8am2kWLGMKi_kMyvVezcnd7dVqzubhZexPqm3mMXweP6Gb6wnwsw4GLM-IsUgjlka-E4AxlKa5U6I0MeE0izvhAXOBaeRkPQ4PrBY/FMKADMAPGOFADOPLJBJFKAPDKOIENIHI_8_0_0_0.crx",
+				"hash": "sha256-2S4RIqFjYsxVEJJwaKWxqNULQ+HzviXDEX98AFgHswI="
+			},
+			"meta": {
+				"name": "React Developer Tools",
+				"homepage": "https://chromewebstore.google.com/detail/fmkadmapgofadopljbjfkapdkoienihi"
+			}
+		},
+		"vimium-c": {
+			"id": "hfjbmagddngcpeloejdejnfgbamkjaeg",
+			"version": "2.12.2",
+			"src": {
+				"url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcQ8OYxWfoJ9qp7pOR-FjwfMU-yi16Sb2L8CFhlZsCPKmvMHS36J0ouKIPnjH7PP67DsNnyBcRUZtyPAn01fobLaMpiepnOi1y0XHaWtcIra-JLVESB5_9Z4h4-RzG0AxlKa5TgJRFxpXs7t9c6fhRYHFf9_AnAX/HFJBMAGDDNGCPELOEJDEJNFGBAMKJAEG_2_12_2_0.crx",
+				"hash": "sha256-1kiLH+QIjOIheJXFNE/BKJ7tWZLvwHpr6ec1cLIlBCM="
+			},
+			"meta": {
+				"name": "Vimium C - All by Keyboard",
+				"homepage": "https://chromewebstore.google.com/detail/hfjbmagddngcpeloejdejnfgbamkjaeg",
+				"description": "A keyboard shortcut tool for keyboard-based page navigation and browser tab operations with an advanced omnibar and global shortcuts"
+			}
+		},
+		"styl-us": {
+			"id": "clngdbkpkpeebahjckkjfobafhncgmne",
+			"version": "2.4.14",
+			"src": {
+				"url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcR4r_qeFex0hTH-CD6FsP3rL5zYZmfBS6xPpaYp07_ZRe7dQrfMH8XavGpCM5I-FAjkyqd_yzk_-Vmq7w6xAb-RzCKnexJLyZ9_Q-P0UnqZ5et5Y3xni_8066OlMaIAxlKa5d4MloEPqW0zmOrV_J5-AS-mDS8d/CLNGDBKPKPEEBAHJCKKJFOBAFHNCGMNE_2_4_14_0.crx",
+				"hash": "sha256-82toCWp5v/Crf35et50ISOw2Q66ZhJrCx59rhDVTRPk="
+			},
+			"meta": {
+				"name": "Stylus",
+				"homepage": "https://chromewebstore.google.com/detail/clngdbkpkpeebahjckkjfobafhncgmne",
+				"description": "Redesign the web with Stylus, a user styles manager. Stylus allows you to easily install themes and skins for many popular sites."
+			}
+		},
+		"steam-database": {
+			"id": "kdbmhfkmnlmbkgbabkdealhhbfhlmmon",
+			"version": "4.37",
+			"src": {
+				"url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcSpsCaZhc80ORfuFRs8yxwtOtCU0d9WSWMbr6AyhBGgeYZQ4ZjPE4EjRLVG4tjJSrbq6Tv8THWuwfqI-7b9CO0z68r8zKE-waxFKFSYc0jIP7fa182Tl_QhmtFKSxwAxlKa5YkqPL6tuy0rt-_4C0Lf-5u5dwn_/KDBMHFKMNLMBKGBABKDEALHHBFHLMMON_4_37_0_0.crx",
+				"hash": "sha256-p+ifp+k4wwTlLQzwN5D5UTK+viMYBpreGfleXgwPeFc="
+			},
+			"meta": {
+				"name": "SteamDB",
+				"homepage": "https://chromewebstore.google.com/detail/kdbmhfkmnlmbkgbabkdealhhbfhlmmon",
+				"description": "Adds SteamDB links and new features on the Steam store and community. View lowest game prices and stats."
+			}
+		},
+		"cookie-editor": {
+			"id": "hlkenndednhfkekhgcdicdfddnkalmdm",
+			"version": "1.13.0",
+			"src": {
+				"url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcTs7-1I8JKDIXjew4_jbd7OzHLF0-PS6kpTjkD0z5TM8iZGpL5kvu5du2DWokbTKAWTmLxjqH53DRFobQOgbd4qryUWcizGJMbS22ylOr_nbD0RFDXdexKGJY3pX5oAxlKa5fkE4Da4PPjHqfwOnUxQ1rRqMw4Z/HLKENNDEDNHFKEKHGCDICDFDDNKALMDM_1_13_0_0.crx",
+				"hash": "sha256-dUoHKltjJ9J6DU1uKZqOKLKl+vvVlcy2v81AkK6OsDg="
+			},
+			"meta": {
+				"name": "Cookie-Editor",
+				"homepage": "https://chromewebstore.google.com/detail/hlkenndednhfkekhgcdicdfddnkalmdm",
+				"description": "Simple yet powerful Cookie Editor that allow you to quickly create, edit and delete cookies without leaving your tab."
+			}
+		},
+		"simple-translate": {
+			"id": "ibplnjkanclpjokhdolnendpplpjiace",
+			"version": "3.1.0",
+			"src": {
+				"url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcTkec_gmhEUNybDEIv38UUh1UtX72mOctuvVkKfI-i87W50bC0muPGktz7Q87Gy_jple11pwOIdRku2f5_TQvLvb0POKdssXoosCow-xwbpxrE0cW8iWA4DId9DaakAxlKa5cc7BNnmZvxi2Yuyz2lsnafPPnoU/IBPLNJKANCLPJOKHDOLNENDPPLPJIACE_3_1_0_0.crx",
+				"hash": "sha256-cC5FdeERprBc/zT66FtlkTW51/AsQ+gXRtixobw2IWg="
+			},
+			"meta": {
+				"name": "Simple Translate",
+				"homepage": "https://chromewebstore.google.com/detail/ibplnjkanclpjokhdolnendpplpjiace",
+				"description": "Quickly translate selected or typed text on web pages. Supports Google Translate and DeepL API."
+			}
+		},
+		"onetab": {
+			"id": "chphlpgkkbolifaimnlloiipkdnihall",
+			"version": "2.24",
+			"src": {
+				"url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcQtDZF7UHqeHkjKqRUX99FP5kNjeuHHWAZQgL-D0uI6F9Mi2uCstzIjBDdqz91L3gpjgbGH0vvExASAO04wUwFnL-qgtOWbXZhS9Ik00j5zhmOBN3i92SLd2LDn7ebuAMZSmuXaf4z8Xp7ePzC0_-Odl0hOY7P9ug/CHPHLPGKKBOLIFAIMNLLOIIPKDNIHALL_2_24_0_0.crx",
+				"hash": "sha256-e9tguLeVyjXBAgZFFDrrjbCLdaAVa5WOzwDDXftOVVE="
+			},
+			"meta": {
+				"name": "OneTab",
+				"homepage": "https://chromewebstore.google.com/detail/chphlpgkkbolifaimnlloiipkdnihall",
+				"description": "Save up to 95% memory and reduce tab clutter"
+			}
+		},
+		"enhancer-for-youtube": {
+			"id": "ponfpcnoihfmfllpaingbgckeeldkhle",
+			"version": "3.0.19",
+			"src": {
+				"url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcSJgE8HjP-4FAiNG77eb3bAeqQFGva5qYWSqSogR3hVCRZsAKwlSB7cjijZ7vjxxv-6oLd1viM9y4cnTfSsmsYp6pljcF95b8VaHRO3d8Ty0fqg6nSORi-8zuerbQkAxlKa5dHnqW9l9z_-aq88iSj9NHFVhllm/PONFPCNOIHFMFLLPAINGBGCKEELDKHLE_3_0_19_0.crx",
+				"hash": "sha256-0vw3iCq/F5muPwn7Ny4g8LBkKrmSspaCtBo2ATxULeQ="
+			},
+			"meta": {
+				"name": "Enhancer for YouTube\u2122",
+				"homepage": "https://chromewebstore.google.com/detail/ponfpcnoihfmfllpaingbgckeeldkhle",
+				"description": "Take control of YouTube and boost your user experience!"
+			}
+		}
+	}
 }

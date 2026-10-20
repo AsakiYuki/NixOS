@@ -1,8 +1,11 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   programs.chromium.extensions = lib.mkIf config.programs.chromium.enable (
-    with pkgs.chrome-extensions;
-    [
+    with pkgs.chrome-extensions; [
       ublock-origin-lite
       tampermonkey
       keepassxc-browser
@@ -10,7 +13,7 @@
       auto-tab-discard
       darkreader
       single-file
-      sponsorblock-for-youtube-skip-sponsorships
+      sponsorblock
       return-youtube-dislike
       auth-helper
       user-agent-string-switcher
