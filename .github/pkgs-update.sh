@@ -3,16 +3,16 @@
 
 set -e
 
-function commit() {
-    git add $1
-    git commit -m "$2" -m "$(cat "$3")"
+function commit_update() {
+    git add assets/sources.json
+    git commit -m "$1" -m "$(cat "$2")"
 }
 
 bun install --frozen-lockfile
 
 bun run check-packages-update
 if [ -f packages-commit.txt ]; then
-    commit assets/packages.json \
+    commit_update \
         "ci(update-checker/packages): update packages infos $(date '+%H:%M:%S %d-%m-%Y')" \
         "packages-commit.txt"
 else
@@ -21,7 +21,7 @@ fi
 
 bun run check-proton-update
 if [ -f proton-commit.txt ]; then
-    commit assets/proton.json \
+    commit_update \
         "ci(update-checker/proton): update proton infos $(date '+%H:%M:%S %d-%m-%Y')" \
         "proton-commit.txt"
 else
@@ -30,7 +30,7 @@ fi
 
 bun run check-vscode-extensions-update
 if [ -f vscode-extensions-commit.txt ]; then
-    commit assets/vscode.extensions.json \
+    commit_update \
         "ci(update-checker/vscode-extensions): update vscode extensions infos $(date '+%H:%M:%S %d-%m-%Y')" \
         "vscode-extensions-commit.txt"
 else
@@ -39,7 +39,7 @@ fi
 
 bun run check-browser-extensions-update
 if [ -f browser-extensions-commit.txt ]; then
-    commit assets/browser.extensions.json \
+    commit_update \
         "ci(update-checker/browser-extensions): update browser extensions $(date '+%H:%M:%S %d-%m-%Y')" \
         "browser-extensions-commit.txt"
 else
@@ -48,7 +48,7 @@ fi
 
 bun run check-millennium-update
 if [ -f millennium-commit.txt ]; then
-    commit assets/millennium.json \
+    commit_update \
         "ci(update-checker/millennium): update plugins infos $(date '+%H:%M:%S %d-%m-%Y')" \
         "millennium-commit.txt"
 else

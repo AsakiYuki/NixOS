@@ -37,9 +37,10 @@
     inherit (inputs.nixpkgs) lib self;
     state-version = "26.05";
     root = path: ./. + path;
+    source-data = builtins.fromJSON (builtins.readFile ./assets/sources.json);
 
     args = {
-      inherit inputs self state-version lib root;
+      inherit inputs self state-version lib root source-data;
     };
   in (lib.mergeAttrsList [
     (import ./configs/nixos.nix args)

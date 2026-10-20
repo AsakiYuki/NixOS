@@ -2,11 +2,12 @@ import "dotenv/config"
 import * as cheerio from "cheerio"
 
 import path from "path"
-import fs from "fs/promises"
 
 import { getGithubRepoLatestRelease } from "../helpers/github"
 import { fetchUrlHash, fetchZipHash } from "../helpers/nix"
 import { LatestReleaseData } from "../helpers/git"
+import { runScript } from "../helpers/cli"
+import { readSourceData, saveSourceUpdate } from "../helpers/source-data"
 
 let packages: any = {}
 
@@ -80,7 +81,8 @@ async function fetchLastReleasePackage(options: FetchLastPackageArgs) {
 }
 
 async function main() {
-	packages = JSON.parse(await fs.readFile(path.join(__dirname, "../../assets/packages.json"), "utf-8"))
+	const sourceData = await readSourceData()
+	packages = sourceData.packages.programs
 
 	const status = await Promise.all([
 		fetchLastReleasePackage({
@@ -504,12 +506,12 @@ async function main() {
 		})(),
 	])
 
-	if (!status.some(v => v)) return
-
-	await Promise.all([
-		fs.writeFile(path.join(__dirname, "../../assets/packages.json"), JSON.stringify(packages, null, 4)),
-		fs.writeFile(path.join(__dirname, "../../packages-commit.txt"), descriptions.join("\n")),
-	])
+	await saveSourceUpdate(
+		sourceData,
+		path.join(__dirname, "../../packages-commit.txt"),
+		descriptions,
+		status.some(Boolean),
+	)
 }
 
-main()
+runScript(main)

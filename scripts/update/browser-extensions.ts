@@ -1,6 +1,7 @@
 import "dotenv/config"
-import fs from "node:fs/promises"
 import path from "node:path"
+import { runScript } from "../helpers/cli"
+import { readSourceData, saveSourceUpdate } from "../helpers/source-data"
 
 import {
 	fetchChromeExtension,
@@ -71,9 +72,12 @@ async function updateChromeExtensions(
 }
 
 async function main() {
-	const catalogPath = path.join(__dirname, "../../assets/browser.extensions.json")
-	const commitPath = path.join(__dirname, "../../browser-extensions-commit.txt")
-	const catalog: BrowserExtensions = JSON.parse(await fs.readFile(catalogPath, "utf-8"))
+	const reportPath = path.join(__dirname, "../../browser-extensions-commit.txt")
+	const sourceData = await readSourceData()
+	const catalog: BrowserExtensions = {
+		firefox: sourceData.extensions.firefox,
+		chrome: sourceData.extensions.chrome,
+	}
 	const updates: string[] = []
 
 	await Promise.all([
@@ -81,20 +85,11 @@ async function main() {
 		updateChromeExtensions(catalog.chrome, updates),
 	])
 
-	if (updates.length === 0) {
-		await fs.rm(commitPath, { force: true })
+	if (!await saveSourceUpdate(sourceData, reportPath, updates)) {
 		console.info("[INFO] No browser extension updates found.")
 		return
 	}
-
-	await Promise.all([
-		fs.writeFile(catalogPath, JSON.stringify(catalog, null, 4) + "\n", "utf-8"),
-		fs.writeFile(commitPath, updates.join("\n") + "\n", "utf-8"),
-	])
 	console.info(`[INFO] Updated ${updates.length} browser extension(s).`)
 }
 
-main().catch(error => {
-	console.error(error)
-	process.exitCode = 1
-})
+runScript(main)

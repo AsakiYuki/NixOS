@@ -1,10 +1,11 @@
 {
   pkgs,
   lib,
+  sources,
   ...
 }:
 let
-  pluginData = lib.importJSON ../../../assets/millennium.json;
+  pluginData = sources.extensions.millennium.plugins;
 
   mkMillenniumPlugin =
     {

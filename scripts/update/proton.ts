@@ -1,11 +1,12 @@
 import "dotenv/config"
 
-import fs from "fs/promises"
 import path from "path"
 
 import { getGitLatestReleases, LatestReleaseData } from "../helpers/git"
 import { getGithubRepoLatestRelease } from "../helpers/github"
 import { fetchUrlHash } from "../helpers/nix"
+import { runScript } from "../helpers/cli"
+import { readSourceData, saveSourceUpdate } from "../helpers/source-data"
 
 type ProtonSystem = "x86_64-linux" | "aarch64-linux"
 type ProtonArchitecture = "x86_64" | "aarch64"
@@ -124,13 +125,9 @@ async function fetchProtonRelease(options: FetchProtonReleaseArgs) {
 	return true
 }
 
-async function writeCommit() {
-	if (descriptions.length === 0) return
-	await fs.writeFile(path.join(__dirname, "../../proton-commit.txt"), descriptions.join("\n"), "utf-8")
-}
-
-;(async function main() {
-	protons = JSON.parse(await fs.readFile(path.join(__dirname, "../../assets/proton.json"), "utf-8"))
+async function main() {
+	const sourceData = await readSourceData()
+	protons = sourceData.packages.wine
 
 	const status = await Promise.all([
 		fetchProtonRelease({
@@ -179,13 +176,12 @@ async function writeCommit() {
 		}),
 	])
 
-	if (!status.some(Boolean)) return
+	await saveSourceUpdate(
+		sourceData,
+		path.join(__dirname, "../../proton-commit.txt"),
+		descriptions,
+		status.some(Boolean),
+	)
+}
 
-	await Promise.all([
-		writeCommit(),
-		fs.writeFile(path.join(__dirname, "../../assets/proton.json"), JSON.stringify(protons, null, 4), "utf-8"),
-	])
-})().catch(error => {
-	console.error(error)
-	process.exitCode = 1
-})
+runScript(main)

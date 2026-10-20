@@ -1,10 +1,11 @@
 {
   pkgs,
   lib,
+  sources,
   ...
 }:
 let
-  themeData = lib.importJSON ../../../assets/millennium.json;
+  themeData = sources.extensions.millennium.themes;
 
   mkMillenniumTheme =
     {

@@ -3,8 +3,10 @@
   inputs,
   self,
   state-version,
+  source-data,
   ...
-} @ args: hosts: {
+} @ args: hosts:
+{
   homeConfigurations = args.lib.mapAttrs (host: hostCfg: let
     inherit (hostCfg) pkgs modules;
 
@@ -14,7 +16,7 @@
       localSystem = system;
       config.allowUnfree = true;
       overlays = [
-        (_: pkgs: import ../overlays/packages (pkgs // {inherit pkgs;}))
+        (_: pkgs: import ../overlays/packages (pkgs // { inherit pkgs; sources = source-data; }))
       ];
     };
 
@@ -27,6 +29,7 @@
           }))
         // {
           flake-name = host;
+          inherit source-data;
         }
     );
 

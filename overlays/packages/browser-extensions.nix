@@ -1,10 +1,11 @@
 {
   lib,
   pkgs,
+  sources,
   ...
 }:
 let
-  extensions = lib.importJSON ../../assets/browser.extensions.json;
+  extensions = sources.extensions;
 
   buildFirefoxAddon = name: addon:
     pkgs.stdenv.mkDerivation {

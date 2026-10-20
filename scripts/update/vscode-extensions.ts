@@ -1,8 +1,9 @@
 import "dotenv/config"
 import { createHash } from "crypto"
-import fs from "fs/promises"
 import path from "path"
+import { runScript } from "../helpers/cli"
 import { VSCE } from "../helpers/vsce"
+import { readSourceData, saveSourceUpdate } from "../helpers/source-data"
 
 const targetPlatforms = [
 	"linux-x64",
@@ -49,9 +50,9 @@ async function hashVsix(id: string, version: string, targetPlatform?: string): P
 }
 
 async function main() {
-	const filepath = path.join(__dirname, "../../assets/vscode.extensions.json")
-	const commitFilepath = path.join(__dirname, "../../vscode-extensions-commit.txt")
-	const data: Record<string, Record<string, any>> = JSON.parse(await fs.readFile(filepath, "utf-8"))
+	const reportPath = path.join(__dirname, "../../vscode-extensions-commit.txt")
+	const sourceData = await readSourceData()
+	const data: Record<string, Record<string, any>> = sourceData.extensions.vscode
 	const commits: string[] = []
 
 	for (const [publisher, extensions] of Object.entries(data)) {
@@ -115,23 +116,13 @@ async function main() {
 			const platformList = Object.keys(source.hash).join(", ")
 			console.info(`[SUCCESS] Updated ${id} to v${currentVersion.version} (${platformList})`)
 			commits.push(`${id} ${currentVersion.version} - Platforms: ${platformList}`)
-			await fs.writeFile(filepath, JSON.stringify(data, null, 4), "utf-8")
 		}
 	}
 
-	if (commits.length === 0) {
-		await fs.rm(commitFilepath, { force: true })
+	if (!await saveSourceUpdate(sourceData, reportPath, commits)) {
 		console.info(`[INFO] No VS Code extension updates found.`)
 		return
 	}
-
-	await Promise.all([
-		fs.writeFile(filepath, JSON.stringify(data, null, 4), "utf-8"),
-		fs.writeFile(commitFilepath, commits.join("\n")),
-	])
 }
 
-main().catch(error => {
-	console.error(error)
-	process.exitCode = 1
-})
+runScript(main)

@@ -1,8 +1,8 @@
 import { createHash } from "node:crypto"
-import fs from "node:fs/promises"
-import path from "node:path"
 
 import { VSCE, type ExtensionInfo } from "../helpers/vsce"
+import { runScript } from "../helpers/cli"
+import { readSourceData, writeSourceData } from "../helpers/source-data"
 
 const targetPlatforms = [
 	"linux-x64",
@@ -103,22 +103,7 @@ function makeMetadata(extInfo: ExtensionInfo, properties: Record<string, string>
 	return metadata
 }
 
-async function readCatalog(filepath: string): Promise<ExtensionCatalog> {
-	const content = await fs.readFile(filepath, "utf-8")
-	const parsed: unknown = JSON.parse(content)
-	if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
-		throw new Error(`${filepath} must contain a JSON object`)
-	}
-	return parsed as ExtensionCatalog
-}
-
-async function writeCatalog(filepath: string, catalog: ExtensionCatalog): Promise<void> {
-	const temporaryPath = `${filepath}.tmp`
-	await fs.writeFile(temporaryPath, `${JSON.stringify(catalog, null, 4)}\n`, "utf-8")
-	await fs.rename(temporaryPath, filepath)
-}
-
-async function addExtension(id: string, catalog: ExtensionCatalog, filepath: string): Promise<boolean> {
+async function addExtension(id: string, catalog: ExtensionCatalog): Promise<boolean> {
 	const [publisher, ...extensionParts] = id.split(".")
 	const name = extensionParts.join(".")
 	if (catalog[publisher]?.[name]) {
@@ -162,7 +147,6 @@ async function addExtension(id: string, catalog: ExtensionCatalog, filepath: str
 		src: source,
 		meta: makeMetadata(extInfo, properties, id),
 	}
-	await writeCatalog(filepath, catalog)
 
 	const platformList = Object.keys(source.hash).join(", ")
 	console.info(`[SUCCESS] Added ${id} v${currentVersion.version} (${platformList})`)
@@ -180,18 +164,16 @@ async function main(args: string[]): Promise<void> {
 		throw new Error("Usage: add-vscode-extensions <publisher.extension | Marketplace URL | install command> [...]")
 	}
 
-	const filepath = path.join(__dirname, "../../assets/vscode.extensions.json")
-	const catalog = await readCatalog(filepath)
+	const sourceData = await readSourceData()
+	const catalog: ExtensionCatalog = sourceData.extensions.vscode
 	let added = 0
 
 	for (const id of ids) {
-		if (await addExtension(id, catalog, filepath)) added++
+		if (await addExtension(id, catalog)) added++
 	}
+	if (added > 0) await writeSourceData(sourceData)
 
 	console.info(`[INFO] Added ${added} extension(s)`)
 }
 
-main(process.argv.slice(2)).catch(error => {
-	console.error(error)
-	process.exitCode = 1
-})
+runScript(() => main(process.argv.slice(2)))

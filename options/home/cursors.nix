@@ -4,20 +4,25 @@
   pkgs,
   ...
 }: let
-  cursors = lib.importJSON (lib.root "/assets/cursors.json");
+  cursors = lib.source-data.cursors;
   cursors-theme = config.theme.cursors;
-  cursors-name = lib.last (lib.splitString "/" cursors-theme);
+  cursors-theme-path = lib.splitString "/" cursors-theme;
+  cursors-category = builtins.elemAt cursors-theme-path 0;
+  cursors-name = builtins.elemAt cursors-theme-path 1;
+  cursor-options = lib.concatMap (
+    category: map (name: "${category}/${name}") (lib.attrNames cursors.${category})
+  ) (lib.attrNames cursors);
 in {
   options = {
     theme.cursors = lib.mkOption {
-      type = lib.types.enum ([null] ++ (lib.attrNames cursors));
+      type = lib.types.enum ([null] ++ cursor-options);
       default = null;
       description = "Cursor theme to use for the desktop";
     };
   };
 
   config.home.pointerCursor = lib.mkIf (cursors-theme != null) (let
-    cursors-data = cursors.${cursors-theme};
+    cursors-data = cursors.${cursors-category}.${cursors-name};
     is-cursors-hash = (builtins.typeOf cursors-data) != "set";
 
     inherit
@@ -30,7 +35,7 @@ in {
         }
         else {
           url = cursors-data.url or "https://static.asakiyuki.com/packages/cursors/linux/${cursors-theme}.tar.gz";
-          hash = cursors-data.hash or (throw "${cursors-theme} is not a hash, please define in assets/cursors.json");
+          hash = cursors-data.hash or (throw "${cursors-theme} is not a hash, please define in assets/sources.json");
           stripRoot = cursors-data.strip-root or true;
         }
       )

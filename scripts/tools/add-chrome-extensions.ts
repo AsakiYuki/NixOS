@@ -1,7 +1,6 @@
-import fs from "node:fs/promises"
-import path from "node:path"
-
 import { fetchChromeExtension, type BrowserExtensions } from "../helpers/browser-extensions"
+import { runScript } from "../helpers/cli"
+import { readSourceData, writeSourceData } from "../helpers/source-data"
 
 const chromeIdPattern = /^[a-p]{32}$/
 
@@ -170,19 +169,16 @@ async function fetchStoreMetadata(id: string): Promise<{ name: string; descripti
 	return { name, description: getMetaContent(html, "og:description") }
 }
 
-function stringifyCatalog(catalog: BrowserExtensions): string {
-	const json = JSON.stringify(catalog, null, 4)
-	return `${json.replace(/[^\x00-\x7f]/g, character =>
-		`\\u${character.charCodeAt(0).toString(16).padStart(4, "0")}`)}\n`
-}
-
 async function main(inputs: string[]): Promise<void> {
 	if (inputs.length === 0) {
 		throw new Error("Usage: add-chrome-extensions <extension name | Chrome Web Store URL | extension ID> [...]")
 	}
 
-	const filepath = path.join(__dirname, "../../assets/browser.extensions.json")
-	const catalog: BrowserExtensions = JSON.parse(await fs.readFile(filepath, "utf-8"))
+	const sourceData = await readSourceData()
+	const catalog: BrowserExtensions = {
+		firefox: sourceData.extensions.firefox,
+		chrome: sourceData.extensions.chrome,
+	}
 	let added = 0
 
 	for (const input of inputs) {
@@ -210,14 +206,9 @@ async function main(inputs: string[]): Promise<void> {
 	}
 
 	if (added > 0) {
-		const temporaryPath = `${filepath}.tmp`
-		await fs.writeFile(temporaryPath, stringifyCatalog(catalog), "utf-8")
-		await fs.rename(temporaryPath, filepath)
+		await writeSourceData(sourceData)
 	}
 	console.info(`[INFO] Added ${added} Chrome extension(s)`)
 }
 
-main(process.argv.slice(2)).catch(error => {
-	console.error(error)
-	process.exitCode = 1
-})
+runScript(() => main(process.argv.slice(2)))

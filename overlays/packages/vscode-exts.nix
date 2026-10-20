@@ -1,6 +1,7 @@
 {
 	pkgs,
 	lib,
+	sources,
 	...
 }:
 let
@@ -17,7 +18,7 @@ let
 		"i686-windows" = "win32-ia32";
 	};
 	targetPlatform = platforms.${pkgs.stdenv.hostPlatform.system} or null;
-	extensions = lib.importJSON ../../assets/vscode.extensions.json;
+	extensions = sources.extensions.vscode;
 
 	buildExtension = publisher: name: extension:
 		let

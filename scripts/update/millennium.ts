@@ -2,6 +2,8 @@ import fs from "node:fs/promises"
 import os from "node:os"
 import path from "node:path"
 import { spawn } from "node:child_process"
+import { runScript } from "../helpers/cli"
+import { readSourceData, writeSourceData } from "../helpers/source-data"
 
 type Plugin = {
 	name: string
@@ -98,14 +100,20 @@ async function pluginConfigKeys(root: string): Promise<string[]> {
 	return [...keys].sort((a, b) => a.localeCompare(b))
 }
 
-async function hashDependencies(names: string[], data: PluginData, root: string): Promise<void> {
+async function hashDependencies(
+	names: string[],
+	data: PluginData,
+	sourceData: Record<string, any>,
+	root: string,
+): Promise<void> {
 	if (names.length === 0) return
 
 	for (const name of names) data.plugins[name].depsHash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
 	const expression = `let
   flake = builtins.getFlake (toString ./.);
+  sources = builtins.fromJSON (builtins.readFile ./assets/sources.json);
   pkgs = import flake.inputs.nixpkgs.outPath {
-    overlays = [ (_: pkgs: import ./overlays/packages (pkgs // { inherit pkgs; })) ];
+    overlays = [ (_: pkgs: import ./overlays/packages (pkgs // { inherit pkgs sources; })) ];
   };
   nixAttrName = id: builtins.replaceStrings [ "." ] [ "_" ] id;
   names = [ ${names.map(name => JSON.stringify(name)).join(" ")} ];
@@ -133,7 +141,7 @@ in pkgs.linkFarm "millennium-plugin-dependencies" (map (name: {
 		if (!hash) throw new Error(`Could not calculate dependency hash for ${name}. Nix output:\n${firstPass.output}`)
 		data.plugins[name].depsHash = hash
 	}
-	await fs.writeFile(path.join(root, "assets/millennium.json"), JSON.stringify(data, null, 4) + "\n", "utf8")
+	await writeSourceData(sourceData)
 
 	const validation = await run("nix", [
 		"build",
@@ -148,14 +156,20 @@ in pkgs.linkFarm "millennium-plugin-dependencies" (map (name: {
 	if (validation.code !== 0) throw new Error(`Pinned dependency derivations failed to build:\n${validation.output}`)
 }
 
-async function hashThemeDependencies(names: string[], data: MillenniumData, root: string): Promise<void> {
+async function hashThemeDependencies(
+	names: string[],
+	data: MillenniumData,
+	sourceData: Record<string, any>,
+	root: string,
+): Promise<void> {
 	if (names.length === 0) return
 
 	for (const name of names) data.themes![name].depsHash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
 	const expression = `let
   flake = builtins.getFlake (toString ./.);
+  sources = builtins.fromJSON (builtins.readFile ./assets/sources.json);
   pkgs = import flake.inputs.nixpkgs.outPath {
-    overlays = [ (_: pkgs: import ./overlays/packages (pkgs // { inherit pkgs; })) ];
+    overlays = [ (_: pkgs: import ./overlays/packages (pkgs // { inherit pkgs sources; })) ];
   };
   nixAttrName = id: builtins.replaceStrings [ "." ] [ "_" ] id;
   names = [ ${names.map(name => JSON.stringify(name)).join(" ")} ];
@@ -176,7 +190,7 @@ in pkgs.linkFarm "millennium-theme-dependencies" (map (name: {
 		if (!hash) throw new Error(`Could not calculate theme dependency hash for ${name}. Nix output:\n${firstPass.output}`)
 		data.themes![name].depsHash = hash
 	}
-	await fs.writeFile(path.join(root, "assets/millennium.json"), JSON.stringify(data, null, 4) + "\n", "utf8")
+	await writeSourceData(sourceData)
 
 	const validation = await run("nix", [
 		"build", "--impure", "--keep-going", "--extra-experimental-features", "nix-command flakes",
@@ -189,8 +203,9 @@ async function buildPlugins(names: string[], root: string): Promise<void> {
 	if (names.length === 0) return
 	const expression = `let
   flake = builtins.getFlake (toString ./.);
+  sources = builtins.fromJSON (builtins.readFile ./assets/sources.json);
   pkgs = import flake.inputs.nixpkgs.outPath {
-    overlays = [ (_: pkgs: import ./overlays/packages (pkgs // { inherit pkgs; })) ];
+    overlays = [ (_: pkgs: import ./overlays/packages (pkgs // { inherit pkgs sources; })) ];
   };
   nixAttrName = id: builtins.replaceStrings [ "." ] [ "_" ] id;
   names = [ ${names.map(name => JSON.stringify(name)).join(" ")} ];
@@ -215,8 +230,9 @@ async function buildThemes(names: string[], root: string): Promise<void> {
 	if (names.length === 0) return
 	const expression = `let
   flake = builtins.getFlake (toString ./.);
+  sources = builtins.fromJSON (builtins.readFile ./assets/sources.json);
   pkgs = import flake.inputs.nixpkgs.outPath {
-    overlays = [ (_: pkgs: import ./overlays/packages (pkgs // { inherit pkgs; })) ];
+    overlays = [ (_: pkgs: import ./overlays/packages (pkgs // { inherit pkgs sources; })) ];
   };
   nixAttrName = id: builtins.replaceStrings [ "." ] [ "_" ] id;
   names = [ ${names.map(name => JSON.stringify(name)).join(" ")} ];
@@ -265,10 +281,10 @@ function themeKey(name: string, id: string): string {
 async function main() {
 	const root = process.cwd()
 	const configKeysOnly = process.argv.includes("--config-keys-only")
-	const dataPath = path.join(root, "assets/millennium.json")
 	const commitPath = path.join(root, "millennium-commit.txt")
-	const originalFile = await fs.readFile(dataPath, "utf8")
-	const data: MillenniumData = JSON.parse(originalFile)
+	const sourceData = await readSourceData()
+	const data: MillenniumData = sourceData.extensions.millennium
+	const originalData = JSON.stringify(data)
 	data.themes ??= {}
 	const temp = await fs.mkdtemp(path.join(os.tmpdir(), "millennium-plugin-database-"))
 	await fs.rm(commitPath, { force: true })
@@ -411,15 +427,16 @@ async function main() {
 		}
 
 		try {
-			await fs.writeFile(dataPath, JSON.stringify(data, null, 4) + "\n", "utf8")
-			await hashDependencies(changedNames, data, root)
-			await hashThemeDependencies(changedThemeNames.filter(name => data.themes![name].buildCommand), data, root)
-			await fs.writeFile(dataPath, JSON.stringify(data, null, 4) + "\n", "utf8")
+			await writeSourceData(sourceData)
+			await hashDependencies(changedNames, data, sourceData, root)
+			await hashThemeDependencies(changedThemeNames.filter(name => data.themes![name].buildCommand), data, sourceData, root)
+			await writeSourceData(sourceData)
 			await buildPlugins(changedNames, root)
 			await buildThemes(changedThemeNames, root)
 			await fs.writeFile(commitPath, changes.join("\n"), "utf8")
 		} catch (error) {
-			await fs.writeFile(dataPath, originalFile, "utf8")
+			sourceData.extensions.millennium = JSON.parse(originalData)
+			await writeSourceData(sourceData)
 			throw error
 		}
 		console.info(
@@ -430,7 +447,4 @@ async function main() {
 	}
 }
 
-main().catch(error => {
-	console.error(error)
-	process.exitCode = 1
-})
+runScript(main)

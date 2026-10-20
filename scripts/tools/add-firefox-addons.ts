@@ -1,18 +1,20 @@
-import path from "node:path"
-import fs from "node:fs/promises"
-
 import {
 	fetchFirefoxAddon,
 	getLocalized,
 	type BrowserExtensions,
 } from "../helpers/browser-extensions"
+import { runScript } from "../helpers/cli"
+import { readSourceData, writeSourceData } from "../helpers/source-data"
 
 async function main(...args: string[]) {
 	const addonNameRegex = /(?<=(https|http):\/\/addons.mozilla.org\/\w+-\w+\/firefox\/addon\/)(\w|-)+/
 	const isAddonNameRegex = /^(\w|-)+$/
 
-	const filepath = path.join(__dirname, "../../assets/browser.extensions.json")
-	const extensions: BrowserExtensions = JSON.parse(await fs.readFile(filepath, "utf-8"))
+	const sourceData = await readSourceData()
+	const extensions: BrowserExtensions = {
+		firefox: sourceData.extensions.firefox,
+		chrome: sourceData.extensions.chrome,
+	}
 	const firefoxAddons = extensions.firefox
 
 	await Promise.all(
@@ -56,7 +58,7 @@ async function main(...args: string[]) {
 		}),
 	)
 
-	await fs.writeFile(filepath, JSON.stringify(extensions, null, 4) + "\n", "utf-8")
+	await writeSourceData(sourceData)
 }
 
-main(...process.argv.slice(2))
+runScript(() => main(...process.argv.slice(2)))

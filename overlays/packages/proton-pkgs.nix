@@ -1,9 +1,10 @@
 {
   pkgs,
   lib,
+  sources,
   ...
 }: let
-  proton-data = lib.importJSON ../../assets/proton.json;
+  proton-data = sources.packages.wine;
   hostPlatform = pkgs.stdenv.hostPlatform;
   system = hostPlatform.system;
 

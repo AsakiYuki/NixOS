@@ -3,8 +3,10 @@
   self,
   state-version,
   lib,
+  source-data,
   ...
-}: cfg: let
+}: cfg:
+let
   nixosModules = name: inputs.${name}.nixosModules.default;
 
   defaultModules = [
@@ -21,7 +23,7 @@ in {
       localSystem = sys;
       config.allowUnfree = true;
       overlays = [
-        (_: pkgs: import ../overlays/packages (pkgs // {inherit pkgs;}))
+        (_: pkgs: import ../overlays/packages (pkgs // { inherit pkgs; sources = source-data; }))
       ];
     };
 
@@ -32,6 +34,7 @@ in {
       })
       // {
         flake-name = name;
+        inherit source-data;
         inherit state-version;
       });
   in
