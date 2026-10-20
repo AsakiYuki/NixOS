@@ -1,11 +1,12 @@
----
-name: nixos-config
-description: Work on this repository's NixOS and Home Manager flake, host/device modules, package overlays, and source-data updaters.
----
+# AGENTS.md
+
+## Scope
+
+This file is the canonical guide for AI agents working in this repository. Keep tool-specific instruction files thin and have them import this file instead of duplicating its rules.
 
 # NixOS repository work
 
-Use this skill for changes in this repository. Read the root [README](../../../README.md) for the configuration names and command examples; inspect the target module's imports before changing it.
+Follow these instructions when changing this repository. Read the root [README](README.md) for the configuration names and command examples; inspect the target module's imports before changing it.
 
 ## Repository structure
 
