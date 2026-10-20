@@ -2344,11 +2344,11 @@
                 }
             },
             "free-download-manager-addon": {
-                "version": "3.3.2",
+                "version": "3.3.4",
                 "id": "fdm_ffext2@freedownloadmanager.org",
                 "src": {
-                    "url": "https://addons.mozilla.org/firefox/downloads/file/4904785/free_download_manager_addon-3.3.2.xpi",
-                    "hash": "sha256-Hw0ObXkca539EkwBkdjWuX8bL4oocrsp+ztuvl5RyXo="
+                    "url": "https://addons.mozilla.org/firefox/downloads/file/5115357/free_download_manager_addon-3.3.4.xpi",
+                    "hash": "sha256-/iPFxKDVRGW351zGZvZHK+1MWiEvyeQcX+crNh/dyzM="
                 },
                 "meta": {
                     "name": "Free Download Manager official extension",
@@ -2404,11 +2404,11 @@
                 }
             },
             "media-downloader-unleashed": {
-                "version": "4.1.8",
+                "version": "4.1.9",
                 "id": "{dab9a10d-f9c5-4e8d-9351-67531e85b508}",
                 "src": {
-                    "url": "https://addons.mozilla.org/firefox/downloads/file/5129184/media_downloader_unleashed-4.1.8.xpi",
-                    "hash": "sha256-Sh/XAoM/bxufuiDC1gZ5P2ewIhsCdGR9t99mLAPlQbQ="
+                    "url": "https://addons.mozilla.org/firefox/downloads/file/5144536/media_downloader_unleashed-4.1.9.xpi",
+                    "hash": "sha256-mstq9ObD48Z2LqLgofAg4e/i9/NvebRjlIbY5sr9unc="
                 },
                 "meta": {
                     "name": "Media Downloader Unleashed!!",
@@ -4689,8 +4689,8 @@
                     "description": "Another Design for Steam",
                     "owner": "dotFelixan",
                     "repo": "NEVKO-UI",
-                    "rev": "9a9cd3b2413681644ac764299efe168e31fe500b",
-                    "hash": "0wyzflyzqpxmf053n8d0z69hl505h8klwvz56cq9gmprzm14lf8h",
+                    "rev": "47733c96cb6c0c3281c1d2e9b3c33ef3aa70b8e3",
+                    "hash": "1nvp73v23pvgkmmd5wa2ii9ha9h7jkfa1r5plmrzdkwkil02pwlq",
                     "storeId": "PfApgfY80M1svZEWXQtX"
                 },
                 "leimu": {
@@ -4859,12 +4859,12 @@
                 },
                 "aika": {
                     "name": "Aika",
-                    "version": "0.1.4",
+                    "version": "0.1.5",
                     "description": "A warm dark theme for Steam: Fluent structure, file-system-style panels and soft spots of light on a near-black background.",
                     "owner": "hatewxb",
                     "repo": "Aika",
-                    "rev": "fbc08aea653bdd91f9730f9da11bce516c8ec909",
-                    "hash": "0xypsc0rmqiz69aa1a133rq8ih47ikzvjna7n6952w7ilspd2xig",
+                    "rev": "d7722137658a9f89ca8af7dfc563620b3c03a7fe",
+                    "hash": "1bhidrm7izrnz0hc21jadrsisb59bs3gjc6si41vfmjvnznghhsc",
                     "storeId": "uV8M1eg45Hh662blPuyD"
                 }
             }
