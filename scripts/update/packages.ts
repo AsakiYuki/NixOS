@@ -30,6 +30,9 @@ const getCageXtmapperTarAssets = (latest: LatestReleaseData) =>
 		return match ? [{ version: match[1], asset }] : []
 	})
 
+const getLatestCageXtmapperVersion = (versions: string[]) =>
+	versions.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" })).at(-1)
+
 async function fetchLastReleasePackage(options: FetchLastPackageArgs) {
 	const {
 		author,
@@ -198,8 +201,11 @@ async function main() {
 			is_up_to_date: (cached, latest, release) => {
 				const tarAssets = getCageXtmapperTarAssets(latest)
 				const versions = cached?.versions ?? {}
+				const defaultVersion = getLatestCageXtmapperVersion(tarAssets.map(({ version }) => version))
 				return (
 					cached?.release === release &&
+					cached?.defaultVersion === defaultVersion &&
+					defaultVersion !== undefined &&
 					tarAssets.length > 0 &&
 					Object.keys(versions).length === tarAssets.length &&
 					tarAssets.every(({ version, asset }) => {
@@ -215,6 +221,11 @@ async function main() {
 					console.warn(`[WARN] No versioned cage-xtmapper tar assets found in release v${release}.`)
 					return false
 				}
+				const defaultVersion = getLatestCageXtmapperVersion(tarAssets.map(({ version }) => version))
+				if (!defaultVersion) {
+					console.warn(`[WARN] Could not determine the default cage-xtmapper version from release v${release}.`)
+					return false
+				}
 
 				const versionEntries = await Promise.all(
 					tarAssets.map(async ({ version, asset }) => {
@@ -227,6 +238,7 @@ async function main() {
 
 				return {
 					release,
+					defaultVersion,
 					versions: Object.fromEntries(versionEntries),
 				}
 			},

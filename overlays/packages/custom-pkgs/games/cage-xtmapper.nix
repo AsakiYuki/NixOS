@@ -1,17 +1,17 @@
 {
   pkgs,
   data,
-  version ? "0.3.0",
+  version ? "latest",
   ...
 }: let
   inherit (data) cage-xtmapper;
-  release = cage-xtmapper.release;
-  source = cage-xtmapper.versions.${version}.${pkgs.stdenv.system}
-    or (throw "cage-xtmapper ${version} is not supported on ${pkgs.stdenv.system}");
+  selectedVersion = if version == "latest" then cage-xtmapper.defaultVersion else version;
+  source = cage-xtmapper.versions.${selectedVersion}.${pkgs.stdenv.system}
+    or (throw "cage-xtmapper ${selectedVersion} is not supported on ${pkgs.stdenv.system}");
 in
   pkgs.stdenv.mkDerivation {
     pname = "cage-xtmapper";
-    version = version;
+    version = selectedVersion;
 
     src = pkgs.fetchurl {
       inherit (source) url hash;
