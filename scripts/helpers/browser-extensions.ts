@@ -143,7 +143,7 @@ export interface ChromeExtension {
 	id: string
 	src: ExtensionSource
 	meta?: Record<string, string>
-	managedSettings: Record<string, unknown>
+	managedSettings?: Record<string, unknown>
 }
 
 export interface BrowserExtensions {

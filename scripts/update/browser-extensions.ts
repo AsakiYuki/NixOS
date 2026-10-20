@@ -54,10 +54,6 @@ async function updateChromeExtensions(
 ): Promise<void> {
 	await Promise.all(Object.entries(extensions).map(async ([name, extension]) => {
 		console.info(`[INFO] Checking Chrome extension ${name}...`)
-		if (!extension.managedSettings || Object.keys(extension.managedSettings).length === 0) {
-			throw new Error(`${name} has no verified Chrome managed settings; refusing to update an unconfigurable extension.`)
-		}
-
 		const latest = await fetchChromeExtension(extension.id)
 		if (
 			latest.version === extension.version

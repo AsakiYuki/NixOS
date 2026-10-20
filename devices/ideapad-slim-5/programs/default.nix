@@ -17,6 +17,21 @@
       ${pkgs.chrome-extensions.tampermonkey.id} = {
         jsonImport = [ ];
       };
+      ${pkgs.chrome-extensions.keepassxc-browser.id}.settings = {
+        colorTheme = "system";
+        autoRetrieveCredentials = true;
+        showGettingStartedGuideAlert = false;
+      };
+      ${pkgs.chrome-extensions.auto-tab-discard.id} = {
+        period = 1800;
+        number = 20;
+        mode = "time-based";
+        audio = true;
+        paused = true;
+        pinned = true;
+        form = true;
+        online = true;
+      };
     };
   };
 }

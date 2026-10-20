@@ -1228,6 +1228,243 @@
             "managedSettings": {
                 "jsonImport": []
             }
+        },
+        "keepassxc-browser": {
+            "id": "oboonakemofpalcgghocfoadofidjkkk",
+            "version": "1.10.4.1",
+            "src": {
+                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcQbEAp_PMHqz1CpECAkCsQ-lWRgtqu57jKKNC_3FaXpu37lQFFbYEo6GEUObOILGhT46fbKbKVR6Nj4W3lFPfq99t9yk30bcCLlRLZoXmmiytRjvSUSjqPsZjsvGkIAxlKa5bdOtG5nVb_7NVV3U9IEH-sSq_Kj/OBOONAKEMOFPALCGGHOCFOADOFIDJKKK_1_10_4_1.crx",
+                "hash": "sha256-rabNmvObnhSuu20w6sNltm6HBO8/3ORucbFf7CZGME4="
+            },
+            "meta": {
+                "name": "KeePassXC-Browser",
+                "homepage": "https://keepassxc.org/",
+                "author": "KeePassXC Team"
+            },
+            "managedSettings": {
+                "settings": {
+                    "colorTheme": "system",
+                    "autoRetrieveCredentials": true,
+                    "showGettingStartedGuideAlert": false
+                }
+            }
+        },
+        "proton-pass": {
+            "id": "ghmbeldphafepmbegfdlkpapadhbakde",
+            "version": "1.42.0",
+            "src": {
+                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcT3QbE-bAQiRdIUn4XPljZtp2SUya697XVxSJuGecgEDgEkwA6KTVeQiN9fngYz-auiBXtHJOOy-OVRxaBfNnm4YvJrSe9h9ngIowTVKQ3coz_WMNhS_4PPGlcLk_YDAMZSmuWY-GtSm5PK-5uZZwOt9Fry1o-s8g/GHMBELDPHAFEPMBEGFDLKPAPADHBAKDE_1_42_0_0.crx",
+                "hash": "sha256-bt+LtIygXRhPADo/p4oqUQWduxvV+F1We/o9iHqdPxI="
+            },
+            "meta": {
+                "name": "Proton Pass: Free Password Manager",
+                "homepage": "https://chromewebstore.google.com/detail/ghmbeldphafepmbegfdlkpapadhbakde",
+                "description": "Free and fully encrypted password manager to keep your logins and passwords safe."
+            }
+        },
+        "auto-tab-discard": {
+            "id": "jhnleheckmknfcgijgkadoemagpecfol",
+            "version": "0.7.7",
+            "src": {
+                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcSMBoFGr6kSag46aIPbDlB7I7dP0RvxqOvTU0qjUDgzAOmklWp-qtlJPBcfW9YmK2hPWc6T4drqyF1VGz87mJnvbqA4Xk22_lmzqU2y4qpbWCmzG90qZ4o-u4dfhSwAxlKa5aoCuC5fQ2iue1atvIw9-7Y_MMIX/JHNLEHECKMKNFCGIJGKADOEMAGPECFOL_0_7_7_0.crx",
+                "hash": "sha256-tHPU12CEUCxHGpvQlNO0edq3bZKe80Q8LXdocbKCHYg="
+            },
+            "meta": {
+                "name": "Auto Tab Discard",
+                "homepage": "https://chromewebstore.google.com/detail/jhnleheckmknfcgijgkadoemagpecfol",
+                "description": "Increase browser speed and reduce memory load when you have numerous open tabs."
+            },
+            "managedSettings": {
+                "period": 1800,
+                "number": 20,
+                "mode": "time-based",
+                "audio": true,
+                "paused": true,
+                "pinned": true,
+                "form": true,
+                "online": true
+            }
+        },
+        "darkreader": {
+            "id": "eimadpbcbfnmbkopoojfekhnkhdbieeh",
+            "version": "4.9.133",
+            "src": {
+                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcSRy7yMWTvNkm6ejOebfYYQyM9v_7GiQiIJRZK1ef9E5dq0onHRyLplKIPQ1jOlFOLzz5Hr4Dqne7G6OoMelSnk8ikA-3inxvXpFSDway1szqX4kUXw1GQiwMDrpvsAxlKa5bgysZoJUnSlS9xvIyXwZgn1twZf/EIMADPBCBFNMBKOPOOJFEKHNKHDBIEEH_4_9_133_0.crx",
+                "hash": "sha256-7jjyDR1QeJ9LSCyaGl2tq1mbhoL9Kn37feIfroVhuRg="
+            },
+            "meta": {
+                "name": "Dark Reader",
+                "homepage": "https://chromewebstore.google.com/detail/eimadpbcbfnmbkopoojfekhnkhdbieeh",
+                "description": "Dark mode for every website. Take care of your eyes, use dark theme for night and daily browsing."
+            }
+        },
+        "single-file": {
+            "id": "mpiodijhokgodhhofbcjdecpffjipkle",
+            "version": "1.31.4",
+            "src": {
+                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcR6McqXYM665Avoz73O5oK-t5ZcPlq_bn0UAC-tPhozvS32CZseJC46RbmMVNsjcSt6YyJIhlDTxZlDfvVWh-WUWu6g32ZanvHqttdzqW99RSEnm65HIqsVdlJxDY8AxlKa5T9LvERGUzuhyS7XJQMX_o7_yP1u/MPIODIJHOKGODHHOFBCJDECPFFJIPKLE_1_31_4_0.crx",
+                "hash": "sha256-Jbjzk0EgVo38QHb9j0npk/31TiGdZOwvVf9CWLX2GAc="
+            },
+            "meta": {
+                "name": "SingleFile",
+                "homepage": "https://chromewebstore.google.com/detail/mpiodijhokgodhhofbcjdecpffjipkle",
+                "description": "Save a complete page into a single HTML file"
+            }
+        },
+        "sponsorblock-for-youtube-skip-sponsorships": {
+            "id": "mnjggcdmjocbbbhaepdhchncahnbgone",
+            "version": "6.1.6",
+            "src": {
+                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcTWfnmqjE44RBK5YQoPMBxSo1y7qcdg-DJ-fXQTElUiCRzoz076L2PnzCsPUQZqQOP-Qty-EFYPhnHaRYiJntKDMiuafq3_rcJ-LGKTOnEWoklqBe8_F207JV_shHYAxlKa5U8gzzlCzUWtqqLN4CT8eVJIRN0L/MNJGGCDMJOCBBBHAEPDHCHNCAHNBGONE_6_1_6_0.crx",
+                "hash": "sha256-VYf+K2qZRhAcoN3nxu/nanVcXuW21uY9/EjH9zbNtP8="
+            },
+            "meta": {
+                "name": "SponsorBlock for YouTube - Skip Sponsorships",
+                "homepage": "https://chromewebstore.google.com/detail/mnjggcdmjocbbbhaepdhchncahnbgone",
+                "description": "Skip sponsorships, subscription begging and more on YouTube videos. Report sponsors on videos you watch to save others' time."
+            }
+        },
+        "return-youtube-dislike": {
+            "id": "gebbhagfogifgggkldgodflihgfeippi",
+            "version": "4.0.5",
+            "src": {
+                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcTrCEEj5FjyOd1OpfxvHzoJxXSmnG2L1nDaAYl0zYK7C3eFcY1GfGq5vcqFMtDah6w_l_BdVA2Wgtd2jDOmRFduIs1YhyyyhGwiMfNurQ-s3WhQu2iUmFIB_yG0a2EAxlKa5cSh9s9vXTrLJxITvdMuSXfKkELD/GEBBHAGFOGIFGGGKLDGODFLIHGFEIPPI_4_0_5_0.crx",
+                "hash": "sha256-orlCwWL0GeALQYCMxrHd71wpOWNVupLk0VrtQcxYtUk="
+            },
+            "meta": {
+                "name": "Return YouTube Dislike",
+                "homepage": "https://chromewebstore.google.com/detail/gebbhagfogifgggkldgodflihgfeippi",
+                "description": "Returns ability to see dislikes"
+            }
+        },
+        "auth-helper": {
+            "id": "bhghoamapcdpbohphigoooaddinpkbai",
+            "version": "8.0.1",
+            "src": {
+                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcREt77HGFO8vh_lC-Pf0GsylamJ0uuXlfbGX3EOT84lChmQAHwYp-cRnhYIkTIyCi_dbrSjXrWlZtkLWzb--dE8lKYKJA-6XttoAv4lgw4yJb7uID6rLHCknitk8OueAMZSmuVnkGoWN9MJD5QFqUanOsjlo6oPWA/BHGHOAMAPCDPBOHPHIGOOOADDINPKBAI_8_0_1_0.crx",
+                "hash": "sha256-zyHVeLo7swr2xMostJXomhMpasoKPhRn2Vc1HXlAu7I="
+            },
+            "meta": {
+                "name": "Authenticator",
+                "homepage": "https://chromewebstore.google.com/detail/bhghoamapcdpbohphigoooaddinpkbai",
+                "description": "Authenticator generates two-factor authentication codes in your browser."
+            }
+        },
+        "user-agent-string-switcher": {
+            "id": "bhchdcejhohfmigjafbampogmaanbfkg",
+            "version": "0.7.2",
+            "src": {
+                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcRw1P_YXwaG_4_5sd-6VufD6-FlSMl-gS4wVrPuGoL6QBeZZmGQD-8-XHUEEn_Nz8L8EvnYOM1WMIRNaFPlyo-ELHnR45RHEmOEYEUQni6GRQOm21mYqf0SYli9urQAxlKa5WNNdx82ASQ7R7nD2b9Q4Q6Wcmyy/BHCHDCEJHOHFMIGJAFBAMPOGMAANBFKG_0_7_2_0.crx",
+                "hash": "sha256-Z4HDZOZpxpWcKPUDIxaVmjMY8aE5UwZeR335qksH40A="
+            },
+            "meta": {
+                "name": "User-Agent Switcher and Manager",
+                "homepage": "https://chromewebstore.google.com/detail/bhchdcejhohfmigjafbampogmaanbfkg",
+                "description": "Spoof websites trying to gather information about your web navigation to deliver distinct content you may not want"
+            }
+        },
+        "react-devtools": {
+            "id": "fmkadmapgofadopljbjfkapdkoienihi",
+            "version": "8.0.0",
+            "src": {
+                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcTTwTsxETatDIg4CEI_bjxcn1HOVzFjQjXl6Z_-hgYPUm3q0i6S6vLcjii8am2kWLGMKi_kMyvVezcnd7dVqzubhZexPqm3mMXweP6Gb6wnwsw4GLM-IsUgjlka-E4AxlKa5U6I0MeE0izvhAXOBaeRkPQ4PrBY/FMKADMAPGOFADOPLJBJFKAPDKOIENIHI_8_0_0_0.crx",
+                "hash": "sha256-2S4RIqFjYsxVEJJwaKWxqNULQ+HzviXDEX98AFgHswI="
+            },
+            "meta": {
+                "name": "React Developer Tools",
+                "homepage": "https://chromewebstore.google.com/detail/fmkadmapgofadopljbjfkapdkoienihi"
+            }
+        },
+        "vimium-c": {
+            "id": "hfjbmagddngcpeloejdejnfgbamkjaeg",
+            "version": "2.12.2",
+            "src": {
+                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcQ8OYxWfoJ9qp7pOR-FjwfMU-yi16Sb2L8CFhlZsCPKmvMHS36J0ouKIPnjH7PP67DsNnyBcRUZtyPAn01fobLaMpiepnOi1y0XHaWtcIra-JLVESB5_9Z4h4-RzG0AxlKa5TgJRFxpXs7t9c6fhRYHFf9_AnAX/HFJBMAGDDNGCPELOEJDEJNFGBAMKJAEG_2_12_2_0.crx",
+                "hash": "sha256-1kiLH+QIjOIheJXFNE/BKJ7tWZLvwHpr6ec1cLIlBCM="
+            },
+            "meta": {
+                "name": "Vimium C - All by Keyboard",
+                "homepage": "https://chromewebstore.google.com/detail/hfjbmagddngcpeloejdejnfgbamkjaeg",
+                "description": "A keyboard shortcut tool for keyboard-based page navigation and browser tab operations with an advanced omnibar and global shortcuts"
+            }
+        },
+        "styl-us": {
+            "id": "clngdbkpkpeebahjckkjfobafhncgmne",
+            "version": "2.4.14",
+            "src": {
+                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcR4r_qeFex0hTH-CD6FsP3rL5zYZmfBS6xPpaYp07_ZRe7dQrfMH8XavGpCM5I-FAjkyqd_yzk_-Vmq7w6xAb-RzCKnexJLyZ9_Q-P0UnqZ5et5Y3xni_8066OlMaIAxlKa5d4MloEPqW0zmOrV_J5-AS-mDS8d/CLNGDBKPKPEEBAHJCKKJFOBAFHNCGMNE_2_4_14_0.crx",
+                "hash": "sha256-82toCWp5v/Crf35et50ISOw2Q66ZhJrCx59rhDVTRPk="
+            },
+            "meta": {
+                "name": "Stylus",
+                "homepage": "https://chromewebstore.google.com/detail/clngdbkpkpeebahjckkjfobafhncgmne",
+                "description": "Redesign the web with Stylus, a user styles manager. Stylus allows you to easily install themes and skins for many popular sites."
+            }
+        },
+        "steam-database": {
+            "id": "kdbmhfkmnlmbkgbabkdealhhbfhlmmon",
+            "version": "4.37",
+            "src": {
+                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcSpsCaZhc80ORfuFRs8yxwtOtCU0d9WSWMbr6AyhBGgeYZQ4ZjPE4EjRLVG4tjJSrbq6Tv8THWuwfqI-7b9CO0z68r8zKE-waxFKFSYc0jIP7fa182Tl_QhmtFKSxwAxlKa5YkqPL6tuy0rt-_4C0Lf-5u5dwn_/KDBMHFKMNLMBKGBABKDEALHHBFHLMMON_4_37_0_0.crx",
+                "hash": "sha256-p+ifp+k4wwTlLQzwN5D5UTK+viMYBpreGfleXgwPeFc="
+            },
+            "meta": {
+                "name": "SteamDB",
+                "homepage": "https://chromewebstore.google.com/detail/kdbmhfkmnlmbkgbabkdealhhbfhlmmon",
+                "description": "Adds SteamDB links and new features on the Steam store and community. View lowest game prices and stats."
+            }
+        },
+        "cookie-editor": {
+            "id": "hlkenndednhfkekhgcdicdfddnkalmdm",
+            "version": "1.13.0",
+            "src": {
+                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcTs7-1I8JKDIXjew4_jbd7OzHLF0-PS6kpTjkD0z5TM8iZGpL5kvu5du2DWokbTKAWTmLxjqH53DRFobQOgbd4qryUWcizGJMbS22ylOr_nbD0RFDXdexKGJY3pX5oAxlKa5fkE4Da4PPjHqfwOnUxQ1rRqMw4Z/HLKENNDEDNHFKEKHGCDICDFDDNKALMDM_1_13_0_0.crx",
+                "hash": "sha256-dUoHKltjJ9J6DU1uKZqOKLKl+vvVlcy2v81AkK6OsDg="
+            },
+            "meta": {
+                "name": "Cookie-Editor",
+                "homepage": "https://chromewebstore.google.com/detail/hlkenndednhfkekhgcdicdfddnkalmdm",
+                "description": "Simple yet powerful Cookie Editor that allow you to quickly create, edit and delete cookies without leaving your tab."
+            }
+        },
+        "simple-translate": {
+            "id": "ibplnjkanclpjokhdolnendpplpjiace",
+            "version": "3.1.0",
+            "src": {
+                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcTkec_gmhEUNybDEIv38UUh1UtX72mOctuvVkKfI-i87W50bC0muPGktz7Q87Gy_jple11pwOIdRku2f5_TQvLvb0POKdssXoosCow-xwbpxrE0cW8iWA4DId9DaakAxlKa5cc7BNnmZvxi2Yuyz2lsnafPPnoU/IBPLNJKANCLPJOKHDOLNENDPPLPJIACE_3_1_0_0.crx",
+                "hash": "sha256-cC5FdeERprBc/zT66FtlkTW51/AsQ+gXRtixobw2IWg="
+            },
+            "meta": {
+                "name": "Simple Translate",
+                "homepage": "https://chromewebstore.google.com/detail/ibplnjkanclpjokhdolnendpplpjiace",
+                "description": "Quickly translate selected or typed text on web pages. Supports Google Translate and DeepL API."
+            }
+        },
+        "onetab": {
+            "id": "chphlpgkkbolifaimnlloiipkdnihall",
+            "version": "2.24",
+            "src": {
+                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcQtDZF7UHqeHkjKqRUX99FP5kNjeuHHWAZQgL-D0uI6F9Mi2uCstzIjBDdqz91L3gpjgbGH0vvExASAO04wUwFnL-qgtOWbXZhS9Ik00j5zhmOBN3i92SLd2LDn7ebuAMZSmuXaf4z8Xp7ePzC0_-Odl0hOY7P9ug/CHPHLPGKKBOLIFAIMNLLOIIPKDNIHALL_2_24_0_0.crx",
+                "hash": "sha256-e9tguLeVyjXBAgZFFDrrjbCLdaAVa5WOzwDDXftOVVE="
+            },
+            "meta": {
+                "name": "OneTab",
+                "homepage": "https://chromewebstore.google.com/detail/chphlpgkkbolifaimnlloiipkdnihall",
+                "description": "Save up to 95% memory and reduce tab clutter"
+            }
+        },
+        "enhancer-for-youtube": {
+            "id": "ponfpcnoihfmfllpaingbgckeeldkhle",
+            "version": "3.0.19",
+            "src": {
+                "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcSJgE8HjP-4FAiNG77eb3bAeqQFGva5qYWSqSogR3hVCRZsAKwlSB7cjijZ7vjxxv-6oLd1viM9y4cnTfSsmsYp6pljcF95b8VaHRO3d8Ty0fqg6nSORi-8zuerbQkAxlKa5dHnqW9l9z_-aq88iSj9NHFVhllm/PONFPCNOIHFMFLLPAINGBGCKEELDKHLE_3_0_19_0.crx",
+                "hash": "sha256-0vw3iCq/F5muPwn7Ny4g8LBkKrmSspaCtBo2ATxULeQ="
+            },
+            "meta": {
+                "name": "Enhancer for YouTube\u2122",
+                "homepage": "https://chromewebstore.google.com/detail/ponfpcnoihfmfllpaingbgckeeldkhle",
+                "description": "Take control of YouTube and boost your user experience!"
+            }
         }
     }
 }

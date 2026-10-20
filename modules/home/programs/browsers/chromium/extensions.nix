@@ -5,6 +5,23 @@
     [
       ublock-origin-lite
       tampermonkey
+      keepassxc-browser
+      proton-pass
+      auto-tab-discard
+      darkreader
+      single-file
+      sponsorblock-for-youtube-skip-sponsorships
+      return-youtube-dislike
+      auth-helper
+      user-agent-string-switcher
+      react-devtools
+      vimium-c
+      styl-us
+      steam-database
+      cookie-editor
+      simple-translate
+      onetab
+      enhancer-for-youtube
     ]
   );
 }
