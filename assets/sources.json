@@ -173,15 +173,15 @@
                 }
             },
             "photocraft": {
-                "version": "0.10.0",
+                "version": "0.11.1",
                 "source": {
                     "x86_64-linux": {
-                        "url": "https://github.com/storytold/photocraft/releases/download/v0.10.0/photocraft-0.10.0-linux-x86_64.tar.gz",
-                        "hash": "sha256-5SRROWz/dFWK00oMB4XlFjBNMTpLmLNfYiUa5pWifCI="
+                        "url": "https://github.com/storytold/photocraft/releases/download/v0.11.1/photocraft-0.11.1-linux-x86_64.tar.gz",
+                        "hash": "sha256-mXE1NEMdJbQJkLvQwL2VVX1dRFFTAw5dSzgjVCx8Sac="
                     },
                     "aarch64-linux": {
-                        "url": "https://github.com/storytold/photocraft/releases/download/v0.10.0/photocraft-0.10.0-linux-aarch64.tar.gz",
-                        "hash": "sha256-W6YR8QOo2tKW0GjQuM+d4CRVPgZxQ0yDizGQgLm81Iw="
+                        "url": "https://github.com/storytold/photocraft/releases/download/v0.11.1/photocraft-0.11.1-linux-aarch64.tar.gz",
+                        "hash": "sha256-9A5caLlyhyrvqnGjQbsNmzPxZxkj2uQjIB+HAYCOK+w="
                     }
                 }
             }
