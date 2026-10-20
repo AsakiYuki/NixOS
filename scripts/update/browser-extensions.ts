@@ -1,5 +1,4 @@
 import "dotenv/config"
-import path from "node:path"
 import { runScript } from "../helpers/cli"
 import { readSourceData, saveSourceUpdate } from "../helpers/source-data"
 
@@ -72,7 +71,6 @@ async function updateChromeExtensions(
 }
 
 async function main() {
-	const reportPath = path.join(__dirname, "../../browser-extensions-commit.txt")
 	const sourceData = await readSourceData()
 	const catalog: BrowserExtensions = {
 		firefox: sourceData.extensions.firefox,
@@ -85,7 +83,7 @@ async function main() {
 		updateChromeExtensions(catalog.chrome, updates),
 	])
 
-	if (!await saveSourceUpdate(sourceData, reportPath, updates)) {
+	if (!await saveSourceUpdate(sourceData, updates.length > 0)) {
 		console.info("[INFO] No browser extension updates found.")
 		return
 	}

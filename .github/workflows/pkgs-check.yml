@@ -34,9 +34,6 @@ jobs:
 
           ./.github/pkgs-update.sh
 
-          git checkout -- .
-          git clean -fd
-
           AFTER_COMMIT=$(git rev-parse HEAD)
           if [ "$BEFORE_COMMIT" != "$AFTER_COMMIT" ]; then
             git pull --rebase origin ${{ github.ref_name }}

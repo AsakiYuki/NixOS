@@ -281,15 +281,12 @@ function themeKey(name: string, id: string): string {
 async function main() {
 	const root = process.cwd()
 	const configKeysOnly = process.argv.includes("--config-keys-only")
-	const commitPath = path.join(root, "millennium-commit.txt")
 	const sourceData = await readSourceData()
 	const data: MillenniumData = sourceData.extensions.millennium
 	const originalData = JSON.stringify(data)
 	data.themes ??= {}
 	const temp = await fs.mkdtemp(path.join(os.tmpdir(), "millennium-plugin-database-"))
-	await fs.rm(commitPath, { force: true })
 	const database = path.join(temp, "PluginDatabase")
-	const changes: string[] = []
 	const changedNames: string[] = []
 	const changedConfigNames: string[] = []
 	const changedThemeNames: string[] = []
@@ -328,7 +325,6 @@ async function main() {
 				if (previous && configKeysChanged) {
 					data.plugins[key] = { ...previous, configKeys }
 					changedConfigNames.push(key)
-					changes.push(`Updated config keys: ${key} (${configKeys.length} key(s))`)
 					console.info(`[INFO] Discovered ${configKeys.length} config key(s) for ${key}`)
 				}
 				continue
@@ -338,7 +334,6 @@ async function main() {
 			if (previous?.rev === rev) {
 				data.plugins[key] = { ...previous, configKeys }
 				changedConfigNames.push(key)
-				changes.push(`Updated config keys: ${key} (${configKeys.length} key(s))`)
 				console.info(`[INFO] Discovered ${configKeys.length} config key(s) for ${key}`)
 				continue
 			}
@@ -363,7 +358,6 @@ async function main() {
 			}
 			data.plugins[key] = next
 			changedNames.push(key)
-			changes.push(`${previous ? "Updated" : "Added"}: ${key} ${previous?.version ?? "(new)"} -> ${next.version} (${rev})`)
 			console.info(`[INFO] ${previous ? "Updated" : "Added"} ${key} at ${rev}`)
 		}
 
@@ -411,7 +405,6 @@ async function main() {
 				}
 				data.themes[key] = next
 				changedThemeNames.push(key)
-				changes.push(`${previous ? "Updated" : "Added"} theme: ${key} ${previous?.version ?? "(new)"} -> ${version} (${rev})`)
 				console.info(`[INFO] ${previous ? "Updated" : "Added"} theme ${key} at ${rev}`)
 			}
 		}
@@ -422,7 +415,6 @@ async function main() {
 					? "[INFO] No Millennium plugin config keys changed."
 					: "[INFO] No new or updated approved Millennium plugins or themes.",
 			)
-			await fs.rm(commitPath, { force: true })
 			return
 		}
 
@@ -433,7 +425,6 @@ async function main() {
 			await writeSourceData(sourceData)
 			await buildPlugins(changedNames, root)
 			await buildThemes(changedThemeNames, root)
-			await fs.writeFile(commitPath, changes.join("\n"), "utf8")
 		} catch (error) {
 			sourceData.extensions.millennium = JSON.parse(originalData)
 			await writeSourceData(sourceData)

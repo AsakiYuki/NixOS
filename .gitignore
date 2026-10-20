@@ -6,7 +6,3 @@ node_modules
 /secrets
 secret.key
 result
-
-# git
-/commit.txt
-/*-commit.txt

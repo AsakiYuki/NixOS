@@ -32,6 +32,10 @@ Follow these instructions when changing this repository. Read the root [README](
 - Put package derivations in `overlays/packages/`; pass the shared database through `sources` rather than reading `assets/sources.json` again inside an overlay.
 - Follow nearby import and naming patterns instead of adding an abstraction for a single use.
 
+## Module imports and conditions
+
+- Keep module `imports` unconditional. Put configuration conditions under `config = lib.mkIf condition { ... };` instead of using `config` to choose imports; conditional imports can cause infinite recursion.
+
 ## Validation and update scripts
 
 For Nix changes, parse edited expressions and evaluate the narrowest affected flake output first. Useful commands include:
@@ -42,6 +46,12 @@ nix eval '.#nixosConfigurations.<name>.config.system.build.toplevel.drvPath' --r
 nix eval '.#homeConfigurations."asakiyuki@Macbook-Air-M5".activationPackage.drvPath' --raw
 ```
 
-Use `nix develop` for the repository's Bun and `vsce` tools. Run only the updater relevant to the change. Updaters use the network and can write `assets/sources.json` and root-level `*-commit.txt` reports; inspect and preserve existing work before running them. `.github/pkgs-update.sh` commits updates itself, so use individual `bun run check-...` commands for ordinary checks. A macOS activation package targets `aarch64-darwin`; evaluation on Linux does not imply it can be built there.
+Use `nix develop` for the repository's Bun and `vsce` tools. Run only the updater relevant to the change. Updaters use the network and write changes directly to `assets/sources.json`; inspect and preserve existing work before running them. `.github/pkgs-update.sh` runs all updaters and commits the changed source data once with entry counts in the subject; it refuses to run if `assets/sources.json` already has local changes. Use individual `bun run check-...` commands for ordinary checks. A macOS activation package targets `aarch64-darwin`; evaluation on Linux does not imply it can be built there.
 
 Do not read secret values from `.env`, `assets/secrets/`, or local secret files while documenting or changing unrelated configuration. Follow the existing secret references and module declarations instead.
+
+## Worktree and activation safety
+
+- Check `git status --short` before editing and preserve existing user changes. Do not discard or overwrite changes outside the requested scope.
+- Do not commit or push unless the user asks.
+- Prefer evaluation or builds for validation. `nrs`, `nixos-rebuild switch`, and `home-manager switch` activate a configuration; run them only when the user explicitly asks for activation.

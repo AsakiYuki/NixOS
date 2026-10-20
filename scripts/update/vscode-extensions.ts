@@ -1,6 +1,5 @@
 import "dotenv/config"
 import { createHash } from "crypto"
-import path from "path"
 import { runScript } from "../helpers/cli"
 import { VSCE } from "../helpers/vsce"
 import { readSourceData, saveSourceUpdate } from "../helpers/source-data"
@@ -50,10 +49,9 @@ async function hashVsix(id: string, version: string, targetPlatform?: string): P
 }
 
 async function main() {
-	const reportPath = path.join(__dirname, "../../vscode-extensions-commit.txt")
 	const sourceData = await readSourceData()
 	const data: Record<string, Record<string, any>> = sourceData.extensions.vscode
-	const commits: string[] = []
+	const updates: string[] = []
 
 	for (const [publisher, extensions] of Object.entries(data)) {
 		for (const [name, info] of Object.entries(extensions)) {
@@ -115,11 +113,11 @@ async function main() {
 
 			const platformList = Object.keys(source.hash).join(", ")
 			console.info(`[SUCCESS] Updated ${id} to v${currentVersion.version} (${platformList})`)
-			commits.push(`${id} ${currentVersion.version} - Platforms: ${platformList}`)
+			updates.push(`${id} ${currentVersion.version} - Platforms: ${platformList}`)
 		}
 	}
 
-	if (!await saveSourceUpdate(sourceData, reportPath, commits)) {
+	if (!await saveSourceUpdate(sourceData, updates.length > 0)) {
 		console.info(`[INFO] No VS Code extension updates found.`)
 		return
 	}

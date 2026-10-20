@@ -1,8 +1,6 @@
 import "dotenv/config"
 import * as cheerio from "cheerio"
 
-import path from "path"
-
 import { getGithubRepoLatestRelease } from "../helpers/github"
 import { fetchUrlHash, fetchZipHash } from "../helpers/nix"
 import { LatestReleaseData } from "../helpers/git"
@@ -10,8 +8,6 @@ import { runScript } from "../helpers/cli"
 import { readSourceData, saveSourceUpdate } from "../helpers/source-data"
 
 let packages: any = {}
-
-const descriptions: string[] = []
 
 interface FetchLastPackageArgs {
 	author: string
@@ -104,7 +100,6 @@ async function main() {
 					fetchZipHash(assets["x86_64-linux"].download_url),
 					fetchZipHash(assets["aarch64-linux"].download_url),
 				])
-				descriptions.push(`bun v${version} - Hash: x86_64: ${x64Hash} - aarch64: ${arm64Hash}`)
 
 				return {
 					version,
@@ -136,7 +131,6 @@ async function main() {
 					if (!file) continue
 					console.info(`[INFO] Fetching archive hash from: ${file.download_url}`)
 					const hash = await fetchUrlHash(file.download_url)
-					descriptions.push(`geode-cli v${version} (${system}) - Hash: ${hash}`)
 					source[system] = { url: file.download_url, hash }
 				}
 
@@ -180,8 +174,6 @@ async function main() {
 				console.info(`[INFO] Fetching zip hash from: ${downloadUrl}`)
 
 				const hash = await fetchZipHash(downloadUrl)
-
-				descriptions.push(`lsfg-vk v${version} (Linux x64) - Hash: ${hash}`)
 
 				packages["lsfg-vk"] = {
 					version,
@@ -233,7 +225,6 @@ async function main() {
 					tarAssets.map(async ({ version, asset }) => {
 						console.info(`[INFO] Fetching cage-xtmapper v${version} tar hash from ${asset.download_url}`)
 						const hash = await fetchUrlHash(asset.download_url)
-						descriptions.push(`cage-xtmapper v${version} (Linux x64) - Hash: ${hash}`)
 						return [version, { "x86_64-linux": { url: asset.download_url, hash } }] as const
 					}),
 				)
@@ -258,7 +249,6 @@ async function main() {
 
 				console.info(`[INFO] Fetching zip hash from: ${file.download_url}`)
 				const hash = await fetchZipHash(file.download_url)
-				descriptions.push(`geforcenow-electron v${version} - Hash: ${hash}`)
 
 				return { version, source: { "x86_64-linux": { url: file.download_url, hash } } }
 			},
@@ -288,7 +278,6 @@ async function main() {
 					fetchUrlHash(assets["x86_64-linux"].download_url),
 					fetchUrlHash(assets["aarch64-linux"].download_url),
 				])
-				descriptions.push(`opennow v${version} - Hash: x86_64: ${x64Hash} - aarch64: ${arm64Hash}`)
 
 				return {
 					version,
@@ -326,8 +315,6 @@ async function main() {
 					fetchZipHash(aarch64.download_url),
 				])
 
-				descriptions.push(`iris v${version} - Hash: x86_64: ${amd64} - arm64: ${arm64}`)
-
 				return {
 					version,
 					source: {
@@ -349,7 +336,6 @@ async function main() {
 
 				console.info(`[INFO] Fetching zip hash from: ${file.download_url}`)
 				const hash = await fetchUrlHash(file.download_url)
-				descriptions.push(`bedrock-on-linux v${version} - Hash: ${hash}`)
 
 				return { version, source: { "x86_64-linux": { url: file.download_url, hash } } }
 			},
@@ -369,7 +355,6 @@ async function main() {
 
 				console.info(`[INFO] Fetching url hash from: ${file.download_url}`)
 				const hash = await fetchUrlHash(file.download_url)
-				descriptions.push(`atoll v${version} - Hash: ${hash}`)
 
 				return { version, source: { "universal-darwin": { url: file.download_url, hash } } }
 			},
@@ -402,8 +387,6 @@ async function main() {
 					fetchZipHash(aarch64.download_url),
 				])
 
-				descriptions.push(`photocraft v${version} - Hash: x86_64: ${amd64} - aarch64: ${arm64}`)
-
 				return {
 					version,
 					source: {
@@ -435,7 +418,6 @@ async function main() {
 					if (!asset) continue
 					console.info(`[INFO] Fetching archive hash for ${system}: ${asset.download_url}`)
 					const hash = await fetchZipHash(asset.download_url)
-					descriptions.push(`cider-mv-resolver v${version} (${system}) - Hash: ${hash}`)
 					source[system] = { url: asset.download_url, hash }
 				}
 
@@ -485,8 +467,6 @@ async function main() {
 
 				const [amd64, arm64] = await Promise.all([fetchUrlHash(getUrl(latest.x64)), fetchUrlHash(getUrl(latest.arm64))])
 
-				descriptions.push(`cider-2 v${version} - Hash: x86_64: ${amd64} - aarch64: ${arm64}`)
-
 				packages["cider-2"] = {
 					...cached,
 					version,
@@ -506,12 +486,7 @@ async function main() {
 		})(),
 	])
 
-	await saveSourceUpdate(
-		sourceData,
-		path.join(__dirname, "../../packages-commit.txt"),
-		descriptions,
-		status.some(Boolean),
-	)
+	await saveSourceUpdate(sourceData, status.some(Boolean))
 }
 
 runScript(main)

@@ -1,7 +1,5 @@
 import "dotenv/config"
 
-import path from "path"
-
 import { getGitLatestReleases, LatestReleaseData } from "../helpers/git"
 import { getGithubRepoLatestRelease } from "../helpers/github"
 import { fetchUrlHash } from "../helpers/nix"
@@ -40,7 +38,6 @@ const systems: Record<ProtonArchitecture, ProtonSystem> = {
 }
 
 let protons: Record<string, Proton> = {}
-const descriptions: string[] = []
 
 function versionNormalization(version: string) {
 	const charReplace: Record<string, string | void> = {
@@ -105,7 +102,6 @@ async function fetchProtonRelease(options: FetchProtonReleaseArgs) {
 		const source = { url: asset.download_url, hash: await fetchUrlHash(asset.download_url) }
 		release[system] = source
 		proton.source_name[system] = sourceName
-		descriptions.push(`${key} ${newVersion} ${system} - Hash: ${source.hash}`)
 		changed = true
 	}
 
@@ -176,12 +172,7 @@ async function main() {
 		}),
 	])
 
-	await saveSourceUpdate(
-		sourceData,
-		path.join(__dirname, "../../proton-commit.txt"),
-		descriptions,
-		status.some(Boolean),
-	)
+	await saveSourceUpdate(sourceData, status.some(Boolean))
 }
 
 runScript(main)

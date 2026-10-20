@@ -96,7 +96,7 @@ bun run check-millennium-update
 bun run check-millennium-settings
 ```
 
-Updaters contact their source services. When they find changes, they can update `assets/sources.json` and create a root-level `*-commit.txt` report. Review both before committing. The `.github/pkgs-update.sh` workflow helper runs the updater suite and commits reports automatically; it is not a dry-run command.
+Updaters contact their source services and write changes directly to `assets/sources.json`; they do not create report files. The `.github/pkgs-update.sh` workflow helper runs the full updater suite, compares the database with `HEAD`, and creates one commit for the changed source data. Its subject includes counts of changed programs, Proton runtimes, and extensions; the commit body lists their names. It refuses to run when `assets/sources.json` already has local changes.
 
 The `add-firefox-addons`, `add-chrome-extensions`, and `add-vscode-extensions` scripts add entries to the corresponding source database section. Check each script in `scripts/tools/` for its accepted input format.
 

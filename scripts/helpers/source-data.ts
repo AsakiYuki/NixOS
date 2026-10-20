@@ -15,17 +15,10 @@ export async function writeSourceData(sourceData: Record<string, any>): Promise<
 
 export async function saveSourceUpdate(
 	sourceData: Record<string, any>,
-	reportPath: string,
-	updates: string[],
-	changed = updates.length > 0,
+	changed: boolean,
 ): Promise<boolean> {
-	if (!changed) {
-		await fs.rm(reportPath, { force: true })
-		return false
-	}
+	if (!changed) return false
 
 	await writeSourceData(sourceData)
-	if (updates.length > 0) await fs.writeFile(reportPath, `${updates.join("\n")}\n`, "utf-8")
-	else await fs.rm(reportPath, { force: true })
 	return true
 }
