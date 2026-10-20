@@ -3,7 +3,8 @@
   pkgs,
   lib,
   ...
-}: {
+}:
+{
   programs.zen-browser = lib.mkIf (!config.programs.disable-module.zen-browser) {
     private-browsing-extension-packages = with pkgs.firefox-addons; [
       auth-helper

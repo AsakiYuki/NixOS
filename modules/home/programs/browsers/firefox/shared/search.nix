@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   search = {
     default = "google";
     engines = {
@@ -125,7 +125,7 @@
 
       mynixos = {
         name = "My NixOS";
-        definedAliases = ["@mynixos"];
+        definedAliases = [ "@mynixos" ];
         icon = "https://mynixos.com/favicon.ico";
         urls = [
           {

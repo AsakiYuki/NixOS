@@ -2,7 +2,8 @@
   lib,
   config,
   ...
-}: {
+}:
+{
   config = lib.mkIf (!config.programs.disable-module.zen-browser) {
     programs.zen-browser.policies = {
       Authentication = false;
