@@ -35,6 +35,12 @@
                     "url": "https://github.com/Xtr126/cage-xtmapper/releases/download/v20261019/cage-xtmapper-v0.2.0.tar",
                     "hash": "sha256-FRIPR274FhsiZfH/ORIFqwVhZUQbsFJb5EK9te89LbQ="
                 }
+            },
+            "0.3.0": {
+                "x86_64-linux": {
+                    "url": "https://github.com/Xtr126/cage-xtmapper/releases/download/v20261019/cage-xtmapper-v0.3.0.tar",
+                    "hash": "sha256-id1EITQ8bIbFQORE40+DToJZBvAaKPmMcrLkUh5i1NU="
+                }
             }
         }
     },

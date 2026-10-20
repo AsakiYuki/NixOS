@@ -19,9 +19,16 @@ interface FetchLastPackageArgs {
 	pre_release?: boolean
 	cache_version?: (cached: any) => string
 	get_version?: (latestRelease: LatestReleaseData) => string
+	is_up_to_date?: (cached: any, latestRelease: LatestReleaseData, version: string) => boolean
 	new_version_found: (cached: any, latestRelease: LatestReleaseData, version: string) => any
 	debug?: (cached: any, latest: LatestReleaseData) => void
 }
+
+const getCageXtmapperTarAssets = (latest: LatestReleaseData) =>
+	latest.assets.flatMap(asset => {
+		const match = asset.name.match(/^cage-xtmapper-v(.+)\.tar$/i)
+		return match ? [{ version: match[1], asset }] : []
+	})
 
 async function fetchLastReleasePackage(options: FetchLastPackageArgs) {
 	const {
@@ -31,6 +38,7 @@ async function fetchLastReleasePackage(options: FetchLastPackageArgs) {
 		pre_release = true,
 		cache_version,
 		get_version,
+		is_up_to_date,
 		new_version_found,
 		debug,
 	} = options
@@ -51,7 +59,8 @@ async function fetchLastReleasePackage(options: FetchLastPackageArgs) {
 	const cacheVersion = cache_version?.(cached) ?? cached?.version
 	const newVersion = get_version?.(latestRelease) ?? latestRelease.tag_name
 
-	if (cacheVersion === newVersion) {
+	const upToDate = is_up_to_date?.(cached, latestRelease, newVersion) ?? cacheVersion === newVersion
+	if (upToDate) {
 		console.info(`[SKIP] ${pkgName} is already up to date (v${newVersion}).`)
 		return false
 	}
@@ -186,33 +195,39 @@ async function main() {
 			repository: "cage-xtmapper",
 			cache_version: cached => cached.release,
 			get_version: latest => latest.tag_name.slice(1),
+			is_up_to_date: (cached, latest, release) => {
+				const tarAssets = getCageXtmapperTarAssets(latest)
+				const versions = cached?.versions ?? {}
+				return (
+					cached?.release === release &&
+					tarAssets.length > 0 &&
+					Object.keys(versions).length === tarAssets.length &&
+					tarAssets.every(({ version, asset }) => {
+						const source = versions[version]?.["x86_64-linux"]
+						return source?.url === asset.download_url && typeof source?.hash === "string" && source.hash.length > 0
+					})
+				)
+			},
 			new_version_found: async (cached, latest, release) => {
-				const findTarForVersion = (version: string) =>
-					latest.assets.find(({ name }) => name.toLowerCase().endsWith(".tar") && name.includes(version))
-				const file1 = findTarForVersion("0.1.5")
-				const file2 = findTarForVersion("0.2.0")
+				const tarAssets = getCageXtmapperTarAssets(latest)
 
-				if (!file1 || !file2) {
-					console.warn(
-						`[WARN] Expected cage-xtmapper v0.1.5 and v0.2.0 tar assets not found in release v${release}.`,
-					)
+				if (tarAssets.length === 0) {
+					console.warn(`[WARN] No versioned cage-xtmapper tar assets found in release v${release}.`)
 					return false
 				}
 
-				console.info(`[INFO] Fetching zip hash from: ${file1.download_url}, ${file2.download_url}`)
-				const [hash1, hash2] = await Promise.all([
-					fetchZipHash(file1.download_url, false),
-					fetchZipHash(file2.download_url, false),
-				])
-
-				descriptions.push(`cage-xtmapper v${release} (Linux x64) - Hash 1: ${hash1}, Hash 2: ${hash2}`)
+				const versionEntries = await Promise.all(
+					tarAssets.map(async ({ version, asset }) => {
+						console.info(`[INFO] Fetching cage-xtmapper v${version} tar hash from ${asset.download_url}`)
+						const hash = await fetchUrlHash(asset.download_url)
+						descriptions.push(`cage-xtmapper v${version} (Linux x64) - Hash: ${hash}`)
+						return [version, { "x86_64-linux": { url: asset.download_url, hash } }] as const
+					}),
+				)
 
 				return {
 					release,
-					versions: {
-						"0.1.5": { "x86_64-linux": { url: file1.download_url, hash: hash1 } },
-						"0.2.0": { "x86_64-linux": { url: file2.download_url, hash: hash2 } },
-					},
+					versions: Object.fromEntries(versionEntries),
 				}
 			},
 		}),

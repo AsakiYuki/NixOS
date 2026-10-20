@@ -1,7 +1,7 @@
 {
   pkgs,
   data,
-  version ? "0.2.0",
+  version ? "0.3.0",
   ...
 }: let
   inherit (data) cage-xtmapper;
@@ -30,6 +30,9 @@ in
       udev
       seatd
       libxcb-render-util
+      libdisplay-info
+      libliftoff
+      libinput
     ];
 
     dontBuild = true;
