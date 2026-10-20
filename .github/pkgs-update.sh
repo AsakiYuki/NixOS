@@ -46,6 +46,15 @@ else
     echo "[INFO] Cannot found any firefox addons update!"
 fi
 
+bun run check-chromium-extensions-update
+if [ -f chromium-extensions-commit.txt ]; then
+    commit assets/chromium.extensions.json \
+        "ci(update-checker/chromium-extensions): update Chromium extensions $(date '+%H:%M:%S %d-%m-%Y')" \
+        "chromium-extensions-commit.txt"
+else
+    echo "[INFO] Cannot found any Chromium extension updates!"
+fi
+
 bun run check-millennium-update
 if [ -f millennium-commit.txt ]; then
     commit assets/millennium.json \

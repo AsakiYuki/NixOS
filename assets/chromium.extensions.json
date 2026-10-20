@@ -1,0 +1,22 @@
+{
+    "ublock-origin-lite": {
+        "id": "ddkjiahejlhfcafbddmgiahcphecmpfh",
+        "version": "2026.1018.2229",
+        "src": {
+            "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcRYe4sOX4czxaaPxT3nVyfO8lRbp_p9e6Y4yNYVdUcK-wxqKE0sQaqlVLIxO-KTgEOdZK5Ktmf1qE00-EJKrCrTdK6bkMRrSn5_Znc34sd_N7JYlX6_7xlhYWKVHZUGAMZSmuUG6Xe5Tcl2Jcrk-dGTNkrFF2fBRg/DDKJIAHEJLHFCAFBDDMGIAHCPHECMPFH_2026_1018_2229_0.crx",
+            "hash": "sha256-VZ0Q733LlrxOgS3ms/8MLmx6vKV4Mk2Nev19jPeKbdc="
+        },
+        "meta": {
+            "name": "uBlock Origin Lite",
+            "description": "An efficient content blocker for Chromium-based browsers.",
+            "homepage": "https://github.com/uBlockOrigin/uBOL-home",
+            "license": "GPL-3.0-or-later",
+            "author": "Raymond Hill"
+        },
+        "managedSettings": {
+            "defaultFiltering": "complete",
+            "disableFirstRunPage": true,
+            "showBlockedCount": true
+        }
+    }
+}

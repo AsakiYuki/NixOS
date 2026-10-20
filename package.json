@@ -27,6 +27,7 @@
 		"check-proton-update": "bun run scripts/update/proton.ts",
 		"check-vscode-extensions-update": "bun run scripts/update/vscode-extensions.ts",
 		"check-firefox-addons-update": "bun run scripts/update/firefox-addons.ts",
+		"check-chromium-extensions-update": "bun run scripts/update/chromium-extensions.ts",
 		"check-millennium-update": "bun run scripts/update/millennium.ts",
 		"check-millennium-settings": "bun run scripts/update/millennium.ts --config-keys-only",
 		"add-firefox-addons": "bun run scripts/tools/add-firefox-addons.ts",
