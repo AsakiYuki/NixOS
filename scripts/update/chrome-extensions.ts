@@ -1,7 +1,7 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 
-interface ChromiumExtension {
+interface ChromeExtension {
 	id: string
 	version: string
 	src: {
@@ -56,15 +56,15 @@ async function fetchLatestExtension(id: string) {
 }
 
 async function main() {
-	const assetPath = path.join(__dirname, "../../assets/chromium.extensions.json")
-	const commitPath = path.join(__dirname, "../../chromium-extensions-commit.txt")
-	const extensions: Record<string, ChromiumExtension> = JSON.parse(await fs.readFile(assetPath, "utf-8"))
+	const assetPath = path.join(__dirname, "../../assets/chrome.extensions.json")
+	const commitPath = path.join(__dirname, "../../chrome-extensions-commit.txt")
+	const extensions: Record<string, ChromeExtension> = JSON.parse(await fs.readFile(assetPath, "utf-8"))
 	const updates: string[] = []
 
 	await Promise.all(Object.entries(extensions).map(async ([name, extension]) => {
-		console.info(`[INFO] Checking Chromium extension ${name}...`)
+		console.info(`[INFO] Checking Chrome extension ${name}...`)
 		if (!extension.managedSettings || Object.keys(extension.managedSettings).length === 0) {
-			throw new Error(`${name} has no verified Chromium managed settings; refusing to add an unconfigurable extension.`)
+			throw new Error(`${name} has no verified Chrome managed settings; refusing to add an unconfigurable extension.`)
 		}
 
 		const latest = await fetchLatestExtension(extension.id)
@@ -80,7 +80,7 @@ async function main() {
 
 	if (updates.length === 0) {
 		await fs.rm(commitPath, { force: true })
-		console.info("[INFO] No Chromium extension updates found.")
+		console.info("[INFO] No Chrome extension updates found.")
 		return
 	}
 

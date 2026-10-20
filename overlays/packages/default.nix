@@ -4,7 +4,7 @@
   ...
 } @ args: (lib.mergeAttrsList [
   (import ./custom-pkgs args)
-  (import ./chromium-extensions.nix args)
+  (import ./chrome-extensions.nix args)
   (import ./firefox-addons.nix args)
   (import ./millennium args)
   (import ./proton-pkgs.nix args)

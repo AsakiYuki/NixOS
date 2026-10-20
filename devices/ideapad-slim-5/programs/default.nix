@@ -1,7 +1,4 @@
-{ lib, ... }:
-let
-  ublockLite = (lib.importJSON (lib.root "/assets/chromium.extensions.json")).ublock-origin-lite;
-in
+{ pkgs, ... }:
 {
   imports = [
     ./home
@@ -11,6 +8,15 @@ in
 
   programs.chromium = {
     enable = true;
-    extraOpts."3rdparty".extensions.${ublockLite.id} = ublockLite.managedSettings;
+    extraOpts."3rdparty".extensions = {
+      ${pkgs.chrome-extensions.ublock-origin-lite.id} = {
+        defaultFiltering = "complete";
+        disableFirstRunPage = true;
+        showBlockedCount = true;
+      };
+      ${pkgs.chrome-extensions.tampermonkey.id} = {
+        jsonImport = [ ];
+      };
+    };
   };
 }

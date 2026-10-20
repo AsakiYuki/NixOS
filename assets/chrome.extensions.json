@@ -18,5 +18,23 @@
             "disableFirstRunPage": true,
             "showBlockedCount": true
         }
+    },
+    "tampermonkey": {
+        "id": "gcalenpjmijncebpfijmoaglllgpjagf",
+        "version": "5.6.6242",
+        "src": {
+            "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcRoE6fkRW_PWqGokYnqWZ1wj-UYeYzHzEPAUOWe6qaWBl1sR1ALL4DPvNWhfPG-jYQ2UzeTsDoU0IcT-faYtzEpBuS6UaRbUYlFzbEm_hBtBnVwlgTHna8xLTkLKHwAxlKa5cs0LEbsz61I9w_8AGrMESKWcZcU/GCALENPJMIJNCEBPFIJMOAGLLLGPJAGF_5_6_6242_0.crx",
+            "hash": "sha256-CxaXiy1O4RrDduiIt47xTycVDAUlpTT9Zx18FJVWebM="
+        },
+        "meta": {
+            "name": "Tampermonkey",
+            "description": "A userscript manager for Chromium-based browsers.",
+            "homepage": "https://www.tampermonkey.net/",
+            "license": "Proprietary License",
+            "author": "Jan Biniok"
+        },
+        "managedSettings": {
+            "jsonImport": []
+        }
     }
 }
