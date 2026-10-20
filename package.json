@@ -26,11 +26,11 @@
 		"check-packages-update": "bun run scripts/update/packages.ts",
 		"check-proton-update": "bun run scripts/update/proton.ts",
 		"check-vscode-extensions-update": "bun run scripts/update/vscode-extensions.ts",
-		"check-firefox-addons-update": "bun run scripts/update/firefox-addons.ts",
-		"check-chrome-extensions-update": "bun run scripts/update/chrome-extensions.ts",
+		"check-browser-extensions-update": "bun run scripts/update/browser-extensions.ts",
 		"check-millennium-update": "bun run scripts/update/millennium.ts",
 		"check-millennium-settings": "bun run scripts/update/millennium.ts --config-keys-only",
 		"add-firefox-addons": "bun run scripts/tools/add-firefox-addons.ts",
+		"add-chrome-extensions": "bun run scripts/tools/add-chrome-extensions.ts",
 		"add-vscode-extensions": "bun run scripts/tools/add-vscode-extensions.ts"
 	},
 	"type": "module",

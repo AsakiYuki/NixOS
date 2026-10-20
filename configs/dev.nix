@@ -20,6 +20,7 @@
         alias agenix="./agenix.sh"
 
         alias add-firefox-addons="bun run add-firefox-addons"
+        alias add-chrome-extensions="bun run add-chrome-extensions"
         alias add-vscode-extensions="bun run add-vscode-extensions"
       '';
     };

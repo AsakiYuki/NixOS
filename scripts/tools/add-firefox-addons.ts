@@ -1,20 +1,19 @@
 import path from "node:path"
-import fs from "fs/promises"
+import fs from "node:fs/promises"
 
-import { fetchFirefoxAddon } from "../helpers/firefox.addons"
-import { FirefoxAddon } from "../update/firefox-addons"
-
-export function getLocalized(record?: Record<string, string | null>, defaultLocale?: string): string {
-	if (!record) return ""
-	return record["en-US"] || (defaultLocale && record[defaultLocale]) || Object.values(record)[0] || ""
-}
+import {
+	fetchFirefoxAddon,
+	getLocalized,
+	type BrowserExtensions,
+} from "../helpers/browser-extensions"
 
 async function main(...args: string[]) {
 	const addonNameRegex = /(?<=(https|http):\/\/addons.mozilla.org\/\w+-\w+\/firefox\/addon\/)(\w|-)+/
 	const isAddonNameRegex = /^(\w|-)+$/
 
-	const filepath = path.join(__dirname, "../../assets/firefox.addons.json")
-	const firefoxAddon: Record<string, FirefoxAddon> = JSON.parse(await fs.readFile(filepath, "utf-8"))
+	const filepath = path.join(__dirname, "../../assets/browser.extensions.json")
+	const extensions: BrowserExtensions = JSON.parse(await fs.readFile(filepath, "utf-8"))
+	const firefoxAddons = extensions.firefox
 
 	await Promise.all(
 		(
@@ -24,7 +23,7 @@ async function main(...args: string[]) {
 					if (!isAddonNameRegex.test(addon)) return null
 					return addon
 				})
-				.filter(addon => addon !== null && !firefoxAddon[addon]) as string[]
+				.filter(addon => addon !== null && !firefoxAddons[addon]) as string[]
 		).map(async addon => {
 			const data = await fetchFirefoxAddon(addon)
 
@@ -43,7 +42,7 @@ async function main(...args: string[]) {
 			const cleanMeta = Object.fromEntries(Object.entries(fetchedMeta).filter(([_, v]) => v.trim() !== ""))
 			const hash = `${algo}-${base64}`
 
-			firefoxAddon[addon] = {
+			firefoxAddons[addon] = {
 				version: data.current_version.version,
 				id: data.guid,
 				src: {
@@ -57,7 +56,7 @@ async function main(...args: string[]) {
 		}),
 	)
 
-	await fs.writeFile(filepath, JSON.stringify(firefoxAddon, null, 4), "utf-8")
+	await fs.writeFile(filepath, JSON.stringify(extensions, null, 4) + "\n", "utf-8")
 }
 
 main(...process.argv.slice(2))

@@ -126,6 +126,36 @@ export interface AmoAddonResponse {
 	weekly_downloads: number
 }
 
+export interface ExtensionSource {
+	url: string
+	hash: string
+}
+
+export interface FirefoxAddon {
+	version: string
+	id: string
+	src: ExtensionSource
+	meta?: Record<string, string>
+}
+
+export interface ChromeExtension {
+	version: string
+	id: string
+	src: ExtensionSource
+	meta?: Record<string, string>
+	managedSettings: Record<string, unknown>
+}
+
+export interface BrowserExtensions {
+	firefox: Record<string, FirefoxAddon>
+	chrome: Record<string, ChromeExtension>
+}
+
+export function getLocalized(record?: Record<string, string | null>, defaultLocale?: string): string {
+	if (!record) return ""
+	return record["en-US"] || (defaultLocale && record[defaultLocale]) || Object.values(record)[0] || ""
+}
+
 export async function fetchFirefoxAddon(slugOrGuid: string): Promise<AmoAddonResponse> {
 	const url = `https://addons.mozilla.org/api/v5/addons/addon/${encodeURIComponent(slugOrGuid)}/`
 
@@ -140,4 +170,49 @@ export async function fetchFirefoxAddon(slugOrGuid: string): Promise<AmoAddonRes
 	}
 
 	return (await res.json()) as AmoAddonResponse
+}
+
+function parseChromeUpdateAttributes(value: string): Record<string, string> {
+	return Object.fromEntries(
+		Array.from(value.matchAll(/([\w-]+)="([^"]*)"/g), ([, key, item]) => [key, item]),
+	)
+}
+
+function toSriHash(hex: string): string {
+	if (!/^[\da-f]{64}$/i.test(hex)) throw new Error(`Invalid SHA-256 from Chrome update manifest: ${hex}`)
+	return `sha256-${Buffer.from(hex, "hex").toString("base64")}`
+}
+
+export async function fetchChromeExtension(id: string): Promise<Pick<ChromeExtension, "version" | "src">> {
+	const url = new URL("https://clients2.google.com/service/update2/crx")
+	url.searchParams.set("response", "updatecheck")
+	url.searchParams.set("prodversion", "155.0.0.0")
+	url.searchParams.set("acceptformat", "crx3")
+	url.searchParams.set("x", `id=${id}&installsource=ondemand&uc`)
+
+	const response = await fetch(url, {
+		headers: { "User-Agent": "Mozilla/5.0 (compatible; NixBrowserExtensionUpdater/1.0)" },
+		signal: AbortSignal.timeout(60_000),
+	})
+	if (!response.ok) throw new Error(`Chrome update service returned HTTP ${response.status} for ${id}`)
+
+	const xml = await response.text()
+	const match = xml.match(/<updatecheck\b([^>]*)\/?\s*>/)
+	if (!match) throw new Error(`Chrome update service returned no updatecheck for ${id}`)
+
+	const attributes = parseChromeUpdateAttributes(match[1])
+	if (attributes.status !== "ok") {
+		throw new Error(`No compatible Chrome update found for ${id} (status: ${attributes.status ?? "missing"})`)
+	}
+	if (!attributes.version || !attributes.codebase || !attributes.hash_sha256) {
+		throw new Error(`Chrome update service returned incomplete metadata for ${id}`)
+	}
+
+	return {
+		version: attributes.version,
+		src: {
+			url: attributes.codebase,
+			hash: toSriHash(attributes.hash_sha256),
+		},
+	}
 }

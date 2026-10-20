@@ -37,22 +37,13 @@ else
     echo "[INFO] Cannot found any vscode extensions update!"
 fi
 
-bun run check-firefox-addons-update
-if [ -f firefox-addons-commit.txt ]; then
-    commit assets/firefox.addons.json \
-        "ci(update-checker/firefox-addons): update firefox addons infos $(date '+%H:%M:%S %d-%m-%Y')" \
-        "firefox-addons-commit.txt"
+bun run check-browser-extensions-update
+if [ -f browser-extensions-commit.txt ]; then
+    commit assets/browser.extensions.json \
+        "ci(update-checker/browser-extensions): update browser extensions $(date '+%H:%M:%S %d-%m-%Y')" \
+        "browser-extensions-commit.txt"
 else
-    echo "[INFO] Cannot found any firefox addons update!"
-fi
-
-bun run check-chrome-extensions-update
-if [ -f chrome-extensions-commit.txt ]; then
-    commit assets/chrome.extensions.json \
-        "ci(update-checker/chrome-extensions): update Chrome extensions $(date '+%H:%M:%S %d-%m-%Y')" \
-        "chrome-extensions-commit.txt"
-else
-    echo "[INFO] Cannot found any Chrome extension updates!"
+    echo "[INFO] Cannot found any browser extension updates!"
 fi
 
 bun run check-millennium-update
