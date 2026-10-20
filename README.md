@@ -1,14 +1,100 @@
-<p align="center">
-  <img src="./logo/nix-snowflake-colours.svg" width="100" />
-</p>
+# NixOS configuration
 
-<h1 align="center">Asaki Yuki's NixOS</h1>
+This repository contains NixOS and Home Manager configurations, package overlays, and scripts that maintain package and extension source data.
 
-<p align="center">
-  <em>Modular, multi-device NixOS configuration powered by Flakes</em>
-</p>
+## Configurations
 
-<p align="center">
-  <img src="https://img.shields.io/badge/nixos-26.05-5277c3?style=for-the-badge&logo=nixos&logoColor=white&labelColor=000000" />
-  <img src="https://img.shields.io/badge/license-GPL--3.0-green?style=for-the-badge&labelColor=000000" />
-</p>
+The flake exports these NixOS configurations:
+
+| Flake attribute | Purpose |
+| --- | --- |
+| `nixosConfigurations.ideapad-slim-5` | Desktop/laptop configuration |
+| `nixosConfigurations.msi-sayu` | Sayu's system configuration |
+| `nixosConfigurations.home-server` | Home server |
+| `nixosConfigurations.wsl` | WSL configuration |
+
+It also exports the standalone Home Manager configuration `homeConfigurations."asakiyuki@Macbook-Air-M5"`. Each NixOS configuration loads Home Manager; host and device modules add the user-specific Home Manager configuration.
+
+Build or evaluate a configuration with its flake attribute. For example:
+
+```sh
+nix eval '.#nixosConfigurations.ideapad-slim-5.config.system.build.toplevel.drvPath' --raw
+nix build '.#nixosConfigurations.ideapad-slim-5.config.system.build.toplevel'
+```
+
+On the matching NixOS machine, switch to a configuration with:
+
+```sh
+sudo nixos-rebuild switch --flake .#ideapad-slim-5
+```
+
+Evaluate the standalone macOS Home Manager generation with:
+
+```sh
+nix eval '.#homeConfigurations."asakiyuki@Macbook-Air-M5".activationPackage.drvPath' --raw
+```
+
+Building that activation package requires a builder for `aarch64-darwin`.
+
+## Repository layout
+
+| Path | Contents |
+| --- | --- |
+| `flake.nix`, `configs/` | Flake inputs and exported configurations |
+| `devices/` | Hardware, services, and system-specific settings |
+| `host/` | Shared desktop, server, and macOS host modules |
+| `users/` | User and account configuration |
+| `modules/` | Reusable NixOS and Home Manager implementation modules |
+| `options/` | Custom module options and their configuration |
+| `overlays/packages/` | Package, extension, font, and Millennium overlays |
+| `assets/sources.json` | Shared source, version, hash, and metadata database |
+| `scripts/` | Source-data updaters and add-extension tools |
+| `.codex/skills/nixos-config/SKILL.md` | Repository-scoped Codex skill |
+| `.github/` | Scheduled update and mirror workflows |
+
+The `options/` tree defines the repository's custom options. The `modules/` tree implements reusable program behavior. Device and host files select and configure those modules.
+
+## Source database
+
+`assets/sources.json` keeps fetched source information in one file:
+
+```text
+cursors.<category>.<name>
+packages.programs.<package>
+packages.wine.<proton>
+extensions.firefox.<addon>
+extensions.chrome.<extension>
+extensions.vscode.<publisher>.<extension>
+extensions.millennium.plugins.<plugin>
+extensions.millennium.themes.<theme>
+```
+
+Cursor options retain the `category/name` form, for example `wuthering-waves/denia`.
+
+The flake reads this database once as `source-data` and passes it to configuration helpers and package overlays. Nix modules access it through `lib.source-data`; package overlays receive it as `sources`.
+
+## Development and updates
+
+Enter the development shell and install the JavaScript dependencies:
+
+```sh
+nix develop
+bun install --frozen-lockfile
+```
+
+Run an individual updater from the shell:
+
+```sh
+bun run check-packages-update
+bun run check-proton-update
+bun run check-vscode-extensions-update
+bun run check-browser-extensions-update
+bun run check-millennium-update
+bun run check-millennium-settings
+```
+
+Updaters contact their source services. When they find changes, they can update `assets/sources.json` and create a root-level `*-commit.txt` report. Review both before committing. The `.github/pkgs-update.sh` workflow helper runs the updater suite and commits reports automatically; it is not a dry-run command.
+
+The `add-firefox-addons`, `add-chrome-extensions`, and `add-vscode-extensions` scripts add entries to the corresponding source database section. Check each script in `scripts/tools/` for its accepted input format.
+
+GitHub Actions periodically refreshes flake inputs and package/extension data. The Forgejo workflow mirrors pushes to the configured remote.
