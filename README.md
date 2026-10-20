@@ -49,8 +49,11 @@ Building that activation package requires a builder for `aarch64-darwin`.
 | `overlays/packages/` | Package, extension, font, and Millennium overlays |
 | `assets/sources.json` | Shared source, version, hash, and metadata database |
 | `scripts/` | Source-data updaters and add-extension tools |
-| `.codex/skills/nixos-config/SKILL.md` | Repository-scoped Codex skill |
+| `.agents/skills/nixos-config/SKILL.md` | Shared repository skill for agents that support the Agent Skills convention |
+| `.claude/skills/nixos-config/SKILL.md` | Claude Code discovery path; keep in sync with the shared skill |
 | `.github/` | Scheduled update and mirror workflows |
+
+AI agent guidance lives in the repository skill and this README. Hosts discover skills through different directories: `.agents/skills/` is supported by several agent tools, while Claude Code uses `.claude/skills/`. A `SKILL.md` is a shared format, but agents only load it automatically when their host recognizes its location; otherwise, point the agent to the file explicitly. Keep the two skill files synchronized.
 
 The `options/` tree defines the repository's custom options. The `modules/` tree implements reusable program behavior. Device and host files select and configure those modules.
 
