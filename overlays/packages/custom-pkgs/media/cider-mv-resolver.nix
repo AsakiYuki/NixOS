@@ -44,7 +44,6 @@ stdenv.mkDerivation {
     install -Dm755 yt-dlp $out/libexec/cider-mv-resolver/yt-dlp-unwrapped
     cat > $out/libexec/cider-mv-resolver/yt-dlp <<'EOF'
     #!${stdenv.shell}
-    export PATH="${pkgs.deno}/bin:''${PATH:-}"
     exec ${placeholder "out"}/libexec/cider-mv-resolver/yt-dlp-unwrapped "$@"
     EOF
     chmod +x $out/libexec/cider-mv-resolver/yt-dlp
@@ -54,10 +53,16 @@ stdenv.mkDerivation {
     #!${stdenv.shell}
     yt_dlp="''${CIDER_MV_RESOLVER_YT_DLP_REAL:-${placeholder "out"}/libexec/cider-mv-resolver/yt-dlp}"
     config="''${CIDER_MV_RESOLVER_YT_DLP_CONFIG:-''${XDG_CONFIG_HOME:-$HOME/.config}/yt-dlp/config}"
-    if [ -r "$config" ]; then
-      exec "$yt_dlp" --config-locations "$config" "$@"
+    export PATH="${pkgs.deno}/bin:''${PATH:-}"
+    cookies_from_browser="''${CIDER_MV_RESOLVER_COOKIES_FROM_BROWSER-firefox}"
+    extra_args=()
+    if [ -n "$cookies_from_browser" ]; then
+      extra_args+=(--cookies-from-browser "$cookies_from_browser")
     fi
-    exec "$yt_dlp" "$@"
+    if [ -r "$config" ]; then
+      exec "$yt_dlp" --config-locations "$config" "$@" "''${extra_args[@]}"
+    fi
+    exec "$yt_dlp" "$@" "''${extra_args[@]}"
     EOF
     chmod +x $out/bin/cider-mv-resolver-yt-dlp
 
@@ -74,9 +79,8 @@ stdenv.mkDerivation {
     #!${stdenv.shell}
     data_dir="''${XDG_DATA_HOME:-$HOME/.local/share}/CiderMvResolver"
     mkdir -p "$data_dir"
-    yt_dlp="''${CIDER_MV_RESOLVER_YT_DLP:-${placeholder "out"}/libexec/cider-mv-resolver/yt-dlp}"
+    yt_dlp="''${CIDER_MV_RESOLVER_YT_DLP:-${placeholder "out"}/bin/cider-mv-resolver-yt-dlp}"
     ln -sfn "$yt_dlp" "$data_dir/yt-dlp"
-    export PATH="${pkgs.deno}/bin:''${PATH:-}"
     ${lib.optionalString stdenv.isLinux ''
       export LD_LIBRARY_PATH="${lib.makeLibraryPath runtimeLibs}''${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
     ''}

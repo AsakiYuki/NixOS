@@ -68,7 +68,18 @@ in {
     };
 
     bedrock-on-linux = mkOpt pkgs "bedrock-on-linux" {};
-    cider-mv-resolver = mkOpt pkgs "cider-mv-resolver" {};
+    cider-mv-resolver = (mkOpt pkgs "cider-mv-resolver" {}) // {
+      cookiesFromBrowser = lib.mkOption {
+        type = lib.types.str;
+        default = "firefox";
+        example = "firefox:default-release";
+        description = ''
+          Browser and optional profile passed to yt-dlp's --cookies-from-browser
+          when Cider MV Resolver requests a YouTube stream. Set to an empty
+          string to disable browser cookie import.
+        '';
+      };
+    };
     scrcpy = mkOpt pkgs "scrcpy" {};
     slack = mkOpt pkgs "slack" {};
     notion = mkOpt pkgs "notion-app-enhanced" {name = "notion";};

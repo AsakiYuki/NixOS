@@ -20,6 +20,7 @@ in
           "CIDER_MV_RESOLVER_YT_DLP=${cfg.package}/bin/cider-mv-resolver-yt-dlp"
           "CIDER_MV_RESOLVER_YT_DLP_REAL=${config.programs.yt-dlp.package}/bin/yt-dlp"
           "CIDER_MV_RESOLVER_YT_DLP_CONFIG=${config.xdg.configHome}/yt-dlp/config"
+          "CIDER_MV_RESOLVER_COOKIES_FROM_BROWSER=${cfg.cookiesFromBrowser}"
         ];
         Restart = "on-failure";
         RestartSec = 5;
