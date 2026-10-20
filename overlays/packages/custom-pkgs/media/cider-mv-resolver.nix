@@ -44,25 +44,62 @@ stdenv.mkDerivation {
     install -Dm755 yt-dlp $out/libexec/cider-mv-resolver/yt-dlp-unwrapped
     cat > $out/libexec/cider-mv-resolver/yt-dlp <<'EOF'
     #!${stdenv.shell}
-    exec ${placeholder "out"}/libexec/cider-mv-resolver/yt-dlp-unwrapped "$@"
+    exec ${placeholder "out"}/bin/cider-mv-resolver-yt-dlp "$@"
     EOF
     chmod +x $out/libexec/cider-mv-resolver/yt-dlp
 
     mkdir -p $out/bin
     cat > $out/bin/cider-mv-resolver-yt-dlp <<'EOF'
     #!${stdenv.shell}
-    yt_dlp="''${CIDER_MV_RESOLVER_YT_DLP_REAL:-${placeholder "out"}/libexec/cider-mv-resolver/yt-dlp}"
+    yt_dlp="''${CIDER_MV_RESOLVER_YT_DLP_REAL:-${placeholder "out"}/libexec/cider-mv-resolver/yt-dlp-unwrapped}"
     config="''${CIDER_MV_RESOLVER_YT_DLP_CONFIG:-''${XDG_CONFIG_HOME:-$HOME/.config}/yt-dlp/config}"
     export PATH="${pkgs.deno}/bin:''${PATH:-}"
+
+    yt_dlp_args=()
+    requested_format=""
+    while (($#)); do
+      case "$1" in
+        --format|-f)
+          if (($# > 1)); then
+            requested_format="$2"
+            shift 2
+          else
+            yt_dlp_args+=("$1")
+            shift
+          fi
+          ;;
+        --format=*)
+          requested_format="''${1#*=}"
+          shift
+          ;;
+        *)
+          yt_dlp_args+=("$1")
+          shift
+          ;;
+      esac
+    done
+
+    format_args=()
+    if [[ "$requested_format" =~ height\<=([0-9]+) ]]; then
+      max_height="''${BASH_REMATCH[1]}"
+      format_args+=(
+        --format "bestvideo[height<=$max_height][format_note*=Premium][protocol^=http]/bestvideo[height<=$max_height][format_id*=sr][protocol^=http]/bestvideo[height<=$max_height][protocol^=http]"
+        --format-sort "res,br"
+        --format-sort-force
+      )
+    elif [ -n "$requested_format" ]; then
+      format_args+=(--format "$requested_format")
+    fi
+
     cookies_from_browser="''${CIDER_MV_RESOLVER_COOKIES_FROM_BROWSER-firefox}"
     extra_args=()
     if [ -n "$cookies_from_browser" ]; then
       extra_args+=(--cookies-from-browser "$cookies_from_browser")
     fi
     if [ -r "$config" ]; then
-      exec "$yt_dlp" --config-locations "$config" "$@" "''${extra_args[@]}"
+      exec "$yt_dlp" --config-locations "$config" "''${yt_dlp_args[@]}" "''${format_args[@]}" "''${extra_args[@]}"
     fi
-    exec "$yt_dlp" "$@" "''${extra_args[@]}"
+    exec "$yt_dlp" "''${yt_dlp_args[@]}" "''${format_args[@]}" "''${extra_args[@]}"
     EOF
     chmod +x $out/bin/cider-mv-resolver-yt-dlp
 
