@@ -6,50 +6,23 @@
 }:
 let
   inherit (pkgs) stdenv;
-  resolverData = data.cider-mv-resolver;
+
+  resolver = data.cider-mv-resolver;
   source =
-    resolverData.source.${stdenv.system}
+    resolver.source.${stdenv.system}
       or (throw "Cider MV Resolver is not supported on ${stdenv.system}");
-  runtimeLibs = lib.optionals stdenv.isLinux [
+
+  runtimeLibraries = lib.optionals stdenv.isLinux [
     pkgs.icu
     pkgs.openssl
   ];
-  src = pkgs.fetchzip {
-    inherit (source) url hash;
-    stripRoot = true;
-  };
-in
-stdenv.mkDerivation {
-  pname = "cider-mv-resolver";
-  version = resolverData.version;
-  inherit src;
 
-  nativeBuildInputs = lib.optionals stdenv.isLinux [
-    pkgs.autoPatchelfHook
-  ];
-  buildInputs =
-    lib.optionals stdenv.isLinux [
-      pkgs.zlib
-      stdenv.cc.cc.lib
-    ]
-    ++ runtimeLibs;
-
-  dontBuild = true;
-  dontStrip = true;
-
-  installPhase = ''
-    runHook preInstall
-
-    install -Dm755 CiderMvResolver $out/libexec/cider-mv-resolver/CiderMvResolver
-    install -Dm755 yt-dlp $out/libexec/cider-mv-resolver/yt-dlp-unwrapped
-    cat > $out/libexec/cider-mv-resolver/yt-dlp <<'EOF'
+  ytDlpWrapper = ''
     #!${stdenv.shell}
     exec ${placeholder "out"}/bin/cider-mv-resolver-yt-dlp "$@"
-    EOF
-    chmod +x $out/libexec/cider-mv-resolver/yt-dlp
+  '';
 
-    mkdir -p $out/bin
-    cat > $out/bin/cider-mv-resolver-yt-dlp <<'EOF'
+  ytDlpLauncher = ''
     #!${stdenv.shell}
     yt_dlp="''${CIDER_MV_RESOLVER_YT_DLP_REAL:-${placeholder "out"}/libexec/cider-mv-resolver/yt-dlp-unwrapped}"
     config="''${CIDER_MV_RESOLVER_YT_DLP_CONFIG:-''${XDG_CONFIG_HOME:-$HOME/.config}/yt-dlp/config}"
@@ -96,55 +69,103 @@ stdenv.mkDerivation {
     if [ -n "$cookies_from_browser" ]; then
       extra_args+=(--cookies-from-browser "$cookies_from_browser")
     fi
+
     if [ -r "$config" ]; then
       exec "$yt_dlp" --config-locations "$config" "''${yt_dlp_args[@]}" "''${format_args[@]}" "''${extra_args[@]}"
     fi
     exec "$yt_dlp" "''${yt_dlp_args[@]}" "''${format_args[@]}" "''${extra_args[@]}"
-    EOF
-    chmod +x $out/bin/cider-mv-resolver-yt-dlp
+  '';
 
-    install -Dm644 YT-DLP-COPYING.txt $out/share/licenses/cider-mv-resolver/YT-DLP-COPYING.txt
-    install -Dm644 THIRD_PARTY_NOTICES.md $out/share/licenses/cider-mv-resolver/THIRD_PARTY_NOTICES.md
-    install -Dm644 README_EN.md $out/share/doc/cider-mv-resolver/README.md
-    install -Dm755 install.sh $out/share/cider-mv-resolver/install.sh
-    install -Dm755 uninstall.sh $out/share/cider-mv-resolver/uninstall.sh
-    ln -s $out/libexec/cider-mv-resolver/CiderMvResolver $out/share/cider-mv-resolver/CiderMvResolver
-    ln -s $out/libexec/cider-mv-resolver/yt-dlp $out/share/cider-mv-resolver/yt-dlp
-
-    mkdir -p $out/bin
-    cat > $out/bin/cider-mv-resolver <<'EOF'
+  resolverLauncher = ''
     #!${stdenv.shell}
     data_dir="''${XDG_DATA_HOME:-$HOME/.local/share}/CiderMvResolver"
     mkdir -p "$data_dir"
     yt_dlp="''${CIDER_MV_RESOLVER_YT_DLP:-${placeholder "out"}/bin/cider-mv-resolver-yt-dlp}"
     ln -sfn "$yt_dlp" "$data_dir/yt-dlp"
     ${lib.optionalString stdenv.isLinux ''
-      export LD_LIBRARY_PATH="${lib.makeLibraryPath runtimeLibs}''${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+      export LD_LIBRARY_PATH="${lib.makeLibraryPath runtimeLibraries}''${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
     ''}
     cd "$data_dir"
     exec ${placeholder "out"}/libexec/cider-mv-resolver/CiderMvResolver
-    EOF
-    chmod +x $out/bin/cider-mv-resolver
+  '';
 
-    cat > $out/bin/cider-mv-resolver-install <<'EOF'
+  utilityLauncher = name: ''
     #!${stdenv.shell}
-    exec ${placeholder "out"}/share/cider-mv-resolver/install.sh "$@"
-    EOF
-    chmod +x $out/bin/cider-mv-resolver-install
+    exec ${placeholder "out"}/share/cider-mv-resolver/${name}.sh "$@"
+  '';
 
-    cat > $out/bin/cider-mv-resolver-uninstall <<'EOF'
-    #!${stdenv.shell}
-    exec ${placeholder "out"}/share/cider-mv-resolver/uninstall.sh "$@"
+  src = pkgs.fetchzip {
+    inherit (source) url hash;
+    stripRoot = true;
+  };
+in
+stdenv.mkDerivation {
+  pname = "cider-mv-resolver";
+  version = resolver.version;
+  inherit src;
+
+  nativeBuildInputs = lib.optionals stdenv.isLinux [ pkgs.autoPatchelfHook ];
+  buildInputs =
+    lib.optionals stdenv.isLinux [
+      pkgs.zlib
+      stdenv.cc.cc.lib
+    ]
+    ++ runtimeLibraries;
+
+  dontBuild = true;
+  dontStrip = true;
+
+  installPhase = ''
+    runHook preInstall
+
+    appDir=$out/libexec/cider-mv-resolver
+    binDir=$out/bin
+    docDir=$out/share/doc/cider-mv-resolver
+    licenseDir=$out/share/licenses/cider-mv-resolver
+    shareDir=$out/share/cider-mv-resolver
+    mkdir -p "$binDir"
+
+    install -Dm755 CiderMvResolver "$appDir/CiderMvResolver"
+    install -Dm755 yt-dlp "$appDir/yt-dlp-unwrapped"
+    install -Dm644 YT-DLP-COPYING.txt "$licenseDir/YT-DLP-COPYING.txt"
+    install -Dm644 THIRD_PARTY_NOTICES.md "$licenseDir/THIRD_PARTY_NOTICES.md"
+    install -Dm644 README_EN.md "$docDir/README.md"
+    install -Dm755 install.sh "$shareDir/install.sh"
+    install -Dm755 uninstall.sh "$shareDir/uninstall.sh"
+
+    cat > "$appDir/yt-dlp" <<'EOF'
+    ${ytDlpWrapper}
     EOF
-    chmod +x $out/bin/cider-mv-resolver-uninstall
+    cat > "$binDir/cider-mv-resolver-yt-dlp" <<'EOF'
+    ${ytDlpLauncher}
+    EOF
+    cat > "$binDir/cider-mv-resolver" <<'EOF'
+    ${resolverLauncher}
+    EOF
+    cat > "$binDir/cider-mv-resolver-install" <<'EOF'
+    ${utilityLauncher "install"}
+    EOF
+    cat > "$binDir/cider-mv-resolver-uninstall" <<'EOF'
+    ${utilityLauncher "uninstall"}
+    EOF
+
+    chmod +x \
+      "$appDir/yt-dlp" \
+      "$binDir/cider-mv-resolver-yt-dlp" \
+      "$binDir/cider-mv-resolver" \
+      "$binDir/cider-mv-resolver-install" \
+      "$binDir/cider-mv-resolver-uninstall"
+
+    ln -s "$appDir/CiderMvResolver" "$shareDir/CiderMvResolver"
+    ln -s "$appDir/yt-dlp" "$shareDir/yt-dlp"
 
     runHook postInstall
   '';
 
-  meta = with lib; {
+  meta = {
     description = "Local YouTube URL resolver companion for Cider MV Immersive";
     homepage = "https://github.com/YoreYore33/Cider-MV-Resolver";
-    license = licenses.unfree;
+    license = lib.licenses.unfree;
     mainProgram = "cider-mv-resolver";
     platforms = [
       "x86_64-linux"
