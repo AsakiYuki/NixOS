@@ -6,6 +6,6 @@
 }: let
 in {
   nixpkgs.overlays =
-    lib.flatten (import ./inputs-overlays.nix inputs)
+    lib.flatten (import ./inputs-overlays.nix (inputs // { sources = lib.source-data; }))
     ++ (lib.optional (!(lib.attrByPath ["device" "de" "kdePlasma" "enable"] false config)) (import ./dolphin.nix));
 }
