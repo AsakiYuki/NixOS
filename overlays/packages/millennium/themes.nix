@@ -5,7 +5,7 @@
   ...
 }:
 let
-  themeData = sources.extensions.millennium.themes;
+  themeData = sources.extensions.millennium;
 
   mkMillenniumTheme =
     {

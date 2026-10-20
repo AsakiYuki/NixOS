@@ -1,6 +1,6 @@
-{inputs, ...}: (import ../helpers/devShells.nix inputs {
+{inputs, source-data, ...}: (import ../helpers/devShells.nix inputs {
   default = {
-    overlays = import ../overlays/inputs-overlays.nix inputs;
+    overlays = import ../overlays/inputs-overlays.nix (inputs // { sources = source-data; });
     shell = {pkgs, ...}: {
       buildInputs = with pkgs; [
         bun
