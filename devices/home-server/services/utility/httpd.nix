@@ -1,7 +1,8 @@
-{...}: {
+{pkgs, ...}: {
   services.httpd = {
     enable = true;
     enablePHP = true;
+    phpPackage = pkgs.php85;
     adminAddr = "vantrong2007vn@gmail.com";
 
     user = "static";
