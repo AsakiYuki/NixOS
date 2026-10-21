@@ -4174,15 +4174,15 @@
             "redhat": {
                 "java": {
                     "src": {
-                        "version": "1.59.2026102008",
+                        "version": "1.59.2026102108",
                         "hash": {
-                            "universal": "sha256-BjKLTsnpdujcfmreV0N1FMvk0vQ2jm3ULlfJLOC8u8E=",
-                            "linux-x64": "sha256-lZtpeFh7+aptmJUHkCQOZlrYXtwDbks15ZyCSTZP+LY=",
-                            "linux-arm64": "sha256-RYAd/GE3noCFBLX6T2uXLn0EY5Pasxz+x9RHN/kuxk0=",
-                            "darwin-x64": "sha256-vOnKf1RjLuIzweP9Z3JGrKo8GpBkOdgRrwPV5WiyAgU=",
-                            "darwin-arm64": "sha256-EG+eviCO6QepR9sjwuv/NtLAb7H6eeZKuBYTqMlc/WI=",
-                            "win32-x64": "sha256-TD9+W4CmZNu1EibUpgz0cPBpwxj4jP90Fn4cIvtfuRQ=",
-                            "win32-arm64": "sha256-oQmrjZsr1Ioo8oNgWZ0BxjD3dK9bPBOR1XNS4wfYxss="
+                            "universal": "sha256-3w26fc1oBTOh114LWaOHwerPB5nvQyY2uGq7hxYi0GI=",
+                            "linux-x64": "sha256-w7/bUu5k4v78u2kXoRXwE4aAuc3a2EF1AZfhojC8QaI=",
+                            "linux-arm64": "sha256-1ewJumXWygB25IvzQNIcZIisf7nQPnz+opd0wgheasY=",
+                            "darwin-x64": "sha256-ifypJ2l+kXOvlRT/aPLBVVFTBVw1z6MWJOq2pJi2HYA=",
+                            "darwin-arm64": "sha256-o0xbXUrO4Eg+fj8iPBdXFt1JuzYWqrCdKpjSeAH+1yw=",
+                            "win32-x64": "sha256-S1UVCq1Ob6aEsk73rcZ9PXm2H3oROXETDWa/jRsupc8=",
+                            "win32-arm64": "sha256-ftggMeYgrwof7DX445kvKcYP2EUm/DNhZoBK4TKqhJ0="
                         },
                         "checkedPlatforms": true
                     },
