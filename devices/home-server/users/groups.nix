@@ -3,6 +3,7 @@
     gitea-runner = {};
     public = {};
     forgejo = {};
+    wordpress = {};
     host = {
       members = ["asakiyuki"];
     };

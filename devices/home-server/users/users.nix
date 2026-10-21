@@ -14,6 +14,12 @@
       isSystemUser = true;
     };
 
+    wordpress = {
+      group = "wordpress";
+      home = "/var/empty";
+      isSystemUser = true;
+    };
+
     forgejo = {
       group = "forgejo";
       isSystemUser = true;
