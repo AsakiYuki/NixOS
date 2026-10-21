@@ -3074,11 +3074,11 @@
                 }
             },
             "onetab": {
-                "version": "2.24",
+                "version": "2.25",
                 "id": "extension@one-tab.com",
                 "src": {
-                    "url": "https://addons.mozilla.org/firefox/downloads/file/5108930/onetab-2.24.xpi",
-                    "hash": "sha256-6wA6piFGu6o7e1z58nFGkz48LYHoIkZZ9UOY0ApSLXQ="
+                    "url": "https://addons.mozilla.org/firefox/downloads/file/5149827/onetab-2.25.xpi",
+                    "hash": "sha256-HK3rraSYsHRFLnjhb3lk59TkoBzhByEhWkj70x3w1nc="
                 },
                 "meta": {
                     "name": "OneTab",
