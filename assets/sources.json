@@ -173,15 +173,15 @@
                 }
             },
             "photocraft": {
-                "version": "0.11.1",
+                "version": "0.12.0",
                 "source": {
                     "x86_64-linux": {
-                        "url": "https://github.com/storytold/photocraft/releases/download/v0.11.1/photocraft-0.11.1-linux-x86_64.tar.gz",
-                        "hash": "sha256-mXE1NEMdJbQJkLvQwL2VVX1dRFFTAw5dSzgjVCx8Sac="
+                        "url": "https://github.com/storytold/photocraft/releases/download/v0.12.0/photocraft-0.12.0-linux-x86_64.tar.gz",
+                        "hash": "sha256-LCQqnGq1Rr+zxT0YpHFAe5lpX2pdXZ11lziqJAioGQg="
                     },
                     "aarch64-linux": {
-                        "url": "https://github.com/storytold/photocraft/releases/download/v0.11.1/photocraft-0.11.1-linux-aarch64.tar.gz",
-                        "hash": "sha256-9A5caLlyhyrvqnGjQbsNmzPxZxkj2uQjIB+HAYCOK+w="
+                        "url": "https://github.com/storytold/photocraft/releases/download/v0.12.0/photocraft-0.12.0-linux-aarch64.tar.gz",
+                        "hash": "sha256-kXIj802fMiWOuH5rhpuh9WOckY4slqjDBgWL0xEFCR0="
                     }
                 }
             }
@@ -3092,10 +3092,10 @@
         "chrome": {
             "ublock-origin-lite": {
                 "id": "ddkjiahejlhfcafbddmgiahcphecmpfh",
-                "version": "2026.1018.2229",
+                "version": "2026.1021.1354",
                 "src": {
-                    "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcRYe4sOX4czxaaPxT3nVyfO8lRbp_p9e6Y4yNYVdUcK-wxqKE0sQaqlVLIxO-KTgEOdZK5Ktmf1qE00-EJKrCrTdK6bkMRrSn5_Znc34sd_N7JYlX6_7xlhYWKVHZUGAMZSmuUG6Xe5Tcl2Jcrk-dGTNkrFF2fBRg/DDKJIAHEJLHFCAFBDDMGIAHCPHECMPFH_2026_1018_2229_0.crx",
-                    "hash": "sha256-VZ0Q733LlrxOgS3ms/8MLmx6vKV4Mk2Nev19jPeKbdc="
+                    "url": "https://clients2.googleusercontent.com/crx/blobs/AZPVhcQcOwuqA1tF-hrKU1DhlpuJl0y3IzyP0OGgqf7AIQz-HLJKzyqSxZZL0meFhNE7DfBRGnn4eKJiaZ1lCgMDeI5xPn-wP39WpR4TJeMqYcmVvl_m05mdLry385oFMgoiAMZSmuWIGDIO0S3S583SKbmRw7fdDFEvDA/DDKJIAHEJLHFCAFBDDMGIAHCPHECMPFH_2026_1021_1354_0.crx",
+                    "hash": "sha256-CIdVnrnmhk6RtS5KDGYJla3kfAhNzHFQ7ZrnQ8lHWnY="
                 },
                 "meta": {
                     "name": "uBlock Origin Lite",
@@ -3370,11 +3370,11 @@
             "jbro": {
                 "vscode-default-keybindings": {
                     "src": {
-                        "version": "0.2.87",
-                        "checkedPlatforms": true,
+                        "version": "0.2.88",
                         "hash": {
-                            "universal": "sha256-zGZAiqZBYkz3N76uW/ceQ9pcUC6jCc+IBp43szTyMrI="
-                        }
+                            "universal": "sha256-BPORkit/zgoVq6EpK5pVKEUKOQZWqv3wXwJVOQx5xFg="
+                        },
+                        "checkedPlatforms": true
                     },
                     "meta": {
                         "description": "VSCode Default Keybindings is a keymap that enables you to load VSCode's default keybindings from another OS. Eg. use Mac keybindings on Windows.",
@@ -4095,11 +4095,11 @@
             "google": {
                 "google-antigravity": {
                     "src": {
-                        "version": "1.8.0",
-                        "checkedPlatforms": true,
+                        "version": "1.9.0",
                         "hash": {
-                            "universal": "sha256-h2GTvOkESX96Ce/ja3+vbV8qH+WA/4VLhj00JR4EOOY="
-                        }
+                            "universal": "sha256-OPLYwhG3alJMvhbSJZ9U/e6IzIrfI7vSVvNxFq9mRVg="
+                        },
+                        "checkedPlatforms": true
                     },
                     "meta": {
                         "description": "Bring Google's agent-first development platform to Visual Studio Code.",
@@ -4829,8 +4829,8 @@
                     "description": "Theme with a dark aesthetic and modular-inspired look, offering clarity, flexibility, and an enhanced user experience.",
                     "owner": "SpaceTheme",
                     "repo": "Steam",
-                    "rev": "650f3961021720b8c1ee88fc9ca2cdf97f12ed0d",
-                    "hash": "1h0w4q9qh0wpljfrj62f3257rdz08k4lk9ahjhrkh1vqhp6767s8",
+                    "rev": "13305edb86e8fc38400ca6bb725cf35fc092cba5",
+                    "hash": "1halnhdzhfviibrs2mhm1191vw9fzv0hpi3ja0g63j2hzbwlylzw",
                     "storeId": "zQndv1rI0FXLh3QTRgOL"
                 },
                 "mont-black": {
