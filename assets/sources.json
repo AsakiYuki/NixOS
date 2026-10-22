@@ -4681,12 +4681,12 @@
                 },
                 "simple-dark": {
                     "name": "Simple Dark.",
-                    "version": "1.7",
+                    "version": "1.8",
                     "description": "A sleek and elegant theme that brings a darker, more immersive experience to your Steam client.",
                     "owner": "shdwmtr",
                     "repo": "simply-dark",
-                    "rev": "5163dcbca3cbde75e6aad29af0c6025612ba8607",
-                    "hash": "0ga1jyjjq6ypklraxsp02mb8h7dwm34kbqghp0f52vkn07bv66g7",
+                    "rev": "d5fde36af9ad4d376664fad7f211e76da720bba6",
+                    "hash": "0v20qlav781qdzn8av00g1ygxq60j9phw1qr3g4fjmpm9dr0wdrv",
                     "storeId": "F8h9ZhwOdoNygNcAfjIZ"
                 },
                 "tsukushiaria": {
@@ -4783,12 +4783,12 @@
                 },
                 "zehn": {
                     "name": "Zehn",
-                    "version": "2026.10.18",
+                    "version": "2026.10.21",
                     "description": "Windows 10 Fluent Design for Steam - Minimal, colorable, light/dark, and more!",
                     "owner": "yurisuika",
                     "repo": "Zehn",
-                    "rev": "78a94cc86e403f36fb77d7113838ec8e0e3fd723",
-                    "hash": "1qz5am1wq17h8nkw5d8b814kx2c5l9i1jca8hfav8719vzczzk81",
+                    "rev": "5a7aa53682fc13bea7e42f2a550b2e0df11b0b76",
+                    "hash": "1gpdnpiihbxkmqqm1b1z599bkk2a3vb92pxs98v1d39bj4q0nif0",
                     "storeId": "p98ZoGwVHK65NExmPaki"
                 },
                 "classic-steam-library": {
