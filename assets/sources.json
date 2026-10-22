@@ -22,15 +22,15 @@
     "packages": {
         "programs": {
             "bun-baseline": {
-                "version": "1.4.3",
+                "version": "1.4.4",
                 "source": {
                     "x86_64-linux": {
-                        "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.3/bun-linux-x64-baseline.zip",
-                        "hash": "sha256-c2D8wGD7wYuyJiGhl851dD7v06eXz9f152P7fBMG2FQ="
+                        "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-linux-x64-baseline.zip",
+                        "hash": "sha256-SQxqWbkwuEx42tLBeD8BdpDH1bxUasS1yOkkDULCz3U="
                     },
                     "aarch64-linux": {
-                        "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.3/bun-linux-aarch64.zip",
-                        "hash": "sha256-xU+f6D64Xqizg0CHCp3FLRqa0m3fNKZYuAGkuSIt8E4="
+                        "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-linux-aarch64.zip",
+                        "hash": "sha256-NhWc7T3/G+CA3TE/q/vQR5oOPfBLPgZ6Exdqa1CjD5w="
                     }
                 }
             },
@@ -1293,7 +1293,7 @@
                 }
             },
             "wineland-proton": {
-                "latest": "11-0_20261015",
+                "latest": "11-0_20261022",
                 "override_name": "proton-wineland-latest",
                 "releases": {
                     "11-0_20261015": {
@@ -1457,14 +1457,20 @@
                             "url": "https://github.com/nanomatters/proton-salkim/releases/download/cachyos-wineland-11.0-20260602.7-slr/proton-cachyos-wineland-11.0-20260602.5-slr-2-g222b43a7-x86_64.tar.xz",
                             "hash": "sha256-0WmJqpkkkB11UIdcPetGHHN2izjb0u0+oulsXDxESeQ="
                         }
+                    },
+                    "11-0_20261022": {
+                        "x86_64-linux": {
+                            "url": "https://github.com/nanomatters/proton-salkim/releases/download/wineland-11.0-20261022/proton-wineland-11.0-20261022-x86_64.tar.xz",
+                            "hash": "sha256-N8QXrlYzohttm34xPfCVYNWL6DElmiuXhLcyrod4Y0I="
+                        }
                     }
                 },
                 "source_name": {
-                    "x86_64-linux": "proton-wineland-11.0-20261015-x86_64"
+                    "x86_64-linux": "proton-wineland-11.0-20261022-x86_64"
                 }
             },
             "wineland-proton-v3": {
-                "latest": "11-0_20261015",
+                "latest": "11-0_20261022",
                 "override_name": "proton-wineland-v3-latest",
                 "releases": {
                     "11-0_20261015": {
@@ -1628,10 +1634,16 @@
                             "url": "https://github.com/nanomatters/proton-salkim/releases/download/cachyos-wineland-11.0-20260602.7-slr/proton-cachyos-wineland-11.0-20260602.5-slr-2-g222b43a7-x86_64_v3.tar.xz",
                             "hash": "sha256-BNXkYigxU0jHxsIW0Vh87yWrnyCcLFLzgfrzdZQT8Po="
                         }
+                    },
+                    "11-0_20261022": {
+                        "x86_64-linux": {
+                            "url": "https://github.com/nanomatters/proton-salkim/releases/download/wineland-11.0-20261022/proton-wineland-11.0-20261022-x86_64_v3.tar.xz",
+                            "hash": "sha256-aXvFiekYQKXAc4APACY7XA1vup+aGB1Gj73nb+1JbzA="
+                        }
                     }
                 },
                 "source_name": {
-                    "x86_64-linux": "proton-wineland-11.0-20261015-x86_64_v3"
+                    "x86_64-linux": "proton-wineland-11.0-20261022-x86_64_v3"
                 }
             },
             "dw-proton": {
@@ -3402,11 +3414,11 @@
             "theqtcompany": {
                 "qt-qml": {
                     "src": {
-                        "version": "1.17.0",
-                        "checkedPlatforms": true,
+                        "version": "1.17.1",
                         "hash": {
-                            "universal": "sha256-4P0v3r1pHgLKR7Jt3Je3kBHSwVZ2djWlxQOmAbTsM/0="
-                        }
+                            "universal": "sha256-0QDsMojUacGBeCKzaUhSFOGDOhfuETYVc46e0MvjFIY="
+                        },
+                        "checkedPlatforms": true
                     },
                     "meta": {
                         "description": "Qt QML Support",
@@ -4767,8 +4779,8 @@
                     "description": "A skin heavily inspired by the original Metro for Steam.",
                     "owner": "RoseTheFlower",
                     "repo": "MetroSteam",
-                    "rev": "85d3488e426bfecc5a871f10021d3eab55318791",
-                    "hash": "0qpxygrv877n9sjwx8j96nwn3vy02lp3scjzfv6nij2nylb7a14w",
+                    "rev": "89b51c211256153ee9787206376af1dd2162ab32",
+                    "hash": "0ydh7ihsfdygdz66hn5j51wadmpzyh1al2fd0mq9f9w5v5i31b5y",
                     "storeId": "ivUFrOju2O4CL0lRO5Hj"
                 },
                 "aero-xp": {
