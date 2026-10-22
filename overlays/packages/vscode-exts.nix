@@ -42,20 +42,32 @@
           };
         inherit (extension) meta;
       };
-in
-  lib.mergeAttrsList [
-    (lib.mapAttrs (
-        publisher: publisherExtensions:
-          lib.mapAttrs (name: extension: buildExtension publisher name extension) publisherExtensions
-      )
-      extensions)
+in (lib.recursiveUpdate
+  (lib.mapAttrs (
+      publisher: publisherExtensions:
+        lib.mapAttrs (name: extension: buildExtension publisher name extension) publisherExtensions
+    )
+    extensions)
+  {
+    openai.chatgpt = let
+      base = buildExtension "openai" "chatgpt" extensions.openai.chatgpt;
+    in
+      pkgs.runCommand "vscode-extension-openai-chatgpt-${extensions.openai.chatgpt.src.version}" {
+        meta = base.meta;
+      } ''
+        mkdir -p "$out/share/vscode/extensions"
+        cp -a "${base}/share/vscode/extensions/openai.chatgpt" "$out/share/vscode/extensions/"
 
-    {
-      catppuccin.catppuccin-vsc = pkgs.vscode-extensions.catppuccin.catppuccin-vsc.overrideAttrs (prev: {
-        postFixup = ''
-          substituteInPlace $out/share/vscode/extensions/catppuccin.catppuccin-vsc/dist/main.cjs \
-          	--replace-warn 'var Xt=async t=>{' 'var Xt=async t=>{return null;'
-        '';
-      });
-    }
-  ]
+        bundle="$out/share/vscode/extensions/openai.chatgpt/webview/assets/app-initial-41ab338a184f.js"
+        old_gate='if(!t)return e||n==null?`none`:n===`chatgptAuthTokens`||n===`chatgpt`?`2025-09-15-full-chatgpt-auth`:`2025-09-15-apikey-auth`}'
+        new_gate='if(!t)return`none`}'
+        substituteInPlace "$bundle" --replace-fail "$old_gate" "$new_gate"
+      '';
+
+    catppuccin.catppuccin-vsc = pkgs.vscode-extensions.catppuccin.catppuccin-vsc.overrideAttrs (prev: {
+      postFixup = ''
+        substituteInPlace $out/share/vscode/extensions/catppuccin.catppuccin-vsc/dist/main.cjs \
+        --replace-warn 'var Xt=async t=>{' 'var Xt=async t=>{return null;'
+      '';
+    });
+  })
