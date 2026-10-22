@@ -8,7 +8,7 @@
         editedTitle = true;
         id = "2ba7b2ad-4a22-4656-b62f-e5d3f2ab61b3";
         position = 4001;
-        url = "https://animevsub.li/";
+        url = "https://animevietsub.sale/";
       };
       "Crunchyroll" = {
         editedTitle = true;
