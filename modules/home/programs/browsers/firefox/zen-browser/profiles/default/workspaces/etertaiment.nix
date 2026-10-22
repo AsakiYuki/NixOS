@@ -10,6 +10,12 @@
         position = 4001;
         url = "https://animevsub.li/";
       };
+      "Crunchyroll" = {
+        editedTitle = true;
+        id = "6dd2292f-d48a-40e4-8956-662f092ceb25";
+        position = 4002;
+        url = "https://www.crunchyroll.com/";
+      };
       "Images" = {
         id = "c241d631-33c5-40f2-bba7-ae21b26d5d57";
         position = 4050;
