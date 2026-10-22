@@ -173,15 +173,15 @@
                 }
             },
             "photocraft": {
-                "version": "0.12.0",
+                "version": "0.13.0",
                 "source": {
                     "x86_64-linux": {
-                        "url": "https://github.com/storytold/photocraft/releases/download/v0.12.0/photocraft-0.12.0-linux-x86_64.tar.gz",
-                        "hash": "sha256-LCQqnGq1Rr+zxT0YpHFAe5lpX2pdXZ11lziqJAioGQg="
+                        "url": "https://github.com/storytold/photocraft/releases/download/v0.13.0/photocraft-0.13.0-linux-x86_64.tar.gz",
+                        "hash": "sha256-24hzM4d2Y7cz9dvz6dgM+Riy62M5CgwsN991Ga8PTlQ="
                     },
                     "aarch64-linux": {
-                        "url": "https://github.com/storytold/photocraft/releases/download/v0.12.0/photocraft-0.12.0-linux-aarch64.tar.gz",
-                        "hash": "sha256-kXIj802fMiWOuH5rhpuh9WOckY4slqjDBgWL0xEFCR0="
+                        "url": "https://github.com/storytold/photocraft/releases/download/v0.13.0/photocraft-0.13.0-linux-aarch64.tar.gz",
+                        "hash": "sha256-mtq0mtNgMhMf8qgVBWJqcFYLV1s9b43ij7uPGij0glU="
                     }
                 }
             }
@@ -4765,12 +4765,12 @@
                 },
                 "material": {
                     "name": "Material",
-                    "version": "1.5.18",
+                    "version": "1.5.19",
                     "description": "Theme based on Google's Material 3 Design.",
                     "owner": "kuska1",
                     "repo": "Material-Theme",
-                    "rev": "13f78fed5d8161b0eb558ab8b1f83f4e662a713a",
-                    "hash": "0fjjnwvacsxh1nbl4ysli5h1irph3sf546i2kdfcnfywp0van8vd",
+                    "rev": "32b6c127aab294c6f7c79ba7d3a12c717cc67227",
+                    "hash": "174majrk2xp4r2sz9xdmhny48kd1fg93372ppd0wlp0avdj0116w",
                     "storeId": "ipYjqODds05KMcvh7QJn"
                 },
                 "metro-by-rose": {
